@@ -9,8 +9,12 @@ class AgentState(TypedDict):
     
     # 2. Audit Log (Raw reasoning, never sent to the LLM)
     # This is a plain list because YOU manually append to it in each agent.
-    raw_responses: List[dict]  # List of {"agent": "analyst", "response": raw_obj, "reasoning": "..."}
+    # raw_responses: List[dict]  # List of {"agent": "analyst", "response": raw_obj, "reasoning": "..."}
     
     # 3. Business Context (Root-level keys)
     ticker: str
     date: str
+
+    # 4. Debate Control (Root-level keys)
+    debate_round: int
+    max_debate_rounds: int

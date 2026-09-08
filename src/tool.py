@@ -26,7 +26,8 @@ def retrieve_10k_filing(ticker: str, date: datetime.date) -> str:
         return f"Exception occurred while retrieving filing: {str(e)}"
 
 @tool
-def mock_retrieve_10k_filing(ticker: str, date: datetime.date) -> str:
+# def mock_retrieve_10k_filing(ticker: str, date: datetime.date) -> str:
+def mock_retrieve_10k_filing(ticker: str, date: str) -> dict:
     """
     Mock function to retrieve the 10-K filing text for a given ticker and year.
     Use this when you need to fetch the actual filing content for analysis.

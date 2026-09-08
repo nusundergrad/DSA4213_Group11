@@ -1,9 +1,10 @@
 from langgraph.graph import StateGraph, MessagesState, START, END
 from langchain_openrouter import ChatOpenRouter
-from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from dotenv import load_dotenv
 from state import AgentState
 from tool import mock_retrieve_10k_filing
+import json
 import os
 
 load_dotenv(override=True)
@@ -13,46 +14,66 @@ load_dotenv(override=True)
 llm = ChatOpenRouter(model="openrouter/free", temperature=0)
 
 
+def clean_messages(messages):
+    cleaned = []
+
+    for message in messages:
+        content = message.content
+
+        if message.type == "human":
+            cleaned.append(HumanMessage(content=content))
+        elif message.type == "ai":
+            cleaned.append(AIMessage(content=content))
+        elif message.type == "system":
+            cleaned.append(SystemMessage(content=content))
+
+    return cleaned
+
+
 def analyst_agent(state: AgentState):
+    print("Analyst Agent Invoked")
     agent_name = "analyst_agent"
         # 1. Build the System Prompt (The Persona/Rules)
     system_prompt = SystemMessage(
         content=(
             "You are a Senior Financial Analyst at a hedge fund. "
+            "You will be either getting 10-K filings or Risk Managements feedback from the CIO. "
             "Your task is to read the provided 10-K filing excerpt and generate a trade recommendation. "
             "You must cite your sources (e.g., 'Item 7, p.14') for every numerical claim. "
             "Be specific and avoid vague language like 'primarily' or 'mostly'."
         )
     )
 
-    #get data from tool
-    filing_data = mock_retrieve_10k_filing(state['ticker'], state['date'])
+    filing_data = mock_retrieve_10k_filing.invoke({
+        "ticker": state["ticker"],
+        "date": state["date"],
+    })
 
-    
-    # 2. Inject the 10-K context from the state
+    filing_message = HumanMessage(
+        content=json.dumps(filing_data, ensure_ascii=False)
+    )
+
     context_message = HumanMessage(
         content=(
             f"Company Ticker: {state['ticker']}\n\n"
             f"Date: {state['date']}\n\n"
-            f"Here is the 10-K filing excerpt to analyze:\n"
-            # f"{state['filing_text']}\n\n"
-            "Based on this information, provide your investment thesis (BUY, SELL, or HOLD). "
-            "List 3 to 5 core claims to justify your recommendation."
+            "Based on the following filing, provide your investment thesis "
+            "(BUY, SELL, or HOLD). List 3 to 5 core claims:\n\n"
         )
     )
 
+    cleaned_messages = clean_messages(state["messages"])
 
-    
-    # 3. Combine everything: System + Context + Existing Conversation History
-    # The state["messages"] contains the conversation so far (e.g., user questions).
-    messages_to_send = [system_prompt, context_message, filing_data] + state["messages"]
-    
-    # 4. Call the LLM
+    messages_to_send = [
+        system_prompt,
+        context_message,
+        filing_message,
+    ] + cleaned_messages
+
     response = llm.invoke(messages_to_send)
-
     response.name = agent_name + "_response"
 
-
+    print(f"Analyst Agent Response: {response.content}")
     
     
     # 5. Return the update (LangGraph appends this to the existing messages)
@@ -65,13 +86,13 @@ def analyst_agent(state: AgentState):
     # return {"messages": [response]}
 
 def risk_manager_agent(state: AgentState):
-
+    print("Risk Manager Agent Invoked")
     agent_name = "risk_manager_agent"
         # 1. Build the System Prompt (The Persona/Rules)
     system_prompt = SystemMessage(
         content=(
-            "You are the Chief Investment Officer (CIO) at a hedge fund."
-            "Your task is to make the final execution decision based on the analyst's recommendation."
+            "You are the Head of Risk Management at a hedge fund."
+            "Your task is to assess the risk associated with the analyst's recommendation and double-check their analysis."
             "You must cite your sources (e.g., 'Item 7, p.14') for every numerical claim. "
             "Be specific and avoid vague language like 'primarily' or 'mostly'."
         )
@@ -89,19 +110,24 @@ def risk_manager_agent(state: AgentState):
             "Output your recommendation in a scale between 0 to 100 where each unit represents amount of stock left in your portfolio."
         )
     )
+
+    cleaned_messages = clean_messages(state["messages"])
     
     # 3. Combine everything: System + Context + Existing Conversation History
     # The state["messages"] contains the conversation so far (e.g., user questions).
-    messages_to_send = [system_prompt, context_message] + state["messages"]
+    messages_to_send = [system_prompt, context_message] + cleaned_messages
     
     # 4. Call the LLM
     response = llm.invoke(messages_to_send)
-    response.name = agent_name = "_response"
+    response.name = agent_name + "_response"
+
+    print(f"Risk Manager Agent Response: {response.content}")
     # 5. Return the update (LangGraph appends this to the existing messages)
-    return {"messages": [response]}
+    return {"messages": [response], "debate_round": state["debate_round"] + 1}
 
 
 def trader_agent(state: AgentState):
+    print("Trader Agent Invoked")
     agent_name = "trader_agent"
         # 1. Build the System Prompt (The Persona/Rules)
     system_prompt = SystemMessage(
@@ -122,9 +148,29 @@ def trader_agent(state: AgentState):
             "You have 50 units of money in this stock, you can sell up to 50 units or buy up to 50 units. "
             "Based on this information, provide your investment action"
             "List 3 to 5 core claims to justify your recommendation."
-            "Output your recommendation in a scale between 0 to 100 where each unit represents amount of stock left in your portfolio."
+            "Output your recommendation as BUY or SELL and up to 50 units."
         )
     )
+
+    last_ai_message = next(
+        (
+            message
+            for message in reversed(state["messages"])
+            if message.type == "ai"
+        ),
+        None,
+    )
+
+    messages_to_send = [
+        system_prompt,
+        context_message,
+    ]
+
+    if last_ai_message is not None:
+        messages_to_send.append(
+            AIMessage(content=last_ai_message.content)
+        )
+
     
     # 3. Combine everything: System + Context + Existing Conversation History
     # The state["messages"] contains the conversation so far (e.g., user questions).
@@ -133,6 +179,8 @@ def trader_agent(state: AgentState):
     # 4. Call the LLM
     response = llm.invoke(messages_to_send)
     response.name = agent_name + "_response"
+
+    print(f"Trader Agent Response: {response.content}")
     # 5. Return the update (LangGraph appends this to the existing messages)
     return {"messages": [response]}
 
