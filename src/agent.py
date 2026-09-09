@@ -174,7 +174,7 @@ def trader_agent(state: AgentState):
     
     # 3. Combine everything: System + Context + Existing Conversation History
     # The state["messages"] contains the conversation so far (e.g., user questions).
-    messages_to_send = [system_prompt, context_message] + state["messages"]
+    # messages_to_send = [system_prompt, context_message] + state["messages"]
     
     # 4. Call the LLM
     response = llm.invoke(messages_to_send)
