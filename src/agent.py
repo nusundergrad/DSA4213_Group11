@@ -4,6 +4,7 @@ from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from dotenv import load_dotenv
 from state import AgentState
 from tool import mock_retrieve_10k_filing
+from prompts import ANALYST_SYSTEM_PROMPT, ANALYST_CONTEXT_MESSAGE_TEMPLATE, RISK_MANAGER_SYSTEM_PROMPT, RISK_MANAGER_CONTEXT_MESSAGE_TEMPLATE, TRADER_SYSTEM_PROMPT, TRADER_CONTEXT_MESSAGE_TEMPLATE
 import json
 import os
 
@@ -36,11 +37,7 @@ def analyst_agent(state: AgentState):
         # 1. Build the System Prompt (The Persona/Rules)
     system_prompt = SystemMessage(
         content=(
-            "You are a Senior Financial Analyst at a hedge fund. "
-            "You will be either getting 10-K filings or Risk Managements feedback from the CIO. "
-            "Your task is to read the provided 10-K filing excerpt and generate a trade recommendation. "
-            "You must cite your sources (e.g., 'Item 7, p.14') for every numerical claim. "
-            "Be specific and avoid vague language like 'primarily' or 'mostly'."
+            ANALYST_SYSTEM_PROMPT
         )
     )
 
@@ -55,10 +52,10 @@ def analyst_agent(state: AgentState):
 
     context_message = HumanMessage(
         content=(
-            f"Company Ticker: {state['ticker']}\n\n"
-            f"Date: {state['date']}\n\n"
-            "Based on the following filing, provide your investment thesis "
-            "(BUY, SELL, or HOLD). List 3 to 5 core claims:\n\n"
+            ANALYST_CONTEXT_MESSAGE_TEMPLATE.format(
+                ticker=state['ticker'],
+                date=state['date']
+            )
         )
     )
 
@@ -69,6 +66,8 @@ def analyst_agent(state: AgentState):
         context_message,
         filing_message,
     ] + cleaned_messages
+
+    print("Messages to send to LLM:", messages_to_send)
 
     response = llm.invoke(messages_to_send)
     response.name = agent_name + "_response"
@@ -91,23 +90,17 @@ def risk_manager_agent(state: AgentState):
         # 1. Build the System Prompt (The Persona/Rules)
     system_prompt = SystemMessage(
         content=(
-            "You are the Head of Risk Management at a hedge fund."
-            "Your task is to assess the risk associated with the analyst's recommendation and double-check their analysis."
-            "You must cite your sources (e.g., 'Item 7, p.14') for every numerical claim. "
-            "Be specific and avoid vague language like 'primarily' or 'mostly'."
+            RISK_MANAGER_SYSTEM_PROMPT
         )
     )
     
     # 2. Inject the 10-K context from the state
     context_message = HumanMessage(
         content=(
-            # f"Company Ticker: {state['ticker']}\n\n"
-            f"Here is the 10-K filing analysis to make decision on:\n"
-            # f"{state['filing_text']}\n\n"
-            "You have 50 units of money in this stock, you can sell up to 50 units or buy up to 50 units. "
-            "Based on this information, provide your investment action"
-            "List 3 to 5 core claims to justify your recommendation."
-            "Output your recommendation in a scale between 0 to 100 where each unit represents amount of stock left in your portfolio."
+           RISK_MANAGER_CONTEXT_MESSAGE_TEMPLATE.format(
+                ticker=state['ticker'],
+                date=state['date']
+            )
         )
     )
 
@@ -116,7 +109,10 @@ def risk_manager_agent(state: AgentState):
     # 3. Combine everything: System + Context + Existing Conversation History
     # The state["messages"] contains the conversation so far (e.g., user questions).
     messages_to_send = [system_prompt, context_message] + cleaned_messages
-    
+
+    # print("Messages to send to LLM:", messages_to_send)
+
+
     # 4. Call the LLM
     response = llm.invoke(messages_to_send)
     response.name = agent_name + "_response"
@@ -132,10 +128,7 @@ def trader_agent(state: AgentState):
         # 1. Build the System Prompt (The Persona/Rules)
     system_prompt = SystemMessage(
         content=(
-            "You are the Chief Investment Officer (CIO) at a hedge fund."
-            "Your task is to make the final execution decision based on the analyst's recommendation."
-            "You must cite your sources (e.g., 'Item 7, p.14') for every numerical claim. "
-            "Be specific and avoid vague language like 'primarily' or 'mostly'."
+            TRADER_SYSTEM_PROMPT
         )
     )
     
@@ -171,7 +164,7 @@ def trader_agent(state: AgentState):
             AIMessage(content=last_ai_message.content)
         )
 
-    
+    # print("Messages to send to LLM:", messages_to_send)
     # 3. Combine everything: System + Context + Existing Conversation History
     # The state["messages"] contains the conversation so far (e.g., user questions).
     # messages_to_send = [system_prompt, context_message] + state["messages"]
