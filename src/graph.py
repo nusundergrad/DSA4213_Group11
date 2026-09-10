@@ -34,7 +34,8 @@ def situation_1(input_content: dict):
         "date": input_content["date"],
         "debate_round": input_content["debate_round"],
         "max_debate_rounds": input_content["max_debate_rounds"],
-        "raw_responses": [],
+        "confidence_level": input_content["confidence_level"],
+        "confidence_example": input_content["confidence_example"],
     })
     # response = graph.invoke({"messages": [{"role": "user", "content": input_content["content"], "ticker": input_content["ticker"], "date": input_content["date"]}]})
     print(response['messages'])
@@ -45,7 +46,8 @@ def situation_1(input_content: dict):
 
 
 
-input_content = {"ticker": "AAPL", "date": "2023", "content": "Run analyst for the following ticker and date", "debate_round": 0, "max_debate_rounds": 3}
+
+input_content = {"ticker": "AAPL", "date": "2023", "content": "Run analyst for the following ticker and date", "debate_round": 0, "max_debate_rounds": 1, "confidence_level": "high", "confidence_example": "The company has consistently met or exceeded its earnings targets for the past 5 years."}
 
 # initial_state = {
 # }

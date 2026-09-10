@@ -18,3 +18,7 @@ class AgentState(TypedDict):
     # 4. Debate Control (Root-level keys)
     debate_round: int
     max_debate_rounds: int
+
+    # 5. Confidence Control (Root-level keys)
+    confidence_level: str
+    confidence_example: str

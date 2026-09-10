@@ -4,7 +4,7 @@ from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from dotenv import load_dotenv
 from state import AgentState
 from tool import mock_retrieve_10k_filing
-from prompts import ANALYST_SYSTEM_PROMPT, ANALYST_CONTEXT_MESSAGE_TEMPLATE, RISK_MANAGER_SYSTEM_PROMPT, RISK_MANAGER_CONTEXT_MESSAGE_TEMPLATE, TRADER_SYSTEM_PROMPT, TRADER_CONTEXT_MESSAGE_TEMPLATE
+from prompts import ANALYST_SYSTEM_PROMPT_TEMPLATE, ANALYST_CONTEXT_MESSAGE_TEMPLATE, RISK_MANAGER_SYSTEM_PROMPT, RISK_MANAGER_CONTEXT_MESSAGE_TEMPLATE, TRADER_SYSTEM_PROMPT, TRADER_CONTEXT_MESSAGE_TEMPLATE
 import json
 import os
 
@@ -37,7 +37,10 @@ def analyst_agent(state: AgentState):
         # 1. Build the System Prompt (The Persona/Rules)
     system_prompt = SystemMessage(
         content=(
-            ANALYST_SYSTEM_PROMPT
+            ANALYST_SYSTEM_PROMPT_TEMPLATE.format(
+                confidence_level=state["confidence_level"],
+                confidence_example=state["confidence_example"]
+            )
         )
     )
 
@@ -135,13 +138,10 @@ def trader_agent(state: AgentState):
     # 2. Inject the 10-K context from the state
     context_message = HumanMessage(
         content=(
-            # f"Company Ticker: {state['ticker']}\n\n"
-            f"Here is the 10-K filing analysis to make decision on:\n"
-            # f"{state['filing_text']}\n\n"
-            "You have 50 units of money in this stock, you can sell up to 50 units or buy up to 50 units. "
-            "Based on this information, provide your investment action"
-            "List 3 to 5 core claims to justify your recommendation."
-            "Output your recommendation as BUY or SELL and up to 50 units."
+           TRADER_CONTEXT_MESSAGE_TEMPLATE.format(
+                ticker=state['ticker'],
+                date=state['date']
+            )
         )
     )
 
