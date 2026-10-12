@@ -1,0 +1,34 @@
+{
+  "packet_path": "",
+  "report_path": "",
+  "model": null,
+  "content_label": null,
+  "reviewers": {
+    "reviewer_1": {
+      "status": "pending",
+      "checks": {
+        "source_fidelity": null,
+        "masking": null,
+        "facts": null,
+        "arithmetic": null,
+        "citations": null,
+        "reasoning": null,
+        "counter_evidence": null
+      },
+      "notes": ""
+    },
+    "reviewer_2": {
+      "status": "pending",
+      "checks": {
+        "source_fidelity": null,
+        "masking": null,
+        "facts": null,
+        "arithmetic": null,
+        "citations": null,
+        "reasoning": null,
+        "counter_evidence": null
+      },
+      "notes": ""
+    }
+  }
+}

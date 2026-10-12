@@ -1,0 +1,2 @@
+# Source hashes and character offsets must survive checkout on every OS.
+data/benchmark/**/sources/*.txt text eol=lf
