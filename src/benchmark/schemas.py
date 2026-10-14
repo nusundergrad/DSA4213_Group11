@@ -90,7 +90,6 @@ class Report(Record):
     recommendation: Literal["BUY", "SELL", "HOLD"]
     claims: Annotated[list[Claim], Field(min_length=3, max_length=5)]
     rationale: Text
-    confidence_statement: Text
 
     @model_validator(mode="after")
     def unique_claims(self):
