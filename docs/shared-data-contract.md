@@ -2,10 +2,11 @@
 
 This document coordinates subgroups A (benchmark), B (architecture), and C
 (evaluation). The small benchmark subset below is implemented; the broader agent,
-pairing, execution, and evaluation interfaces remain proposals. Existing inline
+execution and evaluation interfaces remain proposals. Existing inline
 examples are synthetic, not experimental results. Two real-source evidence packets
-now exist separately; generated candidates are saved locally for review, and no
-approved reports or dataset release are included with this workflow.
+now have reviewed reports in the public benchmark folder. Original candidates and
+review notebooks are kept privately. Six deliberately flawed copies now form
+three pairs per company. No dataset version has been frozen yet.
 
 ## Implemented benchmark subset
 
@@ -33,18 +34,35 @@ See [benchmark preparation and handoff](benchmark.md) and
   defects; separate preparation checks flag invalid clean candidates. Reports do
   not include `confidence_statement`; planned confidence framing belongs to case
   metadata and presentation, not Analyst generation.
-- `load_agent_input(packet_path, report_path)` loads manually approved public
-  files and returns only `evidence_packet` and `initial_report`. Approval is a
-  manual publication boundary, not an authenticated or automatic workflow.
-- The evidence and report review notebooks show checks and let two reviewers
-  record decisions in Markdown cells. Save reviewed copies in `private/reviews/`.
-  Generated review JSON is an optional template, not a second required checklist.
-  No approval is fabricated by the script. Historical candidates containing the
-  removed confidence field need regeneration under the current contract.
+- `load_agent_input(packet_path, report_path, check_clean=True)` returns only
+  `evidence_packet` and `initial_report`. For paired experiments use
+  `check_clean=False` for both clean and flawed cases in every architecture.
+  This skips financial correctness checks while retaining schemas and citation
+  references. It does not read private labels. Public reports now include
+  deliberately flawed copies; public placement is not a correctness label.
+  Reports live in `public/reports/<packet_id>/` as `clean.json` and
+  `error_<index>_<type>.json`. These readable filenames never enter the returned
+  model payload; the `report_id` inside each file remains opaque. Give agents
+  the payload rather than file or directory access.
+- One report review notebook per packet in `private/reviews/` contains checks,
+  feedback, edits to a report copy, and a cell to save the final files to public.
+  Original candidates and raw responses stay unchanged. There is no separate
+  review JSON or required feedback file. Final copies must pass the current
+  contract, which omits the confidence field.
+- `private/pairs.json` stores exact before/after edits, clean/flawed IDs and paths,
+  packet and pair IDs, error index, target claim, error type, expected/injected values, explanation,
+  and detection/correction criteria. `create_flawed_reports.py` applies these
+  edits offline; `check_flawed_reports.ipynb` shows the comparisons. These are
+  lightweight pair records, not the full case/answer-key schema in section 5.
+  The implemented error types are `wrong_number`, `reporting_period`, and
+  `arithmetic`. Labels and answer keys must stay out of agent inputs.
+  `clean_report_path` and `flawed_report_path` are relative to `public/`.
+  `error_index` numbers a variant within its packet, not the claim being edited;
+  `target_claim_id` identifies that claim.
 - Preparation uses `data/benchmark/private/` and `data/benchmark/public/`; reviewed
   releases use `data/benchmark/releases/v1/`, then `v2`, etc. There is no release
-  automation, public case envelope, answer key, pair construction, exported JSON
-  Schema artifact, or architecture integration in this implementation.
+  automation, public case envelope, confidence presentation, scoring runner,
+  exported JSON Schema artifact, or architecture integration in this implementation.
 
 Benchmark generation now uses the Analyst prompt and `invoke_analyst`
 in `src/prompts.py` and `src/agent.py`. The old demo shares the base Analyst
@@ -92,8 +110,9 @@ it describes future work and must not be assumed to exist in the code today.
 
 Identify a claim outside its report using `(case_id, claim_id)` and, for a
 particular execution, `(run_id, claim_id)`. Do not encode `clean`, `flawed`, an
-error category, or an expected answer into public IDs or filenames. Within-case
-tone comparisons use `case_id`; control/error comparisons use private `pair_id`.
+error category, or an expected answer into IDs sent to the model. Descriptive
+filenames are for human organization only; do not send paths to the model.
+Within-case tone comparisons use `case_id`; control/error comparisons use private `pair_id`.
 
 ### Exact enum values
 
@@ -102,13 +121,13 @@ tone comparisons use `case_id`; control/error comparisons use private `pair_id`.
 | `architecture` | `baseline`, `debate`, `verification`, `hybrid` |
 | `tone` | `underconfident`, `neutral`, `overconfident` |
 | `content_label` — private | `unmodified`, `injected_error` |
-| `defect_type` | `arithmetic`, `reporting_period`, `citation`, `contradiction`, `omission`, `unsupported_inference` |
+| `defect_type` | `wrong_number`, `arithmetic`, `reporting_period`, `citation`, `contradiction`, `omission`, `unsupported_inference` |
 | verifier `status` | `PASS`, `FAIL`, `NOT_CHECKABLE` |
 | revision `action` | `DEFEND`, `REVISE`, `RETRACT` |
 | Trader `assessment` | `ACCEPT`, `REJECT` |
 | recommendation / `investment_action` | `BUY`, `HOLD`, `SELL` |
 
-Confidence mismatch is not a seventh content defect. Risk Manager may record a
+Confidence mismatch is not a separate content defect. Risk Manager may record a
 separate `calibration_concern`, without classifying it as an injected error.
 
 ## 3. Evidence packet — A owns
@@ -227,15 +246,15 @@ One public file per case and tone:
   "tone": "neutral",
   "confidence_framing": "I have moderate confidence in this assessment.",
   "packet_id": "EP_0012",
-  "report_path": "reports/R_0087.json"
+  "report_path": "reports/EP_0012/error_01_arithmetic.json"
 }
 ```
 
 The proposed runner resolves `evidence_packet` and `initial_report`, then appends
 only the `confidence_framing` sentence to the Analyst message. The report object
 remains unchanged. Case IDs, paths, and tone labels are execution metadata;
-agents receive the wording without these labels. The implemented clean-report
-loader still returns only the packet and report; framing is future work.
+agents receive the wording without these labels. The implemented loader returns
+only the packet and report; framing is future work.
 
 ### Private answer key
 
@@ -407,7 +426,8 @@ input and configuration match, and record the shared run IDs.
 data/
   public/
     evidence_packets/EP_0012.json
-    reports/R_0087.json
+    reports/EP_0012/clean.json
+    reports/EP_0012/error_01_arithmetic.json
     cases/CASE_0042/neutral.json
   private/
     answer_keys/CASE_0042.json
@@ -425,9 +445,10 @@ For model agents, enforce the boundary in code:
    row, private manifest, or scored result to an agent.
 2. Give every architecture the same evidence packet and frozen initial report.
    Architecture-specific additions are only its audits, challenges, and revisions.
-3. Keep private answer keys out of graph state, prompts, retrieval indexes, agent
-   tools, and agent-visible logs. If agents have filesystem tools, restrict their
-   accessible paths rather than relying on prompt instructions.
+3. Keep private answer keys and descriptive report filenames out of graph state,
+   prompts, retrieval indexes, agent tools, and agent-visible logs. Agents with
+   filesystem tools must not browse labelled report folders; supply the loaded
+   packet and report contents instead.
 4. Complete execution first; load the answer key in a separate scoring step.
 5. Audit the exact serialized model requests to confirm no private fields leaked.
 

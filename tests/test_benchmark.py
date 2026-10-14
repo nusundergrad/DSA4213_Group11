@@ -70,6 +70,16 @@ def test_checks_and_structural_boundary(dataset, report):
         Report.model_validate(data)
 
 
+def test_masking_names_split_across_lines():
+    aliases = {"More Personal Computing": "SEGMENT_03"}
+    original = {"text": "More Personal \nComputing 69% FY2025", "metric": "More\tPersonal Computing"}
+    masked = {"text": "SEGMENT_03 69% FY2025", "metric": "SEGMENT_03"}
+    assert p.mask(original, aliases) == masked
+    with pytest.raises(ValueError, match="Identifying"):
+        p.assert_masked(original, aliases)
+    p.assert_masked(masked, aliases)
+
+
 def test_source_text_integrity_needs_only_txt_and_json(dataset):
     root, packet = dataset
     assert {path.suffix for path in (root / "private/sources").iterdir()} == {".txt", ".json"}
@@ -143,11 +153,7 @@ def test_generation_preserves_attempts(dataset, report, monkeypatch, outcome):
     if outcome in errors:
         assert errors[outcome] in saved["error"]
     assert not (root / "public/reports").exists()
-    if status == "needs_review":
-        review = p.read(folder / "review.json")
-        assert review["content_label"] is None
-        assert set(review["reviewers"]) == {"reviewer_1", "reviewer_2"}
-        assert all(v["status"] == "pending" for v in review["reviewers"].values())
+    assert not (folder / "review.json").exists()
 
 
 def test_loader_separation_and_generation_gates(dataset, report, monkeypatch):
@@ -158,7 +164,7 @@ def test_loader_separation_and_generation_gates(dataset, report, monkeypatch):
             p.generate(root, packet, model, "key")
     with pytest.raises(ValueError, match="Identifying"):
         p.generate(root, packet, "provider/model", "key", "Use Apple financials")
-    report_path = root / "public/reports/R_test.json"
+    report_path = root / "public/reports/EP_0001/clean.json"
     p.save(report_path, report.model_dump(mode="json"))  # simulates manual publication
     packet_path = root / "public/evidence_packets/EP_0001.json"
     result = p.load_agent_input(packet_path, report_path)
@@ -169,7 +175,7 @@ def test_loader_separation_and_generation_gates(dataset, report, monkeypatch):
 
 def test_imports_have_no_side_effects():
     code = ("import sys, urllib.request; urllib.request.urlopen = lambda *a, **k: sys.exit(9); "
-            "import src.benchmark.prepare; assert 'src.graph' not in sys.modules; "
+            "import src.benchmark.prepare, src.benchmark.create_flawed_reports; assert 'src.graph' not in sys.modules; "
             "assert 'src.agent' not in sys.modules; assert 'dotenv' not in sys.modules")
     result = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True)
     assert result.returncode == 0 and not result.stdout, result.stderr

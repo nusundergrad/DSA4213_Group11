@@ -13,7 +13,6 @@ from .schemas import Evidence, Fact, Packet, Report
 from ..prompts import ANALYST_BENCHMARK_MESSAGE_TEMPLATE
 
 ROOT = Path(__file__).resolve().parents[2] / "data" / "benchmark"
-REVIEW_FIELDS = ("source_fidelity", "masking", "facts", "arithmetic", "citations", "reasoning", "counter_evidence")
 
 
 def read(path):
@@ -27,21 +26,22 @@ def save(path, value):
 
 
 def identity_pattern(aliases):
-    if not aliases or len({k.casefold() for k in aliases}) != len(aliases):
+    if not aliases or len({" ".join(k.split()).casefold() for k in aliases}) != len(aliases):
         raise ValueError("Aliases must be nonempty with unique case-insensitive keys")
     if any(not k.strip() or not re.fullmatch(r"(?:COMPANY|PRODUCT|SEGMENT|ENTITY)_\d+", v)
            for k, v in aliases.items()):
         raise ValueError("Use nonempty identity strings and opaque alias values")
-    return re.compile(r"(?<!\w)(?:" + "|".join(re.escape(k) for k in sorted(aliases, key=len, reverse=True)) + r")(?!\w)", re.I)
+    names = sorted(aliases, key=lambda k: len(" ".join(k.split())), reverse=True)
+    return re.compile(r"(?<!\w)(?:" + "|".join(r"\s+".join(re.escape(part) for part in k.split()) for k in names) + r")(?!\w)", re.I)
 
 
 def mask(value, aliases):
     pattern = identity_pattern(aliases)
-    replacements = {k.casefold(): v for k, v in aliases.items()}
+    replacements = {" ".join(k.split()).casefold(): v for k, v in aliases.items()}
 
     def visit(item):
         if isinstance(item, str):
-            return pattern.sub(lambda m: replacements[m[0].casefold()], item)
+            return pattern.sub(lambda m: replacements[" ".join(m[0].split()).casefold()], item)
         if isinstance(item, list):
             return [visit(x) for x in item]
         if isinstance(item, dict):
@@ -52,7 +52,7 @@ def mask(value, aliases):
 
 def assert_masked(value, aliases):
     text = json.dumps(value, ensure_ascii=False)
-    if identity_pattern(aliases).search(text) or re.search(r"https?://|www\.", text, re.I):
+    if mask(value, aliases) != value or identity_pattern(aliases).search(text) or re.search(r"https?://|www\.", text, re.I):
         raise ValueError("Identifying text or URL in agent-visible content; review the alias dictionary")
 
 
@@ -124,17 +124,23 @@ def check_report(packet, report):
     return {"errors": errors, "human_review": review}
 
 
-def load_agent_input(packet_path, report_path):
-    """Load manually approved public files only; never load private review records."""
+def load_agent_input(packet_path, report_path, *, check_clean=True):
+    """Load public inputs. Use check_clean=False for every case in a paired experiment."""
     packet_path, report_path = Path(packet_path).resolve(), Path(report_path).resolve()
-    if (packet_path.parent.name != "evidence_packets" or report_path.parent.name != "reports"
-            or packet_path.parent.parent != report_path.parent.parent
+    if (packet_path.parent.name != "evidence_packets"
+            or report_path.parent != packet_path.parent.parent / "reports" / packet_path.stem
             or packet_path.parent.parent.name != "public"):
-        raise ValueError("Use evidence_packets/ and reports/ from the same public dataset")
+        raise ValueError("Use evidence_packets/ and reports/<packet_id>/ from the same public dataset")
     packet, report = Packet.model_validate(read(packet_path)), Report.model_validate(read(report_path))
-    checks = check_report(packet, report)
-    if checks["errors"]:
-        raise ValueError(checks["errors"])
+    if packet.packet_id != packet_path.stem:
+        raise ValueError("Packet ID must match its filename and report folder")
+    evidence_ids = {e.evidence_id for e in packet.evidence}
+    if any(not c.evidence_ids or not set(c.evidence_ids) <= evidence_ids for c in report.claims):
+        raise ValueError("Report has missing or unknown citations for this packet")
+    if check_clean:
+        checks = check_report(packet, report)
+        if checks["errors"]:
+            raise ValueError(checks["errors"])
     return {"evidence_packet": packet.model_dump(mode="json"), "initial_report": report.model_dump(mode="json")}
 
 
@@ -192,12 +198,6 @@ def generate(root, packet, model, api_key, feedback=""):
         record["checks"] = check_report(packet, candidate)
         save(directory / "candidate.json", payload)
         record["status"] = "invalid" if record["checks"]["errors"] else "needs_review"
-        save(directory / "review.json", {
-            "packet_path": f"public/evidence_packets/{packet.packet_id}.json",
-            "report_path": f"private/attempts/{attempt_id}/candidate.json",
-            "model": model, "automated_checks": record["checks"], "content_label": None,
-            "reviewers": {name: {"status": "pending", "checks": dict.fromkeys(REVIEW_FIELDS), "notes": ""}
-                          for name in ("reviewer_1", "reviewer_2")}})
     except Exception as error:
         record.update(status="failed", error=str(error))
     finally:
