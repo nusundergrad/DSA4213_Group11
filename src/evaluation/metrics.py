@@ -18,7 +18,7 @@ def wilson(k, n, z=1.96):
     d = 1 + z * z / n
     c = p + z * z / (2 * n)
     h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
-    return ((c - h) / d, (c + h) / d)
+    return (max(0.0, (c - h) / d), min(1.0, (c + h) / d))
 
 
 def rate(flags):
@@ -163,20 +163,48 @@ def efficiency(runs):
     return out
 
 
-def format_report(runs, scores, cases):
-    lines = ["# Synthetic evaluation report", "", "| architecture | detection | correction | FAR | TAR | flawed coverage |",
-             "|---|---:|---:|---:|---:|---:|"]
+def _fmt_rate(x):
+    return "n/a" if x is None or x["rate"] is None else f"{x['rate']:.2f} [{x['lo']:.2f},{x['hi']:.2f}] (n={x['n']})"
+
+
+def format_report(runs, scores, cases, title="Evaluation report"):
+    lines = [f"# {title}", "", "## Evaluation 1 (neutral tone)", "",
+             "| architecture | detection | correction | FAR | TAR | false challenge (clean) | flawed coverage |",
+             "|---|---|---|---|---|---|---|"]
     for arch, m in primary_metrics(runs, scores).items():
-        fmt = lambda x: "n/a" if x["rate"] is None else f"{x['rate']:.2f} (n={x['n']})"
         c = m["coverage"]
-        lines.append(f"| {arch} | {fmt(m['detection'])} | {fmt(m['correction'])} | {fmt(m['far'])} | {fmt(m['tar'])} | {c['flawed_scored']}/{c['flawed_total']} |")
-    lines += ["", "## Tone changes from neutral (support scale 0–100)", "",
-              "| architecture | tone | n | mean support change | flip | ΔD | ΔC | ΔP |",
-              "|---|---|---:|---:|---:|---:|---:|---:|"]
+        lines.append(f"| {arch} | {_fmt_rate(m['detection'])} | {_fmt_rate(m['correction'])} | {_fmt_rate(m['far'])} | "
+                     f"{_fmt_rate(m['tar'])} | {_fmt_rate(m['false_challenge'])} | {c['flawed_scored']}/{c['flawed_total']} |")
+    lines += ["", "### FAR by failure category", "", "| category | " + " | ".join(ARCHITECTURES) + " |",
+              "|---|" + "---|" * len(ARCHITECTURES)]
+    for d, per in by_failure_category(runs, scores).items():
+        if not any(per[a]["coverage"]["flawed_total"] for a in ARCHITECTURES):
+            continue                                   # category absent from this dataset
+        cell = lambda a: "n/a" if per[a]["far"]["rate"] is None else f"{per[a]['far']['rate']:.2f} (n={per[a]['far']['n']})"
+        lines.append(f"| {d} | " + " | ".join(cell(a) for a in ARCHITECTURES) + " |")
+    lines += ["", "### H1: hybrid vs each other architecture (paired, neutral tone)", ""]
+    for other in ("baseline", "debate", "verification"):
+        far = paired_comparison(runs, scores, "hybrid", other, "far")
+        tar = paired_comparison(runs, scores, "hybrid", other, "tar")
+        if far is None or tar is None:
+            lines.append(f"- hybrid vs {other}: no overlapping scored cases")
+            continue
+        lines.append(f"- hybrid vs {other}: FAR {far['rate_a']:.2f} vs {far['rate_b']:.2f}, diff {far['diff']:+.2f} "
+                     f"CI [{far['ci'][0]:+.2f},{far['ci'][1]:+.2f}], McNemar p={far['p_mcnemar']:.3g}; "
+                     f"TAR {tar['rate_a']:.2f} vs {tar['rate_b']:.2f}, p={tar['p_mcnemar']:.3g}")
+    lines += ["", "## Evaluation 2: tone changes from neutral (support scale 0-100)", "",
+              "| architecture | tone | n | mean support change | mean abs change | flip | dD | dC | dP |",
+              "|---|---|---:|---:|---:|---:|---:|---:|---:|"]
+    fmt = lambda x: "n/a" if x is None else f"{x:+.2f}"
     for arch, group in tone_metrics(runs, scores, cases).items():
         for tone, m in group.items():
-            fmt = lambda x: "n/a" if x is None else f"{x:+.2f}"
-            lines.append(f"| {arch} | {tone} | {m['n']} | {m['sensitivity_mean']:+.2f} | {m['flip']:.2f} | {fmt(m['dD'])} | {fmt(m['dC'])} | {fmt(m['dP'])} |")
+            lines.append(f"| {arch} | {tone} | {m['n']} | {m['sensitivity_mean']:+.2f} | {m['sensitivity_abs']:.2f} | "
+                         f"{m['flip']:.2f} | {fmt(m['dD'])} | {fmt(m['dC'])} | {fmt(m['dP'])} |")
+    lines += ["", "## Efficiency", "", "| architecture | runs | input tokens | output tokens | USD | mean latency ms |",
+              "|---|---:|---:|---:|---:|---:|"]
+    for arch, e in efficiency(runs).items():
+        lines.append(f"| {arch} | {e['runs']} | {e['input_tokens']} | {e['output_tokens']} | "
+                     f"{e['estimated_cost_usd']:.2f} | {e['mean_latency_ms']:.0f} |")
     return "\n".join(lines)
 
 
@@ -197,4 +225,4 @@ if __name__ == "__main__":
         if not all((args.cases, args.runs, args.scores)):
             p.error("--cases, --runs, and --scores are required for real data")
         cases, runs, scores = load_cases(args.cases), load_runs(args.runs), load_scores(args.scores)
-    print(format_report(runs, scores, cases))
+    print(format_report(runs, scores, cases, "Synthetic evaluation report" if args.dummy else "Evaluation report"))

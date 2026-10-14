@@ -28,7 +28,6 @@ REPORT = dict(
         dict(claim_id="C1", text="Revenue grew 20% year over year, from $100.0M to $120.0M.", evidence_ids=["E1"], check_spec=None),
         dict(claim_id="C2", text="The business is financially healthy.", evidence_ids=["E1"], check_spec=None),
     ],
-    confidence_statement="Neutral confidence",
 )
 
 
