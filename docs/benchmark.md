@@ -17,8 +17,13 @@ backed up in `private/archive/20261012T164732Z_apple_html/`.
 Microsoft's PDF is `private/pdfs/msft-20250630.pdf`. Its previous source and
 packets are also backed up under `private/archive/`. Both packets now use PDFs.
 
-Both packets are prepared. No Analyst reports have been generated or approved,
-and no dataset version has been released. We can choose the model later.
+Both packets are prepared. Generate Analyst candidates locally using the commands
+below, then review them before publishing. No approved reports or dataset release
+are included with the preparation workflow.
+
+The report contract omits `confidence_statement`. Historical candidates that
+contain this field remain readable in the review notebook but need regeneration
+under the current contract before approval.
 
 ## Where files go
 
@@ -139,19 +144,20 @@ Keep `OPENROUTER_API_KEY` in your local environment or ignored `.env` / `src/.en
 Choose an explicit OpenRouter model ID and use the same model for both initial reports.
 
 ```powershell
-python -m src.benchmark.prepare --packet EP_0001 --generate --model "provider/model-id"
-python -m src.benchmark.prepare --packet EP_0002 --generate --model "provider/model-id"
+python -m src.benchmark.prepare --packet EP_0001 --generate --model "google/gemini-2.5-flash"
+python -m src.benchmark.prepare --packet EP_0002 --generate --model "google/gemini-2.5-flash"
 ```
 
-Replace the model placeholder before running. Each command makes one call at
+These commands use the model selected for the initial reports. Each makes one call at
 temperature zero, using only masked evidence. There is no automatic retry or model
 fallback. Requests, raw responses, usage, and failed attempts are saved privately.
 Parsed candidates get a `candidate.json` in their attempt folder. The generator
 also writes a `review.json` template; notebook review below replaces manually
 filling in that checklist.
 
-Reports contain BUY/SELL/HOLD, 3-5 claims, evidence IDs, reasoning, and neutral
-confidence wording. Structured numerical assertions are checked automatically;
+Reports contain BUY/SELL/HOLD, 3-5 claims, evidence IDs, and reasoning. They do
+not contain a confidence field or self-assessed confidence wording. Structured
+numerical assertions are checked automatically;
 percentage changes allow a 0.01-percentage-point difference. Prose and ambiguous
 checks still need human review.
 
@@ -170,7 +176,7 @@ It uses the evidence saved in the original model request.
 
 Read the output and write notes in the last Markdown cell. Both reviewers write
 `approved` or `changes_requested`. Check facts, arithmetic, citations, reasoning,
-counter-evidence, masking, and confidence wording. You do not need to edit
+counter-evidence, masking, and absence of self-assessed confidence wording. You do not need to edit
 `review.json` as well.
 
 Save a copy in `private/reviews/<report_id>.ipynb`. This keeps the report ID,
@@ -205,6 +211,28 @@ See [the proposed shared contract](shared-data-contract.md) for their planned
 fields. The current loader is for approved clean reports and rejects numerical
 errors, so it cannot serve as the paired benchmark loader unchanged.
 
+### Confidence variants (planned)
+
+After approving a clean report and reviewing its flawed counterpart, create
+three presentations of each: low, neutral, and high expressed confidence.
+Keep the report and evidence identical across these presentations. Append one
+fixed sentence as Analyst text; do not regenerate or rewrite the report:
+
+- Low: "I have low confidence in this assessment."
+- Neutral: "I have moderate confidence in this assessment."
+- High: "I have high confidence in this assessment."
+
+Save the assigned tone and exact sentence in case metadata, outside the report.
+Agents see the sentence as part of the Analyst's message, without the tone label
+or answer key. The existing loader does not implement this yet.
+
+Review the wording once, compare reports for equality across tones, and use the
+same presentations in every architecture. A clean/flawed pair produces six
+presentations. Compare acceptance of flawed reports and rejection of clean
+reports across tones, using a fresh run for each presentation. This measures
+sensitivity to expressed confidence, not calibrated model uncertainty. If needed,
+add a no-sentence control to separate framing effects from the original report.
+
 ## 8. Save a dataset version
 
 A clean-only dataset can be released after clean review. For the paired benchmark,
@@ -232,20 +260,20 @@ The existing debate graph is not connected to this workflow yet.
 
 ## Which Analyst do we use?
 
-`src/benchmark/prepare.py` generates the initial report from masked evidence.
-`src/agent.py` is the earlier graph demo: it retrieves mock filing data, includes
-a real ticker, and uses a different prompt and model setting. They are currently
-separate implementations.
+The benchmark and demo use `invoke_analyst` in `src/agent.py` with the existing
+`ChatOpenRouter` client. `src/prompts.py` keeps the original Analyst prompt and
+adds masked-evidence and JSON-output instructions for benchmark generation.
+Preparation still validates reports and saves exact requests, raw responses,
+candidates, and review files privately.
 
-The proposed integration is one shared Analyst prompt and report format, with
-two callers: benchmark generation and the graph's Analyst revision step. The
-revision step can add the current report and reviewer feedback to the same base
-rules. This refactor has not been made yet.
+The benchmark requires an explicit model, temperature 0, no retries, and no
+provider fallback. The demo keeps its ticker, mock filing, conversation history,
+text output, and `openrouter/free` model. Importing the shared agent does not load
+credentials or create a model client; the demo client is created on first use.
 
-Experiments should start from the saved benchmark report, including its intended
-flaw when applicable. Do not generate a fresh initial report in each architecture;
-that would give the conditions different starting inputs. Keep the old demo until
-the architecture team connects masked inputs and the shared Analyst interface.
+Graph routing, graph state, and Risk Manager and Trader prompts are unchanged. Connecting the graph to masked evidence and saved initial reports
+is separate architecture work. Experiments should start from the same saved
+report, including its intended flaw when applicable.
 
 ## Reproduce or test the work
 
@@ -253,10 +281,12 @@ To repeat an extraction, copy the same PDF into a separate folder's
 `private/pdfs/`, then run extraction with `--root <folder>`. Use the recorded parser
 version and compare the PDF and text hashes. Timestamps will differ.
 
-Run the offline checks with:
+Generation and the shared Analyst tests use the project dependencies.
+Install them and run the offline checks with:
 
 ```powershell
-python -m pytest tests/test_benchmark.py tests/test_extract_sources.py -q
+python -m pip install -r requirements.txt
+python -m pytest tests -q
 ```
 
 These checks help prepare the benchmark. They are not the experimental verifier

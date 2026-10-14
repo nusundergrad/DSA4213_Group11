@@ -1,12 +1,11 @@
 import copy
-from io import BytesIO
 import json
 from pathlib import Path
 import shutil
 import subprocess
 import sys
 from types import SimpleNamespace
-from urllib.error import HTTPError
+import httpx
 
 import pytest
 from pydantic import ValidationError
@@ -32,8 +31,7 @@ def report(dataset):
           "period": packet.facts[0].period.model_dump(mode="json"), "value": "416161", "unit": "USD_million"}},
         {"claim_id": "C2", "text": "Services sales increased.", "evidence_ids": ["EP_0001_E01"], "check_spec": None},
         {"claim_id": "C3", "text": "Economic conditions can affect demand.", "evidence_ids": ["EP_0001_E03"], "check_spec": None}],
-        "rationale": "Sales growth is balanced against demand risk in this limited evidence.",
-        "confidence_statement": "The supplied evidence supports this assessment with limitations."})
+        "rationale": "Sales growth is balanced against demand risk in this limited evidence."})
 
 
 def test_masking_and_source_traceability(dataset):
@@ -62,10 +60,11 @@ def test_checks_and_structural_boundary(dataset, report):
     assert Report.model_validate_json(report.model_dump_json())  # representable future flawed case
     assert "citation" in p.check_report(packet, report)["errors"][0]
     data = report.model_dump(mode="json")
-    data["company"] = "private identity"
-    with pytest.raises(ValidationError):
-        Report.model_validate(data)
-    del data["company"]
+    for field in ("company", "confidence_statement"):
+        data[field] = "Not part of the report contract"
+        with pytest.raises(ValidationError):
+            Report.model_validate(data)
+        del data[field]
     data["claims"][1]["claim_id"] = "C1"
     with pytest.raises(ValidationError):
         Report.model_validate(data)
@@ -98,7 +97,7 @@ def test_percentage_and_ambiguous_checks(dataset, report):
     assert "period" in p.check_report(packet, report)["human_review"][0]
 
 
-@pytest.mark.parametrize("outcome", ["valid", "malformed", "http_error", "identity_leak", "arithmetic"])
+@pytest.mark.parametrize("outcome", ["valid", "malformed", "http_error", "identity_leak", "arithmetic", "malformed_api", "truncated", "changed_id"])
 def test_generation_preserves_attempts(dataset, report, monkeypatch, outcome):
     root, packet = dataset
     monkeypatch.setattr(p, "uuid4", lambda: SimpleNamespace(hex="test"))
@@ -107,29 +106,42 @@ def test_generation_preserves_attempts(dataset, report, monkeypatch, outcome):
         payload["rationale"] = "Microsoft is a good business."
     if outcome == "arithmetic":
         payload["claims"][0]["check_spec"]["value"] = "1"
+    if outcome == "changed_id":
+        payload["report_id"] = "R_wrong"
     content = "not JSON" if outcome == "malformed" else json.dumps(payload)
-    raw = json.dumps({"model": "provider/model", "usage": {"total_tokens": 10},
-        "choices": [{"finish_reason": "stop", "message": {"content": content}}]}).encode()
+    raw = json.dumps({"id": "test", "object": "chat.completion", "created": 1, "system_fingerprint": None,
+        "model": "provider/model", "usage": {"prompt_tokens": 5, "completion_tokens": 5, "total_tokens": 10},
+        "choices": [{"index": 0, "finish_reason": "length" if outcome == "truncated" else "stop",
+                     "message": {"role": "assistant", "content": content}}]}).encode()
+    if outcome == "malformed_api":
+        raw = b"not JSON"
+    if outcome == "http_error":
+        raw = b'{"error":{"message":"quota","code":429}}'
     calls = []
 
-    def response(request, timeout):
+    def response(self, request):
         calls.append(request)
-        sent = json.loads(request.data)
+        sent = json.loads(request.content)
         assert sent["provider"]["allow_fallbacks"] is False
         assert sent["temperature"] == 0
         p.assert_masked(sent, p.read(root / "private/aliases.json"))
-        assert "source_url" not in request.data.decode()
-        if outcome == "http_error":
-            raise HTTPError(request.full_url, 429, "rate limited", {}, BytesIO(b'{"error":"quota"}'))
-        return BytesIO(raw)
+        assert "source_url" not in request.content.decode()
+        return httpx.Response(429 if outcome == "http_error" else 200, content=raw,
+                              headers={"Content-Type": "application/json"}, request=request)
 
-    monkeypatch.setattr(p, "urlopen", response)
+    monkeypatch.setattr(httpx.HTTPTransport, "handle_request", response)
     folder, status = p.generate(root, packet, "provider/model", "test-secret")
     assert len(calls) == 1
     expected = "needs_review" if outcome == "valid" else "invalid" if outcome == "arithmetic" else "failed"
-    assert status == expected
     saved = p.read(folder / "attempt.json")
-    assert saved["raw_response"] and "test-secret" not in json.dumps(saved)
+    assert status == expected, saved.get("error")
+    assert saved["raw_response"] == raw.decode()
+    assert saved["request"] == json.loads(calls[0].content)
+    assert "test-secret" not in json.dumps(saved)
+    errors = {"http_error": "quota", "identity_leak": "Identifying",
+              "truncated": "did not finish", "changed_id": "changed the assigned"}
+    if outcome in errors:
+        assert errors[outcome] in saved["error"]
     assert not (root / "public/reports").exists()
     if status == "needs_review":
         review = p.read(folder / "review.json")
@@ -140,7 +152,7 @@ def test_generation_preserves_attempts(dataset, report, monkeypatch, outcome):
 
 def test_loader_separation_and_generation_gates(dataset, report, monkeypatch):
     root, packet = dataset
-    monkeypatch.setattr(p, "urlopen", lambda *a, **kw: pytest.fail("unexpected model call"))
+    monkeypatch.setattr(httpx.HTTPTransport, "handle_request", lambda *a, **kw: pytest.fail("unexpected model call"))
     for model in (None, "openrouter/free", "openrouter/auto"):
         with pytest.raises(ValueError, match="explicit model"):
             p.generate(root, packet, model, "key")
