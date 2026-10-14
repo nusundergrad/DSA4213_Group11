@@ -182,6 +182,26 @@ numerical assertions are checked automatically;
 percentage changes allow a 0.01-percentage-point difference. Prose and ambiguous
 checks still need human review.
 
+`evidence_ids` cite the excerpts supporting a claim. A numerical `check_spec`
+also identifies the particular source facts: `fact_id` for `numeric`, or
+`from_fact_id` and `to_fact_id` for `percentage_change`. For example, EP_0001's
+net-sales comparison uses `EP_0001_F02` (FY2024) and `EP_0001_F01` (FY2025).
+Each fact already records its parent evidence ID, so a duplicate evidence/fact
+tuple is unnecessary.
+
+The checker resolves those IDs and checks the cited evidence, metric, complete
+periods, units, and asserted value. A wrong ID or mismatched metadata is an error;
+the checker does not silently substitute a different fact. References do not
+prove that the prose is correct or cover every number in a claim.
+
+Newly generated numerical assertions must include these references. The schema
+still reads older responses without them using the previous metric/period/unit
+lookup and flags that legacy lookup for review. All eight current public reports
+have been updated with explicit references. The review notebooks record and
+reproduce these additions; original candidates, raw responses, requests, and
+historical example-run snapshots remain unchanged. No model regeneration was
+needed for this citation update.
+
 To check a saved candidate without another model call:
 
 ```powershell
@@ -271,9 +291,10 @@ the source amounts stay correct and growth is overstated by 10 percentage points
 For period cases, the same comparison is shifted from FY2024-FY2025 to
 FY2023-FY2024. Repeated assertions in the rationale follow the same error.
 
-The period cases get a missing-period review flag from the preparation checker,
-not a definitive arithmetic failure. The comparison with the excerpt establishes
-the intended error. These deliberate edits do not establish natural model error
+The period cases keep the clean report's fact IDs while asserting the wrong
+periods. The checker now identifies that mismatch directly. Their amounts and
+intended period defects were not corrected when adding references. These
+deliberate edits do not establish natural model error
 rates or successful error detection. Six pairs still cover only two companies;
 the reused clean reports are not six independent controls.
 
@@ -324,7 +345,8 @@ This returns `evidence_packet` and `initial_report`. Every architecture should
 receive the same masked input. Use `EP_0001/clean.json` for its clean control.
 Filenames and paths are not included in the returned payload. Keep private files and real company names out of
 agent inputs. Use `check_clean=False` for **both clean and flawed inputs in every
-architecture**. It still checks schemas and evidence references, but does not
+architecture**. It still checks schemas, evidence references, and the existence
+and parent evidence of supplied fact IDs, but does not
 reject deliberate financial errors or attach correctness labels. The default
 `check_clean=True` retains numerical checks for preparing clean reports; passing
 those checks alone is not proof that a report is clean. Read pair labels and

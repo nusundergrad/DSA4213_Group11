@@ -11,6 +11,8 @@
       ],
       "check_spec": {
         "kind": "percentage_change",
+        "from_fact_id": "EP_0001_F02",
+        "to_fact_id": "EP_0001_F01",
         "metric": "net_sales",
         "from_period": {
           "label": "FY2023",
@@ -35,6 +37,8 @@
       ],
       "check_spec": {
         "kind": "percentage_change",
+        "from_fact_id": "EP_0001_F04",
+        "to_fact_id": "EP_0001_F03",
         "metric": "services_net_sales",
         "from_period": {
           "label": "FY2024",
@@ -59,6 +63,8 @@
       ],
       "check_spec": {
         "kind": "percentage_change",
+        "from_fact_id": "EP_0001_F06",
+        "to_fact_id": "EP_0001_F05",
         "metric": "wearables_home_accessories_net_sales",
         "from_period": {
           "label": "FY2024",

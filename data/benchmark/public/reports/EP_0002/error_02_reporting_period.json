@@ -11,6 +11,8 @@
       ],
       "check_spec": {
         "kind": "percentage_change",
+        "from_fact_id": "EP_0002_F02",
+        "to_fact_id": "EP_0002_F01",
         "metric": "revenue",
         "from_period": {
           "label": "FY2023",
@@ -34,6 +36,8 @@
       ],
       "check_spec": {
         "kind": "percentage_change",
+        "from_fact_id": "EP_0002_F06",
+        "to_fact_id": "EP_0002_F05",
         "metric": "operating_income",
         "from_period": {
           "label": "FY2024",
@@ -57,6 +61,8 @@
       ],
       "check_spec": {
         "kind": "percentage_change",
+        "from_fact_id": "EP_0002_F04",
+        "to_fact_id": "EP_0002_F03",
         "metric": "gross_margin",
         "from_period": {
           "label": "FY2024",
@@ -80,6 +86,7 @@
       ],
       "check_spec": {
         "kind": "numeric",
+        "fact_id": "EP_0002_F07",
         "metric": "cloud_gross_margin_percentage",
         "period": {
           "label": "FY2025",

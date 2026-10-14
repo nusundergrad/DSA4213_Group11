@@ -93,10 +93,11 @@ def prepare(root, original_path):
     return packet
 
 
-def check_report(packet, report):
+def check_report(packet, report, *, require_fact_ids=False):
     """Preflight checks, not the experimental verifier or proof of sound reasoning."""
     errors, review = [], []
     evidence_ids = {e.evidence_id for e in packet.evidence}
+    facts_by_id = {f.fact_id: f for f in packet.facts}
     for claim in report.claims:
         if not claim.evidence_ids or not set(claim.evidence_ids) <= evidence_ids:
             errors.append(f"{claim.claim_id}: missing or unknown citation")
@@ -104,16 +105,36 @@ def check_report(packet, report):
         if spec is None:
             review.append(f"{claim.claim_id}: check factual support and reasoning manually")
             continue
-        facts = [f for f in packet.facts if f.evidence_id in claim.evidence_ids and f.metric == spec.metric]
         periods = [spec.period] if spec.kind == "numeric" else [spec.from_period, spec.to_period]
-        matches = [[f for f in facts if f.period == p and (spec.kind != "numeric" or f.unit == spec.unit)] for p in periods]
-        if any(len(found) != 1 for found in matches):
-            review.append(f"{claim.claim_id}: ambiguous/missing metric, period or unit mapping")
-            continue
+        fact_ids = [spec.fact_id] if spec.kind == "numeric" else [spec.from_fact_id, spec.to_fact_id]
+        if all(fact_ids):
+            if any(fact_id not in facts_by_id for fact_id in fact_ids):
+                errors.append(f"{claim.claim_id}: unknown fact ID")
+                continue
+            facts = [facts_by_id[fact_id] for fact_id in fact_ids]
+            if any(f.evidence_id not in claim.evidence_ids for f in facts):
+                errors.append(f"{claim.claim_id}: referenced fact is outside the cited evidence")
+                continue
+            if any(f.metric != spec.metric or f.period != period
+                   or (spec.kind == "numeric" and f.unit != spec.unit) for f, period in zip(facts, periods)):
+                errors.append(f"{claim.claim_id}: referenced fact metric, period or unit mismatch")
+                continue
+            matches = [[f] for f in facts]
+        else:
+            if require_fact_ids:
+                errors.append(f"{claim.claim_id}: numerical assertion requires fact IDs")
+                continue
+            facts = [f for f in packet.facts if f.evidence_id in claim.evidence_ids and f.metric == spec.metric]
+            matches = [[f for f in facts if f.period == p and (spec.kind != "numeric" or f.unit == spec.unit)] for p in periods]
+            if any(len(found) != 1 for found in matches):
+                review.append(f"{claim.claim_id}: ambiguous/missing metric, period or unit mapping")
+                continue
+            review.append(f"{claim.claim_id}: legacy assertion without fact IDs; used metric/period/unit lookup")
         values = [Decimal(found[0].value) for found in matches]
         if spec.kind == "percentage_change":
             if matches[0][0].unit != matches[1][0].unit or values[0] == 0:
-                review.append(f"{claim.claim_id}: incompatible units or zero denominator")
+                messages = errors if all(fact_ids) else review
+                messages.append(f"{claim.claim_id}: incompatible units or zero denominator")
                 continue
             expected, tolerance = (values[1] - values[0]) / values[0] * 100, Decimal("0.01")
         else:
@@ -137,6 +158,12 @@ def load_agent_input(packet_path, report_path, *, check_clean=True):
     evidence_ids = {e.evidence_id for e in packet.evidence}
     if any(not c.evidence_ids or not set(c.evidence_ids) <= evidence_ids for c in report.claims):
         raise ValueError("Report has missing or unknown citations for this packet")
+    facts_by_id = {f.fact_id: f for f in packet.facts}
+    for claim in report.claims:
+        fact_ids = [getattr(claim.check_spec, field, None) for field in ("fact_id", "from_fact_id", "to_fact_id")]
+        if any(fact_id and (fact_id not in facts_by_id or facts_by_id[fact_id].evidence_id not in claim.evidence_ids)
+               for fact_id in fact_ids):
+            raise ValueError("Report has unknown facts or facts outside its cited evidence")
     if check_clean:
         checks = check_report(packet, report)
         if checks["errors"]:
@@ -195,7 +222,7 @@ def generate(root, packet, model, api_key, feedback=""):
             raise ValueError("Model changed the assigned report ID")
         payload = candidate.model_dump(mode="json")
         assert_masked(payload, aliases)
-        record["checks"] = check_report(packet, candidate)
+        record["checks"] = check_report(packet, candidate, require_fact_ids=True)
         save(directory / "candidate.json", payload)
         record["status"] = "invalid" if record["checks"]["errors"] else "needs_review"
     except Exception as error:
