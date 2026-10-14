@@ -4,8 +4,8 @@ This document coordinates subgroups A (benchmark), B (architecture), and C
 (evaluation). The small benchmark subset below is implemented; the broader agent,
 pairing, execution, and evaluation interfaces remain proposals. Existing inline
 examples are synthetic, not experimental results. Two real-source evidence packets
-now exist separately; generated candidates are saved locally for review, and no
-approved reports or dataset release are included with this workflow.
+now have reviewed reports in the public benchmark folder. Original candidates and
+review notebooks are kept privately. No dataset version has been frozen yet.
 
 ## Implemented benchmark subset
 
@@ -33,14 +33,14 @@ See [benchmark preparation and handoff](benchmark.md) and
   defects; separate preparation checks flag invalid clean candidates. Reports do
   not include `confidence_statement`; planned confidence framing belongs to case
   metadata and presentation, not Analyst generation.
-- `load_agent_input(packet_path, report_path)` loads manually approved public
-  files and returns only `evidence_packet` and `initial_report`. Approval is a
-  manual publication boundary, not an authenticated or automatic workflow.
-- The evidence and report review notebooks show checks and let two reviewers
-  record decisions in Markdown cells. Save reviewed copies in `private/reviews/`.
-  Generated review JSON is an optional template, not a second required checklist.
-  No approval is fabricated by the script. Historical candidates containing the
-  removed confidence field need regeneration under the current contract.
+- `load_agent_input(packet_path, report_path)` loads reviewed public files and
+  returns only `evidence_packet` and `initial_report`. Placing a final copy in
+  public is a manual boundary, not an authenticated approval system.
+- One report review notebook per packet in `private/reviews/` contains checks,
+  feedback, edits to a report copy, and a cell to save the final files to public.
+  Original candidates and raw responses stay unchanged. There is no separate
+  review JSON or required feedback file. Final copies must pass the current
+  contract, which omits the confidence field.
 - Preparation uses `data/benchmark/private/` and `data/benchmark/public/`; reviewed
   releases use `data/benchmark/releases/v1/`, then `v2`, etc. There is no release
   automation, public case envelope, answer key, pair construction, exported JSON

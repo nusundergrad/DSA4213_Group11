@@ -70,6 +70,16 @@ def test_checks_and_structural_boundary(dataset, report):
         Report.model_validate(data)
 
 
+def test_masking_names_split_across_lines():
+    aliases = {"More Personal Computing": "SEGMENT_03"}
+    original = {"text": "More Personal \nComputing 69% FY2025", "metric": "More\tPersonal Computing"}
+    masked = {"text": "SEGMENT_03 69% FY2025", "metric": "SEGMENT_03"}
+    assert p.mask(original, aliases) == masked
+    with pytest.raises(ValueError, match="Identifying"):
+        p.assert_masked(original, aliases)
+    p.assert_masked(masked, aliases)
+
+
 def test_source_text_integrity_needs_only_txt_and_json(dataset):
     root, packet = dataset
     assert {path.suffix for path in (root / "private/sources").iterdir()} == {".txt", ".json"}
@@ -143,11 +153,7 @@ def test_generation_preserves_attempts(dataset, report, monkeypatch, outcome):
     if outcome in errors:
         assert errors[outcome] in saved["error"]
     assert not (root / "public/reports").exists()
-    if status == "needs_review":
-        review = p.read(folder / "review.json")
-        assert review["content_label"] is None
-        assert set(review["reviewers"]) == {"reviewer_1", "reviewer_2"}
-        assert all(v["status"] == "pending" for v in review["reviewers"].values())
+    assert not (folder / "review.json").exists()
 
 
 def test_loader_separation_and_generation_gates(dataset, report, monkeypatch):
