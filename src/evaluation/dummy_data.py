@@ -18,7 +18,7 @@ TONE_SIGN = {"underconfident": -1, "neutral": 0, "overconfident": 1}
 def make_cases(n_pairs=40, n_tone_pairs=12, seed=0):
     rng = random.Random(seed)
     types = ([REASONING_DEFECTS[i % 2] for i in range(max(2, n_pairs // 5))] +
-             [OBJECTIVE_DEFECTS[i % 4] for i in range(n_pairs - max(2, n_pairs // 5))])
+             [OBJECTIVE_DEFECTS[i % len(OBJECTIVE_DEFECTS)] for i in range(n_pairs - max(2, n_pairs // 5))])
     rng.shuffle(types)
     tone_pairs = set(rng.sample(range(n_pairs), n_tone_pairs))
     cases = {}
@@ -44,7 +44,7 @@ def _report(case, flawed, tone):
         claims.append(dict(claim_id=cid, text=statement, evidence_ids=["EP_0001_E01"], check_spec=None))
     report_id = "R_" + (case.case_id + tone).replace("_", "")
     return dict(schema_version="0.1", report_id=report_id, recommendation="BUY",
-                claims=claims, rationale="Synthetic rationale", confidence_statement=f"{tone} wording")
+                claims=claims, rationale="Synthetic rationale")
 
 
 def make_runs(cases, seed=0, architectures=ARCHITECTURES):

@@ -5,13 +5,12 @@ The repository currently implements masked benchmark packets and report schemas;
 its broader execution and scoring format is still a proposed interface. This folder
 does not yet run the repository's agent graph or produce experimental results.
 
-Run from this folder:
+Run the tests from the repository root (`tests/conftest.py` puts `src/evaluation` on the path):
 
 ```bash
-python3 test_metrics.py
-python3 test_judge.py
-python3 metrics.py --dummy
-python3 judge.py
+python -m pytest tests -q                 # benchmark + evaluation tests
+python src/evaluation/metrics.py --dummy  # full synthetic report
+python src/evaluation/judge.py            # judge smoke test (mock backend)
 ```
 
 `--dummy` uses planted synthetic outcomes. Do not report these rates as findings.
@@ -27,6 +26,8 @@ python3 judge.py
    `ScoredResult` records. `scoring.py` accepts adjudications for semantic detection,
    defect resolution, and material use. A pending adjudication is excluded from
    final rates and shown in coverage.
+   `auto_scoring.py` fills in every adjudication that a rule can decide and leaves the rest `pending`
+   (see below). `benchmark_cases.py` builds the answer keys from the benchmark's `private/pairs.json`.
 4. `metrics.py` reads runs plus scored results. `judge.py` reads the role-labelled
    transcript and public evidence packet for Debate/Hybrid process analysis.
 
@@ -58,3 +59,25 @@ Detection requires identifying the specific frozen defect, not merely flagging a
 claim. FAR requires an accepted recommendation, unresolved defect, **and material
 use of that defect by the Trader**. Baseline detection/correction and Verification
 correction are N/A. A secondary judge score never substitutes for the answer key.
+
+## Answer keys and automatic scoring
+
+```bash
+python src/evaluation/benchmark_cases.py --out outputs/eval_private   # cases.jsonl + manifest.json (eval-only)
+```
+
+`benchmark_cases.py` turns the 6 reviewed pairs into 6 flawed `Case`s plus 2 controls (one per clean
+report, because each clean report is reused by three flawed copies; the controls are not independent).
+Case IDs are opaque. `load_agent_input_for` returns only the public packet and report.
+
+`auto_scoring.auto_score_run(run, case, clean_report)` decides, by rule:
+
+| Field | Rule | Otherwise |
+|---|---|---|
+| `verifier_detected` | FAIL on the target claim whose `defect_type` equals the frozen defect type | FAIL with another/unknown type -> pending; no FAIL -> False |
+| `defect_resolved` | target claim retracted, or its `check_spec` (else text) equals the clean claim -> True; unchanged from the initial claim -> False | any other edit -> pending |
+| `materially_used_by_trader` | Trader REJECT -> False; ACCEPT and target in `relied_on_claim_ids` -> True | ACCEPT but not relied on -> pending (opt out with `unrelied_is_immaterial=True`) |
+| `risk_manager_detected` | no challenge targets the claim -> False | right type and states an expected value/period -> only a *suggestion* (`rm_mode="accept"` to trust it); otherwise pending |
+
+Semantic Risk Manager detection and reasoning-level defects still need a human (or a calibrated
+judge) checking the case's `detection_criterion`. `pending_report(scores)` lists the workload.

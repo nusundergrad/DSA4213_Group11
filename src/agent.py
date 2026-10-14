@@ -2,17 +2,30 @@ from langgraph.graph import StateGraph, MessagesState, START, END
 from langchain_openrouter import ChatOpenRouter
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from dotenv import load_dotenv
-from state import AgentState
-from tool import mock_retrieve_10k_filing
-from prompts import ANALYST_SYSTEM_PROMPT, ANALYST_CONTEXT_MESSAGE_TEMPLATE, RISK_MANAGER_SYSTEM_PROMPT, RISK_MANAGER_CONTEXT_MESSAGE_TEMPLATE, TRADER_SYSTEM_PROMPT, TRADER_CONTEXT_MESSAGE_TEMPLATE
+if __package__:
+    from .state import AgentState
+    from .prompts import ANALYST_SYSTEM_PROMPT, ANALYST_CONTEXT_MESSAGE_TEMPLATE, RISK_MANAGER_SYSTEM_PROMPT, RISK_MANAGER_CONTEXT_MESSAGE_TEMPLATE, TRADER_SYSTEM_PROMPT, TRADER_CONTEXT_MESSAGE_TEMPLATE
+else:
+    from state import AgentState
+    from prompts import ANALYST_SYSTEM_PROMPT, ANALYST_CONTEXT_MESSAGE_TEMPLATE, RISK_MANAGER_SYSTEM_PROMPT, RISK_MANAGER_CONTEXT_MESSAGE_TEMPLATE, TRADER_SYSTEM_PROMPT, TRADER_CONTEXT_MESSAGE_TEMPLATE
 import json
 import os
 
-load_dotenv(override=True)
+llm = None
 
 
+def get_llm():
+    global llm
+    if llm is None:
+        load_dotenv(override=True)
+        llm = ChatOpenRouter(model="openrouter/free", temperature=0)
+    return llm
 
-llm = ChatOpenRouter(model="openrouter/free", temperature=0)
+
+def invoke_analyst(messages, model_client=None, **kwargs):
+    if model_client is None:
+        model_client = get_llm()
+    return model_client.invoke(messages, **kwargs)
 
 
 def clean_messages(messages):
@@ -32,6 +45,10 @@ def clean_messages(messages):
 
 
 def analyst_agent(state: AgentState):
+    if __package__:
+        from .tool import mock_retrieve_10k_filing
+    else:
+        from tool import mock_retrieve_10k_filing
     print("Analyst Agent Invoked")
     agent_name = "analyst_agent"
         # 1. Build the System Prompt (The Persona/Rules)
@@ -69,7 +86,7 @@ def analyst_agent(state: AgentState):
 
     print("Messages to send to LLM:", messages_to_send)
 
-    response = llm.invoke(messages_to_send)
+    response = invoke_analyst(messages_to_send)
     response.name = agent_name + "_response"
 
     print(f"Analyst Agent Response: {response.content}")
@@ -114,7 +131,7 @@ def risk_manager_agent(state: AgentState):
 
 
     # 4. Call the LLM
-    response = llm.invoke(messages_to_send)
+    response = get_llm().invoke(messages_to_send)
     response.name = agent_name + "_response"
 
     print(f"Risk Manager Agent Response: {response.content}")
@@ -170,7 +187,7 @@ def trader_agent(state: AgentState):
     # messages_to_send = [system_prompt, context_message] + state["messages"]
     
     # 4. Call the LLM
-    response = llm.invoke(messages_to_send)
+    response = get_llm().invoke(messages_to_send)
     response.name = agent_name + "_response"
 
     print(f"Trader Agent Response: {response.content}")
