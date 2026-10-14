@@ -52,6 +52,8 @@
           ],
           "before": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
             "metric": "net_sales",
             "from_period": {
               "label": "FY2024",
@@ -68,6 +70,8 @@
           },
           "after": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
             "metric": "net_sales",
             "from_period": {
               "label": "FY2024",
@@ -143,6 +147,8 @@
           ],
           "before": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
             "metric": "net_sales",
             "from_period": {
               "label": "FY2024",
@@ -159,6 +165,8 @@
           },
           "after": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
             "metric": "net_sales",
             "from_period": {
               "label": "FY2023",
@@ -223,6 +231,8 @@
           ],
           "before": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
             "metric": "net_sales",
             "from_period": {
               "label": "FY2024",
@@ -239,6 +249,8 @@
           },
           "after": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
             "metric": "net_sales",
             "from_period": {
               "label": "FY2024",
@@ -310,6 +322,8 @@
           ],
           "before": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
             "metric": "revenue",
             "from_period": {
               "label": "FY2024",
@@ -326,6 +340,8 @@
           },
           "after": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
             "metric": "revenue",
             "from_period": {
               "label": "FY2024",
@@ -408,6 +424,8 @@
           ],
           "before": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
             "metric": "revenue",
             "from_period": {
               "label": "FY2024",
@@ -424,6 +442,8 @@
           },
           "after": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
             "metric": "revenue",
             "from_period": {
               "label": "FY2023",
@@ -488,6 +508,8 @@
           ],
           "before": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
             "metric": "revenue",
             "from_period": {
               "label": "FY2024",
@@ -504,6 +526,8 @@
           },
           "after": {
             "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
             "metric": "revenue",
             "from_period": {
               "label": "FY2024",

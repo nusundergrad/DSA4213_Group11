@@ -43,7 +43,9 @@ def test_paired_inputs_and_intended_error(pair):
         assert spec["from_period"]["label"] == "FY2023"
         assert spec["to_period"]["label"] == "FY2024"
         assert spec["value"] == before["claims"][0]["check_spec"]["value"]
-        assert any("ambiguous/missing" in note for note in result["human_review"])
+        assert any("period" in error for error in result["errors"])
+        with pytest.raises(ValueError, match="period"):
+            load_agent_input(packet_path, flawed_path)
     else:
         assert result["errors"]  # strict clean validation still rejects these
         with pytest.raises(ValueError, match="asserted"):

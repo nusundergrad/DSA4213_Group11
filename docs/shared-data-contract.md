@@ -34,11 +34,19 @@ See [benchmark preparation and handoff](benchmark.md) and
   defects; separate preparation checks flag invalid clean candidates. Reports do
   not include `confidence_statement`; planned confidence framing belongs to case
   metadata and presentation, not Analyst generation.
+- Numerical assertions now identify source facts: `numeric.fact_id`, or
+  `percentage_change.from_fact_id` and `to_fact_id`. New generation requires
+  these IDs. Historical responses without them remain readable through the
+  legacy metric/period/unit lookup; both percentage-change IDs must be supplied
+  together. All eight current public reports and pair edit records have been
+  updated. Original model requests, responses, candidates and example-run
+  snapshots remain unchanged.
 - `load_agent_input(packet_path, report_path, check_clean=True)` returns only
   `evidence_packet` and `initial_report`. For paired experiments use
   `check_clean=False` for both clean and flawed cases in every architecture.
-  This skips financial correctness checks while retaining schemas and citation
-  references. It does not read private labels. Public reports now include
+  This skips financial correctness checks while retaining schemas, evidence
+  citations and fact-reference existence/parent checks. Period/value mismatches
+  remain representable for experiments. It does not read private labels. Public reports now include
   deliberately flawed copies; public placement is not a correctness label.
   Reports live in `public/reports/<packet_id>/` as `clean.json` and
   `error_<index>_<type>.json`. These readable filenames never enter the returned
@@ -194,9 +202,16 @@ injected report: it is a benchmark defect, not necessarily malformed JSON.
 
 | `kind` | Required fields | Intended check |
 |---|---|---|
-| `numeric` | `metric`, `period`, `value`, `unit` | Compare the asserted value/period with facts in the cited excerpts. |
-| `percentage_change` | `metric`, `from_period`, `to_period`, `value`, `unit` | Recompute `(new - old) / old * 100` from cited facts; unit must be `percent`. |
+| `numeric` | `fact_id`, `metric`, `period`, `value`, `unit` | Resolve the fact and check its cited evidence, metric, period, unit and value. |
+| `percentage_change` | `from_fact_id`, `to_fact_id`, `metric`, `from_period`, `to_period`, `value`, `unit` | Resolve both facts, check their metadata, then recompute `(new - old) / old * 100`; unit must be `percent`. |
 | `null` | None | No supported structured factual check; reasoning remains for Risk Manager. |
+
+Fact references are required for newly generated numerical assertions and present
+in all current public reports. The parser permits them to be absent in historical
+responses. An explicit unknown, uncited or mismatched fact is a check failure;
+it must not silently fall back to matching another fact. Since each fact already
+has an `evidence_id`, a repeated evidence/fact tuple is unnecessary. Qualitative
+claims continue to cite excerpts without a `check_spec`.
 
 Periods use the same object structure as source facts. A signed numeric change
 can represent a directly checkable contradiction. Other textual contradictions
@@ -213,6 +228,8 @@ Example claim (synthetic):
   "evidence_ids": ["EP_0012_E01"],
   "check_spec": {
     "kind": "percentage_change",
+    "from_fact_id": "EP_0012_F01",
+    "to_fact_id": "EP_0012_F02",
     "metric": "revenue",
     "from_period": {"label": "FY2024", "start": "2024-01-01", "end": "2024-12-31"},
     "to_period": {"label": "FY2025", "start": "2025-01-01", "end": "2025-12-31"},
@@ -225,6 +242,12 @@ Example claim (synthetic):
 If A injects a 20% arithmetic error, update both `text` and `check_spec.value` to
 20%. They represent the same single defect. Leaving the structured claim correct
 while changing only the prose would invalidate the check.
+
+Keep the original fact references for amount, arithmetic and reporting-period
+errors unless the intended defect is the citation itself. A reporting-period
+error can cite the source fact while asserting a different period; checking this
+disagreement is part of verification. Fact references themselves are source links,
+not expected answers or correctness labels.
 
 Planned confidence variants add a fixed `confidence_framing` sentence from case
 metadata when presenting the Analyst message. This is not a field in `Report`

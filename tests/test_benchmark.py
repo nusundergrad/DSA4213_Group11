@@ -27,7 +27,7 @@ def report(dataset):
     packet = dataset[1]
     return Report.model_validate({"report_id": "R_test", "recommendation": "HOLD", "claims": [
         {"claim_id": "C1", "text": "Net sales were 416161 million USD in FY2025.",
-         "evidence_ids": ["EP_0001_E01"], "check_spec": {"kind": "numeric", "metric": "net_sales",
+         "evidence_ids": ["EP_0001_E01"], "check_spec": {"kind": "numeric", "metric": "net_sales", "fact_id": "EP_0001_F01",
           "period": packet.facts[0].period.model_dump(mode="json"), "value": "416161", "unit": "USD_million"}},
         {"claim_id": "C2", "text": "Services sales increased.", "evidence_ids": ["EP_0001_E01"], "check_spec": None},
         {"claim_id": "C3", "text": "Economic conditions can affect demand.", "evidence_ids": ["EP_0001_E03"], "check_spec": None}],
@@ -100,14 +100,15 @@ def test_percentage_and_ambiguous_checks(dataset, report):
     candidate.claims[0].check_spec.value = "20"
     assert p.check_report(packet, candidate)["errors"]
     packet.facts[1].value = "0"
-    assert "zero denominator" in p.check_report(packet, candidate)["human_review"][0]
+    assert any("zero denominator" in note for note in p.check_report(packet, candidate)["human_review"])
+    report.claims[0].check_spec.fact_id = None  # old reports still use the legacy lookup
     report.claims[0].check_spec.unit = "USD"
     assert "unit mapping" in p.check_report(packet, report)["human_review"][0]
     report.claims[0].check_spec.period.label = "FY2020"
     assert "period" in p.check_report(packet, report)["human_review"][0]
 
 
-@pytest.mark.parametrize("outcome", ["valid", "malformed", "http_error", "identity_leak", "arithmetic", "malformed_api", "truncated", "changed_id"])
+@pytest.mark.parametrize("outcome", ["valid", "malformed", "http_error", "identity_leak", "arithmetic", "malformed_api", "truncated", "changed_id", "missing_fact_id"])
 def test_generation_preserves_attempts(dataset, report, monkeypatch, outcome):
     root, packet = dataset
     monkeypatch.setattr(p, "uuid4", lambda: SimpleNamespace(hex="test"))
@@ -116,6 +117,8 @@ def test_generation_preserves_attempts(dataset, report, monkeypatch, outcome):
         payload["rationale"] = "Microsoft is a good business."
     if outcome == "arithmetic":
         payload["claims"][0]["check_spec"]["value"] = "1"
+    if outcome == "missing_fact_id":
+        del payload["claims"][0]["check_spec"]["fact_id"]
     if outcome == "changed_id":
         payload["report_id"] = "R_wrong"
     content = "not JSON" if outcome == "malformed" else json.dumps(payload)
@@ -142,7 +145,7 @@ def test_generation_preserves_attempts(dataset, report, monkeypatch, outcome):
     monkeypatch.setattr(httpx.HTTPTransport, "handle_request", response)
     folder, status = p.generate(root, packet, "provider/model", "test-secret")
     assert len(calls) == 1
-    expected = "needs_review" if outcome == "valid" else "invalid" if outcome == "arithmetic" else "failed"
+    expected = "needs_review" if outcome == "valid" else "invalid" if outcome in {"arithmetic", "missing_fact_id"} else "failed"
     saved = p.read(folder / "attempt.json")
     assert status == expected, saved.get("error")
     assert saved["raw_response"] == raw.decode()
