@@ -124,17 +124,23 @@ def check_report(packet, report):
     return {"errors": errors, "human_review": review}
 
 
-def load_agent_input(packet_path, report_path):
-    """Load manually approved public files only; never load private review records."""
+def load_agent_input(packet_path, report_path, *, check_clean=True):
+    """Load public inputs. Use check_clean=False for every case in a paired experiment."""
     packet_path, report_path = Path(packet_path).resolve(), Path(report_path).resolve()
-    if (packet_path.parent.name != "evidence_packets" or report_path.parent.name != "reports"
-            or packet_path.parent.parent != report_path.parent.parent
+    if (packet_path.parent.name != "evidence_packets"
+            or report_path.parent != packet_path.parent.parent / "reports" / packet_path.stem
             or packet_path.parent.parent.name != "public"):
-        raise ValueError("Use evidence_packets/ and reports/ from the same public dataset")
+        raise ValueError("Use evidence_packets/ and reports/<packet_id>/ from the same public dataset")
     packet, report = Packet.model_validate(read(packet_path)), Report.model_validate(read(report_path))
-    checks = check_report(packet, report)
-    if checks["errors"]:
-        raise ValueError(checks["errors"])
+    if packet.packet_id != packet_path.stem:
+        raise ValueError("Packet ID must match its filename and report folder")
+    evidence_ids = {e.evidence_id for e in packet.evidence}
+    if any(not c.evidence_ids or not set(c.evidence_ids) <= evidence_ids for c in report.claims):
+        raise ValueError("Report has missing or unknown citations for this packet")
+    if check_clean:
+        checks = check_report(packet, report)
+        if checks["errors"]:
+            raise ValueError(checks["errors"])
     return {"evidence_packet": packet.model_dump(mode="json"), "initial_report": report.model_dump(mode="json")}
 
 

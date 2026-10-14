@@ -164,7 +164,7 @@ def test_loader_separation_and_generation_gates(dataset, report, monkeypatch):
             p.generate(root, packet, model, "key")
     with pytest.raises(ValueError, match="Identifying"):
         p.generate(root, packet, "provider/model", "key", "Use Apple financials")
-    report_path = root / "public/reports/R_test.json"
+    report_path = root / "public/reports/EP_0001/clean.json"
     p.save(report_path, report.model_dump(mode="json"))  # simulates manual publication
     packet_path = root / "public/evidence_packets/EP_0001.json"
     result = p.load_agent_input(packet_path, report_path)
@@ -175,7 +175,7 @@ def test_loader_separation_and_generation_gates(dataset, report, monkeypatch):
 
 def test_imports_have_no_side_effects():
     code = ("import sys, urllib.request; urllib.request.urlopen = lambda *a, **k: sys.exit(9); "
-            "import src.benchmark.prepare; assert 'src.graph' not in sys.modules; "
+            "import src.benchmark.prepare, src.benchmark.create_flawed_reports; assert 'src.graph' not in sys.modules; "
             "assert 'src.agent' not in sys.modules; assert 'dotenv' not in sys.modules")
     result = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True)
     assert result.returncode == 0 and not result.stdout, result.stderr

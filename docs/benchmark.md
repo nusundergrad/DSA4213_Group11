@@ -23,6 +23,10 @@ and edits are in `private/reviews/EP_0001_review.ipynb` and
 each report. Older attempts were removed; these files are not a full run history.
 No dataset version has been frozen yet.
 
+There are also three deliberately flawed copies per company: wrong number,
+wrong reporting period, and wrong arithmetic. That is eight reports in total
+(two clean and six flawed), using the same two evidence packets.
+
 ## Where files go
 
 All paths below are inside `data/benchmark/`.
@@ -35,12 +39,32 @@ All paths below are inside `data/benchmark/`.
 | `private/aliases.json` | Names and brands to replace with aliases |
 | `private/attempts/` | Model requests, responses, and candidates |
 | `private/reviews/` | One notebook per packet: checks, feedback, edits, and final output |
+| `private/pairs.json` | Report paths and IDs, error indexes, exact edits, and expected answers |
 | `private/archive/` | Backups of replaced files |
 | `public/evidence_packets/` | Masked evidence for the agents |
-| `public/reports/` | Checked final reports |
+| `public/reports/<packet_id>/` | `clean.json` and numbered error copies |
 
 **Private** files are for human review. **Public** files are for the agents.
 These names do not publish anything online or restrict file access.
+
+Reports are arranged like this for both `EP_0001` and `EP_0002`:
+
+```text
+public/reports/EP_0001/
+  clean.json
+  error_01_wrong_number.json
+  error_02_reporting_period.json
+  error_03_arithmetic.json
+```
+
+The error number identifies a variant within that packet; `target_claim_id` in
+the private pair record identifies the changed claim. For example, error 02
+changes claim C1's reporting period; it does not mean claim C2 is wrong.
+
+The loader opens these files directly and sends their contents to the model.
+It does not include the filenames, paths, or private pair records. Internal
+`report_id` values remain opaque. Agents should receive the returned payload,
+not browse this folder, since the filenames reveal the intended error.
 
 ## 1. Add a PDF and extract its text
 
@@ -182,8 +206,9 @@ Use one notebook per packet, saved as `private/reviews/EP_0003_review.ipynb`:
    that needs fixing; it belongs in this same notebook.
 3. Make corrections to the `report` copy in the edit cell. Explain what changed.
    The original `candidate.json` and raw response stay unchanged.
-4. Set `ready = True` and run all cells again to save the final report and masked
-   packet to `public/`. Save the notebook with its outputs.
+4. Set `ready = True` and run all cells again to save the final report as
+   `public/reports/<packet_id>/clean.json` and the masked packet to
+   `public/evidence_packets/`. Save the notebook with its outputs.
 
 The two existing reviews show this process. They use the same generation model.
 Microsoft's review also records a masking fix and a clarification that 6% is a
@@ -194,7 +219,7 @@ flag still accepts masked notes. This is optional, not another review record.
 The generator keeps each new attempt, including failures; cleanup is manual.
 Once a dataset version is used in experiments, preserve it and edit a new copy.
 
-## 7. Add flaws to separate copies (planned)
+## 7. Create and check flawed copies
 
 The order for the paired benchmark is:
 
@@ -213,10 +238,44 @@ Review that the clean report is still correct and the flawed copy contains only
 the intended defect. This review confirms the injection; it does not approve the
 flawed report as clean.
 
-Flaw injection, pair storage, and evaluation loading are not implemented yet.
-See [the proposed shared contract](shared-data-contract.md) for their planned
-fields. The current loader is for approved clean reports and rejects numerical
-errors, so it cannot serve as the paired benchmark loader unchanged.
+The six edits are recorded in `private/pairs.json`. Each record has a pair ID,
+packet ID, clean and flawed report IDs and paths, an error index, target claim,
+error type, expected and
+injected values, an explanation, detection/correction criteria, and exact
+before/after edits. The same clean report is reused for its three pairs.
+`clean_report_path` and `flawed_report_path` are relative to `public/`, for example
+`reports/EP_0001/clean.json` and `reports/EP_0001/error_01_wrong_number.json`.
+
+Recreate the copies offline with:
+
+```powershell
+python -m src.benchmark.create_flawed_reports
+```
+
+This applies the recorded edits without calling a model or choosing new IDs.
+It checks the original text before editing and refuses to replace a different
+existing output. Running it again with unchanged inputs produces identical files.
+To add a variant, use the next unused error index within its packet, a new opaque
+report ID, and its matching `error_<index>_<type>.json` path in the edit record,
+then run the command. Keep any dataset already used for experiments unchanged.
+
+Open [check_flawed_reports.ipynb](../data/benchmark/check_flawed_reports.ipynb)
+and run all cells. It prints each change, its source excerpt, the expected answer,
+and the preparation checks. It also checks that the evidence is identical and
+the report matches the recorded edits. Notes for the first six pairs are included.
+This notebook contains private answers, even though it sits beside the templates.
+
+For wrong-number cases, the FY2025 amount is overstated by 10,000 USD_million;
+the growth percentage is recalculated from that amount. For arithmetic cases,
+the source amounts stay correct and growth is overstated by 10 percentage points.
+For period cases, the same comparison is shifted from FY2024-FY2025 to
+FY2023-FY2024. Repeated assertions in the rationale follow the same error.
+
+The period cases get a missing-period review flag from the preparation checker,
+not a definitive arithmetic failure. The comparison with the excerpt establishes
+the intended error. These deliberate edits do not establish natural model error
+rates or successful error detection. Six pairs still cover only two companies;
+the reused clean reports are not six independent controls.
 
 ### Confidence variants (planned)
 
@@ -255,14 +314,22 @@ Keep that copy unchanged once used for experiments. Later changes go into `v2`.
 from src.benchmark.prepare import load_agent_input
 
 payload = load_agent_input(
-    "data/benchmark/releases/v1/public/evidence_packets/EP_0001.json",
-    "data/benchmark/releases/v1/public/reports/R_<approved-id>.json",
+    "data/benchmark/public/evidence_packets/EP_0001.json",
+    "data/benchmark/public/reports/EP_0001/error_01_wrong_number.json",
+    check_clean=False,
 )
 ```
 
 This returns `evidence_packet` and `initial_report`. Every architecture should
-receive the same masked input. Keep private files and real company names out of
-agent inputs. The loader assumes reports in `public/reports/` were approved.
+receive the same masked input. Use `EP_0001/clean.json` for its clean control.
+Filenames and paths are not included in the returned payload. Keep private files and real company names out of
+agent inputs. Use `check_clean=False` for **both clean and flawed inputs in every
+architecture**. It still checks schemas and evidence references, but does not
+reject deliberate financial errors or attach correctness labels. The default
+`check_clean=True` retains numerical checks for preparing clean reports; passing
+those checks alone is not proof that a report is clean. Read pair labels and
+expected answers separately for evaluation, after agent execution.
+Once a dataset version is saved, use its paths instead of the working folder.
 The existing debate graph is not connected to this workflow yet.
 
 ## Which Analyst do we use?
