@@ -34,5 +34,13 @@
   "iOS": "PRODUCT_21",
   "macOS": "PRODUCT_22",
   "Redmond": "ENTITY_02",
-  "Cupertino": "ENTITY_03"
+  "Cupertino": "ENTITY_03",
+  "NVIDIA Corporation": "COMPANY_03",
+  "NVIDIA": "COMPANY_03",
+  "NVDA": "COMPANY_03",
+  "Compute & Networking": "SEGMENT_04",
+  "Graphics": "SEGMENT_05",
+  "Hopper": "PRODUCT_23",
+  "Spectrum-X": "PRODUCT_24",
+  "GeForce RTX 40 Series": "PRODUCT_25"
 }

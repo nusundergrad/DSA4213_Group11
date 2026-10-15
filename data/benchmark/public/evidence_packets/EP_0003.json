@@ -1,0 +1,97 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0003",
+  "company_alias": "COMPANY_03",
+  "fiscal_year": 2025,
+  "evidence": [
+    {
+      "evidence_id": "EP_0003_E01",
+      "section": "Item 7",
+      "text": "Revenue by Reportable Segments\nYear Ended\nJan 26, 2025 Jan 28, 2024\n$\nChange\n%\nChange\n($ in millions)\nSEGMENT_04 $ 116,193 $ 47,405 $ 68,788 145 %\nSEGMENT_05 14,304 13,517 787 6 %\nTotal $ 130,497 $ 60,922 $ 69,575 114 %"
+    },
+    {
+      "evidence_id": "EP_0003_E02",
+      "section": "Item 7",
+      "text": "SEGMENT_04 revenue – The year over year increase was due to strong demand for our accelerated computing and AI solutions. Revenue from Data\nCenter computing grew 162% driven primarily by demand for our PRODUCT_23 computing platform used for large language models, recommendation engines, and\ngenerative AI applications. Revenue from Data Center networking grew 51% driven by Ethernet for AI revenue, which includes PRODUCT_24 end-to-end ethernet\nplatform.\nSEGMENT_05 revenue – The year over year increase was driven by sales of our PRODUCT_25 GPUs.\nReportable segment operating income – The year over year increase in SEGMENT_04 segment operating income was driven by growth in revenue. The\nyear over year decrease in SEGMENT_05 segment operating income was driven by an increase of 44% in segment operating expenses, partially offset by growth in\nrevenue.\nAll Other operating loss – The year over year increase was due to an increase in stock-based compensation expense reflecting employee growth and\ncompensation increases."
+    },
+    {
+      "evidence_id": "EP_0003_E03",
+      "section": "Item 1A",
+      "text": "Export controls could disrupt our supply chain and distribution channels, negatively impacting our ability to serve demand, including in markets outside China\nand for our gaming products. The possibility of additional export controls has negatively impacted and may in the future negatively impact demand for our\nproducts, benefiting competitors that offer alternatives less likely to be restricted by further controls. Repeated changes in the export control rules are likely to\nimpose compliance burdens on our business and our customers, negatively and materially impacting our business.\nIncreasing use of economic sanctions and export controls has impacted and may in the future impact demand for our products or services, negatively impacting\nour business and financial results. Reduced demand due to export controls could also lead to excess inventory or cause us to incur related supply charges."
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0003_F01",
+      "evidence_id": "EP_0003_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-01-29",
+        "end": "2025-01-26"
+      },
+      "value": "130497",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0003_F02",
+      "evidence_id": "EP_0003_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-01-30",
+        "end": "2024-01-28"
+      },
+      "value": "60922",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0003_F03",
+      "evidence_id": "EP_0003_E01",
+      "metric": "compute_networking_revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-01-29",
+        "end": "2025-01-26"
+      },
+      "value": "116193",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0003_F04",
+      "evidence_id": "EP_0003_E01",
+      "metric": "compute_networking_revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-01-30",
+        "end": "2024-01-28"
+      },
+      "value": "47405",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0003_F05",
+      "evidence_id": "EP_0003_E01",
+      "metric": "graphics_revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-01-29",
+        "end": "2025-01-26"
+      },
+      "value": "14304",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0003_F06",
+      "evidence_id": "EP_0003_E01",
+      "metric": "graphics_revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-01-30",
+        "end": "2024-01-28"
+      },
+      "value": "13517",
+      "unit": "USD_million"
+    }
+  ]
+}

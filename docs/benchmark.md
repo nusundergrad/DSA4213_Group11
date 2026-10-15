@@ -54,7 +54,7 @@ public/reports/EP_0001/
   clean.json
   error_01_wrong_number.json
   error_02_reporting_period.json
-  error_03_arithmetic.json
+  error_03_arithmetic.json 
 ```
 
 The error number identifies a variant within that packet; `target_claim_id` in
@@ -120,7 +120,7 @@ A span uses character positions, starting at zero. `source[start:end]` must equa
 the stored excerpt; the end position is excluded. Save numbers as strings, for
 example `"416161"`, with units such as `USD_million`.
 
-## 3. Prepare the masked packet
+## 3. Prepare the masked packet 
 
 Use your new packet ID:
 

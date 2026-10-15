@@ -554,6 +554,290 @@
       "error_index": 3,
       "clean_report_path": "reports/EP_0002/clean.json",
       "flawed_report_path": "reports/EP_0002/error_03_arithmetic.json"
+    },
+    {
+      "pair_id": "PAIR_0007",
+      "packet_id": "EP_0003",
+      "clean_report_id": "R_aeee037a0e3f4ed4a6f6755c53dce782",
+      "flawed_report_id": "R_412ccb36a9ab4526b919960f53b9deae",
+      "defect_type": "wrong_number",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0003_E01"
+      ],
+      "expected": {
+        "value": "130497",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-01-29",
+          "end": "2025-01-26"
+        },
+        "growth_percent": "114.20"
+      },
+      "injected": {
+        "value": "140497",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-01-29",
+          "end": "2025-01-26"
+        },
+        "growth_percent": "130.62"
+      },
+      "explanation": "FY2025 total revenue is overstated by 10,000 USD_million. Growth is recalculated from that amount, so the root defect is a wrong source number.",
+      "detection_criterion": "Identify FY2025 revenue as 130497 USD_million, not 140497; flagging only derived growth is insufficient.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including repeated assertions in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenue increased by 114.20% from $60,922 million in the year ended January 28, 2024, to $130,497 million in the year ended January 26, 2025.",
+          "after": "Total revenue increased by 130.62% from $60,922 million in the year ended January 28, 2024, to $140,497 million in the year ended January 26, 2025."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-01-29",
+              "end": "2025-01-26"
+            },
+            "value": "114.20",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-01-29",
+              "end": "2025-01-26"
+            },
+            "value": "130.62",
+            "unit": "percent"
+          }
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 114.20%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate.",
+          "after": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 130.62%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate."
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0003/clean.json",
+      "flawed_report_path": "reports/EP_0003/error_01_wrong_number.json"
+    },
+    {
+      "pair_id": "PAIR_0008",
+      "packet_id": "EP_0003",
+      "clean_report_id": "R_aeee037a0e3f4ed4a6f6755c53dce782",
+      "flawed_report_id": "R_98049939f1e04251a14473a116e831d5",
+      "defect_type": "reporting_period",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0003_E01"
+      ],
+      "expected": {
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-01-30",
+          "end": "2024-01-28"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-01-29",
+          "end": "2025-01-26"
+        }
+      },
+      "injected": {
+        "from_period": {
+          "label": "FY2023",
+          "start": "2022-01-31",
+          "end": "2023-01-29"
+        },
+        "to_period": {
+          "label": "FY2024",
+          "start": "2023-01-30",
+          "end": "2024-01-28"
+        }
+      },
+      "explanation": "The total revenue comparison is shifted from FY2024-FY2025 to FY2023-FY2024. Amounts, growth and fact IDs remain unchanged. Other claims retain their original periods.",
+      "detection_criterion": "Identify that 60922 and 130497 USD_million and the associated growth belong to FY2024-FY2025, not FY2023-FY2024, using the evidence headings and fact periods.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including repeated assertions in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenue increased by 114.20% from $60,922 million in the year ended January 28, 2024, to $130,497 million in the year ended January 26, 2025.",
+          "after": "Total revenue increased by 114.20% from $60,922 million in the year ended January 29, 2023, to $130,497 million in the year ended January 28, 2024."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-01-29",
+              "end": "2025-01-26"
+            },
+            "value": "114.20",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2023",
+              "start": "2022-01-31",
+              "end": "2023-01-29"
+            },
+            "to_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "value": "114.20",
+            "unit": "percent"
+          }
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 114.20%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate.",
+          "after": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 114.20% from fiscal year 2023 to fiscal year 2024. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate."
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0003/clean.json",
+      "flawed_report_path": "reports/EP_0003/error_02_reporting_period.json"
+    },
+    {
+      "pair_id": "PAIR_0009",
+      "packet_id": "EP_0003",
+      "clean_report_id": "R_aeee037a0e3f4ed4a6f6755c53dce782",
+      "flawed_report_id": "R_da780b37984a49eea1d3489a73b18fdb",
+      "defect_type": "arithmetic",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0003_E01"
+      ],
+      "expected": {
+        "growth_percent": "114.20"
+      },
+      "injected": {
+        "growth_percent": "124.20"
+      },
+      "explanation": "Source amounts and periods remain correct; total revenue growth is overstated by 10 percentage points, including the repeated rationale assertion.",
+      "detection_criterion": "Identify growth from 60922 to 130497 as 114.20%, not 124.20%.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including repeated assertions in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenue increased by 114.20% from $60,922 million in the year ended January 28, 2024, to $130,497 million in the year ended January 26, 2025.",
+          "after": "Total revenue increased by 124.20% from $60,922 million in the year ended January 28, 2024, to $130,497 million in the year ended January 26, 2025."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-01-29",
+              "end": "2025-01-26"
+            },
+            "value": "114.20",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-01-29",
+              "end": "2025-01-26"
+            },
+            "value": "124.20",
+            "unit": "percent"
+          }
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 114.20%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate.",
+          "after": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 124.20%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate."
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0003/clean.json",
+      "flawed_report_path": "reports/EP_0003/error_03_arithmetic.json"
     }
   ]
 }
