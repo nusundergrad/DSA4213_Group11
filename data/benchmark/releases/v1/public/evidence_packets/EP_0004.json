@@ -1,0 +1,102 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0004",
+  "company_alias": "COMPANY_04",
+  "fiscal_year": 2025,
+  "evidence": [
+    {
+      "evidence_id": "EP_0004_E01",
+      "section": "Item 7",
+      "text": "Table 1 Summary Income Statement and Selected Financial Data\n(Dollars in millions, except per share information) 2025 2024\nIncome statement\nNet interest income $ 60,096 $ 56,060 \nNoninterest income 53,001 49,796 \nTotal revenue, net of interest expense 113,097 105,856 \nProvision for credit losses 5,675 5,821 \nNoninterest expense 69,727 66,812 \nIncome before income taxes 37,695 33,223 \nIncome tax expense 7,186 6,250 \nNet income 30,509 26,973 \nPreferred stock dividends and other 1,454 1,629 \nNet income applicable to common shareholders $ 29,055 $ 25,344 \nPer common share information   \nEarnings $ 3.86 $ 3.23 \nDiluted earnings 3.81 3.19 \nDividends paid 1.08 1.00 \nPerformance ratios\nReturn on average assets 0.89 % 0.82 %\nReturn on average common shareholders’ equity 10.59 9.53 \nReturn on average tangible common shareholders’\nequity 14.22 12.94 \nEfficiency ratio 61.65 63.12 \nBalance sheet at year end   \nTotal loans and leases $ 1,185,700 $ 1,095,835 \nTotal assets 3,411,738 3,261,299 \nTotal deposits 2,018,729 1,965,467 \nTotal liabilities 3,108,495 2,967,336 \nTotal common shareholders’ equity 277,251 270,804 \nTotal shareholders’ equity 303,243 293,963 \nFor definitions, see Key Metrics on page 172.\nReturn on average tangible common shareholders’ equity is a non-GAAP financial measure. For more information and a\ncorresponding reconciliation to the most directly comparable financial measures defined by accounting principles generally\naccepted in the United States of America (GAAP), see Non-GAAP Reconciliations on page 86."
+    },
+    {
+      "evidence_id": "EP_0004_E02",
+      "section": "Item 7",
+      "text": "Net income was $30.5 billion, or $3.81 per diluted share, in 2025 compared to $27.0\nbillion, or $3.19 per diluted share, in 2024. The increase in net income was due to\nhigher net interest income and noninterest income, and lower provision for credit\nlosses, partially offset by higher noninterest expense."
+    },
+    {
+      "evidence_id": "EP_0004_E03",
+      "section": "Item 1A",
+      "text": "Any sudden or prolonged market downturn, as a result of the above factors or\notherwise, could reduce net interest income and noninterest income and adversely\naffect our results of operations and financial condition, including capital and liquidity\nlevels. Elevated inflation and interest rate levels, monetary tightening by central banks\nand geopolitical developments could continue to adversely impact financial markets\nand\nmacroeconomic conditions, as well as result in increased market volatility and\ndisruptions and recessionary risk.\nGlobal uncertainties regarding fiscal and monetary policies continue to present\neconomic challenges. High and rising debt levels in the U.S. and globally may\ncontribute to interest rate volatility, which may constrain governments’ fiscal policies,\npotentially resulting in adverse economic outcomes. Actions taken by the Federal\nReserve or central banks in other jurisdictions, including changes in target rates,\nbalance sheet management and lending facilities, are beyond our control and difficult\nto predict, particularly in response to the uncertainty of inflationary paths. This can\naffect interest rates and the value of financial instruments and other assets, such as\ndebt securities, and impact our borrowers and potentially increase delinquency rates\nand may also raise government debt levels, adversely affect businesses and\nhousehold incomes, adversely impact the banking sector generally, and increase\nuncertainty surrounding monetary policy. While the Federal Reserve reduced policy\nrates in 2025, uncertainty remains regarding the pace and duration of the reduction of\nmarket interest rates. If inflation does not continue to decline toward the Federal\nReserve’s target, the Federal Reserve may hold the fed funds rate steady or raise\nrates, resulting in a flat or inverted yield curve, volatility of equity and other markets,\nand volatility of the U.S. dollar, which could impact investor risk appetite and our\nborrowers, potentially increasing delinquency rates. Financial market volatility could\nalso result from uncertainty about the timing and extent of any additional rate cuts by\nthe Federal Reserve in response to moderating inflation, weakening economic\nconditions and/or labor market conditions. Any future change in monetary policy by the\nFederal Reserve, in an effort to stimulate the economy or otherwise, resulting in lower\ninterest rates would typically result in lower revenue through lower net interest income,\nwhich could adversely affect our results of operations."
+    },
+    {
+      "evidence_id": "EP_0004_E04",
+      "section": "Item 7",
+      "text": "Effective in the fourth quarter of 2025, the Corporation elected to change accounting\nmethods for its tax-related affordable housing, eligible wind renewable energy and\nsolar renewable energy equity investments, which were applied on a retrospective\nbasis. The Corporation determined that the new accounting methods are preferable,\nas they better align the financial statement presentation with the economic impact of\nthese equity investments. The primary impact of the accounting changes is a\nreclassification between income statement line items that nets income tax credits and\nbenefits against the investment expense. Certain prior-period information presented\nherein has been revised to reflect the accounting method changes. For more\ninformation, see Note 1 – Summary of Significant Accounting Principles to the\nConsolidated Financial Statements and Exhibit 18 to this Annual Report on Form 10-\nK."
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0004_F01",
+      "evidence_id": "EP_0004_E01",
+      "metric": "total_revenue_net_of_interest_expense",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "113097",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0004_F02",
+      "evidence_id": "EP_0004_E01",
+      "metric": "total_revenue_net_of_interest_expense",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "105856",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0004_F03",
+      "evidence_id": "EP_0004_E01",
+      "metric": "net_income",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "30509",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0004_F04",
+      "evidence_id": "EP_0004_E01",
+      "metric": "net_income",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "26973",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0004_F05",
+      "evidence_id": "EP_0004_E01",
+      "metric": "noninterest_expense",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "69727",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0004_F06",
+      "evidence_id": "EP_0004_E01",
+      "metric": "noninterest_expense",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "66812",
+      "unit": "USD_million"
+    }
+  ]
+}

@@ -1,0 +1,1657 @@
+{
+  "schema_version": "0.1",
+  "pairs": [
+    {
+      "pair_id": "PAIR_0001",
+      "packet_id": "EP_0001",
+      "clean_report_id": "R_fa4c7c8cf694408e84a615d6b28ac489",
+      "flawed_report_id": "R_e952709375154b38a6dc60aaef05dd2f",
+      "defect_type": "wrong_number",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "expected": {
+        "value": "416161",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-09-29",
+          "end": "2025-09-27"
+        },
+        "growth_percent": "6.43"
+      },
+      "injected": {
+        "value": "426161",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-09-29",
+          "end": "2025-09-27"
+        },
+        "growth_percent": "8.98"
+      },
+      "explanation": "The FY2025 amount is overstated by 10,000 USD_million. Growth is recalculated from that wrong amount, so there is one source-number error, not an extra calculation error.",
+      "detection_criterion": "Identifies that FY2025 net_sales is 416161 USD_million, not 426161; merely flagging the derived growth is not enough to identify the root error.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including any repeated assertion in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total net sales for COMPANY_01 increased by 6.43% from $391,035 million in fiscal year 2024 to $416,161 million in fiscal year 2025 (Item 7, EP_0001_E01).",
+          "after": "Total net sales for COMPANY_01 increased by 8.98% from $391,035 million in fiscal year 2024 to $426,161 million in fiscal year 2025 (Item 7, EP_0001_E01)."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
+            "metric": "net_sales",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-10-01",
+              "end": "2024-09-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-09-29",
+              "end": "2025-09-27"
+            },
+            "value": "6.43",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
+            "metric": "net_sales",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-10-01",
+              "end": "2024-09-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-09-29",
+              "end": "2025-09-27"
+            },
+            "value": "8.98",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0001/clean.json",
+      "flawed_report_path": "reports/EP_0001/error_01_wrong_number.json"
+    },
+    {
+      "pair_id": "PAIR_0002",
+      "packet_id": "EP_0001",
+      "clean_report_id": "R_fa4c7c8cf694408e84a615d6b28ac489",
+      "flawed_report_id": "R_4c22e44d6cbb4d34b5b4a46749603b7f",
+      "defect_type": "reporting_period",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "expected": {
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-10-01",
+          "end": "2024-09-28"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-09-29",
+          "end": "2025-09-27"
+        }
+      },
+      "injected": {
+        "from_period": {
+          "label": "FY2023",
+          "start": "2022-09-25",
+          "end": "2023-09-30"
+        },
+        "to_period": {
+          "label": "FY2024",
+          "start": "2023-10-01",
+          "end": "2024-09-28"
+        }
+      },
+      "explanation": "The same amounts and growth are attributed to FY2023-FY2024 instead of FY2024-FY2025. The whole revenue comparison is shifted back one fiscal year; other claims keep their original periods.",
+      "detection_criterion": "Identifies that the quoted amounts and growth belong to FY2024-FY2025, not FY2023-FY2024. The excerpt includes a different FY2023 amount.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including any repeated assertion in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total net sales for COMPANY_01 increased by 6.43% from $391,035 million in fiscal year 2024 to $416,161 million in fiscal year 2025 (Item 7, EP_0001_E01).",
+          "after": "Total net sales for COMPANY_01 increased by 6.43% from $391,035 million in fiscal year 2023 to $416,161 million in fiscal year 2024 (Item 7, EP_0001_E01)."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
+            "metric": "net_sales",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-10-01",
+              "end": "2024-09-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-09-29",
+              "end": "2025-09-27"
+            },
+            "value": "6.43",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
+            "metric": "net_sales",
+            "from_period": {
+              "label": "FY2023",
+              "start": "2022-09-25",
+              "end": "2023-09-30"
+            },
+            "to_period": {
+              "label": "FY2024",
+              "start": "2023-10-01",
+              "end": "2024-09-28"
+            },
+            "value": "6.43",
+            "unit": "percent"
+          }
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "COMPANY_01 demonstrated overall net sales growth in fiscal year 2025, driven by strong performance in its Services sales category. However, the decline in the Wearables, Home and Accessories sales category indicates some areas of weakness. Furthermore, the company's significant exposure to global economic conditions presents a material risk. Given the mixed performance across sales categories and the identified macroeconomic risks, a HOLD recommendation is appropriate at this time.",
+          "after": "COMPANY_01 demonstrated overall net sales growth in fiscal year 2024, driven by strong performance in its Services sales category. However, the decline in the Wearables, Home and Accessories sales category indicates some areas of weakness. Furthermore, the company's significant exposure to global economic conditions presents a material risk. Given the mixed performance across sales categories and the identified macroeconomic risks, a HOLD recommendation is appropriate at this time."
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0001/clean.json",
+      "flawed_report_path": "reports/EP_0001/error_02_reporting_period.json"
+    },
+    {
+      "pair_id": "PAIR_0003",
+      "packet_id": "EP_0001",
+      "clean_report_id": "R_fa4c7c8cf694408e84a615d6b28ac489",
+      "flawed_report_id": "R_fa358ca78f5047b0a23d1bc6a45e52e0",
+      "defect_type": "arithmetic",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "expected": {
+        "growth_percent": "6.43"
+      },
+      "injected": {
+        "growth_percent": "16.43"
+      },
+      "explanation": "Both source amounts and fiscal periods remain correct. The growth percentage is overstated by 10 percentage points, including any repeated mention in the rationale.",
+      "detection_criterion": "Identifies that growth from 391035 to 416161 is 6.43%, not 16.43%.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including any repeated assertion in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total net sales for COMPANY_01 increased by 6.43% from $391,035 million in fiscal year 2024 to $416,161 million in fiscal year 2025 (Item 7, EP_0001_E01).",
+          "after": "Total net sales for COMPANY_01 increased by 16.43% from $391,035 million in fiscal year 2024 to $416,161 million in fiscal year 2025 (Item 7, EP_0001_E01)."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
+            "metric": "net_sales",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-10-01",
+              "end": "2024-09-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-09-29",
+              "end": "2025-09-27"
+            },
+            "value": "6.43",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0001_F02",
+            "to_fact_id": "EP_0001_F01",
+            "metric": "net_sales",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-10-01",
+              "end": "2024-09-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-09-29",
+              "end": "2025-09-27"
+            },
+            "value": "16.43",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0001/clean.json",
+      "flawed_report_path": "reports/EP_0001/error_03_arithmetic.json"
+    },
+    {
+      "pair_id": "PAIR_0004",
+      "packet_id": "EP_0002",
+      "clean_report_id": "R_1453e4303c4b4412bffb36eb1a768020",
+      "flawed_report_id": "R_12be009a2d1d47e7b7636261af75c4cd",
+      "defect_type": "wrong_number",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "expected": {
+        "value": "281724",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-07-01",
+          "end": "2025-06-30"
+        },
+        "growth_percent": "14.93"
+      },
+      "injected": {
+        "value": "291724",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-07-01",
+          "end": "2025-06-30"
+        },
+        "growth_percent": "19.01"
+      },
+      "explanation": "The FY2025 amount is overstated by 10,000 USD_million. Growth is recalculated from that wrong amount, so there is one source-number error, not an extra calculation error.",
+      "detection_criterion": "Identifies that FY2025 revenue is 281724 USD_million, not 291724; merely flagging the derived growth is not enough to identify the root error.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including any repeated assertion in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Revenue increased by 14.93% from $245,122 million in fiscal year 2024 to $281,724 million in fiscal year 2025.",
+          "after": "Revenue increased by 19.01% from $245,122 million in fiscal year 2024 to $291,724 million in fiscal year 2025."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-07-01",
+              "end": "2024-06-30"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-07-01",
+              "end": "2025-06-30"
+            },
+            "value": "14.93",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-07-01",
+              "end": "2024-06-30"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-07-01",
+              "end": "2025-06-30"
+            },
+            "value": "19.01",
+            "unit": "percent"
+          }
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "The company demonstrated strong top-line growth with revenue increasing by 14.93% and operating income by 17.45% in fiscal year 2025. Gross margin also increased by 13.38%. However, there are material counter-evidences that suggest a HOLD recommendation. The gross margin percentage for PRODUCT_10 decreased to 69% due to the scaling of AI infrastructure, indicating potential cost pressures in a key growth area. Furthermore, operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) due to investments in cloud and AI engineering and the ENTITY_01 acquisition. The company also acknowledges intense competition and low barriers to entry in many of its markets, posing ongoing risks to its financial performance. These factors, while not negating the overall growth, introduce uncertainties that warrant a cautious approach.",
+          "after": "The company demonstrated strong top-line growth with revenue increasing by 19.01% and operating income by 17.45% in fiscal year 2025. Gross margin also increased by 13.38%. However, there are material counter-evidences that suggest a HOLD recommendation. The gross margin percentage for PRODUCT_10 decreased to 69% due to the scaling of AI infrastructure, indicating potential cost pressures in a key growth area. Furthermore, operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) due to investments in cloud and AI engineering and the ENTITY_01 acquisition. The company also acknowledges intense competition and low barriers to entry in many of its markets, posing ongoing risks to its financial performance. These factors, while not negating the overall growth, introduce uncertainties that warrant a cautious approach."
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0002/clean.json",
+      "flawed_report_path": "reports/EP_0002/error_01_wrong_number.json"
+    },
+    {
+      "pair_id": "PAIR_0005",
+      "packet_id": "EP_0002",
+      "clean_report_id": "R_1453e4303c4b4412bffb36eb1a768020",
+      "flawed_report_id": "R_dfca011d93374e4db9fc16f2982514ca",
+      "defect_type": "reporting_period",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "expected": {
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-07-01",
+          "end": "2024-06-30"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-07-01",
+          "end": "2025-06-30"
+        }
+      },
+      "injected": {
+        "from_period": {
+          "label": "FY2023",
+          "start": "2022-07-01",
+          "end": "2023-06-30"
+        },
+        "to_period": {
+          "label": "FY2024",
+          "start": "2023-07-01",
+          "end": "2024-06-30"
+        }
+      },
+      "explanation": "The same amounts and growth are attributed to FY2023-FY2024 instead of FY2024-FY2025. The whole revenue comparison is shifted back one fiscal year; other claims keep their original periods.",
+      "detection_criterion": "Identifies that the quoted amounts and growth belong to FY2024-FY2025, not FY2023-FY2024. The excerpt includes a different FY2023 amount.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including any repeated assertion in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Revenue increased by 14.93% from $245,122 million in fiscal year 2024 to $281,724 million in fiscal year 2025.",
+          "after": "Revenue increased by 14.93% from $245,122 million in fiscal year 2023 to $281,724 million in fiscal year 2024."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-07-01",
+              "end": "2024-06-30"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-07-01",
+              "end": "2025-06-30"
+            },
+            "value": "14.93",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2023",
+              "start": "2022-07-01",
+              "end": "2023-06-30"
+            },
+            "to_period": {
+              "label": "FY2024",
+              "start": "2023-07-01",
+              "end": "2024-06-30"
+            },
+            "value": "14.93",
+            "unit": "percent"
+          }
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "The company demonstrated strong top-line growth with revenue increasing by 14.93% and operating income by 17.45% in fiscal year 2025. Gross margin also increased by 13.38%. However, there are material counter-evidences that suggest a HOLD recommendation. The gross margin percentage for PRODUCT_10 decreased to 69% due to the scaling of AI infrastructure, indicating potential cost pressures in a key growth area. Furthermore, operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) due to investments in cloud and AI engineering and the ENTITY_01 acquisition. The company also acknowledges intense competition and low barriers to entry in many of its markets, posing ongoing risks to its financial performance. These factors, while not negating the overall growth, introduce uncertainties that warrant a cautious approach.",
+          "after": "The company demonstrated strong top-line growth with revenue increasing by 14.93% from fiscal year 2023 to fiscal year 2024, and operating income increasing by 17.45% in fiscal year 2025. Gross margin also increased by 13.38%. However, there are material counter-evidences that suggest a HOLD recommendation. The gross margin percentage for PRODUCT_10 decreased to 69% due to the scaling of AI infrastructure, indicating potential cost pressures in a key growth area. Furthermore, operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) due to investments in cloud and AI engineering and the ENTITY_01 acquisition. The company also acknowledges intense competition and low barriers to entry in many of its markets, posing ongoing risks to its financial performance. These factors, while not negating the overall growth, introduce uncertainties that warrant a cautious approach."
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0002/clean.json",
+      "flawed_report_path": "reports/EP_0002/error_02_reporting_period.json"
+    },
+    {
+      "pair_id": "PAIR_0006",
+      "packet_id": "EP_0002",
+      "clean_report_id": "R_1453e4303c4b4412bffb36eb1a768020",
+      "flawed_report_id": "R_edafb358c9a644e98ea728bfec58488f",
+      "defect_type": "arithmetic",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "expected": {
+        "growth_percent": "14.93"
+      },
+      "injected": {
+        "growth_percent": "24.93"
+      },
+      "explanation": "Both source amounts and fiscal periods remain correct. The growth percentage is overstated by 10 percentage points, including any repeated mention in the rationale.",
+      "detection_criterion": "Identifies that growth from 245122 to 281724 is 14.93%, not 24.93%.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including any repeated assertion in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Revenue increased by 14.93% from $245,122 million in fiscal year 2024 to $281,724 million in fiscal year 2025.",
+          "after": "Revenue increased by 24.93% from $245,122 million in fiscal year 2024 to $281,724 million in fiscal year 2025."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-07-01",
+              "end": "2024-06-30"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-07-01",
+              "end": "2025-06-30"
+            },
+            "value": "14.93",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0002_F02",
+            "to_fact_id": "EP_0002_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-07-01",
+              "end": "2024-06-30"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-07-01",
+              "end": "2025-06-30"
+            },
+            "value": "24.93",
+            "unit": "percent"
+          }
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "The company demonstrated strong top-line growth with revenue increasing by 14.93% and operating income by 17.45% in fiscal year 2025. Gross margin also increased by 13.38%. However, there are material counter-evidences that suggest a HOLD recommendation. The gross margin percentage for PRODUCT_10 decreased to 69% due to the scaling of AI infrastructure, indicating potential cost pressures in a key growth area. Furthermore, operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) due to investments in cloud and AI engineering and the ENTITY_01 acquisition. The company also acknowledges intense competition and low barriers to entry in many of its markets, posing ongoing risks to its financial performance. These factors, while not negating the overall growth, introduce uncertainties that warrant a cautious approach.",
+          "after": "The company demonstrated strong top-line growth with revenue increasing by 24.93% and operating income by 17.45% in fiscal year 2025. Gross margin also increased by 13.38%. However, there are material counter-evidences that suggest a HOLD recommendation. The gross margin percentage for PRODUCT_10 decreased to 69% due to the scaling of AI infrastructure, indicating potential cost pressures in a key growth area. Furthermore, operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) due to investments in cloud and AI engineering and the ENTITY_01 acquisition. The company also acknowledges intense competition and low barriers to entry in many of its markets, posing ongoing risks to its financial performance. These factors, while not negating the overall growth, introduce uncertainties that warrant a cautious approach."
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0002/clean.json",
+      "flawed_report_path": "reports/EP_0002/error_03_arithmetic.json"
+    },
+    {
+      "pair_id": "PAIR_0007",
+      "packet_id": "EP_0003",
+      "clean_report_id": "R_aeee037a0e3f4ed4a6f6755c53dce782",
+      "flawed_report_id": "R_412ccb36a9ab4526b919960f53b9deae",
+      "defect_type": "wrong_number",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0003_E01"
+      ],
+      "expected": {
+        "value": "130497",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-01-29",
+          "end": "2025-01-26"
+        },
+        "growth_percent": "114.20"
+      },
+      "injected": {
+        "value": "140497",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-01-29",
+          "end": "2025-01-26"
+        },
+        "growth_percent": "130.62"
+      },
+      "explanation": "FY2025 total revenue is overstated by 10,000 USD_million. Growth is recalculated from that amount, so the root defect is a wrong source number.",
+      "detection_criterion": "Identify FY2025 revenue as 130497 USD_million, not 140497; flagging only derived growth is insufficient.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including repeated assertions in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenue increased by 114.20% from $60,922 million in the year ended January 28, 2024, to $130,497 million in the year ended January 26, 2025.",
+          "after": "Total revenue increased by 130.62% from $60,922 million in the year ended January 28, 2024, to $140,497 million in the year ended January 26, 2025."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-01-29",
+              "end": "2025-01-26"
+            },
+            "value": "114.20",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-01-29",
+              "end": "2025-01-26"
+            },
+            "value": "130.62",
+            "unit": "percent"
+          }
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 114.20%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate.",
+          "after": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 130.62%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate."
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0003/clean.json",
+      "flawed_report_path": "reports/EP_0003/error_01_wrong_number.json"
+    },
+    {
+      "pair_id": "PAIR_0008",
+      "packet_id": "EP_0003",
+      "clean_report_id": "R_aeee037a0e3f4ed4a6f6755c53dce782",
+      "flawed_report_id": "R_98049939f1e04251a14473a116e831d5",
+      "defect_type": "reporting_period",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0003_E01"
+      ],
+      "expected": {
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-01-30",
+          "end": "2024-01-28"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-01-29",
+          "end": "2025-01-26"
+        }
+      },
+      "injected": {
+        "from_period": {
+          "label": "FY2023",
+          "start": "2022-01-31",
+          "end": "2023-01-29"
+        },
+        "to_period": {
+          "label": "FY2024",
+          "start": "2023-01-30",
+          "end": "2024-01-28"
+        }
+      },
+      "explanation": "The total revenue comparison is shifted from FY2024-FY2025 to FY2023-FY2024. Amounts, growth and fact IDs remain unchanged. Other claims retain their original periods.",
+      "detection_criterion": "Identify that 60922 and 130497 USD_million and the associated growth belong to FY2024-FY2025, not FY2023-FY2024, using the evidence headings and fact periods.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including repeated assertions in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenue increased by 114.20% from $60,922 million in the year ended January 28, 2024, to $130,497 million in the year ended January 26, 2025.",
+          "after": "Total revenue increased by 114.20% from $60,922 million in the year ended January 29, 2023, to $130,497 million in the year ended January 28, 2024."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-01-29",
+              "end": "2025-01-26"
+            },
+            "value": "114.20",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2023",
+              "start": "2022-01-31",
+              "end": "2023-01-29"
+            },
+            "to_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "value": "114.20",
+            "unit": "percent"
+          }
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 114.20%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate.",
+          "after": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 114.20% from fiscal year 2023 to fiscal year 2024. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate."
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0003/clean.json",
+      "flawed_report_path": "reports/EP_0003/error_02_reporting_period.json"
+    },
+    {
+      "pair_id": "PAIR_0009",
+      "packet_id": "EP_0003",
+      "clean_report_id": "R_aeee037a0e3f4ed4a6f6755c53dce782",
+      "flawed_report_id": "R_da780b37984a49eea1d3489a73b18fdb",
+      "defect_type": "arithmetic",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0003_E01"
+      ],
+      "expected": {
+        "growth_percent": "114.20"
+      },
+      "injected": {
+        "growth_percent": "124.20"
+      },
+      "explanation": "Source amounts and periods remain correct; total revenue growth is overstated by 10 percentage points, including the repeated rationale assertion.",
+      "detection_criterion": "Identify growth from 60922 to 130497 as 114.20%, not 124.20%.",
+      "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including repeated assertions in the rationale, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenue increased by 114.20% from $60,922 million in the year ended January 28, 2024, to $130,497 million in the year ended January 26, 2025.",
+          "after": "Total revenue increased by 124.20% from $60,922 million in the year ended January 28, 2024, to $130,497 million in the year ended January 26, 2025."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-01-29",
+              "end": "2025-01-26"
+            },
+            "value": "114.20",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0003_F02",
+            "to_fact_id": "EP_0003_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-01-30",
+              "end": "2024-01-28"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-01-29",
+              "end": "2025-01-26"
+            },
+            "value": "124.20",
+            "unit": "percent"
+          }
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 114.20%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate.",
+          "after": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 124.20%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate."
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0003/clean.json",
+      "flawed_report_path": "reports/EP_0003/error_03_arithmetic.json"
+    },
+    {
+      "pair_id": "PAIR_0010",
+      "packet_id": "EP_0004",
+      "clean_report_id": "R_8e881770645743ca87b837fb88236dea",
+      "flawed_report_id": "R_9fde62d8f01d41d998a4cdab1c1ec668",
+      "defect_type": "wrong_number",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "expected": {
+        "value": "113097",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "growth_percent": "6.84"
+      },
+      "injected": {
+        "value": "123097",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "growth_percent": "16.29"
+      },
+      "explanation": "FY2025 total revenue, net of interest expense, is overstated by 10,000 USD_million. Growth is recalculated from the wrong amount, introducing one source-number defect.",
+      "detection_criterion": "Identifies that FY2025 total revenue, net of interest expense, is 113097 USD_million, not 123097; flagging only the derived growth does not identify the root error.",
+      "correction_criterion": "Restore the correct FY2024-FY2025 revenue comparison (105856 to 113097 USD_million, approximately 6.84%) in C1 and its check_spec, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenue, net of interest expense, increased by 6.84% from $105,856 million in 2024 to $113,097 million in 2025.",
+          "after": "Total revenue, net of interest expense, increased by 16.29% from $105,856 million in 2024 to $123,097 million in 2025."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0004_F02",
+            "to_fact_id": "EP_0004_F01",
+            "metric": "total_revenue_net_of_interest_expense",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "6.84",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0004_F02",
+            "to_fact_id": "EP_0004_F01",
+            "metric": "total_revenue_net_of_interest_expense",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "16.29",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0004/clean.json",
+      "flawed_report_path": "reports/EP_0004/error_01_wrong_number.json"
+    },
+    {
+      "pair_id": "PAIR_0011",
+      "packet_id": "EP_0004",
+      "clean_report_id": "R_8e881770645743ca87b837fb88236dea",
+      "flawed_report_id": "R_ccc7fd5c431b4191a04100c32e999cd8",
+      "defect_type": "reporting_period",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "expected": {
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "injected": {
+        "from_period": {
+          "label": "FY2023",
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "to_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        }
+      },
+      "explanation": "The revenue comparison is shifted from FY2024-FY2025 to FY2023-FY2024. Amounts, growth and original fact IDs are retained; the claimed periods deliberately mismatch those facts. Other claims retain their periods.",
+      "detection_criterion": "Identifies that the amounts 105856 and 113097 USD_million and 6.84% growth belong to FY2024-FY2025, not FY2023-FY2024.",
+      "correction_criterion": "Restore the correct FY2024-FY2025 revenue comparison (105856 to 113097 USD_million, approximately 6.84%) in C1 and its check_spec, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenue, net of interest expense, increased by 6.84% from $105,856 million in 2024 to $113,097 million in 2025.",
+          "after": "Total revenue, net of interest expense, increased by 6.84% from $105,856 million in 2023 to $113,097 million in 2024."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0004_F02",
+            "to_fact_id": "EP_0004_F01",
+            "metric": "total_revenue_net_of_interest_expense",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "6.84",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0004_F02",
+            "to_fact_id": "EP_0004_F01",
+            "metric": "total_revenue_net_of_interest_expense",
+            "from_period": {
+              "label": "FY2023",
+              "start": "2023-01-01",
+              "end": "2023-12-31"
+            },
+            "to_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "value": "6.84",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0004/clean.json",
+      "flawed_report_path": "reports/EP_0004/error_02_reporting_period.json"
+    },
+    {
+      "pair_id": "PAIR_0012",
+      "packet_id": "EP_0004",
+      "clean_report_id": "R_8e881770645743ca87b837fb88236dea",
+      "flawed_report_id": "R_4b8ab56b8810424095753c0876776b6c",
+      "defect_type": "arithmetic",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "expected": {
+        "growth_percent": "6.84"
+      },
+      "injected": {
+        "growth_percent": "16.84"
+      },
+      "explanation": "The source amounts and fiscal periods remain correct. Growth is overstated by 10 percentage points.",
+      "detection_criterion": "Identifies that growth from 105856 to 113097 is approximately 6.84%, not 16.84%.",
+      "correction_criterion": "Restore the correct FY2024-FY2025 revenue comparison (105856 to 113097 USD_million, approximately 6.84%) in C1 and its check_spec, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenue, net of interest expense, increased by 6.84% from $105,856 million in 2024 to $113,097 million in 2025.",
+          "after": "Total revenue, net of interest expense, increased by 16.84% from $105,856 million in 2024 to $113,097 million in 2025."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0004_F02",
+            "to_fact_id": "EP_0004_F01",
+            "metric": "total_revenue_net_of_interest_expense",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "6.84",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0004_F02",
+            "to_fact_id": "EP_0004_F01",
+            "metric": "total_revenue_net_of_interest_expense",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "16.84",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0004/clean.json",
+      "flawed_report_path": "reports/EP_0004/error_03_arithmetic.json"
+    },
+    {
+      "pair_id": "PAIR_0013",
+      "packet_id": "EP_0005",
+      "clean_report_id": "R_6b321674520942d49bd3d84cff6c5624",
+      "flawed_report_id": "R_586fd53c74e64fed98ac44de415ea3b4",
+      "defect_type": "wrong_number",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0005_E01"
+      ],
+      "expected": {
+        "value": "182447",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "growth_percent": "2.75"
+      },
+      "injected": {
+        "value": "192447",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "growth_percent": "8.39"
+      },
+      "explanation": "FY2025 revenue is overstated by 10,000 USD_million. Growth is recalculated consistently from the incorrect amount; the root defect is the source number.",
+      "detection_criterion": "Identifies that FY2025 total net revenue is 182447 USD_million, not 192447; derived growth alone does not identify the root error.",
+      "correction_criterion": "Restore C1 text and check_spec to the clean report, including its original amounts, periods and 2.75% growth, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total net revenue for COMPANY_05 increased by 2.75% from $177,556 million in 2024 to $182,447 million in 2025.",
+          "after": "Total net revenue for COMPANY_05 increased by 8.39% from $177,556 million in 2024 to $192,447 million in 2025."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0005_F02",
+            "to_fact_id": "EP_0005_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "2.75",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0005_F02",
+            "to_fact_id": "EP_0005_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "8.39",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0005/clean.json",
+      "flawed_report_path": "reports/EP_0005/error_01_wrong_number.json"
+    },
+    {
+      "pair_id": "PAIR_0014",
+      "packet_id": "EP_0005",
+      "clean_report_id": "R_6b321674520942d49bd3d84cff6c5624",
+      "flawed_report_id": "R_7fea52cb4bf84dfbae3013f767b6ec88",
+      "defect_type": "reporting_period",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0005_E01"
+      ],
+      "expected": {
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "injected": {
+        "from_period": {
+          "label": "FY2023",
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "to_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        }
+      },
+      "explanation": "The same revenue amounts and growth are shifted back one year, from FY2024-FY2025 to FY2023-FY2024. Original fact IDs remain unchanged so the checker detects the period mismatch.",
+      "detection_criterion": "Identifies that the amounts and growth belong to FY2024-FY2025, not FY2023-FY2024; cited fact IDs resolve to the correct periods.",
+      "correction_criterion": "Restore C1 text and check_spec to the clean report, including its original amounts, periods and 2.75% growth, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total net revenue for COMPANY_05 increased by 2.75% from $177,556 million in 2024 to $182,447 million in 2025.",
+          "after": "Total net revenue for COMPANY_05 increased by 2.75% from $177,556 million in 2023 to $182,447 million in 2024."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0005_F02",
+            "to_fact_id": "EP_0005_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "2.75",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0005_F02",
+            "to_fact_id": "EP_0005_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2023",
+              "start": "2023-01-01",
+              "end": "2023-12-31"
+            },
+            "to_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "value": "2.75",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0005/clean.json",
+      "flawed_report_path": "reports/EP_0005/error_02_reporting_period.json"
+    },
+    {
+      "pair_id": "PAIR_0015",
+      "packet_id": "EP_0005",
+      "clean_report_id": "R_6b321674520942d49bd3d84cff6c5624",
+      "flawed_report_id": "R_29b377578fb246e4af44d807090b40af",
+      "defect_type": "arithmetic",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0005_E01"
+      ],
+      "expected": {
+        "growth_percent": "2.75",
+        "unit": "percent",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "injected": {
+        "growth_percent": "12.75",
+        "unit": "percent",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "explanation": "Source revenue amounts and periods remain correct, but revenue growth is overstated by 10 percentage points.",
+      "detection_criterion": "Identifies that (182447-177556)/177556*100 rounds to 2.75%, not 12.75%.",
+      "correction_criterion": "Restore C1 text and check_spec to the clean report, including its original amounts, periods and 2.75% growth, or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total net revenue for COMPANY_05 increased by 2.75% from $177,556 million in 2024 to $182,447 million in 2025.",
+          "after": "Total net revenue for COMPANY_05 increased by 12.75% from $177,556 million in 2024 to $182,447 million in 2025."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0005_F02",
+            "to_fact_id": "EP_0005_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "2.75",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0005_F02",
+            "to_fact_id": "EP_0005_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "12.75",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0005/clean.json",
+      "flawed_report_path": "reports/EP_0005/error_03_arithmetic.json"
+    },
+    {
+      "pair_id": "PAIR_0016",
+      "packet_id": "EP_0006",
+      "clean_report_id": "R_ac2c68fd6aa94e9095c7152d48afdd20",
+      "flawed_report_id": "R_ae124299e7584b63a28b10b3c523efe9",
+      "defect_type": "wrong_number",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "expected": {
+        "value": "680985",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-02-01",
+          "end": "2025-01-31"
+        },
+        "growth_percent": "5.07"
+      },
+      "injected": {
+        "value": "690985",
+        "unit": "USD_million",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-02-01",
+          "end": "2025-01-31"
+        },
+        "growth_percent": "6.61"
+      },
+      "explanation": "FY2025 total revenues are overstated by 10,000 USD_million. Growth is recalculated from the incorrect amount, so the root defect is the source number.",
+      "detection_criterion": "Identifies FY2025 total revenues as 680985 USD_million, not 690985; the implied correct growth is 5.07%, not 6.61%.",
+      "correction_criterion": "Restore C1 to the clean report: FY2024-FY2025, 648125 to 680985 USD_million, calculated growth 5.07% (reported as 5.1% in prose), or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenues for COMPANY_06 increased by 5.10% in fiscal year 2025, reaching $680,985 million, compared to $648,125 million in fiscal year 2024.",
+          "after": "Total revenues for COMPANY_06 increased by 6.61% in fiscal year 2025, reaching $690,985 million, compared to $648,125 million in fiscal year 2024."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0006_F02",
+            "to_fact_id": "EP_0006_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-02-01",
+              "end": "2024-01-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-02-01",
+              "end": "2025-01-31"
+            },
+            "value": "5.07",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0006_F02",
+            "to_fact_id": "EP_0006_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-02-01",
+              "end": "2024-01-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-02-01",
+              "end": "2025-01-31"
+            },
+            "value": "6.61",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0006/clean.json",
+      "flawed_report_path": "reports/EP_0006/error_01_wrong_number.json"
+    },
+    {
+      "pair_id": "PAIR_0017",
+      "packet_id": "EP_0006",
+      "clean_report_id": "R_ac2c68fd6aa94e9095c7152d48afdd20",
+      "flawed_report_id": "R_269686955deb4a2da659711a4cd3212a",
+      "defect_type": "reporting_period",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "expected": {
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-02-01",
+          "end": "2024-01-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-02-01",
+          "end": "2025-01-31"
+        }
+      },
+      "injected": {
+        "from_period": {
+          "label": "FY2023",
+          "start": "2022-02-01",
+          "end": "2023-01-31"
+        },
+        "to_period": {
+          "label": "FY2024",
+          "start": "2023-02-01",
+          "end": "2024-01-31"
+        }
+      },
+      "explanation": "The same revenue amounts and growth are attributed to FY2023-FY2024 instead of FY2024-FY2025. Fact IDs stay unchanged to expose the period mismatch.",
+      "detection_criterion": "Identifies that 648125 to 680985 USD_million and 5.07% growth belong to FY2024-FY2025, not FY2023-FY2024.",
+      "correction_criterion": "Restore C1 to the clean report: FY2024-FY2025, 648125 to 680985 USD_million, calculated growth 5.07% (reported as 5.1% in prose), or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenues for COMPANY_06 increased by 5.10% in fiscal year 2025, reaching $680,985 million, compared to $648,125 million in fiscal year 2024.",
+          "after": "Total revenues for COMPANY_06 increased by 5.10% in fiscal year 2024, reaching $680,985 million, compared to $648,125 million in fiscal year 2023."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0006_F02",
+            "to_fact_id": "EP_0006_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-02-01",
+              "end": "2024-01-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-02-01",
+              "end": "2025-01-31"
+            },
+            "value": "5.07",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0006_F02",
+            "to_fact_id": "EP_0006_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2023",
+              "start": "2022-02-01",
+              "end": "2023-01-31"
+            },
+            "to_period": {
+              "label": "FY2024",
+              "start": "2023-02-01",
+              "end": "2024-01-31"
+            },
+            "value": "5.07",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0006/clean.json",
+      "flawed_report_path": "reports/EP_0006/error_02_reporting_period.json"
+    },
+    {
+      "pair_id": "PAIR_0018",
+      "packet_id": "EP_0006",
+      "clean_report_id": "R_ac2c68fd6aa94e9095c7152d48afdd20",
+      "flawed_report_id": "R_c0a4902206fc408d9cb8db940c485ae0",
+      "defect_type": "arithmetic",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "expected": {
+        "growth_percent": "5.07"
+      },
+      "injected": {
+        "growth_percent": "15.07"
+      },
+      "explanation": "Source amounts and periods remain correct. Calculated growth is overstated by 10 percentage points: 15.07% instead of 5.07%; prose rounds these to 15.1% and 5.1%, respectively.",
+      "detection_criterion": "Identifies that (680985-648125)/648125*100 rounds to 5.07%, not 15.07%.",
+      "correction_criterion": "Restore C1 to the clean report: FY2024-FY2025, 648125 to 680985 USD_million, calculated growth 5.07% (reported as 5.1% in prose), or explicitly retract the erroneous assertion.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Total revenues for COMPANY_06 increased by 5.10% in fiscal year 2025, reaching $680,985 million, compared to $648,125 million in fiscal year 2024.",
+          "after": "Total revenues for COMPANY_06 increased by 115.1% in fiscal year 2025, reaching $680,985 million, compared to $648,125 million in fiscal year 2024."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0006_F02",
+            "to_fact_id": "EP_0006_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-02-01",
+              "end": "2024-01-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-02-01",
+              "end": "2025-01-31"
+            },
+            "value": "5.07",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0006_F02",
+            "to_fact_id": "EP_0006_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-02-01",
+              "end": "2024-01-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-02-01",
+              "end": "2025-01-31"
+            },
+            "value": "15.07",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0006/clean.json",
+      "flawed_report_path": "reports/EP_0006/error_03_arithmetic.json"
+    }
+  ]
+}

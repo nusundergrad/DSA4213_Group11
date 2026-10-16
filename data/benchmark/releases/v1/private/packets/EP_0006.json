@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0006",
+  "company_alias": "COMPANY_06",
+  "company": {
+    "name": "Walmart Inc.",
+    "ticker": "WMT"
+  },
+  "fiscal_year": 2025,
+  "filing": {
+    "form": "10-K",
+    "accession_number": "0000104169-25-000021",
+    "filing_date": "2025-03-14",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416925000021/wmt-20250131.htm"
+  },
+  "source_id": "SRC_06",
+  "evidence": [
+    {
+      "evidence_id": "EP_0006_E01",
+      "section": "Item 7",
+      "text": "Consolidated Results of Operations\nFiscal Years Ended January 31,\n(Dollar amounts and retail square feet in millions) 2025 2024 2023\nNet sales $ 674,538 $ 642,637 $ 605,881 \nPercentage change from comparable period  5.0 %  6.1 %  6.7 %\nMembership and other income(1) $ 6,447 $ 5,488 $ 5,408 \nTotal revenues  680,985  648,125  611,289 \nPercentage change from comparable period  5.1 %  6.0 %  6.7 %\nGross profit(2)  162,785  152,495  142,160 \nOperating expenses(2)  139,884  130,971  127,140 \nOperating income  29,348  27,012  20,428 \nOther (gains) and losses  794  3,027  1,538 \nConsolidated net income  20,157  16,270  11,292 \nPercentage of net sales\nGross profit  24.1 %  23.7 %  23.5 %\nOperating expenses  20.7 %  20.4 %  21.0 %\nOperating income  4.4 %  4.2 %  3.4 %\nUnit counts at period end  10,771  10,616  10,623 \nRetail square feet at period end  1,053  1,053  1,056 \n(1)   Membership and other income includes membership fees and other items such as rental and tenant income, recycling income, gift card breakage income, as \nwell as other income from corporate campus facilities.\n(2)   Gross profit is defined as net sales less cost of sales. Operating expenses refers to operating, selling, general and administrative expenses.",
+      "locator": "PDF p. 41; Consolidated Results of Operations table, including fiscal years, units and both footnotes; printed p. 39",
+      "source_span": [
+        196785,
+        198021
+      ]
+    },
+    {
+      "evidence_id": "EP_0006_E02",
+      "section": "Item 7",
+      "text": "Our total revenues increased $32.9 billion or 5.1% and $36.8 billion or 6.0% for fiscal 2025 and 2024, respectively, when \ncompared to the previous fiscal year. These increases in revenues were primarily due to increases in net sales, which increased \n$31.9 billion or 5.0% and $36.8 billion or 6.1% for fiscal 2025 and 2024, respectively, when compared to the previous fiscal \nyear. The increases were primarily due to strong positive comparable sales across our U.S. segments and international markets, \ndriven primarily by growth in transactions and unit volumes, which included strength in eCommerce as well as strong sales in \ngrocery, and health and wellness. Net sales were negatively impacted by $3.2 billion and positively impacted by $3.0 billion of \nfluctuations in currency exchange rates during fiscal 2025 and 2024, respectively. Membership and other income increased $1.0 \nbillion and $0.1 billion for fiscal 2025 and fiscal 2024, primarily driven by growth in membership fee income globally.\nOur gross profit rate increased 40 and 27 basis points for fiscal 2025 and 2024, respectively, when compared to the previous \nfiscal year. The increases were primarily driven by the Walmart U.S. segment, due to managing prices aligned to our \ncompetitive historic price gaps, as well as growth in higher margin businesses globally, partially offset by mix shifts into lower \nmargin merchandise categories. Additionally, the increase in fiscal 2024 benefited from lapping higher markdowns incurred in \nthe prior year.\nOur operating expenses as a percentage of net sales increased 36 and decreased 60 basis points for fiscal 2025 and 2024, \nrespectively, when compared to the previous fiscal year. The increase for fiscal 2025 was primarily due to higher variable pay \nas a result of exceeding planned performance, increased marketing and higher depreciation expenses. The decrease for fiscal \n2024 was primarily due to lapping charges of $3.3 billion related to opioid-related legal settlements and $0.8 billion related to \nthe reorganization and restructuring of certain businesses in the Walmart International segment in the prior year.",
+      "locator": "PDF p. 41; Consolidated Results of Operations; revenue, gross profit rate and operating expense discussion; printed p. 39",
+      "source_span": [
+        198025,
+        200170
+      ]
+    },
+    {
+      "evidence_id": "EP_0006_E03",
+      "section": "Item 1A",
+      "text": "We face strong competition from other retailers, wholesale club operators, omni-channel retailers and other businesses \nwhich could materially adversely affect our financial performance.\nEach of our segments competes for customers, employees, digital prominence, products and services and in other important \naspects of its business with many other local, regional, national and global physical, eCommerce and omni-channel retailers, \nsocial commerce platforms, wholesale club operators and retail intermediaries, as well as companies that offer services in \ndigital advertising, data analytics/insights, fulfillment and delivery services, health and wellness and financial services. The \nomni-channel retail landscape is highly competitive and rapidly evolving, and the entry of new, well-funded competitors may \nincrease competitive pressures. In addition, for eCommerce and other internet-based businesses, newer or smaller businesses \nmay be better able to innovate and compete with us.\nWe compete in a variety of ways, including the prices at which we sell our merchandise, merchandise selection and availability, \nservices offered to customers, location, store hours, in-store amenities, the shopping convenience and overall shopping \nexperience we offer, the attractiveness and ease of use of our digital platforms, quality and accessibility of data for customers, \nsuppliers, and associates, and cost, speed of and options for accurate delivery to customers of merchandise purchased through \nour digital platforms or through our omni-channel integration of our physical and digital operations.\nA failure to respond effectively to competitive pressures and changes in the retail and other markets in which we operate, omni-\nchannel innovations and omni-channel ecosystems developed by our competitors or delays or failure in execution of our \nstrategy could materially adversely affect our financial performance. See \"Item 1. Business\" above for additional discussion of \nthe competitive situation of each of our reportable segments.\nCertain segments of the retail industry are undergoing consolidation or substantially reducing operations, whether due to \nbankruptcy, economics or other factors. Such consolidation, or other business combinations or alliances, competitive omni-\nchannel ecosystems or reductions in operations may result in competitors with improved financial resources, improved access \nto merchandise, greater market penetration and other improvements in their competitive positions. Such business combinations \nor alliances could allow these companies to provide a wider variety of products and services at competitive prices, which could \nadversely affect our financial performance.",
+      "locator": "PDF p. 17; Competition risk heading and complete discussion; printed p. 15",
+      "source_span": [
+        64235,
+        66945
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0006_F01",
+      "evidence_id": "EP_0006_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-02-01",
+        "end": "2025-01-31"
+      },
+      "value": "680985",
+      "unit": "USD_million",
+      "source_value": "680,985",
+      "locator": "Total revenues; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0006_F02",
+      "evidence_id": "EP_0006_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-02-01",
+        "end": "2024-01-31"
+      },
+      "value": "648125",
+      "unit": "USD_million",
+      "source_value": "648,125",
+      "locator": "Total revenues; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0006_F03",
+      "evidence_id": "EP_0006_E01",
+      "metric": "net_sales",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-02-01",
+        "end": "2025-01-31"
+      },
+      "value": "674538",
+      "unit": "USD_million",
+      "source_value": "674,538",
+      "locator": "Net sales; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0006_F04",
+      "evidence_id": "EP_0006_E01",
+      "metric": "net_sales",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-02-01",
+        "end": "2024-01-31"
+      },
+      "value": "642637",
+      "unit": "USD_million",
+      "source_value": "642,637",
+      "locator": "Net sales; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0006_F05",
+      "evidence_id": "EP_0006_E01",
+      "metric": "gross_profit",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-02-01",
+        "end": "2025-01-31"
+      },
+      "value": "162785",
+      "unit": "USD_million",
+      "source_value": "162,785",
+      "locator": "Gross profit; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0006_F06",
+      "evidence_id": "EP_0006_E01",
+      "metric": "gross_profit",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-02-01",
+        "end": "2024-01-31"
+      },
+      "value": "152495",
+      "unit": "USD_million",
+      "source_value": "152,495",
+      "locator": "Gross profit; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0006_F07",
+      "evidence_id": "EP_0006_E01",
+      "metric": "operating_income",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-02-01",
+        "end": "2025-01-31"
+      },
+      "value": "29348",
+      "unit": "USD_million",
+      "source_value": "29,348",
+      "locator": "Operating income; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0006_F08",
+      "evidence_id": "EP_0006_E01",
+      "metric": "operating_income",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-02-01",
+        "end": "2024-01-31"
+      },
+      "value": "27012",
+      "unit": "USD_million",
+      "source_value": "27,012",
+      "locator": "Operating income; FY2024 column"
+    }
+  ]
+}

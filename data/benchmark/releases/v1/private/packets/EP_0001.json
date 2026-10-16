@@ -1,0 +1,135 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0001",
+  "company_alias": "COMPANY_01",
+  "company": {
+    "name": "Apple Inc.",
+    "ticker": "AAPL"
+  },
+  "fiscal_year": 2025,
+  "filing": {
+    "form": "10-K",
+    "accession_number": "0000320193-25-000079",
+    "filing_date": "2025-10-31",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm"
+  },
+  "source_id": "SRC_01",
+  "evidence": [
+    {
+      "evidence_id": "EP_0001_E01",
+      "section": "Item 7",
+      "text": "Products and Services Performance\nThe following table shows net sales by category for 2025, 2024 and 2023 (dollars in millions):\n2025 Change 2024 Change 2023\niPhone $ 209,586 4 % $ 201,183 — % $ 200,583 \nMac 33,708 12 % 29,984 2 % 29,357 \niPad 28,023 5 % 26,694 (6)% 28,300 \nWearables, Home and Accessories 35,686 (4)% 37,005 (7)% 39,845 \nServices 109,158 14 % 96,169 13 % 85,200 \nTotal net sales $ 416,161 6 % $ 391,035 2 % $ 383,285 \n(1) Services net sales include amortization of the deferred value of services bundled in the sales price of certain products.",
+      "locator": "PDF p. 27; Printed p. 23, Products and Services Performance; complete net sales table including headers and footnote",
+      "source_span": [
+        112540,
+        113101
+      ]
+    },
+    {
+      "evidence_id": "EP_0001_E02",
+      "section": "Item 7",
+      "text": "iPhone\niPhone net sales increased during 2025 compared to 2024 due to higher net sales of Pro models.\nMac\nMac net sales increased during 2025 compared to 2024 primarily due to higher net sales of laptops and desktops.\niPad\niPad net sales increased during 2025 compared to 2024 primarily due to higher net sales of iPad Air, iPad mini and iPad, partially\noffset by lower net sales of iPad Pro.\nWearables, Home and Accessories\nWearables, Home and Accessories net sales decreased during 2025 compared to 2024 primarily due to lower net sales of\nAccessories and Wearables.\nServices\nServices net sales increased during 2025 compared to 2024 primarily due to higher net sales from advertising, the App Store and\ncloud services.",
+      "locator": "PDF p. 27; Printed p. 23, explanations beneath Products and Services Performance table",
+      "source_span": [
+        113102,
+        113823
+      ]
+    },
+    {
+      "evidence_id": "EP_0001_E03",
+      "section": "Item 1A",
+      "text": "The Company has international operations with sales outside the U.S. representing a majority of the Company’s total net sales. In\naddition, the Company’s global supply chain is large and complex and a majority of the Company’s supplier facilities, including\nmanufacturing and assembly sites, are located outside the U.S. As a result, the Company’s operations and performance depend\nsignificantly on global and regional economic conditions.\nAdverse macroeconomic conditions, including slow growth or recession, high unemployment, inflation, tighter credit, higher interest\nrates, and currency fluctuations, can adversely impact consumer confidence and spending and materially adversely affect demand\nfor the Company’s products and services. In addition, consumer confidence and spending can be materially adversely affected in\nresponse to changes in fiscal and monetary policy, financial market volatility, declines in income or asset values, and other economic\nfactors.\nUncertainty about, or a decline in, global or regional economic conditions can also have a significant impact on the Company’s\nsuppliers, contract manufacturers, logistics providers, distributors, cellular network carriers and other channel partners, and\ndevelopers. Potential outcomes include financial instability; inability to obtain credit to finance business operations; and insolvency.",
+      "locator": "PDF p. 8; Printed p. 5, Macroeconomic and Industry Risks; first three paragraphs under global and regional economic conditions",
+      "source_span": [
+        26815,
+        28176
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0001_F01",
+      "evidence_id": "EP_0001_E01",
+      "metric": "net_sales",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-09-29",
+        "end": "2025-09-27"
+      },
+      "value": "416161",
+      "unit": "USD_million",
+      "source_value": "416,161",
+      "locator": "Total net sales; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0001_F02",
+      "evidence_id": "EP_0001_E01",
+      "metric": "net_sales",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-10-01",
+        "end": "2024-09-28"
+      },
+      "value": "391035",
+      "unit": "USD_million",
+      "source_value": "391,035",
+      "locator": "Total net sales; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0001_F03",
+      "evidence_id": "EP_0001_E01",
+      "metric": "services_net_sales",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-09-29",
+        "end": "2025-09-27"
+      },
+      "value": "109158",
+      "unit": "USD_million",
+      "source_value": "109,158",
+      "locator": "Services; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0001_F04",
+      "evidence_id": "EP_0001_E01",
+      "metric": "services_net_sales",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-10-01",
+        "end": "2024-09-28"
+      },
+      "value": "96169",
+      "unit": "USD_million",
+      "source_value": "96,169",
+      "locator": "Services; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0001_F05",
+      "evidence_id": "EP_0001_E01",
+      "metric": "wearables_home_accessories_net_sales",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-09-29",
+        "end": "2025-09-27"
+      },
+      "value": "35686",
+      "unit": "USD_million",
+      "source_value": "35,686",
+      "locator": "Wearables, Home and Accessories; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0001_F06",
+      "evidence_id": "EP_0001_E01",
+      "metric": "wearables_home_accessories_net_sales",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-10-01",
+        "end": "2024-09-28"
+      },
+      "value": "37005",
+      "unit": "USD_million",
+      "source_value": "37,005",
+      "locator": "Wearables, Home and Accessories; FY2024 column"
+    }
+  ]
+}
