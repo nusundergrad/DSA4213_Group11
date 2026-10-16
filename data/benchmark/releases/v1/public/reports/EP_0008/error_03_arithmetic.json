@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.1",
+  "report_id": "R_1833c917dea4413d91f72d0728bdb025",
+  "recommendation": "HOLD",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "Total revenues for COMPANY_08 increased by 7.07% from $97,690 million in 2024 to $94,827 million in 2025.",
+      "evidence_ids": [
+        "EP_0008_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0008_F02",
+        "to_fact_id": "EP_0008_F01",
+        "metric": "revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "7.07",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "Automotive revenue, the largest segment, declined by 9.8% from $77,070 million in 2024 to $69,526 million in 2025, primarily due to an 8% decrease in cash deliveries and a lower average selling price per unit, as stated in Item 7.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0008_F04",
+        "to_fact_id": "EP_0008_F03",
+        "metric": "automotive_revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "-9.79",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "The Energy Generation and Storage segment revenue increased by 26.62% from $10,086 million in 2024 to $12,771 million in 2025, driven by increases in PRODUCT_30 and PRODUCT_31 deployments, as detailed in Item 7.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0008_F06",
+        "to_fact_id": "EP_0008_F05",
+        "metric": "energy_generation_and_storage_revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "26.62",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C4",
+      "text": "Services and other revenue also showed growth, increasing by 18.95% from $10,534 million in 2024 to $12,530 million in 2025, attributed to increases in paid PRODUCT_29 sessions, non-warranty maintenance services, and collision revenue, among other factors (Item 7).",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0008_F08",
+        "to_fact_id": "EP_0008_F07",
+        "metric": "services_and_other_revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "18.95",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C5",
+      "text": "The company faces strong competition in both its automotive and energy generation and storage businesses, with many competitors possessing significantly more or better-established resources (Item 1A).",
+      "evidence_ids": [
+        "EP_0008_E03"
+      ],
+      "check_spec": null
+    }
+  ],
+  "rationale": "COMPANY_08 experienced overall revenue growth in 2025, despite a significant decrease in its core automotive sales segment. While the Energy Generation and Storage and Services and Other segments showed strong growth, they more than offset the automotive decline in total revenues. The company also faces intense competition across its markets. Given the mixed performance with a decline in the primary revenue driver, but growth in other segments, a HOLD recommendation is appropriate as the company navigates competitive pressures and shifts in its revenue streams."
+}

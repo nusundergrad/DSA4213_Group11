@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0008",
+  "company_alias": "COMPANY_08",
+  "company": {
+    "name": "Tesla, Inc.",
+    "ticker": "TSLA"
+  },
+  "fiscal_year": 2025,
+  "filing": {
+    "form": "10-K",
+    "accession_number": "0001628280-26-003952",
+    "filing_date": "2026-01-29",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/tsla-20251231.htm"
+  },
+  "source_id": "SRC_08",
+  "evidence": [
+    {
+      "evidence_id": "EP_0008_E01",
+      "section": "Item 7",
+      "text": "Results\tof\tOperations\nRevenues\n\t\nYear\tEnded\tDecember\t31,\n2025\tvs.\t2024\tChange\n2024\tvs.\t2023\tChange\n(Dollars\tin\tmillions)\n2025\n2024\n2023\n$\n%\n$\n%\nAutomotive\tsales\n$\n65,821\t\n$\n72,480\t\n$\n78,509\t\n$\n(6,659)\n(9)\n%\n$\n(6,029)\n(8)\n%\nAutomotive\tregulatory\tcredits\n1,993\t\n2,763\t\n1,790\t\n(770)\n(28)\n%\n973\t\n54\t\n%\nAutomotive\tleasing\n1,712\t\n1,827\t\n2,120\t\n(115)\n(6)\n%\n(293)\n(14)\n%\nTotal\tautomotive\trevenues\n69,526\t\n77,070\t\n82,419\t\n(7,544)\n(10)\n%\n(5,349)\n(6)\n%\nServices\tand\tother\n12,530\t\n10,534\t\n8,319\t\n1,996\t\n19\t\n%\n2,215\t\n27\t\n%\nTotal\tautomotive\t&\tservices\tand\tother\tsegment\nrevenue\n82,056\t\n87,604\t\n90,738\t\n(5,548)\n(6)\n%\n(3,134)\n(3)\n%\nEnergy\tgeneration\tand\tstorage\tsegment\trevenue\n12,771\t\n10,086\t\n6,035\t\n2,685\t\n27\t\n%\n4,051\t\n67\t\n%\nTotal\trevenues\n$\n94,827\t\n$\n97,690\t\n$\n96,773\t\n$\n(2,863)\n(3)\n%\n$\n917\t\n1\t\n%",
+      "source_span": [
+        179296,
+        180079
+      ],
+      "locator": "PDF pages [40]; Revenue table including year, unit and change headers; printed p. 37"
+    },
+    {
+      "evidence_id": "EP_0008_E02",
+      "section": "Item 7",
+      "text": "2025\tcompared\tto\t2024\nAutomotive\tsales\trevenue\tdecreased\t$6.66\tbillion,\tor\t9%,\tin\tthe\tyear\tended\tDecember\t31,\t2025\tas\tcompared\tto\tthe\tyear\tended\tDecember\t31,\n2024,\tdue\ta\tdecrease\tof\tapproximately\t8%\tin\tcash\tdeliveries\tand\ta\tlower\taverage\tselling\tprice\tper\tunit\tdriven\tby\tsales\tmix\tand\thigher\tcustomer\nincentives\tsuch\tas\tattractive\tfinancing\toptions.\nAutomotive\tregulatory\tcredits\trevenue\tdecreased\t$770\tmillion,\tor\t28%,\tin\tthe\tyear\tended\tDecember\t31,\t2025\tas\tcompared\tto\tthe\tyear\tended\nDecember\t31,\t2024.\tFluctuations\tin\tautomotive\tregulatory\tcredits\tare\timpacted\tby\tour\tsupply\tof\tcredits,\tsubject\tto\tchanges\tin\tregulation,\tproduction\nand\tsales.\tIn\t2025,\tgovernmental\tand\tregulatory\tactions,\tsuch\tas\tOBBBA,\thave\trestricted\tcertain\tregulatory\tcredit\tprograms\ttied\tto\tour\tproducts.\nFurthermore,\twe\tare\timpacted\tby\tthe\tdemand\tfor\tcredits\tby\tother\tautomobile\tmanufacturers.\n37\n\nServices\tand\tother\trevenue\tincreased\t$2.00\tbillion,\tor\t19%,\tin\tthe\tyear\tended\tDecember\t31,\t2025\tas\tcompared\tto\tthe\tyear\tended\tDecember\t31,\n2024,\tprimarily\tdue\tto\tincreases\tin\tpaid\tSupercharging\tsessions,\tnon-warranty\tmaintenance\tservices\tand\tcollision\trevenue,\tused\tvehicle\tsales\tvolume\nand\tautomotive\tinsurance\tbusiness\trevenue.\nEnergy\tGeneration\tand\tStorage\tSegment\nEnergy\tgeneration\tand\tstorage\trevenue\tincludes\tsales,\tleasing,\tand\tfinancing\tof\tenergy\tgeneration\tand\tstorage\tproducts,\tservices\trelated\tto\tsuch\nproducts\tand\tsales\tof\tenergy\tgeneration\tincentives.\n2025\tcompared\tto\t2024\nEnergy\tgeneration\tand\tstorage\trevenue\tincreased\t$2.69\tbillion,\tor\t27%,\tin\tthe\tyear\tended\tDecember\t31,\t2025\tas\tcompared\tto\tthe\tyear\tended\nDecember\t31,\t2024\tprimarily\tdue\tto\tincreases\tin\tMegapack\tand\tPowerwall\tdeployments,\tpartially\toffset\tby\ta\tdecrease\tin\taverage\tselling\tprice\tof\nMegapack.",
+      "source_span": [
+        181496,
+        183246
+      ],
+      "locator": "PDF pages [40, 41]; Automotive sales and credits decline, services growth and energy revenue growth discussion; printed pp. 37-38"
+    },
+    {
+      "evidence_id": "EP_0008_E03",
+      "section": "Item 1A",
+      "text": "We\tface\tstrong\tcompetition\tfor\tour\tproducts\tand\tservices\tfrom\ta\tgrowing\tlist\tof\testablished\tand\tnew\tcompetitors.\nThe\tworldwide\tautomotive\tmarket\tis\thighly\tcompetitive\ttoday\tand\twe\texpect\tit\twill\tbecome\teven\tmore\tso\tin\tthe\tfuture.\tA\tsignificant\tand\tgrowing\nnumber\tof\testablished\tand\tnew\tautomobile\tmanufacturers,\tas\twell\tas\tother\tcompanies,\thave\tentered,\tor\tare\treported\tto\thave\tplans\tto\tenter,\tthe\tmarket\nfor\telectric\tand\tother\talternative\tfuel\tvehicles,\tincluding\thybrid,\tplug-in\thybrid\tand\tfully\telectric\tvehicles,\tas\twell\tas\tthe\tmarket\tfor\tself-driving\ntechnology\tand\tservices\tand\tother\tvehicle\tapplications\tand\tsoftware\tplatforms.\tIn\taddition,\tcertain\tgovernment\tand\teconomic\tincentives\twhich\tprovide\nbenefits\tto\tmanufacturers\twho\tassemble\tdomestically\tor\thave\tlocal\tsuppliers,\tmay\tprovide\ta\tgreater\tbenefit\tto\tour\tcompetitors,\twhich\tcould\tnegatively\nimpact\tour\tprofitability.\tMany\tof\tour\tcompetitors\thave\tsignificantly\tmore\tor\tbetter-established\tresources\tthan\twe\tdo\tto\tdevote\tto\tthe\tdesign,\ndevelopment,\tmanufacturing,\tdistribution,\tpromotion,\tsale\tand\tsupport\tof\ttheir\tproducts\tand\tservices,\tand\tmay\tachieve\tadditional\tcost\tefficiencies\nowing\tto\tlocation\tand\teconomic\tenvironments.\tIncreased\tcompetition\tcould\tresult\tin\tour\tlower\tvehicle\tunit\tsales,\tprice\treductions,\trevenue\tshortfalls,\nloss\tof\tcustomers\tand\tloss\tof\tmarket\tshare,\twhich\tmay\tharm\tour\tbusiness,\tfinancial\tcondition\tand\toperating\tresults.\nWe\talso\tface\tcompetition\tin\tour\tenergy\tgeneration\tand\tstorage\tbusiness\tfrom\tother\tmanufacturers,\tdevelopers,\tinstallers\tand\tservice\tproviders\tof\ncompeting\tenergy\ttechnologies,\tas\twell\tas\tfrom\tlarge\tutilities.\tIn\taddition,\tdecreases\tin\tthe\tretail\tor\twholesale\tprices\tof\telectricity\tfrom\tutilities\tor\tother\nrenewable\tenergy\tsources\tcould\tmake\tour\tproducts\tless\tattractive\tto\tcustomers\tand\tlead\tto\tan\tincreased\trate\tof\tcustomer\tdefaults.",
+      "source_span": [
+        72420,
+        74265
+      ],
+      "locator": "PDF pages [18]; Complete automotive and energy competition risk discussion; printed p. 15"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0008_F01",
+      "evidence_id": "EP_0008_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "94827",
+      "unit": "USD_million",
+      "source_value": "94,827",
+      "locator": "Total revenues; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0008_F02",
+      "evidence_id": "EP_0008_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "97690",
+      "unit": "USD_million",
+      "source_value": "97,690",
+      "locator": "Total revenues; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0008_F03",
+      "evidence_id": "EP_0008_E01",
+      "metric": "automotive_revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "69526",
+      "unit": "USD_million",
+      "source_value": "69,526",
+      "locator": "Total automotive revenues; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0008_F04",
+      "evidence_id": "EP_0008_E01",
+      "metric": "automotive_revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "77070",
+      "unit": "USD_million",
+      "source_value": "77,070",
+      "locator": "Total automotive revenues; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0008_F05",
+      "evidence_id": "EP_0008_E01",
+      "metric": "energy_generation_and_storage_revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "12771",
+      "unit": "USD_million",
+      "source_value": "12,771",
+      "locator": "Energy generation and storage segment revenue; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0008_F06",
+      "evidence_id": "EP_0008_E01",
+      "metric": "energy_generation_and_storage_revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "10086",
+      "unit": "USD_million",
+      "source_value": "10,086",
+      "locator": "Energy generation and storage segment revenue; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0008_F07",
+      "evidence_id": "EP_0008_E01",
+      "metric": "services_and_other_revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "12530",
+      "unit": "USD_million",
+      "source_value": "12,530",
+      "locator": "Services and other; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0008_F08",
+      "evidence_id": "EP_0008_E01",
+      "metric": "services_and_other_revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "10534",
+      "unit": "USD_million",
+      "source_value": "10,534",
+      "locator": "Services and other; FY2024 column"
+    }
+  ]
+}
