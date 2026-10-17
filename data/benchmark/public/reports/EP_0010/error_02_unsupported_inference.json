@@ -1,0 +1,103 @@
+{
+  "schema_version": "0.1",
+  "report_id": "R_208b9b50d41f4321a55aae5da5dff2cb",
+  "recommendation": "SELL",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "COMPANY_10's total revenues increased by 11.81% from $400,278 million in 2024 to $447,567 million in 2025, as reported in Item 7. This historical growth guarantees that total revenues will grow by at least 11.81% in FY2026.",
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0010_F02",
+        "to_fact_id": "EP_0010_F01",
+        "metric": "revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "11.81",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "Despite revenue growth, COMPANY_10's earnings from operations decreased by 41.26%, from $32,287 million in 2024 to $18,964 million in 2025, as detailed in Item 7.",
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0010_F04",
+        "to_fact_id": "EP_0010_F03",
+        "metric": "operating_income",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "-41.26",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "The medical care ratio (MCR) for COMPANY_10 increased from 85.5% in 2024 to 89.1% in 2025, as reported in Item 7, indicating a higher proportion of premium revenue being spent on medical costs. This increase was primarily due to IRA-driven impacts on Medicare Part D plans, elevated medical cost trends, and growth in people served through Medicare Advantage and those with higher acuity needs, as stated in Item 7.",
+      "evidence_ids": [
+        "EP_0010_E01",
+        "EP_0010_E02"
+      ],
+      "check_spec": {
+        "kind": "numeric",
+        "fact_id": "EP_0010_F07",
+        "metric": "medical_care_ratio",
+        "period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "89.1",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C4",
+      "text": "Medical costs for COMPANY_10 increased by 18.86% from $264,185 million in 2024 to $313,995 million in 2025, as shown in Item 7. This significant increase contributed to the decline in earnings from operations.",
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0010_F06",
+        "to_fact_id": "EP_0010_F05",
+        "metric": "medical_costs",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "18.86",
+        "unit": "percent"
+      }
+    }
+  ],
+  "rationale": "COMPANY_10 experienced a substantial decline in earnings from operations and an increase in its medical care ratio, despite revenue growth. The significant increase in medical costs, driven by factors such as IRA-driven impacts on Medicare Part D plans and elevated medical cost trends, directly impacted profitability. The company also faces competitive risks and challenges in innovation, as highlighted in Item 1A. These factors suggest a deteriorating financial performance and increased operational risks, warranting a SELL recommendation."
+}

@@ -2220,6 +2220,269 @@
       "error_index": 3,
       "clean_report_path": "reports/EP_0008/clean.json",
       "flawed_report_path": "reports/EP_0008/error_03_arithmetic.json"
+    },
+    {
+      "pair_id": "PAIR_0025",
+      "packet_id": "EP_0009",
+      "clean_report_id": "R_2f1e45f6e1db42729e9b0995e208ff83",
+      "flawed_report_id": "R_4378b67a308e4e4589fba6105b96d502",
+      "defect_type": "material_omission",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "expected": {
+        "qualification": "FY2025 pretax income includes approximately $7.0 billion talc-reserve reversal; FY2024 includes approximately $5.1 billion talc charges; headline growth is not by itself recurring operating improvement."
+      },
+      "injected": {
+        "omitted": "Talc-reserve reversal, prior-year talc charges and their significance for interpreting pretax-income growth."
+      },
+      "explanation": "Removes the material talc accounting qualification from C1 and the rationale while retaining correct headline income figures. The source packet and other claims remain unchanged. This cherry-picks the headline growth without the accounting context.",
+      "detection_criterion": "Identifies the omitted FY2025 talc-reserve reversal and FY2024 talc charges and explains why the headline increase alone does not establish recurring operating improvement.",
+      "correction_criterion": "Restore the missing accounting qualification in C1 and the rationale, or explicitly qualify or retract reliance on headline pretax-income growth as recurring improvement.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "The company's worldwide income before tax significantly increased by 95.25% from $16,687 million in fiscal year 2024 to $32,581 million in fiscal year 2025. This comparison includes an approximately $7.0 billion talc-reserve reversal in FY2025 and approximately $5.1 billion of talc charges in FY2024; the headline increase therefore does not by itself establish recurring operating improvement.",
+          "after": "The company's worldwide income before tax significantly increased by 95.25% from $16,687 million in fiscal year 2024 to $32,581 million in fiscal year 2025."
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "The company demonstrates strong financial performance with a substantial increase in worldwide income before tax and accelerating sales growth. The improved profitability in the SEGMENT_15 segment and the overall increase in worldwide income before tax margin are positive indicators. Additionally, strategic acquisitions and divestitures are contributing positively to sales growth. While competitive pressures and the negative impact of PRODUCT_42 sales decline due to biosimilar competition are noted, the overall financial improvements suggest a positive outlook. The income comparison is materially affected by the approximately $7.0 billion talc-reserve reversal in FY2025 and approximately $5.1 billion of talc charges in FY2024 (EP_0009_E01). These accounting effects limit the use of headline pretax-income growth as evidence of recurring performance. Sales growth also includes currency and acquisition effects (EP_0009_E02), and competition and loss of patent exclusivity remain material risks (EP_0009_E03). The BUY recommendation is an interpretation of the mixed evidence, not proof of future returns.",
+          "after": "The company demonstrates strong financial performance with a substantial increase in worldwide income before tax and accelerating sales growth. The improved profitability in the SEGMENT_15 segment and the overall increase in worldwide income before tax margin are positive indicators. Additionally, strategic acquisitions and divestitures are contributing positively to sales growth. While competitive pressures and the negative impact of PRODUCT_42 sales decline due to biosimilar competition are noted, the overall financial improvements suggest a positive outlook."
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0009/clean.json",
+      "flawed_report_path": "reports/EP_0009/error_01_material_omission.json"
+    },
+    {
+      "pair_id": "PAIR_0026",
+      "packet_id": "EP_0009",
+      "clean_report_id": "R_2f1e45f6e1db42729e9b0995e208ff83",
+      "flawed_report_id": "R_51018e6c28754d4793bd39c6d0171f58",
+      "defect_type": "unsupported_inference",
+      "target_claim_id": "C3",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "expected": {
+        "interpretation": "Reported segment margin increased in FY2025; supplied excerpts do not establish that it will continue increasing."
+      },
+      "injected": {
+        "unsupported_conclusion": "The historical margin increase guarantees continued margin expansion in FY2026."
+      },
+      "explanation": "Appends an unsupported forward-looking guarantee to the otherwise accurate historical margin claim. Evidence contains no FY2026 margin guarantee.",
+      "detection_criterion": "Identifies that a historical margin increase cannot establish guaranteed FY2026 margin expansion, particularly given competitive and patent-exclusivity risks.",
+      "correction_criterion": "Remove or qualify the FY2026 guarantee while retaining the supported historical margin comparison.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            2,
+            "text"
+          ],
+          "before": "The SEGMENT_15 segment's income before tax as a percentage of segment sales increased from 33.2% in 2024 to 36.9% in 2025, demonstrating improved profitability within this segment (Item 7, EP_0009_E01).",
+          "after": "The SEGMENT_15 segment's income before tax as a percentage of segment sales increased from 33.2% in 2024 to 36.9% in 2025, demonstrating improved profitability within this segment (Item 7, EP_0009_E01). This improvement guarantees that the segment margin will continue to expand in FY2026."
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0009/clean.json",
+      "flawed_report_path": "reports/EP_0009/error_02_unsupported_inference.json"
+    },
+    {
+      "pair_id": "PAIR_0027",
+      "packet_id": "EP_0009",
+      "clean_report_id": "R_2f1e45f6e1db42729e9b0995e208ff83",
+      "flawed_report_id": "R_3872e6e69c7b4a769505108f08d12585",
+      "defect_type": "citation_misattribution",
+      "target_claim_id": "C3",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "expected": {
+        "inline_citation": "EP_0009_E01",
+        "support": "Segment pretax-income margin table."
+      },
+      "injected": {
+        "inline_citation": "EP_0009_E03",
+        "support": "Competition risk excerpt, which does not contain the cited margin figures."
+      },
+      "explanation": "Changes only the written citation in C3 from EP_0009_E01 to EP_0009_E03. The evidence_ids array intentionally remains EP_0009_E01, creating a written-versus-structured citation discrepancy. No numerical or historical assertion changes.",
+      "detection_criterion": "Identifies that the written citation EP_0009_E03 does not support the 33.2% and 36.9% segment margins; EP_0009_E01 contains those figures.",
+      "correction_criterion": "Restore the written citation to EP_0009_E01 and reconcile it with the unchanged evidence_ids array.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            2,
+            "text"
+          ],
+          "before": "The SEGMENT_15 segment's income before tax as a percentage of segment sales increased from 33.2% in 2024 to 36.9% in 2025, demonstrating improved profitability within this segment (Item 7, EP_0009_E01).",
+          "after": "The SEGMENT_15 segment's income before tax as a percentage of segment sales increased from 33.2% in 2024 to 36.9% in 2025, demonstrating improved profitability within this segment (Item 7, EP_0009_E03)."
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0009/clean.json",
+      "flawed_report_path": "reports/EP_0009/error_03_citation_misattribution.json"
+    },
+    {
+      "pair_id": "PAIR_0028",
+      "packet_id": "EP_0010",
+      "clean_report_id": "R_572f8b0342454e0280ab55611a469af6",
+      "flawed_report_id": "R_c5557760edbe4d98b609c07583552b60",
+      "defect_type": "direct_factual_contradiction",
+      "target_claim_id": "C3",
+      "evidence_ids": [
+        "EP_0010_E01",
+        "EP_0010_E02"
+      ],
+      "expected": {
+        "definition": "Medical care ratio equals medical costs divided by premium revenue. An increase means a higher proportion of premium revenue is spent on medical costs."
+      },
+      "injected": {
+        "contradiction": "Claims the MCR increase means a lower proportion of premium revenue is spent on medical costs."
+      },
+      "explanation": "Replaces higher with lower in the interpretation of MCR. All reported ratios, periods and numerical assertions stay unchanged. The altered definition directly contradicts footnote (a) in EP_0010_E01.",
+      "detection_criterion": "Identifies that rising MCR from 85.5% to 89.1% indicates a higher, not lower, proportion of premium revenue spent on medical costs.",
+      "correction_criterion": "Restore higher in the interpretation of MCR, or explicitly retract the reversed interpretation.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            2,
+            "text"
+          ],
+          "before": "The medical care ratio (MCR) for COMPANY_10 increased from 85.5% in 2024 to 89.1% in 2025, as reported in Item 7, indicating a higher proportion of premium revenue being spent on medical costs. This increase was primarily due to IRA-driven impacts on Medicare Part D plans, elevated medical cost trends, and growth in people served through Medicare Advantage and those with higher acuity needs, as stated in Item 7.",
+          "after": "The medical care ratio (MCR) for COMPANY_10 increased from 85.5% in 2024 to 89.1% in 2025, as reported in Item 7, indicating a lower proportion of premium revenue being spent on medical costs. This increase was primarily due to IRA-driven impacts on Medicare Part D plans, elevated medical cost trends, and growth in people served through Medicare Advantage and those with higher acuity needs, as stated in Item 7."
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0010/clean.json",
+      "flawed_report_path": "reports/EP_0010/error_01_direct_factual_contradiction.json"
+    },
+    {
+      "pair_id": "PAIR_0029",
+      "packet_id": "EP_0010",
+      "clean_report_id": "R_572f8b0342454e0280ab55611a469af6",
+      "flawed_report_id": "R_208b9b50d41f4321a55aae5da5dff2cb",
+      "defect_type": "unsupported_inference",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "expected": {
+        "supported": "Historical total revenues increased by 11.81% in FY2025; no guaranteed FY2026 growth rate is established."
+      },
+      "injected": {
+        "unsupported_conclusion": "Historical revenue growth guarantees at least 11.81% revenue growth in FY2026."
+      },
+      "explanation": "Adds an unsupported future-growth guarantee to the correct historical revenue claim. The supplied excerpts provide no such guarantee.",
+      "detection_criterion": "Identifies that FY2025 historical revenue growth does not guarantee a minimum FY2026 growth rate.",
+      "correction_criterion": "Remove or qualify the FY2026 guarantee while preserving the supported FY2024-FY2025 comparison.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "COMPANY_10's total revenues increased by 11.81% from $400,278 million in 2024 to $447,567 million in 2025, as reported in Item 7.",
+          "after": "COMPANY_10's total revenues increased by 11.81% from $400,278 million in 2024 to $447,567 million in 2025, as reported in Item 7. This historical growth guarantees that total revenues will grow by at least 11.81% in FY2026."
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0010/clean.json",
+      "flawed_report_path": "reports/EP_0010/error_02_unsupported_inference.json"
+    },
+    {
+      "pair_id": "PAIR_0030",
+      "packet_id": "EP_0010",
+      "clean_report_id": "R_572f8b0342454e0280ab55611a469af6",
+      "flawed_report_id": "R_f2a3327d87194db686dac7695f11db23",
+      "defect_type": "arithmetic",
+      "target_claim_id": "C2",
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "expected": {
+        "growth_percent": "-41.26",
+        "from_value": "32287",
+        "to_value": "18964",
+        "unit": "USD_million"
+      },
+      "injected": {
+        "growth_percent": "-51.26",
+        "from_value": "32287",
+        "to_value": "18964",
+        "unit": "USD_million"
+      },
+      "explanation": "Keeps operating earnings amounts and fiscal years correct but overstates the decline by 10 percentage points in both prose and structured assertion.",
+      "detection_criterion": "Identifies that (18964-32287)/32287*100 rounds to -41.26%, not -51.26%.",
+      "correction_criterion": "Restore the decline to 41.26% in C2 prose and -41.26 in check_spec, or explicitly retract the incorrect calculation.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            1,
+            "text"
+          ],
+          "before": "Despite revenue growth, COMPANY_10's earnings from operations decreased by 41.26%, from $32,287 million in 2024 to $18,964 million in 2025, as detailed in Item 7.",
+          "after": "Despite revenue growth, COMPANY_10's earnings from operations decreased by 51.26%, from $32,287 million in 2024 to $18,964 million in 2025, as detailed in Item 7."
+        },
+        {
+          "path": [
+            "claims",
+            1,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0010_F04",
+            "to_fact_id": "EP_0010_F03",
+            "metric": "operating_income",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "-41.26",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0010_F04",
+            "to_fact_id": "EP_0010_F03",
+            "metric": "operating_income",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "-51.26",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0010/clean.json",
+      "flawed_report_path": "reports/EP_0010/error_03_arithmetic.json"
     }
   ]
 }
