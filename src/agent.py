@@ -13,11 +13,14 @@ else:
 import json
 import os
 import re
+import time
 from uuid import uuid4
 
 llm = None
 # MODEL_NAME = "openrouter/free"
 MODEL_NAME = "nvidia/nemotron-3.5-lightning:free"
+MAX_MODEL_RETRIES = 3
+RETRY_BASE_DELAY_SECONDS = 1.0
 
 
 def make_message_id(agent_name: str) -> str:
@@ -93,6 +96,28 @@ def log_model_response(agent_name: str, response):
     )
 
 
+def invoke_with_retry(agent_name: str, messages, validator=None, **kwargs):
+    last_error = None
+    for attempt in range(1, MAX_MODEL_RETRIES + 1):
+        try:
+            log_model_call(agent_name, messages)
+            response = get_llm().invoke(messages, **kwargs)
+            log_model_response(agent_name, response)
+            if not getattr(response, "content", None) or not response.content.strip():
+                raise ValueError("model returned an empty response")
+            if validator is not None:
+                validator(response)
+            return response
+        except Exception as error:
+            last_error = error
+            print(f"[{agent_name}] model attempt {attempt}/{MAX_MODEL_RETRIES} failed: {error}", flush=True)
+            if attempt < MAX_MODEL_RETRIES:
+                delay = RETRY_BASE_DELAY_SECONDS * (2 ** (attempt - 1))
+                print(f"[{agent_name}] retrying in {delay:.1f}s", flush=True)
+                time.sleep(delay)
+    raise RuntimeError(f"{agent_name} model failed after {MAX_MODEL_RETRIES} attempts") from last_error
+
+
 def invoke_analyst(messages, model_client=None, **kwargs):
     if model_client is None:
         model_client = get_llm()
@@ -151,9 +176,10 @@ def analyst_agent(state: AgentState):
 
     # print("Messages to send to LLM:", messages_to_send)
 
-    log_model_call(agent_name, messages_to_send)
-    response = invoke_analyst(
+    response = invoke_with_retry(
+        agent_name,
         messages_to_send,
+        validator=lambda candidate: parse_report_response(candidate.content),
         response_format={"type": "json_object"},
     )
     print("Analyst model response received", flush=True)
@@ -216,8 +242,7 @@ def risk_manager_agent(state: AgentState):
 
 
     # 4. Call the LLM
-    log_model_call(agent_name, messages_to_send)
-    response = get_llm().invoke(messages_to_send)
+    response = invoke_with_retry(agent_name, messages_to_send)
     label_message(response, agent_name)
     print("Risk Manager response received", flush=True)
     log_model_response(agent_name, response)
@@ -301,8 +326,7 @@ def trader_agent(state: AgentState):
     # messages_to_send = [system_prompt, context_message] + state["messages"]
     
     # 4. Call the LLM
-    log_model_call(agent_name, messages_to_send)
-    response = get_llm().invoke(messages_to_send)
+    response = invoke_with_retry(agent_name, messages_to_send)
     label_message(response, agent_name)
     print("Trader response received", flush=True)
     log_model_response(agent_name, response)
