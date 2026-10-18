@@ -1,0 +1,109 @@
+{
+  "schema_version": "0.1",
+  "report_id": "R_046ada01cdfd4b519f7aeca2487d7199",
+  "recommendation": "HOLD",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "Net sales increased by $245 million, or 0.29%, from $84,039 million in fiscal year 2024 to $84,284 million in fiscal year 2025 (Item 7, EP_0013_E01). This modest growth was primarily driven by a 1% increase in pricing, largely offset by unfavorable foreign exchange impacts of 1% (Item 7, EP_0013_E02).",
+      "evidence_ids": [
+        "EP_0013_E01",
+        "EP_0013_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0013_F02",
+        "to_fact_id": "EP_0013_F01",
+        "metric": "net_sales",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-07-01",
+          "end": "2024-06-30"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-07-01",
+          "end": "2025-06-30"
+        },
+        "value": "0.29",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "Operating income increased by $1,906 million, or 10.28%, from $18,545 million in fiscal year 2024 to $20,451 million in fiscal year 2025 (Item 7, EP_0013_E01). This improvement was largely due to a reduction in selling, general and administrative costs and the absence of a $1.3 billion non-cash impairment charge on the PRODUCT_45 intangible asset that occurred in the prior year (Item 7, EP_0013_E01).",
+      "evidence_ids": [
+        "EP_0013_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0013_F04",
+        "to_fact_id": "EP_0013_F03",
+        "metric": "operating_income",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-07-01",
+          "end": "2024-06-30"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-07-01",
+          "end": "2025-06-30"
+        },
+        "value": "10.28",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "Net earnings increased by $1,091 million, or 7.29%, from $14,974 million in fiscal year 2024 to $16,065 million in fiscal year 2025 (Item 7, EP_0013_E01). This increase was driven by the rise in operating income, partially offset by higher restructuring charges, including $801 million after tax related to the liquidation of operations in Argentina (Item 7, EP_0013_E01).",
+      "evidence_ids": [
+        "EP_0013_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0013_F06",
+        "to_fact_id": "EP_0013_F05",
+        "metric": "net_earnings",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-07-01",
+          "end": "2024-06-30"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-07-01",
+          "end": "2025-06-30"
+        },
+        "value": "7.29",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C4",
+      "text": "Cash flow from operating activities decreased by $2,029 million, or 10.22%, from $19,846 million in fiscal year 2024 to $17,817 million in fiscal year 2025 (Item 7, EP_0013_E01). This decline in operating cash flow is a notable counterpoint to the increases in net sales, operating income, and net earnings.",
+      "evidence_ids": [
+        "EP_0013_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0013_F08",
+        "to_fact_id": "EP_0013_F07",
+        "metric": "operating_cash_flow",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-07-01",
+          "end": "2024-06-30"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-07-01",
+          "end": "2025-06-30"
+        },
+        "value": "-10.22",
+        "unit": "percent"
+      }
+    }
+  ],
+  "rationale": "COMPANY_13 demonstrated mixed financial performance in fiscal year 2025. While net sales saw a marginal increase, operating income and net earnings showed healthy growth, primarily driven by cost reductions and the absence of prior-year impairment charges. However, a significant decline in cash flow from operating activities raises concerns. The company operates in a highly competitive consumer products industry, facing ongoing pressures from global and local competitors, evolving sales channels, and changing consumer preferences (Item 1A, EP_0013_E03). The positive earnings growth is tempered by the decrease in cash generation and the competitive landscape, suggesting a HOLD recommendation until there is clearer evidence of sustained cash flow improvement or a stronger competitive advantage."
+}

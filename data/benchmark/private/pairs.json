@@ -2483,6 +2483,677 @@
       "error_index": 3,
       "clean_report_path": "reports/EP_0010/clean.json",
       "flawed_report_path": "reports/EP_0010/error_03_arithmetic.json"
+    },
+    {
+      "pair_id": "PAIR_0031",
+      "packet_id": "EP_0011",
+      "clean_report_id": "R_07b36f6e9e0f4aa69903d96fa67da0e6",
+      "flawed_report_id": "R_44aa1169d05f403fb1fe3c666229da99",
+      "defect_type": "unsupported_inference",
+      "target_claim_id": "C3",
+      "evidence_ids": [
+        "EP_0011_E02"
+      ],
+      "expected": {
+        "supported": "Year-end cash fell from 23187 to 10681 USD_million; these figures alone do not establish inability to meet future obligations."
+      },
+      "injected": {
+        "unsupported_conclusion": "The cash decline proves inability to meet financial obligations in FY2026."
+      },
+      "explanation": "Adds an unsupported certainty about future inability to meet obligations to the correct historical cash-balance claim. The packet does not establish this conclusion.",
+      "detection_criterion": "Identifies that lower cash balances alone do not prove inability to meet FY2026 obligations; liquidity assessment requires information beyond this comparison.",
+      "correction_criterion": "Remove or qualify the future inability-to-pay assertion while preserving the historical cash figures.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            2,
+            "text"
+          ],
+          "before": "Cash and cash equivalents at the end of 2025 were $10,681 million, a decrease of 53.93% from $23,187 million at the end of 2024.",
+          "after": "Cash and cash equivalents at the end of 2025 were $10,681 million, a decrease of 53.93% from $23,187 million at the end of 2024. This decline proves that COMPANY_11 will be unable to meet its financial obligations in FY2026."
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0011/clean.json",
+      "flawed_report_path": "reports/EP_0011/error_01_unsupported_inference.json"
+    },
+    {
+      "pair_id": "PAIR_0032",
+      "packet_id": "EP_0011",
+      "clean_report_id": "R_07b36f6e9e0f4aa69903d96fa67da0e6",
+      "flawed_report_id": "R_f88bf6157f2043bfb1d142f42ce8c392",
+      "defect_type": "material_omission",
+      "target_claim_id": "C4",
+      "evidence_ids": [
+        "EP_0011_E01"
+      ],
+      "expected": {
+        "counter_evidence": "Advantaged volume growth added $1.9 billion and structural cost savings added $1.4 billion to upstream earnings."
+      },
+      "injected": {
+        "omitted": "Both positive earnings offsets are removed from C4 and the rationale."
+      },
+      "explanation": "Cherry-picks negative earnings drivers by removing the explicitly cited positive volume and cost-saving offsets from C4 and the rationale. The remaining historical figures are unchanged.",
+      "detection_criterion": "Identifies the omitted $1.9 billion volume-growth and $1.4 billion structural-cost-saving contributions and their relevance to interpreting the decline.",
+      "correction_criterion": "Restore the material positive offsets in C4 and the rationale to provide the balanced original account.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            3,
+            "text"
+          ],
+          "before": "The decrease in earnings for SEGMENT_22 in 2025 was primarily driven by a $6.1 billion decrease due to lower realizations from crude prices, partially offset by a $1.9 billion increase from advantaged volume growth and a $1.4 billion increase from structural cost savings (Item 7, EP_0011_E01).",
+          "after": "The decrease in earnings for SEGMENT_22 in 2025 was primarily driven by a $6.1 billion decrease due to lower realizations from crude prices (Item 7, EP_0011_E01)."
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "COMPANY_11 shows a significant decline in GAAP earnings for its SEGMENT_22 segment and a substantial reduction in cash and cash equivalents. While there were positive contributions from advantaged volume growth and structural cost savings, these were not enough to offset the negative impact of lower crude prices and increased expenses. The company's operating cash flow also decreased. Given the mixed performance with notable declines in key financial metrics, a HOLD recommendation is appropriate as the company navigates these challenges.",
+          "after": "COMPANY_11 shows a significant decline in GAAP earnings for its SEGMENT_22 segment and a substantial reduction in cash and cash equivalents. Lower crude prices and increased expenses negatively affected earnings. The company's operating cash flow also decreased. Given the mixed performance with notable declines in key financial metrics, a HOLD recommendation is appropriate as the company navigates these challenges."
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0011/clean.json",
+      "flawed_report_path": "reports/EP_0011/error_02_material_omission.json"
+    },
+    {
+      "pair_id": "PAIR_0033",
+      "packet_id": "EP_0011",
+      "clean_report_id": "R_07b36f6e9e0f4aa69903d96fa67da0e6",
+      "flawed_report_id": "R_425d1b26f86940ceba2d80462734bf01",
+      "defect_type": "citation_misattribution",
+      "target_claim_id": "C4",
+      "evidence_ids": [
+        "EP_0011_E01"
+      ],
+      "expected": {
+        "inline_citation": "EP_0011_E01",
+        "support": "Upstream earnings driver discussion."
+      },
+      "injected": {
+        "inline_citation": "EP_0011_E03",
+        "support": "General commodity-price risk disclosure, which does not supply the claimed FY2025 driver amounts."
+      },
+      "explanation": "Changes only C4’s written citation to EP_0011_E03. The evidence_ids array intentionally stays EP_0011_E01, creating a written-versus-structured citation discrepancy.",
+      "detection_criterion": "Identifies that the written EP_0011_E03 citation does not support the $6.1 billion, $1.9 billion and $1.4 billion FY2025 earnings drivers; EP_0011_E01 does.",
+      "correction_criterion": "Restore the inline citation to EP_0011_E01 so it matches the actual evidence and evidence_ids array.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            3,
+            "text"
+          ],
+          "before": "The decrease in earnings for SEGMENT_22 in 2025 was primarily driven by a $6.1 billion decrease due to lower realizations from crude prices, partially offset by a $1.9 billion increase from advantaged volume growth and a $1.4 billion increase from structural cost savings (Item 7, EP_0011_E01).",
+          "after": "The decrease in earnings for SEGMENT_22 in 2025 was primarily driven by a $6.1 billion decrease due to lower realizations from crude prices, partially offset by a $1.9 billion increase from advantaged volume growth and a $1.4 billion increase from structural cost savings (Item 7, EP_0011_E03)."
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0011/clean.json",
+      "flawed_report_path": "reports/EP_0011/error_03_citation_misattribution.json"
+    },
+    {
+      "pair_id": "PAIR_0034",
+      "packet_id": "EP_0012",
+      "clean_report_id": "R_ac5ffd2d16144be5b7f6bff10d6e0b10",
+      "flawed_report_id": "R_865cc1164aee4623a6f336da7b99e3fd",
+      "defect_type": "citation_misattribution",
+      "target_claim_id": "C5",
+      "evidence_ids": [
+        "EP_0012_E03"
+      ],
+      "expected": {
+        "supporting_citation": "EP_0012_E03; Item 1A commodity-price risk disclosure"
+      },
+      "injected": {
+        "written_citation": "EP_0012_E01; Item 7 financial results table"
+      },
+      "explanation": "Replaces C5’s written risk citation with EP_0012_E01, a table that does not establish the commodity-price risk disclosure. The structured evidence_ids intentionally remain EP_0012_E03, creating a written-versus-structured citation discrepancy.",
+      "detection_criterion": "Identifies that the written EP_0012_E01 citation does not support the risk disclosure; EP_0012_E03 is the relevant excerpt.",
+      "correction_criterion": "Restore the written citation to EP_0012_E03 / Item 1A and reconcile it with the unchanged evidence_ids.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            4,
+            "text"
+          ],
+          "before": "COMPANY_12 is exposed to significant commodity price volatility, particularly in crude oil, natural gas, and natural gas liquids, which can materially impact its results of operations, financial condition, and liquidity (Item 1A, p.21).",
+          "after": "COMPANY_12 is exposed to significant commodity price volatility, particularly in crude oil, natural gas, and natural gas liquids, which can materially impact its results of operations, financial condition, and liquidity (Item 7, EP_0012_E01)."
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0012/clean.json",
+      "flawed_report_path": "reports/EP_0012/error_01_citation_misattribution.json"
+    },
+    {
+      "pair_id": "PAIR_0035",
+      "packet_id": "EP_0012",
+      "clean_report_id": "R_ac5ffd2d16144be5b7f6bff10d6e0b10",
+      "flawed_report_id": "R_2fee21c561504f6eaa6eb7081179d602",
+      "defect_type": "direct_factual_contradiction",
+      "target_claim_id": "C5",
+      "evidence_ids": [
+        "EP_0012_E03"
+      ],
+      "expected": {
+        "risk": "Commodity-price fluctuations can materially affect results, financial condition and liquidity."
+      },
+      "injected": {
+        "contradiction": "Claims that commodity-price fluctuations cannot materially affect those outcomes."
+      },
+      "explanation": "Negates the material commodity-price exposure stated in the risk excerpt. The rationale is adjusted to repeat the same false absence of risk. Historical financial figures are unchanged.",
+      "detection_criterion": "Identifies that EP_0012_E03 explicitly describes material adverse effects from commodity-price fluctuations, contrary to the claim that they cannot materially affect results.",
+      "correction_criterion": "Restore C5’s material commodity-price exposure and the matching risk qualification in the rationale.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            4,
+            "text"
+          ],
+          "before": "COMPANY_12 is exposed to significant commodity price volatility, particularly in crude oil, natural gas, and natural gas liquids, which can materially impact its results of operations, financial condition, and liquidity (Item 1A, p.21).",
+          "after": "COMPANY_12 is exposed to significant commodity price volatility, particularly in crude oil, natural gas, and natural gas liquids, which cannot materially impact its results of operations, financial condition, and liquidity (Item 1A, p.21)."
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "COMPANY_12 experienced a significant decline in net income and overall revenue from 2024 to 2025. The primary driver of this decline was the SEGMENT_22 segment, which saw a substantial decrease in earnings due to lower realizations and higher expenses. While the SEGMENT_26 segment showed strong growth, it was not enough to offset the negative performance of SEGMENT_22. The company also faces inherent risks from commodity price volatility, which could further impact its financial performance. Given the overall negative trend in key financial metrics and the exposure to volatile commodity markets, a SELL recommendation is appropriate.",
+          "after": "COMPANY_12 experienced a significant decline in net income and overall revenue from 2024 to 2025. The primary driver of this decline was the SEGMENT_22 segment, which saw a substantial decrease in earnings due to lower realizations and higher expenses. While the SEGMENT_26 segment showed strong growth, it was not enough to offset the negative performance of SEGMENT_22. Commodity price volatility cannot materially affect the company’s results of operations, financial condition or liquidity. Given the overall negative trend in key financial metrics and the absence of material commodity-price exposure, a SELL recommendation is appropriate."
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0012/clean.json",
+      "flawed_report_path": "reports/EP_0012/error_02_direct_factual_contradiction.json"
+    },
+    {
+      "pair_id": "PAIR_0036",
+      "packet_id": "EP_0012",
+      "clean_report_id": "R_ac5ffd2d16144be5b7f6bff10d6e0b10",
+      "flawed_report_id": "R_47c60f1ddcb9419cb0b87541da14a8ae",
+      "defect_type": "material_omission",
+      "target_claim_id": "C4",
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02"
+      ],
+      "expected": {
+        "counter_evidence": "Downstream earnings rose 74.99%, from 1727 to 3022 USD_million, partly offsetting upstream weakness."
+      },
+      "injected": {
+        "omitted": "Positive downstream earnings growth, its amounts and drivers, and its acknowledgement in the rationale."
+      },
+      "explanation": "Replaces the positive downstream claim with a supported summary of declines already reported elsewhere, and removes the downstream-growth qualification from the rationale. No false numerical assertion is introduced; the defect is omission of material positive counter-evidence. The replacement claim is qualitative so check_spec is set to null.",
+      "detection_criterion": "Identifies that the negative-only assessment omits downstream earnings growth from 1727 to 3022 USD_million and its role as positive counter-evidence.",
+      "correction_criterion": "Restore the clean downstream-growth claim, its structured assertion and its qualification in the rationale.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            3,
+            "text"
+          ],
+          "before": "Despite the overall decline, the SEGMENT_26 segment's earnings increased by 74.99% from $1,727 million in 2024 to $3,022 million in 2025, driven by lower operating expenses of $730 million and higher margins on refined product sales of $580 million in U.S. SEGMENT_26, and higher margins on refined product sales of $440 million in SEGMENT_14 SEGMENT_26 (Item 7, p.42).",
+          "after": "The company’s net income and SEGMENT_22 earnings both declined in 2025 compared with 2024 (Item 7, EP_0012_E01)."
+        },
+        {
+          "path": [
+            "claims",
+            3,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0012_F08",
+            "to_fact_id": "EP_0012_F07",
+            "metric": "downstream_earnings",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "74.99",
+            "unit": "percent"
+          },
+          "after": null
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "COMPANY_12 experienced a significant decline in net income and overall revenue from 2024 to 2025. The primary driver of this decline was the SEGMENT_22 segment, which saw a substantial decrease in earnings due to lower realizations and higher expenses. While the SEGMENT_26 segment showed strong growth, it was not enough to offset the negative performance of SEGMENT_22. The company also faces inherent risks from commodity price volatility, which could further impact its financial performance. Given the overall negative trend in key financial metrics and the exposure to volatile commodity markets, a SELL recommendation is appropriate.",
+          "after": "COMPANY_12 experienced a significant decline in net income and overall revenue from 2024 to 2025. The primary driver of this decline was the SEGMENT_22 segment, which saw a substantial decrease in earnings due to lower realizations and higher expenses. The company also faces inherent risks from commodity price volatility, which could further impact its financial performance. Given the overall negative trend in key financial metrics and the exposure to volatile commodity markets, a SELL recommendation is appropriate."
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0012/clean.json",
+      "flawed_report_path": "reports/EP_0012/error_03_material_omission.json"
+    },
+    {
+      "pair_id": "PAIR_0037",
+      "packet_id": "EP_0013",
+      "clean_report_id": "R_046ada01cdfd4b519f7aeca2487d7199",
+      "flawed_report_id": "R_66a744d9adff44a7a058bc282cc3f32d",
+      "defect_type": "citation_misattribution",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0013_E01",
+        "EP_0013_E02"
+      ],
+      "expected": {
+        "supporting_written_citation": "EP_0013_E02; pricing and foreign-exchange sales drivers"
+      },
+      "injected": {
+        "written_citation": "EP_0013_E03; competition-risk excerpt"
+      },
+      "explanation": "Changes only the written citation for the pricing and foreign-exchange explanation to the competition-risk excerpt. The evidence_ids intentionally remain E01 and E02, creating a written-versus-structured citation discrepancy.",
+      "detection_criterion": "Identifies that EP_0013_E03 does not substantiate the 1% pricing and foreign-exchange effects; EP_0013_E02 does.",
+      "correction_criterion": "Restore the sales-driver written citation to EP_0013_E02.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Net sales increased by $245 million, or 0.29%, from $84,039 million in fiscal year 2024 to $84,284 million in fiscal year 2025 (Item 7, EP_0013_E01). This modest growth was primarily driven by a 1% increase in pricing, largely offset by unfavorable foreign exchange impacts of 1% (Item 7, EP_0013_E02).",
+          "after": "Net sales increased by $245 million, or 0.29%, from $84,039 million in fiscal year 2024 to $84,284 million in fiscal year 2025 (Item 7, EP_0013_E01). This modest growth was primarily driven by a 1% increase in pricing, largely offset by unfavorable foreign exchange impacts of 1% (Item 1A, EP_0013_E03)."
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0013/clean.json",
+      "flawed_report_path": "reports/EP_0013/error_01_citation_misattribution.json"
+    },
+    {
+      "pair_id": "PAIR_0038",
+      "packet_id": "EP_0013",
+      "clean_report_id": "R_046ada01cdfd4b519f7aeca2487d7199",
+      "flawed_report_id": "R_756783c6fcef4d21ad33d11cdd5233ca",
+      "defect_type": "material_omission",
+      "target_claim_id": "C4",
+      "evidence_ids": [
+        "EP_0013_E01"
+      ],
+      "expected": {
+        "counter_evidence": "Operating cash flow fell 10.22%, from 19846 to 17817 USD_million, despite earnings growth."
+      },
+      "injected": {
+        "omitted": "The operating cash flow decline and all acknowledgements of that decline in the rationale."
+      },
+      "explanation": "Replaces C4 with a supported summary of income growth already reported elsewhere, sets its check_spec to null, and removes the cash-flow decline from the rationale. The resulting assessment cherry-picks favorable accounting results while omitting material cash-generation weakness.",
+      "detection_criterion": "Identifies the missing decline in operating cash flow from 19846 to 17817 USD_million and its relevance as counter-evidence to income growth.",
+      "correction_criterion": "Restore the clean C4 text and structured cash-flow calculation and all cash-generation qualifications in the rationale.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            3,
+            "text"
+          ],
+          "before": "Cash flow from operating activities decreased by $2,029 million, or 10.22%, from $19,846 million in fiscal year 2024 to $17,817 million in fiscal year 2025 (Item 7, EP_0013_E01). This decline in operating cash flow is a notable counterpoint to the increases in net sales, operating income, and net earnings.",
+          "after": "Operating income and net earnings increased in fiscal year 2025 compared with fiscal year 2024 (Item 7, EP_0013_E01)."
+        },
+        {
+          "path": [
+            "claims",
+            3,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0013_F08",
+            "to_fact_id": "EP_0013_F07",
+            "metric": "operating_cash_flow",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2023-07-01",
+              "end": "2024-06-30"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2024-07-01",
+              "end": "2025-06-30"
+            },
+            "value": "-10.22",
+            "unit": "percent"
+          },
+          "after": null
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "COMPANY_13 demonstrated mixed financial performance in fiscal year 2025. While net sales saw a marginal increase, operating income and net earnings showed healthy growth, primarily driven by cost reductions and the absence of prior-year impairment charges. However, a significant decline in cash flow from operating activities raises concerns. The company operates in a highly competitive consumer products industry, facing ongoing pressures from global and local competitors, evolving sales channels, and changing consumer preferences (Item 1A, EP_0013_E03). The positive earnings growth is tempered by the decrease in cash generation and the competitive landscape, suggesting a HOLD recommendation until there is clearer evidence of sustained cash flow improvement or a stronger competitive advantage.",
+          "after": "COMPANY_13 demonstrated mixed financial performance in fiscal year 2025. While net sales saw a marginal increase, operating income and net earnings showed healthy growth, primarily driven by cost reductions and the absence of prior-year impairment charges. The company operates in a highly competitive consumer products industry, facing ongoing pressures from global and local competitors, evolving sales channels, and changing consumer preferences (Item 1A, EP_0013_E03). The positive earnings growth is tempered by the competitive landscape, suggesting a HOLD recommendation until there is clearer evidence of a stronger competitive advantage."
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0013/clean.json",
+      "flawed_report_path": "reports/EP_0013/error_02_material_omission.json"
+    },
+    {
+      "pair_id": "PAIR_0039",
+      "packet_id": "EP_0013",
+      "clean_report_id": "R_046ada01cdfd4b519f7aeca2487d7199",
+      "flawed_report_id": "R_5506de286bd347e584f87534d354312b",
+      "defect_type": "direct_factual_contradiction",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0013_E01",
+        "EP_0013_E02"
+      ],
+      "expected": {
+        "foreign_exchange_effect": "Unfavorable foreign exchange of 1%, offsetting pricing growth of 1%."
+      },
+      "injected": {
+        "foreign_exchange_effect": "Claims favorable foreign exchange of 1%, reinforcing pricing growth."
+      },
+      "explanation": "Reverses the reported direction of the foreign-exchange contribution from unfavorable to favorable. Revenue amounts, periods, and structured revenue growth remain unchanged.",
+      "detection_criterion": "Identifies that EP_0013_E02 states unfavorable, not favorable, foreign exchange of 1%, which offsets pricing rather than reinforcing it.",
+      "correction_criterion": "Restore the unfavorable foreign-exchange effect and its offsetting relationship to pricing in C1.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Net sales increased by $245 million, or 0.29%, from $84,039 million in fiscal year 2024 to $84,284 million in fiscal year 2025 (Item 7, EP_0013_E01). This modest growth was primarily driven by a 1% increase in pricing, largely offset by unfavorable foreign exchange impacts of 1% (Item 7, EP_0013_E02).",
+          "after": "Net sales increased by $245 million, or 0.29%, from $84,039 million in fiscal year 2024 to $84,284 million in fiscal year 2025 (Item 7, EP_0013_E01). This modest growth was primarily driven by a 1% increase in pricing, reinforced by favorable foreign exchange impacts of 1% (Item 7, EP_0013_E02)."
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0013/clean.json",
+      "flawed_report_path": "reports/EP_0013/error_03_direct_factual_contradiction.json"
+    },
+    {
+      "pair_id": "PAIR_0040",
+      "packet_id": "EP_0014",
+      "clean_report_id": "R_60253b6e5a954d518737d3e97439392c",
+      "flawed_report_id": "R_c34c11bd675540759cf19ae49ac3f23d",
+      "defect_type": "citation_misattribution",
+      "target_claim_id": "C3",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "expected": {
+        "written_citation": "EP_0014_E02; operating profit driver discussion"
+      },
+      "injected": {
+        "written_citation": "EP_0014_E03; general trade-policy risks"
+      },
+      "explanation": "Changes only C3’s written citation from the operating results excerpt to the trade-policy risk excerpt. Structured evidence_ids intentionally remain EP_0014_E02, creating a written-versus-structured citation discrepancy.",
+      "detection_criterion": "Identifies that EP_0014_E03 does not contain the $2148 million, $817 million and $1218 million driver amounts; EP_0014_E02 does.",
+      "correction_criterion": "Restore the written citation to EP_0014_E02.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            2,
+            "text"
+          ],
+          "before": "The decrease in operating profit was primarily due to unfavorable manufacturing costs of $2,148 million and unfavorable price realization of $817 million, partially offset by the profit impact of higher sales volume of $1,218 million (Item 7, EP_0014_E02).",
+          "after": "The decrease in operating profit was primarily due to unfavorable manufacturing costs of $2,148 million and unfavorable price realization of $817 million, partially offset by the profit impact of higher sales volume of $1,218 million (Item 1A, EP_0014_E03)."
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0014/clean.json",
+      "flawed_report_path": "reports/EP_0014/error_01_citation_misattribution.json"
+    },
+    {
+      "pair_id": "PAIR_0041",
+      "packet_id": "EP_0014",
+      "clean_report_id": "R_60253b6e5a954d518737d3e97439392c",
+      "flawed_report_id": "R_4ccf44850dee49b88dcb9bae182a7a4e",
+      "defect_type": "reporting_period",
+      "target_claim_id": "C1",
+      "evidence_ids": [
+        "EP_0014_E01"
+      ],
+      "expected": {
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        }
+      },
+      "injected": {
+        "from_period": {
+          "label": "FY2023",
+          "start": "2023-01-01",
+          "end": "2023-12-31"
+        },
+        "to_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        }
+      },
+      "explanation": "Shifts the revenue comparison back one year to FY2023-FY2024 while keeping the amounts and growth unchanged. Original fact IDs remain to expose the asserted-period mismatch.",
+      "detection_criterion": "Identifies that 64809 and 67589 USD_million and 4.29% growth belong to FY2024-FY2025, not FY2023-FY2024.",
+      "correction_criterion": "Restore the FY2024-FY2025 periods in C1 text and check_spec.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            0,
+            "text"
+          ],
+          "before": "Consolidated Sales and Revenues increased by 4.29% from $64,809 million in 2024 to $67,589 million in 2025.",
+          "after": "Consolidated Sales and Revenues increased by 4.29% from $64,809 million in 2023 to $67,589 million in 2024."
+        },
+        {
+          "path": [
+            "claims",
+            0,
+            "check_spec"
+          ],
+          "before": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0014_F02",
+            "to_fact_id": "EP_0014_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "to_period": {
+              "label": "FY2025",
+              "start": "2025-01-01",
+              "end": "2025-12-31"
+            },
+            "value": "4.29",
+            "unit": "percent"
+          },
+          "after": {
+            "kind": "percentage_change",
+            "from_fact_id": "EP_0014_F02",
+            "to_fact_id": "EP_0014_F01",
+            "metric": "revenue",
+            "from_period": {
+              "label": "FY2023",
+              "start": "2023-01-01",
+              "end": "2023-12-31"
+            },
+            "to_period": {
+              "label": "FY2024",
+              "start": "2024-01-01",
+              "end": "2024-12-31"
+            },
+            "value": "4.29",
+            "unit": "percent"
+          }
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0014/clean.json",
+      "flawed_report_path": "reports/EP_0014/error_02_reporting_period.json"
+    },
+    {
+      "pair_id": "PAIR_0042",
+      "packet_id": "EP_0014",
+      "clean_report_id": "R_60253b6e5a954d518737d3e97439392c",
+      "flawed_report_id": "R_53519a0d59234dfda54ce88facf1f427",
+      "defect_type": "direct_factual_contradiction",
+      "target_claim_id": "C3",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "expected": {
+        "price_realization": "Unfavorable price realization reduced operating profit by $817 million."
+      },
+      "injected": {
+        "price_realization": "Favorable price realization increased operating profit by $817 million."
+      },
+      "explanation": "Reverses the direction of the price-realization effect in C3 and its repeated interpretation in the rationale. The $817 million magnitude remains unchanged. Other historical financial figures are unchanged.",
+      "detection_criterion": "Identifies that price realization was an unfavorable $817 million effect, not a favorable offset.",
+      "correction_criterion": "Restore unfavorable price realization as a contributor to the earnings decline in C3 and the rationale.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            2,
+            "text"
+          ],
+          "before": "The decrease in operating profit was primarily due to unfavorable manufacturing costs of $2,148 million and unfavorable price realization of $817 million, partially offset by the profit impact of higher sales volume of $1,218 million (Item 7, EP_0014_E02).",
+          "after": "The decrease in operating profit was primarily due to unfavorable manufacturing costs of $2,148 million, partially offset by favorable price realization of $817 million and the profit impact of higher sales volume of $1,218 million (Item 7, EP_0014_E02)."
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "Despite an increase in consolidated sales and revenues, the company experienced a significant decline in consolidated operating profit and operating profit margin. This was driven by unfavorable manufacturing costs and price realization, particularly impacting the SEGMENT_33 segment. The risk of more restrictive trade policies and higher tariffs, as noted in Item 1A, could further exacerbate these issues, leading to continued pressure on profitability.",
+          "after": "Despite an increase in consolidated sales and revenues, the company experienced a significant decline in consolidated operating profit and operating profit margin. This was driven by unfavorable manufacturing costs, partly offset by favorable price realization, particularly impacting the SEGMENT_33 segment. The risk of more restrictive trade policies and higher tariffs, as noted in Item 1A, could further exacerbate these issues, leading to continued pressure on profitability."
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0014/clean.json",
+      "flawed_report_path": "reports/EP_0014/error_03_direct_factual_contradiction.json"
+    },
+    {
+      "pair_id": "PAIR_0043",
+      "packet_id": "EP_0015",
+      "clean_report_id": "R_b75b968fbc124c5cbe26e1972454f66f",
+      "flawed_report_id": "R_4d16373d09a54725a18253c1b4263ac8",
+      "defect_type": "citation_misattribution",
+      "target_claim_id": "C5",
+      "evidence_ids": [
+        "EP_0015_E03"
+      ],
+      "expected": {
+        "written_citation": "Item 1A; EP_0015_E03 investment and joint venture risks"
+      },
+      "injected": {
+        "written_citation": "Item 7; EP_0015_E01 income table"
+      },
+      "explanation": "Changes only C5’s written attribution to the income table, which does not contain the investment-risk disclosure. The structured evidence_ids intentionally remain EP_0015_E03, creating a written-versus-structured citation discrepancy.",
+      "detection_criterion": "Identifies that EP_0015_E01 does not support the investment and joint venture risk statement; EP_0015_E03 does.",
+      "correction_criterion": "Restore the written attribution to Item 1A / EP_0015_E03.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            4,
+            "text"
+          ],
+          "before": "COMPANY_15 faces risks related to changes in market value of assets and investments, especially those without observable market values, and potential adverse effects from joint ventures where it lacks full control or partners may not share business priorities, as stated in Item 1A.",
+          "after": "COMPANY_15 faces risks related to changes in market value of assets and investments, especially those without observable market values, and potential adverse effects from joint ventures where it lacks full control or partners may not share business priorities, as stated in Item 7, EP_0015_E01."
+        }
+      ],
+      "error_index": 1,
+      "clean_report_path": "reports/EP_0015/clean.json",
+      "flawed_report_path": "reports/EP_0015/error_01_citation_misattribution.json"
+    },
+    {
+      "pair_id": "PAIR_0044",
+      "packet_id": "EP_0015",
+      "clean_report_id": "R_b75b968fbc124c5cbe26e1972454f66f",
+      "flawed_report_id": "R_730609befa9e4192a206258095beb95d",
+      "defect_type": "direct_factual_contradiction",
+      "target_claim_id": "C5",
+      "evidence_ids": [
+        "EP_0015_E03"
+      ],
+      "expected": {
+        "control": "The company lacks full control over certain joint ventures and partners may have different business priorities."
+      },
+      "injected": {
+        "control": "Claims the company has full control over all joint ventures and partners always share its priorities."
+      },
+      "explanation": "Reverses the explicit joint venture control and partner-priority disclosures in C5 and the matching rationale statement. Asset-valuation risks and historical figures remain unchanged.",
+      "detection_criterion": "Identifies that EP_0015_E03 states the company does not have full control over certain joint ventures and partners may not share its priorities.",
+      "correction_criterion": "Restore the joint venture control and partner-priority qualifications in C5 and the rationale.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            4,
+            "text"
+          ],
+          "before": "COMPANY_15 faces risks related to changes in market value of assets and investments, especially those without observable market values, and potential adverse effects from joint ventures where it lacks full control or partners may not share business priorities, as stated in Item 1A.",
+          "after": "COMPANY_15 faces risks related to changes in market value of assets and investments, especially those without observable market values. However, it has full control over all of its joint ventures, and its joint venture partners always share its business priorities (Item 1A, EP_0015_E03)."
+        },
+        {
+          "path": [
+            "rationale"
+          ],
+          "before": "COMPANY_15 experienced a slight decline in overall net income and diluted earnings per share from 2024 to 2025. This decline was primarily driven by a significant negative shift in the Corporate and Other segment, which moved from a net income of $104 million in 2024 to a net loss of $1,152 million in 2025. However, the core operating segments, SEGMENT_38 and SEGMENT_39, showed strong growth, with SEGMENT_38's net income increasing by 10.32% and SEGMENT_39's net income increasing by 29.40% during the same period. The company also highlights risks associated with asset valuation and joint venture control. Given the mixed performance with strong growth in primary segments offset by a substantial drag from Corporate and Other, and identified risks, a HOLD recommendation is appropriate at this time.",
+          "after": "COMPANY_15 experienced a slight decline in overall net income and diluted earnings per share from 2024 to 2025. This decline was primarily driven by a significant negative shift in the Corporate and Other segment, which moved from a net income of $104 million in 2024 to a net loss of $1,152 million in 2025. However, the core operating segments, SEGMENT_38 and SEGMENT_39, showed strong growth, with SEGMENT_38's net income increasing by 10.32% and SEGMENT_39's net income increasing by 29.40% during the same period. The company highlights asset-valuation risks, but has full control over all joint ventures and its partners always share its business priorities. Given the mixed performance with strong growth in primary segments offset by a substantial drag from Corporate and Other, and identified risks, a HOLD recommendation is appropriate at this time."
+        }
+      ],
+      "error_index": 2,
+      "clean_report_path": "reports/EP_0015/clean.json",
+      "flawed_report_path": "reports/EP_0015/error_02_direct_factual_contradiction.json"
+    },
+    {
+      "pair_id": "PAIR_0045",
+      "packet_id": "EP_0015",
+      "clean_report_id": "R_b75b968fbc124c5cbe26e1972454f66f",
+      "flawed_report_id": "R_4e2d3c5cee4545b2ae75bd90933167ca",
+      "defect_type": "unsupported_inference",
+      "target_claim_id": "C3",
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02"
+      ],
+      "expected": {
+        "supported": "Both principal segments reported historical FY2025 income growth; no guaranteed FY2026 parent-company earnings recovery is established."
+      },
+      "injected": {
+        "unsupported_conclusion": "Segment income growth guarantees parent-company net income and diluted EPS will both rise in FY2026."
+      },
+      "explanation": "Appends a guaranteed future earnings recovery to the supported historical segment-growth claim. The packet establishes no such guarantee.",
+      "detection_criterion": "Identifies that FY2025 segment growth does not guarantee FY2026 parent-company net income or diluted EPS growth, especially given Corporate and Other losses and investment risks.",
+      "correction_criterion": "Remove or qualify the FY2026 guarantee while retaining the supported historical segment figures.",
+      "changes": [
+        {
+          "path": [
+            "claims",
+            2,
+            "text"
+          ],
+          "before": "Despite the overall decrease in net income, SEGMENT_38's net income increased by 10.32% from $4,543 million in 2024 to $5,012 million in 2025, and SEGMENT_39's net income increased by 29.40% from $2,299 million in 2024 to $2,975 million in 2025.",
+          "after": "Despite the overall decrease in net income, SEGMENT_38's net income increased by 10.32% from $4,543 million in 2024 to $5,012 million in 2025, and SEGMENT_39's net income increased by 29.40% from $2,299 million in 2024 to $2,975 million in 2025. This growth guarantees that COMPANY_15’s net income and diluted earnings per share will both increase in FY2026."
+        }
+      ],
+      "error_index": 3,
+      "clean_report_path": "reports/EP_0015/clean.json",
+      "flawed_report_path": "reports/EP_0015/error_03_unsupported_inference.json"
     }
   ]
 }

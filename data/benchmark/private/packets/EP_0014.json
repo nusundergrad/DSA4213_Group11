@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0014",
+  "company_alias": "COMPANY_14",
+  "company": {
+    "name": "Caterpillar Inc.",
+    "ticker": "CAT"
+  },
+  "fiscal_year": 2025,
+  "filing": {
+    "form": "10-K",
+    "accession_number": "0000018230-26-000008",
+    "filing_date": "2026-02-13",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/cat-20251231.htm"
+  },
+  "source_id": "SRC_14",
+  "evidence": [
+    {
+      "evidence_id": "EP_0014_E01",
+      "section": "Item 7",
+      "text": "Sales and Revenues by Segment\n(Millions of dollars) 2024 SalesVolume PriceRealization Currency Inter-Segment/Other 2025 $Change %Change\nConstruction Industries $ 25,455 $ 568 $ (1,136) $ 24 $ 149 $ 25,060 $ (395) (2%)\nResource Industries 12,471 403 (272) (46) (82) 12,474 3 —%\nPower & Energy 28,854 2,401 592 62 292 32,201 3,347 12%\nAll Other Segment 344 11 — (1) (27) 327 (17) (5%)\nCorporate Items and Eliminations (5,761) 6 (1) 6 (332) (6,082) (321)  \nMachinery, Power & Energy 61,363 3,389 (817) 45 — 63,980 2,617 4%\nFinancial Products Segment 4,053 — — — 167 4,220 167 4%\nCorporate Items and Eliminations (607) — — — (4) (611) (4)  \nFinancial Products Revenues 3,446 — — — 163 3,609 163 5%\nConsolidated Sales and Revenues $ 64,809 $ 3,389 $ (817) $ 45 $ 163 $ 67,589 $ 2,780 4%",
+      "source_span": [
+        133328,
+        134109
+      ],
+      "locator": "PDF pages [35]; Segment sales and consolidated sales/revenues table with units and 2024-to-2025 bridge headers"
+    },
+    {
+      "evidence_id": "EP_0014_E02",
+      "section": "Item 7",
+      "text": "Operating profit was $11.151 billion in 2025, a decrease of $1.921 billion, or 15 percent, compared with $13.072 billion in 2024. The decrease was primarily\ndue to unfavorable manufacturing costs of $2.148 billion and unfavorable price realization of $817 million, partially offset by the profit impact of higher sales\nvolume of $1.218 billion. Unfavorable manufacturing costs largely reflected the impact of higher tariffs.\nOperating profit margin was 16.5 percent in 2025, compared with 20.2 percent in 2024.\nProfit (Loss) by Segment\n(Millions of dollars) 2025 2024\n$\nChange\n%\nChange\nConstruction Industries $ 4,675 $ 6,165 $ (1,490) (24%)\nResource Industries 1,988 2,538 (550) (22%)\nPower & Energy 6,418 5,736 682 12%\nAll Other Segment (8) 43 (51) (119%)\nCorporate Items and Eliminations (2,189) (1,384) (805)  \nMachinery, Power & Energy 10,884 13,098 (2,214) (17%)\nFinancial Products Segment 966 932 34 4%\nCorporate Items and Eliminations (102) (327) 225  \nFinancial Products 864 605 259 43%\nConsolidating Adjustments (597) (631) 34  \nConsolidated Operating Profit $ 11,151 $ 13,072 $ (1,921) (15%)",
+      "source_span": [
+        136505,
+        137607
+      ],
+      "locator": "PDF pages [36]; Operating profit decline, tariff/manufacturing cost and volume offsets, operating margin and segment profit table"
+    },
+    {
+      "evidence_id": "EP_0014_E03",
+      "section": "Item 1A",
+      "text": "International trade policies may impact demand for our products and our competitive position.\n \nGovernment policies on international trade and investment such as import quotas, capital controls or tariffs, whether adopted by individual governments or\naddressed by regional trade blocs, can affect the demand for our products and services, impact the competitive position of our products or prevent us from\nbeing able to sell products in certain countries.  The implementation of more restrictive trade policies (such as more detailed inspections, higher tariffs or new\nbarriers to entry) in countries where we sell large quantities of products and services could negatively impact our business, results of operations and financial\ncondition.  For example, a government’s adoption of “buy national” policies or retaliation by another government against such policies could have a negative\nimpact on our results of operations.",
+      "source_span": [
+        88523,
+        89447
+      ],
+      "locator": "PDF pages [21]; Complete international trade policy and tariff risk disclosure"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0014_F01",
+      "evidence_id": "EP_0014_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "67589",
+      "unit": "USD_million",
+      "source_value": "67,589",
+      "locator": "Consolidated Sales and Revenues; 2025 column (sales bridge lists 2024 first and 2025 after driver columns)"
+    },
+    {
+      "fact_id": "EP_0014_F02",
+      "evidence_id": "EP_0014_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "64809",
+      "unit": "USD_million",
+      "source_value": "64,809",
+      "locator": "Consolidated Sales and Revenues; 2024 column (sales bridge lists 2024 first and 2025 after driver columns)"
+    },
+    {
+      "fact_id": "EP_0014_F03",
+      "evidence_id": "EP_0014_E02",
+      "metric": "operating_profit",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "11151",
+      "unit": "USD_million",
+      "source_value": "11,151",
+      "locator": "Consolidated Operating Profit; 2025 column (sales bridge lists 2024 first and 2025 after driver columns)"
+    },
+    {
+      "fact_id": "EP_0014_F04",
+      "evidence_id": "EP_0014_E02",
+      "metric": "operating_profit",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "13072",
+      "unit": "USD_million",
+      "source_value": "13,072",
+      "locator": "Consolidated Operating Profit; 2024 column (sales bridge lists 2024 first and 2025 after driver columns)"
+    },
+    {
+      "fact_id": "EP_0014_F05",
+      "evidence_id": "EP_0014_E02",
+      "metric": "construction_industries_profit",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "4675",
+      "unit": "USD_million",
+      "source_value": "4,675",
+      "locator": "Construction Industries; 2025 column (sales bridge lists 2024 first and 2025 after driver columns)"
+    },
+    {
+      "fact_id": "EP_0014_F06",
+      "evidence_id": "EP_0014_E02",
+      "metric": "construction_industries_profit",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "6165",
+      "unit": "USD_million",
+      "source_value": "6,165",
+      "locator": "Construction Industries; 2024 column (sales bridge lists 2024 first and 2025 after driver columns)"
+    },
+    {
+      "fact_id": "EP_0014_F07",
+      "evidence_id": "EP_0014_E02",
+      "metric": "power_and_energy_profit",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "6418",
+      "unit": "USD_million",
+      "source_value": "6,418",
+      "locator": "Power & Energy; 2025 column (sales bridge lists 2024 first and 2025 after driver columns)"
+    },
+    {
+      "fact_id": "EP_0014_F08",
+      "evidence_id": "EP_0014_E02",
+      "metric": "power_and_energy_profit",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "5736",
+      "unit": "USD_million",
+      "source_value": "5,736",
+      "locator": "Power & Energy; 2024 column (sales bridge lists 2024 first and 2025 after driver columns)"
+    }
+  ]
+}
