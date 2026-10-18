@@ -12,7 +12,7 @@ from dataclasses import asdict, dataclass, field
 SCHEMA_VERSION = "0.1"
 ARCHITECTURES = ("baseline", "debate", "verification", "hybrid")
 TONES = ("underconfident", "neutral", "overconfident")
-OBJECTIVE_DEFECTS = ("arithmetic", "reporting_period", "citation", "contradiction")
+OBJECTIVE_DEFECTS = ("wrong_number", "arithmetic", "reporting_period", "citation", "contradiction")
 REASONING_DEFECTS = ("omission", "unsupported_inference")
 DEFECT_TYPES = OBJECTIVE_DEFECTS + REASONING_DEFECTS
 
