@@ -44,7 +44,7 @@ def verifier_node(state: AgentState):
     packet = Packet.model_validate(state["evidence_packet"])
     report_history = state.get("final_reports") or []
     report = Report.model_validate(report_history[-1])
-    result = run_verifier(report, packet)
+    result = run_verifier(packet, report)
     verifier_record = {
         "report_id": report.report_id,
         "claim_results": result,
@@ -175,6 +175,31 @@ def situation_3(input_content: dict):
     print("Situation_3 completed", flush=True)
     return response
 
+def test_verifier(input_content: dict):
+    print("Starting test_verifier", flush=True)
+    graph = StateGraph(AgentState)
+    graph.add_node(verifier_node)
+    graph.add_edge(START, "verifier_node")
+    graph.add_edge("verifier_node", END)
+    graph = graph.compile()
+
+    response = graph.invoke({
+        "messages": [HumanMessage(
+            content=input_content["content"],
+            id=input_content.get("message_id", "human:initial"),
+            name="human",
+        )],
+        "evidence_packet": input_content["evidence_packet"],
+        "initial_report": input_content.get("initial_report", {}),
+        "final_reports": [input_content.get("initial_report", {})],
+        "risk_feedback": {},
+        "debate_round": 0,
+        "max_debate_rounds": input_content["max_debate_rounds"],
+        "verifier_reports": [],
+        "trader_verdict": None,
+    })
+    print("test_verifier completed", flush=True)
+    return response
 
 SITUATIONS = {
     "situation_1": situation_1,
@@ -242,6 +267,8 @@ def run_batch(
     cases_path = Path(cases_path)
     dataset_root = Path(dataset_root)
     output_root = Path(output_root)
+
+
     cases = json.loads(cases_path.read_text(encoding="utf-8"))
     if not isinstance(cases, list):
         raise ValueError("The cases JSON must contain a list of dictionaries")
@@ -307,14 +334,33 @@ def run_batch(
 
     return results
 
+def situation_verifier():
+    dataset_root = Path("data/benchmark/public")
+    packet_id = "EP_0001"
+    report_name = "clean"
+    packet_path = dataset_root / "evidence_packets" / f"{packet_id}.json"
+    report_path = dataset_root / "reports" / packet_id / f"{report_name}.json"
+   
+    loaded = load_agent_input(packet_path, report_path, check_clean=False)
+    return test_verifier({
+        "content": "Analyze the supplied evidence packet.",
+        "evidence_packet": loaded["evidence_packet"],
+        "initial_report": loaded["initial_report"],
+        "max_debate_rounds": 0,
+    })
+
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--packet")
     parser.add_argument("--report")
     parser.add_argument("--situation", default="situation_1")
+    parser.add_argument("--verifier")
     args = parser.parse_args()
     if args.packet and args.report:
         run_from_files(args.packet, args.report, situation=args.situation)
+    elif args.verifier:
+        print(situation_verifier())
     else:
         run_batch()
