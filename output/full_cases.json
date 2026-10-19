@@ -1,0 +1,47 @@
+[
+    {
+        "evidence_packet": "EP_0001",
+        "report": "error_01_wrong_number_high_confidence",
+        "situation": 1
+    },
+    {
+        "evidence_packet": "EP_0001",
+        "report": "error_02_reporting_period",
+        "situation": 1
+    },
+        {
+        "evidence_packet": "EP_0001",
+        "report": "error_03_arithmetic",
+        "situation": 1
+    },
+        {
+        "evidence_packet": "EP_0001",
+        "report": "error_01_wrong_number",
+        "situation": 2
+    },
+    {
+        "evidence_packet": "EP_0001",
+        "report": "error_02_reporting_period",
+        "situation": 2
+    },
+            {
+        "evidence_packet": "EP_0001",
+        "report": "error_03_arithmetic",
+        "situation": 2
+    },
+        {
+        "evidence_packet": "EP_0001",
+        "report": "error_01_wrong_number",
+        "situation": 3
+    },
+    {
+        "evidence_packet": "EP_0001",
+        "report": "error_02_reporting_period",
+        "situation": 3
+    },
+            {
+        "evidence_packet": "EP_0001",
+        "report": "error_03_arithmetic",
+        "situation": 3
+    }
+] 

@@ -1,4 +1,5 @@
 langchain
+langchain-core
 langgraph
 langchain_openrouter
 pydantic>=2,<3
