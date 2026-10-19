@@ -77,3 +77,34 @@ def verifier(report, packet):
         out[claim["claim_id"]] = (sim >= threshold) and num_check
 
     return out
+
+def verifier_no_text(report, packet):
+    """
+    Function to check Analyst agent's numerical claims against the original evidence packet.
+    Returns a dictionary with each key being a claim_id and the corresponding values being a boolean representing whether the claim is true.
+    """
+    out = {}
+    packet_facts = {f["fact_id"]: f for f in packet["facts"]}
+    
+    for claim in report["claims"]:
+        # check numerical calculations
+        num = claim["check_spec"]
+        num_check = False
+        
+        if num["kind"] == "numeric":
+            for fact_id in claim["fact_ids"]: #assuming fact_ids has been added to the schema
+                if check_numeric_match(num, packet_facts[fact_id]):
+                    num_check = True
+                    break
+
+        elif num["kind"] == "percentage_change":
+            all_facts = [packet_facts[fact_id] for fact_id in claim["fact_ids"]]
+            all_pairs = list(combinations(all_facts, 2))
+            for fact1, fact2 in all_pairs:
+                if check_pc_match(num, fact1, fact2):
+                    num_check = True
+                    break
+
+        out[claim["claim_id"]] = num_check
+
+    return out
