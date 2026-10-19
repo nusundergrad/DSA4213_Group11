@@ -13,7 +13,6 @@ from .schemas import Evidence, Fact, Packet, Report
 from ..prompts import ANALYST_BENCHMARK_MESSAGE_TEMPLATE
 
 ROOT = Path(__file__).resolve().parents[2] / "data" / "benchmark"
-REVIEW_FIELDS = ("source_fidelity", "masking", "facts", "arithmetic", "citations", "reasoning", "counter_evidence")
 
 
 def read(path):
@@ -27,21 +26,22 @@ def save(path, value):
 
 
 def identity_pattern(aliases):
-    if not aliases or len({k.casefold() for k in aliases}) != len(aliases):
+    if not aliases or len({" ".join(k.split()).casefold() for k in aliases}) != len(aliases):
         raise ValueError("Aliases must be nonempty with unique case-insensitive keys")
     if any(not k.strip() or not re.fullmatch(r"(?:COMPANY|PRODUCT|SEGMENT|ENTITY)_\d+", v)
            for k, v in aliases.items()):
         raise ValueError("Use nonempty identity strings and opaque alias values")
-    return re.compile(r"(?<!\w)(?:" + "|".join(re.escape(k) for k in sorted(aliases, key=len, reverse=True)) + r")(?!\w)", re.I)
+    names = sorted(aliases, key=lambda k: len(" ".join(k.split())), reverse=True)
+    return re.compile(r"(?<!\w)(?:" + "|".join(r"\s+".join(re.escape(part) for part in k.split()) for k in names) + r")(?!\w)", re.I)
 
 
 def mask(value, aliases):
     pattern = identity_pattern(aliases)
-    replacements = {k.casefold(): v for k, v in aliases.items()}
+    replacements = {" ".join(k.split()).casefold(): v for k, v in aliases.items()}
 
     def visit(item):
         if isinstance(item, str):
-            return pattern.sub(lambda m: replacements[m[0].casefold()], item)
+            return pattern.sub(lambda m: replacements[" ".join(m[0].split()).casefold()], item)
         if isinstance(item, list):
             return [visit(x) for x in item]
         if isinstance(item, dict):
@@ -52,7 +52,7 @@ def mask(value, aliases):
 
 def assert_masked(value, aliases):
     text = json.dumps(value, ensure_ascii=False)
-    if identity_pattern(aliases).search(text) or re.search(r"https?://|www\.", text, re.I):
+    if mask(value, aliases) != value or identity_pattern(aliases).search(text) or re.search(r"https?://|www\.", text, re.I):
         raise ValueError("Identifying text or URL in agent-visible content; review the alias dictionary")
 
 
@@ -93,10 +93,11 @@ def prepare(root, original_path):
     return packet
 
 
-def check_report(packet, report):
+def check_report(packet, report, *, require_fact_ids=False):
     """Preflight checks, not the experimental verifier or proof of sound reasoning."""
     errors, review = [], []
     evidence_ids = {e.evidence_id for e in packet.evidence}
+    facts_by_id = {f.fact_id: f for f in packet.facts}
     for claim in report.claims:
         if not claim.evidence_ids or not set(claim.evidence_ids) <= evidence_ids:
             errors.append(f"{claim.claim_id}: missing or unknown citation")
@@ -104,16 +105,36 @@ def check_report(packet, report):
         if spec is None:
             review.append(f"{claim.claim_id}: check factual support and reasoning manually")
             continue
-        facts = [f for f in packet.facts if f.evidence_id in claim.evidence_ids and f.metric == spec.metric]
         periods = [spec.period] if spec.kind == "numeric" else [spec.from_period, spec.to_period]
-        matches = [[f for f in facts if f.period == p and (spec.kind != "numeric" or f.unit == spec.unit)] for p in periods]
-        if any(len(found) != 1 for found in matches):
-            review.append(f"{claim.claim_id}: ambiguous/missing metric, period or unit mapping")
-            continue
+        fact_ids = [spec.fact_id] if spec.kind == "numeric" else [spec.from_fact_id, spec.to_fact_id]
+        if all(fact_ids):
+            if any(fact_id not in facts_by_id for fact_id in fact_ids):
+                errors.append(f"{claim.claim_id}: unknown fact ID")
+                continue
+            facts = [facts_by_id[fact_id] for fact_id in fact_ids]
+            if any(f.evidence_id not in claim.evidence_ids for f in facts):
+                errors.append(f"{claim.claim_id}: referenced fact is outside the cited evidence")
+                continue
+            if any(f.metric != spec.metric or f.period != period
+                   or (spec.kind == "numeric" and f.unit != spec.unit) for f, period in zip(facts, periods)):
+                errors.append(f"{claim.claim_id}: referenced fact metric, period or unit mismatch")
+                continue
+            matches = [[f] for f in facts]
+        else:
+            if require_fact_ids:
+                errors.append(f"{claim.claim_id}: numerical assertion requires fact IDs")
+                continue
+            facts = [f for f in packet.facts if f.evidence_id in claim.evidence_ids and f.metric == spec.metric]
+            matches = [[f for f in facts if f.period == p and (spec.kind != "numeric" or f.unit == spec.unit)] for p in periods]
+            if any(len(found) != 1 for found in matches):
+                review.append(f"{claim.claim_id}: ambiguous/missing metric, period or unit mapping")
+                continue
+            review.append(f"{claim.claim_id}: legacy assertion without fact IDs; used metric/period/unit lookup")
         values = [Decimal(found[0].value) for found in matches]
         if spec.kind == "percentage_change":
             if matches[0][0].unit != matches[1][0].unit or values[0] == 0:
-                review.append(f"{claim.claim_id}: incompatible units or zero denominator")
+                messages = errors if all(fact_ids) else review
+                messages.append(f"{claim.claim_id}: incompatible units or zero denominator")
                 continue
             expected, tolerance = (values[1] - values[0]) / values[0] * 100, Decimal("0.01")
         else:
@@ -124,17 +145,29 @@ def check_report(packet, report):
     return {"errors": errors, "human_review": review}
 
 
-def load_agent_input(packet_path, report_path):
-    """Load manually approved public files only; never load private review records."""
+def load_agent_input(packet_path, report_path, *, check_clean=True):
+    """Load public inputs. Use check_clean=False for every case in a paired experiment."""
     packet_path, report_path = Path(packet_path).resolve(), Path(report_path).resolve()
-    if (packet_path.parent.name != "evidence_packets" or report_path.parent.name != "reports"
-            or packet_path.parent.parent != report_path.parent.parent
+    if (packet_path.parent.name != "evidence_packets"
+            or report_path.parent != packet_path.parent.parent / "reports" / packet_path.stem
             or packet_path.parent.parent.name != "public"):
-        raise ValueError("Use evidence_packets/ and reports/ from the same public dataset")
+        raise ValueError("Use evidence_packets/ and reports/<packet_id>/ from the same public dataset")
     packet, report = Packet.model_validate(read(packet_path)), Report.model_validate(read(report_path))
-    checks = check_report(packet, report)
-    if checks["errors"]:
-        raise ValueError(checks["errors"])
+    if packet.packet_id != packet_path.stem:
+        raise ValueError("Packet ID must match its filename and report folder")
+    evidence_ids = {e.evidence_id for e in packet.evidence}
+    if any(not c.evidence_ids or not set(c.evidence_ids) <= evidence_ids for c in report.claims):
+        raise ValueError("Report has missing or unknown citations for this packet")
+    facts_by_id = {f.fact_id: f for f in packet.facts}
+    for claim in report.claims:
+        fact_ids = [getattr(claim.check_spec, field, None) for field in ("fact_id", "from_fact_id", "to_fact_id")]
+        if any(fact_id and (fact_id not in facts_by_id or facts_by_id[fact_id].evidence_id not in claim.evidence_ids)
+               for fact_id in fact_ids):
+            raise ValueError("Report has unknown facts or facts outside its cited evidence")
+    if check_clean:
+        checks = check_report(packet, report)
+        if checks["errors"]:
+            raise ValueError(checks["errors"])
     return {"evidence_packet": packet.model_dump(mode="json"), "initial_report": report.model_dump(mode="json")}
 
 
@@ -189,15 +222,9 @@ def generate(root, packet, model, api_key, feedback=""):
             raise ValueError("Model changed the assigned report ID")
         payload = candidate.model_dump(mode="json")
         assert_masked(payload, aliases)
-        record["checks"] = check_report(packet, candidate)
+        record["checks"] = check_report(packet, candidate, require_fact_ids=True)
         save(directory / "candidate.json", payload)
         record["status"] = "invalid" if record["checks"]["errors"] else "needs_review"
-        save(directory / "review.json", {
-            "packet_path": f"public/evidence_packets/{packet.packet_id}.json",
-            "report_path": f"private/attempts/{attempt_id}/candidate.json",
-            "model": model, "automated_checks": record["checks"], "content_label": None,
-            "reviewers": {name: {"status": "pending", "checks": dict.fromkeys(REVIEW_FIELDS), "notes": ""}
-                          for name in ("reviewer_1", "reviewer_2")}})
     except Exception as error:
         record.update(status="failed", error=str(error))
     finally:

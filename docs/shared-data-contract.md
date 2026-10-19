@@ -2,10 +2,11 @@
 
 This document coordinates subgroups A (benchmark), B (architecture), and C
 (evaluation). The small benchmark subset below is implemented; the broader agent,
-pairing, execution, and evaluation interfaces remain proposals. Existing inline
+execution and evaluation interfaces remain proposals. Existing inline
 examples are synthetic, not experimental results. Two real-source evidence packets
-now exist separately; generated candidates are saved locally for review, and no
-approved reports or dataset release are included with this workflow.
+now have reviewed reports in the public benchmark folder. Original candidates and
+review notebooks are kept privately. Six deliberately flawed copies now form
+three pairs per company. No dataset version has been frozen yet.
 
 ## Implemented benchmark subset
 
@@ -33,18 +34,43 @@ See [benchmark preparation and handoff](benchmark.md) and
   defects; separate preparation checks flag invalid clean candidates. Reports do
   not include `confidence_statement`; planned confidence framing belongs to case
   metadata and presentation, not Analyst generation.
-- `load_agent_input(packet_path, report_path)` loads manually approved public
-  files and returns only `evidence_packet` and `initial_report`. Approval is a
-  manual publication boundary, not an authenticated or automatic workflow.
-- The evidence and report review notebooks show checks and let two reviewers
-  record decisions in Markdown cells. Save reviewed copies in `private/reviews/`.
-  Generated review JSON is an optional template, not a second required checklist.
-  No approval is fabricated by the script. Historical candidates containing the
-  removed confidence field need regeneration under the current contract.
+- Numerical assertions now identify source facts: `numeric.fact_id`, or
+  `percentage_change.from_fact_id` and `to_fact_id`. New generation requires
+  these IDs. Historical responses without them remain readable through the
+  legacy metric/period/unit lookup; both percentage-change IDs must be supplied
+  together. All eight current public reports and pair edit records have been
+  updated. Original model requests, responses, candidates and example-run
+  snapshots remain unchanged.
+- `load_agent_input(packet_path, report_path, check_clean=True)` returns only
+  `evidence_packet` and `initial_report`. For paired experiments use
+  `check_clean=False` for both clean and flawed cases in every architecture.
+  This skips financial correctness checks while retaining schemas, evidence
+  citations and fact-reference existence/parent checks. Period/value mismatches
+  remain representable for experiments. It does not read private labels. Public reports now include
+  deliberately flawed copies; public placement is not a correctness label.
+  Reports live in `public/reports/<packet_id>/` as `clean.json` and
+  `error_<index>_<type>.json`. These readable filenames never enter the returned
+  model payload; the `report_id` inside each file remains opaque. Give agents
+  the payload rather than file or directory access.
+- One report review notebook per packet in `private/reviews/` contains checks,
+  feedback, edits to a report copy, and a cell to save the final files to public.
+  Original candidates and raw responses stay unchanged. There is no separate
+  review JSON or required feedback file. Final copies must pass the current
+  contract, which omits the confidence field.
+- `private/pairs.json` stores exact before/after edits, clean/flawed IDs and paths,
+  packet and pair IDs, error index, target claim, error type, expected/injected values, explanation,
+  and detection/correction criteria. `create_flawed_reports.py` applies these
+  edits offline; `check_flawed_reports.ipynb` shows the comparisons. These are
+  lightweight pair records, not the full case/answer-key schema in section 5.
+  The implemented error types are `wrong_number`, `reporting_period`, and
+  `arithmetic`. Labels and answer keys must stay out of agent inputs.
+  `clean_report_path` and `flawed_report_path` are relative to `public/`.
+  `error_index` numbers a variant within its packet, not the claim being edited;
+  `target_claim_id` identifies that claim.
 - Preparation uses `data/benchmark/private/` and `data/benchmark/public/`; reviewed
   releases use `data/benchmark/releases/v1/`, then `v2`, etc. There is no release
-  automation, public case envelope, answer key, pair construction, exported JSON
-  Schema artifact, or architecture integration in this implementation.
+  automation, public case envelope, confidence presentation, scoring runner,
+  exported JSON Schema artifact, or architecture integration in this implementation.
 
 Benchmark generation now uses the Analyst prompt and `invoke_analyst`
 in `src/prompts.py` and `src/agent.py`. The old demo shares the base Analyst
@@ -92,8 +118,9 @@ it describes future work and must not be assumed to exist in the code today.
 
 Identify a claim outside its report using `(case_id, claim_id)` and, for a
 particular execution, `(run_id, claim_id)`. Do not encode `clean`, `flawed`, an
-error category, or an expected answer into public IDs or filenames. Within-case
-tone comparisons use `case_id`; control/error comparisons use private `pair_id`.
+error category, or an expected answer into IDs sent to the model. Descriptive
+filenames are for human organization only; do not send paths to the model.
+Within-case tone comparisons use `case_id`; control/error comparisons use private `pair_id`.
 
 ### Exact enum values
 
@@ -102,13 +129,13 @@ tone comparisons use `case_id`; control/error comparisons use private `pair_id`.
 | `architecture` | `baseline`, `debate`, `verification`, `hybrid` |
 | `tone` | `underconfident`, `neutral`, `overconfident` |
 | `content_label` — private | `unmodified`, `injected_error` |
-| `defect_type` | `arithmetic`, `reporting_period`, `citation`, `contradiction`, `omission`, `unsupported_inference` |
+| `defect_type` | `wrong_number`, `arithmetic`, `reporting_period`, `citation`, `contradiction`, `omission`, `unsupported_inference` |
 | verifier `status` | `PASS`, `FAIL`, `NOT_CHECKABLE` |
 | revision `action` | `DEFEND`, `REVISE`, `RETRACT` |
 | Trader `assessment` | `ACCEPT`, `REJECT` |
 | recommendation / `investment_action` | `BUY`, `HOLD`, `SELL` |
 
-Confidence mismatch is not a seventh content defect. Risk Manager may record a
+Confidence mismatch is not a separate content defect. Risk Manager may record a
 separate `calibration_concern`, without classifying it as an injected error.
 
 ## 3. Evidence packet — A owns
@@ -175,9 +202,16 @@ injected report: it is a benchmark defect, not necessarily malformed JSON.
 
 | `kind` | Required fields | Intended check |
 |---|---|---|
-| `numeric` | `metric`, `period`, `value`, `unit` | Compare the asserted value/period with facts in the cited excerpts. |
-| `percentage_change` | `metric`, `from_period`, `to_period`, `value`, `unit` | Recompute `(new - old) / old * 100` from cited facts; unit must be `percent`. |
+| `numeric` | `fact_id`, `metric`, `period`, `value`, `unit` | Resolve the fact and check its cited evidence, metric, period, unit and value. |
+| `percentage_change` | `from_fact_id`, `to_fact_id`, `metric`, `from_period`, `to_period`, `value`, `unit` | Resolve both facts, check their metadata, then recompute `(new - old) / old * 100`; unit must be `percent`. |
 | `null` | None | No supported structured factual check; reasoning remains for Risk Manager. |
+
+Fact references are required for newly generated numerical assertions and present
+in all current public reports. The parser permits them to be absent in historical
+responses. An explicit unknown, uncited or mismatched fact is a check failure;
+it must not silently fall back to matching another fact. Since each fact already
+has an `evidence_id`, a repeated evidence/fact tuple is unnecessary. Qualitative
+claims continue to cite excerpts without a `check_spec`.
 
 Periods use the same object structure as source facts. A signed numeric change
 can represent a directly checkable contradiction. Other textual contradictions
@@ -194,6 +228,8 @@ Example claim (synthetic):
   "evidence_ids": ["EP_0012_E01"],
   "check_spec": {
     "kind": "percentage_change",
+    "from_fact_id": "EP_0012_F01",
+    "to_fact_id": "EP_0012_F02",
     "metric": "revenue",
     "from_period": {"label": "FY2024", "start": "2024-01-01", "end": "2024-12-31"},
     "to_period": {"label": "FY2025", "start": "2025-01-01", "end": "2025-12-31"},
@@ -206,6 +242,12 @@ Example claim (synthetic):
 If A injects a 20% arithmetic error, update both `text` and `check_spec.value` to
 20%. They represent the same single defect. Leaving the structured claim correct
 while changing only the prose would invalidate the check.
+
+Keep the original fact references for amount, arithmetic and reporting-period
+errors unless the intended defect is the citation itself. A reporting-period
+error can cite the source fact while asserting a different period; checking this
+disagreement is part of verification. Fact references themselves are source links,
+not expected answers or correctness labels.
 
 Planned confidence variants add a fixed `confidence_framing` sentence from case
 metadata when presenting the Analyst message. This is not a field in `Report`
@@ -227,15 +269,15 @@ One public file per case and tone:
   "tone": "neutral",
   "confidence_framing": "I have moderate confidence in this assessment.",
   "packet_id": "EP_0012",
-  "report_path": "reports/R_0087.json"
+  "report_path": "reports/EP_0012/error_01_arithmetic.json"
 }
 ```
 
 The proposed runner resolves `evidence_packet` and `initial_report`, then appends
 only the `confidence_framing` sentence to the Analyst message. The report object
 remains unchanged. Case IDs, paths, and tone labels are execution metadata;
-agents receive the wording without these labels. The implemented clean-report
-loader still returns only the packet and report; framing is future work.
+agents receive the wording without these labels. The implemented loader returns
+only the packet and report; framing is future work.
 
 ### Private answer key
 
@@ -407,7 +449,8 @@ input and configuration match, and record the shared run IDs.
 data/
   public/
     evidence_packets/EP_0012.json
-    reports/R_0087.json
+    reports/EP_0012/clean.json
+    reports/EP_0012/error_01_arithmetic.json
     cases/CASE_0042/neutral.json
   private/
     answer_keys/CASE_0042.json
@@ -425,9 +468,10 @@ For model agents, enforce the boundary in code:
    row, private manifest, or scored result to an agent.
 2. Give every architecture the same evidence packet and frozen initial report.
    Architecture-specific additions are only its audits, challenges, and revisions.
-3. Keep private answer keys out of graph state, prompts, retrieval indexes, agent
-   tools, and agent-visible logs. If agents have filesystem tools, restrict their
-   accessible paths rather than relying on prompt instructions.
+3. Keep private answer keys and descriptive report filenames out of graph state,
+   prompts, retrieval indexes, agent tools, and agent-visible logs. Agents with
+   filesystem tools must not browse labelled report folders; supply the loaded
+   packet and report contents instead.
 4. Complete execution first; load the answer key in a separate scoring step.
 5. Audit the exact serialized model requests to confirm no private fields leaked.
 
