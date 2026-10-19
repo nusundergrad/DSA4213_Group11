@@ -112,6 +112,12 @@ def rm_challenge_assessment(run: RunRecord, case: Case):
     if run.risk_manager_turns is None:
         return None, "no risk manager"
     target, dtype = case.defect["target_claim_id"], case.defect["defect_type"]
+    if any(t.get("challenges") is None for t in run.risk_manager_turns):
+        # Free-text Risk Manager output (no structured challenges): never score it as a miss.
+        tokens = _expected_tokens(case.defect.get("expected", {}))
+        text = _digits(" ".join(t.get("text", "") for t in run.risk_manager_turns))
+        mentioned = target.lower() in text and any(tok in text for tok in tokens)
+        return None, f"unstructured Risk Manager text; mentions target claim and an expected value: {mentioned}"
     mine = [c for t in run.risk_manager_turns for c in t.get("challenges", []) if c.get("target_claim_id") == target]
     if not mine:
         return False, "no challenge targets the defect claim"

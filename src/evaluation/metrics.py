@@ -76,7 +76,9 @@ def primary_metrics(runs, scores, tone="neutral", architectures=ARCHITECTURES, d
         eligible_f = [(r, s) for r, s in flawed if _eligible(r, s)]
         eligible_c = [(r, s) for r, s in clean if _eligible(r, s)]
         detected = [s for _, s in eligible_f if s.detected is True]
-        challenges = [r for r, s in eligible_c if r.risk_manager_turns is not None]
+        # Runs whose Risk Manager output is unstructured (challenges None) cannot be counted either way.
+        challenges = [r for r, s in eligible_c if r.risk_manager_turns is not None
+                      and all(t.get("challenges") is not None for t in r.risk_manager_turns)]
         out[arch] = dict(
             coverage=dict(flawed_total=len(flawed), flawed_scored=len(eligible_f),
                           clean_total=len(clean), clean_scored=len(eligible_c)),
@@ -100,7 +102,8 @@ def tone_metrics(runs, scores, cases, architectures=ARCHITECTURES):
         out[arch] = {}
         for tone in ("underconfident", "overconfident"):
             ids = [cid for cid, case in cases.items() if case.confidence_subset and
-                   all((cid, arch, t) in rows and _eligible(*rows[cid, arch, t]) for t in TONES)]
+                   all((cid, arch, t) in rows and _eligible(*rows[cid, arch, t]) and
+                       rows[cid, arch, t][0].trader.get("support_score") is not None for t in TONES)]
             if not ids:
                 continue
             pairs = [(rows[cid, arch, "neutral"], rows[cid, arch, tone]) for cid in ids]

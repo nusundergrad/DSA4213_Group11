@@ -81,3 +81,27 @@ Case IDs are opaque. `load_agent_input_for` returns only the public packet and r
 
 Semantic Risk Manager detection and reasoning-level defects still need a human (or a calibrated
 judge) checking the case's `detection_criterion`. `pending_report(scores)` lists the workload.
+
+## Graph output adapter
+
+`src/evaluation/graph_adapter.py` converts `run_batch` records (`src/graph.py`) into `RunRecord`s:
+
+```bash
+python src/evaluation/graph_adapter.py output/ --out outputs/eval_runs   # runs.jsonl + scored.jsonl
+```
+
+It only reshapes data and never invents values. Mapping: `situation_1/2/3` -> `debate/verification/hybrid`;
+`initial_report.report_id` -> `case_id`; `final_reports[-1]` -> `final_report`; messages -> role-labelled
+`transcript`; verifier booleans -> `PASS`/`FAIL`. Several runs of one condition are an error unless
+`--keep-latest`.
+
+Fields the graph does not produce yet stay empty, so the affected scores are `pending`, not wrong:
+
+| Missing from graph output | Effect |
+|---|---|
+| structured Risk Manager `challenges` | `risk_manager_detected` pending (never scored as a miss); the note says whether the text mentions the target claim and an expected value |
+| Trader `relied_on_claim_ids` | `materially_used_by_trader` pending after an ACCEPT, so FAR is pending |
+| Trader `support_score`, tone | Evaluation 2 skips those runs |
+| verifier `claim_checks` (defect type of a FAIL) | `verifier_detected` pending on a FAIL |
+| `usage` | efficiency table empty |
+| baseline situation | no `baseline` runs yet |
