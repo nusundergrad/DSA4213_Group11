@@ -6,6 +6,7 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 Text = Annotated[str, Field(min_length=1, strict=True)]
 Number = Annotated[str, Field(pattern=r"^-?\d+(\.\d+)?$", strict=True)]
+FactID = Annotated[str, Field(pattern=r"^EP_\d+_F\d+$", strict=True)]
 
 
 class Record(BaseModel):
@@ -62,6 +63,7 @@ class Packet(Record):
 
 class Numeric(Record):
     kind: Literal["numeric"]
+    fact_id: FactID | None = None
     metric: Text
     period: Period
     value: Number
@@ -70,11 +72,19 @@ class Numeric(Record):
 
 class PercentageChange(Record):
     kind: Literal["percentage_change"]
+    from_fact_id: FactID | None = None
+    to_fact_id: FactID | None = None
     metric: Text
     from_period: Period
     to_period: Period
     value: Number
     unit: Literal["percent"]
+
+    @model_validator(mode="after")
+    def complete_fact_references(self):
+        if (self.from_fact_id is None) != (self.to_fact_id is None):
+            raise ValueError("Supply both from_fact_id and to_fact_id, or neither for a legacy report")
+        return self
 
 
 class Claim(Record):
