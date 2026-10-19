@@ -39,7 +39,9 @@ def verifier(report, packet):
         evidence = ""
         for evidence_id in claim.evidence_ids:
             evidence += packet_evidence[evidence_id]
-        sim = SequenceMatcher(lambda x: x in ["\n", "\t"], claim.text, evidence) #can change to different similarity metric if needed
+        sm = SequenceMatcher(lambda x: x in ["\n", "\t"], claim.text, evidence) #can change to different similarity metric if needed
+        match = sm.find_longest_match()
+        sim = match.size / len(claim.text)
 
         # check numerical calculations
         num = claim.check_spec
