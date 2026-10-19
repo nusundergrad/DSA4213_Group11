@@ -21,7 +21,7 @@ def check_pc_match(num, from_fact, to_fact):
     periods_match = (num.from_period == from_fact.period) and (num.to_period == to_fact.period)
     true_pc = round(get_pct_change(float(from_fact.value), float(to_fact.value)), 2)
     pc_match = float(num.value) == true_pc
-    return all(metric_match, periods_match, pc_match)
+    return all((metric_match, periods_match, pc_match))
 
 
 def verifier(report, packet):
