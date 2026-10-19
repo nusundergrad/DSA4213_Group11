@@ -59,7 +59,8 @@ def test_structured_fields_complete_the_score():
     score = _score(record_to_run(rec, CASES), rm_mode="accept")
     assert score.risk_manager_detected is True and score.detected is True
     assert score.defect_resolved is True
-    assert score.materially_used_by_trader is None and score.scoring_status == "pending"   # C1 not in relied_on
+    # defect was resolved, so reliance need not be adjudicated and the score completes
+    assert score.scoring_status == "complete" and score.false_acceptance is False
 
 
 def test_verifier_bools_become_statuses():
