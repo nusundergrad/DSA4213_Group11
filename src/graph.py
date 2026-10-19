@@ -99,6 +99,7 @@ def situation_1(input_content: dict):
         "debate_round": input_content["debate_round"],
         "max_debate_rounds": input_content["max_debate_rounds"],
         "verifier_reports": [],
+        "trader_verdict": None,
     })
     print("Situation_1 completed", flush=True)
     return response
@@ -126,6 +127,7 @@ def situation_2(input_content: dict):
         "debate_round": 0,
         "max_debate_rounds": input_content["max_debate_rounds"],
         "verifier_reports": [],
+        "trader_verdict": None,
     })
     print("Situation_2 completed", flush=True)
     return response
@@ -168,6 +170,7 @@ def situation_3(input_content: dict):
         "debate_round": 0,
         "max_debate_rounds": input_content["max_debate_rounds"],
         "verifier_reports": [],
+        "trader_verdict": None,
     })
     print("Situation_3 completed", flush=True)
     return response
@@ -196,6 +199,7 @@ def _jsonable_response(response):
         "final_reports": response.get("final_reports", []),
         "risk_feedback": response.get("risk_feedback"),
         "verifier_reports": response.get("verifier_reports", []),
+        "trader_verdict": response.get("trader_verdict"),
         "debate_round": response.get("debate_round"),
     }
 

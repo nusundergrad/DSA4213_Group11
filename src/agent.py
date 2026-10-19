@@ -1,6 +1,8 @@
 from langgraph.graph import StateGraph, MessagesState, START, END
 from langchain_openrouter import ChatOpenRouter
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
+from pydantic import BaseModel, ConfigDict
+from typing import Literal
 from dotenv import load_dotenv
 if __package__:
     from .state import AgentState
@@ -21,6 +23,14 @@ llm = None
 MODEL_NAME = "nvidia/nemotron-3.5-lightning:free"
 MAX_MODEL_RETRIES = 3
 RETRY_BASE_DELAY_SECONDS = 1.0
+
+
+class TraderDecision(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    assessment: Literal["ACCEPT", "REJECT"]
+    investment_action: Literal["BUY", "HOLD", "SELL"]
+    rationale: str
 
 
 def make_message_id(agent_name: str) -> str:
@@ -56,6 +66,16 @@ def parse_report_response(content: str) -> Report:
         if not match:
             raise direct_error
         return Report.model_validate_json(match.group(1))
+
+
+def parse_trader_response(content: str) -> TraderDecision:
+    try:
+        return TraderDecision.model_validate_json(content)
+    except Exception as direct_error:
+        match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", content, re.DOTALL)
+        if not match:
+            raise direct_error
+        return TraderDecision.model_validate_json(match.group(1))
 
 
 def latest_verifier_report(state: AgentState) -> dict | None:
@@ -276,24 +296,24 @@ def trader_agent(state: AgentState):
     system_prompt = SystemMessage(
         content=(
             TRADER_SYSTEM_PROMPT
+            + "\nRead the evidence packet, current report, and verifier report before deciding."
+            + "\nReturn only one JSON object matching this schema:\n"
+            + json.dumps(TraderDecision.model_json_schema())
+            + "\ninvestment_action must be exactly BUY, HOLD, or SELL."
         )
     )
     
     # 2. Inject the 10-K context from the state
     context_message = HumanMessage(
         content=(
-            "Here is the evidence packet and current report to use for the decision:\n"
+            "Here is the current report to use for the decision:\n"
             + json.dumps({
-                "evidence_packet": state["evidence_packet"],
                 "current_report": latest_report(state),
                 "latest_verifier_report": latest_verifier_report(state),
             }, ensure_ascii=False)
             + "\n"
             # f"{state['filing_text']}\n\n"
-            "You have 50 units of money in this stock, you can sell up to 50 units or buy up to 50 units. "
-            "Based on this information, provide your investment action"
-            "List 3 to 5 core claims to justify your recommendation."
-            "Output your recommendation as BUY or SELL and up to 50 units."
+            "Return the required TraderDecision JSON object (BUY/HOLD/SELL) with rationale, and do not include any other text or commentary."
         )
     )
 
@@ -326,12 +346,21 @@ def trader_agent(state: AgentState):
     # messages_to_send = [system_prompt, context_message] + state["messages"]
     
     # 4. Call the LLM
-    response = invoke_with_retry(agent_name, messages_to_send)
+    response = invoke_with_retry(
+        agent_name,
+        messages_to_send,
+        validator=lambda candidate: parse_trader_response(candidate.content),
+        response_format={"type": "json_object"},
+    )
     label_message(response, agent_name)
     print("Trader response received", flush=True)
     log_model_response(agent_name, response)
+    decision = parse_trader_response(response.content)
 
     # print(f"Trader Agent Response: {response.content}")
     # 5. Return the update (LangGraph appends this to the existing messages)
-    return {"messages": [response]}
+    return {
+        "messages": [response],
+        "trader_verdict": decision.model_dump(mode="json"),
+    }
 

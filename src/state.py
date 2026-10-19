@@ -22,3 +22,4 @@ class AgentState(TypedDict):
     max_debate_rounds: int
     # Append-only verifier results; agents can be given only the latest result.
     verifier_reports: list[dict[str, Any]]
+    trader_verdict: dict[str, Any] | None
