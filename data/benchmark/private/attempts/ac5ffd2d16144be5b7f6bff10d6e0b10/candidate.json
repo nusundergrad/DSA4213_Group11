@@ -1,0 +1,118 @@
+{
+  "schema_version": "0.1",
+  "report_id": "R_ac5ffd2d16144be5b7f6bff10d6e0b10",
+  "recommendation": "SELL",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "COMPANY_12's net income decreased by 30.36% from $17,661 million in 2024 to $12,299 million in 2025.",
+      "evidence_ids": [
+        "EP_0012_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0012_F04",
+        "to_fact_id": "EP_0012_F03",
+        "metric": "net_income",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "-30.36",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "Sales and Other Operating Revenues for COMPANY_12 declined by 4.64% from $193,414 million in 2024 to $184,432 million in 2025.",
+      "evidence_ids": [
+        "EP_0012_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0012_F02",
+        "to_fact_id": "EP_0012_F01",
+        "metric": "revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "-4.64",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "Earnings in the SEGMENT_22 segment decreased by 31.18% from $18,602 million in 2024 to $12,822 million in 2025, primarily due to lower liquids realizations of $2.4 billion and higher operating expenses of $2.0 billion in U.S. SEGMENT_22, and higher DD&A of $2.8 billion and lower realizations of $2.0 billion in SEGMENT_14 SEGMENT_22 (Item 7, p.42).",
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0012_F06",
+        "to_fact_id": "EP_0012_F05",
+        "metric": "upstream_earnings",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "-31.18",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C4",
+      "text": "Despite the overall decline, the SEGMENT_26 segment's earnings increased by 75.04% from $1,727 million in 2024 to $3,022 million in 2025, driven by lower operating expenses of $730 million and higher margins on refined product sales of $580 million in U.S. SEGMENT_26, and higher margins on refined product sales of $440 million in SEGMENT_14 SEGMENT_26 (Item 7, p.42).",
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0012_F08",
+        "to_fact_id": "EP_0012_F07",
+        "metric": "downstream_earnings",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "75.04",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C5",
+      "text": "COMPANY_12 is exposed to significant commodity price volatility, particularly in crude oil, natural gas, and natural gas liquids, which can materially impact its results of operations, financial condition, and liquidity (Item 1A, p.21).",
+      "evidence_ids": [
+        "EP_0012_E03"
+      ],
+      "check_spec": null
+    }
+  ],
+  "rationale": "COMPANY_12 experienced a significant decline in net income and overall revenue from 2024 to 2025. The primary driver of this decline was the SEGMENT_22 segment, which saw a substantial decrease in earnings due to lower realizations and higher expenses. While the SEGMENT_26 segment showed strong growth, it was not enough to offset the negative performance of SEGMENT_22. The company also faces inherent risks from commodity price volatility, which could further impact its financial performance. Given the overall negative trend in key financial metrics and the exposure to volatile commodity markets, a SELL recommendation is appropriate."
+}

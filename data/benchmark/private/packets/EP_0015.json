@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0015",
+  "company_alias": "COMPANY_15",
+  "company": {
+    "name": "NextEra Energy, Inc.",
+    "ticker": "NEE"
+  },
+  "fiscal_year": 2025,
+  "filing": {
+    "form": "10-K",
+    "accession_number": "0000753308-26-000015",
+    "filing_date": "2026-02-13",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/753308/000075330826000015/nee-20251231.htm"
+  },
+  "source_id": "SRC_15",
+  "evidence": [
+    {
+      "evidence_id": "EP_0015_E01",
+      "section": "Item 7",
+      "text": "OVERVIEW\nNEE’s operating performance is driven primarily by the operations of its two principal businesses, FPL, which serves more than \nsix million customer accounts in Florida and is the largest electric utility in the U.S., and NEER, which together with affiliated \nentities is one of the largest energy infrastructure developers in the U.S. The table below presents net income (loss)  attributable \nto NEE and earnings (loss) per s hare attributable to NEE, assuming dilution, by reportable segment, FPL and NEER. Corporate \nand Other is primarily comprised of the operating results of other business activities, as well as other income and expense items, \nincluding interest expense, and eliminating entries, and may include the net effect of rounding.  See Note 16 for additional \nsegment information. The following discussion should be read in conjunction with the Notes to Consolidated Financial \nStatements contained herein and all comparisons are with the corresponding items in the prior year. \nNet Income (Loss) Attributable\nto NEE\nEarnings (Loss) Per Share \nAttributable to NEE, \nAssuming Dilution\nYears Ended December 31, Years Ended December 31,\n2025 2024 2023 2025 2024 2023\n(millions)\nFPL $ 5,012 $ 4,543 $ 4,552 $ 2.42 $ 2.21 $ 2.24 \nNEER(a)  2,975  2,299  3,558  1.44  1.12  1.75 \nCorporate and Other  (1,152)  104  (800)  (0.56)  0.04  (0.39) \nNEE $ 6,835 $ 6,946 $ 7,310 $ 3.30 $ 3.37 $ 3.60 \n______________________\n(a) NEER’s results reflect an allocation of interest expense from NEECH to NextEra Energy Resources based on a deemed capital structure of 70% debt and \ndifferential membership interests sold by NextEra Energy Resources' subsidiaries.",
+      "source_span": [
+        175196,
+        176867
+      ],
+      "locator": "PDF pages [38]; Overview and GAAP net income and diluted EPS table with fiscal-year, unit and segment headers and interest-allocation footnote"
+    },
+    {
+      "evidence_id": "EP_0015_E02",
+      "section": "Item 7",
+      "text": "RESULTS OF OPERATIONS\nNet income attributable to NEE for 2025 was $6.84 billion compared to $6.95 billion in 2024. In 2025, net income attributable to \nNEE decreased primarily due to lower  results at  Corporate and Other , partly off set by higher results at  FPL and NEER . The \ncomparison of the results of operations for the years ended December 31, 2024 and 2023 are included in Management's \nDiscussion in NEE's and FPL's Annual Report on Form 10-K for the year ended December 31, 2024.\nNEE's effective income tax rate for 2025 and 2024 was approximately (18)% and 6%, respectively. The rates for both years \nreflect the composition of pretax income in 2025 and 2024 as well as the impact of clean energy tax credits. See Note 5.\nA number of legislative, executive and administrative activities occurred in 2025 that affect NEE and FPL including 1) the \nenactment of the OBBBA which, among other things, modified tax legislation affecting clean energy tax credits, 2) the issuance \nof a number of federal executive orders and presidential actions, 3) the imposition of tariffs on a variety of imports and 4) the \nissuance of guidance by various federal agencies. A number of similar activities remain pending or are in various phases of \nimplementation, such as certain Treasury Department rulemaking authorized by the OBBBA, trade investigations that may lead \nto additional tariffs or place limitations on imports of certain materials, ordered reviews of, or process or policy changes with \nrespect to, federal permitting and approvals for wind and solar projects and proposals by regional transmission operators \nregarding the process for interconnecting new generation projects to certain regional transmission grids that have been approved \nby FERC. There has been no material impact on NEE's or FPL's operations or financial performance as a result of these \ndevelopments and NEE believes that its current pipeline of wind and solar facilities to be placed in service through 2030 will \nqualify for clean energy tax credits. NEE will assess any further developments for potential impacts in future periods.",
+      "source_span": [
+        183994,
+        186112
+      ],
+      "locator": "PDF pages [40]; Parent-company income changes, tax effects and legislative/trade developments; includes no-material-impact qualification"
+    },
+    {
+      "evidence_id": "EP_0015_E03",
+      "section": "Item 1A",
+      "text": "Certain of NEE's assets and investments are subject to c hanges in market value and other risks, which may materially \nadversely affect NEE's liquidity, financial condition and results of operations.\nNEE holds certain assets and investments where changes in the fair value affect NEE's financial results. In some cases there \nmay be no observable market values for these assets and investments, requiring fair value estimates to be based on other \nvaluation techniques. This type of analysis requires significant judgment and the actual values realized in a sale of these assets \nand investments could differ materially from those estimated. A sale of an asset or investment below previously estimated value, \nor other decline in the fair value of an asset or investment, could result in losses or the write-off of such asset or investment, and \nmay have a material adverse effect on NEE's liquidity, financial condition and results of operations.\nNEE has invested in various joint ventures and equity method investments where it does not have full control over operations, \nmanagement or decision-making. In many cases, NEE shares control rights with its partners, but may lack influence or be \ndependent on their business priorities. This situation can lead to decisions that differ from NEE's preferences, potentially \nimpacting the profitability and value of these investments. Furthermore, if a joint venture partner becomes insolvent or bankrupt \nor is otherwise unable to meet its obligations, NEE may be responsible for meeting certain obligations of the joint ventures as \nstipulated in its governing documents or applicable law. NEE's joint venture partners may not always share NEE's business \npriorities which may have a material adverse effect on NEE's liquidity, financial condition and results of operations.",
+      "source_span": [
+        158053,
+        159876
+      ],
+      "locator": "PDF pages [34]; Complete investment valuation and joint venture risk discussion"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0015_F01",
+      "evidence_id": "EP_0015_E01",
+      "metric": "net_income",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "6835",
+      "unit": "USD_million",
+      "source_value": "6,835",
+      "locator": "NEE row; Net Income Attributable to NEE columns; FY2025"
+    },
+    {
+      "fact_id": "EP_0015_F02",
+      "evidence_id": "EP_0015_E01",
+      "metric": "net_income",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "6946",
+      "unit": "USD_million",
+      "source_value": "6,946",
+      "locator": "NEE row; Net Income Attributable to NEE columns; FY2024"
+    },
+    {
+      "fact_id": "EP_0015_F03",
+      "evidence_id": "EP_0015_E01",
+      "metric": "fpl_net_income",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "5012",
+      "unit": "USD_million",
+      "source_value": "5,012",
+      "locator": "FPL row; Net Income Attributable to NEE columns; FY2025"
+    },
+    {
+      "fact_id": "EP_0015_F04",
+      "evidence_id": "EP_0015_E01",
+      "metric": "fpl_net_income",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "4543",
+      "unit": "USD_million",
+      "source_value": "4,543",
+      "locator": "FPL row; Net Income Attributable to NEE columns; FY2024"
+    },
+    {
+      "fact_id": "EP_0015_F05",
+      "evidence_id": "EP_0015_E01",
+      "metric": "neer_net_income",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "2975",
+      "unit": "USD_million",
+      "source_value": "2,975",
+      "locator": "NEER row; Net Income Attributable to NEE columns; FY2025"
+    },
+    {
+      "fact_id": "EP_0015_F06",
+      "evidence_id": "EP_0015_E01",
+      "metric": "neer_net_income",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "2299",
+      "unit": "USD_million",
+      "source_value": "2,299",
+      "locator": "NEER row; Net Income Attributable to NEE columns; FY2024"
+    },
+    {
+      "fact_id": "EP_0015_F07",
+      "evidence_id": "EP_0015_E01",
+      "metric": "diluted_earnings_per_share",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "3.30",
+      "unit": "USD_per_share",
+      "source_value": "3.30",
+      "locator": "NEE row; Earnings Per Share Attributable to NEE, Assuming Dilution columns; FY2025"
+    },
+    {
+      "fact_id": "EP_0015_F08",
+      "evidence_id": "EP_0015_E01",
+      "metric": "diluted_earnings_per_share",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "3.37",
+      "unit": "USD_per_share",
+      "source_value": "3.37",
+      "locator": "NEE row; Earnings Per Share Attributable to NEE, Assuming Dilution columns; FY2024"
+    }
+  ]
+}

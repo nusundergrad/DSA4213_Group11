@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0012",
+  "company_alias": "COMPANY_12",
+  "company": {
+    "name": "Chevron Corporation",
+    "ticker": "CVX"
+  },
+  "fiscal_year": 2025,
+  "filing": {
+    "form": "10-K",
+    "accession_number": "0000093410-26-000078",
+    "filing_date": "2026-02-24",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/cvx-20251231.htm"
+  },
+  "source_id": "SRC_12",
+  "evidence": [
+    {
+      "evidence_id": "EP_0012_E01",
+      "section": "Item 7",
+      "text": "Key Financial Results\nMillions of dollars, except per-share amounts 2025 2024 2023\nNet Income (Loss) Attributable to Chevron Corporation $ 12,299 $ 17,661 $ 21,369\nPer Share Amounts:\nNet Income (Loss) Attributable to Chevron Corporation\n– Basic $ 6.65 $ 9.76 $ 11.41\n– Diluted $ 6.63 $ 9.72 $ 11.36\nDividends $ 6.84 $ 6.52 $ 6.04\nSales and Other Operating Revenues $ 184,432 $ 193,414 $ 196,913\nReturn on:\nCapital Employed 6.6 % 10.1 % 11.9 %\nStockholders’ Equity 7.3 % 11.3 % 13.3 %\nEarnings by Major Operating Area\nMillions of dollars 2025 2024 2023\nUpstream\nUnited States $ 5,815 $ 7,602 $ 4,148\nInternational 7,007 11,000 13,290\nTotal Upstream 12,822 18,602 17,438\nDownstream\nUnited States 1,375 531 3,904\nInternational 1,647 1,196 2,233\nTotal Downstream 3,022 1,727 6,137\nAll Other (3,545) (2,668) (2,206)\nNet Income (Loss) Attributable to Chevron Corporation $ 12,299 $ 17,661 $ 21,369\nIncludes foreign currency effects: $ (469) $ 520 $ (224)\nIncome net of tax, also referred to as “earnings” in the discussions that follow.\nRefer to the Results of Operations section for a discussion of financial results by major operating area for the three years ended December 31, 2025. Throughout\nthe document, certain totals and percentages may not sum to their component parts due to rounding.",
+      "source_span": [
+        149894,
+        151184
+      ],
+      "locator": "PDF pages [36]; Key financial results and earnings by major operating area; includes years, units and after-tax earnings definition; printed p. 35"
+    },
+    {
+      "evidence_id": "EP_0012_E02",
+      "section": "Item 7",
+      "text": "U.S. Upstream\nUnit 2025 2024 2023\nEarnings $MM $ 5,815 $ 7,602 $ 4,148 \nNet Oil-Equivalent Production MBOED 1,858 1,599 1,349\nLiquids Production MBD 1,341 1,152 997\nNatural Gas Production MMCFD 3,099 2,684 2,112\nLiquids Realization $/BBL $ 48.13 $ 56.24 $ 59.19 \nNatural Gas Realization $/MCF $ 2.05 $ 1.04 $ 1.67 \n MBD — thousands of barrels per day; MMCFD — millions of cubic feet per day; BBL — Barrel; MCF — thousands of cubic feet; MBOED — thousands of barrels of oil-equivalent per day.\nU.S. upstream earnings decreased by $1.8 billion, primarily due to lower liquids realizations of $2.4 billion, higher operating expenses of $2.0 billion, and higher\ndepreciation, depletion and amortization of $1.4 billion, partly offset by higher sales volumes of $2.8 billion, and higher natural gas realizations of $800 million.\nAll figures are inclusive of Hess.\nNet oil-equivalent production was up 259,000 barrels per day, or 16 percent, primarily due to the acquisition of Hess and higher production in the Permian Basin\nand the Gulf of America.\n *\n*\n42\n\nManagement’s Discussion and Analysis of Financial Condition and Results of Operations Financial Table of Contents\nInternational Upstream\nUnit 2025 2024 2023\nEarnings $MM $ 7,007 $ 11,000 $ 13,290 \nNet Oil-Equivalent Production MBOED 1,865 1,739 1,771\nLiquids Production MBD 962 823 833\nNatural Gas Production MMCFD 5,416 5,494 5,632\nLiquids Realization $/BBL $ 61.58 $ 71.38 $ 71.70 \nNatural Gas Realization $/MCF $ 7.04 $ 7.32 $ 7.69 \n Includes foreign currency effects: $ (408) $ 395 $ 376 \n MBD — thousands of barrels per day; MMCFD — millions of cubic feet per day; BBL — Barrel; MCF — thousands of cubic feet; MBOED — thousands of barrels of oil-equivalent per day.\nInternational upstream earnings decreased by $4.0 billion, primarily due to higher DD&A of $2.8 billion, lower realizations of $2.0 billion, an unfavorable foreign\ncurrency effect of $803 million between periods, and the absence of prior year favorable asset sales impacts of $260 million, partly offset by higher liftings of $2.2\nbillion, and lower operating expenses of $470 million. All figures are inclusive of Hess.\nNet oil-equivalent production was up 126,000 barrels per day, or 7 percent. The increase was primarily due to the acquisition of Hess and higher production at\nTCO in Kazakhstan, partly offset by impacts from asset sales in Canada and the Republic of Congo.\nU.S. Downstream\nUnit 2025 2024 2023\nEarnings $MM $ 1,375 $ 531 $ 3,904 \nRefinery Crude Unit Inputs MBD 1,038 917 962\nRefined Product Sales MBD 1,317 1,286 1,287\nMBD — thousands of barrels per day.\nU.S. downstream earnings increased by $844 million, primarily due to lower operating expenses of $730 million and higher margins on refined product sales of\n$580 million, partly offset by lower earnings from the 50 percent-owned Chevron Phillips Chemical Company of $440 million.\nRefinery crude unit inputs were up 121,000 barrels per day, or 13 percent, primarily due to increased capacity at the Pasadena, Texas refinery upon completion of\nthe Light Tight Oil project.\nRefined product sales were up 31,000 barrels per day, or 2 percent, compared to the year-ago period.\nInternational Downstream\nUnit 2025 2024 2023\nEarnings $MM $ 1,647 $ 1,196 $ 2,233 \nRefinery Crude Unit Inputs MBD 652 646 636\nRefined Product Sales MBD 1,484 1,495 1,445\n Includes foreign currency effects: $ (48) $ 126 $ (12)\nMBD — thousands of barrels per day.\nInternational downstream earnings increased by $451 million, primarily due to higher margins on refined product sales of $440 million and the absence of prior\nyear impairments of $185 million, partly offset by foreign currency effects, which had an unfavorable impact on earnings of $174 million between periods.\nRefinery crude unit inputs were up 6,000 barrels per day, or 1 percent from the year-ago period.\nRefined product sales were down 11,000 barrels per day, or 1 percent from the year-ago period.",
+      "source_span": [
+        182732,
+        186670
+      ],
+      "locator": "PDF pages [43, 44]; U.S. and international upstream and downstream earnings and operating explanations; Hess acquisition context; printed pp. 42-43"
+    },
+    {
+      "evidence_id": "EP_0012_E03",
+      "section": "Item 1A",
+      "text": "Chevron is exposed to the effects of changing commodity prices Chevron is primarily in a commodities business that has a history of price volatility. The most\nsignificant factor that affects the company’s results of operations are the prices of crude oil, natural gas, and natural gas liquids, which can be influenced by general\neconomic conditions and level of economic growth, including low or negative growth; industry production and inventory levels; technology advancements,\nincluding those in pursuit of a lower carbon economy; production quotas or other actions that might be imposed by the Organization of Petroleum Exporting\nCountries or other producers; weather-related damage and disruptions due to other natural or human causes beyond our control; competing fuel prices; geopolitical\nrisks; the pace of energy transition; customer and\n21\n\nTable of Contents\nconsumer preferences and the use of substitutes; and governmental regulations, policies and other actions regarding the development of oil and gas reserves, as\nwell as greenhouse gas emissions and climate change. Chevron evaluates the risk of changing commodity prices as a core part of its business planning process. An\ninvestment in the company carries significant exposure to fluctuations in global prices of crude oil, natural gas, and natural gas liquids.\nExtended periods of low prices or demand for crude oil, natural gas, and natural gas liquids have had, and in the future can have, a material adverse impact on the\ncompany’s results of operations, financial condition and liquidity. Among other things, the company’s upstream earnings, cash flows, and capital expenditure\nprograms could be negatively affected, as could its production and proved reserves. Upstream assets may also become impaired. Downstream earnings could be\nnegatively affected because they depend upon the supply and demand for refined products and the associated margins on refined product sales. A significant or\nsustained decline in liquidity could adversely affect the company’s credit ratings, potentially increase financing costs and reduce access to capital markets. The\ncompany may be unable to realize anticipated cost savings, expenditure reductions and asset sales that are intended to compensate for such downturns, and such\ndownturns may also slow the pace and scale at which we are able to invest in our business, including our New Energies businesses. In some cases, transferred\nliabilities, including for decommissioning of previously divested assets, have returned and may continue to return to the company when an acquirer of those assets\nsubsequently defaults on the assumed transferred liabilities (e.g., bankruptcy). In addition, extended periods of low commodity prices can have a material adverse\nimpact on the results of operations, financial condition and liquidity of the company’s suppliers, vendors, partners and equity affiliates upon which the company’s\nown results of operations and financial condition depend.",
+      "source_span": [
+        90189,
+        93179
+      ],
+      "locator": "PDF pages [22, 23]; Complete commodity price risk disclosure, including liquidity, impairments and counterparties"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0012_F01",
+      "evidence_id": "EP_0012_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "184432",
+      "unit": "USD_million",
+      "source_value": "184,432",
+      "locator": "Sales and Other Operating Revenues; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0012_F02",
+      "evidence_id": "EP_0012_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "193414",
+      "unit": "USD_million",
+      "source_value": "193,414",
+      "locator": "Sales and Other Operating Revenues; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0012_F03",
+      "evidence_id": "EP_0012_E01",
+      "metric": "net_income",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "12299",
+      "unit": "USD_million",
+      "source_value": "12,299",
+      "locator": "Net Income (Loss) Attributable to Chevron Corporation; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0012_F04",
+      "evidence_id": "EP_0012_E01",
+      "metric": "net_income",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "17661",
+      "unit": "USD_million",
+      "source_value": "17,661",
+      "locator": "Net Income (Loss) Attributable to Chevron Corporation; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0012_F05",
+      "evidence_id": "EP_0012_E01",
+      "metric": "upstream_earnings",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "12822",
+      "unit": "USD_million",
+      "source_value": "12,822",
+      "locator": "Total Upstream; after-tax earnings; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0012_F06",
+      "evidence_id": "EP_0012_E01",
+      "metric": "upstream_earnings",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "18602",
+      "unit": "USD_million",
+      "source_value": "18,602",
+      "locator": "Total Upstream; after-tax earnings; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0012_F07",
+      "evidence_id": "EP_0012_E01",
+      "metric": "downstream_earnings",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "3022",
+      "unit": "USD_million",
+      "source_value": "3,022",
+      "locator": "Total Downstream; after-tax earnings; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0012_F08",
+      "evidence_id": "EP_0012_E01",
+      "metric": "downstream_earnings",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "1727",
+      "unit": "USD_million",
+      "source_value": "1,727",
+      "locator": "Total Downstream; after-tax earnings; FY2024 column"
+    }
+  ]
+}

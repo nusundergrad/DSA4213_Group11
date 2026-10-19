@@ -1,0 +1,473 @@
+{
+  "source_id": "SRC_01",
+  "input_origin": "user_supplied_pdf",
+  "original_filename": "aapl-20250927.pdf",
+  "input_file": "private/pdfs/aapl-20250927.pdf",
+  "input_sha256": "8173e7e94b7dfd253abcdecc5349e2388be796a2807f0096f0722da10cb520a0",
+  "extracted_at": "2026-10-12T16:47:32.686359+00:00",
+  "extraction_method": "pypdf-pages-v1",
+  "python_version": "3.14.2",
+  "pypdf_version": "6.20.0",
+  "text_sha256": "a77315d47bd817d0d094bc47239054f96ede3cabed272194127dd2e20e720ca2",
+  "text_encoding": "utf-8",
+  "newlines": "LF",
+  "pdf_page_count": 65,
+  "pdf_pages": [
+    {
+      "page_number": 1,
+      "source_span": [
+        0,
+        2111
+      ]
+    },
+    {
+      "page_number": 2,
+      "source_span": [
+        2113,
+        5433
+      ]
+    },
+    {
+      "page_number": 3,
+      "source_span": [
+        5435,
+        6906
+      ]
+    },
+    {
+      "page_number": 4,
+      "source_span": [
+        6908,
+        10706
+      ]
+    },
+    {
+      "page_number": 5,
+      "source_span": [
+        10708,
+        14622
+      ]
+    },
+    {
+      "page_number": 6,
+      "source_span": [
+        14624,
+        20823
+      ]
+    },
+    {
+      "page_number": 7,
+      "source_span": [
+        20825,
+        25487
+      ]
+    },
+    {
+      "page_number": 8,
+      "source_span": [
+        25489,
+        28813
+      ]
+    },
+    {
+      "page_number": 9,
+      "source_span": [
+        28815,
+        35477
+      ]
+    },
+    {
+      "page_number": 10,
+      "source_span": [
+        35479,
+        40504
+      ]
+    },
+    {
+      "page_number": 11,
+      "source_span": [
+        40506,
+        46795
+      ]
+    },
+    {
+      "page_number": 12,
+      "source_span": [
+        46797,
+        52465
+      ]
+    },
+    {
+      "page_number": 13,
+      "source_span": [
+        52467,
+        58448
+      ]
+    },
+    {
+      "page_number": 14,
+      "source_span": [
+        58450,
+        63981
+      ]
+    },
+    {
+      "page_number": 15,
+      "source_span": [
+        63983,
+        69601
+      ]
+    },
+    {
+      "page_number": 16,
+      "source_span": [
+        69603,
+        75784
+      ]
+    },
+    {
+      "page_number": 17,
+      "source_span": [
+        75786,
+        81753
+      ]
+    },
+    {
+      "page_number": 18,
+      "source_span": [
+        81755,
+        88252
+      ]
+    },
+    {
+      "page_number": 19,
+      "source_span": [
+        88254,
+        88408
+      ]
+    },
+    {
+      "page_number": 20,
+      "source_span": [
+        88410,
+        93696
+      ]
+    },
+    {
+      "page_number": 21,
+      "source_span": [
+        93698,
+        98523
+      ]
+    },
+    {
+      "page_number": 22,
+      "source_span": [
+        98525,
+        104132
+      ]
+    },
+    {
+      "page_number": 23,
+      "source_span": [
+        104134,
+        106110
+      ]
+    },
+    {
+      "page_number": 24,
+      "source_span": [
+        106112,
+        107110
+      ]
+    },
+    {
+      "page_number": 25,
+      "source_span": [
+        107112,
+        109234
+      ]
+    },
+    {
+      "page_number": 26,
+      "source_span": [
+        109236,
+        112538
+      ]
+    },
+    {
+      "page_number": 27,
+      "source_span": [
+        112540,
+        113982
+      ]
+    },
+    {
+      "page_number": 28,
+      "source_span": [
+        113984,
+        116341
+      ]
+    },
+    {
+      "page_number": 29,
+      "source_span": [
+        116343,
+        120124
+      ]
+    },
+    {
+      "page_number": 30,
+      "source_span": [
+        120126,
+        125323
+      ]
+    },
+    {
+      "page_number": 31,
+      "source_span": [
+        125325,
+        129008
+      ]
+    },
+    {
+      "page_number": 32,
+      "source_span": [
+        129010,
+        130258
+      ]
+    },
+    {
+      "page_number": 33,
+      "source_span": [
+        130260,
+        131606
+      ]
+    },
+    {
+      "page_number": 34,
+      "source_span": [
+        131608,
+        132851
+      ]
+    },
+    {
+      "page_number": 35,
+      "source_span": [
+        132853,
+        134615
+      ]
+    },
+    {
+      "page_number": 36,
+      "source_span": [
+        134617,
+        136066
+      ]
+    },
+    {
+      "page_number": 37,
+      "source_span": [
+        136068,
+        138420
+      ]
+    },
+    {
+      "page_number": 38,
+      "source_span": [
+        138422,
+        141301
+      ]
+    },
+    {
+      "page_number": 39,
+      "source_span": [
+        141303,
+        146157
+      ]
+    },
+    {
+      "page_number": 40,
+      "source_span": [
+        146159,
+        148360
+      ]
+    },
+    {
+      "page_number": 41,
+      "source_span": [
+        148362,
+        151591
+      ]
+    },
+    {
+      "page_number": 42,
+      "source_span": [
+        151593,
+        151747
+      ]
+    },
+    {
+      "page_number": 43,
+      "source_span": [
+        151749,
+        156241
+      ]
+    },
+    {
+      "page_number": 44,
+      "source_span": [
+        156243,
+        159011
+      ]
+    },
+    {
+      "page_number": 45,
+      "source_span": [
+        159013,
+        161735
+      ]
+    },
+    {
+      "page_number": 46,
+      "source_span": [
+        161737,
+        161891
+      ]
+    },
+    {
+      "page_number": 47,
+      "source_span": [
+        161893,
+        163830
+      ]
+    },
+    {
+      "page_number": 48,
+      "source_span": [
+        163832,
+        167391
+      ]
+    },
+    {
+      "page_number": 49,
+      "source_span": [
+        167393,
+        169938
+      ]
+    },
+    {
+      "page_number": 50,
+      "source_span": [
+        169940,
+        172398
+      ]
+    },
+    {
+      "page_number": 51,
+      "source_span": [
+        172400,
+        175613
+      ]
+    },
+    {
+      "page_number": 52,
+      "source_span": [
+        175615,
+        179020
+      ]
+    },
+    {
+      "page_number": 53,
+      "source_span": [
+        179022,
+        182290
+      ]
+    },
+    {
+      "page_number": 54,
+      "source_span": [
+        182292,
+        183104
+      ]
+    },
+    {
+      "page_number": 55,
+      "source_span": [
+        183106,
+        187489
+      ]
+    },
+    {
+      "page_number": 56,
+      "source_span": [
+        187491,
+        188904
+      ]
+    },
+    {
+      "page_number": 57,
+      "source_span": [
+        188906,
+        193192
+      ]
+    },
+    {
+      "page_number": 58,
+      "source_span": [
+        193194,
+        197921
+      ]
+    },
+    {
+      "page_number": 59,
+      "source_span": [
+        197923,
+        199935
+      ]
+    },
+    {
+      "page_number": 60,
+      "source_span": [
+        199937,
+        203468
+      ]
+    },
+    {
+      "page_number": 61,
+      "source_span": [
+        203470,
+        203591
+      ]
+    },
+    {
+      "page_number": 62,
+      "source_span": [
+        203593,
+        207897
+      ]
+    },
+    {
+      "page_number": 63,
+      "source_span": [
+        207899,
+        211406
+      ]
+    },
+    {
+      "page_number": 64,
+      "source_span": [
+        211408,
+        212405
+      ]
+    },
+    {
+      "page_number": 65,
+      "source_span": [
+        212407,
+        214552
+      ]
+    }
+  ],
+  "pages_without_text": []
+}
