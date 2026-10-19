@@ -1,0 +1,149 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0002",
+  "company_alias": "COMPANY_02",
+  "company": {
+    "name": "Microsoft Corporation",
+    "ticker": "MSFT"
+  },
+  "fiscal_year": 2025,
+  "filing": {
+    "form": "10-K",
+    "accession_number": "0000950170-25-100235",
+    "filing_date": "2025-07-30",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/msft-20250630.htm"
+  },
+  "source_id": "SRC_02",
+  "evidence": [
+    {
+      "evidence_id": "EP_0002_E01",
+      "section": "Item 7",
+      "text": "SUMMARY RESULTS OF OPERATIONS\n \n(In millions, except percentages and per share amounts)  2025   2024   \nPercentage\nChange  \n          \n          \nRevenue  $ 281,724  $ 245,122    15%  \nGross margin   193,893   171,008    13%  \nOperating income   128,528   109,433    17%  \nNet income   101,832   88,136    16%  \nDiluted earnings per share   13.64   11.80    16%",
+      "locator": "PDF p. 40; Summary Results of Operations table; Revenue, Gross margin and Operating income rows, including year and unit headers",
+      "source_span": [
+        158343,
+        158704
+      ]
+    },
+    {
+      "evidence_id": "EP_0002_E02",
+      "section": "Item 7",
+      "text": "Fiscal Year 2025 Compared with Fiscal Year 2024\nRevenue increased $36.6 billion or 15% with growth across each of our segments. Intelligent Cloud revenue increased \ndriven by Azure. Productivity and Business Processes revenue increased driven by Microsoft 365 Commercial cloud. \nMore Personal Computing revenue increased driven by Gaming and Search and news advertising.\nCost of revenue increased $13.7 billion or 19% driven by growth in Microsoft Cloud.\nGross margin increased $22.9 billion or 13% with growth across each of our segments. \n• Gross margin percentage decreased slightly driven by Intelligent Cloud, offset in part by More Personal \nComputing.\n• Microsoft Cloud gross margin percentage decreased to 69% driven by the impact of scaling our AI \ninfrastructure, offset in part by efficiency gains in Azure.\nOperating expenses increased $3.8 billion or 6% driven by investments in cloud and AI engineering and Gaming, \nincluding the impact of the Activision Blizzard acquisition.\nOperating income increased $19.1 billion or 17% with growth across each of our segments.",
+      "locator": "PDF p. 40; Summary Results of Operations; Fiscal Year 2025 Compared with Fiscal Year 2024, complete discussion",
+      "source_span": [
+        158737,
+        159816
+      ]
+    },
+    {
+      "evidence_id": "EP_0002_E03",
+      "section": "Item 1A",
+      "text": "We face intense competition across all markets for our products and services, which could adversely affect \nour results of operations.\nCompetition in the technology sector\nOur competitors range in size from diversified global companies with significant research and development resources \nto small, specialized firms whose narrower product lines may let them be more effective in deploying technical, \nmarketing, and financial resources. Barriers to entry in many of our businesses are low and many of the areas in which \nwe compete evolve rapidly with changing and disruptive technologies, shifting user needs, and frequent introductions \nof new products and services. If we do not continue to innovate and provide products, devices, and services that \nappeal to businesses and consumers, we may not remain competitive, which could adversely affect our business, \nfinancial condition, and results of operations.",
+      "locator": "PDF p. 17; Strategic and Competitive Risks; Competition in the technology sector, heading and first paragraph",
+      "source_span": [
+        59250,
+        60162
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0002_F01",
+      "evidence_id": "EP_0002_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-07-01",
+        "end": "2025-06-30"
+      },
+      "value": "281724",
+      "unit": "USD_million",
+      "source_value": "281,724",
+      "locator": "Revenue; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0002_F02",
+      "evidence_id": "EP_0002_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-07-01",
+        "end": "2024-06-30"
+      },
+      "value": "245122",
+      "unit": "USD_million",
+      "source_value": "245,122",
+      "locator": "Revenue; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0002_F03",
+      "evidence_id": "EP_0002_E01",
+      "metric": "gross_margin",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-07-01",
+        "end": "2025-06-30"
+      },
+      "value": "193893",
+      "unit": "USD_million",
+      "source_value": "193,893",
+      "locator": "Gross margin; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0002_F04",
+      "evidence_id": "EP_0002_E01",
+      "metric": "gross_margin",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-07-01",
+        "end": "2024-06-30"
+      },
+      "value": "171008",
+      "unit": "USD_million",
+      "source_value": "171,008",
+      "locator": "Gross margin; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0002_F05",
+      "evidence_id": "EP_0002_E01",
+      "metric": "operating_income",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-07-01",
+        "end": "2025-06-30"
+      },
+      "value": "128528",
+      "unit": "USD_million",
+      "source_value": "128,528",
+      "locator": "Operating income; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0002_F06",
+      "evidence_id": "EP_0002_E01",
+      "metric": "operating_income",
+      "period": {
+        "label": "FY2024",
+        "start": "2023-07-01",
+        "end": "2024-06-30"
+      },
+      "value": "109433",
+      "unit": "USD_million",
+      "source_value": "109,433",
+      "locator": "Operating income; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0002_F07",
+      "evidence_id": "EP_0002_E02",
+      "metric": "cloud_gross_margin_percentage",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-07-01",
+        "end": "2025-06-30"
+      },
+      "value": "69",
+      "unit": "percent",
+      "source_value": "69",
+      "locator": "Cloud gross margin percentage discussion; FY2025 column"
+    }
+  ]
+}
