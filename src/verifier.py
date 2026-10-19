@@ -1,4 +1,5 @@
-from decimal import Decimal
+from difflib import SequenceMatcher
+from itertools import combinations
 
 def unit_to_num(unit):
     if "million" in unit:
@@ -35,7 +36,7 @@ def check_pc_match(num, fact1, fact2):
     later_val = float(compared["later"].value)
     true_pc = round(get_pct_change(earlier_val, later_val), 2)
     pc_match = float(num.value) == true_pc
-    return all((metric_match, periods_match, pc_match))
+    return all(metric_match, periods_match, pc_match)
 
 
 def verifier(report, packet):
@@ -43,29 +44,36 @@ def verifier(report, packet):
     Function to check Analyst agent's textual and numerical claims against the original evidence packet.
     Returns a dictionary with each key being a claim_id and the corresponding values being a boolean representing whether the claim is true.
     """
+    threshold = 0.8
     out = {}
+    packet_evidence = {e.evidence_id: e.text for e in packet.evidence}
     packet_facts = {f.fact_id: f for f in packet.facts}
-
+    
     for claim in report.claims:
-        num = claim.check_spec
-        citations_valid = all(
-            evidence_id in {e.evidence_id for e in packet.evidence}
-            for evidence_id in claim.evidence_ids
-        )
+        # check text of claim
+        evidence = ""
+        for evidence_id in claim.evidence_ids:
+            evidence += packet_evidence[evidence_id]
+        sim = SequenceMatcher(lambda x: x in ["\n", "\t"], claim.text, evidence) #can change to different similarity metric if needed
 
-        if not citations_valid:
-            out[claim.claim_id] = False
-        elif num is None:
-            out[claim.claim_id] = True
-        elif num.kind == "numeric":
-            fact = packet_facts.get(num.fact_id)
-            out[claim.claim_id] = fact is not None and check_numeric_match(num, fact)
-        else:
-            first = packet_facts.get(num.from_fact_id)
-            second = packet_facts.get(num.to_fact_id)
-            out[claim.claim_id] = (
-                first is not None and second is not None
-                and check_pc_match(num, first, second)
-            )
+        # check numerical calculations
+        num = claim.check_spec
+        num_check = False
+        
+        if num.kind == "numeric":
+            for fact_id in claim.fact_ids: #assuming fact_ids has been added to the schema
+                if check_numeric_match(num, packet_facts[fact_id]):
+                    num_check = True
+                    break
+
+        elif num.kind == "percentage_change":
+            all_facts = [packet_facts[fact_id] for fact_id in claim.fact_ids]
+            all_pairs = list(combinations(all_facts, 2))
+            for fact1, fact2 in all_pairs:
+                if check_pc_match(num, fact1, fact2):
+                    num_check = True
+                    break
+
+        out[claim.claim_id] = (sim >= threshold) and num_check
 
     return out
