@@ -24,43 +24,45 @@ def check_pc_match(num, from_fact, to_fact):
     return all((metric_match, periods_match, pc_match))
 
 
-def verifier(report, packet):
-    """
-    Function to check Analyst agent's textual and numerical claims against the original evidence packet.
-    Returns a dictionary with each key being a claim_id and the corresponding values being a boolean representing whether the claim is true.
-    """
-    threshold = 0.8
-    out = {}
-    packet_evidence = {e.evidence_id: e.text for e in packet.evidence}
-    packet_facts = {f.fact_id: f for f in packet.facts}
+# def verifier_with_text(report, packet):
+#     """
+#     Function to check Analyst agent's textual and numerical claims against the original evidence packet.
+#     Returns a dictionary with each key being a claim_id and the corresponding values being a boolean representing whether the claim is true.
+#     """
+#     threshold = 0.8
+#     out = {}
+#     packet_evidence = {e.evidence_id: e.text for e in packet.evidence}
+#     packet_facts = {f.fact_id: f for f in packet.facts}
     
-    for claim in report.claims:
-        # check text of claim
-        evidence = ""
-        for evidence_id in claim.evidence_ids:
-            evidence += packet_evidence[evidence_id]
-        sm = SequenceMatcher(lambda x: x in ["\n", "\t"], claim.text, evidence) #can change to different similarity metric if needed
-        match = sm.find_longest_match()
-        sim = match.size / len(claim.text)
+#     for claim in report.claims:
+#         # check text of claim
+#         evidence = ""
+#         for evidence_id in claim.evidence_ids:
+#             evidence += packet_evidence[evidence_id]
+#         sm = SequenceMatcher(lambda x: x in ["\n", "\t"], claim.text, evidence) #can change to different similarity metric if needed
+#         match = sm.find_longest_match()
+#         sim = match.size / len(claim.text)
+#         print(sim) #debugging
 
-        # check numerical calculations
-        num = claim.check_spec
-        if num is None:
-            num_check = True
-        else:
-            if num.kind == "numeric":
-                num_check = check_numeric_match(num, packet_facts[num.fact_id])
+#         # check numerical calculations
+#         num = claim.check_spec
+#         if num is None:
+#             num_check = True
+#         else:
+#             if num.kind == "numeric":
+#                 num_check = check_numeric_match(num, packet_facts[num.fact_id])
 
-            elif num.kind == "percentage_change":
-                from_fact = packet_facts[num.from_fact_id]
-                to_fact = packet_facts[num.to_fact_id]
-                num_check = check_pc_match(num, from_fact, to_fact)
+#             elif num.kind == "percentage_change":
+#                 from_fact = packet_facts[num.from_fact_id]
+#                 to_fact = packet_facts[num.to_fact_id]
+#                 num_check = check_pc_match(num, from_fact, to_fact)
 
-        out[claim.claim_id] = (sim >= threshold) and num_check
+#         #out[claim.claim_id] = (sim >= threshold) and num_check
+#         out[claim.claim_id] = f"text check: {(sim >= threshold)}, numerical check: {num_check}"
 
-    return out
+#     return out
 
-def verifier_no_text(report, packet):
+def verifier(report, packet):
     """
     Function to check Analyst agent's numerical claims against the original evidence packet.
     Returns a dictionary with each key being a claim_id and the corresponding values being a boolean representing whether the claim is true.
