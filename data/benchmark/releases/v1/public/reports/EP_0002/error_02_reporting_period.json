@@ -1,0 +1,111 @@
+{
+  "schema_version": "0.1",
+  "report_id": "R_dfca011d93374e4db9fc16f2982514ca",
+  "recommendation": "HOLD",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "Revenue increased by 14.93% from $245,122 million in fiscal year 2023 to $281,724 million in fiscal year 2024.",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0002_F02",
+        "to_fact_id": "EP_0002_F01",
+        "metric": "revenue",
+        "from_period": {
+          "label": "FY2023",
+          "start": "2022-07-01",
+          "end": "2023-06-30"
+        },
+        "to_period": {
+          "label": "FY2024",
+          "start": "2023-07-01",
+          "end": "2024-06-30"
+        },
+        "value": "14.93",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "Operating income increased by 17.45% from $109,433 million in fiscal year 2024 to $128,528 million in fiscal year 2025.",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0002_F06",
+        "to_fact_id": "EP_0002_F05",
+        "metric": "operating_income",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-07-01",
+          "end": "2024-06-30"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-07-01",
+          "end": "2025-06-30"
+        },
+        "value": "17.45",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "Gross margin increased by 13.38% from $171,008 million in fiscal year 2024 to $193,893 million in fiscal year 2025.",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0002_F04",
+        "to_fact_id": "EP_0002_F03",
+        "metric": "gross_margin",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-07-01",
+          "end": "2024-06-30"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-07-01",
+          "end": "2025-06-30"
+        },
+        "value": "13.38",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C4",
+      "text": "Despite overall gross margin growth, the gross margin percentage for PRODUCT_10 decreased to 69% in fiscal year 2025 due to the impact of scaling AI infrastructure, partially offset by efficiency gains in PRODUCT_11 (Item 7, EP_0002_E02).",
+      "evidence_ids": [
+        "EP_0002_E02"
+      ],
+      "check_spec": {
+        "kind": "numeric",
+        "fact_id": "EP_0002_F07",
+        "metric": "cloud_gross_margin_percentage",
+        "period": {
+          "label": "FY2025",
+          "start": "2024-07-01",
+          "end": "2025-06-30"
+        },
+        "value": "69",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C5",
+      "text": "Operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) in fiscal year 2025, driven by investments in cloud and AI engineering and Gaming, including the impact of the ENTITY_01 acquisition (Item 7, EP_0002_E02). The company also faces intense competition across all markets, with low barriers to entry in many businesses and rapidly evolving technologies (Item 1A, EP_0002_E03).",
+      "evidence_ids": [
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ],
+      "check_spec": null
+    }
+  ],
+  "rationale": "The company demonstrated strong top-line growth with revenue increasing by 14.93% from fiscal year 2023 to fiscal year 2024, and operating income increasing by 17.45% in fiscal year 2025. Gross margin also increased by 13.38%. However, there are material counter-evidences that suggest a HOLD recommendation. The gross margin percentage for PRODUCT_10 decreased to 69% due to the scaling of AI infrastructure, indicating potential cost pressures in a key growth area. Furthermore, operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) due to investments in cloud and AI engineering and the ENTITY_01 acquisition. The company also acknowledges intense competition and low barriers to entry in many of its markets, posing ongoing risks to its financial performance. These factors, while not negating the overall growth, introduce uncertainties that warrant a cautious approach."
+}

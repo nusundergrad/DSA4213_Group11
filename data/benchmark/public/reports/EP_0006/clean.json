@@ -1,0 +1,101 @@
+{
+  "schema_version": "0.1",
+  "report_id": "R_ac2c68fd6aa94e9095c7152d48afdd20",
+  "recommendation": "BUY",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "Total revenues for COMPANY_06 increased by 5.10% in fiscal year 2025, reaching $680,985 million, compared to $648,125 million in fiscal year 2024.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0006_F02",
+        "to_fact_id": "EP_0006_F01",
+        "metric": "revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-02-01",
+          "end": "2024-01-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-02-01",
+          "end": "2025-01-31"
+        },
+        "value": "5.07",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "Net sales also saw a 5.00% increase in fiscal year 2025, rising to $674,538 million from $642,637 million in fiscal year 2024.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0006_F04",
+        "to_fact_id": "EP_0006_F03",
+        "metric": "net_sales",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-02-01",
+          "end": "2024-01-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-02-01",
+          "end": "2025-01-31"
+        },
+        "value": "4.96",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "Operating income for COMPANY_06 grew by 8.65% in fiscal year 2025, reaching $29,348 million, up from $27,012 million in fiscal year 2024.",
+      "evidence_ids": [
+        "EP_0006_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0006_F08",
+        "to_fact_id": "EP_0006_F07",
+        "metric": "operating_income",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-02-01",
+          "end": "2024-01-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-02-01",
+          "end": "2025-01-31"
+        },
+        "value": "8.65",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C4",
+      "text": "The gross profit rate increased by 40 basis points in fiscal year 2025 compared to the previous fiscal year, primarily driven by the SEGMENT_09 segment (Item 7, p.14).",
+      "evidence_ids": [
+        "EP_0006_E02"
+      ],
+      "check_spec": null
+    },
+    {
+      "claim_id": "C5",
+      "text": "Despite strong competition from various retailers and evolving omni-channel landscapes (Item 1A), COMPANY_06 has demonstrated growth in key financial metrics.",
+      "evidence_ids": [
+        "EP_0006_E03"
+      ],
+      "check_spec": null
+    }
+  ],
+  "rationale": "COMPANY_06 shows strong financial performance with consistent growth in total revenues, net sales, and operating income. The increase in gross profit rate further indicates effective management and profitability. While the company operates in a highly competitive retail environment, its ability to achieve these positive results suggests resilience and effective strategies. The growth in membership and other income also points to a stable customer base and diversified revenue streams. These factors collectively support a BUY recommendation."
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0009",
+  "company_alias": "COMPANY_09",
+  "fiscal_year": 2025,
+  "evidence": [
+    {
+      "evidence_id": "EP_0009_E01",
+      "section": "Item 7",
+      "text": "Income before tax by segment\nIncome before tax by segment of business was as follows:\n Income Before Tax Segment Sales\nPercent of Segment\nSales\n(Dollars in Millions) 2025 2024 2025 2024 2025 2024\nSEGMENT_15 $ 22,266 18,919 60,401 56,964 36.9 % 33.2 \nSEGMENT_16 4,113 3,740 33,792 31,857 12.2 11.7 \nSegment earnings before tax 26,379 22,659 94,193 88,821 28.0 25.5 \n(Income) Expenses not allocated to segments (6,202) 5,972 \nWorldwide income before tax $ 32,581 16,687 94,193 88,821 34.6 % 18.8 \nSee Note 17 to the Consolidated Financial Statements for more details.\nAmounts not allocated to segments include interest (income) expense and general corporate (income) expense. The fiscal year 2025 includes the reversal of approximately $7.0\nbillion, a significant portion of the previously accrued talc reserve. The fiscal year 2024 includes charges for talc matters of approximately $5.1 billion and a loss of approximately\n$0.4 billion related to the debt to equity exchange of the Company's remaining shares of ENTITY_10.\n(1)\n(2)\n(3)\n(1)\n(2)\n(3)\n(1)\n(2)\n(1)\n(2)"
+    },
+    {
+      "evidence_id": "EP_0009_E02",
+      "section": "Item 7",
+      "text": "Results of operations\nAnalysis of consolidated sales\nFor discussion on results of operations and financial condition pertaining to the fiscal years 2024 and 2023 see the Company’s Annual Report on Form 10-K for\nthe fiscal year ended December 29, 2024, Item 7. Management's discussion and analysis of results of operations and financial condition.\nIn 2025, worldwide sales increased 6.0% to $94.2 billion as compared to an increase of 4.3% in 2024. These sales changes consisted of the following:\nSales increase/(decrease) due to: 2025 2024\nVolume 8.4 % 5.9 %\nPrice (3.1) 0.0 \nCurrency 0.7 (1.6)\nTotal 6.0 % 4.3 %\nThe net impact of acquisitions and divestitures on the worldwide sales growth was a positive impact of 1.1% in 2025, primarily related to PRODUCT_41 and\nENTITY_09 and a positive impact of 0.5% in 2024 primarily related to ENTITY_09.\nSales by U.S. companies were $53.8 billion in 2025 and $50.3 billion in 2024. This represents increases of 6.9% in 2025 and 8.3% in 2024. In the fiscal year\n2025, acquisitions and divestitures had a net positive impact of 2.0% on the U.S. sales growth primarily related to PRODUCT_41 and ENTITY_09. Sales by\nSEGMENT_14 companies were $40.4 billion in 2025 and $38.5 billion in 2024. This represents an increase of 5.0% in 2025, and a decrease of 0.5% in 2024. In\nfiscal 2025, acquisitions and divestitures had a net positive impact of 0.1% on the SEGMENT_14 operational* sales growth, primarily related to ENTITY_09. In the\nfiscal year 2025, the negative impact of the PRODUCT_42 sales decline, due to biosimilar competition, was approximately 6.2%, 7.6% and 4.4% on worldwide, U.S.\nand SEGMENT_14 operational sales, respectively.\nThe five-year compound annual growth rates for worldwide, U.S. and SEGMENT_14 sales were 6.7%, 7.9% and 5.2%, respectively. The ten-year compound annual\ngrowth rates for worldwide, U.S. and SEGMENT_14 sales were 5.2%, 5.8% and 4.5%, respectively."
+    },
+    {
+      "evidence_id": "EP_0009_E03",
+      "section": "Item 1A",
+      "text": "The Company’s businesses operate in highly competitive product markets and competitive pressures could adversely affect the Company’s earnings.\nThe Company faces substantial competition in its two operating segments and in all geographic markets. The Company’s businesses compete with companies of\nall sizes on the basis of cost-effectiveness, technological innovations, intellectual property rights, product performance, real or perceived product advantages,\npricing and availability and rate of reimbursement. The Company also competes with other market participants in securing rights to acquisitions, collaborations\nand licensing agreements with third parties. Competition for rights to product candidates and technologies may result in significant investment and acquisition\ncosts and onerous agreement terms for the Company. Competitors’ development of more effective or less costly products, and/or their ability to secure patent and\nother intellectual property rights and successfully market products ahead of the Company, could negatively impact sales of the Company’s existing products as\nwell as its ability to bring new products to market despite significant prior investment in the related product development. The Company may also experience\noperational and financial risk in connection with acquisitions if we are unable to fully identify potential risks and liabilities associated with acquired businesses or\nproducts, successfully integrate operations and employees, and successfully identify and realize synergies with existing businesses while containing acquisition-\nrelated strain on our management, operations and financial resources.\nFor the Company’s SEGMENT_15 businesses, loss of patent exclusivity for a product often is followed by a substantial reduction in sales as competitors\ngain regulatory approval for generic, biosimilar and other competing products and enter the market. For the Company’s SEGMENT_16 businesses, technological\ninnovation, product quality, reputation and customer service are especially important to competitiveness. Development by other companies of new or improved\nproducts, processes and technologies could threaten to make the Company’s products or technologies less desirable, less economical or obsolete. The\nCompany’s business and operations will be negatively impacted if we are unable to introduce new products or technological advances that are safe, more\neffective, more effectively marketed or otherwise outperform those of our competitors."
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0009_F01",
+      "evidence_id": "EP_0009_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-12-30",
+        "end": "2025-12-28"
+      },
+      "value": "94193",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0009_F02",
+      "evidence_id": "EP_0009_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-29"
+      },
+      "value": "88821",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0009_F03",
+      "evidence_id": "EP_0009_E01",
+      "metric": "innovative_medicine_revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-12-30",
+        "end": "2025-12-28"
+      },
+      "value": "60401",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0009_F04",
+      "evidence_id": "EP_0009_E01",
+      "metric": "innovative_medicine_revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-29"
+      },
+      "value": "56964",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0009_F05",
+      "evidence_id": "EP_0009_E01",
+      "metric": "medtech_revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-12-30",
+        "end": "2025-12-28"
+      },
+      "value": "33792",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0009_F06",
+      "evidence_id": "EP_0009_E01",
+      "metric": "medtech_revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-29"
+      },
+      "value": "31857",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0009_F07",
+      "evidence_id": "EP_0009_E01",
+      "metric": "income_before_tax",
+      "period": {
+        "label": "FY2025",
+        "start": "2024-12-30",
+        "end": "2025-12-28"
+      },
+      "value": "32581",
+      "unit": "USD_million"
+    },
+    {
+      "fact_id": "EP_0009_F08",
+      "evidence_id": "EP_0009_E01",
+      "metric": "income_before_tax",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-29"
+      },
+      "value": "16687",
+      "unit": "USD_million"
+    }
+  ]
+}
