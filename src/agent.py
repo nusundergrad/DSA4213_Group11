@@ -204,7 +204,7 @@ def analyst_agent(state: AgentState):
     )
     print("Analyst model response received", flush=True)
     log_model_response(agent_name, response)
-    print("Analyst response content:", response.content, flush=True)
+    # print("Analyst response content:", response.content, flush=True)
     label_message(response, agent_name)
     revised_report = parse_report_response(response.content)
     expected_report_id = latest_report(state)["report_id"]

@@ -44,7 +44,7 @@ def verifier_node(state: AgentState):
     packet = Packet.model_validate(state["evidence_packet"])
     report_history = state.get("final_reports") or []
     report = Report.model_validate(report_history[-1])
-    result = run_verifier(packet, report)
+    result = run_verifier(report, packet)
     verifier_record = {
         "report_id": report.report_id,
         "claim_results": result,
