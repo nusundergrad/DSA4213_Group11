@@ -1,5 +1,5 @@
-from difflib import SequenceMatcher
-from itertools import combinations
+# from difflib import SequenceMatcher
+# from itertools import combinations
 
 def unit_to_num(unit):
     if "million" in unit:
@@ -73,14 +73,16 @@ def verifier(report, packet):
     for claim in report.claims:
         # check numerical calculations
         num = claim.check_spec
-        
-        if num.kind == "numeric":
-            num_check = check_numeric_match(num, packet_facts[num.fact_id])
+        if num is None:
+            num_check = True
+        else:
+            if num.kind == "numeric":
+                num_check = check_numeric_match(num, packet_facts[num.fact_id])
 
-        elif num.kind == "percentage_change":
-            from_fact = packet_facts[num.from_fact_id]
-            to_fact = packet_facts[num.to_fact_id]
-            num_check = check_pc_match(num, from_fact, to_fact)
+            elif num.kind == "percentage_change":
+                from_fact = packet_facts[num.from_fact_id]
+                to_fact = packet_facts[num.to_fact_id]
+                num_check = check_pc_match(num, from_fact, to_fact)
 
         out[claim.claim_id] = num_check
 
