@@ -1,11 +1,11 @@
 {
   "schema_version": "0.1",
-  "report_id": "R_12be009a2d1d47e7b7636261af75c4cd",
+  "report_id": "R_a1bd71c64cee5ab7b7a8c4dd9a0a9a86",
   "recommendation": "HOLD",
   "claims": [
     {
       "claim_id": "C1",
-      "text": "Revenue increased by 19.01% from $245,122 million in fiscal year 2024 to $291,724 million in fiscal year 2025.",
+      "text": "Revenue increased by 14.93% from $245,122 million in fiscal year 2024 to $281,724 million in fiscal year 2025.",
       "evidence_ids": [
         "EP_0002_E01"
       ],
@@ -24,7 +24,7 @@
           "start": "2024-07-01",
           "end": "2025-06-30"
         },
-        "value": "19.01",
+        "value": "14.93",
         "unit": "percent"
       }
     },
@@ -79,25 +79,6 @@
       }
     },
     {
-      "claim_id": "C4",
-      "text": "Despite overall gross margin growth, the gross margin percentage for PRODUCT_10 decreased to 69% in fiscal year 2025 due to the impact of scaling AI infrastructure, partially offset by efficiency gains in PRODUCT_11 (Item 7, EP_0002_E02).",
-      "evidence_ids": [
-        "EP_0002_E02"
-      ],
-      "check_spec": {
-        "kind": "numeric",
-        "fact_id": "EP_0002_F07",
-        "metric": "cloud_gross_margin_percentage",
-        "period": {
-          "label": "FY2025",
-          "start": "2024-07-01",
-          "end": "2025-06-30"
-        },
-        "value": "69",
-        "unit": "percent"
-      }
-    },
-    {
       "claim_id": "C5",
       "text": "Operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) in fiscal year 2025, driven by investments in cloud and AI engineering and Gaming, including the impact of the ENTITY_01 acquisition (Item 7, EP_0002_E02). The company also faces intense competition across all markets, with low barriers to entry in many businesses and rapidly evolving technologies (Item 1A, EP_0002_E03).",
       "evidence_ids": [
@@ -107,5 +88,5 @@
       "check_spec": null
     }
   ],
-  "rationale": "The company demonstrated strong top-line growth with revenue increasing by 19.01% and operating income by 17.45% in fiscal year 2025. Gross margin also increased by 13.38%. However, there are material counter-evidences that suggest a HOLD recommendation. The gross margin percentage for PRODUCT_10 decreased to 69% due to the scaling of AI infrastructure, indicating potential cost pressures in a key growth area. Furthermore, operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) due to investments in cloud and AI engineering and the ENTITY_01 acquisition. The company also acknowledges intense competition and low barriers to entry in many of its markets, posing ongoing risks to its financial performance. These factors, while not negating the overall growth, introduce uncertainties that warrant a cautious approach."
+  "rationale": "The company demonstrated strong top-line growth with revenue increasing by 14.93% and operating income by 17.45% in fiscal year 2025. Gross margin also increased by 13.38%. However, there are material counter-evidences that suggest a HOLD recommendation. Furthermore, operating expenses increased by $3.8 billion (the filing reports rounded growth of 6%) due to investments in cloud and AI engineering and the ENTITY_01 acquisition. The company also acknowledges intense competition and low barriers to entry in many of its markets, posing ongoing risks to its financial performance. These factors, while not negating the overall growth, introduce uncertainties that warrant a cautious approach."
 }

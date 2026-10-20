@@ -14,14 +14,27 @@ def make_report(clean, pair):
     if pair["flawed_report_id"] == pair["clean_report_id"]:
         raise ValueError("Flawed report needs a separate ID")
     result = copy.deepcopy(clean)
-    claim_index = next(i for i, c in enumerate(clean["claims"])
-                       if c["claim_id"] == pair["target_claim_id"])
+    target_id = pair["target_claim_id"]
+    claim_index = next((i for i, c in enumerate(clean["claims"])
+                        if c["claim_id"] == target_id), None)
+    if target_id is not None and claim_index is None:
+        raise ValueError("Target claim does not exist")
+    rationale_only = bool(pair["changes"]) and all(
+        edit["path"] == ["rationale"] for edit in pair["changes"])
+    if (target_id is None) != rationale_only:
+        raise ValueError("Rationale-only edits require a null target_claim_id")
     seen = set()
     for change in pair["changes"]:
         path = change["path"]
+        omission = pair["defect_type"] == "material_omission" and path == ["claims"]
+        if omission:
+            remaining = [c for c in clean["claims"] if c["claim_id"] != pair["target_claim_id"]]
+            if change["after"] != remaining:
+                raise ValueError("An omission may remove only the target claim")
         if (path != ["rationale"] and
+                not omission and
                 not (len(path) >= 3 and path[:2] == ["claims", claim_index]
-                     and path[2] in {"text", "check_spec"})):
+                     and path[2] in {"text", "check_spec", "evidence_ids"})):
             raise ValueError("Only the target claim and its rationale may change")
         if tuple(path) in seen:
             raise ValueError("Duplicate change path")
@@ -32,7 +45,10 @@ def make_report(clean, pair):
         if parent[path[-1]] != change["before"]:
             raise ValueError(f"Original differs at {path}; review the pair again")
         parent[path[-1]] = copy.deepcopy(change["after"])
-    if result["claims"][claim_index] == clean["claims"][claim_index]:
+    if result == clean:
+        raise ValueError("A single-error pair must change the report")
+    target = next((c for c in result["claims"] if c["claim_id"] == pair["target_claim_id"]), None)
+    if target_id is not None and target == clean["claims"][claim_index]:
         raise ValueError("Target claim must change")
     result["report_id"] = pair["flawed_report_id"]
     return Report.model_validate(result).model_dump(mode="json")

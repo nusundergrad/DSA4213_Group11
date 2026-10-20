@@ -1,11 +1,11 @@
 {
   "schema_version": "0.1",
-  "report_id": "R_9bea2fb485cc4939b2dab06688e27d73",
+  "report_id": "R_7cfe42c6953155dcb8fe5c56a719ef60",
   "recommendation": "HOLD",
   "claims": [
     {
       "claim_id": "C1",
-      "text": "Total revenues for COMPANY_08 increased by 7.31% from $97,690 million in 2024 to $104,827 million in 2025.",
+      "text": "Total revenues for COMPANY_08 decreased by 2.93% from $97,690 million in 2024 to $94,827 million in 2025.",
       "evidence_ids": [
         "EP_0008_E01"
       ],
@@ -24,7 +24,7 @@
           "start": "2025-01-01",
           "end": "2025-12-31"
         },
-        "value": "7.31",
+        "value": "-2.93",
         "unit": "percent"
       }
     },
@@ -108,12 +108,12 @@
     },
     {
       "claim_id": "C5",
-      "text": "The company faces strong competition in both its automotive and energy generation and storage businesses, with many competitors possessing significantly more or better-established resources (Item 1A).",
+      "text": "The company faces strong competition in both its automotive and energy generation and storage businesses, with many competitors possessing significantly more or better-established resources (Item 1A). EP_0008_E03 reports: “Services and other revenue increased $2.00 billion, or 19%”",
       "evidence_ids": [
         "EP_0008_E03"
       ],
       "check_spec": null
     }
   ],
-  "rationale": "COMPANY_08 experienced overall revenue growth in 2025, despite a significant decrease in its core automotive sales segment. While the Energy Generation and Storage and Services and Other segments showed strong growth, they more than offset the automotive decline in total revenues. The company also faces intense competition across its markets. Given the mixed performance with a decline in the primary revenue driver, but growth in other segments, a HOLD recommendation is appropriate as the company navigates competitive pressures and shifts in its revenue streams."
+  "rationale": "COMPANY_08 experienced an overall revenue decline in 2025, primarily driven by a significant decrease in its core automotive sales segment. While the Energy Generation and Storage and Services and Other segments showed strong growth, they were not enough to offset the automotive decline. The company also faces intense competition across its markets. Given the mixed performance with a decline in the primary revenue driver, but growth in other segments, a HOLD recommendation is appropriate as the company navigates competitive pressures and shifts in its revenue streams."
 }

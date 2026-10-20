@@ -82,6 +82,7 @@ def test_paired_loader_accepts_period_error_but_rejects_broken_fact_links(tmp_pa
 
 
 def test_all_existing_reports_have_references_without_changing_the_error():
+    pairs = {p["flawed_report_path"]: p for p in read(ROOT / "private/pairs.json")["pairs"]}
     for packet_id in ("EP_0001", "EP_0002"):
         packet, clean = inputs(packet_id)
         assert not check_report(packet, clean, require_fact_ids=True)["errors"]
@@ -93,4 +94,10 @@ def test_all_existing_reports_have_references_without_changing_the_error():
                     spec = claim.check_spec.model_dump()
                     fields = ["fact_id"] if spec["kind"] == "numeric" else ["from_fact_id", "to_fact_id"]
                     assert all(spec[field] == references[claim.claim_id][field] for field in fields)
-            assert check_report(packet, report, require_fact_ids=True)["errors"]
+            pair = pairs[f"reports/{packet_id}/{path.name}"]
+            errors = check_report(packet, report, require_fact_ids=True)["errors"]
+            if pair["defect_type"] in {"arithmetic", "reporting_period"}:
+                assert errors
+            else:
+                # Contradictions and other semantic defects retain valid numerical references.
+                assert not errors

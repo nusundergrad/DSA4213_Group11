@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.1",
+  "report_id": "R_605505ea4278540ab6c4f56282b6f249",
+  "recommendation": "HOLD",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "Total net revenue for COMPANY_05 increased by 2.75% from $177,556 million in 2024 to $182,447 million in 2025.",
+      "evidence_ids": [
+        "EP_0005_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0005_F02",
+        "to_fact_id": "EP_0005_F01",
+        "metric": "revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "2.75",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "Net interest income increased by 3.09% from $92,583 million in 2024 to $95,443 million in 2025, driven by higher Markets net interest income, higher revolving balances in PRODUCT_26, higher wholesale deposit balances, and the impact of investment securities activity, partially offset by deposit margin compression and the impact of lower rates.",
+      "evidence_ids": [
+        "EP_0005_E01",
+        "EP_0005_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0005_F04",
+        "to_fact_id": "EP_0005_F03",
+        "metric": "net_interest_income",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "3.09",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "Noninterest revenue increased by 2.39% from $84,973 million in 2024 to $87,004 million in 2025, despite a decrease in other income due to the absence of a $7.9 billion net gain related to ENTITY_04 shares recorded in 2024.",
+      "evidence_ids": [
+        "EP_0005_E01",
+        "EP_0005_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0005_F06",
+        "to_fact_id": "EP_0005_F05",
+        "metric": "noninterest_revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "2.39",
+        "unit": "percent"
+      }
+    }
+  ],
+  "rationale": "COMPANY_05 shows modest revenue growth, with both net interest income and noninterest revenue contributing to the increase."
+}

@@ -1,6 +1,5 @@
 import copy
 import json
-from decimal import Decimal
 import shutil
 
 import pytest
@@ -30,33 +29,51 @@ def test_paired_inputs_and_intended_error(pair):
     with pytest.raises(ValueError, match="same public dataset"):
         load_agent_input(packet_path, flawed_path.parent.with_name("EP_9999") / flawed_path.name,
                          check_clean=False)
-    assert_masked(flawed, read(ROOT / "private/aliases.json"))
+    # The packet is shared unchanged; validate the generated report here.
+    assert_masked(flawed["initial_report"], read(ROOT / "private/aliases.json"))
     before, after = clean["initial_report"], flawed["initial_report"]
     assert make_report(before, pair) == after
     assert before["recommendation"] == after["recommendation"]
-    assert before["claims"][1:] == after["claims"][1:]
-    assert before["claims"][0]["evidence_ids"] == after["claims"][0]["evidence_ids"]
-    spec = after["claims"][0]["check_spec"]
+    target = pair["target_claim_id"]
+    rationale_only = all(e["path"] == ["rationale"] for e in pair["changes"])
+    assert (target is None) == rationale_only
+    if "claim_id" in pair["expected"]:
+        assert pair["expected"]["claim_id"] == target
+    assert [c for c in before["claims"] if c["claim_id"] != target] == [
+        c for c in after["claims"] if c["claim_id"] != target]
+    # Reversing the private edits restores the clean report exactly.
+    restored = copy.deepcopy(after)
+    for edit in reversed(pair["changes"]):
+        parent = restored
+        for key in edit["path"][:-1]:
+            parent = parent[key]
+        assert parent[edit["path"][-1]] == edit["after"]
+        parent[edit["path"][-1]] = copy.deepcopy(edit["before"])
+    restored["report_id"] = before["report_id"]
+    assert restored == before
     packet = Packet.model_validate(clean["evidence_packet"])
-    result = check_report(packet, Report.model_validate(after))
-    if pair["defect_type"] == "reporting_period":
-        assert spec["from_period"]["label"] == "FY2023"
-        assert spec["to_period"]["label"] == "FY2024"
-        assert spec["value"] == before["claims"][0]["check_spec"]["value"]
-        assert any("period" in error for error in result["errors"])
-        with pytest.raises(ValueError, match="period"):
-            load_agent_input(packet_path, flawed_path)
+    errors = check_report(packet, Report.model_validate(after))["errors"]
+    if pair["defect_type"] in {"arithmetic", "reporting_period"}:
+        assert len(errors) == 1  # One numerical defect, never a combined report.
     else:
-        assert result["errors"]  # strict clean validation still rejects these
-        with pytest.raises(ValueError, match="asserted"):
-            load_agent_input(packet_path, flawed_path)
-        if pair["defect_type"] == "wrong_number":
-            old = next(f for f in packet.facts if f.metric == spec["metric"]
-                       and f.period.model_dump(mode="json") == spec["from_period"])
-            actual = (Decimal(pair["injected"]["value"]) - Decimal(old.value)) / Decimal(old.value) * 100
-            assert abs(actual - Decimal(spec["value"])) <= Decimal("0.01")
-        else:
-            assert Decimal(spec["value"]) - Decimal(pair["expected"]["growth_percent"]) == 10
+        assert not errors  # Semantic defects need evidence-based review.
+
+
+def test_six_single_error_variants_per_packet():
+    from collections import Counter
+    assert len(PAIRS) == 90
+    assert Counter(p["packet_id"] for p in PAIRS) == {
+        f"EP_{i:04d}": 6 for i in range(1, 16)}
+    assert len({p["pair_id"] for p in PAIRS}) == 90
+    assert len({p["flawed_report_id"] for p in PAIRS}) == 90
+    for packet_id in {p["packet_id"] for p in PAIRS}:
+        variants = [p for p in PAIRS if p["packet_id"] == packet_id]
+        assert {p["error_index"] for p in variants} == set(range(1, 7))
+        assert {p["defect_type"] for p in variants} == {
+            "arithmetic", "reporting_period", "direct_factual_contradiction",
+            "material_omission", "citation_misattribution", "unsupported_inference"}
+        assert len(list((ROOT / "public/reports" / packet_id).glob("error_*.json"))) == 6
+    assert all(p["defect_type"] != "six_errors" for p in PAIRS)
 
 
 def test_rebuild_is_repeatable_and_does_not_overwrite_reviewed_inputs(tmp_path):
@@ -64,7 +81,7 @@ def test_rebuild_is_repeatable_and_does_not_overwrite_reviewed_inputs(tmp_path):
     for filename in ("pairs.json", "aliases.json"):
         save(tmp_path / "private" / filename, read(ROOT / "private" / filename))
     before = {p: p.read_bytes() for p in (tmp_path / "public").rglob("*.json")}
-    assert len(create_flawed_reports(tmp_path)) == 6
+    assert len(create_flawed_reports(tmp_path)) == 90
     assert all(p.read_bytes() == value for p, value in before.items())
     changed_path = tmp_path / "public" / PAIRS[0]["flawed_report_path"]
     changed = read(changed_path)
@@ -108,3 +125,62 @@ def test_bad_edits_and_private_data_are_rejected(tmp_path):
         load_agent_input(packet_path, report_path, check_clean=False)
     with pytest.raises(ValueError, match="same public dataset"):
         load_agent_input(ROOT / "private/packets/EP_0001.json", report_path, check_clean=False)
+
+
+@pytest.mark.parametrize("pair", [p for p in PAIRS
+    if p["error_index"] == 1 and int(p["packet_id"][3:]) <= 8],
+    ids=lambda p: p["packet_id"])
+def test_replaced_number_errors_are_single_evidence_backed_contradictions(pair):
+    assert pair["defect_type"] == "direct_factual_contradiction"
+    clean = read(ROOT / "public" / pair["clean_report_path"])
+    flawed = read(ROOT / "public" / pair["flawed_report_path"])
+    packet = read(ROOT / "public/evidence_packets" / (pair["packet_id"] + ".json"))
+    assert len(pair["changes"]) == 1
+    assert pair["changes"][0]["path"][-1] == "text"
+    assert clean["rationale"] == flawed["rationale"]
+    assert [c["check_spec"] for c in clean["claims"]] == [
+        c["check_spec"] for c in flawed["claims"]]
+    for source in pair["expected"]["source_quotes"]:
+        evidence = next(e["text"] for e in packet["evidence"]
+                        if e["evidence_id"] == source["evidence_id"])
+        assert " ".join(source["quote"].split()) in " ".join(evidence.split())
+    assert not (ROOT / "public/reports" / pair["packet_id"] /
+                "error_01_wrong_number.json").exists()
+
+
+def test_single_fact_omission_retains_independent_earnings_offset():
+    pair = next(p for p in PAIRS if p["pair_id"] == "PAIR_0032")
+    flawed = read(ROOT / "public" / pair["flawed_report_path"])
+    claim = next(c for c in flawed["claims"] if c["claim_id"] == "C4")
+    assert "$1.4 billion increase from structural cost savings" in claim["text"]
+    assert "structural cost savings" in flawed["rationale"]
+    assert "advantaged volume growth" not in claim["text"] + flawed["rationale"]
+
+
+def test_joint_venture_contradiction_preserves_partner_priority_risk():
+    pair = next(p for p in PAIRS if p["pair_id"] == "PAIR_0044")
+    flawed = read(ROOT / "public" / pair["flawed_report_path"])
+    claim = next(c for c in flawed["claims"] if c["claim_id"] == "C5")
+    assert "has full control" in claim["text"]
+    assert "partners may not share business priorities" in claim["text"]
+    assert "differing joint venture partner priorities" in flawed["rationale"]
+    assert "always share" not in json.dumps(flawed)
+
+
+@pytest.mark.parametrize("pair_id, retained, removed", [
+    ("PAIR_0022", "a higher average selling price per unit", "a lower average selling price per unit"),
+    ("PAIR_0078", "a $1.4 billion decrease from structural cost savings", "a $1.4 billion increase from structural cost savings"),
+])
+def test_contradiction_replaces_original_assertion(pair_id, retained, removed):
+    pair = next(p for p in PAIRS if p["pair_id"] == pair_id)
+    flawed = read(ROOT / "public" / pair["flawed_report_path"])
+    text = next(c["text"] for c in flawed["claims"] if c["claim_id"] == pair["target_claim_id"])
+    assert retained in text
+    assert removed not in text
+
+
+def test_rationale_targets_cannot_be_mislabeled_as_claims():
+    pair = copy.deepcopy(next(p for p in PAIRS if p["target_claim_id"] is None))
+    pair["target_claim_id"] = "C1"
+    with pytest.raises(ValueError, match="Rationale-only"):
+        make_report(read(ROOT / "public" / pair["clean_report_path"]), pair)
