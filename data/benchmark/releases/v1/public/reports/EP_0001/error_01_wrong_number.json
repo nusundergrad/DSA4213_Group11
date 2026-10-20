@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.1",
+  "report_id": "R_e952709375154b38a6dc60aaef05dd2f",
+  "recommendation": "HOLD",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "Total net sales for COMPANY_01 increased by 8.98% from $391,035 million in fiscal year 2024 to $426,161 million in fiscal year 2025 (Item 7, EP_0001_E01).",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0001_F02",
+        "to_fact_id": "EP_0001_F01",
+        "metric": "net_sales",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-10-01",
+          "end": "2024-09-28"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-09-29",
+          "end": "2025-09-27"
+        },
+        "value": "8.98",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "The Services sales category experienced a 13.51% increase in net sales, rising from $96,169 million in fiscal year 2024 to $109,158 million in fiscal year 2025 (Item 7, EP_0001_E01). This growth was primarily driven by higher net sales from advertising, PRODUCT_07, and cloud services (Item 7, EP_0001_E02).",
+      "evidence_ids": [
+        "EP_0001_E01",
+        "EP_0001_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0001_F04",
+        "to_fact_id": "EP_0001_F03",
+        "metric": "services_net_sales",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-10-01",
+          "end": "2024-09-28"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-09-29",
+          "end": "2025-09-27"
+        },
+        "value": "13.51",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "Conversely, the Wearables, Home and Accessories sales category saw a decrease in net sales of 3.56%, from $37,005 million in fiscal year 2024 to $35,686 million in fiscal year 2025 (Item 7, EP_0001_E01). This decline was primarily due to lower net sales of Accessories and Wearables (Item 7, EP_0001_E02).",
+      "evidence_ids": [
+        "EP_0001_E01",
+        "EP_0001_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0001_F06",
+        "to_fact_id": "EP_0001_F05",
+        "metric": "wearables_home_accessories_net_sales",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-10-01",
+          "end": "2024-09-28"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-09-29",
+          "end": "2025-09-27"
+        },
+        "value": "-3.56",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C4",
+      "text": "COMPANY_01's operations and performance are significantly dependent on global and regional economic conditions, as sales outside the U.S. represent a majority of total net sales and most supplier facilities are located outside the U.S. (Item 1A, EP_0001_E03). Adverse macroeconomic conditions, such as slow growth, inflation, or higher interest rates, can negatively impact consumer confidence and demand for the company's products and services (Item 1A, EP_0001_E03).",
+      "evidence_ids": [
+        "EP_0001_E03"
+      ],
+      "check_spec": null
+    }
+  ],
+  "rationale": "COMPANY_01 demonstrated overall net sales growth in fiscal year 2025, driven by strong performance in its Services sales category. However, the decline in the Wearables, Home and Accessories sales category indicates some areas of weakness. Furthermore, the company's significant exposure to global economic conditions presents a material risk. Given the mixed performance across sales categories and the identified macroeconomic risks, a HOLD recommendation is appropriate at this time."
+}

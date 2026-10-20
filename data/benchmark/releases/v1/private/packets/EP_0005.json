@@ -1,0 +1,173 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0005",
+  "company_alias": "COMPANY_05",
+  "company": {
+    "name": "JPMorgan Chase & Co.",
+    "ticker": "JPM"
+  },
+  "fiscal_year": 2025,
+  "filing": {
+    "form": "10-K",
+    "accession_number": "0001628280-26-008131",
+    "filing_date": "2026-02-13",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/jpm-20251231.htm"
+  },
+  "source_id": "SRC_05",
+  "evidence": [
+    {
+      "evidence_id": "EP_0005_E01",
+      "section": "Item 7",
+      "text": "Revenue\nYear ended December 31,\n(in millions) 2025 2024 2023\nInvestment banking fees $ 9,615 $ 8,910 $ 6,519 \nPrincipal transactions  27,212  24,787  24,460 \nLending- and deposit-\nrelated fees  9,093  7,606  7,413 \nAsset management fees  20,327  17,801  15,220 \nCommissions and other fees  8,539  7,530  6,836 \nInvestment securities losses  (57)  (1,021)  (3,180) \nMortgage fees and related \nincome  1,381  1,401  1,176 \nCard income  4,720  5,497  4,784 \nOther income(a)  6,174  12,462 (b) (c)  5,609 (d)\nNoninterest revenue  87,004  84,973  68,837 \nNet interest income  95,443  92,583  89,267 \nTotal net revenue $ 182,447 $ 177,556 $ 158,104 \n(a) Included operating lease income of $3.8 billion, $2.8 billion and \n$2.8 billion for the years ended December 31, 2025, 2024 and \n2023, respectively. Refer to Note 6 for additional information.\n(b) Effective January 1, 2024, as a result of adopting updates to the \nAccounting for Investments in Tax Credit Structures guidance, \nthe amortization of certain of the Firm’s alternative energy tax-\noriented investments that was previously recognized in other \nincome is now recognized in income tax expense. Refer to Notes \n1, 6, 14 and 25 for additional information.\n(c) Included the net gain related to Visa shares of $7.9 billion \nrecorded in the second quarter of 2024. Refer to Note 6 for \nadditional information. \n(d) Included the estimated bargain purchase gain of $2.8 billion for \nthe year ended December 31, 2023 associated with the First \nRepublic acquisition. Refer to Notes 6 and 34 for additional \ninformation.",
+      "locator": "PDF p. 53; printed p. 51; Reported revenue table, year headings, USD millions unit, and all table footnotes; not managed revenue",
+      "source_span": [
+        225395,
+        226962
+      ]
+    },
+    {
+      "evidence_id": "EP_0005_E02",
+      "section": "Item 7",
+      "text": "Other income decreased, reflecting: \n• the absence in Corporate of the $7.9 billion net gain \nrelated to Visa shares recorded in the second \nquarter of 2024,\npartially offset by\n• higher auto operating lease income in CCB due to \ngrowth in volume,\n• the $588 million First Republic-related gain \nrecorded in the first quarter of 2025 in Corporate, \nand\n• lower losses related to certain equity investments in \nCIB.\nRefer to CCB and CIB segment and Corporate results \non pages 65–68, pages 69–75 and pages 80–82, \nrespectively, for additional information; Note 6 for \nadditional information on Visa shares; and Notes 6 and \n34 for additional information on the First Republic \nacquisition.\nNet interest income increased driven by higher \nMarkets net interest income, higher revolving balances \nin Card Services, higher wholesale deposit balances, \nand the impact of investment securities activity. These \nfactors were largely offset by deposit margin \ncompression and the impact of lower rates.",
+      "locator": "PDF p. 54; printed p. 52; Other income comparison and net interest income drivers, including deposit margin compression and lower rates",
+      "source_span": [
+        230481,
+        231474
+      ]
+    },
+    {
+      "evidence_id": "EP_0005_E03",
+      "section": "Item 1A",
+      "text": "• Market risks, including the effects that unfavorable \neconomic and market events and conditions, political \ndevelopments, changes in interest rates and credit \nspreads, and market fluctuations could have on \nJPMorganChase’s businesses, investments and \nmarket-making positions, as well as on its earnings \nand liquidity and capital levels.\n• Credit risks, including the effects from adverse \nchanges in the financial condition of clients, \ncustomers, counterparties, central counterparties \nand other market participants; the potential for \nlosses due to declines in the value of collateral; and \npotential negative impacts from concentrations of \ncredit risk with respect to clients, customers, \ncounterparties and other market participants.",
+      "locator": "PDF p. 11; printed p. 9; Complete market-risk and credit-risk summary bullets",
+      "source_span": [
+        51932,
+        52676
+      ]
+    },
+    {
+      "evidence_id": "EP_0005_E04",
+      "section": "Item 7",
+      "text": "Provision for credit losses\nYear ended December 31,\n(in millions) 2025 2024 2023\nConsumer, excluding credit card $ 693 $ 631 $ 935 \nCredit card  10,829  9,292  6,048 \nTotal consumer  11,522  9,923  6,983 \nWholesale  2,718  731  2,299 \nInvestment securities  (28)  24  38 \nTotal provision for credit losses $ 14,212 $ 10,678 $ 9,320 \n2025 compared with 2024 \nThe provision for credit losses was $14.2 billion. Net \ncharge-offs were $9.8 billion and the net addition to \nthe allowance for credit losses was $4.4 billion. \nThe provision for credit losses included:\n• $11.5 billion in consumer, consisting of net charge-\noffs of $8.3 billion, predominantly driven by Card \nServices, reflecting loan growth, and a net addition \nto the allowance for credit losses of $3.3 billion \nwhich was driven by $2.2 billion related to the Apple \nCard transaction, loan growth in Card Services and \nthe impact of changes in the Firm's weighted-\naverage macroeconomic outlook, partially offset by \nreduced borrower uncertainty, and\n• $2.7 billion in wholesale, driven by net increases in \nthe loan and lending-related commitment portfolios, \nnet changes in credit quality of client-specific \nexposures, an update to loss assumptions on certain \nleveraged loans, and estimated losses related to \nborrower fraud in certain secured lending facilities, \npartially offset by the impact of changes in the Firm's \nweighted-average macroeconomic outlook. Net \ncharge-offs were $1.6 billion and the net addition to \nthe allowance for credit losses was $1.1 billion.\nIn the prior year, the provision was $10.7 billion, net \ncharge-offs were $8.6 billion and the net addition to \nthe allowance for credit losses was $2.0 billion.",
+      "locator": "PDF p. 55; printed p. 53; Provision for credit losses table with year/unit headings and comparison discussion",
+      "source_span": [
+        232171,
+        233871
+      ]
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0005_F01",
+      "evidence_id": "EP_0005_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "182447",
+      "unit": "USD_million",
+      "source_value": "182,447",
+      "locator": "Total net revenue; FY2025 column, year ended December 31, 2025; reported basis"
+    },
+    {
+      "fact_id": "EP_0005_F02",
+      "evidence_id": "EP_0005_E01",
+      "metric": "revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "177556",
+      "unit": "USD_million",
+      "source_value": "177,556",
+      "locator": "Total net revenue; FY2024 column, year ended December 31, 2024; reported basis"
+    },
+    {
+      "fact_id": "EP_0005_F03",
+      "evidence_id": "EP_0005_E01",
+      "metric": "net_interest_income",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "95443",
+      "unit": "USD_million",
+      "source_value": "95,443",
+      "locator": "Net interest income; FY2025 column, year ended December 31, 2025; reported basis"
+    },
+    {
+      "fact_id": "EP_0005_F04",
+      "evidence_id": "EP_0005_E01",
+      "metric": "net_interest_income",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "92583",
+      "unit": "USD_million",
+      "source_value": "92,583",
+      "locator": "Net interest income; FY2024 column, year ended December 31, 2024; reported basis"
+    },
+    {
+      "fact_id": "EP_0005_F05",
+      "evidence_id": "EP_0005_E01",
+      "metric": "noninterest_revenue",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "87004",
+      "unit": "USD_million",
+      "source_value": "87,004",
+      "locator": "Noninterest revenue; FY2025 column, year ended December 31, 2025; reported basis"
+    },
+    {
+      "fact_id": "EP_0005_F06",
+      "evidence_id": "EP_0005_E01",
+      "metric": "noninterest_revenue",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "84973",
+      "unit": "USD_million",
+      "source_value": "84,973",
+      "locator": "Noninterest revenue; FY2024 column, year ended December 31, 2024; reported basis"
+    },
+    {
+      "fact_id": "EP_0005_F07",
+      "evidence_id": "EP_0005_E04",
+      "metric": "provision_for_credit_losses",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "14212",
+      "unit": "USD_million",
+      "source_value": "14,212",
+      "locator": "Total provision for credit losses; FY2025 column, year ended December 31, 2025; reported basis"
+    },
+    {
+      "fact_id": "EP_0005_F08",
+      "evidence_id": "EP_0005_E04",
+      "metric": "provision_for_credit_losses",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "10678",
+      "unit": "USD_million",
+      "source_value": "10,678",
+      "locator": "Total provision for credit losses; FY2024 column, year ended December 31, 2024; reported basis"
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1",
+  "packet_id": "EP_0011",
+  "company_alias": "COMPANY_11",
+  "company": {
+    "name": "Exxon Mobil Corporation",
+    "ticker": "XOM"
+  },
+  "fiscal_year": 2025,
+  "filing": {
+    "form": "10-K",
+    "accession_number": "0000034088-26-000045",
+    "filing_date": "2026-02-18",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/xom-20251231.htm"
+  },
+  "source_id": "SRC_11",
+  "evidence": [
+    {
+      "evidence_id": "EP_0011_E01",
+      "section": "Item 7",
+      "text": "Upstream Financial Results\n(millions of dollars) 2025 2024 2023\nEarnings (loss) (U.S. GAAP)    \nUnited States 5,063 6,426 4,202 \nNon-U.S. 16,291 18,964 17,106 \nTotal 21,354 25,390 21,308 \nIdentified Items \nUnited States (471) (360) (1,489)\nNon-U.S. (422) 575 (812)\nTotal (893) 215 (2,301)\nEarnings (loss) excluding Identified Items (Non-GAAP)\nUnited States 5,534 6,786 5,691 \nNon-U.S. 16,713 18,389 17,918 \nTotal 22,247 25,175 23,609 \n2025 Upstream Earnings Driver Analysis \n(millions of dollars)\nPrice – Lower realizations decreased earnings by $6.1 billion, primarily driven by lower crude prices as record demand was more than offset by increased industry supply.\nAdvantaged Volume Growth – Increased earnings by $1.9 billion, mainly driven by record production in Permian and Guyana.\nBase Volume – Decreased earnings by $0.7 billion as a result of non-strategic asset divestments.\nStructural Cost Savings – Increased earnings by $1.4 billion.\nExpenses – Decreased earnings by $0.6 billion, primarily higher depreciation from the Tengiz expansion.\nOther – Increased earnings by $0.6 billion, mainly driven by favorable tax and foreign exchange impacts.\nTiming Effects – Favorable timing effects from derivatives mark-to-market impacts increased earnings by $0.6 billion.\nIdentified Items  – 2024 $0.2 billion gain mainly due to Argentina divestment, partly offset by Nigeria divestment and U.S. impairment; 2025 $(0.9) billion loss mainly due to\nasset impairments.\n Refer to Frequently Used Terms for definition of Structural Cost Savings, Identified Items, and Earnings (loss) excluding Identified Items.\n(1)\n(1) \n(1)\n(1) \n(1)\n(1)",
+      "source_span": [
+        167180,
+        168814
+      ],
+      "locator": "PDF pages [47]; Upstream GAAP and non-GAAP earnings table and complete FY2025 earnings driver discussion; printed p. 45"
+    },
+    {
+      "evidence_id": "EP_0011_E02",
+      "section": "Item 7",
+      "text": "Sources and Uses of Cash  \n (millions of dollars) 2025 2024 2023\nNet cash provided by/(used in)    \nOperating activities 51,970 55,022 55,369 \nInvesting activities (25,927) (19,938) (19,274)\nFinancing activities (39,081) (42,789) (34,297)\nEffect of exchange rate changes 532 (676) 105 \nIncrease/(decrease) in cash and cash equivalents (12,506) (8,381) 1,903 \nTotal cash and cash equivalents (December 31) 10,681 23,187 31,568 \nTotal cash and cash equivalents were $10.7 billion at the end of 2025, down $12.5 billion from the prior year. The major sources of funds in 2025 were net income including\nnoncontrolling interests of $29.8 billion, the adjustment for the noncash provision of $26.0 billion for depreciation and depletion, proceeds from asset sales of $3.2 billion, and\nother investing activities of $3.4 billion. The major uses of funds included spending for additions to property, plant, and equipment of $28.4 billion; dividends to shareholders of\n$17.2 billion; the purchase of ExxonMobil stock of $20.3 billion; additional investments and advances of $4.1 billion; and a change in working capital of $7.7 billion.",
+      "source_span": [
+        194369,
+        195496
+      ],
+      "locator": "PDF pages [60]; Cash flows and year-end cash table with years and units and FY2025 sources/uses discussion; printed p. 58"
+    },
+    {
+      "evidence_id": "EP_0011_E03",
+      "section": "Item 1A",
+      "text": "Supply and Demand\nThe oil, gas, and petrochemical businesses are fundamentally commodity businesses. This means ExxonMobil’s operations and earnings may be significantly affected by\nchanges in oil, gas, and petrochemical prices and by changes in margins on refined products. Oil, gas, petrochemical, and product prices and margins in turn depend on local,\nregional, and global events or conditions that affect supply and demand for the relevant commodity or product. Any material decline in oil or natural gas prices could have a\nmaterial adverse effect on the Company’s operations, results, financial condition, and proved reserves, especially in the Upstream segment. On the other hand, a material\nincrease in oil or natural gas prices could have a material adverse effect on the Company’s operations and results, especially in the Energy Products, Chemical Products, and\nSpecialty Products segments. Our pursuit of lower-emission and other new business opportunities, including carbon capture and storage, hydrogen and ammonia, lower-\nemission fuels, Proxxima  resin systems, carbon materials, low-carbon data centers, and lithium also depends on the growth and development of markets for those products\nand services, including implementation of supportive and stable government policies and developments in existing and new technology to enable those products and services to\nbe provided on a cost-effective basis at commercial scale. See “Climate Change and Energy Transition” in this Item 1A.",
+      "source_span": [
+        12893,
+        14391
+      ],
+      "locator": "PDF pages [4]; Commodity price and margin risks and conditions for lower-emission businesses"
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "EP_0011_F01",
+      "evidence_id": "EP_0011_E01",
+      "metric": "upstream_earnings_gaap",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "21354",
+      "unit": "USD_million",
+      "source_value": "21,354",
+      "locator": "Total; Earnings (loss) (U.S. GAAP); FY2025 column"
+    },
+    {
+      "fact_id": "EP_0011_F02",
+      "evidence_id": "EP_0011_E01",
+      "metric": "upstream_earnings_gaap",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "25390",
+      "unit": "USD_million",
+      "source_value": "25,390",
+      "locator": "Total; Earnings (loss) (U.S. GAAP); FY2024 column"
+    },
+    {
+      "fact_id": "EP_0011_F03",
+      "evidence_id": "EP_0011_E01",
+      "metric": "upstream_earnings_excluding_identified_items_non_gaap",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "22247",
+      "unit": "USD_million",
+      "source_value": "22,247",
+      "locator": "Total; Earnings excluding Identified Items (Non-GAAP); FY2025 column"
+    },
+    {
+      "fact_id": "EP_0011_F04",
+      "evidence_id": "EP_0011_E01",
+      "metric": "upstream_earnings_excluding_identified_items_non_gaap",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "25175",
+      "unit": "USD_million",
+      "source_value": "25,175",
+      "locator": "Total; Earnings excluding Identified Items (Non-GAAP); FY2024 column"
+    },
+    {
+      "fact_id": "EP_0011_F05",
+      "evidence_id": "EP_0011_E02",
+      "metric": "operating_cash_flow",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "value": "51970",
+      "unit": "USD_million",
+      "source_value": "51,970",
+      "locator": "Operating activities; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0011_F06",
+      "evidence_id": "EP_0011_E02",
+      "metric": "operating_cash_flow",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-01-01",
+        "end": "2024-12-31"
+      },
+      "value": "55022",
+      "unit": "USD_million",
+      "source_value": "55,022",
+      "locator": "Operating activities; FY2024 column"
+    },
+    {
+      "fact_id": "EP_0011_F07",
+      "evidence_id": "EP_0011_E02",
+      "metric": "cash_and_cash_equivalents",
+      "period": {
+        "label": "FY2025",
+        "start": "2025-12-31",
+        "end": "2025-12-31"
+      },
+      "value": "10681",
+      "unit": "USD_million",
+      "source_value": "10,681",
+      "locator": "Total cash and cash equivalents (December 31); point-in-time balance; FY2025 column"
+    },
+    {
+      "fact_id": "EP_0011_F08",
+      "evidence_id": "EP_0011_E02",
+      "metric": "cash_and_cash_equivalents",
+      "period": {
+        "label": "FY2024",
+        "start": "2024-12-31",
+        "end": "2024-12-31"
+      },
+      "value": "23187",
+      "unit": "USD_million",
+      "source_value": "23,187",
+      "locator": "Total cash and cash equivalents (December 31); point-in-time balance; FY2024 column"
+    }
+  ]
+}
