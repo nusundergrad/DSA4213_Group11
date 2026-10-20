@@ -129,7 +129,7 @@ Within-case tone comparisons use `case_id`; control/error comparisons use privat
 | `architecture` | `baseline`, `debate`, `verification`, `hybrid` |
 | `tone` | `underconfident`, `neutral`, `overconfident` |
 | `content_label` — private | `unmodified`, `injected_error` |
-| `defect_type` | `wrong_number`, `arithmetic`, `reporting_period`, `citation`, `contradiction`, `omission`, `unsupported_inference` |
+| `defect_type` | `wrong_number`, `arithmetic`, `reporting_period`, `citation_misattribution`, `direct_factual_contradiction`, `material_omission`, `unsupported_inference` |
 | verifier `status` | `PASS`, `FAIL`, `NOT_CHECKABLE` |
 | revision `action` | `DEFEND`, `REVISE`, `RETRACT` |
 | Trader `assessment` | `ACCEPT`, `REJECT` |

@@ -11,6 +11,7 @@ from src.benchmark.prepare import ROOT, assert_masked, check_report, load_agent_
 from src.benchmark.schemas import Packet, Report
 
 
+NUMERIC_DEFECTS = ("wrong_number", "arithmetic", "reporting_period")
 PAIRS = read(ROOT / "private/pairs.json")["pairs"]
 
 
@@ -34,15 +35,22 @@ def test_paired_inputs_and_intended_error(pair):
     before, after = clean["initial_report"], flawed["initial_report"]
     assert make_report(before, pair) == after
     assert before["recommendation"] == after["recommendation"]
-    assert before["claims"][1:] == after["claims"][1:]
-    assert before["claims"][0]["evidence_ids"] == after["claims"][0]["evidence_ids"]
-    spec = after["claims"][0]["check_spec"]
+    target = int(pair["target_claim_id"].removeprefix("C")) - 1
+    assert before["claims"][target]["claim_id"] == pair["target_claim_id"]
+    assert [c for i, c in enumerate(before["claims"]) if i != target] == \
+        [c for i, c in enumerate(after["claims"]) if i != target]
+    assert before["claims"][target]["text"] != after["claims"][target]["text"]
+    if pair["defect_type"] != "citation_misattribution":
+        assert before["claims"][target]["evidence_ids"] == after["claims"][target]["evidence_ids"]
+    if pair["defect_type"] not in NUMERIC_DEFECTS:
+        return                                    # textual defects have no structured check to validate
+    spec = after["claims"][target]["check_spec"]
     packet = Packet.model_validate(clean["evidence_packet"])
     result = check_report(packet, Report.model_validate(after))
     if pair["defect_type"] == "reporting_period":
-        assert spec["from_period"]["label"] == "FY2023"
-        assert spec["to_period"]["label"] == "FY2024"
-        assert spec["value"] == before["claims"][0]["check_spec"]["value"]
+        assert spec["from_period"] == pair["injected"]["from_period"]
+        assert spec["to_period"] == pair["injected"]["to_period"]
+        assert spec["value"] == before["claims"][target]["check_spec"]["value"]
         assert any("period" in error for error in result["errors"])
         with pytest.raises(ValueError, match="period"):
             load_agent_input(packet_path, flawed_path)
@@ -51,12 +59,11 @@ def test_paired_inputs_and_intended_error(pair):
         with pytest.raises(ValueError, match="asserted"):
             load_agent_input(packet_path, flawed_path)
         if pair["defect_type"] == "wrong_number":
-            old = next(f for f in packet.facts if f.metric == spec["metric"]
-                       and f.period.model_dump(mode="json") == spec["from_period"])
+            old = next(f for f in packet.facts if f.fact_id == spec["from_fact_id"])
             actual = (Decimal(pair["injected"]["value"]) - Decimal(old.value)) / Decimal(old.value) * 100
             assert abs(actual - Decimal(spec["value"])) <= Decimal("0.01")
         else:
-            assert Decimal(spec["value"]) - Decimal(pair["expected"]["growth_percent"]) == 10
+            assert abs(Decimal(spec["value"]) - Decimal(pair["expected"]["growth_percent"])) == 10
 
 
 def test_rebuild_is_repeatable_and_does_not_overwrite_reviewed_inputs(tmp_path):
@@ -64,7 +71,7 @@ def test_rebuild_is_repeatable_and_does_not_overwrite_reviewed_inputs(tmp_path):
     for filename in ("pairs.json", "aliases.json"):
         save(tmp_path / "private" / filename, read(ROOT / "private" / filename))
     before = {p: p.read_bytes() for p in (tmp_path / "public").rglob("*.json")}
-    assert len(create_flawed_reports(tmp_path)) == 6
+    assert len(create_flawed_reports(tmp_path)) == len(PAIRS)
     assert all(p.read_bytes() == value for p, value in before.items())
     changed_path = tmp_path / "public" / PAIRS[0]["flawed_report_path"]
     changed = read(changed_path)

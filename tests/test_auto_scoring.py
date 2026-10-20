@@ -14,7 +14,7 @@ CASES, MANIFEST = build_cases()
 
 def _case(defect_type, packet="EP_0001"):
     return next(c for c in CASES.values() if c.is_flawed and c.defect["defect_type"] == defect_type
-                and MANIFEST[c.case_id]["packet_path"].endswith(packet + ".json"))
+                and (packet is None or MANIFEST[c.case_id]["packet_path"].endswith(packet + ".json")))
 
 
 def _report(path):
@@ -97,6 +97,12 @@ def test_verifier_detection_requires_matching_defect_type():
     assert auto_verifier_detected(_run(case, "verification", verifier=_checks("FAIL", None)), case) is None
     assert auto_verifier_detected(_run(case, "verification", verifier=_checks("FAIL", "reporting_period")), case) is None
     assert auto_verifier_detected(_run(case, "verification", verifier=_checks("PASS", None)), case) is False
+    # graph verifier output: statuses only, no defect type
+    bare = lambda status, claim="C1": dict(claim_statuses=[dict(claim_id=claim, status=status)], claim_checks=[])
+    assert auto_verifier_detected(_run(case, "verification", verifier=bare("FAIL")), case) is True
+    assert auto_verifier_detected(_run(case, "verification", verifier=bare("PASS")), case) is False
+    reasoning = _case("unsupported_inference", packet=None)
+    assert auto_verifier_detected(_run(reasoning, "verification", verifier=bare("FAIL", reasoning.defect["target_claim_id"])), reasoning) is None
     assert auto_verifier_detected(_run(case, "verification", verifier=_checks("NOT_CHECKABLE", None)), case) is False
 
 
@@ -140,7 +146,8 @@ def test_end_to_end_metrics_on_real_cases_include_wrong_number():
             runs.append(run)
             scores.append(auto_score_run(run, case, load_clean_report(MANIFEST[case.case_id]) if case.is_flawed else None))
     by_cat = M.by_failure_category(runs, scores)
-    assert by_cat["wrong_number"]["baseline"]["coverage"]["flawed_total"] == 2
+    n_wrong = sum(c.is_flawed and c.defect["defect_type"] == "wrong_number" for c in CASES.values())
+    assert by_cat["wrong_number"]["baseline"]["coverage"]["flawed_total"] == n_wrong
     assert by_cat["wrong_number"]["baseline"]["far"]["rate"] == 1.0
     report = M.format_report(runs, scores, {c.case_id: c for c in CASES.values()})
     assert "| wrong_number |" in report

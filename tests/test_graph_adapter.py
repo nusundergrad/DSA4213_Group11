@@ -70,7 +70,7 @@ def test_verifier_bools_become_statuses():
     run = record_to_run(rec, CASES)
     assert run.architecture == "verification" and run.risk_manager_turns is None and run.transcript is None
     assert run.verifier["claim_statuses"] == [dict(claim_id="C1", status="FAIL"), dict(claim_id="C2", status="PASS")]
-    assert _score(run).verifier_detected is None          # FAIL without a defect type -> human check
+    assert _score(run).verifier_detected is True          # numeric defect: bare FAIL on the target counts
 
 
 def test_failed_record_is_kept_but_marked_failed():
@@ -105,3 +105,31 @@ def test_unstructured_runs_do_not_enter_false_challenge_rate():
     score = auto_score_run(run, CASES[run.case_id])
     m = M.primary_metrics([run], [score], architectures=("debate",))["debate"]
     assert m["false_challenge"]["n"] == 0
+
+
+def test_failed_record_without_initial_report_is_recovered_from_report_path():
+    rec = {k: v for k, v in RECORD.items() if k not in ("initial_report", "final_reports")}
+    rec.update(status="failed", error="boom", report_path=str(next(
+        Path(__file__).parents[1].joinpath("data/benchmark/public/reports/EP_0001").glob("error_03_arithmetic.json"))))
+    run = record_to_run(rec, CASES)
+    assert run.status == "failed" and run.case_id == record_to_run(RECORD, CASES).case_id
+
+
+def test_load_records_skips_case_lists_in_the_output_folder(tmp_path):
+    from graph_adapter import load_records
+    (tmp_path / "cases.json").write_text('[{"evidence_packet": "EP_0001", "report": "x", "situation": 1}]')
+    (tmp_path / "run.json").write_text(json.dumps(RECORD))
+    assert len(load_records(tmp_path)) == 1
+
+
+def test_adjudication_completes_a_pending_run_and_worksheet_lists_the_gap():
+    from auto_scoring import pending_worksheet
+    run = record_to_run(RECORD, CASES)
+    sc = _score(run)
+    assert sc.scoring_status == "pending"
+    need = pending_worksheet([run], [sc], CASES)[run.run_id]["fill_in"]
+    assert set(need) == {"risk_manager_detected", "materially_used_by_trader"} and "defect_resolved" not in need
+    done = _score(run, adjudication=dict(risk_manager_detected=False, materially_used_by_trader=True))
+    assert done.scoring_status == "complete" and done.defect_resolved is True and done.false_acceptance is False
+    with pytest.raises(ValueError, match="unknown adjudication"):
+        _score(run, adjudication=dict(bogus=True))

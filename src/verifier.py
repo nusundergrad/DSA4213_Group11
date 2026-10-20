@@ -1,11 +1,17 @@
+import math
 # from difflib import SequenceMatcher
 # from itertools import combinations
 
 def unit_to_num(unit):
+    """Scale factor of a unit label; units with no scale word (percent, USD_per_share) are 1."""
+    unit = (unit or "").lower()
+    if "billion" in unit:
+        return 1000000000
     if "million" in unit:
         return 1000000
-    elif "billion" in unit:
-        return 1000000000
+    if "thousand" in unit:
+        return 1000
+    return 1
 
 def get_pct_change(earlier, later):
     return ((later - earlier) / earlier) * 100
@@ -13,7 +19,7 @@ def get_pct_change(earlier, later):
 def check_numeric_match(num, fact):
     metric_match = num.metric == fact.metric
     period_match = num.period == fact.period
-    val_match = float(num.value)*unit_to_num(num.unit) == float(fact.value)*unit_to_num(fact.unit)
+    val_match = math.isclose(float(num.value)*unit_to_num(num.unit), float(fact.value)*unit_to_num(fact.unit), rel_tol=1e-9)
     return all((metric_match, period_match, val_match))
 
 def check_pc_match(num, from_fact, to_fact):

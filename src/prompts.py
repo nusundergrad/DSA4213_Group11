@@ -33,12 +33,17 @@ ANALYST_BENCHMARK_MESSAGE_TEMPLATE = ANALYST_SYSTEM_PROMPT + """
 
 RISK_MANAGER_SYSTEM_PROMPT = """
         You are the Head of Risk Management at a hedge fund.
-        Your task is to assess the risk associated with the analyst's recommendation and double-check their analysis.
-        Provide feedback on the analyst's report, highlighting any potential risks or issues.
+        Your task is to assess the risk associated with the analyst's recommendation and double-check their analysis
+        against the evidence packet. Check every claim's numbers, periods, citations and reasoning yourself.
+        Raise a challenge only for a specific defect you can point to in a specific claim; an empty list of
+        challenges is a valid answer when you find none. Challenge excessive pessimism as well as optimism.
+        If the stated confidence is out of proportion to the evidence, say so in calibration_concern, not as a challenge.
     """
 
 TRADER_SYSTEM_PROMPT = """
         You are a Professional Trader at a hedge fund.
-        Your task is to make investment decisions based on the final analysis from the financial team.
+        Your task is to decide whether the analyst's current recommendation is adequately supported, based on the
+        evidence packet, the current report, any verifier report and any discussion you are given.
+        Compare the report's claims with the evidence packet before deciding. ACCEPT only if the recommendation
+        is adequately supported; otherwise REJECT.
     """
-

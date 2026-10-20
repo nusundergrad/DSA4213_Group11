@@ -12,9 +12,10 @@ score is ``pending`` instead of silently wrong.
     messages                        ->   transcript (+ unstructured risk_manager_turns)
     verifier_reports[0].claim_results -> verifier.claim_statuses (PASS / FAIL / NOT_CHECKABLE)
 
-Not available from the graph today, so left empty: tone (defaults to neutral), support_score,
-relied_on_claim_ids, structured Risk Manager challenges, claim_checks (the type of a verifier
-FAIL) and usage. See docs/evaluation.md.
+Read from the record when present (run_batch writes them): tone, support_score, relied_on_claim_ids,
+structured Risk Manager turns, usage and config. Older records without them stay empty (pending scores,
+never wrong ones). Still not produced: claim_checks (the defect type of a verifier FAIL). See
+docs/evaluation.md.
 
 CLI:
     python src/evaluation/graph_adapter.py output/ --out outputs/eval_runs
@@ -100,8 +101,15 @@ def build_trader(record: dict) -> dict:
     return trader
 
 
+def _report_from_path(record: dict) -> dict:
+    """A failed run has no initial_report; recover it from the report file the run was given."""
+    path = record.get("report_path")
+    return json.loads(Path(path).read_text(encoding="utf-8")) if path and Path(path).is_file() else {}
+
+
 def record_to_run(record: dict, cases: dict, *, tone: str = "neutral") -> RunRecord:
-    initial = record.get("initial_report") or {}
+    tone = record.get("tone") or tone          # records written by run_batch carry their tone
+    initial = record.get("initial_report") or _report_from_path(record)
     report_id = initial.get("report_id")
     case_id = case_id_for(report_id) if report_id else None
     if case_id not in cases:
@@ -119,12 +127,16 @@ def record_to_run(record: dict, cases: dict, *, tone: str = "neutral") -> RunRec
         trader=build_trader(record),
         verifier=build_verifier(record) if architecture in ("verification", "hybrid") else None,
         risk_manager_turns=build_risk_manager_turns(record, transcript) if has_debate else None,
-        analyst_revision_turns=[t for t in transcript if t["speaker"] == "analyst"] if has_debate else None,
+        analyst_revision_turns=(record.get("analyst_revision_turns") or
+                                [t for t in transcript if t["speaker"] == "analyst"]) if has_debate else None,
         transcript=transcript if has_debate else None,
-        usage=record.get("usage") or {},
+        usage={k: v for k, v in (record.get("usage") or {}).items() if k != "per_call"},
         status="completed" if completed else "failed",
         error=None if completed else {"message": record.get("error")},
-        started_at=stamp, config=dict(situation=record["situation"], debate_rounds=record.get("debate_round")),
+        started_at=stamp,
+        config={**(record.get("config") or {}), "situation": record["situation"],
+                "debate_rounds": record.get("debate_round"),
+                "confidence_framing": record.get("confidence_framing")},
     )
 
 
@@ -132,7 +144,9 @@ def load_records(source) -> list:
     """A record file, or a folder searched recursively for run_batch output (*.json)."""
     source = Path(source)
     files = [source] if source.is_file() else sorted(source.rglob("*.json"))
-    return [json.loads(f.read_text(encoding="utf-8")) for f in files]
+    records = [json.loads(f.read_text(encoding="utf-8")) for f in files]
+    # a folder also holds case lists (cases.json); a record is a dict with a situation
+    return [r for r in records if isinstance(r, dict) and "situation" in r] if source.is_dir() else records
 
 
 def adapt_all(records: list, cases: dict, *, tone: str = "neutral", keep: str = "error") -> list:
@@ -152,20 +166,32 @@ def adapt_all(records: list, cases: dict, *, tone: str = "neutral", keep: str = 
 
 if __name__ == "__main__":
     import argparse
-    from auto_scoring import auto_score_run, pending_report
+    from auto_scoring import auto_score_run, pending_report, pending_worksheet
     ap = argparse.ArgumentParser()
     ap.add_argument("source", help="a run_batch record file, or the output folder")
     ap.add_argument("--out", required=True)
     ap.add_argument("--tone", default="neutral")
     ap.add_argument("--keep-latest", action="store_true")
+    ap.add_argument("--adjudications", help='JSON {run_id: {"risk_manager_detected": true, ...}} from a human review')
+    ap.add_argument("--rm-mode", choices=("suggest", "accept"), default="suggest",
+                    help="accept: score a Risk Manager challenge with the right claim, defect type and an expected "
+                         "value/period as detected (default suggest leaves it pending for a human)")
+    ap.add_argument("--unrelied-is-immaterial", action="store_true",
+                    help="treat an ACCEPT that does not cite the target claim as not materially used "
+                         "(the graph does not report relied_on_claim_ids; state this assumption in the report)")
     args = ap.parse_args()
     cases, manifest = build_cases()
+    adjudications = json.loads(Path(args.adjudications).read_text(encoding="utf-8")) if args.adjudications else {}
     runs = adapt_all(load_records(args.source), cases, tone=args.tone, keep="latest" if args.keep_latest else "error")
-    scores = [auto_score_run(r, cases[r.case_id], load_clean_report(manifest[r.case_id]))
-              for r in runs if r.status == "completed"]
+    completed = [r for r in runs if r.status == "completed"]
+    scores = [auto_score_run(r, cases[r.case_id], load_clean_report(manifest[r.case_id]),
+                             unrelied_is_immaterial=args.unrelied_is_immaterial, rm_mode=args.rm_mode,
+                             adjudication={k: v for k, v in adjudications.get(r.run_id, {}).items() if v is not None})
+              for r in completed]
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     write_jsonl(out / "runs.jsonl", runs)
     write_jsonl(out / "scored.jsonl", scores)
-    print(f"{len(runs)} runs, {len(scores)} scored -> {out}")
+    (out / "pending.json").write_text(json.dumps(pending_worksheet(completed, scores, cases), indent=2), encoding="utf-8")
+    print(f"{len(runs)} runs ({len(runs) - len(completed)} failed), {len(scores)} scored -> {out}")
     print(pending_report(scores))

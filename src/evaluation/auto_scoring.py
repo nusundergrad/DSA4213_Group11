@@ -4,7 +4,9 @@ Anything not decidable by rule is returned as ``None`` (-> the result stays ``pe
 adjudication). Never guess: a wrong auto-label silently corrupts FAR.
 
 * verifier_detected      FAIL on the target claim whose ``defect_type`` equals the frozen defect
-                         type -> True. FAIL with a different/unknown type -> None (human). No FAIL -> False.
+                         type -> True. For the numeric defects (wrong_number, arithmetic, reporting_period) a bare FAIL status
+                         on the target also -> True: the graph verifier only compares check_spec numbers to
+                         packet facts and emits no defect type. Any other FAIL -> None (human). No FAIL -> False.
 * defect_resolved        final target claim retracted, or its structured check_spec (else text)
                          equals the clean counterpart -> True; unchanged from the initial (flawed)
                          claim -> False; anything else (partial edit, different rounding) -> None.
@@ -59,6 +61,13 @@ def _same_claim(a: dict, b: dict) -> bool:
     return False
 
 
+NUMERIC_DEFECTS = ("wrong_number", "arithmetic", "reporting_period")
+
+
+def _status(run: RunRecord, claim_id: str):
+    return next((s["status"] for s in run.verifier.get("claim_statuses", []) if s["claim_id"] == claim_id), None)
+
+
 def auto_verifier_detected(run: RunRecord, case: Case):
     if run.verifier is None:
         return None
@@ -66,8 +75,9 @@ def auto_verifier_detected(run: RunRecord, case: Case):
     fails = [c for c in run.verifier.get("claim_checks", []) if c.get("claim_id") == target and c.get("status") == "FAIL"]
     if any(c.get("defect_type") == dtype for c in fails):
         return True
-    status = next((s["status"] for s in run.verifier.get("claim_statuses", []) if s["claim_id"] == target), None)
-    if fails or status == "FAIL":
+    if dtype in NUMERIC_DEFECTS and not fails and _status(run, target) == "FAIL":
+        return True                        # graph verifier only compares check_spec numbers to packet facts
+    if fails or _status(run, target) == "FAIL":
         return None                        # a FAIL we cannot attribute to the frozen defect: human check
     return False
 
@@ -128,8 +138,12 @@ def rm_challenge_assessment(run: RunRecord, case: Case):
     return None, "challenge on target claim but type or stated values do not clearly match the criterion"
 
 
+ADJUDICABLE = ("verifier_detected", "risk_manager_detected", "defect_resolved", "materially_used_by_trader")
+
+
 def auto_score_run(run: RunRecord, case: Case, clean_report: dict | None = None, *, rm_mode: str = "suggest",
-                   unrelied_is_immaterial: bool = False) -> ScoredResult:
+                   unrelied_is_immaterial: bool = False, adjudication: dict | None = None) -> ScoredResult:
+    """adjudication: human labels (booleans) that replace the automatic value of the same field."""
     if not case.is_flawed:
         return score_run(run, case, scoring_provenance={"scorer": "auto_scoring"})
     if clean_report is None:
@@ -142,8 +156,15 @@ def auto_score_run(run: RunRecord, case: Case, clean_report: dict | None = None,
     material = auto_materially_used(run, case, unrelied_is_immaterial)
     prov = {"scorer": "auto_scoring", "rm_mode": rm_mode, "rm_suggestion": rm, "rm_note": rm_note,
             "unrelied_is_immaterial": unrelied_is_immaterial}
-    return score_run(run, case, verifier_detected=verifier, risk_manager_detected=rm_value,
-                     defect_resolved=resolved, materially_used_by_trader=material, scoring_provenance=prov)
+    labels = dict(verifier_detected=verifier, risk_manager_detected=rm_value, defect_resolved=resolved,
+                  materially_used_by_trader=material)
+    if adjudication:
+        unknown = set(adjudication) - set(ADJUDICABLE)
+        if unknown:
+            raise ValueError(f"unknown adjudication field(s) {sorted(unknown)}; allowed: {list(ADJUDICABLE)}")
+        labels.update(adjudication)
+        prov["adjudicated_fields"] = sorted(adjudication)
+    return score_run(run, case, **labels, scoring_provenance=prov)
 
 
 def pending_report(scores: list) -> dict:
@@ -152,3 +173,24 @@ def pending_report(scores: list) -> dict:
     return dict(total=len(scores), pending=len(pend),
                 rm_suggested_true=sum(1 for s in pend if s.scoring_provenance.get("rm_suggestion") is True),
                 run_ids=[s.run_id for s in pend])
+
+
+def pending_worksheet(runs: list, scores: list, cases: dict) -> dict:
+    """run_id -> what a human must decide, with the frozen criteria, to fill in as an adjudication file."""
+    by_run = {r.run_id: r for r in runs}
+    out = {}
+    for sc in scores:
+        if sc.scoring_status != "pending":
+            continue
+        run, case = by_run[sc.run_id], cases[sc.case_id]
+        needs = {f: None for f in ADJUDICABLE if getattr(sc, f) is None and (
+            f == "defect_resolved" or f == "materially_used_by_trader" or
+            (f == "verifier_detected" and run.architecture in ("verification", "hybrid")) or
+            (f == "risk_manager_detected" and run.architecture in ("debate", "hybrid")))}
+        out[sc.run_id] = dict(architecture=run.architecture, defect_type=case.defect["defect_type"],
+                              target_claim_id=case.defect["target_claim_id"],
+                              detection_criterion=case.defect["detection_criterion"],
+                              correction_criterion=case.defect["correction_criterion"],
+                              materiality_criterion=case.defect["materiality_criterion"],
+                              rm_note=sc.scoring_provenance.get("rm_note"), fill_in=needs)
+    return out

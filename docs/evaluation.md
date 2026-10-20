@@ -74,7 +74,7 @@ Case IDs are opaque. `load_agent_input_for` returns only the public packet and r
 
 | Field | Rule | Otherwise |
 |---|---|---|
-| `verifier_detected` | FAIL on the target claim whose `defect_type` equals the frozen defect type | FAIL with another/unknown type -> pending; no FAIL -> False |
+| `verifier_detected` | FAIL on the target claim whose `defect_type` equals the frozen defect type; for `wrong_number`/`arithmetic`/`reporting_period` a bare FAIL status on the target also counts (the graph verifier only checks `check_spec` numbers and emits no type) | any other FAIL -> pending; no FAIL -> False |
 | `defect_resolved` | target claim retracted, or its `check_spec` (else text) equals the clean claim -> True; unchanged from the initial claim -> False | any other edit -> pending |
 | `materially_used_by_trader` | Trader REJECT -> False; ACCEPT and target in `relied_on_claim_ids` -> True | ACCEPT but not relied on -> pending (opt out with `unrelied_is_immaterial=True`) |
 | `risk_manager_detected` | no challenge targets the claim -> False | right type and states an expected value/period -> only a *suggestion* (`rm_mode="accept"` to trust it); otherwise pending |
@@ -95,13 +95,12 @@ It only reshapes data and never invents values. Mapping: `situation_1/2/3` -> `d
 `transcript`; verifier booleans -> `PASS`/`FAIL`. Several runs of one condition are an error unless
 `--keep-latest`.
 
-Fields the graph does not produce yet stay empty, so the affected scores are `pending`, not wrong:
+The graph now writes the structured fields the scoring needs: Risk Manager turns with `challenges`, Trader
+`support_score` and `relied_on_claim_ids`, the run's `tone` and confidence sentence, `usage` (tokens and
+latency), `config` (model, temperature, debate rounds), and `analyst_revision_turns` (edited, reverted and
+retracted claim IDs). `situation_0` is the baseline. Records written before these changes still convert; their
+missing fields leave the affected scores `pending`, never wrong.
 
-| Missing from graph output | Effect |
-|---|---|
-| structured Risk Manager `challenges` | `risk_manager_detected` pending (never scored as a miss); the note says whether the text mentions the target claim and an expected value |
-| Trader `relied_on_claim_ids` | `materially_used_by_trader` pending after an ACCEPT, so FAR is pending |
-| Trader `support_score`, tone | Evaluation 2 skips those runs |
-| verifier `claim_checks` (defect type of a FAIL) | `verifier_detected` pending on a FAIL |
-| `usage` | efficiency table empty |
-| baseline situation | no `baseline` runs yet |
+Still not produced: verifier `claim_checks` (the defect type of a FAIL). `verifier_detected` therefore counts a
+bare FAIL on the target only for `wrong_number`, `arithmetic` and `reporting_period`; any other FAIL is pending.
+Cost is `null` unless the provider reports it, and tokens of rejected or retried responses are not counted.

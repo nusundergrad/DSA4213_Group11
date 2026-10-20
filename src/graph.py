@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from typing import Literal
 
 try:
-    from .agent import analyst_agent, risk_manager_agent, trader_agent
+    from .agent import analyst_agent, risk_manager_agent, trader_agent, MODEL_NAME as _MODEL
     from .state import AgentState
     from .benchmark.prepare import load_agent_input
     from .benchmark.schemas import Packet, Report
@@ -19,11 +19,15 @@ except ImportError:
     project_root = Path(__file__).resolve().parent.parent
     if str(project_root) not in sys.path:
         sys.path.insert(0, str(project_root))
-    from src.agent import analyst_agent, risk_manager_agent, trader_agent
+    from src.agent import analyst_agent, risk_manager_agent, trader_agent, MODEL_NAME as _MODEL
     from src.state import AgentState
     from src.benchmark.prepare import load_agent_input
     from src.benchmark.schemas import Packet, Report
     from src.verifier import verifier as run_verifier
+
+def get_model_name() -> str:
+    return _MODEL
+
 
 def next_after_analyst(state: AgentState) -> Literal["risk_manager_agent", "trader_agent"]:
     print(
@@ -63,6 +67,49 @@ def initial_verifier_node(state: AgentState):
 
 
 
+CONFIDENCE_FRAMING = {
+    "underconfident": "I have low confidence in this assessment.",
+    "neutral": "I have moderate confidence in this assessment.",
+    "overconfident": "I have high confidence in this assessment.",
+}
+
+
+def _initial_state(input_content: dict, debate_round: int) -> dict:
+    """Starting graph state, identical for every situation so conditions differ only in the graph."""
+    initial_report = input_content.get("initial_report", {})
+    return {
+        "messages": [HumanMessage(
+            content=input_content["content"],
+            id=input_content.get("message_id", "human:initial"),
+            name="human",
+        )],
+        "evidence_packet": input_content["evidence_packet"],
+        "initial_report": initial_report,
+        "final_reports": [initial_report],
+        "risk_feedback": {},
+        "debate_round": debate_round,
+        "max_debate_rounds": input_content["max_debate_rounds"],
+        "verifier_reports": [],
+        "trader_verdict": None,
+        "risk_manager_turns": [],
+        "analyst_revision_turns": [],
+        "usage_log": [],
+        "confidence_framing": input_content.get("confidence_framing"),
+    }
+
+
+def situation_0(input_content: dict):
+    """Baseline: the Trader judges the initial report with no debate and no verifier."""
+    print("Starting situation_0", flush=True)
+    graph = StateGraph(AgentState)
+    graph.add_node(trader_agent)
+    graph.add_edge(START, "trader_agent")
+    graph.add_edge("trader_agent", END)
+    response = graph.compile().invoke(_initial_state(input_content, 0))
+    print("Situation_0 completed", flush=True)
+    return response
+
+
 def situation_1(input_content: dict):
     print("Starting situation_1", flush=True)
     graph = StateGraph(AgentState)
@@ -84,23 +131,7 @@ def situation_1(input_content: dict):
     graph.add_edge("trader_agent", END)
     graph = graph.compile()
 
-    response = graph.invoke({
-        "messages": [
-            HumanMessage(
-                content=input_content["content"],
-                id=input_content.get("message_id", "human:initial"),
-                name="human",
-            )
-        ],
-        "evidence_packet": input_content["evidence_packet"],
-        "initial_report": input_content.get("initial_report", {}),
-        "final_reports": [input_content.get("initial_report", {})],
-        "risk_feedback": {},
-        "debate_round": input_content["debate_round"],
-        "max_debate_rounds": input_content["max_debate_rounds"],
-        "verifier_reports": [],
-        "trader_verdict": None,
-    })
+    response = graph.invoke(_initial_state(input_content, input_content["debate_round"]))
     print("Situation_1 completed", flush=True)
     return response
 
@@ -114,21 +145,7 @@ def situation_2(input_content: dict):
     graph.add_edge("trader_agent", END)
     graph = graph.compile()
 
-    response = graph.invoke({
-        "messages": [HumanMessage(
-            content=input_content["content"],
-            id=input_content.get("message_id", "human:initial"),
-            name="human",
-        )],
-        "evidence_packet": input_content["evidence_packet"],
-        "initial_report": input_content.get("initial_report", {}),
-        "final_reports": [input_content.get("initial_report", {})],
-        "risk_feedback": {},
-        "debate_round": 0,
-        "max_debate_rounds": input_content["max_debate_rounds"],
-        "verifier_reports": [],
-        "trader_verdict": None,
-    })
+    response = graph.invoke(_initial_state(input_content, 0))
     print("Situation_2 completed", flush=True)
     return response
 
@@ -157,21 +174,7 @@ def situation_3(input_content: dict):
     graph.add_edge("trader_agent", END)
     graph = graph.compile()
 
-    response = graph.invoke({
-        "messages": [HumanMessage(
-            content=input_content["content"],
-            id=input_content.get("message_id", "human:initial"),
-            name="human",
-        )],
-        "evidence_packet": input_content["evidence_packet"],
-        "initial_report": input_content.get("initial_report", {}),
-        "final_reports": [input_content.get("initial_report", {})],
-        "risk_feedback": {},
-        "debate_round": 0,
-        "max_debate_rounds": input_content["max_debate_rounds"],
-        "verifier_reports": [],
-        "trader_verdict": None,
-    })
+    response = graph.invoke(_initial_state(input_content, 0))
     print("Situation_3 completed", flush=True)
     return response
 
@@ -183,29 +186,27 @@ def test_verifier(input_content: dict):
     graph.add_edge("verifier_node", END)
     graph = graph.compile()
 
-    response = graph.invoke({
-        "messages": [HumanMessage(
-            content=input_content["content"],
-            id=input_content.get("message_id", "human:initial"),
-            name="human",
-        )],
-        "evidence_packet": input_content["evidence_packet"],
-        "initial_report": input_content.get("initial_report", {}),
-        "final_reports": [input_content.get("initial_report", {})],
-        "risk_feedback": {},
-        "debate_round": 0,
-        "max_debate_rounds": input_content["max_debate_rounds"],
-        "verifier_reports": [],
-        "trader_verdict": None,
-    })
+    response = graph.invoke(_initial_state(input_content, 0))
     print("test_verifier completed", flush=True)
     return response
 
 SITUATIONS = {
+    "situation_0": situation_0,
     "situation_1": situation_1,
     "situation_2": situation_2,
     "situation_3": situation_3,
 }
+
+
+def describe_error(error: BaseException) -> str:
+    """The error plus its causes, so a record shows the real failure (e.g. the API's 429), not just
+    'model failed after N attempts'."""
+    parts, seen = [], set()
+    while error is not None and id(error) not in seen:
+        seen.add(id(error))
+        parts.append(f"{type(error).__name__}: {error}")
+        error = error.__cause__ or error.__context__
+    return " <- ".join(parts)
 
 
 def _message_record(message):
@@ -217,6 +218,16 @@ def _message_record(message):
     }
 
 
+def summarize_usage(usage_log: list) -> dict:
+    """Totals over accepted responses. A total is None when no response reported that figure."""
+    def total(key):
+        values = [u[key] for u in usage_log if u.get(key) is not None]
+        return sum(values) if values else None
+    return {"input_tokens": total("input_tokens"), "output_tokens": total("output_tokens"),
+            "latency_ms": total("latency_ms"), "estimated_cost_usd": total("estimated_cost_usd"),
+            "calls": len(usage_log), "per_call": usage_log}
+
+
 def _jsonable_response(response):
     return {
         "messages": [_message_record(message) for message in response.get("messages", [])],
@@ -226,6 +237,9 @@ def _jsonable_response(response):
         "verifier_reports": response.get("verifier_reports", []),
         "trader_verdict": response.get("trader_verdict"),
         "debate_round": response.get("debate_round"),
+        "risk_manager_turns": response.get("risk_manager_turns", []),
+        "analyst_revision_turns": response.get("analyst_revision_turns", []),
+        "usage": summarize_usage(response.get("usage_log", [])),
     }
 
 
@@ -235,7 +249,11 @@ def run_from_files(
     *,
     situation: str = "situation_1",
     max_debate_rounds=3,
+    tone: str = "neutral",
 ):
+    situation = str(situation)
+    if tone not in CONFIDENCE_FRAMING:
+        raise ValueError(f"Unknown tone {tone!r}. Available: {', '.join(CONFIDENCE_FRAMING)}")
     if not situation.startswith("situation_"):
         situation = f"situation_{situation}"
     if situation not in SITUATIONS:
@@ -249,7 +267,18 @@ def run_from_files(
         "initial_report": loaded["initial_report"],
         "debate_round": 0,
         "max_debate_rounds": max_debate_rounds,
+        "confidence_framing": CONFIDENCE_FRAMING[tone],
     })
+
+
+def completed_record_exists(case_output: Path) -> bool:
+    for path in sorted(case_output.glob("*.json")):
+        try:
+            if json.loads(path.read_text(encoding="utf-8")).get("status") == "completed":
+                return True
+        except (OSError, ValueError):
+            continue
+    return False
 
 
 def run_batch(
@@ -258,11 +287,15 @@ def run_batch(
     dataset_root: str | Path = "data/benchmark/public",
     output_root: str | Path = "output",
     max_debate_rounds: int = 3,
+    skip_completed: bool = True,
 ):
     """Run every case in a JSON list and save one evaluation record per case.
 
-    Each case contains evidence_packet, report, and situation. Names are
-    resolved under dataset_root/evidence_packets and dataset_root/reports.
+    Each case contains evidence_packet, report, and situation (0 baseline, 1 debate, 2 verification,
+    3 hybrid), and optionally tone (underconfident, neutral, overconfident; default neutral). Names are
+    resolved under dataset_root/evidence_packets and dataset_root/reports. With skip_completed (the
+    default) a condition that already has a completed record is not run again, so an interrupted or
+    rate-limited batch can simply be started again.
     """
     cases_path = Path(cases_path)
     dataset_root = Path(dataset_root)
@@ -289,8 +322,24 @@ def run_batch(
 
         packet_path = dataset_root / "evidence_packets" / f"{packet_id}.json"
         report_path = dataset_root / "reports" / packet_id / f"{report_name}.json"
+        tone = str(case.get("tone", "neutral"))
         case_output = output_root / packet_id / situation / report_name
+        if tone != "neutral":
+            case_output = case_output / tone
+        if skip_completed and completed_record_exists(case_output):
+            print(f"Skipping completed: {packet_id}/{situation}/{report_name}/{tone}", flush=True)
+            continue
         case_output.mkdir(parents=True, exist_ok=True)
+        identity = {
+            "evidence_packet": packet_id,
+            "report": report_name,
+            "situation": situation,
+            "tone": tone,
+            "confidence_framing": CONFIDENCE_FRAMING.get(tone),
+            "packet_path": str(packet_path),
+            "report_path": str(report_path),
+            "config": {"model": get_model_name(), "temperature": 0, "max_debate_rounds": max_debate_rounds},
+        }
 
         try:
             response = run_from_files(
@@ -298,31 +347,16 @@ def run_batch(
                 report_path,
                 situation=situation,
                 max_debate_rounds=max_debate_rounds,
+                tone=tone,
             )
-            record = {
-                "status": "completed",
-                "evidence_packet": packet_id,
-                "report": report_name,
-                "situation": situation,
-                "packet_path": str(packet_path),
-                "report_path": str(report_path),
-                **_jsonable_response(response),
-            }
+            record = {"status": "completed", **identity, **_jsonable_response(response)}
         except Exception as error:
             print(
                 f"Case failed: {packet_id}/{situation}/{report_name}",
                 flush=True,
             )
             traceback.print_exc()
-            record = {
-                "status": "failed",
-                "evidence_packet": packet_id,
-                "report": report_name,
-                "situation": situation,
-                "packet_path": str(packet_path),
-                "report_path": str(report_path),
-                "error": str(error),
-            }
+            record = {"status": "failed", **identity, "error": describe_error(error)}
 
         run_timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
         record["run_timestamp"] = run_timestamp

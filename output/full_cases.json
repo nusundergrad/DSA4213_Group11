@@ -1,7 +1,7 @@
 [
     {
         "evidence_packet": "EP_0001",
-        "report": "error_01_wrong_number_high_confidence",
+        "report": "error_01_wrong_number",
         "situation": 1
     },
     {

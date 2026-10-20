@@ -31,10 +31,27 @@ def case_id_for(report_id: str) -> str:
     return "CASE_" + report_id.removeprefix("R_")
 
 
-def build_cases(root=DEFAULT_ROOT, confidence_pair_ids=()):
-    """confidence_pair_ids: pair IDs whose cases belong to the tone subset (empty until tone variants exist)."""
+def default_confidence_pairs(pairs, n=12):
+    """The planned 12-pair tone subset: round-robin over defect types (then pair ID), so every defect
+    type is represented before any type is repeated. Deterministic, so every teammate gets the same set."""
+    by_type = {}
+    for p in sorted(pairs, key=lambda p: p["pair_id"]):
+        by_type.setdefault(p["defect_type"], []).append(p["pair_id"])
+    picked, queues = [], [by_type[t] for t in sorted(by_type)]
+    while len(picked) < min(n, len(pairs)):
+        for q in queues:
+            if q and len(picked) < n:
+                picked.append(q.pop(0))
+    return set(picked)
+
+
+def build_cases(root=DEFAULT_ROOT, confidence_pair_ids=None):
+    """confidence_pair_ids: pair IDs whose cases belong to the tone subset. None (default) selects the
+    planned 12 pairs with ``default_confidence_pairs``; pass an empty set for no tone subset."""
     root = Path(root)
     pairs = json.loads((root / "private" / "pairs.json").read_text(encoding="utf-8"))["pairs"]
+    if confidence_pair_ids is None:
+        confidence_pair_ids = default_confidence_pairs(pairs)
     cases, manifest = {}, {}
     for p in pairs:
         packet_path = f"evidence_packets/{p['packet_id']}.json"
