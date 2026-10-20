@@ -74,12 +74,12 @@
     },
     {
       "claim_id": "C5",
-      "text": "COMPANY_15 faces risks related to changes in market value of assets and investments, especially those without observable market values. However, it has full control over all of its joint ventures, and its joint venture partners always share its business priorities (Item 1A, EP_0015_E03).",
+      "text": "COMPANY_15 faces risks related to changes in market value of assets and investments, especially those without observable market values, and potential adverse effects from joint ventures where it has full control but partners may not share business priorities, as stated in Item 1A.",
       "evidence_ids": [
         "EP_0015_E03"
       ],
       "check_spec": null
     }
   ],
-  "rationale": "COMPANY_15 experienced a slight decline in overall net income and diluted earnings per share from 2024 to 2025. This decline was primarily driven by a significant negative shift in the Corporate and Other segment, which moved from a net income of $104 million in 2024 to a net loss of $1,152 million in 2025. However, the core operating segments, SEGMENT_38 and SEGMENT_39, showed strong growth, with SEGMENT_38's net income increasing by 10.32% and SEGMENT_39's net income increasing by 29.40% during the same period. The company highlights asset-valuation risks, but has full control over all joint ventures and its partners always share its business priorities. Given the mixed performance with strong growth in primary segments offset by a substantial drag from Corporate and Other, and identified risks, a HOLD recommendation is appropriate at this time."
+  "rationale": "COMPANY_15 experienced a slight decline in overall net income and diluted earnings per share from 2024 to 2025. This decline was primarily driven by a significant negative shift in the Corporate and Other segment, which moved from a net income of $104 million in 2024 to a net loss of $1,152 million in 2025. However, the core operating segments, SEGMENT_38 and SEGMENT_39, showed strong growth, with SEGMENT_38's net income increasing by 10.32% and SEGMENT_39's net income increasing by 29.40% during the same period. The company also highlights risks associated with asset valuation and differing joint venture partner priorities, although it has full control over all joint ventures. Given the mixed performance with strong growth in primary segments offset by a substantial drag from Corporate and Other, and identified risks, a HOLD recommendation is appropriate at this time."
 }

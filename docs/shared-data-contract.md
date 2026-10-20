@@ -62,11 +62,13 @@ See [benchmark preparation and handoff](benchmark.md) and
   and detection/correction criteria. `create_flawed_reports.py` applies these
   edits offline; `check_flawed_reports.ipynb` shows the comparisons. These are
   lightweight pair records, not the full case/answer-key schema in section 5.
-  The implemented error types are `wrong_number`, `reporting_period`, and
-  `arithmetic`. Labels and answer keys must stay out of agent inputs.
+  The active error types are `direct_factual_contradiction`, `reporting_period`,
+  `arithmetic`, `material_omission`, `citation_misattribution`, and
+  `unsupported_inference`. Labels and answer keys must stay out of agent inputs.
   `clean_report_path` and `flawed_report_path` are relative to `public/`.
   `error_index` numbers a variant within its packet, not the claim being edited;
-  `target_claim_id` identifies that claim.
+  `target_claim_id` identifies the changed or omitted claim, or is `null` for
+  rationale-only defects. `changes[].path` gives the exact edited locations.
 - Preparation uses `data/benchmark/private/` and `data/benchmark/public/`; reviewed
   releases use `data/benchmark/releases/v1/`, then `v2`, etc. There is no release
   automation, public case envelope, confidence presentation, scoring runner,
@@ -129,7 +131,7 @@ Within-case tone comparisons use `case_id`; control/error comparisons use privat
 | `architecture` | `baseline`, `debate`, `verification`, `hybrid` |
 | `tone` | `underconfident`, `neutral`, `overconfident` |
 | `content_label` — private | `unmodified`, `injected_error` |
-| `defect_type` | `wrong_number`, `arithmetic`, `reporting_period`, `citation`, `contradiction`, `omission`, `unsupported_inference` |
+| `defect_type` | `direct_factual_contradiction`, `arithmetic`, `reporting_period`, `citation_misattribution`, `material_omission`, `unsupported_inference` |
 | verifier `status` | `PASS`, `FAIL`, `NOT_CHECKABLE` |
 | revision `action` | `DEFEND`, `REVISE`, `RETRACT` |
 | Trader `assessment` | `ACCEPT`, `REJECT` |

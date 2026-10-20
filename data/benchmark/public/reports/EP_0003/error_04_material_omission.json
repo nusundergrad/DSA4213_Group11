@@ -1,11 +1,11 @@
 {
   "schema_version": "0.1",
-  "report_id": "R_412ccb36a9ab4526b919960f53b9deae",
+  "report_id": "R_2ac7233d18375705980a7714b948414b",
   "recommendation": "HOLD",
   "claims": [
     {
       "claim_id": "C1",
-      "text": "Total revenue increased by 130.62% from $60,922 million in the year ended January 28, 2024, to $140,497 million in the year ended January 26, 2025.",
+      "text": "Total revenue increased by 114.20% from $60,922 million in the year ended January 28, 2024, to $130,497 million in the year ended January 26, 2025.",
       "evidence_ids": [
         "EP_0003_E01"
       ],
@@ -24,7 +24,7 @@
           "start": "2024-01-29",
           "end": "2025-01-26"
         },
-        "value": "130.62",
+        "value": "114.20",
         "unit": "percent"
       }
     },
@@ -56,7 +56,7 @@
     },
     {
       "claim_id": "C3",
-      "text": "The SEGMENT_05 segment's revenue increased by 5.82% from $13,517 million in the year ended January 28, 2024, to $14,304 million in the year ended January 26, 2025, primarily due to sales of PRODUCT_25 GPUs, but its operating income decreased due to a 44% increase in segment operating expenses.",
+      "text": "The SEGMENT_05 segment's revenue increased by 5.82% from $13,517 million in the year ended January 28, 2024, to $14,304 million in the year ended January 26, 2025, primarily due to sales of PRODUCT_25 GPUs.",
       "evidence_ids": [
         "EP_0003_E01",
         "EP_0003_E02"
@@ -89,5 +89,5 @@
       "check_spec": null
     }
   ],
-  "rationale": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 130.62%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate."
+  "rationale": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 114.20%. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate."
 }

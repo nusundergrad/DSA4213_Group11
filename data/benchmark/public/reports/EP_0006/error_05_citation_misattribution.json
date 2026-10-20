@@ -1,11 +1,11 @@
 {
   "schema_version": "0.1",
-  "report_id": "R_ae124299e7584b63a28b10b3c523efe9",
+  "report_id": "R_3c372363f8a15a05b014c2071c90cdb6",
   "recommendation": "BUY",
   "claims": [
     {
       "claim_id": "C1",
-      "text": "Total revenues for COMPANY_06 increased by 6.61% in fiscal year 2025, reaching $690,985 million, compared to $648,125 million in fiscal year 2024.",
+      "text": "Total revenues for COMPANY_06 increased by 5.10% in fiscal year 2025, reaching $680,985 million, compared to $648,125 million in fiscal year 2024.",
       "evidence_ids": [
         "EP_0006_E01",
         "EP_0006_E02"
@@ -25,7 +25,7 @@
           "start": "2024-02-01",
           "end": "2025-01-31"
         },
-        "value": "6.61",
+        "value": "5.07",
         "unit": "percent"
       }
     },
@@ -90,7 +90,7 @@
     },
     {
       "claim_id": "C5",
-      "text": "Despite strong competition from various retailers and evolving omni-channel landscapes (Item 1A), COMPANY_06 has demonstrated growth in key financial metrics.",
+      "text": "Despite strong competition from various retailers and evolving omni-channel landscapes (Item 1A), COMPANY_06 has demonstrated growth in key financial metrics. EP_0006_E03 reports: “Membership and other income increased $1.0 billion and $0.1 billion for fiscal 2025 and fiscal 2024, primarily driven by growth in membership fee income globally.”",
       "evidence_ids": [
         "EP_0006_E03"
       ],

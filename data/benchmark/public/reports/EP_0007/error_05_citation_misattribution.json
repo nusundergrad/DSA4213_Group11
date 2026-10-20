@@ -1,11 +1,11 @@
 {
   "schema_version": "0.1",
-  "report_id": "R_de0efd4641604052a8dc2416cbb7b83d",
+  "report_id": "R_b6b982354cdd5a3eb8ce7d32fad7d37f",
   "recommendation": "BUY",
   "claims": [
     {
       "claim_id": "C1",
-      "text": "COMPANY_07's consolidated net sales increased by 13.95% from $637,959 million in 2024 to $726,924 million in 2025.",
+      "text": "COMPANY_07's consolidated net sales increased by 12.38% from $637,959 million in 2024 to $716,924 million in 2025.",
       "evidence_ids": [
         "EP_0007_E01"
       ],
@@ -24,7 +24,7 @@
           "start": "2025-01-01",
           "end": "2025-12-31"
         },
-        "value": "13.95",
+        "value": "12.38",
         "unit": "percent"
       }
     },
@@ -81,12 +81,12 @@
     },
     {
       "claim_id": "C4",
-      "text": "Despite the positive growth, COMPANY_07 faces intense competition across various industries and geographies, with some competitors having greater resources, longer histories, more customers, or greater brand recognition, as stated in Item 1A.",
+      "text": "Despite the positive growth, COMPANY_07 faces intense competition across various industries and geographies, with some competitors having greater resources, longer histories, more customers, or greater brand recognition, as stated in Item 1A. EP_0007_E03 reports: “SEGMENT_12 sales increased 20% in 2025, compared to the prior year.”",
       "evidence_ids": [
         "EP_0007_E03"
       ],
       "check_spec": null
     }
   ],
-  "rationale": "COMPANY_07 demonstrates strong financial performance with significant year-over-year growth in both net sales and operating income. Consolidated net sales increased by 13.95% and consolidated operating income increased by 16.60% in 2025. The SEGMENT_12 segment, a major contributor, showed robust growth with net sales up 19.68% and operating income up 14.49%. While the company acknowledges intense competition, the overall growth trends suggest a strong market position and effective business strategies. The increase in operating income despite charges related to a lawsuit settlement and severance costs further highlights the underlying strength of the business. Therefore, a BUY recommendation is appropriate."
+  "rationale": "COMPANY_07 demonstrates strong financial performance with significant year-over-year growth in both net sales and operating income. Consolidated net sales increased by 12.38% and consolidated operating income increased by 16.60% in 2025. The SEGMENT_12 segment, a major contributor, showed robust growth with net sales up 19.68% and operating income up 14.49%. While the company acknowledges intense competition, the overall growth trends suggest a strong market position and effective business strategies. The increase in operating income despite charges related to a lawsuit settlement and severance costs further highlights the underlying strength of the business. Therefore, a BUY recommendation is appropriate."
 }

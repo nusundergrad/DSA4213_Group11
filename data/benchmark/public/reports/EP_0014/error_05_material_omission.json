@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.1",
+  "report_id": "R_92518efd0a7055178459ee9ad3aef356",
+  "recommendation": "SELL",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "Consolidated Sales and Revenues increased by 4.29% from $64,809 million in 2024 to $67,589 million in 2025.",
+      "evidence_ids": [
+        "EP_0014_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0014_F02",
+        "to_fact_id": "EP_0014_F01",
+        "metric": "revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "4.29",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "Despite the increase in revenue, Consolidated Operating Profit decreased by 14.70% from $13,072 million in 2024 to $11,151 million in 2025.",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0014_F04",
+        "to_fact_id": "EP_0014_F03",
+        "metric": "operating_profit",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2024-01-01",
+          "end": "2024-12-31"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2025-01-01",
+          "end": "2025-12-31"
+        },
+        "value": "-14.70",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "The decrease in operating profit was primarily due to unfavorable manufacturing costs of $2,148 million and unfavorable price realization of $817 million, partially offset by the profit impact of higher sales volume of $1,218 million (Item 7, EP_0014_E02).",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "check_spec": null
+    },
+    {
+      "claim_id": "C4",
+      "text": "The operating profit margin declined from 20.2 percent in 2024 to 16.5 percent in 2025 (Item 7, EP_0014_E02).",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "check_spec": null
+    }
+  ],
+  "rationale": "Despite an increase in consolidated sales and revenues, the company experienced a significant decline in consolidated operating profit and operating profit margin. This was driven by unfavorable manufacturing costs and price realization. The risk of more restrictive trade policies and higher tariffs, as noted in Item 1A, could further exacerbate these issues, leading to continued pressure on profitability."
+}
