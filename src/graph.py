@@ -3,12 +3,15 @@ from langchain_core.messages import HumanMessage
 from pathlib import Path
 import argparse
 import json
+import hashlib
+import time
 import sys
 import traceback
 from datetime import datetime, timezone
 from typing import Literal
 
 try:
+    from . import agent as agent_module
     from .agent import analyst_agent, risk_manager_agent, trader_agent, MODEL_NAME as _MODEL
     from .state import AgentState
     from .benchmark.prepare import load_agent_input
@@ -20,13 +23,14 @@ except ImportError:
     if str(project_root) not in sys.path:
         sys.path.insert(0, str(project_root))
     from src.agent import analyst_agent, risk_manager_agent, trader_agent, MODEL_NAME as _MODEL
+    from src import agent as agent_module
     from src.state import AgentState
     from src.benchmark.prepare import load_agent_input
     from src.benchmark.schemas import Packet, Report
     from src.verifier import verifier as run_verifier
 
 def get_model_name() -> str:
-    return _MODEL
+    return agent_module.MODEL_NAME
 
 
 def next_after_analyst(state: AgentState) -> Literal["risk_manager_agent", "trader_agent"]:
@@ -51,6 +55,8 @@ def verifier_node(state: AgentState):
     result = run_verifier(report, packet)
     verifier_record = {
         "report_id": report.report_id,
+        "report_sha256": content_hash(report.model_dump(mode='json')),
+        "scope": "Structured numerical assertions only. null means NOT_CHECKABLE; PASS does not certify prose or reasoning.",
         "claim_results": result,
     }
     return {
@@ -259,6 +265,8 @@ def run_from_files(
     if situation not in SITUATIONS:
         available = ", ".join(sorted(SITUATIONS))
         raise ValueError(f"Unknown situation '{situation}'. Available: {available}")
+    if situation in ('situation_1', 'situation_3') and max_debate_rounds < 1:
+        raise ValueError('Debate and hybrid require at least one round')
 
     loaded = load_agent_input(packet_path, report_path, check_clean=False)
     return SITUATIONS[situation]({
@@ -271,13 +279,20 @@ def run_from_files(
     })
 
 
-def completed_record_exists(case_output: Path) -> bool:
+def content_hash(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True, ensure_ascii=False).encode('utf-8')).hexdigest()
+
+
+def completed_record_exists(case_output: Path, input_sha256=None, config_sha256=None) -> bool:
     for path in sorted(case_output.glob("*.json")):
         try:
-            if json.loads(path.read_text(encoding="utf-8")).get("status") == "completed":
-                return True
+            record = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, ValueError):
             continue
+        if record.get('status') == 'completed':
+            if input_sha256 and (record.get('input_sha256') != input_sha256 or record.get('config_sha256') != config_sha256):
+                raise ValueError('Existing run has different inputs/configuration; choose a new output folder')
+            return True
     return False
 
 
@@ -307,6 +322,18 @@ def run_batch(
         raise ValueError("The cases JSON must contain a list of dictionaries")
 
     results = []
+    config = {'model': get_model_name(), 'temperature': 0, 'max_debate_rounds': max_debate_rounds,
+              'max_tokens': agent_module.MAX_TOKENS, 'max_model_attempts': agent_module.MAX_MODEL_RETRIES,
+              'reasoning_effort': agent_module.REASONING_EFFORT,
+              'trader_evidence_access': False,
+              'code_sha256': {name: hashlib.sha256((Path(__file__).parent / name).read_bytes()).hexdigest()
+                             for name in ('agent.py', 'graph.py', 'prompts.py', 'verifier.py')}}
+    output_root.mkdir(parents=True, exist_ok=True)
+    plan = {'cases': cases, 'config': config}
+    plan_path = output_root / 'run_plan.json'
+    if plan_path.exists() and json.loads(plan_path.read_text(encoding='utf-8')) != plan:
+        raise ValueError('Run plan differs; choose a new output folder')
+    plan_path.write_text(json.dumps(plan, indent=2), encoding='utf-8')
     for index, case in enumerate(cases):
         if not isinstance(case, dict):
             raise ValueError(f"Case {index} must be a dictionary")
@@ -323,10 +350,13 @@ def run_batch(
         packet_path = dataset_root / "evidence_packets" / f"{packet_id}.json"
         report_path = dataset_root / "reports" / packet_id / f"{report_name}.json"
         tone = str(case.get("tone", "neutral"))
+        loaded = load_agent_input(packet_path, report_path, check_clean=False)
+        input_hash = content_hash(loaded)
+        config_hash = content_hash({**config, 'situation': situation, 'tone': tone})
         case_output = output_root / packet_id / situation / report_name
         if tone != "neutral":
             case_output = case_output / tone
-        if skip_completed and completed_record_exists(case_output):
+        if skip_completed and completed_record_exists(case_output, input_hash, config_hash):
             print(f"Skipping completed: {packet_id}/{situation}/{report_name}/{tone}", flush=True)
             continue
         case_output.mkdir(parents=True, exist_ok=True)
@@ -338,9 +368,15 @@ def run_batch(
             "confidence_framing": CONFIDENCE_FRAMING.get(tone),
             "packet_path": str(packet_path),
             "report_path": str(report_path),
-            "config": {"model": get_model_name(), "temperature": 0, "max_debate_rounds": max_debate_rounds},
+            'input_sha256': input_hash, 'config_sha256': config_hash,
+            'initial_report': loaded['initial_report'], 'evidence_packet_snapshot': loaded['evidence_packet'],
+            'config': config,
+            'started_at': datetime.now(timezone.utc).isoformat(),
         }
 
+        calls = []
+        token = agent_module.MODEL_CALLS.set(calls)
+        started = time.perf_counter()
         try:
             response = run_from_files(
                 packet_path,
@@ -357,6 +393,13 @@ def run_batch(
             )
             traceback.print_exc()
             record = {"status": "failed", **identity, "error": describe_error(error)}
+        finally:
+            agent_module.MODEL_CALLS.reset(token)
+
+        record['model_calls'] = calls
+        record['usage'] = summarize_usage([c.get('usage', {'latency_ms': c['latency_ms']}) for c in calls])
+        record['usage']['wall_latency_ms'] = round((time.perf_counter() - started) * 1000)
+        record['finished_at'] = datetime.now(timezone.utc).isoformat()
 
         run_timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
         record["run_timestamp"] = run_timestamp
@@ -365,6 +408,9 @@ def run_batch(
             encoding="utf-8",
         )
         results.append(record)
+        if record['status'] == 'failed' and any(code in record.get('error', '') for code in ('401', '402', '403', '429')):
+            print('Authentication/quota error: saved the failed attempt; stopping this batch.', flush=True)
+            break
 
     return results
 
@@ -391,10 +437,25 @@ if __name__ == "__main__":
     parser.add_argument("--report")
     parser.add_argument("--situation", default="situation_1")
     parser.add_argument("--verifier")
+    parser.add_argument('--cases', default='output/cases.json')
+    parser.add_argument('--dataset-root', default='data/benchmark/public')
+    parser.add_argument('--output-root', default='output')
+    parser.add_argument('--model', default=get_model_name())
+    parser.add_argument('--rounds', type=int, default=3)
+    parser.add_argument('--tone', choices=list(CONFIDENCE_FRAMING), default='neutral')
+    parser.add_argument('--max-attempts', type=int, default=1)
+    parser.add_argument('--max-tokens', type=int, default=6000)
+    parser.add_argument('--reasoning-effort', choices=['none', 'low', 'medium', 'high'])
     args = parser.parse_args()
+    if args.model in ('openrouter/free', 'openrouter/auto') or args.max_attempts < 1:
+        parser.error('Use an explicit model ID and a positive attempt count')
+    agent_module.MODEL_NAME = args.model
+    agent_module.MAX_MODEL_RETRIES = args.max_attempts
+    agent_module.MAX_TOKENS = args.max_tokens
+    agent_module.REASONING_EFFORT = args.reasoning_effort
     if args.packet and args.report:
-        run_from_files(args.packet, args.report, situation=args.situation)
+        run_from_files(args.packet, args.report, situation=args.situation, max_debate_rounds=args.rounds, tone=args.tone)
     elif args.verifier:
         print(situation_verifier())
     else:
-        run_batch()
+        run_batch(args.cases, dataset_root=args.dataset_root, output_root=args.output_root, max_debate_rounds=args.rounds)

@@ -7,9 +7,9 @@ adjudication). Never guess: a wrong auto-label silently corrupts FAR.
                          type -> True. For the numeric defects (wrong_number, arithmetic, reporting_period) a bare FAIL status
                          on the target also -> True: the graph verifier only compares check_spec numbers to
                          packet facts and emits no defect type. Any other FAIL -> None (human). No FAIL -> False.
-* defect_resolved        final target claim retracted, or its structured check_spec (else text)
-                         equals the clean counterpart -> True; unchanged from the initial (flawed)
-                         claim -> False; anything else (partial edit, different rounding) -> None.
+* defect_resolved        final target text, citations and check_spec equal the clean counterpart ->
+                         True; unchanged from the initial (flawed) claim -> False; anything else
+                         (missing claim, partial edit, different rounding) -> None.
 * materially_used        Trader REJECT -> False. ACCEPT and the target is in ``relied_on_claim_ids`` ->
                          True. ACCEPT and not relied on -> None by default (the contract says reliance
                          is a trace, not proof); pass ``unrelied_is_immaterial=True`` to treat it as False.
@@ -53,7 +53,9 @@ def _spec_key(spec):
 
 
 def _same_claim(a: dict, b: dict) -> bool:
-    """Same assertion: compare structured check_spec when both have one, else the text."""
+    """A matching number alone cannot establish that the claim's prose was fixed."""
+    if a['text'].strip() != b['text'].strip() or set(a.get('evidence_ids', [])) != set(b.get('evidence_ids', [])):
+        return False
     if a.get("check_spec") is not None and b.get("check_spec") is not None:
         return _spec_key(a["check_spec"]) == _spec_key(b["check_spec"])
     if a.get("check_spec") is None and b.get("check_spec") is None:
@@ -86,7 +88,7 @@ def auto_defect_resolved(run: RunRecord, case: Case, clean_report: dict):
     target = case.defect["target_claim_id"]
     final, initial, clean = (_claim(r, target) for r in (run.final_report, run.initial_report, clean_report))
     if final is None:
-        return True                        # retracted
+        return None                        # may have been renumbered or moved into the rationale
     if clean is not None and _same_claim(final, clean):
         return True
     if initial is not None and _same_claim(final, initial):
@@ -144,6 +146,12 @@ ADJUDICABLE = ("verifier_detected", "risk_manager_detected", "defect_resolved", 
 def auto_score_run(run: RunRecord, case: Case, clean_report: dict | None = None, *, rm_mode: str = "suggest",
                    unrelied_is_immaterial: bool = False, adjudication: dict | None = None) -> ScoredResult:
     """adjudication: human labels (booleans) that replace the automatic value of the same field."""
+    if run.status != 'completed':
+        return ScoredResult(run.run_id, run.case_id, 'pending',
+                            dict(content_label=case.content_label, pair_id=case.pair_id,
+                                 target_claim_id=case.defect['target_claim_id'] if case.defect else None,
+                                 defect_type=case.defect['defect_type'] if case.defect else None),
+                            scoring_provenance={'scorer': 'auto_scoring', 'reason': 'execution failed'})
     if not case.is_flawed:
         return score_run(run, case, scoring_provenance={"scorer": "auto_scoring"})
     if clean_report is None:

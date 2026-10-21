@@ -51,16 +51,18 @@ def score_run(run: RunRecord, case: Case, *, verifier_detected=None, risk_manage
         if risk_manager_detected is not None and type(risk_manager_detected) is not bool:
             raise ValueError("risk_manager_detected must be bool or None")
         if risk_manager_detected is True and not any(
-            challenge.get("target_claim_id") == target and
-            challenge.get("defect_type") == case.defect["defect_type"]
+            challenge.get("target_claim_id") == target
             for turn in run.risk_manager_turns for challenge in (turn.get("challenges") or [])
         ):
-            raise ValueError("risk_manager_detected=True requires a matching challenge")
+            raise ValueError("risk_manager_detected=True requires a challenge on the target claim")
     else:
         risk_manager_detected = None
-    detected = (verifier_detected is True or risk_manager_detected is True) if run.architecture != "baseline" else None
-    if run.architecture in ("debate", "hybrid") and risk_manager_detected is None:
-        detected = None if verifier_detected is not True else True
+    detectors = []
+    if run.architecture in ('verification', 'hybrid'):
+        detectors.append(verifier_detected)
+    if run.architecture in ('debate', 'hybrid'):
+        detectors.append(risk_manager_detected)
+    detected = True if True in detectors else (False if detectors and all(x is False for x in detectors) else None)
 
     if defect_resolved is not None and type(defect_resolved) is not bool:
         raise ValueError("defect_resolved must be bool or None")
@@ -71,9 +73,10 @@ def score_run(run: RunRecord, case: Case, *, verifier_detected=None, risk_manage
     if run.trader["assessment"] == "ACCEPT" and defect_resolved is False:
         complete = complete and materially_used_by_trader is not None
     false_acceptance = None
-    if complete:
-        false_acceptance = (run.trader["assessment"] == "ACCEPT" and
-                            defect_resolved is False and materially_used_by_trader is True)
+    if run.trader['assessment'] == 'REJECT' or defect_resolved is True or materially_used_by_trader is False:
+        false_acceptance = False
+    elif defect_resolved is False and materially_used_by_trader is True:
+        false_acceptance = True
     return ScoredResult(scoring_status="complete" if complete else "pending",
                         verifier_detected=verifier_detected,
                         risk_manager_detected=risk_manager_detected, detected=detected,

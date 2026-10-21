@@ -1,8 +1,7 @@
 # DSA4213 Agent Benchmark
 
 A LangGraph multi-agent system that reviews financial reports, plus the benchmark and evaluation
-pipeline that measures whether it catches planted errors. This guide takes you from a fresh clone
-to a results table.
+pipeline that measures whether it catches planted errors. Start with [the current experiment workflow](docs/running-experiments.md) for commands, benchmark coverage and the supplementary challenge test.
 
 - [1. What the pipeline does](#1-what-the-pipeline-does)
 - [2. Setup](#2-setup)
@@ -51,30 +50,27 @@ Each report is run through one of four architectures ("situations"):
 | 2 | **verification** | A rule-based verifier checks the numeric claims, then the Trader decides |
 | 3 | **hybrid** | Verifier, then the debate with re-verification after each revision, then the Trader |
 
-Every agent sees the same inputs in every situation, so conditions differ only in the graph:
+All conditions start from the same masked packet and report. Agent visibility follows `main`:
 
-- **Trader** sees the evidence packet, the current report, any verifier report and the whole
-  Risk Manager/Analyst discussion, and returns `assessment`, `support_score` (0-100), `investment_action`,
+- **Trader** sees the current report, any verifier report and the latest agent message. It receives neither the source packet nor the whole discussion. It returns `assessment`, `support_score` (0-100), `investment_action`,
   `relied_on_claim_ids` and a rationale.
 - **Risk Manager** returns structured JSON: a list of challenges (`target_claim_id`, `defect_type`,
   `explanation`, `requested_change`), an optional `calibration_concern` and an `overall_assessment`.
   The runner assigns challenge IDs (`RM_R1_01`, ...). A challenge against a claim that does not exist is
-  rejected and retried.
-- **Analyst** may change only claims the Risk Manager challenged or the verifier failed. Edits to any other
-  claim are reverted by the runner (and logged as `reverted_claim_ids`), so clean reports cannot drift.
+  rejected and recorded as a failed attempt. Retries require an explicit attempt budget.
+- **Analyst** revisions are preserved as generated. Edits, retractions and new claim IDs are logged; the runner does not silently restore unchallenged claims. This allows new errors to remain observable.
 - **Tone**: each run shows a fixed sentence beside the report ("I have low / moderate / high confidence in
-  this assessment."). Every run uses the neutral sentence by default; the 12-pair confidence subset is also
-  run with the low (`underconfident`) and high (`overconfident`) sentences. The report itself never changes.
-- **Usage**: tokens and latency of every accepted model response are recorded per run. Cost is `null` unless
-  the provider reports it, and tokens of rejected or retried responses are not counted.
+  this assessment."). Every run uses the neutral sentence by default; opt in with `--tone-variants` to run the 12-pair confidence subset with the low (`underconfident`) and high (`overconfident`) sentences. The input report stays fixed; debate can subsequently revise it.
+- **Usage**: exact request/response bodies and usage are saved for every attempted call, including rejected outputs. Headers and API keys are not saved. Cost stays unknown unless reported by the provider.
 
 Headline metrics (all per architecture):
 
 - **Detection**: the defect was identified.
 - **Correction**: the defect was fixed after being detected.
 - **FAR (false acceptance rate)**: the Trader ACCEPTed while the defect was unresolved *and* used it.
-- **TAR (true acceptance rate)**: the Trader ACCEPTs a *clean* report.
-- **False challenge**: challenges raised against clean reports.
+- **TAR (true acceptance rate)**: the Trader ACCEPTs when the input is clean. Check separately whether revisions introduced errors.
+- **Control challenge rate**: first-review challenges on clean inputs. Whether each challenge is false needs adjudication.
+- **Resolution**: the injected defect is absent from the final claim; this does not certify that no new error was introduced.
 
 ## 2. Setup
 
@@ -176,14 +172,13 @@ python -c "from src.agent import get_llm; print(get_llm().invoke('Reply with OK'
 python -m pytest tests -q
 ```
 
-All tests should pass (241 at the time of writing). If the model call fails but the key check
+All offline tests should pass. If the model call fails but the key check
 prints `True`, see [Troubleshooting](#11-troubleshooting).
 
 ## 5. Run the agents
 
 This is the only step that spends API calls and time. A debate or hybrid run makes about 7 model
-calls (3 Risk Manager + 3 Analyst + 1 Trader), a baseline or verification run makes 1, and failed calls are
-retried up to 5 times (waiting 5, 10, 20 and 40 seconds), and a failed record stores the underlying error.
+calls (3 Risk Manager + 3 Analyst + 1 Trader); a baseline or verification run makes 1. Each call gets one attempt by default. `--max-attempts` explicitly enables retries; failed attempts remain saved.
 
 ### 5a. One case, to see the flow
 
@@ -197,14 +192,15 @@ python src/graph.py \
 This prints the routing and each agent's response but **does not save a record**. Use it for
 debugging only; results come from section 5b/5c.
 
-### 5b. A small pilot batch (recommended first)
+### 5b. A small application check
 
-Build a case list for two packets and two architectures, then run it:
+Build a case list for two packets and three architectures, then run it:
 
 ```bash
-python src/evaluation/make_run_list.py --out output/cases_pilot.json \
+python src/evaluation/make_run_list.py --out output/cases_check.json \
   --packets EP_0001 EP_0002 --situations 0 1 3 --no-tone-variants
-python -c "from src.graph import run_batch; run_batch('output/cases_pilot.json')"
+python -m src.graph --cases output/cases_check.json --output-root output/check_runs \
+  --model nvidia/nemotron-3-ultra-550b-a55b:free --rounds 1 --reasoning-effort none --max-tokens 6000
 ```
 
 That is 8 reports x 3 situations = 24 runs.
@@ -213,12 +209,11 @@ That is 8 reports x 3 situations = 24 runs.
 
 ```bash
 python src/evaluation/make_run_list.py --out output/cases_all.json
-python -c "from src.graph import run_batch; run_batch('output/cases_all.json')"
+python -m src.graph --cases output/cases_all.json --output-root output/full_runs \
+  --model nvidia/nemotron-3-ultra-550b-a55b:free --rounds 1 --reasoning-effort none --max-tokens 6000
 ```
 
-The full list is 384 runs: 60 reports x 4 situations with the neutral sentence (240), plus the
-underconfident and overconfident variants of the 12-pair confidence subset (144). Add
-`--no-tone-variants` for the 240 neutral runs only (Evaluation 2 then stays empty). The subset is
+The default list has 240 neutral runs: 60 reports x 4 situations. Confidence is supplementary; add `--tone-variants` for the matched low/high subset. The subset is
 chosen deterministically (`default_confidence_pairs` in `benchmark_cases.py`: round-robin over defect
 types), so everyone gets the same pairs.
 
@@ -227,15 +222,14 @@ types), so everyone gets the same pairs.
 Details:
 
 - Each run is written to `output/<packet>/situation_<n>/<report>/<UTC timestamp>.json`, and a failed
-  case is saved too, with `"status": "failed"` and the error. One failing case does not stop the batch.
-- **Resume:** `run_batch` skips any condition that already has a completed record, so after an interruption
+  case is saved too, with `"status": "failed"` and the error. Authentication/quota failures stop the batch after saving the failed attempt.
+- **Resume:** `run_batch` skips a completed condition only when its input/configuration hashes match, so after an interruption
   or a rate-limit stop, run the same command again. It re-tries only the missing and failed conditions.
   Pass `skip_completed=False` to force fresh runs. Do **not** delete finished records.
 - Records of non-neutral tones are written one folder deeper: `.../<report>/<tone>/<timestamp>.json`.
 - A failed re-try adds another record; section 6 picks the newest one with `--keep-latest`.
 - `output/` is git-ignored except for the two example case lists.
-- `--max-debate-rounds` is fixed at 3 in `run_batch` (`max_debate_rounds=3`); change that argument
-  if the study design changes, and keep it identical across runs.
+- Use `--rounds`, `--model`, `--max-tokens` and `--reasoning-effort` to configure a batch. Keep these fixed across conditions. Changed inputs or settings require a new output folder.
 
 ## 6. Turn run records into scores
 
@@ -250,25 +244,24 @@ python src/evaluation/graph_adapter.py output --out eval_runs --keep-latest
   Without it the adapter stops with an error rather than silently choosing. Note that a newer
   *failed* record replaces an older completed one, so check `runs.jsonl` for failures after a retry.
 - The folder is searched recursively; `cases*.json` lists are skipped automatically.
-- Failed runs appear in `runs.jsonl` with `status: failed` and are not scored.
+- Failed runs have a pending score record so joins work and failure coverage remains visible; they contribute no success outcomes.
 
 Outputs in `eval_runs/`:
 
 | File | Contents |
 |---|---|
 | `runs.jsonl` | One `RunRecord` per condition (reports, Trader verdict, transcript, verifier statuses) |
-| `scored.jsonl` | One `ScoredResult` per completed run: `complete`, `pending` or `not_applicable` |
+| `scored.jsonl` | One `ScoredResult` per run: `complete`, `pending` or `not_applicable` |
 | `pending.json` | A worksheet of the human decisions still needed, with the frozen criteria |
 
-The command also prints how many scores are `pending`. **Only `complete` runs count toward the
-rates**, and the coverage column of the report shows scored/total.
+The command also prints pending judgements. Each metric uses its known labels from completed executions; unknown labels stay out of its denominator. A known REJECT counts as no false acceptance even if detection still needs review.
 
 ### What is decided automatically
 
 | Field | Rule |
 |---|---|
 | `verifier_detected` | FAIL on the target claim. For `wrong_number`, `arithmetic` and `reporting_period` a bare FAIL counts; any other FAIL is pending; no FAIL is a miss |
-| `defect_resolved` | The target claim was retracted or now equals the clean claim: yes. Unchanged from the flawed claim: no. Any other edit: pending |
+| `defect_resolved` | The target claim now matches the clean text, citations and assertion: yes. A missing target needs review for renumbering or migration into the rationale. Unchanged from the flawed claim: no. Any other edit: pending |
 | `materially_used_by_trader` | Trader REJECT: no. ACCEPT and the target claim is in `relied_on_claim_ids`: yes. ACCEPT without citing the target: pending (a trace of reliance is not proof) |
 | `risk_manager_detected` | No challenge targets the defect claim: a miss. A challenge on the claim with the right defect type that states an expected value or period: a *suggestion* only (pending, unless `--rm-mode accept`). Any other challenge on the claim: pending |
 
@@ -348,18 +341,18 @@ Then compute the metrics:
 python src/evaluation/metrics.py \
   --cases eval_private/cases.jsonl \
   --runs eval_runs/runs.jsonl \
-  --scores eval_runs/scored.jsonl > findings.md
+  --scores eval_runs/scored.jsonl --out findings.md
 ```
 
 `findings.md` contains:
 
-1. **Evaluation 1** (neutral tone): detection, correction, FAR, TAR and false-challenge rate per
+1. **Evaluation 1** (neutral tone): detection, correction, resolution, FAR, TAR and control challenge rate per
    architecture, with confidence intervals and the scored/total coverage.
 2. **FAR by failure category**: one row per defect type.
-3. **H1**: paired comparison of hybrid against each other architecture (difference with CI, McNemar p-value).
+3. **H1**: paired comparison of hybrid against each other architecture (difference with a bootstrap CI that resamples whole packets).
 4. **Evaluation 2** (tone changes): support-score and decision changes between neutral and the other tones,
    for the confidence subset only; empty if you ran with `--no-tone-variants`.
-5. **Efficiency**: tokens and latency per architecture. Cost is 0 unless the provider reports it.
+5. **Efficiency**: tokens and latency per architecture. Unavailable cost is unknown, not zero.
 
 To see the report's shape without any data, run `python src/evaluation/metrics.py --dummy`. Those
 numbers are synthetic and must never be quoted as findings.
@@ -377,14 +370,14 @@ wired into a command; it needs `pip install anthropic`, `ANTHROPIC_API_KEY` in `
 
 - **Coverage first.** A rate computed on 3 of 45 cases is not a finding. Quote `flawed_scored/flawed_total`.
 - **One model, one seed.** Temperature is 0, but a free model can still change underneath you. Name the model and the date of the run.
-- **Controls are not independent.** Each clean report is shared by up to three flawed copies, so the false-challenge rate rests on 15 clean reports, not 45.
+- **Controls are not independent.** Each clean report is shared by up to three flawed copies, so the control challenge rate rests on 15 clean reports, not 45.
 - **Risk Manager detection** is automatic only for clear misses; a challenge that names the right claim but whose type or values do not clearly match stays pending for your adjudication.
 - **Reliance is self-reported:** `relied_on_claim_ids` is the Trader's own claim about its reasoning, a trace rather than proof of materiality.
 - **The Risk Manager is shown the defect category names** (it must label challenges), which is a mild hint that errors of those kinds may exist. State this in the report.
 - **Tone** is a sentence appended beside the report; it measures sensitivity to expressed confidence, not calibrated uncertainty.
-- **Failed auth runs are not data.** If a batch was run with a bad key, every record is `failed`; delete those records (or re-run to get newer ones and use `--keep-latest`) before scoring.
+- **Failed auth runs are not data.** If a batch was run with a bad key, every record is `failed`; preserve those records and report their failures. If explicitly rerun, select attempts by a fixed rule before scoring.
 - **Verifier scope.** Numeric defects only; do not read its misses on text defects as a failure of the verifier's implementation.
-- **Failed runs** are excluded from scores; report how many there were and why (`error` in `runs.jsonl`).
+- **Failed runs** contribute no success outcomes; report how many there were and why (`error` in `runs.jsonl`).
 
 ## 11. Troubleshooting
 
@@ -393,7 +386,7 @@ wired into a command; it needs `pip install anthropic`, `ANTHROPIC_API_KEY` in `
 | `Missing Authentication header`, `Set OPENROUTER_API_KEY locally` or any 401 | `.env` missing, in the wrong folder, or the value is empty or not a real key (for example a model name was pasted). Re-run the check in section 4 |
 | `ModuleNotFoundError` for `langgraph`, `openrouter`, `langchain_openrouter` | Activate the venv and run `pip install -r requirements.txt` |
 | HTTP 429 or "quota" | Free-model rate limit. Wait and re-run only the missing cases, or switch `MODEL_NAME` |
-| `model returned an empty response` / JSON parse errors after 5 attempts | The model ignored the JSON instruction. The run is recorded as failed; retry later or use a stronger model |
+| `model returned an empty response` / JSON parse errors or `finish_reason=length` | The model ignored the JSON instruction. The run is recorded as failed; retry later or use a stronger model |
 | `Analyst changed report_id` | Model output problem; the run fails and is recorded. Retry |
 | `several runs for condition ...` | Re-runs exist for that condition; add `--keep-latest` |
 | `record's report_id ... does not match any case` | The record comes from a different dataset version than `data/benchmark`; rebuild records or restore the matching data |

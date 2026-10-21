@@ -7,25 +7,13 @@ Run the commands below from the repository root.
 
 ## What we have now
 
-| Company | Packet | Source | Status |
-|---|---|---|---|
-| Apple FY2025 | `EP_0001` | `SRC_01` | Uses the Apple PDF; excerpts and spans updated |
-| Microsoft FY2025 | `EP_0002` | `SRC_02` | Uses the Microsoft PDF; excerpts and spans updated |
+There are 15 source-backed packets (`EP_0001` to `EP_0015`), 15 clean reports and 45 flawed copies: three variants per company.
+The categories are wrong number, reporting period, arithmetic, citation misattribution, direct factual contradiction, material omission and unsupported inference.
+Each packet has a source PDF, extracted text/provenance, original packet, masking aliases and a review notebook.
 
-Apple's PDF is `private/pdfs/aapl-20250927.pdf`. Its old source and packets are
-backed up in `private/archive/20261012T164732Z_apple_html/`.
-Microsoft's PDF is `private/pdfs/msft-20250630.pdf`. Its previous source and
-packets are also backed up under `private/archive/`. Both packets now use PDFs.
-
-Both packets now have a reviewed report in `public/reports/`. The checks, notes,
-and edits are in `private/reviews/EP_0001_review.ipynb` and
-`private/reviews/EP_0002_review.ipynb`. One original generation attempt is kept for
-each report. Older attempts were removed; these files are not a full run history.
-No dataset version has been frozen yet.
-
-There are also three deliberately flawed copies per company: wrong number,
-wrong reporting period, and wrong arithmetic. That is eight reports in total
-(two clean and six flawed), using the same two evidence packets.
+`private/pairs.json` records the exact edits and expected corrections. The working public dataset is separate from the preserved `releases/v1` snapshot.
+Run `python src/evaluation/audit_benchmark.py` to check source spans, hashes, masking, structured clean assertions and pair edits without changing data.
+See [running the experiments](running-experiments.md) for the application and metrics workflow.
 
 ## Where files go
 

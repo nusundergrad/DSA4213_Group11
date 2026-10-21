@@ -133,7 +133,8 @@ def record_to_run(record: dict, cases: dict, *, tone: str = "neutral") -> RunRec
         usage={k: v for k, v in (record.get("usage") or {}).items() if k != "per_call"},
         status="completed" if completed else "failed",
         error=None if completed else {"message": record.get("error")},
-        started_at=stamp,
+        started_at=record.get('started_at', stamp), finished_at=record.get('finished_at'),
+        input_sha256=record.get('input_sha256'), config_sha256=record.get('config_sha256'),
         config={**(record.get("config") or {}), "situation": record["situation"],
                 "debate_rounds": record.get("debate_round"),
                 "confidence_framing": record.get("confidence_framing")},
@@ -164,6 +165,27 @@ def adapt_all(records: list, cases: dict, *, tone: str = "neutral", keep: str = 
     return list(chosen.values())
 
 
+def final_report_checks(runs, manifest):
+    """Post-run checks only; never send their results back to the agents."""
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+    from src.benchmark.prepare import check_report
+    from src.benchmark.schemas import Packet, Report
+    from benchmark_cases import DEFAULT_ROOT
+    import hashlib
+    out = {}
+    for run in runs:
+        if run.status != 'completed':
+            continue
+        packet = Packet.model_validate_json((DEFAULT_ROOT / 'public' / manifest[run.case_id]['packet_path']).read_text(encoding='utf-8'))
+        payload = {'evidence_packet': packet.model_dump(mode='json'), 'initial_report': run.initial_report}
+        digest = hashlib.sha256(json.dumps(payload, sort_keys=True, ensure_ascii=False).encode('utf-8')).hexdigest()
+        if run.input_sha256 and digest != run.input_sha256:
+            raise ValueError('Current benchmark differs from saved run inputs; restore the matching dataset before scoring')
+        out[run.run_id] = check_report(packet, Report.model_validate(run.final_report), require_fact_ids=True)
+    return out
+
+
 if __name__ == "__main__":
     import argparse
     from auto_scoring import auto_score_run, pending_report, pending_worksheet
@@ -187,11 +209,13 @@ if __name__ == "__main__":
     scores = [auto_score_run(r, cases[r.case_id], load_clean_report(manifest[r.case_id]),
                              unrelied_is_immaterial=args.unrelied_is_immaterial, rm_mode=args.rm_mode,
                              adjudication={k: v for k, v in adjudications.get(r.run_id, {}).items() if v is not None})
-              for r in completed]
+              for r in runs]
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     write_jsonl(out / "runs.jsonl", runs)
     write_jsonl(out / "scored.jsonl", scores)
-    (out / "pending.json").write_text(json.dumps(pending_worksheet(completed, scores, cases), indent=2), encoding="utf-8")
+    (out / "pending.json").write_text(json.dumps(pending_worksheet(completed, [s for s in scores if s.run_id in {r.run_id for r in completed}], cases), indent=2), encoding="utf-8")
+    write_jsonl(out / 'cases.jsonl', cases.values())
+    (out / 'final_report_checks.json').write_text(json.dumps(final_report_checks(completed, manifest), indent=2), encoding='utf-8')
     print(f"{len(runs)} runs ({len(runs) - len(completed)} failed), {len(scores)} scored -> {out}")
     print(pending_report(scores))

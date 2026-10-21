@@ -16,13 +16,19 @@ import json
 import os
 import re
 import time
+from contextvars import ContextVar
+from pathlib import Path
 from uuid import uuid4
 
 llm = None
 # MODEL_NAME = "openrouter/free"
 MODEL_NAME = "nvidia/nemotron-3.5-lightning:free"
-MAX_MODEL_RETRIES = 5
+MAX_MODEL_RETRIES = 1
 RETRY_BASE_DELAY_SECONDS = 5.0   # waits 5, 10, 20, 40 s: short waits do not outlast a free-tier rate limit
+MAX_TOKENS = 6000
+REASONING_EFFORT = None
+MODEL_CALLS = ContextVar('model_calls', default=None)
+CURRENT_CALL = ContextVar('current_call', default=None)
 
 
 CHALLENGE_TYPES = ("wrong_number", "arithmetic", "reporting_period", "citation_misattribution",
@@ -141,41 +147,8 @@ def check_trader_decision(decision: TraderDecision, state: AgentState) -> None:
         raise ValueError(f"relied_on_claim_ids names unknown claims {sorted(unknown)}")
 
 
-def revision_allowed_ids(state: AgentState) -> set:
-    """Claims the Analyst may change: those the latest Risk Manager turn challenged plus those the
-    latest verifier pass failed. Every other claim is restored, so clean reports cannot drift."""
-    allowed = set()
-    turns = state.get("risk_manager_turns") or []
-    if turns:
-        allowed |= {c["target_claim_id"] for c in turns[-1].get("challenges", [])}
-    verifier_report = latest_verifier_report(state)
-    if verifier_report:
-        allowed |= {cid for cid, ok in (verifier_report.get("claim_results") or {}).items() if ok is False}
-    return allowed
 
 
-def restrict_revision(previous: dict, revised: dict, allowed: set) -> tuple[dict, dict]:
-    """Keep the Analyst's recommendation and rationale, but accept claim edits only where allowed.
-
-    Returns (report, changes). A claim the Analyst dropped is retracted only if it was allowed to change
-    and at least 3 claims remain (the report schema's minimum)."""
-    previous = Report.model_validate(previous).model_dump(mode="json")
-    new_by_id = {c["claim_id"]: c for c in revised["claims"]}
-    plan = []                                  # (previous claim, claim to keep or None when retracted)
-    for claim in previous["claims"]:
-        cid = claim["claim_id"]
-        plan.append((claim, new_by_id.get(cid) if cid in allowed else claim))
-    if sum(keep is not None for _, keep in plan) < 3:
-        plan = [(claim, claim if keep is None else keep) for claim, keep in plan]   # cannot retract below 3
-    kept = [keep for _, keep in plan if keep is not None]
-    changes = dict(
-        edited_claim_ids=[c["claim_id"] for c, keep in plan if c["claim_id"] in allowed and keep not in (None, c)],
-        reverted_claim_ids=[c["claim_id"] for c, _ in plan
-                            if c["claim_id"] not in allowed and new_by_id.get(c["claim_id"]) != c],
-        retracted_claim_ids=[c["claim_id"] for c, keep in plan if keep is None],
-        ignored_new_claim_ids=sorted(set(new_by_id) - {c["claim_id"] for c in previous["claims"]}))
-    report = {**revised, "claims": kept}
-    return Report.model_validate(report).model_dump(mode="json"), changes
 
 
 def usage_entry(agent_name: str, response) -> dict:
@@ -203,6 +176,11 @@ def latest_verifier_report(state: AgentState) -> dict | None:
     report_id = report.get("report_id") if report else None
     for verifier_report in reversed(state.get("verifier_reports") or []):
         if verifier_report.get("report_id") == report_id:
+            if verifier_report.get('report_sha256'):
+                import hashlib
+                digest = hashlib.sha256(json.dumps(report, sort_keys=True, ensure_ascii=False).encode('utf-8')).hexdigest()
+                if digest != verifier_report['report_sha256']:
+                    continue
             return verifier_report
     return None
 
@@ -210,8 +188,25 @@ def latest_verifier_report(state: AgentState) -> dict | None:
 def get_llm():
     global llm
     if llm is None:
-        load_dotenv(override=True)
-        llm = ChatOpenRouter(model=MODEL_NAME, temperature=0)
+        from httpx import Client
+        from openrouter import OpenRouter
+        load_dotenv(Path(__file__).parent / '.env', override=True)
+        load_dotenv(Path(__file__).parents[1] / '.env', override=True)
+
+        def save_request(request):
+            if CURRENT_CALL.get() is not None:
+                CURRENT_CALL.get()['request'] = json.loads(request.content)
+
+        def save_response(response):
+            response.read()
+            if CURRENT_CALL.get() is not None:
+                CURRENT_CALL.get()['raw_response'] = response.text
+
+        http = Client(event_hooks={'request': [save_request], 'response': [save_response]})
+        sdk = OpenRouter(api_key=os.environ['OPENROUTER_API_KEY'], client=http,
+                         retry_config=None, timeout_ms=180000)
+        llm = ChatOpenRouter(model=MODEL_NAME, temperature=0, client=sdk,
+                             max_tokens=MAX_TOKENS, max_retries=0)
     return llm
 
 
@@ -238,26 +233,50 @@ def log_model_response(agent_name: str, response):
 def invoke_with_retry(agent_name: str, messages, validator=None, **kwargs):
     last_error = None
     for attempt in range(1, MAX_MODEL_RETRIES + 1):
+        call = {'agent': agent_name, 'attempt': attempt, 'status': 'started',
+                'messages': [{'role': m.type, 'name': m.name, 'content': m.content} for m in messages]}
+        if MODEL_CALLS.get() is not None:
+            MODEL_CALLS.get().append(call)
+        token = CURRENT_CALL.set(call)
+        started = time.perf_counter()
         try:
             log_model_call(agent_name, messages)
             started = time.perf_counter()
-            response = get_llm().invoke(messages, **kwargs)
+            options = dict(kwargs)
+            if REASONING_EFFORT:
+                options['reasoning'] = {'effort': REASONING_EFFORT}
+            response = get_llm().invoke(messages, provider={'allow_fallbacks': False}, **options)
             elapsed_ms = round((time.perf_counter() - started) * 1000)
             log_model_response(agent_name, response)
+            if isinstance(getattr(response, "response_metadata", None), dict):
+                response.response_metadata['latency_ms'] = elapsed_ms
+            call['response'] = response.model_dump(mode='json')
+            call['usage'] = usage_entry(agent_name, response)
+            if call.get('raw_response'):
+                raw_usage = json.loads(call['raw_response']).get('usage') or {}
+                call['usage']['estimated_cost_usd'] = raw_usage.get('cost')
+            finish = (getattr(response, 'response_metadata', {}) or {}).get('finish_reason')
+            if finish not in (None, 'stop'):
+                raise ValueError(f'model response did not finish normally: {finish}')
             if not getattr(response, "content", None) or not response.content.strip():
                 raise ValueError("model returned an empty response")
             if validator is not None:
                 validator(response)
             if isinstance(getattr(response, "response_metadata", None), dict):
                 response.response_metadata["latency_ms"] = elapsed_ms
+            call['status'] = 'completed'
             return response
         except Exception as error:
             last_error = error
+            call.update(status='failed', error=str(error))
             print(f"[{agent_name}] model attempt {attempt}/{MAX_MODEL_RETRIES} failed: {error}", flush=True)
             if attempt < MAX_MODEL_RETRIES:
                 delay = RETRY_BASE_DELAY_SECONDS * (2 ** (attempt - 1))
                 print(f"[{agent_name}] retrying in {delay:.1f}s", flush=True)
                 time.sleep(delay)
+        finally:
+            call['latency_ms'] = round((time.perf_counter() - started) * 1000)
+            CURRENT_CALL.reset(token)
     raise RuntimeError(f"{agent_name} model failed after {MAX_MODEL_RETRIES} attempts") from last_error
 
 
@@ -296,8 +315,7 @@ def analyst_agent(state: AgentState):
             + "\nReturn only one JSON object matching this schema:\n"
             + json.dumps(Report.model_json_schema())
             + "\nPreserve the current report_id exactly. Do not create or modify it."
-            + "\nChange only the claims that the Risk Manager challenged or the verifier failed, and keep every"
-            + " other claim exactly as it is. Defend a challenged claim unchanged if the challenge is wrong.\n"
+            + "\nPreserve claim_ids for retained claims so revisions can be traced.\n"
         )
     )
 
@@ -329,8 +347,12 @@ def analyst_agent(state: AgentState):
             "Analyst changed report_id: "
             f"expected {expected_report_id}, got {revised_report.report_id}"
         )
-    report, changes = restrict_revision(
-        latest_report(state), revised_report.model_dump(mode="json"), revision_allowed_ids(state))
+    report = revised_report.model_dump(mode='json')
+    old_claims = {c['claim_id']: c for c in latest_report(state)['claims']}
+    new_claims = {c['claim_id']: c for c in report['claims']}
+    changes = {'edited_claim_ids': [cid for cid in old_claims.keys() & new_claims.keys() if old_claims[cid] != new_claims[cid]],
+               'retracted_claim_ids': sorted(old_claims.keys() - new_claims.keys()),
+               'new_claim_ids': sorted(new_claims.keys() - old_claims.keys())}
     print("Analyst report validated and appended", flush=True)
     return {
         "messages": [response],
@@ -350,6 +372,7 @@ def risk_manager_agent(state: AgentState):
             RISK_MANAGER_SYSTEM_PROMPT
             + "\nReturn only one JSON object matching this schema:\n"
             + json.dumps(RiskManagerTurn.model_json_schema())
+            + "\nUse an empty challenges list if no specific claim defect is found."
             + "\ntarget_claim_id must be a claim_id from the current report. defect_type must be exactly one of: "
             + ", ".join(CHALLENGE_TYPES)
             + ". evidence_ids may list only evidence_id values from the packet. Do not include challenge_id."
@@ -407,27 +430,28 @@ def trader_agent(state: AgentState):
             TRADER_SYSTEM_PROMPT
             + "\nReturn only one JSON object matching this schema:\n"
             + json.dumps(TraderDecision.model_json_schema())
-            + "\nsupport_score (0-100) is how well the evidence supports the current report's recommendation,"
-            + " not a return forecast. relied_on_claim_ids lists the claim_ids your decision rests on."
+            + "\nACCEPT means the supplied analysis adequately supports the current recommendation; otherwise REJECT."
+            + "\nsupport_score (0-100) describes support in the supplied analysis, not a return forecast or calibrated probability."
+            + " relied_on_claim_ids lists the claim_ids your decision rests on."
             + " investment_action must be exactly BUY, HOLD, or SELL."
         )
     )
-    discussion = [{"speaker": message.name, "content": message.content}
-                  for message in state["messages"] if message.type == "ai"]
     context_message = HumanMessage(
         content=(
             "Here is what to use for the decision:\n"
             + json.dumps({
-                "evidence_packet": state["evidence_packet"],
                 "current_report": latest_report(state),
                 "analyst_note": analyst_note(state),
                 "latest_verifier_report": latest_verifier_report(state),
-                "discussion": discussion,
             }, ensure_ascii=False)
             + "\nReturn the required TraderDecision JSON object, and do not include any other text or commentary."
         )
     )
     messages_to_send = [system_prompt, context_message]
+    last_ai_message = next((m for m in reversed(state['messages']) if m.type == 'ai'), None)
+    if last_ai_message is not None:
+        messages_to_send.append(AIMessage(content=last_ai_message.content,
+                                         id=last_ai_message.id, name=last_ai_message.name))
 
     def validate(candidate):
         check_trader_decision(parse_trader_response(candidate.content), state)

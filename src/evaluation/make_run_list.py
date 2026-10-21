@@ -20,7 +20,7 @@ from benchmark_cases import build_cases
 from schema import TONES
 
 
-def make_run_list(manifest: dict, situations=(0, 1, 2, 3), packets=None, cases=None, tone_variants=True) -> list:
+def make_run_list(manifest: dict, situations=(0, 1, 2, 3), packets=None, cases=None, tone_variants=False) -> list:
     entries, seen = [], set()
     for case_id, m in manifest.items():
         packet = Path(m["packet_path"]).stem
@@ -41,9 +41,10 @@ if __name__ == "__main__":
     ap.add_argument("--situations", nargs="+", type=int, default=[0, 1, 2, 3])
     ap.add_argument("--packets", nargs="*", help="limit to these packet IDs, e.g. EP_0001 EP_0002")
     ap.add_argument("--no-tone-variants", action="store_true", help="neutral tone only")
+    ap.add_argument('--tone-variants', action='store_true', help='opt in to supplementary low/high confidence conditions')
     args = ap.parse_args()
     cases, manifest = build_cases()
-    runs = make_run_list(manifest, args.situations, args.packets, cases, not args.no_tone_variants)
+    runs = make_run_list(manifest, args.situations, args.packets, cases, args.tone_variants and not args.no_tone_variants)
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(json.dumps(runs, indent=2), encoding="utf-8")
     print(f"{len(runs)} runs -> {args.out}")

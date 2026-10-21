@@ -49,11 +49,11 @@ def test_fixed_claim_is_resolved_and_not_a_false_acceptance():
     assert s.defect_resolved is True and s.false_acceptance is False
 
 
-def test_retracted_claim_counts_as_resolved():
+def test_missing_target_needs_review_in_case_it_was_renumbered():
     case = _case("arithmetic")
     run = _run(case)
     run.final_report["claims"] = [c for c in run.final_report["claims"] if c["claim_id"] != "C1"]
-    assert _score(case, run).defect_resolved is True
+    assert _score(case, run).defect_resolved is None
 
 
 def test_reporting_period_fix_detected_via_check_spec():
@@ -152,3 +152,37 @@ def test_end_to_end_metrics_on_real_cases_include_wrong_number():
     report = M.format_report(runs, scores, {c.case_id: c for c in CASES.values()})
     assert "| wrong_number |" in report
     assert pending_report(scores)["total"] == len(scores)
+
+
+def test_unchanged_flawed_prose_is_not_resolved_by_matching_clean_numbers():
+    for case in CASES.values():
+        if case.is_flawed:
+            assert _score(case, _run(case)).defect_resolved is False, case.pair_id
+
+
+def test_corrected_spec_with_unchanged_wrong_prose_needs_review():
+    case = _case('arithmetic')
+    run = _run(case)
+    clean = _report(MANIFEST[case.case_id]['clean_report_path'])
+    run.final_report['claims'][0]['check_spec'] = clean['claims'][0]['check_spec']
+    assert _score(case, run).defect_resolved is None
+
+
+def test_known_rejection_counts_for_far_while_detection_is_pending():
+    case = _case('arithmetic')
+    run = _run(case, 'debate', assessment='REJECT', turns=_turn(explanation='Check the calculation.'))
+    score = _score(case, run)
+    assert score.scoring_status == 'pending' and score.false_acceptance is False
+    result = M.primary_metrics([run], [score])['debate']
+    assert result['far']['n'] == 1 and result['far']['k'] == 0
+    assert result['detection']['n'] == 0
+
+
+def test_failed_runs_have_scores_but_no_success_outcomes():
+    case = _case('arithmetic')
+    run = _run(case)
+    run.status = 'failed'
+    score = _score(case, run)
+    result = M.primary_metrics([run], [score])['baseline']
+    assert result['coverage']['failed'] == 1
+    assert result['far']['n'] == 0 and result['tar']['n'] == 0

@@ -58,28 +58,26 @@ def test_baseline_trader_decides_alone_and_sees_the_packet(fake):
     assert not out["risk_manager_turns"] and not out["verifier_reports"]
     verdict = out["trader_verdict"]
     assert verdict["support_score"] == 70 and verdict["relied_on_claim_ids"] == ["C1"]
-    assert "evidence" in fake.seen["trader"][0]["evidence_packet"]       # the Trader can now check the evidence
+    assert 'evidence_packet' not in fake.seen['trader'][0]              # main's information boundary
     assert len(out["usage_log"]) == 1
 
 
-def test_debate_has_structured_challenges_and_the_trader_sees_the_discussion(fake):
+def test_debate_has_structured_challenges_without_giving_trader_full_discussion(fake):
     out = run("situation_1")
     turns = out["risk_manager_turns"]
     assert [t["round"] for t in turns] == [1, 2]
     assert turns[0]["challenges"][0]["challenge_id"] == "RM_R1_01" and turns[1]["challenges"][0]["challenge_id"] == "RM_R2_01"
     assert turns[0]["structured"] is True
-    speakers = [d["speaker"] for d in fake.seen["trader"][0]["discussion"]]
-    assert speakers == ["risk_manager_agent", "analyst_agent", "risk_manager_agent", "analyst_agent"]
+    assert 'discussion' not in fake.seen['trader'][0]
     assert len(out["usage_log"]) == 5 and all(u["input_tokens"] == 10 for u in out["usage_log"])
 
 
-def test_unrequested_edits_are_reverted_so_reports_cannot_drift(fake):
+def test_actual_revisions_are_preserved_so_new_errors_remain_observable(fake):
     out = run("situation_1")
     initial, final = out["initial_report"], out["final_reports"][-1]
     assert final["claims"][0]["text"] == "Revised C1."                    # challenged: may change
-    assert final["claims"][1]["text"] == initial["claims"][1]["text"]    # not challenged: restored
-    assert out["analyst_revision_turns"][0]["edited_claim_ids"] == ["C1"]
-    assert out["analyst_revision_turns"][0]["reverted_claim_ids"] == ["C2"]
+    assert final['claims'][1]['text'] == 'Unrequested change to C2.'
+    assert set(out['analyst_revision_turns'][0]['edited_claim_ids']) == {'C1', 'C2'}
 
 
 def test_hybrid_verifies_initial_report_and_every_revision(fake):
@@ -104,6 +102,7 @@ def test_tone_adds_a_fixed_sentence_beside_the_report_not_in_it(fake):
 
 
 def test_challenge_against_an_unknown_claim_is_rejected_and_retried(monkeypatch, fake):
+    monkeypatch.setattr(agent, 'MAX_MODEL_RETRIES', 2)
     monkeypatch.setattr(agent, "RETRY_BASE_DELAY_SECONDS", 0)
     calls = []
     real = fake.invoke
@@ -142,6 +141,10 @@ def test_batch_records_are_complete_resumable_and_adaptable(fake, tmp_path, monk
     assert debate.risk_manager_turns[0]["challenges"][0]["defect_type"] == "arithmetic"
     assert debate.trader["support_score"] == 70 and debate.trader["relied_on_claim_ids"] == ["C1"]
     assert debate.usage["input_tokens"] == 50 and debate.config["model"]
+    assert all(r['input_sha256'] and r['config_sha256'] for r in records)
+    assert all(len(r['model_calls']) == r['usage']['calls'] for r in records)
+    with pytest.raises(ValueError, match='Run plan differs'):
+        graph.run_batch(cases_file, **{**kw, 'max_debate_rounds': 3})
     score = auto_score_run(debate, cases[debate.case_id], load_clean_report(manifest[debate.case_id]))
     assert score.risk_manager_detected is None                           # matching type+value is only a suggestion
     assert score.scoring_provenance["rm_suggestion"] is True

@@ -56,10 +56,12 @@ def test_analyst_keeps_state_and_appends_validated_revision(monkeypatch):
 def test_default_client_is_created_only_once(monkeypatch):
     calls = []
     monkeypatch.setattr(agent, "llm", None)
-    monkeypatch.setattr(agent, "load_dotenv", lambda **kwargs: calls.append(kwargs))
+    monkeypatch.setattr(agent, "load_dotenv", lambda *args, **kwargs: None)
+    monkeypatch.setenv('OPENROUTER_API_KEY', 'test-key-not-real')
     monkeypatch.setattr(agent, "ChatOpenRouter", lambda **kwargs: calls.append(kwargs) or object())
     assert agent.get_llm() is agent.get_llm()
-    assert calls == [{"override": True}, {"model": agent.MODEL_NAME, "temperature": 0}]
+    assert len(calls) == 1 and calls[0]['model'] == agent.MODEL_NAME
+    assert calls[0]['max_retries'] == 0 and calls[0]['max_tokens'] == agent.MAX_TOKENS
 
 
 def test_imports_do_not_load_credentials_clients_or_run_graph():

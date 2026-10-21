@@ -54,7 +54,8 @@ def test_tone_subset_flag():
 
 def test_run_list_covers_every_report_per_situation_and_tone_subset_gets_triplets():
     from make_run_list import make_run_list
-    runs = make_run_list(MANIFEST, cases=CASES)
+    assert {r['tone'] for r in make_run_list(MANIFEST, cases=CASES)} == {'neutral'}
+    runs = make_run_list(MANIFEST, cases=CASES, tone_variants=True)
     neutral = [r for r in runs if r["tone"] == "neutral"]
     assert len(neutral) == len(CASES) * 4                                  # situations 0-3
     for r in runs:
