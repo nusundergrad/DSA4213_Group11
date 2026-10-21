@@ -61,6 +61,32 @@ def initial_verifier_node(state: AgentState):
     """Verify the frozen initial report before the debate starts."""
     return verifier_node(state)
 
+def situation_0(input_content: dict):
+    print("Starting situation_0", flush=True)
+    graph = StateGraph(AgentState)
+    graph.add_node(trader_agent)
+    graph.add_edge(START, "trader_agent")
+    graph.add_edge("trader_agent", END)
+    graph = graph.compile()
+
+    response = graph.invoke({
+        "messages": [HumanMessage(
+            content=input_content["content"],
+            id=input_content.get("message_id", "human:initial"),
+            name="human",
+        )],
+        "evidence_packet": input_content["evidence_packet"],
+        "initial_report": input_content.get("initial_report", {}),
+        "final_reports": [input_content.get("initial_report", {})],
+        "risk_feedback": {},
+        "debate_round": 0,
+        "max_debate_rounds": input_content["max_debate_rounds"],
+        "verifier_reports": [],
+        "trader_verdict": None,
+    })
+    print("Situation_0 completed", flush=True)
+    return response
+
 
 
 def situation_1(input_content: dict):
@@ -202,6 +228,7 @@ def test_verifier(input_content: dict):
     return response
 
 SITUATIONS = {
+    "situation_0": situation_0,
     "situation_1": situation_1,
     "situation_2": situation_2,
     "situation_3": situation_3,
