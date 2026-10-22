@@ -18,19 +18,18 @@ python -m pytest -q
 python src/evaluation/audit_benchmark.py --out output/benchmark_audit.json
 ```
 
-Current coverage: 15 companies/filings, 15 clean controls and 45 flawed copies.
+Current coverage: 15 companies/filings, 15 clean controls and 90 flawed copies.
 
 | Error type | Cases |
 |---|---:|
-| Wrong number | 8 |
-| Reporting period | 9 |
-| Arithmetic | 9 |
-| Citation misattribution | 6 |
-| Direct factual contradiction | 5 |
-| Material omission | 4 |
-| Unsupported inference | 4 |
+| Reporting period | 15 |
+| Arithmetic | 15 |
+| Citation misattribution | 15 |
+| Direct factual contradiction | 15 |
+| Material omission | 15 |
+| Unsupported inference | 15 |
 
-This is enough to exercise the pipeline. It is not balanced by error type or an independent sample of 45 companies. Report results by category as well as overall.
+This is enough to exercise the pipeline. It is balanced across six error types, but the 90 flawed copies share 15 companies. Report results by category as well as overall.
 The audit checks source fidelity mechanically; human review still establishes whether reasoning and counter-evidence are adequate.
 The working dataset differs from the preserved `releases/v1` snapshot. Runs save input hashes and packet/report snapshots; do not mix versions.
 
@@ -42,9 +41,10 @@ python src/evaluation/make_run_list.py --out output/check_cases.json --packets E
 python -X utf8 -m src.graph --cases output/check_cases.json --output-root output/check_runs --model $model --rounds 1 --reasoning-effort none --max-tokens 6000
 ```
 
-This list has four reports across four architectures: 16 conditions and 32 planned model calls at one debate round. For the full benchmark omit `--packets EP_0001`: 240 conditions, 480 calls at one round or 960 calls at three rounds.
+This list has seven reports across four architectures: 28 conditions and 56 planned model calls at one debate round. For the full benchmark omit `--packets EP_0001`: 420 conditions, 840 calls at one round or 1,680 calls at three rounds.
 Choose the model/settings before the study and keep them fixed. The settings above are for checking execution, not evidence that this is the best model or budget.
 These settings completed the eight-condition application check (one clean report and one arithmetic-error report across four architectures). Earlier reasoning-enabled configurations had truncated outputs; their records are kept separately.
+That check used the earlier 45-variant dataset. The expanded benchmark and rationale-target instructions require a new run folder; preserve earlier results with their saved inputs and configuration.
 Reasoning can consume the output budget before a visible answer is produced; the runner records truncated responses as failures. See [OpenRouter's reasoning documentation](https://openrouter.ai/docs/guides/best-practices/reasoning-tokens).
 
 Each call gets one attempt. Use `--max-attempts` only when explicitly planning retries. No automatic model fallback is used.

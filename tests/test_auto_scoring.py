@@ -136,7 +136,7 @@ def test_control_case_is_not_applicable():
     assert auto_score_run(run, control).scoring_status == "not_applicable"
 
 
-def test_end_to_end_metrics_on_real_cases_include_wrong_number():
+def test_end_to_end_metrics_cover_all_active_error_types():
     runs, scores = [], []
     for case in CASES.values():
         for arch in ARCHITECTURES:
@@ -146,11 +146,12 @@ def test_end_to_end_metrics_on_real_cases_include_wrong_number():
             runs.append(run)
             scores.append(auto_score_run(run, case, load_clean_report(MANIFEST[case.case_id]) if case.is_flawed else None))
     by_cat = M.by_failure_category(runs, scores)
-    n_wrong = sum(c.is_flawed and c.defect["defect_type"] == "wrong_number" for c in CASES.values())
-    assert by_cat["wrong_number"]["baseline"]["coverage"]["flawed_total"] == n_wrong
-    assert by_cat["wrong_number"]["baseline"]["far"]["rate"] == 1.0
     report = M.format_report(runs, scores, {c.case_id: c for c in CASES.values()})
-    assert "| wrong_number |" in report
+    for dtype in {c.defect['defect_type'] for c in CASES.values() if c.is_flawed}:
+        count = sum(c.is_flawed and c.defect['defect_type'] == dtype for c in CASES.values())
+        assert by_cat[dtype]['baseline']['coverage']['flawed_total'] == count
+        assert f'| {dtype} |' in report
+    assert by_cat['arithmetic']['baseline']['far']['rate'] == 1.0
     assert pending_report(scores)["total"] == len(scores)
 
 
@@ -158,6 +159,37 @@ def test_unchanged_flawed_prose_is_not_resolved_by_matching_clean_numbers():
     for case in CASES.values():
         if case.is_flawed:
             assert _score(case, _run(case)).defect_resolved is False, case.pair_id
+
+
+def test_rationale_defect_requires_semantic_detection_and_reliance_review():
+    case = _case('unsupported_inference')
+    assert case.defect['target_claim_id'] is None
+    run = _run(case, 'debate', turns=_turn(target_claim_id=None, defect_type='unsupported_inference',
+                                          explanation='Historical results cannot guarantee future returns.'))
+    score = _score(case, run, unrelied_is_immaterial=True)
+    assert score.defect_resolved is False
+    assert score.risk_manager_detected is None and score.materially_used_by_trader is None
+    assert score.false_acceptance is None
+    reviewed = _score(case, run, adjudication={'risk_manager_detected': True, 'materially_used_by_trader': True})
+    assert reviewed.detected is True and reviewed.false_acceptance is True
+    run.final_report = _report(MANIFEST[case.case_id]['clean_report_path'])
+    assert _score(case, run).defect_resolved is True
+    run.final_report['claims'][0]['text'] += ' ' + case.defect['injected']['statement']
+    assert _score(case, run).defect_resolved is None
+
+
+def test_unstructured_review_of_rationale_stays_pending():
+    case = _case('unsupported_inference')
+    score = _score(case, _run(case, 'debate', turns=[{'text': 'Check future return assumptions.'}]))
+    assert score.risk_manager_detected is None
+
+
+def test_report_level_omission_challenge_can_be_adjudicated():
+    case = _case('material_omission')
+    run = _run(case, 'debate', turns=_turn(target_claim_id=None, defect_type='material_omission',
+                                          explanation='The risk discussion omits material source evidence.'))
+    assert _score(case, run).risk_manager_detected is None
+    assert _score(case, run, adjudication={'risk_manager_detected': True}).risk_manager_detected is True
 
 
 def test_corrected_spec_with_unchanged_wrong_prose_needs_review():

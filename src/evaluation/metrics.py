@@ -157,7 +157,7 @@ def paired_comparison(runs, scores, arch_a, arch_b, field="far", n_boot=2000, se
     a_only = sum(x and not y for x, y in zip(a, b))
     b_only = sum(y and not x for x, y in zip(a, b))
     rng = random.Random(seed)
-    # Resample whole packets, keeping the three related flawed variants together.
+    # Resample whole packets, keeping related flawed variants together.
     groups = {}
     for i, cid in enumerate(ids):
         report = rows[cid, arch_a][0].initial_report

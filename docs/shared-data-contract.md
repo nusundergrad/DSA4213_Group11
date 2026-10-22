@@ -1,7 +1,7 @@
 # Shared data contract — v0.1 benchmark subset and proposed interfaces
 
 This document coordinates benchmark, architecture and evaluation work. On `testing`, the benchmark, graph runner and scoring pipeline are implemented; later sections also contain proposed extensions.
-Current data: 15 packets, 15 clean reports and 45 flawed variants across seven error types. The working dataset and preserved `releases/v1` snapshot must not be mixed.
+Current data: 15 packets, 15 clean reports and 90 flawed variants across six error types. The working dataset and preserved `releases/v1` snapshot must not be mixed.
 See [the current evaluation rules](evaluation.md) and [execution commands](running-experiments.md) where older proposal examples differ.
 
 Execution follows `main`'s information boundary: Analyst and Risk Manager receive masked evidence; Trader receives the current report, current verifier result and latest agent message, without the source packet or full discussion. Structured challenge/reliance fields enable evaluation. Actual Analyst revisions remain observable.
@@ -60,10 +60,13 @@ See [benchmark preparation and handoff](benchmark.md) and
   and detection/correction criteria. `create_flawed_reports.py` applies these
   edits offline; `check_flawed_reports.ipynb` shows the comparisons. These are
   lightweight pair records, not the full case/answer-key schema in section 5.
-  The seven implemented error types are `wrong_number`, `reporting_period`, `arithmetic`, `citation_misattribution`, `direct_factual_contradiction`, `material_omission`, and `unsupported_inference`. Labels and answer keys must stay out of agent inputs.
+  The active error types are `direct_factual_contradiction`, `reporting_period`,
+  `arithmetic`, `material_omission`, `citation_misattribution`, and
+  `unsupported_inference`. Labels and answer keys must stay out of agent inputs.
   `clean_report_path` and `flawed_report_path` are relative to `public/`.
   `error_index` numbers a variant within its packet, not the claim being edited;
-  `target_claim_id` identifies that claim.
+  `target_claim_id` identifies the changed or omitted claim, or is `null` for
+  rationale-only defects. `changes[].path` gives the exact edited locations.
 - Preparation uses `data/benchmark/private/` and `data/benchmark/public/`; reviewed
   releases use `data/benchmark/releases/v1/`, then `v2`, etc. Release automation and an exported JSON Schema artifact remain deferred. The testing branch implements architecture execution, confidence framing and scoring; see the current evaluation guide.
 
@@ -127,6 +130,7 @@ Within-case tone comparisons use `case_id`; control/error comparisons use privat
 
 Confidence mismatch is not a separate content defect. Risk Manager may record a
 separate `calibration_concern`, without classifying it as an injected error.
+`wrong_number` remains supported for older records; the active benchmark uses the six types listed above.
 
 ## 3. Evidence packet — A owns
 
@@ -338,6 +342,8 @@ A nonexistent evidence ID can deterministically fail citation existence.
 - `round`: integer 1–3.
 - `challenges`: array of `{challenge_id, target_claim_id, defect_type,
   evidence_ids, explanation, requested_change}`.
+- `target_claim_id`: an existing report claim ID, or `null` for a rationale error
+  or an omitted claim. Explain the disputed assertion or missing evidence explicitly.
 - `calibration_concern`: explanation string or `null`.
 - `overall_assessment`: string explaining whether the recommendation is
   proportionate to the available evidence.

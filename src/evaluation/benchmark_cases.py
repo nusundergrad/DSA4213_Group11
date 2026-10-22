@@ -7,7 +7,7 @@ Outputs two eval-only things, neither of which may reach an agent:
                  clean counterpart (needed by ``auto_scoring`` to tell whether a defect was fixed)
 
 Case IDs are opaque (derived from the report ID). The clean report of a packet is reused by up to
-three flawed copies, so there is ONE control case per clean report, not one per pair; its
+six flawed copies, so there is ONE control case per clean report, not one per pair; its
 ``pair_id`` is ``CONTROL_<packet_id>``. Report that sharing as a limitation: the controls are not
 independent.
 

@@ -36,8 +36,8 @@ pipeline that measures whether it catches planted errors. Start with [the curren
  findings table: detection, correction, FAR, TAR, by failure category, efficiency
 ```
 
-Each benchmark case is a masked 10-K evidence packet plus an Analyst report. 45 reports carry one
-planted defect (the "flawed" cases); 15 are clean controls. The defect types are `wrong_number`,
+Each benchmark case is a masked 10-K evidence packet plus an Analyst report. 90 reports carry one
+planted defect (the "flawed" cases); 15 are clean controls. The defect types are
 `arithmetic`, `reporting_period`, `citation_misattribution`, `direct_factual_contradiction`,
 `material_omission` and `unsupported_inference`.
 
@@ -58,6 +58,7 @@ All conditions start from the same masked packet and report. Agent visibility fo
   `explanation`, `requested_change`), an optional `calibration_concern` and an `overall_assessment`.
   The runner assigns challenge IDs (`RM_R1_01`, ...). A challenge against a claim that does not exist is
   rejected and recorded as a failed attempt. Retries require an explicit attempt budget.
+  For a rationale error or omitted claim, use `target_claim_id: null` and explain the issue; detection and reliance need review against the private criteria.
 - **Analyst** revisions are preserved as generated. Edits, retractions and new claim IDs are logged; the runner does not silently restore unchallenged claims. This allows new errors to remain observable.
 - **Tone**: each run shows a fixed sentence beside the report ("I have low / moderate / high confidence in
   this assessment."). Every run uses the neutral sentence by default; opt in with `--tone-variants` to run the 12-pair confidence subset with the low (`underconfident`) and high (`overconfident`) sentences. The input report stays fixed; debate can subsequently revise it.
@@ -135,7 +136,7 @@ Free models (model IDs ending in `:free`, like the default) are **not billed**, 
 default model cannot spend your credit. They still need a valid key. Two things to know:
 
 - Free models are rate limited (OpenRouter documents a daily request cap that is higher once an
-  account holds some purchased credit). The full run needs roughly 900+ model calls, so expect a
+  account holds some purchased credit). The full run needs 840 model calls at one debate round (1,680 at three rounds), so expect a
   free model to stop part-way and plan to run it in chunks over several days, or run only the pilot.
 - If you switch `MODEL_NAME` to a paid model, the run **is billed**. To make overspending impossible,
   create a dedicated key at <https://openrouter.ai/keys> with a small **credit limit** (for example
@@ -203,7 +204,7 @@ python -m src.graph --cases output/cases_check.json --output-root output/check_r
   --model nvidia/nemotron-3-ultra-550b-a55b:free --rounds 1 --reasoning-effort none --max-tokens 6000
 ```
 
-That is 8 reports x 3 situations = 24 runs.
+That is 14 reports x 3 situations = 42 runs.
 
 ### 5c. The full run
 
@@ -213,7 +214,7 @@ python -m src.graph --cases output/cases_all.json --output-root output/full_runs
   --model nvidia/nemotron-3-ultra-550b-a55b:free --rounds 1 --reasoning-effort none --max-tokens 6000
 ```
 
-The default list has 240 neutral runs: 60 reports x 4 situations. Confidence is supplementary; add `--tone-variants` for the matched low/high subset. The subset is
+The default list has 420 neutral runs: 105 reports x 4 situations. Confidence is supplementary; add `--tone-variants` for the matched low/high subset. The subset is
 chosen deterministically (`default_confidence_pairs` in `benchmark_cases.py`: round-robin over defect
 types), so everyone gets the same pairs.
 
@@ -255,6 +256,7 @@ Outputs in `eval_runs/`:
 | `pending.json` | A worksheet of the human decisions still needed, with the frozen criteria |
 
 The command also prints pending judgements. Each metric uses its known labels from completed executions; unknown labels stay out of its denominator. A known REJECT counts as no false acceptance even if detection still needs review.
+Rationale-only defects have no target claim ID. An unchanged report remains unresolved; restoring the clean rationale and claims resolves it. Other edits, detection and accepted-rationale reliance need review. The optional claim-reliance assumption does not score rationale reliance automatically.
 
 ### What is decided automatically
 
@@ -368,9 +370,9 @@ wired into a command; it needs `pip install anthropic`, `ANTHROPIC_API_KEY` in `
 
 ## 10. Reading the results honestly
 
-- **Coverage first.** A rate computed on 3 of 45 cases is not a finding. Quote `flawed_scored/flawed_total`.
+- **Coverage first.** A rate computed on 3 of 90 cases is not a finding. Quote `flawed_scored/flawed_total`.
 - **One model, one seed.** Temperature is 0, but a free model can still change underneath you. Name the model and the date of the run.
-- **Controls are not independent.** Each clean report is shared by up to three flawed copies, so the control challenge rate rests on 15 clean reports, not 45.
+- **Controls are not independent.** Each clean report is shared by six flawed copies, so the control challenge rate rests on 15 clean reports, not 90.
 - **Risk Manager detection** is automatic only for clear misses; a challenge that names the right claim but whose type or values do not clearly match stays pending for your adjudication.
 - **Reliance is self-reported:** `relied_on_claim_ids` is the Trader's own claim about its reasoning, a trace rather than proof of materiality.
 - **The Risk Manager is shown the defect category names** (it must label challenges), which is a mild hint that errors of those kinds may exist. State this in the report.

@@ -51,7 +51,7 @@ def score_run(run: RunRecord, case: Case, *, verifier_detected=None, risk_manage
         if risk_manager_detected is not None and type(risk_manager_detected) is not bool:
             raise ValueError("risk_manager_detected must be bool or None")
         if risk_manager_detected is True and not any(
-            challenge.get("target_claim_id") == target
+            challenge.get("target_claim_id") is None or challenge.get("target_claim_id") == target
             for turn in run.risk_manager_turns for challenge in (turn.get("challenges") or [])
         ):
             raise ValueError("risk_manager_detected=True requires a challenge on the target claim")

@@ -18,7 +18,7 @@ def test_counts_and_defect_types():
     assert {c.defect["defect_type"] for c in flawed} == {p["defect_type"] for p in pairs}
     assert {c.defect["defect_type"] for c in flawed} <= set(DEFECT_TYPES)  # metrics only reports known types
     for c in flawed:
-        assert c.defect["target_claim_id"].startswith("C")
+        assert c.defect["target_claim_id"] is None or c.defect["target_claim_id"].startswith("C")
         assert c.defect["detection_criterion"] and c.defect["correction_criterion"] and c.defect["materiality_criterion"]
     assert all(c.defect is None for c in controls)
 
@@ -63,7 +63,7 @@ def test_run_list_covers_every_report_per_situation_and_tone_subset_gets_triplet
     subset = [c for c in CASES.values() if c.confidence_subset]
     assert len([c for c in subset if c.is_flawed]) == 12                   # the planned 12-pair subset
     assert len(runs) == len(neutral) + len(subset) * 4 * 2                 # + under/overconfident for each
-    assert len(make_run_list(MANIFEST, (2,), ["EP_0001"], CASES, tone_variants=False)) == 4
+    assert len(make_run_list(MANIFEST, (2,), ["EP_0001"], CASES, tone_variants=False)) == 7
 
 
 def test_default_confidence_pairs_are_deterministic_and_cover_every_defect_type():

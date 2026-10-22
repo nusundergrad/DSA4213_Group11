@@ -86,6 +86,13 @@ def auto_verifier_detected(run: RunRecord, case: Case):
 
 def auto_defect_resolved(run: RunRecord, case: Case, clean_report: dict):
     target = case.defect["target_claim_id"]
+    if run.final_report == run.initial_report:
+        return False
+    if target is None:
+        if (run.final_report.get('rationale') == clean_report.get('rationale')
+                and run.final_report.get('claims') == clean_report.get('claims')):
+            return True
+        return None                        # a rationale edit may have moved the assertion into a claim
     final, initial, clean = (_claim(r, target) for r in (run.final_report, run.initial_report, clean_report))
     if final is None:
         return None                        # may have been renumbered or moved into the rationale
@@ -99,6 +106,8 @@ def auto_defect_resolved(run: RunRecord, case: Case, clean_report: dict):
 def auto_materially_used(run: RunRecord, case: Case, unrelied_is_immaterial: bool = False):
     if run.trader.get("assessment") == "REJECT":
         return False
+    if case.defect['target_claim_id'] is None:
+        return None                        # claim-only reliance cannot establish use of a rationale error
     if case.defect["target_claim_id"] in (run.trader.get("relied_on_claim_ids") or []):
         return True
     return False if unrelied_is_immaterial else None
@@ -128,11 +137,14 @@ def rm_challenge_assessment(run: RunRecord, case: Case):
         # Free-text Risk Manager output (no structured challenges): never score it as a miss.
         tokens = _expected_tokens(case.defect.get("expected", {}))
         text = _digits(" ".join(t.get("text", "") for t in run.risk_manager_turns))
-        mentioned = target.lower() in text and any(tok in text for tok in tokens)
+        mentioned = target is not None and target.lower() in text and any(tok in text for tok in tokens)
         return None, f"unstructured Risk Manager text; mentions target claim and an expected value: {mentioned}"
-    mine = [c for t in run.risk_manager_turns for c in t.get("challenges", []) if c.get("target_claim_id") == target]
+    mine = [c for t in run.risk_manager_turns for c in t.get("challenges", [])
+            if c.get("target_claim_id") is None or c.get("target_claim_id") == target]
     if not mine:
         return False, "no challenge targets the defect claim"
+    if target is None or any(c.get('target_claim_id') is None for c in mine):
+        return None, "rationale or omission challenge requires review against the defect criterion"
     tokens = _expected_tokens(case.defect.get("expected", {}))
     for c in mine:
         if c.get("defect_type") == dtype and any(tok in _digits(c.get("explanation", "")) for tok in tokens):

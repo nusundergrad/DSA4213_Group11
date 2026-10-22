@@ -7,8 +7,8 @@ Run the commands below from the repository root.
 
 ## What we have now
 
-There are 15 source-backed packets (`EP_0001` to `EP_0015`), 15 clean reports and 45 flawed copies: three variants per company.
-The categories are wrong number, reporting period, arithmetic, citation misattribution, direct factual contradiction, material omission and unsupported inference.
+There are 15 source-backed packets (`EP_0001` to `EP_0015`), 15 clean reports and 90 flawed copies: six variants per company.
+The categories are reporting period, arithmetic, citation misattribution, direct factual contradiction, material omission and unsupported inference.
 Each packet has a source PDF, extracted text/provenance, original packet, masking aliases and a review notebook.
 
 `private/pairs.json` records the exact edits and expected corrections. The working public dataset is separate from the preserved `releases/v1` snapshot.
@@ -40,13 +40,17 @@ Reports are arranged like this for both `EP_0001` and `EP_0002`:
 ```text
 public/reports/EP_0001/
   clean.json
-  error_01_wrong_number.json
+  error_01_direct_factual_contradiction.json
   error_02_reporting_period.json
-  error_03_arithmetic.json 
+  error_03_arithmetic.json
+  error_04_material_omission.json
+  error_05_citation_misattribution.json
+  error_06_unsupported_inference.json
 ```
 
 The error number identifies a variant within that packet; `target_claim_id` in
-the private pair record identifies the changed claim. For example, error 02
+the private pair record identifies the changed or omitted claim. It is `null`
+when the defect occurs only in the rationale; `changes[].path` records the exact location. For example, error 02
 changes claim C1's reporting period; it does not mean claim C2 is wrong.
 
 The loader opens these files directly and sends their contents to the model.
@@ -246,13 +250,20 @@ Review that the clean report is still correct and the flawed copy contains only
 the intended defect. This review confirms the injection; it does not approve the
 flawed report as clean.
 
-The six edits are recorded in `private/pairs.json`. Each record has a pair ID,
+The 90 single-error pairs are recorded in `private/pairs.json`: six variants for
+each of the 15 evidence packets. Each flawed report contains one intended root
+defect; repeated prose and structured values express that same defect. Each record has a pair ID,
 packet ID, clean and flawed report IDs and paths, an error index, target claim,
 error type, expected and
 injected values, an explanation, detection/correction criteria, and exact
-before/after edits. The same clean report is reused for its three pairs.
+before/after edits. The same clean report is reused for its six pairs. Variants 04–06 add three separate defects. The former wrong-number variants
+have been replaced by direct factual contradictions, giving every packet the
+same six error types. Numeric
+errors, reporting-period errors, material omissions, citation misattribution,
+factual contradictions, and unsupported inferences are covered across the dataset.
+The frozen `releases/v1` dataset remains unchanged.
 `clean_report_path` and `flawed_report_path` are relative to `public/`, for example
-`reports/EP_0001/clean.json` and `reports/EP_0001/error_01_wrong_number.json`.
+`reports/EP_0001/clean.json` and `reports/EP_0001/error_01_direct_factual_contradiction.json`.
 
 Recreate the copies offline with:
 
@@ -273,8 +284,8 @@ and the preparation checks. It also checks that the evidence is identical and
 the report matches the recorded edits. Notes for the first six pairs are included.
 This notebook contains private answers, even though it sits beside the templates.
 
-For wrong-number cases, the FY2025 amount is overstated by 10,000 USD_million;
-the growth percentage is recalculated from that amount. For arithmetic cases,
+Direct factual contradictions reverse an explicit disclosure in the cited evidence;
+the financial amounts and calculations remain unchanged. For arithmetic cases,
 the source amounts stay correct and growth is overstated by 10 percentage points.
 For period cases, the same comparison is shifted from FY2024-FY2025 to
 FY2023-FY2024. Repeated assertions in the rationale follow the same error.
@@ -324,7 +335,7 @@ from src.benchmark.prepare import load_agent_input
 
 payload = load_agent_input(
     "data/benchmark/public/evidence_packets/EP_0001.json",
-    "data/benchmark/public/reports/EP_0001/error_01_wrong_number.json",
+    "data/benchmark/public/reports/EP_0001/error_01_direct_factual_contradiction.json",
     check_clean=False,
 )
 ```

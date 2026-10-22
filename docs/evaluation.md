@@ -7,8 +7,8 @@ Confidence wording and reviewer challenges are supplementary experiments. The ju
 
 ## Inputs and separation
 
-The current benchmark has 15 packets, 15 clean reports and 45 flawed reports.
-`benchmark_cases.py` reads the private pair records after execution. Each clean report is one control, shared by its three flawed copies.
+The current benchmark has 15 packets, 15 clean reports and 90 flawed reports.
+`benchmark_cases.py` reads the private pair records after execution. Each clean report is one control, shared by its six flawed copies.
 Agents receive masked public content, never filenames, error labels or expected answers.
 Use `audit_benchmark.py` before a batch. It checks source spans, hashes, masking, numbers and exact recorded pair edits; it does not replace semantic review.
 
@@ -39,6 +39,7 @@ The report displays coverage; inspect missing conditions in `run_plan.json` as w
 - A matching `check_spec` alone is not a correction. Other edits, missing/renumbered claims and semantic changes need review.
 - Trader REJECT is not a false acceptance. Its self-reported claim reliance is a useful trace, not proof; validate questionable cases.
 - Matching reviewer type/value is a suggestion. The default keeps semantic detection pending. Human adjudication checks the specific defect criterion, even if the reviewer used a different category name.
+- A challenge can use `target_claim_id: null` for a rationale error or omitted claim. Match it to the private criterion through review; a null target alone is not detection. Claim-only reliance fields cannot establish whether a rationale error was materially used, so that judgement stays pending even with `--unrelied-is-immaterial`.
 
 The adapter writes `pending.json`. Read each run and the private criteria, then supply booleans in a separate adjudication file keyed by run ID. Preserve notes explaining judgement calls. Do not fill unknowns merely to complete a results table.
 Check every final report and rationale for newly introduced errors separately; resolving the injected defect does not prove the final report is clean.
@@ -54,6 +55,6 @@ This is a scripted reviewer follow-up test, separate from the architecture debat
 
 ## Interpretation
 
-Variants from one company share evidence, so 45 flawed reports are not 45 independent companies. Per-rate Wilson intervals are descriptive. Paired difference intervals resample whole evidence packets to retain the shared-company structure. With very few packets, those intervals do not establish generality. The raw McNemar helper remains available but its case-independence assumption does not hold for grouped variants.
+Variants from one company share evidence, so 90 flawed reports are not 90 independent companies. Per-rate Wilson intervals are descriptive. Paired difference intervals resample whole evidence packets to retain the shared-company structure. With very few packets, those intervals do not establish generality. The raw McNemar helper remains available but its case-independence assumption does not hold for grouped variants.
 Keep model, reasoning budget, debate rounds, evidence access and prompts fixed within a comparison. The metrics reject mixed model/configuration settings. Preserve failed and earlier attempts; select reruns by a fixed rule, never by the desired result.
-The benchmark can support an initial comparison across seven error types. A small application check validates the pipeline, not the hypothesis or an error rate for finance generally.
+The benchmark can support an initial comparison across six error types. A small application check validates the pipeline, not the hypothesis or an error rate for finance generally.

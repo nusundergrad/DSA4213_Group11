@@ -39,7 +39,7 @@ class Challenge(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     challenge_id: str | None = None          # assigned by the runner (RM_R1_01, ...), not by the model
-    target_claim_id: str
+    target_claim_id: str | None             # null for rationale errors or an omitted claim
     defect_type: Literal["wrong_number", "arithmetic", "reporting_period", "citation_misattribution",
                          "direct_factual_contradiction", "material_omission", "unsupported_inference"]
     evidence_ids: list[str] = Field(default_factory=list)
@@ -127,7 +127,7 @@ def check_risk_manager_turn(turn: RiskManagerTurn, state: AgentState) -> None:
     known_claims = claim_ids(state)
     known_evidence = {e["evidence_id"] for e in state["evidence_packet"].get("evidence", [])}
     for challenge in turn.challenges:
-        if challenge.target_claim_id not in known_claims:
+        if challenge.target_claim_id is not None and challenge.target_claim_id not in known_claims:
             raise ValueError(f"challenge targets unknown claim {challenge.target_claim_id!r}; known: {sorted(known_claims)}")
         if not set(challenge.evidence_ids) <= known_evidence:
             raise ValueError("challenge cites evidence IDs that are not in the packet")
@@ -372,8 +372,9 @@ def risk_manager_agent(state: AgentState):
             RISK_MANAGER_SYSTEM_PROMPT
             + "\nReturn only one JSON object matching this schema:\n"
             + json.dumps(RiskManagerTurn.model_json_schema())
-            + "\nUse an empty challenges list if no specific claim defect is found."
-            + "\ntarget_claim_id must be a claim_id from the current report. defect_type must be exactly one of: "
+            + "\nUse an empty challenges list if no specific defect is found."
+            + "\ntarget_claim_id must be a claim_id from the current report, or null for a rationale error or an omitted claim."
+            + " For null targets, identify the disputed assertion or missing evidence in explanation. defect_type must be exactly one of: "
             + ", ".join(CHALLENGE_TYPES)
             + ". evidence_ids may list only evidence_id values from the packet. Do not include challenge_id."
         )

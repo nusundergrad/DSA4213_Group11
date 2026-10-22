@@ -119,6 +119,23 @@ def test_challenge_against_an_unknown_claim_is_rejected_and_retried(monkeypatch,
     assert calls
 
 
+def test_rationale_challenge_is_preserved_without_inventing_a_claim_id(monkeypatch, fake):
+    original = fake.invoke
+
+    def review(messages, **kwargs):
+        response = original(messages, **kwargs)
+        if 'Head of Risk Management' in messages[0].content:
+            body = json.loads(response.content)
+            body['challenges'][0].update(target_claim_id=None, defect_type='unsupported_inference',
+                                         explanation='The rationale guarantees returns without supporting evidence.')
+            response.content = json.dumps(body)
+        return response
+
+    monkeypatch.setattr(fake, 'invoke', review)
+    out = run('situation_1')
+    assert out['risk_manager_turns'][0]['challenges'][0]['target_claim_id'] is None
+
+
 def test_batch_records_are_complete_resumable_and_adaptable(fake, tmp_path, monkeypatch):
     sys.path.insert(0, str(Path(__file__).parents[1] / "src" / "evaluation"))
     from benchmark_cases import build_cases, load_clean_report

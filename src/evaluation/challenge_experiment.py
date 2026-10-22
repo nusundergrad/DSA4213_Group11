@@ -27,7 +27,8 @@ def run_experiment(packet_path, report_path, output, *, model, live=False, seed=
     prefix = [SystemMessage(content=RISK_MANAGER_SYSTEM_PROMPT
                             + '\nAssess whether the report is adequately supported: ACCEPT or REJECT. '
                             + 'Use an empty challenges list if no specific defect is found. '
-                            + 'target_claim_id must be a claim_id from the report. '
+                            + 'target_claim_id must be a claim_id from the report, or null for a rationale error or an omitted claim. '
+                            + 'For null targets, identify the disputed assertion or missing evidence in explanation. '
                             + 'evidence_ids must copy complete evidence_id values from the packet; do not abbreviate them. '
                             + 'Return only JSON matching this schema:\n'
                             + json.dumps(ReviewerAssessment.model_json_schema())),

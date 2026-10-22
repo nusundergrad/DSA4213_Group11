@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.1",
+  "report_id": "R_47789d694a6d5edc87aebd5c3c68f946",
+  "recommendation": "HOLD",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "text": "Total revenue increased by 114.20% from $60,922 million in the year ended January 28, 2024, to $130,497 million in the year ended January 26, 2025.",
+      "evidence_ids": [
+        "EP_0003_E01"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0003_F02",
+        "to_fact_id": "EP_0003_F01",
+        "metric": "revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-01-30",
+          "end": "2024-01-28"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-01-29",
+          "end": "2025-01-26"
+        },
+        "value": "114.20",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C2",
+      "text": "The SEGMENT_04 segment's revenue grew by 145.11% from $47,405 million in the year ended January 28, 2024, to $116,193 million in the year ended January 26, 2025, driven by strong demand for accelerated computing and AI solutions, specifically a 162% growth in Data Center computing revenue and a 51% growth in Data Center networking revenue.",
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0003_F04",
+        "to_fact_id": "EP_0003_F03",
+        "metric": "compute_networking_revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-01-30",
+          "end": "2024-01-28"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-01-29",
+          "end": "2025-01-26"
+        },
+        "value": "145.11",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C3",
+      "text": "The SEGMENT_05 segment's revenue increased by 5.82% from $13,517 million in the year ended January 28, 2024, to $14,304 million in the year ended January 26, 2025, primarily due to sales of PRODUCT_25 GPUs, but its operating income decreased due to a 44% increase in segment operating expenses.",
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02"
+      ],
+      "check_spec": {
+        "kind": "percentage_change",
+        "from_fact_id": "EP_0003_F06",
+        "to_fact_id": "EP_0003_F05",
+        "metric": "graphics_revenue",
+        "from_period": {
+          "label": "FY2024",
+          "start": "2023-01-30",
+          "end": "2024-01-28"
+        },
+        "to_period": {
+          "label": "FY2025",
+          "start": "2024-01-29",
+          "end": "2025-01-26"
+        },
+        "value": "5.82",
+        "unit": "percent"
+      }
+    },
+    {
+      "claim_id": "C4",
+      "text": "The company faces risks from increasing economic sanctions and export controls, which could disrupt supply chains, negatively impact demand for products, and lead to excess inventory or supply charges, potentially benefiting competitors (Item 1A). EP_0003_E03 reports: “Revenue from Data Center computing grew 162%”",
+      "evidence_ids": [
+        "EP_0003_E03"
+      ],
+      "check_spec": null
+    }
+  ],
+  "rationale": "The company demonstrated significant revenue growth, primarily driven by its SEGMENT_04 segment, which saw a 145.11% increase in revenue due to strong demand for AI and accelerated computing solutions. The overall revenue increased by 114.20%. However, the SEGMENT_05 segment, while experiencing a 5.82% revenue increase, saw a decrease in operating income due to a 44% increase in operating expenses. Furthermore, the company faces material risks from export controls and economic sanctions, which could negatively impact demand, disrupt supply chains, and increase compliance burdens. Given the strong growth in one segment offset by challenges in another and significant external risks, a HOLD recommendation is appropriate."
+}
