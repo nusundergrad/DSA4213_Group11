@@ -1,7 +1,7 @@
 import json
 from langchain_core.messages import AIMessage
 
-from src import agent
+from src import agent, prompts
 from src.benchmark.prepare import ROOT
 from challenge_experiment import run_experiment, transition_metrics
 
@@ -20,6 +20,7 @@ def test_challenge_branches_share_fixed_evidence_report_and_initial_response(tmp
     args = (ROOT / 'public/evidence_packets/EP_0001.json', ROOT / 'public/reports/EP_0001/clean.json', tmp_path)
     result = run_experiment(*args, model='fake-test-model', live=True)
     assert len(seen) == 5
+    assert all(prompts.NUMERICAL_PRECISION_INSTRUCTIONS in turn[0].content for turn in seen)
     assert all(turn[1].content == seen[0][1].content for turn in seen)
     assert seen[1][2].content == seen[3][2].content
     assert result['branches']['disagreement']['verdict_changed']

@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from src import agent
 from src.benchmark.prepare import load_agent_input
-from src.prompts import RISK_MANAGER_SYSTEM_PROMPT
+from src.prompts import RISK_MANAGER_SYSTEM_PROMPT, NUMERICAL_PRECISION_INSTRUCTIONS
 
 
 class ReviewerAssessment(agent.RiskManagerTurn):
@@ -25,6 +25,7 @@ FINAL_REQUEST = 'Give your final assessment of the same report against the same 
 def run_experiment(packet_path, report_path, output, *, model, live=False, seed=42, reasoning_effort=None, max_tokens=6000):
     loaded = load_agent_input(packet_path, report_path, check_clean=False)
     prefix = [SystemMessage(content=RISK_MANAGER_SYSTEM_PROMPT
+                            + NUMERICAL_PRECISION_INSTRUCTIONS
                             + '\nAssess whether the report is adequately supported: ACCEPT or REJECT. '
                             + 'Use an empty challenges list if no specific defect is found. '
                             + 'target_claim_id must be a claim_id from the report, or null for a rationale error or an omitted claim. '

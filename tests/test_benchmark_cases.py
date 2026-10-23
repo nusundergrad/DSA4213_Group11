@@ -1,5 +1,6 @@
 """answer keys built from the real data/benchmark/private/pairs.json"""
 import json
+from pathlib import Path
 
 import pytest
 
@@ -72,3 +73,46 @@ def test_default_confidence_pairs_are_deterministic_and_cover_every_defect_type(
     chosen = default_confidence_pairs(pairs)
     assert chosen == default_confidence_pairs(list(reversed(pairs))) and len(chosen) == 12
     assert {p["defect_type"] for p in pairs if p["pair_id"] in chosen} == {p["defect_type"] for p in pairs}
+
+
+def test_shuffled_order_is_reproducible_and_preserves_all_conditions():
+    from make_run_list import make_run_list
+    ordered = make_run_list(MANIFEST, packets=['EP_0001'], cases=CASES)
+    shuffled = make_run_list(MANIFEST, packets=['EP_0001'], cases=CASES, shuffle_seed=42)
+    assert shuffled == make_run_list(MANIFEST, packets=['EP_0001'], cases=CASES, shuffle_seed=42)
+    assert shuffled != ordered
+    assert sorted(map(lambda r: json.dumps(r, sort_keys=True), shuffled)) == sorted(
+        map(lambda r: json.dumps(r, sort_keys=True), ordered))
+
+
+def test_frozen_plans_have_balanced_matched_conditions():
+    from benchmark_cases import load_confidence_pairs
+    from make_run_list import make_run_list
+    root = Path(__file__).resolve().parents[1]
+    selected = load_confidence_pairs(root / 'output/confidence_pairs.json')
+    cases, manifest = build_cases(confidence_pair_ids=selected)
+    subset = [c for c in cases.values() if c.confidence_subset]
+    flawed = [c for c in subset if c.is_flawed]
+    assert len(subset) == 12 and len(flawed) == 6
+    assert len({c.defect['defect_type'] for c in flawed}) == 6
+    assert len({manifest[c.case_id]['packet_path'] for c in flawed}) == 6
+    assert not any('EP_0001' in manifest[c.case_id]['packet_path'] for c in subset)
+    main = json.loads((root / 'output/full_cases.json').read_text(encoding='utf-8'))
+    tone = json.loads((root / 'output/confidence_cases.json').read_text(encoding='utf-8'))
+    repeat = json.loads((root / 'output/confidence_neutral_repeat.json').read_text(encoding='utf-8'))
+    assert main == make_run_list(manifest, cases=cases, shuffle_seed=42)
+    assert tone == make_run_list(manifest, (0, 3), cases=cases, tone_variants=True, shuffle_seed=42, confidence_only=True)
+    assert repeat == make_run_list(manifest, (0, 3), cases=cases, shuffle_seed=42, confidence_only=True)
+    assert (len(main), len(tone), len(repeat)) == (420, 72, 24)
+    key = lambda r: (r['evidence_packet'], r['report'], r['situation'], r['tone'])
+    assert set(map(key, repeat)) == {key(r) for r in tone if r['tone'] == 'neutral'}
+    for entries in (main, tone, repeat):
+        assert len(set(map(key, entries))) == len(entries)
+        assert all(set(r) == {'evidence_packet', 'report', 'situation', 'tone'} for r in entries)
+    assert sum(3 if r['situation'] in (1, 3) else 1 for r in main) == 840
+    assert sum(3 if r['situation'] == 3 else 1 for r in tone + repeat) == 192
+
+
+def test_unknown_confidence_pairs_fail_instead_of_silently_omitting_them():
+    with pytest.raises(ValueError, match='unknown confidence pair'):
+        build_cases(confidence_pair_ids={'PAIR_missing'})

@@ -61,7 +61,7 @@ All conditions start from the same masked packet and report. Agent visibility fo
   For a rationale error or omitted claim, use `target_claim_id: null` and explain the issue; detection and reliance need review against the private criteria.
 - **Analyst** revisions are preserved as generated. Edits, retractions and new claim IDs are logged; the runner does not silently restore unchallenged claims. This allows new errors to remain observable.
 - **Tone**: each run shows a fixed sentence beside the report ("I have low / moderate / high confidence in
-  this assessment."). Every run uses the neutral sentence by default; opt in with `--tone-variants` to run the 12-pair confidence subset with the low (`underconfident`) and high (`overconfident`) sentences. The input report stays fixed; debate can subsequently revise it.
+  this assessment."). Every run uses the neutral sentence by default. The [frozen confidence plan](docs/experiment-config.md#full-study-plan-fixed-on-24-october-2026) uses six clean/flawed pairs across six companies, baseline/hybrid, three tones and separate neutral repeats. The input report stays fixed; debate can subsequently revise it.
 - **Usage**: exact request/response bodies and usage are saved for every attempted call, including rejected outputs. Headers and API keys are not saved. Cost stays unknown unless reported by the provider.
 
 Headline metrics (all per architecture):
@@ -69,9 +69,13 @@ Headline metrics (all per architecture):
 - **Detection**: the defect was identified.
 - **Correction**: the defect was fixed after being detected.
 - **FAR (false acceptance rate)**: the Trader ACCEPTed while the defect was unresolved *and* used it.
+- **Accepted unresolved defect rate**: the Trader ACCEPTed while the defect remained unresolved, without needing a material-reliance judgement. Unknown reliance is not evidence of safety.
 - **TAR (true acceptance rate)**: the Trader ACCEPTs when the input is clean. Check separately whether revisions introduced errors.
 - **Control challenge rate**: first-review challenges on clean inputs. Whether each challenge is false needs adjudication.
 - **Resolution**: the injected defect is absent from the final claim; this does not certify that no new error was introduced.
+- **New-error rate**: new errors in final Analyst reports or Trader rationales, among outputs actually reviewed. Report review coverage separately.
+
+ACCEPT/REJECT assesses report support. BUY/HOLD/SELL is a separate action; HOLD does not mean REJECT.
 
 ## 2. Setup
 
@@ -209,14 +213,11 @@ That is 14 reports x 3 situations = 42 runs.
 ### 5c. The full run
 
 ```bash
-python src/evaluation/make_run_list.py --out output/cases_all.json
-python -m src.graph --cases output/cases_all.json --output-root output/full_runs \
-  --model nvidia/nemotron-3-ultra-550b-a55b:free --rounds 1 --reasoning-effort none --max-tokens 6000
+python -m src.graph --cases output/full_cases.json --output-root output/main_study/runs \
+  --model nvidia/nemotron-3-ultra-550b-a55b:free --rounds 1 --reasoning-effort none --max-tokens 6000 --max-attempts 1
 ```
 
-The default list has 420 neutral runs: 105 reports x 4 situations. Confidence is supplementary; add `--tone-variants` for the matched low/high subset. The subset is
-chosen deterministically (`default_confidence_pairs` in `benchmark_cases.py`: round-robin over defect
-types), so everyone gets the same pairs.
+The tracked list has 420 neutral conditions: 105 reports x 4 situations, shuffled with seed 42. See the [fixed configuration and commands](docs/experiment-config.md#full-study-plan-fixed-on-24-october-2026) for the separate 72-condition confidence batch, 24 neutral repeats and transient-failure retry rule. Bare `--tone-variants` retains the older 12-pair selection; use the frozen pair list for the current study.
 
 (`python src/graph.py` with no arguments runs `output/cases.json`, which is a one-case example.)
 
@@ -253,6 +254,7 @@ Outputs in `eval_runs/`:
 |---|---|
 | `runs.jsonl` | One `RunRecord` per condition (reports, Trader verdict, transcript, verifier statuses) |
 | `scored.jsonl` | One `ScoredResult` per run: `complete`, `pending` or `not_applicable` |
+| `output_review.json` | New-error review fields for every completed final report and Trader rationale, including clean controls |
 | `pending.json` | A worksheet of the human decisions still needed, with the frozen criteria |
 
 The command also prints pending judgements. Each metric uses its known labels from completed executions; unknown labels stay out of its denominator. A known REJECT counts as no false acceptance even if detection still needs review.
@@ -308,7 +310,7 @@ decide each `fill_in` field against the quoted criterion:
 - `materially_used_by_trader`: did the Trader's ACCEPT rest on the defective claim?
 - `verifier_detected`: a verifier FAIL that you confirm matches the defect.
 
-Save your answers (true/false only; leave out anything you did not decide) as `adjudications.json`:
+Save answers as `adjudications.json`. Use true/false for decided labels; explicit `null` overrides an uncertain automatic label. Omitting a field keeps its automatic value. Add `review_note` for reasons. Copy completed new-error fields from `output_review.json` into the same per-run object; see the [review rubric](docs/evaluation.md#automatic-scoring-and-manual-review).
 
 ```json
 {
@@ -348,8 +350,8 @@ python src/evaluation/metrics.py \
 
 `findings.md` contains:
 
-1. **Evaluation 1** (neutral tone): detection, correction, resolution, FAR, TAR and control challenge rate per
-   architecture, with confidence intervals and the scored/total coverage.
+1. **Evaluation 1** (neutral tone): detection, correction, resolution, accepted unresolved defect rate, FAR, TAR and control challenge rate per
+   architecture, plus new-error review coverage and separate investment-action counts. One-packet bootstrap intervals are suppressed.
 2. **FAR by failure category**: one row per defect type.
 3. **H1**: paired comparison of hybrid against each other architecture (difference with a bootstrap CI that resamples whole packets).
 4. **Evaluation 2** (tone changes): support-score and decision changes between neutral and the other tones,

@@ -153,11 +153,22 @@ def rm_challenge_assessment(run: RunRecord, case: Case):
 
 
 ADJUDICABLE = ("verifier_detected", "risk_manager_detected", "defect_resolved", "materially_used_by_trader")
+OUTPUT_REVIEW = ("new_error_present", "new_error_explanation", "new_error_evidence_ids")
 
 
 def auto_score_run(run: RunRecord, case: Case, clean_report: dict | None = None, *, rm_mode: str = "suggest",
                    unrelied_is_immaterial: bool = False, adjudication: dict | None = None) -> ScoredResult:
-    """adjudication: human labels (booleans) that replace the automatic value of the same field."""
+    """Explicit labels, including None, replace automatic values; omitted fields keep them."""
+    adjudication = dict(adjudication or {})
+    unknown = set(adjudication) - set(ADJUDICABLE + OUTPUT_REVIEW + ("review_note",))
+    if unknown:
+        raise ValueError(f"unknown adjudication field(s) {sorted(unknown)}")
+    note = adjudication.pop("review_note", "")
+    if not isinstance(note, str):
+        raise ValueError("review_note must be text")
+    review = {f: adjudication.pop(f) for f in OUTPUT_REVIEW if f in adjudication}
+    provenance = {"scorer": "auto_scoring", "review_note": note,
+                  "adjudicated_fields": sorted(set(adjudication) | set(review))}
     if run.status != 'completed':
         return ScoredResult(run.run_id, run.case_id, 'pending',
                             dict(content_label=case.content_label, pair_id=case.pair_id,
@@ -165,7 +176,7 @@ def auto_score_run(run: RunRecord, case: Case, clean_report: dict | None = None,
                                  defect_type=case.defect['defect_type'] if case.defect else None),
                             scoring_provenance={'scorer': 'auto_scoring', 'reason': 'execution failed'})
     if not case.is_flawed:
-        return score_run(run, case, scoring_provenance={"scorer": "auto_scoring"})
+        return score_run(run, case, **review, scoring_provenance=provenance)
     if clean_report is None:
         raise ValueError("flawed cases need the clean counterpart report to judge resolution")
     verifier = auto_verifier_detected(run, case) if run.architecture in ("verification", "hybrid") else None
@@ -174,17 +185,20 @@ def auto_score_run(run: RunRecord, case: Case, clean_report: dict | None = None,
     resolved = auto_defect_resolved(run, case, clean_report)
     # A Trader REJECT can't be a false acceptance, so resolution need not be adjudicated to finish it.
     material = auto_materially_used(run, case, unrelied_is_immaterial)
-    prov = {"scorer": "auto_scoring", "rm_mode": rm_mode, "rm_suggestion": rm, "rm_note": rm_note,
+    prov = {**provenance, "rm_mode": rm_mode, "rm_suggestion": rm, "rm_note": rm_note,
             "unrelied_is_immaterial": unrelied_is_immaterial}
     labels = dict(verifier_detected=verifier, risk_manager_detected=rm_value, defect_resolved=resolved,
                   materially_used_by_trader=material)
     if adjudication:
-        unknown = set(adjudication) - set(ADJUDICABLE)
-        if unknown:
-            raise ValueError(f"unknown adjudication field(s) {sorted(unknown)}; allowed: {list(ADJUDICABLE)}")
         labels.update(adjudication)
-        prov["adjudicated_fields"] = sorted(adjudication)
-    return score_run(run, case, **labels, scoring_provenance=prov)
+    return score_run(run, case, **labels, **review, scoring_provenance=prov)
+
+
+def output_review_worksheet(runs, scores):
+    """Review all completed final reports and Trader rationales, including clean controls."""
+    completed = {r.run_id for r in runs if r.status == "completed"}
+    return {s.run_id: {f: getattr(s, f) for f in OUTPUT_REVIEW}
+            for s in scores if s.run_id in completed}
 
 
 def pending_report(scores: list) -> dict:

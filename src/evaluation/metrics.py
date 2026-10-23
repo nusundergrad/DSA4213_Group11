@@ -29,12 +29,16 @@ def rate(flags):
     return dict(k=k, n=n, rate=k / n if n else None, lo=lo if n else None, hi=hi if n else None)
 
 
-def joined(runs, scores):
-    """Fail on duplicates and unmatched records; never silently choose a retry."""
+def _check_config(runs):
     for field in ('model', 'temperature', 'max_debate_rounds', 'max_tokens', 'reasoning_effort', 'trader_evidence_access'):
         values = {r.config[field] for r in runs if field in r.config}
         if len(values) > 1:
             raise ValueError(f'mixed {field} settings; analyze configurations separately')
+
+
+def joined(runs, scores):
+    """Fail on duplicates and unmatched records; never silently choose a retry."""
+    _check_config(runs)
     by_run = {}
     for run in runs:
         if run.run_id in by_run:
@@ -68,6 +72,12 @@ def _eligible(run, score):
     return run.status == "completed" and score.scoring_status in ("complete", "not_applicable")
 
 
+def accepted_unresolved(run, score):
+    if run.trader['assessment'] == 'REJECT' or score.defect_resolved is True:
+        return False
+    return True if score.defect_resolved is False else None
+
+
 def primary_metrics(runs, scores, tone="neutral", architectures=ARCHITECTURES, defect_type=None):
     rows = joined(runs, scores)
     out = {}
@@ -81,6 +91,7 @@ def primary_metrics(runs, scores, tone="neutral", architectures=ARCHITECTURES, d
         eligible_f = [(r, s) for r, s in flawed if _eligible(r, s)]
         eligible_c = [(r, s) for r, s in clean if _eligible(r, s)]
         completed_f = [(r, s) for r, s in flawed if r.status == 'completed']
+        completed = [(r, s) for r, s in relevant if r.status == 'completed']
         detected = [s for _, s in completed_f if s.detected is True]
         # Runs whose Risk Manager output is unstructured (challenges None) cannot be counted either way.
         challenges = [r for r, s in eligible_c if r.risk_manager_turns
@@ -88,14 +99,20 @@ def primary_metrics(runs, scores, tone="neutral", architectures=ARCHITECTURES, d
         out[arch] = dict(
             coverage=dict(flawed_total=len(flawed), flawed_scored=len(eligible_f),
                           clean_total=len(clean), clean_scored=len(eligible_c),
+                          output_reviewed=sum(s.new_error_present is not None for _, s in completed),
+                          output_total=len(completed),
                           failed=sum(r.status != 'completed' for r, s in relevant)),
             detection=rate([s.detected for _, s in completed_f]),
             correction=rate([s.corrected_after_detection for s in detected]),
             resolution=rate([s.defect_resolved for _, s in completed_f]),
             flawed_acceptance=rate([r.trader['assessment'] == 'ACCEPT' for r, _ in completed_f]),
+            accepted_unresolved=rate([accepted_unresolved(r, s) for r, s in completed_f]),
             far=rate([s.false_acceptance for _, s in completed_f]),
             tar=rate([r.trader["assessment"] == "ACCEPT" for r, _ in eligible_c]),
             false_challenge=rate([bool(r.risk_manager_turns[0]['challenges']) for r in challenges]),
+            new_error=rate([s.new_error_present for _, s in completed]),
+            investment_actions={action: sum(r.trader.get('investment_action') == action for r, _ in completed)
+                                for action in ('BUY', 'HOLD', 'SELL')},
         )
     return out
 
@@ -142,6 +159,37 @@ def mcnemar_exact(b, c):
     return min(1.0, 2 * sum(math.comb(n, i) for i in range(min(b, c) + 1)) / 2 ** n)
 
 
+def neutral_repeat_metrics(runs, scores, repeat_runs, repeat_scores):
+    """Compare separately executed neutral batches; never select one as a retry."""
+    _check_config(list(runs) + list(repeat_runs))
+    if {r.run_id for r in runs} & {r.run_id for r in repeat_runs}:
+        raise ValueError('neutral repeats must be independent executions, not reused records')
+    first = {(r.case_id, r.architecture): r for r, _ in joined(runs, scores) if r.tone == 'neutral'}
+    repeats = joined(repeat_runs, repeat_scores)
+    if any(r.tone != 'neutral' for r, _ in repeats):
+        raise ValueError('the repeat batch must contain only neutral conditions')
+    out = {}
+    for arch in ARCHITECTURES:
+        pairs = []
+        for r, _ in repeats:
+            if r.architecture != arch:
+                continue
+            a = first.get((r.case_id, arch))
+            if a is None:
+                raise ValueError('neutral repeat has no matching original condition')
+            if a.initial_report != r.initial_report or (a.input_sha256 and r.input_sha256 and a.input_sha256 != r.input_sha256):
+                raise ValueError('neutral repeats must use identical inputs')
+            if a.status == r.status == 'completed':
+                pairs.append((a, r))
+        if not pairs:
+            continue
+        diffs = [b.trader['support_score'] - a.trader['support_score'] for a, b in pairs
+                 if a.trader.get('support_score') is not None and b.trader.get('support_score') is not None]
+        out[arch] = dict(n=len(pairs), flip=rate([a.trader['assessment'] != b.trader['assessment'] for a, b in pairs]),
+                         support_n=len(diffs), sensitivity_abs=sum(map(abs, diffs)) / len(diffs) if diffs else None)
+    return out
+
+
 def paired_comparison(runs, scores, arch_a, arch_b, field="far", n_boot=2000, seed=0):
     rows = {(r.case_id, r.architecture): (r, s) for r, s in joined(runs, scores) if r.tone == "neutral"}
     ids = [cid for cid, arch in rows if arch == arch_a and (cid, arch_b) in rows and
@@ -166,7 +214,7 @@ def paired_comparison(runs, scores, arch_a, arch_b, field="far", n_boot=2000, se
         groups.setdefault(packet, []).append(i)
     clusters = list(groups.values())
     diffs = []
-    for _ in range(n_boot):
+    for _ in range(n_boot if len(clusters) > 1 else 0):
         sample = [j for _ in clusters for j in clusters[rng.randrange(len(clusters))]]
         diffs.append(sum(a[j] - b[j] for j in sample) / len(sample))
     diffs.sort()
@@ -197,20 +245,28 @@ def _fmt_rate(x):
     return "n/a" if x is None or x["rate"] is None else f"{x['rate']:.2f} [{x['lo']:.2f},{x['hi']:.2f}] (n={x['n']})"
 
 
-def format_report(runs, scores, cases, title="Evaluation report"):
+def format_report(runs, scores, cases, title="Evaluation report", *, repeat_runs=None, repeat_scores=None):
     lines = [f"# {title}", "", "## Evaluation 1 (neutral tone)", "",
              "Known outcomes use their own denominators. Pending labels and failed runs are not successes.", "",
-             "| architecture | detection | correction after detection | resolution | FAR | TAR | challenges on initial controls | fully scored flawed | failed |",
-             "|---|---|---|---|---|---|---|---|---|"]
+             "ACCEPT/REJECT assesses report support. BUY/HOLD/SELL is a separate investment action; HOLD does not mean REJECT.", "",
+             "| architecture | detection | correction after detection | resolution | accepted unresolved | FAR | TAR | challenges on initial controls | fully scored flawed | failed |",
+             "|---|---|---|---|---|---|---|---|---|---|"]
     for arch, m in primary_metrics(runs, scores).items():
         c = m["coverage"]
-        lines.append(f"| {arch} | {_fmt_rate(m['detection'])} | {_fmt_rate(m['correction'])} | {_fmt_rate(m['resolution'])} | {_fmt_rate(m['far'])} | "
+        lines.append(f"| {arch} | {_fmt_rate(m['detection'])} | {_fmt_rate(m['correction'])} | {_fmt_rate(m['resolution'])} | {_fmt_rate(m['accepted_unresolved'])} | {_fmt_rate(m['far'])} | "
                      f"{_fmt_rate(m['tar'])} | {_fmt_rate(m['false_challenge'])} | {c['flawed_scored']}/{c['flawed_total']} | {c['failed']} |")
-    lines += ['', 'FAR requires an accepted recommendation, an unresolved defect and material reliance. It is not simply acceptance of a flawed input.',
+    lines += ['', 'Accepted unresolved counts ACCEPT with an unresolved injected defect, without requiring material reliance. REJECT or resolved means false; ACCEPT with unknown resolution stays unknown.',
+              'FAR additionally requires material reliance. Unknown reliance stays pending, even if a claim ID was cited. Review automatic reliance labels against the rationale.',
               'TAR means acceptance when the input is a clean control; it does not establish that later revisions stayed correct. Resolution concerns the injected defect, not certification that no new error appeared.',
               'Control challenges are an observed rate, not automatically false challenges; their validity needs review.',
-              'Per-rate Wilson intervals are descriptive case-level summaries. Paired difference intervals resample whole evidence packets; variants are not independent companies. One-packet intervals cannot establish generality.',
-              'Check final reports and rationales for new errors separately before making a project-level conclusion.']
+              'Per-rate Wilson intervals are descriptive case-level summaries. Paired difference intervals resample whole evidence packets; variants are not independent companies. No packet-bootstrap interval is estimated from one packet.']
+    lines += ['', '### New errors in final outputs (neutral tone)', '',
+              'Review final Analyst reports and Trader rationales against the initial input and evidence. Persisting injected errors are not newly introduced errors. Unknown reviews are excluded, not counted as error-free.', '',
+              '| architecture | new-error rate | reviewed / completed | BUY | HOLD | SELL |',
+              '|---|---|---|---:|---:|---:|']
+    for arch, m in primary_metrics(runs, scores).items():
+        c, actions = m['coverage'], m['investment_actions']
+        lines.append(f"| {arch} | {_fmt_rate(m['new_error'])} | {c['output_reviewed']}/{c['output_total']} | {actions['BUY']} | {actions['HOLD']} | {actions['SELL']} |")
     lines += ["", "### FAR by failure category", "", "| category | " + " | ".join(ARCHITECTURES) + " |",
               "|---|" + "---|" * len(ARCHITECTURES)]
     for d, per in by_failure_category(runs, scores).items():
@@ -225,8 +281,10 @@ def format_report(runs, scores, cases, title="Evaluation report"):
         if far is None or tar is None:
             lines.append(f"- hybrid vs {other}: no overlapping scored cases")
             continue
+        interval = (f"packet-bootstrap CI [{far['ci'][0]:+.2f},{far['ci'][1]:+.2f}]" if far['ci'] is not None
+                    else "packet-bootstrap CI not estimated: one packet")
         lines.append(f"- hybrid vs {other}: FAR {far['rate_a']:.2f} vs {far['rate_b']:.2f}, diff {far['diff']:+.2f} "
-                     f"packet-bootstrap CI [{far['ci'][0]:+.2f},{far['ci'][1]:+.2f}] ({far['n_clusters']} packets); "
+                     f"{interval} ({far['n_clusters']} packets); "
                      f"TAR {tar['rate_a']:.2f} vs {tar['rate_b']:.2f} ({tar['n_clusters']} packets)")
     lines += ["", "## Supplementary: tone changes from neutral (support scale 0-100)", "",
               "Support scores are self-reported, not calibrated probabilities. Compare verdict flips and neutral repeats before attributing differences to tone.", "",
@@ -237,6 +295,14 @@ def format_report(runs, scores, cases, title="Evaluation report"):
         for tone, m in group.items():
             lines.append(f"| {arch} | {tone} | {m['n']} | {m['sensitivity_mean']:+.2f} | {m['sensitivity_abs']:.2f} | "
                          f"{m['flip']:.2f} | {fmt(m['dD'])} | {fmt(m['dC'])} | {fmt(m['dP'])} |")
+    lines += ['', '### Repeated neutral conditions', '']
+    if repeat_runs is None:
+        lines.append('Not supplied. Tone differences alone cannot separate framing sensitivity from repeat variation.')
+    else:
+        lines += ['| architecture | matched completed | verdict flip | support pairs | mean abs support change |',
+                  '|---|---:|---|---:|---:|']
+        for arch, m in neutral_repeat_metrics(runs, scores, repeat_runs, repeat_scores).items():
+            lines.append(f"| {arch} | {m['n']} | {_fmt_rate(m['flip'])} | {m['support_n']} | {fmt(m['sensitivity_abs'])} |")
     lines += ["", "## Efficiency", "", "| architecture | runs | input tokens | output tokens | USD | mean latency ms |",
               "|---|---:|---:|---:|---:|---:|"]
     for arch, e in efficiency(runs).items():
@@ -256,8 +322,12 @@ if __name__ == "__main__":
     p.add_argument("--cases")
     p.add_argument("--runs")
     p.add_argument("--scores")
+    p.add_argument('--neutral-repeat-runs', help='runs.jsonl from a separate identical neutral batch')
+    p.add_argument('--neutral-repeat-scores', help='matching scored.jsonl from the neutral repeat batch')
     p.add_argument('--out', help='write a UTF-8 report instead of relying on shell redirection')
     args = p.parse_args()
+    if bool(args.neutral_repeat_runs) != bool(args.neutral_repeat_scores):
+        p.error('--neutral-repeat-runs and --neutral-repeat-scores must be supplied together')
     if args.dummy:
         cases = make_cases()
         runs, scores = make_runs(cases)
@@ -265,7 +335,9 @@ if __name__ == "__main__":
         if not all((args.cases, args.runs, args.scores)):
             p.error("--cases, --runs, and --scores are required for real data")
         cases, runs, scores = load_cases(args.cases), load_runs(args.runs), load_scores(args.scores)
-    report = format_report(runs, scores, cases, "Synthetic evaluation report" if args.dummy else "Evaluation report")
+    report = format_report(runs, scores, cases, "Synthetic evaluation report" if args.dummy else "Evaluation report",
+                           repeat_runs=load_runs(args.neutral_repeat_runs) if args.neutral_repeat_runs else None,
+                           repeat_scores=load_scores(args.neutral_repeat_scores) if args.neutral_repeat_scores else None)
     if args.out:
         from pathlib import Path
         Path(args.out).parent.mkdir(parents=True, exist_ok=True)

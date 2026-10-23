@@ -78,6 +78,9 @@ class ScoredResult:
     false_acceptance: bool | None = None
     scoring_provenance: dict = field(default_factory=dict)
     schema_version: str = SCHEMA_VERSION
+    new_error_present: bool | None = None
+    new_error_explanation: str = ""
+    new_error_evidence_ids: list[str] = field(default_factory=list)
 
 
 def write_jsonl(path, items) -> None:

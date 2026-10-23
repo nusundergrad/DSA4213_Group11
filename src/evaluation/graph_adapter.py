@@ -188,32 +188,35 @@ def final_report_checks(runs, manifest):
 
 if __name__ == "__main__":
     import argparse
-    from auto_scoring import auto_score_run, pending_report, pending_worksheet
+    from auto_scoring import auto_score_run, pending_report, pending_worksheet, output_review_worksheet
+    from benchmark_cases import load_confidence_pairs
     ap = argparse.ArgumentParser()
     ap.add_argument("source", help="a run_batch record file, or the output folder")
     ap.add_argument("--out", required=True)
     ap.add_argument("--tone", default="neutral")
     ap.add_argument("--keep-latest", action="store_true")
+    ap.add_argument("--confidence-pairs", help="JSON list of frozen pair IDs used for the confidence batch")
     ap.add_argument("--adjudications", help='JSON {run_id: {"risk_manager_detected": true, ...}} from a human review')
     ap.add_argument("--rm-mode", choices=("suggest", "accept"), default="suggest",
                     help="accept: score a Risk Manager challenge with the right claim, defect type and an expected "
                          "value/period as detected (default suggest leaves it pending for a human)")
     ap.add_argument("--unrelied-is-immaterial", action="store_true",
                     help="treat an ACCEPT that does not cite the target claim as not materially used "
-                         "(the graph does not report relied_on_claim_ids; state this assumption in the report)")
+                         "(state this additional assumption in the report)")
     args = ap.parse_args()
-    cases, manifest = build_cases()
+    cases, manifest = build_cases(confidence_pair_ids=load_confidence_pairs(args.confidence_pairs))
     adjudications = json.loads(Path(args.adjudications).read_text(encoding="utf-8")) if args.adjudications else {}
     runs = adapt_all(load_records(args.source), cases, tone=args.tone, keep="latest" if args.keep_latest else "error")
     completed = [r for r in runs if r.status == "completed"]
     scores = [auto_score_run(r, cases[r.case_id], load_clean_report(manifest[r.case_id]),
                              unrelied_is_immaterial=args.unrelied_is_immaterial, rm_mode=args.rm_mode,
-                             adjudication={k: v for k, v in adjudications.get(r.run_id, {}).items() if v is not None})
+                             adjudication=adjudications.get(r.run_id, {}))
               for r in runs]
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     write_jsonl(out / "runs.jsonl", runs)
     write_jsonl(out / "scored.jsonl", scores)
+    (out / "output_review.json").write_text(json.dumps(output_review_worksheet(runs, scores), indent=2), encoding="utf-8")
     (out / "pending.json").write_text(json.dumps(pending_worksheet(completed, [s for s in scores if s.run_id in {r.run_id for r in completed}], cases), indent=2), encoding="utf-8")
     write_jsonl(out / 'cases.jsonl', cases.values())
     (out / 'final_report_checks.json').write_text(json.dumps(final_report_checks(completed, manifest), indent=2), encoding='utf-8')

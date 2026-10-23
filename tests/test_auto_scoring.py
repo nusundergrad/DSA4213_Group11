@@ -42,6 +42,51 @@ def test_unresolved_and_relied_on_is_false_acceptance():
     assert (s.defect_resolved, s.materially_used_by_trader, s.false_acceptance, s.scoring_status) == (False, True, True, "complete")
 
 
+def test_explicit_null_overrides_automatic_reliance():
+    case = _case("arithmetic")
+    s = _score(case, _run(case), adjudication={"materially_used_by_trader": None,
+                                             "review_note": "C1 is cited, but the rationale does not use its erroneous value."})
+    assert s.materially_used_by_trader is None and s.false_acceptance is None
+    assert s.scoring_status == "pending"
+    assert "materially_used_by_trader" in s.scoring_provenance["adjudicated_fields"]
+    assert s.scoring_provenance['review_note']
+
+
+def test_output_review_includes_clean_controls_and_keeps_unknowns():
+    from auto_scoring import output_review_worksheet
+    clean = next(c for c in CASES.values() if not c.is_flawed)
+    run = _run(clean)
+    s = _score(clean, run, adjudication={"new_error_present": True,
+        "new_error_explanation": "The Trader introduced an unsupported margin claim; E01 only gives revenue.",
+        "new_error_evidence_ids": ["EP_0001_E01"]})
+    assert s.scoring_status == 'not_applicable' and s.new_error_present is True
+    assert s.defect_resolved is None
+    assert output_review_worksheet([run], [s])[run.run_id]['new_error_present'] is True
+    unknown = _score(clean, run)
+    assert output_review_worksheet([run], [unknown])[run.run_id]['new_error_present'] is None
+    run.status = 'failed'
+    assert output_review_worksheet([run], [s]) == {}
+
+
+def test_correction_does_not_hide_new_errors():
+    case = _case('arithmetic')
+    run = _run(case, final=load_clean_report(MANIFEST[case.case_id]))
+    s = _score(case, run, adjudication={"new_error_present": True,
+        "new_error_explanation": "C1 was fixed but the Trader added an unsupported forecast.",
+        "new_error_evidence_ids": ["EP_0001_E01"]})
+    assert s.defect_resolved is True and s.false_acceptance is False and s.new_error_present is True
+
+
+@pytest.mark.parametrize('review', [
+    {'new_error_present': 'yes'}, {'new_error_present': False},
+    {'new_error_present': True, 'new_error_explanation': 'Wrong year.'},
+    {'new_error_evidence_ids': 'EP_0001_E01'}, {'review_note': False}, {'invented_field': True}])
+def test_invalid_reviews_fail(review):
+    case = _case('arithmetic')
+    with pytest.raises(ValueError):
+        _score(case, _run(case), adjudication=review)
+
+
 def test_fixed_claim_is_resolved_and_not_a_false_acceptance():
     case = _case("arithmetic")
     final = _report(MANIFEST[case.case_id]["clean_report_path"])

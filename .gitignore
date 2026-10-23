@@ -2,6 +2,9 @@ output/*
 
 !output/cases.json
 !output/full_cases.json
+!output/confidence_pairs.json
+!output/confidence_cases.json
+!output/confidence_neutral_repeat.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

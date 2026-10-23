@@ -29,6 +29,32 @@ def test_maps_to_the_right_case_and_architecture():
     assert run.verifier is None
 
 
+def test_cli_preserves_explicit_null_and_exports_output_review(tmp_path):
+    import subprocess
+    import sys
+    rec = copy.deepcopy(RECORD)
+    rec['final_reports'] = [rec['initial_report']]
+    rec['trader_verdict']['relied_on_claim_ids'] = ['C1']
+    source = tmp_path / 'record.json'
+    source.write_text(json.dumps(rec), encoding='utf-8')
+    run = record_to_run(rec, CASES)
+    review = tmp_path / 'review.json'
+    review.write_text(json.dumps({run.run_id: {'materially_used_by_trader': None,
+        'review_note': 'The cited claim includes more than its defective value.'}}), encoding='utf-8')
+    root = Path(__file__).resolve().parents[1]
+    out = tmp_path / 'evaluation'
+    subprocess.run([sys.executable, str(root / 'src/evaluation/graph_adapter.py'), str(source),
+                    '--out', str(out), '--adjudications', str(review), '--confidence-pairs',
+                    str(root / 'output/confidence_pairs.json')], check=True, capture_output=True, text=True)
+    score = json.loads((out / 'scored.jsonl').read_text(encoding='utf-8'))
+    assert score['materially_used_by_trader'] is None and score['false_acceptance'] is None
+    assert score['scoring_provenance']['review_note']
+    worksheet = json.loads((out / 'output_review.json').read_text(encoding='utf-8'))
+    assert worksheet[run.run_id]['new_error_present'] is None
+    cases = [json.loads(line) for line in (out / 'cases.jsonl').read_text(encoding='utf-8').splitlines()]
+    assert sum(c['confidence_subset'] for c in cases) == 12
+
+
 def test_transcript_rounds_and_roles():
     run = record_to_run(RECORD, CASES)
     assert [(t["round"], t["speaker"]) for t in run.transcript] == [

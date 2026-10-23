@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 from langchain_core.messages import AIMessage
 
-from src import agent, graph
+from src import agent, graph, prompts
 from src.benchmark.prepare import ROOT
 
 PACKET = ROOT / "public/evidence_packets/EP_0001.json"
@@ -22,12 +22,14 @@ class FakeLLM:
     def invoke(self, messages, **kwargs):
         system = messages[0].content
         if "Head of Risk Management" in system:
+            assert prompts.NUMERICAL_PRECISION_INSTRUCTIONS in system
             context = json.loads(messages[1].content)
             self.seen["risk"].append(context)
             body = {"challenges": [{"target_claim_id": "C1", "defect_type": "arithmetic", "evidence_ids": [],
                                     "explanation": "Growth is 6.43%, not 16.43%.", "requested_change": "Fix C1."}],
                     "calibration_concern": None, "overall_assessment": "Not proportionate."}
         elif "Senior Financial Analyst" in system:
+            assert prompts.NUMERICAL_PRECISION_INSTRUCTIONS in system
             report = json.loads(messages[1].content)["current_report"]
             self.seen["analyst"].append(report)
             report["claims"][0]["text"] = "Revised C1."

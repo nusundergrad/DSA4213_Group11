@@ -7,10 +7,12 @@ from dotenv import load_dotenv
 if __package__:
     from .state import AgentState
     from .prompts import ANALYST_SYSTEM_PROMPT, RISK_MANAGER_SYSTEM_PROMPT, TRADER_SYSTEM_PROMPT
+    from .prompts import NUMERICAL_PRECISION_INSTRUCTIONS
     from .benchmark.schemas import Report
 else:
     from state import AgentState
     from prompts import ANALYST_SYSTEM_PROMPT, RISK_MANAGER_SYSTEM_PROMPT, TRADER_SYSTEM_PROMPT
+    from prompts import NUMERICAL_PRECISION_INSTRUCTIONS
     from benchmark.schemas import Report
 import json
 import os
@@ -312,6 +314,7 @@ def analyst_agent(state: AgentState):
     system_prompt = SystemMessage(
         content=(
             ANALYST_SYSTEM_PROMPT
+            + NUMERICAL_PRECISION_INSTRUCTIONS
             + "\nReturn only one JSON object matching this schema:\n"
             + json.dumps(Report.model_json_schema())
             + "\nPreserve the current report_id exactly. Do not create or modify it."
@@ -370,6 +373,7 @@ def risk_manager_agent(state: AgentState):
     system_prompt = SystemMessage(
         content=(
             RISK_MANAGER_SYSTEM_PROMPT
+            + NUMERICAL_PRECISION_INSTRUCTIONS
             + "\nReturn only one JSON object matching this schema:\n"
             + json.dumps(RiskManagerTurn.model_json_schema())
             + "\nUse an empty challenges list if no specific defect is found."

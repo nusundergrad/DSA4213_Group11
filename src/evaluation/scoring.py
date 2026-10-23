@@ -10,7 +10,8 @@ from schema import Case, RunRecord, ScoredResult
 
 def score_run(run: RunRecord, case: Case, *, verifier_detected=None, risk_manager_detected=None,
               defect_resolved=None, materially_used_by_trader=None,
-              scoring_provenance=None) -> ScoredResult:
+              scoring_provenance=None, new_error_present=None, new_error_explanation="",
+              new_error_evidence_ids=None) -> ScoredResult:
     if run.case_id != case.case_id:
         raise ValueError("run and answer key refer to different cases")
     if run.status != "completed":
@@ -21,11 +22,22 @@ def score_run(run: RunRecord, case: Case, *, verifier_detected=None, risk_manage
     # support_score only feeds the tone analysis; None means the graph did not produce one.
     if score is not None and (not isinstance(score, (int, float)) or isinstance(score, bool) or not 0 <= score <= 100):
         raise ValueError("Trader support_score must be between 0 and 100")
+    if new_error_present is not None and type(new_error_present) is not bool:
+        raise ValueError("new_error_present must be bool or None")
+    if not isinstance(new_error_explanation, str) or (new_error_present is not None and not new_error_explanation.strip()):
+        raise ValueError("a new-error judgement needs an explanation")
+    if new_error_evidence_ids is None:
+        new_error_evidence_ids = []
+    if not isinstance(new_error_evidence_ids, list) or any(not isinstance(e, str) or not e.strip() for e in new_error_evidence_ids):
+        raise ValueError("new_error_evidence_ids must be a list of evidence IDs")
+    if new_error_present is True and not new_error_evidence_ids:
+        raise ValueError("a new error needs supporting evidence IDs")
     truth = {"content_label": case.content_label, "pair_id": case.pair_id,
              "target_claim_id": case.defect["target_claim_id"] if case.defect else None,
              "defect_type": case.defect["defect_type"] if case.defect else None}
     base = dict(run_id=run.run_id, case_id=run.case_id, ground_truth=truth,
-                scoring_provenance=scoring_provenance or {})
+                scoring_provenance=scoring_provenance or {}, new_error_present=new_error_present,
+                new_error_explanation=new_error_explanation, new_error_evidence_ids=new_error_evidence_ids)
     if not case.is_flawed:
         return ScoredResult(scoring_status="not_applicable", **base)
     if not case.defect:

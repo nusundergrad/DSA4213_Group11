@@ -1,6 +1,6 @@
 # Running the experiments
 
-Use the `testing` branch. The information flow follows `main`; testing adds structured outputs and evaluation records.
+The merged implementation is on `main`. See [experiment configuration](experiment-config.md) for the exploratory 28-condition check and the frozen full study: 420 main conditions, 72 confidence conditions and 24 neutral repeats, with commands and retry rules.
 Run these commands from the repository root in PowerShell. Keep the API key in `.env` or `src/.env`.
 
 ## What we are testing
@@ -59,7 +59,7 @@ python src/evaluation/graph_adapter.py output/check_runs --out output/check_eval
 python src/evaluation/metrics.py --cases output/check_eval/cases.jsonl --runs output/check_eval/runs.jsonl --scores output/check_eval/scored.jsonl --out output/check_eval/findings.md
 ```
 
-Read `pending.json`, the saved run, and the private detection/correction criteria. Create `adjudications.json` keyed by run ID, with the relevant boolean fields. Keep a note explaining each decision. Then rerun the adapter:
+Read `pending.json`, `output_review.json`, the saved run, and the private detection/correction criteria. Create `adjudications.json` keyed by run ID. Use booleans for decided labels and explicit `null` to override an uncertain automatic label; omitted fields retain automatic values. Add `review_note` and the new-error review fields described in [evaluation](evaluation.md). Save this separately from generated worksheets, then rerun the adapter:
 
 ```powershell
 python src/evaluation/graph_adapter.py output/check_runs --out output/check_eval --adjudications output/check_eval/adjudications.json
@@ -90,9 +90,9 @@ Useful correction = incorrect initial assessment becoming correct, divided by re
 Incorrect reversal = correct initial assessment becoming incorrect, divided by reviewed correct initial assessments.
 Verdict flips are reported separately. Pending correctness labels remain pending.
 
-## 5. Optional initial-confidence comparison
+## 5. Supplementary initial-confidence comparison
 
-Use `make_run_list.py --tone-variants` in a separate run folder. This adds the low/high statements to the predefined confidence subset.
+Use the frozen `output/confidence_cases.json` and `output/confidence_neutral_repeat.json` in separate run folders. The [full study commands](experiment-config.md#run-and-export) also pass `--confidence-pairs output/confidence_pairs.json` to the exporter so scoring uses the same six pairs. The bare `--tone-variants` option uses an older 12-pair subset and is not the frozen study plan.
 The original report remains fixed at input; debate may subsequently revise it. This therefore tests downstream sensitivity to initial framing, not confidence alone in every later turn.
 Repeat neutral conditions as separately labelled replication batches before attributing support-score variation to tone. Support scores are not calibrated probabilities.
 

@@ -42,6 +42,8 @@ def test_analyst_keeps_state_and_appends_validated_revision(monkeypatch):
     def invoke(messages, **kwargs):
         calls.append(messages)
         assert messages[0].content.startswith(prompts.ANALYST_SYSTEM_PROMPT)
+        assert prompts.NUMERICAL_PRECISION_INSTRUCTIONS in messages[0].content
+        assert prompts.NUMERICAL_PRECISION_INSTRUCTIONS in prompts.ANALYST_BENCHMARK_MESSAGE_TEMPLATE
         assert json.loads(messages[1].content)["required_report_id"] == "R_test"
         assert messages[2:] == state["messages"]
         return response

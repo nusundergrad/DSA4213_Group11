@@ -307,7 +307,7 @@ The following synthetic example describes one arithmetic defect:
 For controls, use `content_label: "unmodified"` and `defect: null`. Require exactly
 one defect object for injected cases. `split` is `development` or `held_out`; split
 by company and keep pairs/tones together. `confidence_subset` must agree within
-each selected pair if using the planned 12-pair confidence subset.
+each selected pair. The current frozen six-pair selection is in `output/confidence_pairs.json`; earlier experiments used the legacy 12-pair subset.
 
 For omission and unsupported inference, `expected` and `injected` may contain
 text instead of numbers. Anchor an omission to the claim/thesis it undermines;
@@ -417,7 +417,11 @@ After execution, C joins the run to its private answer key and adds:
 | `defect_resolved` | Boolean or `null`; whether the injected defect is resolved in the final report, assessed separately from detection. |
 | `materially_used_by_trader` | Boolean or `null`; whether the unresolved defect contributed to the final decision. |
 | `false_acceptance` | Boolean or `null`; injected case AND unresolved defect AND material use AND Trader ACCEPT. |
+| `new_error_present` | Boolean or `null`; a new error appeared in the final Analyst report or Trader rationale, relative to the initial input. Applies to clean and flawed cases. |
+| `new_error_explanation`, `new_error_evidence_ids` | Review explanation and supporting packet evidence IDs. A true judgement requires both; a false judgement requires an explanation. Defaults are empty for old records. |
 | `scoring_provenance` | Frozen rule/rubric version, scorer/reviewer identity, reasons, and referenced audit/turn/claim IDs. |
+
+Adjudication JSON may include `review_note`. Explicit `null` overrides an automatic label; an omitted field retains it. New-error review coverage is independent of primary defect `scoring_status`. The accepted unresolved defect rate is derived from assessment and resolution without requiring material reliance; it is reported alongside FAR. ACCEPT/REJECT concerns report support, while BUY/HOLD/SELL remains a separate investment action.
 
 Matching a claim ID and defect category is necessary but not sufficient to score
 detection: the explanation must satisfy the case's frozen detection criterion.

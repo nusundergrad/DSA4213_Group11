@@ -1,0 +1,434 @@
+[
+  {
+    "evidence_packet": "EP_0006",
+    "report": "clean",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "error_05_citation_misattribution",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "error_01_direct_factual_contradiction",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "error_04_material_omission",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "error_03_arithmetic",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "error_05_citation_misattribution",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "clean",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "error_01_direct_factual_contradiction",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "clean",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "clean",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "clean",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "error_04_material_omission",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "error_04_material_omission",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "clean",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "clean",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "error_02_reporting_period",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "clean",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "error_02_reporting_period",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "error_06_unsupported_inference",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "clean",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "clean",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "error_06_unsupported_inference",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "clean",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "error_04_material_omission",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "error_05_citation_misattribution",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "error_02_reporting_period",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "clean",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "error_03_arithmetic",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "error_05_citation_misattribution",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "clean",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "clean",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "error_05_citation_misattribution",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "clean",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "clean",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "clean",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "error_03_arithmetic",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "clean",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "error_02_reporting_period",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "error_03_arithmetic",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "clean",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "error_05_citation_misattribution",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "clean",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "error_03_arithmetic",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "clean",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "error_06_unsupported_inference",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "clean",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "error_06_unsupported_inference",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "error_02_reporting_period",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "clean",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "error_01_direct_factual_contradiction",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "error_04_material_omission",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "clean",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "error_04_material_omission",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "clean",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "error_06_unsupported_inference",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "clean",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0005",
+    "report": "clean",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "error_01_direct_factual_contradiction",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "error_06_unsupported_inference",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "clean",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "clean",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "clean",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "clean",
+    "situation": 0,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "error_02_reporting_period",
+    "situation": 0,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "error_03_arithmetic",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "clean",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "clean",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "clean",
+    "situation": 3,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "error_01_direct_factual_contradiction",
+    "situation": 0,
+    "tone": "overconfident"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "error_01_direct_factual_contradiction",
+    "situation": 3,
+    "tone": "underconfident"
+  },
+  {
+    "evidence_packet": "EP_0002",
+    "report": "clean",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "clean",
+    "situation": 0,
+    "tone": "underconfident"
+  }
+]

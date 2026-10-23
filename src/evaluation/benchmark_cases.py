@@ -32,7 +32,7 @@ def case_id_for(report_id: str) -> str:
 
 
 def default_confidence_pairs(pairs, n=12):
-    """The planned 12-pair tone subset: round-robin over defect types (then pair ID), so every defect
+    """Legacy 12-pair tone subset: round-robin over defect types (then pair ID), so every defect
     type is represented before any type is repeated. Deterministic, so every teammate gets the same set."""
     by_type = {}
     for p in sorted(pairs, key=lambda p: p["pair_id"]):
@@ -45,13 +45,25 @@ def default_confidence_pairs(pairs, n=12):
     return set(picked)
 
 
+def load_confidence_pairs(path):
+    if path is None:
+        return None
+    pairs = json.loads(Path(path).read_text(encoding="utf-8"))
+    if not isinstance(pairs, list) or not all(isinstance(p, str) for p in pairs) or len(pairs) != len(set(pairs)):
+        raise ValueError("confidence pairs must be a JSON list of unique pair IDs")
+    return set(pairs)
+
+
 def build_cases(root=DEFAULT_ROOT, confidence_pair_ids=None):
     """confidence_pair_ids: pair IDs whose cases belong to the tone subset. None (default) selects the
-    planned 12 pairs with ``default_confidence_pairs``; pass an empty set for no tone subset."""
+    legacy 12 pairs with ``default_confidence_pairs``; pass an empty set for no tone subset."""
     root = Path(root)
     pairs = json.loads((root / "private" / "pairs.json").read_text(encoding="utf-8"))["pairs"]
     if confidence_pair_ids is None:
         confidence_pair_ids = default_confidence_pairs(pairs)
+    unknown = set(confidence_pair_ids) - {p['pair_id'] for p in pairs}
+    if unknown:
+        raise ValueError(f"unknown confidence pair IDs: {sorted(unknown)}")
     cases, manifest = {}, {}
     for p in pairs:
         packet_path = f"evidence_packets/{p['packet_id']}.json"
