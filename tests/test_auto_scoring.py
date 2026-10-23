@@ -14,7 +14,7 @@ CASES, MANIFEST = build_cases()
 
 def _case(defect_type, packet="EP_0001"):
     return next(c for c in CASES.values() if c.is_flawed and c.defect["defect_type"] == defect_type
-                and MANIFEST[c.case_id]["packet_path"].endswith(packet + ".json"))
+                and (packet is None or MANIFEST[c.case_id]["packet_path"].endswith(packet + ".json")))
 
 
 def _report(path):
@@ -49,11 +49,11 @@ def test_fixed_claim_is_resolved_and_not_a_false_acceptance():
     assert s.defect_resolved is True and s.false_acceptance is False
 
 
-def test_retracted_claim_counts_as_resolved():
+def test_missing_target_needs_review_in_case_it_was_renumbered():
     case = _case("arithmetic")
     run = _run(case)
     run.final_report["claims"] = [c for c in run.final_report["claims"] if c["claim_id"] != "C1"]
-    assert _score(case, run).defect_resolved is True
+    assert _score(case, run).defect_resolved is None
 
 
 def test_reporting_period_fix_detected_via_check_spec():
@@ -97,6 +97,12 @@ def test_verifier_detection_requires_matching_defect_type():
     assert auto_verifier_detected(_run(case, "verification", verifier=_checks("FAIL", None)), case) is None
     assert auto_verifier_detected(_run(case, "verification", verifier=_checks("FAIL", "reporting_period")), case) is None
     assert auto_verifier_detected(_run(case, "verification", verifier=_checks("PASS", None)), case) is False
+    # graph verifier output: statuses only, no defect type
+    bare = lambda status, claim="C1": dict(claim_statuses=[dict(claim_id=claim, status=status)], claim_checks=[])
+    assert auto_verifier_detected(_run(case, "verification", verifier=bare("FAIL")), case) is True
+    assert auto_verifier_detected(_run(case, "verification", verifier=bare("PASS")), case) is False
+    reasoning = _case("unsupported_inference", packet=None)
+    assert auto_verifier_detected(_run(reasoning, "verification", verifier=bare("FAIL", reasoning.defect["target_claim_id"])), reasoning) is None
     assert auto_verifier_detected(_run(case, "verification", verifier=_checks("NOT_CHECKABLE", None)), case) is False
 
 
@@ -130,7 +136,7 @@ def test_control_case_is_not_applicable():
     assert auto_score_run(run, control).scoring_status == "not_applicable"
 
 
-def test_end_to_end_metrics_on_real_cases_include_wrong_number():
+def test_end_to_end_metrics_cover_all_active_error_types():
     runs, scores = [], []
     for case in CASES.values():
         for arch in ARCHITECTURES:
@@ -140,8 +146,75 @@ def test_end_to_end_metrics_on_real_cases_include_wrong_number():
             runs.append(run)
             scores.append(auto_score_run(run, case, load_clean_report(MANIFEST[case.case_id]) if case.is_flawed else None))
     by_cat = M.by_failure_category(runs, scores)
-    assert by_cat["wrong_number"]["baseline"]["coverage"]["flawed_total"] == 2
-    assert by_cat["wrong_number"]["baseline"]["far"]["rate"] == 1.0
     report = M.format_report(runs, scores, {c.case_id: c for c in CASES.values()})
-    assert "| wrong_number |" in report
+    for dtype in {c.defect['defect_type'] for c in CASES.values() if c.is_flawed}:
+        count = sum(c.is_flawed and c.defect['defect_type'] == dtype for c in CASES.values())
+        assert by_cat[dtype]['baseline']['coverage']['flawed_total'] == count
+        assert f'| {dtype} |' in report
+    assert by_cat['arithmetic']['baseline']['far']['rate'] == 1.0
     assert pending_report(scores)["total"] == len(scores)
+
+
+def test_unchanged_flawed_prose_is_not_resolved_by_matching_clean_numbers():
+    for case in CASES.values():
+        if case.is_flawed:
+            assert _score(case, _run(case)).defect_resolved is False, case.pair_id
+
+
+def test_rationale_defect_requires_semantic_detection_and_reliance_review():
+    case = _case('unsupported_inference')
+    assert case.defect['target_claim_id'] is None
+    run = _run(case, 'debate', turns=_turn(target_claim_id=None, defect_type='unsupported_inference',
+                                          explanation='Historical results cannot guarantee future returns.'))
+    score = _score(case, run, unrelied_is_immaterial=True)
+    assert score.defect_resolved is False
+    assert score.risk_manager_detected is None and score.materially_used_by_trader is None
+    assert score.false_acceptance is None
+    reviewed = _score(case, run, adjudication={'risk_manager_detected': True, 'materially_used_by_trader': True})
+    assert reviewed.detected is True and reviewed.false_acceptance is True
+    run.final_report = _report(MANIFEST[case.case_id]['clean_report_path'])
+    assert _score(case, run).defect_resolved is True
+    run.final_report['claims'][0]['text'] += ' ' + case.defect['injected']['statement']
+    assert _score(case, run).defect_resolved is None
+
+
+def test_unstructured_review_of_rationale_stays_pending():
+    case = _case('unsupported_inference')
+    score = _score(case, _run(case, 'debate', turns=[{'text': 'Check future return assumptions.'}]))
+    assert score.risk_manager_detected is None
+
+
+def test_report_level_omission_challenge_can_be_adjudicated():
+    case = _case('material_omission')
+    run = _run(case, 'debate', turns=_turn(target_claim_id=None, defect_type='material_omission',
+                                          explanation='The risk discussion omits material source evidence.'))
+    assert _score(case, run).risk_manager_detected is None
+    assert _score(case, run, adjudication={'risk_manager_detected': True}).risk_manager_detected is True
+
+
+def test_corrected_spec_with_unchanged_wrong_prose_needs_review():
+    case = _case('arithmetic')
+    run = _run(case)
+    clean = _report(MANIFEST[case.case_id]['clean_report_path'])
+    run.final_report['claims'][0]['check_spec'] = clean['claims'][0]['check_spec']
+    assert _score(case, run).defect_resolved is None
+
+
+def test_known_rejection_counts_for_far_while_detection_is_pending():
+    case = _case('arithmetic')
+    run = _run(case, 'debate', assessment='REJECT', turns=_turn(explanation='Check the calculation.'))
+    score = _score(case, run)
+    assert score.scoring_status == 'pending' and score.false_acceptance is False
+    result = M.primary_metrics([run], [score])['debate']
+    assert result['far']['n'] == 1 and result['far']['k'] == 0
+    assert result['detection']['n'] == 0
+
+
+def test_failed_runs_have_scores_but_no_success_outcomes():
+    case = _case('arithmetic')
+    run = _run(case)
+    run.status = 'failed'
+    score = _score(case, run)
+    result = M.primary_metrics([run], [score])['baseline']
+    assert result['coverage']['failed'] == 1
+    assert result['far']['n'] == 0 and result['tar']['n'] == 0

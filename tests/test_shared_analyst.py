@@ -8,6 +8,7 @@ from types import SimpleNamespace
 from langchain_core.messages import HumanMessage, AIMessage
 
 from src import agent, prompts
+from src.benchmark.schemas import Report
 
 
 def test_supplied_client_does_not_use_demo_model(monkeypatch):
@@ -27,44 +28,40 @@ def test_supplied_client_does_not_use_demo_model(monkeypatch):
     assert calls == [(messages, {"temperature": 0})]
 
 
-def test_legacy_analyst_keeps_messages_and_state(monkeypatch):
-    state = {"ticker": "AAA", "date": "2023", "messages": [
-        HumanMessage(content="Analyze the filing"), AIMessage(content="Previous report")],
-        "debate_round": 1, "max_debate_rounds": 3}
+def test_analyst_keeps_state_and_appends_validated_revision(monkeypatch):
+    report = {"report_id": "R_test", "recommendation": "HOLD", "rationale": "Limited evidence.",
+              "claims": [{"claim_id": f"C{i}", "text": "Demand risk exists.", "evidence_ids": ["E1"], "check_spec": None}
+                         for i in (1, 2, 3)]}
+    state = {"messages": [HumanMessage(content="Analyze the filing"), AIMessage(content="Previous report")],
+             "evidence_packet": {"packet_id": "EP_X"}, "initial_report": report, "final_reports": [report],
+             "debate_round": 1, "max_debate_rounds": 3}
     before = copy.deepcopy(state)
-    filing = {"content": "Synthetic filing excerpt"}
-
-    def retrieve(query):
-        assert query == {"ticker": "AAA", "date": "2023"}
-        return filing
-
-    monkeypatch.setitem(sys.modules, "src.tool", SimpleNamespace(
-        mock_retrieve_10k_filing=SimpleNamespace(invoke=retrieve)))
-    response = AIMessage(content="HOLD; synthetic analysis.")
+    response = AIMessage(content=json.dumps(report))
     calls = []
 
-    def invoke(messages):
+    def invoke(messages, **kwargs):
         calls.append(messages)
-        assert messages[0].content == prompts.ANALYST_SYSTEM_PROMPT
-        assert "AAA" in messages[1].content
-        assert json.loads(messages[2].content) == filing
-        assert messages[3:] == state["messages"]
+        assert messages[0].content.startswith(prompts.ANALYST_SYSTEM_PROMPT)
+        assert json.loads(messages[1].content)["required_report_id"] == "R_test"
+        assert messages[2:] == state["messages"]
         return response
 
     monkeypatch.setattr(agent, "llm", SimpleNamespace(invoke=invoke))
     result = agent.analyst_agent(state)
     assert len(calls) == 1 and state == before
-    assert result == {"messages": [response]}
-    assert response.name == "analyst_agent_response"
+    assert result["messages"] == [response] and response.name == "analyst_agent"
+    assert result["final_reports"] == [report, Report.model_validate(report).model_dump(mode="json")]
 
 
 def test_default_client_is_created_only_once(monkeypatch):
     calls = []
     monkeypatch.setattr(agent, "llm", None)
-    monkeypatch.setattr(agent, "load_dotenv", lambda **kwargs: calls.append(kwargs))
+    monkeypatch.setattr(agent, "load_dotenv", lambda *args, **kwargs: None)
+    monkeypatch.setenv('OPENROUTER_API_KEY', 'test-key-not-real')
     monkeypatch.setattr(agent, "ChatOpenRouter", lambda **kwargs: calls.append(kwargs) or object())
     assert agent.get_llm() is agent.get_llm()
-    assert calls == [{"override": True}, {"model": "openrouter/free", "temperature": 0}]
+    assert len(calls) == 1 and calls[0]['model'] == agent.MODEL_NAME
+    assert calls[0]['max_retries'] == 0 and calls[0]['max_tokens'] == agent.MAX_TOKENS
 
 
 def test_imports_do_not_load_credentials_clients_or_run_graph():
@@ -77,3 +74,15 @@ def test_imports_do_not_load_credentials_clients_or_run_graph():
                 "assert 'src.tool' not in sys.modules and 'tool' not in sys.modules")
         result = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True)
         assert result.returncode == 0 and not result.stdout, result.stderr
+
+
+def test_failed_records_keep_the_underlying_error():
+    from src.graph import describe_error
+    try:
+        try:
+            raise ValueError("429 rate limited")
+        except ValueError as cause:
+            raise RuntimeError("risk_manager_agent model failed after 5 attempts") from cause
+    except RuntimeError as error:
+        text = describe_error(error)
+    assert "RuntimeError: risk_manager_agent" in text and "ValueError: 429 rate limited" in text

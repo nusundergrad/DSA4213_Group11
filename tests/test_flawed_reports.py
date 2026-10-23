@@ -81,7 +81,7 @@ def test_rebuild_is_repeatable_and_does_not_overwrite_reviewed_inputs(tmp_path):
     for filename in ("pairs.json", "aliases.json"):
         save(tmp_path / "private" / filename, read(ROOT / "private" / filename))
     before = {p: p.read_bytes() for p in (tmp_path / "public").rglob("*.json")}
-    assert len(create_flawed_reports(tmp_path)) == 90
+    assert len(create_flawed_reports(tmp_path)) == len(PAIRS)
     assert all(p.read_bytes() == value for p, value in before.items())
     changed_path = tmp_path / "public" / PAIRS[0]["flawed_report_path"]
     changed = read(changed_path)

@@ -53,6 +53,16 @@ def test_wilson_and_mcnemar():
     assert lo > -1e-12 and .25 < hi < .35
 
 
+def test_paired_bootstrap_keeps_variants_from_one_packet_together():
+    cases = make_cases(n_pairs=3, n_tone_pairs=0, seed=3)
+    runs, scores = make_runs(cases, seed=3)
+    for run in runs:
+        run.initial_report['claims'] = [dict(claim_id='C1', text='Example', evidence_ids=['EP_0001_E01'])]
+    compared = M.paired_comparison(runs, scores, 'hybrid', 'baseline', n_boot=100)
+    assert compared['n_clusters'] == 1
+    assert compared['ci'][0] == compared['ci'][1]
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

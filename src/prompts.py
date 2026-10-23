@@ -41,4 +41,3 @@ TRADER_SYSTEM_PROMPT = """
         You are a Professional Trader at a hedge fund.
         Your task is to make investment decisions based on the final analysis from the financial team.
     """
-

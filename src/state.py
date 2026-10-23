@@ -23,3 +23,12 @@ class AgentState(TypedDict):
     # Append-only verifier results; agents can be given only the latest result.
     verifier_reports: list[dict[str, Any]]
     trader_verdict: dict[str, Any] | None
+
+    # Structured Risk Manager turns: {round, challenges, calibration_concern, overall_assessment, text}.
+    risk_manager_turns: list[dict[str, Any]]
+    # What each Analyst revision actually changed: {round, edited/reverted/retracted claim ids}.
+    analyst_revision_turns: list[dict[str, Any]]
+    # One entry per accepted model response: agent, input/output tokens, latency.
+    usage_log: list[dict[str, Any]]
+    # Fixed sentence shown with the Analyst's report (tone variants); never part of the report itself.
+    confidence_framing: str | None

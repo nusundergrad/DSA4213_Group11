@@ -1,12 +1,10 @@
 # Shared data contract — v0.1 benchmark subset and proposed interfaces
 
-This document coordinates subgroups A (benchmark), B (architecture), and C
-(evaluation). The small benchmark subset below is implemented; the broader agent,
-execution and evaluation interfaces remain proposals. Existing inline
-examples are synthetic, not experimental results. Two real-source evidence packets
-now have reviewed reports in the public benchmark folder. Original candidates and
-review notebooks are kept privately. Six deliberately flawed copies now form
-three pairs per company. No dataset version has been frozen yet.
+This document coordinates benchmark, architecture and evaluation work. On `testing`, the benchmark, graph runner and scoring pipeline are implemented; later sections also contain proposed extensions.
+Current data: 15 packets, 15 clean reports and 90 flawed variants across six error types. The working dataset and preserved `releases/v1` snapshot must not be mixed.
+See [the current evaluation rules](evaluation.md) and [execution commands](running-experiments.md) where older proposal examples differ.
+
+Execution follows `main`'s information boundary: Analyst and Risk Manager receive masked evidence; Trader receives the current report, current verifier result and latest agent message, without the source packet or full discussion. Structured challenge/reliance fields enable evaluation. Actual Analyst revisions remain observable.
 
 ## Implemented benchmark subset
 
@@ -26,7 +24,7 @@ See [benchmark preparation and handoff](benchmark.md) and
   extraction provenance.
   These fields must not enter model inputs, overriding the original section 3
   proposal to place company and filing metadata inside the public packet.
-- All model agents receive the same masked evidence and cite stable evidence IDs.
+- Evidence-consuming agents receive the same masked packet and cite stable evidence IDs; the Trader uses only the analysis and verifier output supplied to it.
   Private originals resolve those IDs to official filings for human review. Known
   company names, tickers, products, subsidiaries, and brands use opaque aliases.
 - Initial Analyst reports implement section 4's fields, 3–5 claims, and numeric /
@@ -38,7 +36,7 @@ See [benchmark preparation and handoff](benchmark.md) and
   `percentage_change.from_fact_id` and `to_fact_id`. New generation requires
   these IDs. Historical responses without them remain readable through the
   legacy metric/period/unit lookup; both percentage-change IDs must be supplied
-  together. All eight current public reports and pair edit records have been
+  together. All current public reports and pair edit records have been
   updated. Original model requests, responses, candidates and example-run
   snapshots remain unchanged.
 - `load_agent_input(packet_path, report_path, check_clean=True)` returns only
@@ -70,18 +68,11 @@ See [benchmark preparation and handoff](benchmark.md) and
   `target_claim_id` identifies the changed or omitted claim, or is `null` for
   rationale-only defects. `changes[].path` gives the exact edited locations.
 - Preparation uses `data/benchmark/private/` and `data/benchmark/public/`; reviewed
-  releases use `data/benchmark/releases/v1/`, then `v2`, etc. There is no release
-  automation, public case envelope, confidence presentation, scoring runner,
-  exported JSON Schema artifact, or architecture integration in this implementation.
+  releases use `data/benchmark/releases/v1/`, then `v2`, etc. Release automation and an exported JSON Schema artifact remain deferred. The testing branch implements architecture execution, confidence framing and scoring; see the current evaluation guide.
 
-Benchmark generation now uses the Analyst prompt and `invoke_analyst`
-in `src/prompts.py` and `src/agent.py`. The old demo shares the base Analyst
-instructions and model call but retains its ticker-based inputs and text
-output. Graph integration and the proposed revision/output schemas remain future
-work; the demo is not a benchmark experiment runner.
+Benchmark generation shares the Analyst role and `invoke_analyst` with the architecture. The benchmark wrapper adds evidence-only generation requirements. Graph revisions use the base role plus structured output instructions.
 
-The remainder is the proposed wider contract. Where it differs from this subset,
-it describes future work and must not be assumed to exist in the code today.
+The remainder includes the broader contract and proposals. Consult the current evaluation guide for implemented behavior and limitations.
 
 ## 1. Common rules and ownership
 
@@ -131,7 +122,7 @@ Within-case tone comparisons use `case_id`; control/error comparisons use privat
 | `architecture` | `baseline`, `debate`, `verification`, `hybrid` |
 | `tone` | `underconfident`, `neutral`, `overconfident` |
 | `content_label` — private | `unmodified`, `injected_error` |
-| `defect_type` | `direct_factual_contradiction`, `arithmetic`, `reporting_period`, `citation_misattribution`, `material_omission`, `unsupported_inference` |
+| `defect_type` | `wrong_number`, `arithmetic`, `reporting_period`, `citation_misattribution`, `direct_factual_contradiction`, `material_omission`, `unsupported_inference` |
 | verifier `status` | `PASS`, `FAIL`, `NOT_CHECKABLE` |
 | revision `action` | `DEFEND`, `REVISE`, `RETRACT` |
 | Trader `assessment` | `ACCEPT`, `REJECT` |
@@ -139,6 +130,7 @@ Within-case tone comparisons use `case_id`; control/error comparisons use privat
 
 Confidence mismatch is not a separate content defect. Risk Manager may record a
 separate `calibration_concern`, without classifying it as an injected error.
+`wrong_number` remains supported for older records; the active benchmark uses the six types listed above.
 
 ## 3. Evidence packet — A owns
 
@@ -350,6 +342,8 @@ A nonexistent evidence ID can deterministically fail citation existence.
 - `round`: integer 1–3.
 - `challenges`: array of `{challenge_id, target_claim_id, defect_type,
   evidence_ids, explanation, requested_change}`.
+- `target_claim_id`: an existing report claim ID, or `null` for a rationale error
+  or an omitted claim. Explain the disputed assertion or missing evidence explicitly.
 - `calibration_concern`: explanation string or `null`.
 - `overall_assessment`: string explaining whether the recommendation is
   proportionate to the available evidence.

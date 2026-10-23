@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import math
 import random
+import re
 
 from schema import ARCHITECTURES, DEFECT_TYPES, TONES, load_runs, load_scores
 
@@ -30,6 +31,10 @@ def rate(flags):
 
 def joined(runs, scores):
     """Fail on duplicates and unmatched records; never silently choose a retry."""
+    for field in ('model', 'temperature', 'max_debate_rounds', 'max_tokens', 'reasoning_effort', 'trader_evidence_access'):
+        values = {r.config[field] for r in runs if field in r.config}
+        if len(values) > 1:
+            raise ValueError(f'mixed {field} settings; analyze configurations separately')
     by_run = {}
     for run in runs:
         if run.run_id in by_run:
@@ -75,16 +80,22 @@ def primary_metrics(runs, scores, tone="neutral", architectures=ARCHITECTURES, d
         clean = [(r, s) for r, s in relevant if s.ground_truth["content_label"] == "unmodified"]
         eligible_f = [(r, s) for r, s in flawed if _eligible(r, s)]
         eligible_c = [(r, s) for r, s in clean if _eligible(r, s)]
-        detected = [s for _, s in eligible_f if s.detected is True]
-        challenges = [r for r, s in eligible_c if r.risk_manager_turns is not None]
+        completed_f = [(r, s) for r, s in flawed if r.status == 'completed']
+        detected = [s for _, s in completed_f if s.detected is True]
+        # Runs whose Risk Manager output is unstructured (challenges None) cannot be counted either way.
+        challenges = [r for r, s in eligible_c if r.risk_manager_turns
+                      and r.risk_manager_turns[0].get('challenges') is not None]
         out[arch] = dict(
             coverage=dict(flawed_total=len(flawed), flawed_scored=len(eligible_f),
-                          clean_total=len(clean), clean_scored=len(eligible_c)),
-            detection=rate([s.detected for _, s in eligible_f]),
+                          clean_total=len(clean), clean_scored=len(eligible_c),
+                          failed=sum(r.status != 'completed' for r, s in relevant)),
+            detection=rate([s.detected for _, s in completed_f]),
             correction=rate([s.corrected_after_detection for s in detected]),
-            far=rate([s.false_acceptance for _, s in eligible_f]),
+            resolution=rate([s.defect_resolved for _, s in completed_f]),
+            flawed_acceptance=rate([r.trader['assessment'] == 'ACCEPT' for r, _ in completed_f]),
+            far=rate([s.false_acceptance for _, s in completed_f]),
             tar=rate([r.trader["assessment"] == "ACCEPT" for r, _ in eligible_c]),
-            false_challenge=rate([any(t.get("challenges") for t in r.risk_manager_turns) for r in challenges]),
+            false_challenge=rate([bool(r.risk_manager_turns[0]['challenges']) for r in challenges]),
         )
     return out
 
@@ -100,15 +111,17 @@ def tone_metrics(runs, scores, cases, architectures=ARCHITECTURES):
         out[arch] = {}
         for tone in ("underconfident", "overconfident"):
             ids = [cid for cid, case in cases.items() if case.confidence_subset and
-                   all((cid, arch, t) in rows and _eligible(*rows[cid, arch, t]) for t in TONES)]
+                   all((cid, arch, t) in rows and rows[cid, arch, t][0].status == 'completed' and
+                       rows[cid, arch, t][0].trader.get("support_score") is not None for t in TONES)]
             if not ids:
                 continue
             pairs = [(rows[cid, arch, "neutral"], rows[cid, arch, tone]) for cid in ids]
             diffs = [b[0].trader["support_score"] - a[0].trader["support_score"] for a, b in pairs]
             flawed = [(a, b) for cid, (a, b) in zip(ids, pairs) if cases[cid].is_flawed]
             def delta(field):
-                left = rate([getattr(a[1], field) for a, b in flawed])
-                right = rate([getattr(b[1], field) for a, b in flawed])
+                known = [(a, b) for a, b in flawed if getattr(a[1], field) is not None and getattr(b[1], field) is not None]
+                left = rate([getattr(a[1], field) for a, b in known])
+                right = rate([getattr(b[1], field) for a, b in known])
                 return right["rate"] - left["rate"] if left["rate"] is not None and right["rate"] is not None else None
             # Correction is conditional on detection in each tone.
             corr_n = rate([a[1].corrected_after_detection for a, b in flawed if a[1].detected is True])
@@ -132,7 +145,8 @@ def mcnemar_exact(b, c):
 def paired_comparison(runs, scores, arch_a, arch_b, field="far", n_boot=2000, seed=0):
     rows = {(r.case_id, r.architecture): (r, s) for r, s in joined(runs, scores) if r.tone == "neutral"}
     ids = [cid for cid, arch in rows if arch == arch_a and (cid, arch_b) in rows and
-           _eligible(*rows[cid, arch_a]) and _eligible(*rows[cid, arch_b]) and
+           all(rows[cid, arch][0].status == 'completed' and
+               (field != 'far' or rows[cid, arch][1].false_acceptance is not None) for arch in (arch_a, arch_b)) and
            rows[cid, arch_a][1].ground_truth["content_label"] == ("injected_error" if field == "far" else "unmodified")]
     if not ids:
         return None
@@ -143,8 +157,21 @@ def paired_comparison(runs, scores, arch_a, arch_b, field="far", n_boot=2000, se
     a_only = sum(x and not y for x, y in zip(a, b))
     b_only = sum(y and not x for x, y in zip(a, b))
     rng = random.Random(seed)
-    diffs = sorted(sum(a[j] - b[j] for j in (rng.randrange(len(ids)) for _ in ids)) / len(ids) for _ in range(n_boot)) if n_boot else []
+    # Resample whole packets, keeping related flawed variants together.
+    groups = {}
+    for i, cid in enumerate(ids):
+        report = rows[cid, arch_a][0].initial_report
+        evidence = [e for c in report.get('claims', []) for e in c.get('evidence_ids', [])]
+        packet = next((e.rsplit('_', 1)[0] for e in evidence if re.fullmatch(r'EP_\d+_E\d+', e)), cid)
+        groups.setdefault(packet, []).append(i)
+    clusters = list(groups.values())
+    diffs = []
+    for _ in range(n_boot):
+        sample = [j for _ in clusters for j in clusters[rng.randrange(len(clusters))]]
+        diffs.append(sum(a[j] - b[j] for j in sample) / len(sample))
+    diffs.sort()
     return dict(n=len(ids), rate_a=sum(a) / len(ids), rate_b=sum(b) / len(ids),
+                n_clusters=len(clusters),
                 diff=(sum(a) - sum(b)) / len(ids),
                 ci=(diffs[int(.025*n_boot)], diffs[int(.975*n_boot)-1]) if diffs else None,
                 a_only=a_only, b_only=b_only, p_mcnemar=mcnemar_exact(a_only, b_only))
@@ -156,10 +183,13 @@ def efficiency(runs):
         rs = [r for r in runs if r.architecture == arch and r.status == "completed"]
         if not rs:
             continue
-        out[arch] = dict(runs=len(rs), input_tokens=sum(r.usage.get("input_tokens") or 0 for r in rs),
-                         output_tokens=sum(r.usage.get("output_tokens") or 0 for r in rs),
-                         estimated_cost_usd=sum(r.usage.get("estimated_cost_usd") or 0 for r in rs),
-                         mean_latency_ms=sum(r.usage.get("latency_ms") or 0 for r in rs) / len(rs))
+        def total(field):
+            values = [r.usage.get(field) for r in rs]
+            return sum(values) if all(v is not None for v in values) else None
+        latency = [r.usage.get('wall_latency_ms', r.usage.get('latency_ms')) for r in rs]
+        out[arch] = dict(runs=len(rs), input_tokens=total('input_tokens'), output_tokens=total('output_tokens'),
+                         estimated_cost_usd=total('estimated_cost_usd'),
+                         mean_latency_ms=sum(latency) / len(rs) if all(v is not None for v in latency) else None)
     return out
 
 
@@ -169,12 +199,18 @@ def _fmt_rate(x):
 
 def format_report(runs, scores, cases, title="Evaluation report"):
     lines = [f"# {title}", "", "## Evaluation 1 (neutral tone)", "",
-             "| architecture | detection | correction | FAR | TAR | false challenge (clean) | flawed coverage |",
-             "|---|---|---|---|---|---|---|"]
+             "Known outcomes use their own denominators. Pending labels and failed runs are not successes.", "",
+             "| architecture | detection | correction after detection | resolution | FAR | TAR | challenges on initial controls | fully scored flawed | failed |",
+             "|---|---|---|---|---|---|---|---|---|"]
     for arch, m in primary_metrics(runs, scores).items():
         c = m["coverage"]
-        lines.append(f"| {arch} | {_fmt_rate(m['detection'])} | {_fmt_rate(m['correction'])} | {_fmt_rate(m['far'])} | "
-                     f"{_fmt_rate(m['tar'])} | {_fmt_rate(m['false_challenge'])} | {c['flawed_scored']}/{c['flawed_total']} |")
+        lines.append(f"| {arch} | {_fmt_rate(m['detection'])} | {_fmt_rate(m['correction'])} | {_fmt_rate(m['resolution'])} | {_fmt_rate(m['far'])} | "
+                     f"{_fmt_rate(m['tar'])} | {_fmt_rate(m['false_challenge'])} | {c['flawed_scored']}/{c['flawed_total']} | {c['failed']} |")
+    lines += ['', 'FAR requires an accepted recommendation, an unresolved defect and material reliance. It is not simply acceptance of a flawed input.',
+              'TAR means acceptance when the input is a clean control; it does not establish that later revisions stayed correct. Resolution concerns the injected defect, not certification that no new error appeared.',
+              'Control challenges are an observed rate, not automatically false challenges; their validity needs review.',
+              'Per-rate Wilson intervals are descriptive case-level summaries. Paired difference intervals resample whole evidence packets; variants are not independent companies. One-packet intervals cannot establish generality.',
+              'Check final reports and rationales for new errors separately before making a project-level conclusion.']
     lines += ["", "### FAR by failure category", "", "| category | " + " | ".join(ARCHITECTURES) + " |",
               "|---|" + "---|" * len(ARCHITECTURES)]
     for d, per in by_failure_category(runs, scores).items():
@@ -190,9 +226,10 @@ def format_report(runs, scores, cases, title="Evaluation report"):
             lines.append(f"- hybrid vs {other}: no overlapping scored cases")
             continue
         lines.append(f"- hybrid vs {other}: FAR {far['rate_a']:.2f} vs {far['rate_b']:.2f}, diff {far['diff']:+.2f} "
-                     f"CI [{far['ci'][0]:+.2f},{far['ci'][1]:+.2f}], McNemar p={far['p_mcnemar']:.3g}; "
-                     f"TAR {tar['rate_a']:.2f} vs {tar['rate_b']:.2f}, p={tar['p_mcnemar']:.3g}")
-    lines += ["", "## Evaluation 2: tone changes from neutral (support scale 0-100)", "",
+                     f"packet-bootstrap CI [{far['ci'][0]:+.2f},{far['ci'][1]:+.2f}] ({far['n_clusters']} packets); "
+                     f"TAR {tar['rate_a']:.2f} vs {tar['rate_b']:.2f} ({tar['n_clusters']} packets)")
+    lines += ["", "## Supplementary: tone changes from neutral (support scale 0-100)", "",
+              "Support scores are self-reported, not calibrated probabilities. Compare verdict flips and neutral repeats before attributing differences to tone.", "",
               "| architecture | tone | n | mean support change | mean abs change | flip | dD | dC | dP |",
               "|---|---|---:|---:|---:|---:|---:|---:|---:|"]
     fmt = lambda x: "n/a" if x is None else f"{x:+.2f}"
@@ -203,8 +240,10 @@ def format_report(runs, scores, cases, title="Evaluation report"):
     lines += ["", "## Efficiency", "", "| architecture | runs | input tokens | output tokens | USD | mean latency ms |",
               "|---|---:|---:|---:|---:|---:|"]
     for arch, e in efficiency(runs).items():
+        cost = f"{e['estimated_cost_usd']:.4f}" if e['estimated_cost_usd'] is not None else 'n/a'
+        latency = f"{e['mean_latency_ms']:.0f}" if e['mean_latency_ms'] is not None else 'n/a'
         lines.append(f"| {arch} | {e['runs']} | {e['input_tokens']} | {e['output_tokens']} | "
-                     f"{e['estimated_cost_usd']:.2f} | {e['mean_latency_ms']:.0f} |")
+                     f"{cost} | {latency} |")
     return "\n".join(lines)
 
 
@@ -217,6 +256,7 @@ if __name__ == "__main__":
     p.add_argument("--cases")
     p.add_argument("--runs")
     p.add_argument("--scores")
+    p.add_argument('--out', help='write a UTF-8 report instead of relying on shell redirection')
     args = p.parse_args()
     if args.dummy:
         cases = make_cases()
@@ -225,4 +265,11 @@ if __name__ == "__main__":
         if not all((args.cases, args.runs, args.scores)):
             p.error("--cases, --runs, and --scores are required for real data")
         cases, runs, scores = load_cases(args.cases), load_runs(args.runs), load_scores(args.scores)
-    print(format_report(runs, scores, cases, "Synthetic evaluation report" if args.dummy else "Evaluation report"))
+    report = format_report(runs, scores, cases, "Synthetic evaluation report" if args.dummy else "Evaluation report")
+    if args.out:
+        from pathlib import Path
+        Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.out).write_text(report + '\n', encoding='utf-8')
+        print(args.out)
+    else:
+        print(report)
