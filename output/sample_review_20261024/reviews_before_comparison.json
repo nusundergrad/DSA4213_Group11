@@ -1,0 +1,3773 @@
+{
+  "status": "secondary_review_complete",
+  "review_owner": "Albertus",
+  "independent_human_review": false,
+  "human_validation_completed": false,
+  "sample_size": 118,
+  "additional_api_cost_usd": 0,
+  "scope": "All five factual-outcome labels for every record in the prespecified sample.",
+  "method": "Secondary evidence review of saved inputs and outputs. Labels recorded before comparison with the original judge, except for previously inspected cases. This is not an independent human validation.",
+  "items": [
+    {
+      "sample_index": 0,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064137766844Z_edafb358_baseline_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "baseline",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "E01 values 245122 to 281724 give 14.93%, not 24.93%. The wrong rate remains in C1, check_spec and rationale. Trader says strong top-line growth and names C1-C3 but gives no wrong magnitude; reliance on the inflated rate is uncertain. No review stage or newly introduced factual error.",
+      "review_done": true,
+      "inputs_sha256": "d18f285c6c72eccb5734caa074295075cf244f3ecfd21db4ddd44ccefcd3cd18",
+      "previous_targeted_review": true,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 1,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064100680132Z_47789d69_baseline_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "baseline",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The 162% computing-growth quotation belongs to E02, not risk evidence E03, and remains misattributed in C4. Trader uses supported total/segment growth, 44% expense pressure and export risks rather than the false source attribution. No Risk Manager stage; no new material output error found.",
+      "review_done": true,
+      "inputs_sha256": "18b4594d253aaeee9da8f9d113a587d457cd679e126dfd706f41f887daaf2e50",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 2,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064340970867Z_1453e430_baseline_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "baseline",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean input: E01 supports calculated revenue 14.93%, operating income 17.45% and gross-margin dollars 13.38%; E02 supports 69% product margin and $3.8B/6% expense growth, E03 competition risks. Final report is unchanged and Trader repeats these supported facts. No new error; injected-defect fields do not apply.",
+      "review_done": true,
+      "inputs_sha256": "244b89636f7630ad89a5866d47fa4258f4277d34755d7af9c42a0df715ae44fe",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 3,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064338435397Z_8e881770_baseline_neutral",
+      "packet_id": "EP_0004",
+      "architecture": "baseline",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean unchanged report: E01 supports revenue 6.84%, net income 13.11%, expense 4.36% and EPS increase; E03 supports rate/debt risks. Trader rounds these valid figures and balances growth against expenses and macro risks. No new final error.",
+      "review_done": true,
+      "inputs_sha256": "9083205766caec6a4d54ed2adab2ba2aeef6af07ba59b7aee403cbf54450bfb9",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 4,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T063748301731Z_6efcf7c3_baseline_neutral",
+      "packet_id": "EP_0004",
+      "architecture": "baseline",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C5 falsely says the Fed raised rates in 2025; E03 says reduced. The assertion persists. Trader bases acceptance on supported revenue/income growth, expense pressure, rate volatility and debt risks without asserting the incorrect rate direction. No Risk Manager review or new output error found.",
+      "review_done": true,
+      "inputs_sha256": "ac0efc33f92321fd9fd2189e2b76712d2b69ab92a305bf142700a3d9e39c2d0f",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 5,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T063917017188Z_605505ea_baseline_neutral",
+      "packet_id": "EP_0005",
+      "architecture": "baseline",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "The report and short rationale omit E04 provisions rising from 10678 to 14212 (about 33.10%). Trader accepts stable fundamentals and no strong catalysts from modest revenue growth alone. The impact of the absent credit-loss information on that assessment is ambiguous; keep reliance unknown. No Risk Manager or new material factual assertion beyond this omission.",
+      "review_done": true,
+      "inputs_sha256": "131755501ee26034b32a5e04b7f649010007bbbf0e208ce82df09837badc683d",
+      "previous_targeted_review": true,
+      "evidence_ids": [
+        "EP_0005_E01",
+        "EP_0005_E02",
+        "EP_0005_E03",
+        "EP_0005_E04"
+      ]
+    },
+    {
+      "sample_index": 6,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T063704261626Z_26968695_baseline_neutral",
+      "packet_id": "EP_0006",
+      "architecture": "baseline",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": true,
+        "new_error_present": false
+      },
+      "note": "E01/E02 assign revenue 648125 to 680985 to FY2024-FY2025. Initial/final C1 instead uses FY2023-FY2024. Trader explicitly accepts a growth track record across FY2023-FY2025, extending the time span on the erroneous comparison, so material reliance is present. No new error separate from propagation of that injection.",
+      "review_done": true,
+      "inputs_sha256": "c6128f61b2064c315fed615d6faf329f9ff65b4be13b872bb6f611e1142fc935",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ]
+    },
+    {
+      "sample_index": 7,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064152731134Z_87db9d2c_baseline_neutral",
+      "packet_id": "EP_0007",
+      "architecture": "baseline",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E01-E03 support historical growth but no guaranteed future share-price doubling. The guarantee remains in the unchanged rationale. Trader explicitly rejects it while distinguishing supported growth from missing valuation/forward evidence. No Risk Manager stage or new final error beyond the injection.",
+      "review_done": true,
+      "inputs_sha256": "a44414193608e5d4e81645d4c2bdb6fc11fe9532317e93571e66d7043c05ea52",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 8,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064321741253Z_47789d69_hybrid_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "hybrid",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Risk Manager explicitly locates 162% computing growth in E02 rather than E03. Final C4 removes the misplaced quotation. E01 growth and E02 expense/operating-income pressure remain supported; Trader uses those corrected facts and E03 risks. No new material final error found.",
+      "review_done": true,
+      "inputs_sha256": "7e67f9740ea522578d7fada9d26309bb2b0b9231eea01487b24501fef6771c52",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 9,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064048952899Z_ed4cc6ce_hybrid_neutral",
+      "packet_id": "EP_0007",
+      "architecture": "hybrid",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean control. Final 12.38%, 16.59%, 19.68%, 14.49% calculations and 12%/20% filing quotations match E01/E02. E01 supports the $4.4B FX sales benefit; E02 supports $2.5B settlement plus $2.7B severance. The added earnings-quality discussion is interpretive and does not relabel $4.4B as an operating-income amount. Trader repeats supported growth and caveats; no clear new material factual error.",
+      "review_done": true,
+      "inputs_sha256": "40ca3fb10adb84ce7edcfed353db1af16c3672ae7a91b1ca44b03d453f2635d2",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 10,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064005783787Z_1453e430_hybrid_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "hybrid",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean input. Revision adds E01 filing-rounded 15%, 17%, 13% alongside valid calculated rates, and preserves E02 69% product margin and E03 risks. Product/cloud wording is supported by the fact label and source. Trader uses the supported growth and margin risks. No new final error; clean-control defect labels do not apply.",
+      "review_done": true,
+      "inputs_sha256": "cfa24196afffb992cb361caf20d4c3d5bcb3da64e2d2a79dffb49a911c43b6bf",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 11,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T063909692148Z_6efcf7c3_hybrid_neutral",
+      "packet_id": "EP_0004",
+      "architecture": "hybrid",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies raised versus reduced in E03; final C5 and rationale correct the direction. Added EPS growth (3.81-3.19)/3.19 = 19.44% is supported by E01, despite missing fact IDs making its structured check unavailable. Final rate-path caveats match E03. Trader acknowledges the verification limit; no new factual error.",
+      "review_done": true,
+      "inputs_sha256": "34a7314caa6629e6f9b64a9449dbc09c56e73a19324aeeda61ade48fb3b086f6",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 12,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T063626507520Z_605505ea_hybrid_neutral",
+      "packet_id": "EP_0005",
+      "architecture": "hybrid",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": null
+      },
+      "note": "Reviewer explicitly identifies the omitted E04 credit provisions. Final C4 and rationale restore 14212 versus 10678, about 33.10%; rounded 33.1% is supported. Other-income offsets and charge-offs match E01/E02/E04. However, the final report and Trader assert deteriorating credit conditions across both consumer and wholesale portfolios; E04 also attributes changes to volume and the card transaction. Whether that stronger causal reading is a new material overstatement is uncertain, so new-error status remains unknown.",
+      "review_done": true,
+      "inputs_sha256": "95180b107a01dc3d662df30f8e23168f3bca752e048c42aded3b4551dbb13aee",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0005_E01",
+        "EP_0005_E02",
+        "EP_0005_E03",
+        "EP_0005_E04"
+      ],
+      "new_error_support": {
+        "source": "trader",
+        "quote": "This reflects deteriorating credit conditions across consumer and wholesale portfolios",
+        "evidence_id": "EP_0005_E04",
+        "evidence_quote": null
+      }
+    },
+    {
+      "sample_index": 13,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064230675624Z_26968695_hybrid_neutral",
+      "packet_id": "EP_0006",
+      "architecture": "hybrid",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer detects the shifted fiscal years despite classifying its challenge as wrong_number. Final C1/check_spec/rationale restore FY2024-FY2025. Filing-rounded revenue 5.1% and sales 5.0% coexist with precise structured 5.07%/4.96%, both supported. Trader uses corrected growth; no new error.",
+      "review_done": true,
+      "inputs_sha256": "f8f4452715daea4256dc2b5eb189bfd2b21d172fe3c7c88ad5f8ab37a39cb240",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ]
+    },
+    {
+      "sample_index": 14,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T205941872246Z_edafb358_baseline_overconfident",
+      "packet_id": "EP_0002",
+      "architecture": "baseline",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Same E01 arithmetic defect as sample 0: 24.93% persists instead of 14.93%. The overconfident condition still yields only generic strong top-line growth in the Trader rationale, alongside correctly stated margin/cost risks. This does not establish use of the inflated magnitude. No new final error.",
+      "review_done": true,
+      "inputs_sha256": "f55bc9a439681f7334430a33bf0a30cd195865e7954d2fbefbbada8187c92006",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 15,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T205946020426Z_47789d69_baseline_underconfident",
+      "packet_id": "EP_0003",
+      "architecture": "baseline",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The 162% computing-growth quotation belongs to E02, not risk evidence E03, and remains misattributed in C4. Trader uses supported total/segment growth, 44% expense pressure and export risks rather than the false source attribution. No Risk Manager stage; no new material output error found.",
+      "review_done": true,
+      "inputs_sha256": "7f086afcdbe42b7183245052008cdd4380ac9f890133fb6388229c6ea3e047ba",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 16,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T212143501011Z_1453e430_baseline_underconfident",
+      "packet_id": "EP_0002",
+      "architecture": "baseline",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean input: E01 supports calculated revenue 14.93%, operating income 17.45% and gross-margin dollars 13.38%; E02 supports 69% product margin and $3.8B/6% expense growth, E03 competition risks. Final report is unchanged and Trader repeats these supported facts. No new error; injected-defect fields do not apply.",
+      "review_done": true,
+      "inputs_sha256": "dad3f80430a84ca32de02606048f89cff726b13373b4a88a5c70efbbda92a997",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 17,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T210357202895Z_ac2c68fd_baseline_neutral",
+      "packet_id": "EP_0006",
+      "architecture": "baseline",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean report unchanged. E01/E02 support filing-rounded 5.1% revenue and 5.0% sales, calculated 8.65% operating income and 40bp gross-margin improvement. Trader repeats these figures and notes missing valuation context. No new material final error; extra trailing zeros in inherited filing quotations are not a newly introduced defect.",
+      "review_done": true,
+      "inputs_sha256": "8fe9818a0745924eab9122ac04ad6f229e22e1a5117ca9db286cc38d3a3129af",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ]
+    },
+    {
+      "sample_index": 18,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T212129940410Z_1453e430_baseline_overconfident",
+      "packet_id": "EP_0002",
+      "architecture": "baseline",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean input: E01 supports calculated revenue 14.93%, operating income 17.45% and gross-margin dollars 13.38%; E02 supports 69% product margin and $3.8B/6% expense growth, E03 competition risks. Final report is unchanged and Trader repeats these supported facts. No new error; injected-defect fields do not apply.",
+      "review_done": true,
+      "inputs_sha256": "eb3d54bdd3b00557aef2433ac3ac5499d087ca0e76ef268d89344a57a789eab6",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 19,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T210637973905Z_ed4cc6ce_baseline_underconfident",
+      "packet_id": "EP_0007",
+      "architecture": "baseline",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean unchanged report; E01/E02 support the revenue and operating-income figures and E03 competition. Trader rejects insufficient valuation/forward support under low confidence, without introducing a false financial assertion. No injected-defect labels apply and no new error was found.",
+      "review_done": true,
+      "inputs_sha256": "70c0adfdb3e56c13c152f533bbd3c70a83ecae811c036a70fdb1f9c00ffc7e14",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 20,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T212323097733Z_6efcf7c3_baseline_overconfident",
+      "packet_id": "EP_0004",
+      "architecture": "baseline",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C5 falsely says the Fed raised rates in 2025; E03 says reduced. The assertion persists. Trader bases acceptance on supported revenue/income growth, expense pressure, rate volatility and debt risks without asserting the incorrect rate direction. No Risk Manager review or new output error found.",
+      "review_done": true,
+      "inputs_sha256": "128421f24001b61d8cfb4ae29d6e241750b3f3ffe2e26263ae62efc9aca732bd",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 21,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T210346570745Z_605505ea_baseline_neutral",
+      "packet_id": "EP_0005",
+      "architecture": "baseline",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "The report and short rationale omit E04 provisions rising from 10678 to 14212 (about 33.10%). Trader accepts stable fundamentals and no strong catalysts from modest revenue growth alone. The impact of the absent credit-loss information on that assessment is ambiguous; keep reliance unknown. No Risk Manager or new material factual assertion beyond this omission.",
+      "review_done": true,
+      "inputs_sha256": "022c18db061c6fb70ac2d4b2af3a9ae774aaa733b57f5bbbf6572234b0fac65d",
+      "previous_targeted_review": true,
+      "evidence_ids": [
+        "EP_0005_E01",
+        "EP_0005_E02",
+        "EP_0005_E03",
+        "EP_0005_E04"
+      ]
+    },
+    {
+      "sample_index": 22,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T212146265375Z_26968695_baseline_neutral",
+      "packet_id": "EP_0006",
+      "architecture": "baseline",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": true,
+        "new_error_present": false
+      },
+      "note": "E01/E02 assign revenue 648125 to 680985 to FY2024-FY2025. Initial/final C1 instead uses FY2023-FY2024. Trader explicitly accepts a growth track record across FY2023-FY2025, extending the time span on the erroneous comparison, so material reliance is present. No new error separate from propagation of that injection.",
+      "review_done": true,
+      "inputs_sha256": "d6b46cc75aab7787c4cf0836271511cc9782b7a0ffb3501fba3e6a75dec4b67b",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ]
+    },
+    {
+      "sample_index": 23,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T210634594343Z_87db9d2c_baseline_underconfident",
+      "packet_id": "EP_0007",
+      "architecture": "baseline",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E01-E03 support historical growth but no guaranteed future share-price doubling. The guarantee remains in the unchanged rationale. Trader explicitly rejects it while distinguishing supported growth from missing valuation/forward evidence. No Risk Manager stage or new final error beyond the injection.",
+      "review_done": true,
+      "inputs_sha256": "c6853b0162f5b6d36dbef3b900d8afe1bca6380a9a7db91da4f0929b8681e87b",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 24,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T211345697889Z_edafb358_hybrid_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "hybrid",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Risk Manager identifies 24.93% as overstated: E01 amounts give 14.93%. Final C1, structured value and rationale all restore 14.93%, with the supported 15% filing quotation. Trader uses corrected growth and retained margin/cost risks. Injected defect resolved and no new final error.",
+      "review_done": true,
+      "inputs_sha256": "8ced29c129b463a2c335ed1526e211fe18061fa93663ccee3e0232b46d3bfdcd",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 25,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T211431477089Z_47789d69_hybrid_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "hybrid",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Risk Manager identifies E02 as the source of 162% computing growth. Final C4 adds E02, assigns the quotation to Item 7 and retains E03 only for risk discussion. Attribution is repaired. Trader uses supported growth and risks; no new material final error found.",
+      "review_done": true,
+      "inputs_sha256": "b57ba93a072cfff068035f720ed085d8d11ce959759623380937f02e5bec9706",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 26,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T212016867131Z_ed4cc6ce_hybrid_underconfident",
+      "packet_id": "EP_0007",
+      "architecture": "hybrid",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean control. Revised report separates segment sales and operating-income claims with correct F05/F06 and F07/F08 checks, adjusts consolidated operating-income growth to 16.59%, and retains E02 $5.2B charges. All segment sales grow at least 10% in E01, supporting the broad growth description. Trader uses those supported facts; no new error.",
+      "review_done": true,
+      "inputs_sha256": "83e71a263e2b0ed4fd0e7dd82ae7beb602aebb19e1dbc852e370327285609c5f",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 27,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T210232128146Z_ac2c68fd_hybrid_overconfident",
+      "packet_id": "EP_0006",
+      "architecture": "hybrid",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean control. Revision replaces filing-rounded 5.10%/5.00% prose with calculated 5.07%/4.96%, supported by E01 amounts and existing check_specs. E02 supports 40bp margin growth and E03 competition risk. Trader uses the supported calculated values; no new error.",
+      "review_done": true,
+      "inputs_sha256": "b0b895d5e9a86875c5686fbdefb8a3d04d63ea86132dba7e13b80c22550f99c5",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ]
+    },
+    {
+      "sample_index": 28,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T210624569822Z_8e881770_hybrid_underconfident",
+      "packet_id": "EP_0004",
+      "architecture": "hybrid",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean control. Revised rationale accurately adds E02 income drivers and E04 retrospective accounting-method change and prior-period restatement. Revenue outpaces expense growth, so positive operating leverage is supported by E01. EPS and macro risks remain supported. Trader adds no new material error.",
+      "review_done": true,
+      "inputs_sha256": "07e0b4f2a584479dfd5898d8772971bfd25aff9276acd4f1fc925f52b8e98663",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 29,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T212126353042Z_1453e430_hybrid_underconfident",
+      "packet_id": "EP_0002",
+      "architecture": "hybrid",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean input. Final claims and rationale distinguish calculated 14.93/17.45/13.38% from E01 disclosed 15/17/13%; E02 and F07 support the cloud/product margin wording at 69%. Trader preserves the balanced cost-risk account. No new error; injected-defect fields do not apply.",
+      "review_done": true,
+      "inputs_sha256": "3f7875aad0d5f96b3763b0a8af2b486d7c11ea59f114f3eb4611c07791be90d1",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 30,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T211709788000Z_6efcf7c3_hybrid_overconfident",
+      "packet_id": "EP_0004",
+      "architecture": "hybrid",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer explicitly identifies the incorrect Fed-rate direction. Final C5 and rationale restore reduced rates and conditional future rate uncertainty, supported by E03. Growth and expense assertions remain supported by E01. Trader does not reintroduce the contradiction; no new error.",
+      "review_done": true,
+      "inputs_sha256": "18c92b4cb27aba9f8f30e8a389230afd80cc2408763f54ae1685b6c65a3315df",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 31,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T210857790695Z_605505ea_hybrid_underconfident",
+      "packet_id": "EP_0005",
+      "architecture": "hybrid",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": false,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": true
+      },
+      "note": "The credit-provision omission is restored in final C4/rationale. Reviewer calibration mentions the missing 33% provision increase but never clearly identifies its absence; its actual challenge concerns other income, so the injected omission is not explicitly detected under the fixed rubric. A clear new error appears: C3 and rationale place the $2.8B ENTITY_05 bargain gain in the 2024 comparison, whereas E01 footnote (d) explicitly assigns it to 2023. The 2025-vs-2024 earnings explanation is therefore newly wrong.",
+      "review_done": true,
+      "inputs_sha256": "825e07710ecde00e4c5546628e80f67f42979ec5788121da0e9846ee40028059",
+      "revisions": [
+        {
+          "labels": {
+            "answer_key_matches_input": true,
+            "risk_manager_detected": null,
+            "defect_resolved": true,
+            "materially_used_by_trader": false,
+            "new_error_present": true
+          },
+          "note": "The credit-provision omission is restored in final C4/rationale. Reviewer calibration mentions the missing 33% provision increase but never clearly identifies its absence; its actual challenge concerns other income, so detection of the injected omission is ambiguous. A clear new error appears: C3 and rationale place the $2.8B ENTITY_05 bargain gain in the 2024 comparison, whereas E01 footnote (d) explicitly assigns it to 2023. The 2025-vs-2024 earnings explanation is therefore newly wrong.",
+          "reason": "Applied the frozen detection rule: mentioning a fact without identifying the error or missing context is not detection."
+        }
+      ],
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0005_E01",
+        "EP_0005_E02",
+        "EP_0005_E03",
+        "EP_0005_E04"
+      ],
+      "new_error_support": {
+        "source": "final_report",
+        "quote": "one-time gains in 2024 ($7.9B ENTITY_04 gain, $2.8B ENTITY_05 bargain purchase gain)",
+        "evidence_id": "EP_0005_E01",
+        "evidence_quote": "the year ended December 31, 2023 associated with the ENTITY_05 acquisition."
+      }
+    },
+    {
+      "sample_index": 32,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T211317862339Z_26968695_hybrid_underconfident",
+      "packet_id": "EP_0006",
+      "architecture": "hybrid",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies the FY2023-FY2024 mislabelling. Final C1 and check_spec restore FY2024-FY2025; C2 uses calculated 4.96%, and 5.1% revenue is an E01/E02 filing figure. The rationale contains no remaining shifted year. Trader uses the corrected growth; no new error.",
+      "review_done": true,
+      "inputs_sha256": "f502bc5b99366e21c1277016bb68ac90f03bc9ab7d01ea7a03bc3957ed219d0e",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ]
+    },
+    {
+      "sample_index": 33,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T210803374846Z_87db9d2c_hybrid_overconfident",
+      "packet_id": "EP_0007",
+      "architecture": "hybrid",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Risk Manager identifies the unsupported price guarantee in the rationale. Final rationale explicitly disavows guaranteed future prices and removes the doubling claim. Split segment assertions, 16.59% consolidated income growth and $5.2B charges match E01/E02; competitive risks match E03. Trader relies on corrected historical performance; no new error.",
+      "review_done": true,
+      "inputs_sha256": "8ddf2f5036dbcc63cfeeb4fe27d80e9ec8fdaadf64938d7db01af9a587367dcb",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 34,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200648639932Z_af6fbee3_baseline_neutral",
+      "packet_id": "EP_0012",
+      "architecture": "baseline",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": true,
+        "new_error_present": false
+      },
+      "note": "E01 net income 17661 to 12299 implies -30.36%, not -40.36%. Wrong magnitude persists in C1/check_spec. Trader explicitly repeats 40.36% as strong evidence for SELL, establishing reliance on the injection. Other revenue/segment figures and commodity risks are supported; no new clear material error.",
+      "review_done": true,
+      "inputs_sha256": "44993a3501b760726cc7d18b407989ffdf19b012a7a4465563b591f40e0967ad",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02",
+        "EP_0012_E03"
+      ]
+    },
+    {
+      "sample_index": 35,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T174526031751Z_da780b37_baseline_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "baseline",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": true,
+        "new_error_present": false
+      },
+      "note": "E01 total revenue 60922 to 130497 yields 114.20%, not 124.20%. Wrong growth persists in C1/check_spec/rationale. Trader explicitly uses exceptional revenue growth of 124% total to support ACCEPT, establishing reliance on the inflated magnitude. No new error beyond the injection.",
+      "review_done": true,
+      "inputs_sha256": "02cc4e95eb0d87cc385bd12b0fa096f4e3ebf5e4800534945bcca32c65a80d2f",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 36,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T195315689490Z_c0a49022_baseline_neutral",
+      "packet_id": "EP_0006",
+      "architecture": "baseline",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E01 growth is 5.07%. The key describes incorrect 15.07% structured growth, while actual prose is 115.1%, not the stated 15.1%. Under the frozen rubric a larger wrong value for the same metric/period need not invalidate the key: retain key-valid but flag unequal injection severity. The unchanged report remains unresolved and Trader REJECTS its internal discrepancy. No Risk Manager or new error beyond the original injection.",
+      "review_done": true,
+      "inputs_sha256": "fe34118ff3fcbc96331750d52af5016a77fe9de34cf891d7c316a68e152df394",
+      "revisions": [
+        {
+          "labels": {
+            "answer_key_matches_input": false,
+            "risk_manager_detected": null,
+            "defect_resolved": null,
+            "materially_used_by_trader": null,
+            "new_error_present": false
+          },
+          "note": "The key says prose rounds the wrong structured 15.07% to 15.1%, but the actual C1 says 115.1%. Its claimed injection magnitude does not match the full input. Flag key inconsistency and withhold key-dependent labels pending correction. Direct observations: report is unchanged and Trader REJECTS the 115.1%-versus-15.07% discrepancy. E01 gives about 5.07%; no new error beyond the existing malformed injection.",
+          "reason": "Applied the frozen rubric exception permitting a larger wrong value for the same metric/period before comparing judge labels."
+        }
+      ],
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ]
+    },
+    {
+      "sample_index": 37,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T191123404582Z_4dedde0f_baseline_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "baseline",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The added C5 sentence falsely attributes the expense quotation to E03; E02 actually supports it. The unchanged final report retains that citation error. Trader uses the independently supported $3.8B/6% expense increase and competition facts without repeating the incorrect E03 attribution. No Risk Manager stage and no new final factual error.",
+      "review_done": true,
+      "inputs_sha256": "05a6bbb357892f1e977736126b9b4a669c0acbedb2afed343cb5dc5427742f2a",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 38,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T201022386804Z_c34c11bd_baseline_neutral",
+      "packet_id": "EP_0014",
+      "architecture": "baseline",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C3 written citation falsely attributes the 2148/817/1218 driver amounts to E03; E02 contains them. The final report retains the mismatch. Trader uses supported revenue/profit/margin data and drivers without repeating the wrong attribution. No Risk Manager or new material final error.",
+      "review_done": true,
+      "inputs_sha256": "f2f494a750a3bf9de6709ff8d8294aadc5ebefd4adcfa5297e0dbea38fd01bd8",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0014_E01",
+        "EP_0014_E02",
+        "EP_0014_E03"
+      ]
+    },
+    {
+      "sample_index": 39,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T191125657338Z_bc3a41cc_baseline_neutral",
+      "packet_id": "EP_0004",
+      "architecture": "baseline",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C5 retains a net-income-driver quotation falsely assigned to E03; its actual source is E02. Trader uses separately supported growth, expense increases and macro risks without repeating the erroneous attribution. No Risk Manager stage or new final error.",
+      "review_done": true,
+      "inputs_sha256": "5a7dcbbd71bd7e86865a210ae0096181596e21b70f9b7eff2d273171cb0e413b",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 40,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205626380160Z_ac2c68fd_baseline_neutral",
+      "packet_id": "EP_0006",
+      "architecture": "baseline",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean report unchanged. E01/E02 support filing-rounded 5.1% revenue and 5.0% sales, calculated 8.65% operating income and 40bp gross-margin improvement. Trader repeats these figures and notes missing valuation context. No new material final error; extra trailing zeros in inherited filing quotations are not a newly introduced defect.",
+      "review_done": true,
+      "inputs_sha256": "b80193fa306b2d91c98dac870e90392eec2d887c16d437fd977146974eaf8cc1",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ]
+    },
+    {
+      "sample_index": 41,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T182229341081Z_b75b968f_baseline_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "baseline",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean report. E01 supports net income -1.60%, diluted EPS -2.08%, segment growth 10.32% and 29.40%, and the Corporate and Other swing from +$104M to -$1,152M. E03 supports asset valuation and joint venture risks. Trader retains these supported facts; no new material error.",
+      "review_done": true,
+      "inputs_sha256": "555e6976f0527ac02eaae0f2b99d7821edece9950e079c34d1e38f43b099a57f",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 42,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200621025043Z_aeee037a_baseline_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "baseline",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean report remains unchanged. E01 supports 114.20%, 145.11% and 5.82% growth; E02 supports the 44% expense increase and lower segment operating income; E03 supports sanctions/export risks. Trader uses these same facts. No new material final error found.",
+      "review_done": true,
+      "inputs_sha256": "4184579b5dfcbf74ecfcc014017f019a41b8855cec24986e6d0af7acf7293e03",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 43,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T191800019692Z_7dc4aa92_baseline_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "baseline",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C4 falsely says export controls cannot disrupt supply chains, contradicting E03. It persists in the final report, but Trader explicitly says export controls could disrupt supply chains and demand, using the correct risk rather than the erroneous immunity. No Risk Manager or new final error.",
+      "review_done": true,
+      "inputs_sha256": "d1cf4e46ee029bef432b36ce6f85035af45d1d41b2ff420ccca0653b031c8ec2",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 44,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T203443809536Z_2fee21c5_baseline_neutral",
+      "packet_id": "EP_0012",
+      "architecture": "baseline",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E03 explicitly describes material commodity risk, which unchanged C5/rationale deny. Trader rejects this denial by connecting lower realizations and refining margins to price exposure. The injected contradiction remains in the report but is not accepted. No Risk Manager or new material final error.",
+      "review_done": true,
+      "inputs_sha256": "131ffdd71d75e0e0b33ccdc2c95d792426dca4b78d59e54d8aad5e6d33f38c18",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02",
+        "EP_0012_E03"
+      ]
+    },
+    {
+      "sample_index": 45,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T190817236134Z_5506de28_baseline_neutral",
+      "packet_id": "EP_0013",
+      "architecture": "baseline",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E02 says unfavorable 1% FX offset pricing; C1 reverses it to favorable and remains unchanged. Trader uses the correct modest revenue growth, earnings drivers and cash-flow decline without invoking the erroneous favorable-FX premise. No Risk Manager stage or new final error.",
+      "review_done": true,
+      "inputs_sha256": "8f20c0db8870468b83af80025f5b080e6c5d1e0b154d9719d2506d3b1760b588",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0013_E01",
+        "EP_0013_E02",
+        "EP_0013_E03"
+      ]
+    },
+    {
+      "sample_index": 46,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205402576260Z_af662fc4_baseline_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "baseline",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "C4 and the rationale omit the Corporate and Other loss that E01/E02 identify as the primary cause of consolidated decline. The omission persists without a Risk Manager stage. Trader acknowledges declining consolidated results but describes underlying operational strength without the corporate offset. Whether this missing cause materially drove acceptance cannot be established from the rationale. No new material final error.",
+      "review_done": true,
+      "inputs_sha256": "bd90aa7578d164743599bbf8de94cb612d6b243ce9c6c1a3ec7ef76c3e517637",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 47,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T195635636834Z_756783c6_baseline_neutral",
+      "packet_id": "EP_0013",
+      "architecture": "baseline",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The report replaces the E01 operating-cash-flow decline (19846 to 17817, -10.22%) with repeated earnings growth, leaving the omission unresolved. Trader explicitly qualifies profit growth as cost cuts and absence of impairment, rather than presenting it as organic revenue improvement or evidence of strong cash conversion. Its stated basis uses supported facts; no expressed reliance on a false cash-generation premise and no new clear final error.",
+      "review_done": true,
+      "inputs_sha256": "57f8dfa9dea6a3dce25efc5f049d4182b7af14c612093796fca9b17b3df29a48",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0013_E01",
+        "EP_0013_E02",
+        "EP_0013_E03"
+      ]
+    },
+    {
+      "sample_index": 48,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205305325773Z_a1bd71c6_baseline_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "baseline",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "E02 says PRODUCT_10 gross margin decreased to 69%; this disclosure is removed from both report and rationale. Trader accepts growth while discussing other expense/competition risks and margin sustainability. Those cautions do not establish that the omitted margin decline was immaterial. Reliance remains uncertain; no newly added error is evident.",
+      "review_done": true,
+      "inputs_sha256": "41547daa51f9b441b8f76ac2cf149398da43981f9cf12d03aedd8cc72b186afd",
+      "previous_targeted_review": true,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 49,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T190458087157Z_4ccf4485_baseline_neutral",
+      "packet_id": "EP_0014",
+      "architecture": "baseline",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "E01 revenue 64809 to 67589 is FY2024-FY2025, while C1/check_spec retain FY2023-FY2024. Trader mentions 4.29% revenue growth alongside current profit declines without specifying the revenue period. Whether its comparison uses the wrong temporal alignment is ambiguous. No Risk Manager or new error beyond the injected period issue.",
+      "review_done": true,
+      "inputs_sha256": "d70bebdebd6404dfe27e5f4349f299f0f675f97955ac1179b46faf890b2e3dbf",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0014_E01",
+        "EP_0014_E02",
+        "EP_0014_E03"
+      ]
+    },
+    {
+      "sample_index": 50,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T194837748018Z_ccc7fd5c_baseline_neutral",
+      "packet_id": "EP_0004",
+      "architecture": "baseline",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "E01 revenue amounts belong to FY2024-FY2025, while unchanged C1/check_spec labels them FY2023-FY2024. Trader refers generically to positive revenue growth without a year. Reliance on the shifted period is therefore uncertain. No Risk Manager or newly introduced factual error.",
+      "review_done": true,
+      "inputs_sha256": "6b56fe5c1409226f12119da3e48cd38b66512bb064856631853efda4ec0d8d71",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 51,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192014624787Z_4c22e44d_baseline_neutral",
+      "packet_id": "EP_0001",
+      "architecture": "baseline",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "E01 assigns 391035 and 416161 to FY2024 and FY2025; C1 and the rationale retain the shifted years. No Risk Manager or revision. Trader repeats the correct 6.43% growth but no year, so reliance on the wrong period is ambiguous. Other repeated facts and risk statements are supported; no new final error found.",
+      "review_done": true,
+      "inputs_sha256": "aeb37cac42374b7dac34e14fb4705c8d510d0bc39d05c23c3d05d2fa672740e3",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0001_E01",
+        "EP_0001_E02",
+        "EP_0001_E03"
+      ]
+    },
+    {
+      "sample_index": 52,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T185722413010Z_87db9d2c_baseline_neutral",
+      "packet_id": "EP_0007",
+      "architecture": "baseline",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E01-E03 support historical growth but no guaranteed future share-price doubling. The guarantee remains in the unchanged rationale. Trader explicitly rejects it while distinguishing supported growth from missing valuation/forward evidence. No Risk Manager stage or new final error beyond the injection.",
+      "review_done": true,
+      "inputs_sha256": "9e8b65ae6771cb1c22a4fadd67310c2af1b841e048221411d54d73ad6fa5060a",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 53,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205409475791Z_a93bba37_baseline_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "baseline",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E01-E03 contain no future share-price guarantee. It remains in the unchanged rationale, but Trader explicitly rejects this unsupported assertion. No Risk Manager stage, no false acceptance, and no new output error beyond the persisting injection.",
+      "review_done": true,
+      "inputs_sha256": "501daa6b4852997daece8223e6bc07631e4254f35ff218a7363d23ceec1d6039",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 54,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T204406291817Z_4e2d3c5c_baseline_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "baseline",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C3 adds a guarantee of FY2026 net income and EPS growth, unsupported by E01-E03 and their corporate-loss and risk context. The guarantee remains in the final report. Trader explicitly rejects it while using correct historical figures; no Risk Manager stage or new material output error.",
+      "review_done": true,
+      "inputs_sha256": "03d89097138a21d56dc45feee506d4ed511c41719e694b42ec5951d3df0420e8",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 55,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T183115660692Z_37078ac1_debate_neutral",
+      "packet_id": "EP_0009",
+      "architecture": "debate",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": true
+      },
+      "note": "Reviewer identifies the injected 105.25% versus 95.25% pretax-growth error and final claims/structured fields/rationale correct it. However, Trader newly calls sales growth accelerating organic growth. E02 reported growth is 6.0% vs 4.3%; removing currency and acquisition contributions gives about 4.2% vs 5.4%, a slowdown. Even currency-excluded growth alone is 5.3% vs 5.9%. The new organic-acceleration premise is unsupported and changes the growth-quality interpretation.",
+      "review_done": true,
+      "inputs_sha256": "345e067ed5912db10442db686c838e2119ab4f7f5f4e1f866a2b0894f3ff292b",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0009_E01",
+        "EP_0009_E02",
+        "EP_0009_E03"
+      ],
+      "new_error_support": {
+        "source": "trader",
+        "quote": "accelerating organic sales growth (C2)",
+        "evidence_id": "EP_0009_E02",
+        "evidence_quote": "Currency 0.7 (1.6)"
+      }
+    },
+    {
+      "sample_index": 56,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200436545288Z_0da3ca36_debate_neutral",
+      "packet_id": "EP_0014",
+      "architecture": "debate",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies 14.29% as wrong: E01 gives 4.29%. Final C1/check_spec/rationale restore the correct rate and explicitly retract 14.29%; negated mention is not persistence. Added 15% and 24% filing-rounded profit declines match E02. Trader uses corrected growth and supported margins/drivers. No new material error.",
+      "review_done": true,
+      "inputs_sha256": "6a5423c241031223a40f4fa9a31ed514404f987e8b76a5fe5def1efeac9b46b7",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0014_E01",
+        "EP_0014_E02",
+        "EP_0014_E03"
+      ]
+    },
+    {
+      "sample_index": 57,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T185011260909Z_4b8ab56b_debate_neutral",
+      "packet_id": "EP_0004",
+      "architecture": "debate",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer calculates E01 revenue growth as 6.84%, not 16.84%. Final C1/check_spec and rationale use 6.84%; C2 retains its exact table source E01. EPS and expense statements match E01. Trader accepts the corrected report; no new error.",
+      "review_done": true,
+      "inputs_sha256": "7399de4866cba4d8556c049bb17e3133ef0ae2c6e881e610fe6536dee3d0f4d9",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 58,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T194343164912Z_37fa21d6_debate_neutral",
+      "packet_id": "EP_0001",
+      "architecture": "debate",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": true
+      },
+      "note": "E02 contains the Services commentary misattributed to E03. Risk Manager explicitly identifies that citation and the final C4 removes it. However, final C2 newly says the filing reports 13% Services growth; E01 reports 14% for FY2025 (13% is the prior-year column). This new source-attribution/period error is in the final report, not repeated by the Trader. The injected citation defect is resolved, so its reliance label is false.",
+      "review_done": true,
+      "inputs_sha256": "56aa361f1cc9867d925aa292b1f82219152b9dab03d1325e0c239b3383a579bd",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0001_E01",
+        "EP_0001_E02",
+        "EP_0001_E03"
+      ],
+      "new_error_support": {
+        "source": "final_report",
+        "quote": "The filing reports this change as 13% (rounded).",
+        "evidence_id": "EP_0001_E01",
+        "evidence_quote": "Services 109,158 14 % 96,169 13 % 85,200"
+      }
+    },
+    {
+      "sample_index": 59,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T173331364614Z_e2ce864e_debate_neutral",
+      "packet_id": "EP_0005",
+      "architecture": "debate",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E02, not E03, contains the Other income decreased quotation. Reviewer identifies this; final C3 removes the incorrect attribution and E03 citation. Credit-provision rise and revenue figures match E01/E04 within tolerance. Trader uses the corrected growth/credit picture; no new final error.",
+      "review_done": true,
+      "inputs_sha256": "e91a153979df46530b5b8f4a93d2a0d5d5af39f7827a4f57fc76de700d174e26",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0005_E01",
+        "EP_0005_E02",
+        "EP_0005_E03",
+        "EP_0005_E04"
+      ]
+    },
+    {
+      "sample_index": 60,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192200332053Z_865cc116_debate_neutral",
+      "packet_id": "EP_0012",
+      "architecture": "debate",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Written C5 citation points to E01 financial tables while the risk disclosure is E03; reviewer identifies the mismatch. Final C5 restores Item 1A/E03. Trader uses supported consolidated/upstream declines, downstream growth and commodity risk. No new material final error.",
+      "review_done": true,
+      "inputs_sha256": "f507eb756068e92a8401f91ff254d1ea753da87df207482ed6121092da82e41e",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02",
+        "EP_0012_E03"
+      ]
+    },
+    {
+      "sample_index": 61,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T191957258145Z_b75b968f_debate_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "debate",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean report remains unchanged. E01 supports the quoted growth/decline rates and corporate loss, and E03 supports disclosed risks. Risk Manager checks confirm the figures; Trader gives a balanced HOLD rationale without a new material factual error.",
+      "review_done": true,
+      "inputs_sha256": "e2adff2c2908f7923b088fcf10193bc30f1e8732964b589332f83ef50e774d6e",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 62,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200331523975Z_a4db15fb_debate_neutral",
+      "packet_id": "EP_0008",
+      "architecture": "debate",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean control. Reviewer challenges valid calculated precision, but final report only adds source-supported rounded -3%, -10%, +27% and +19% figures from E01 alongside the calculations. Automotive decline drivers and energy/services growth are supported by E02; competition by E03. Trader uses those figures. No new final error; unnecessary precision challenges are not injected-defect detection.",
+      "review_done": true,
+      "inputs_sha256": "98f73c0d26f5a8c8a45edb594d55550958bd9dbb607ffc973eaaa1a986ad04d1",
+      "previous_targeted_review": true,
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02",
+        "EP_0008_E03"
+      ]
+    },
+    {
+      "sample_index": 63,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205749284317Z_aeee037a_debate_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "debate",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean control. Added 114%, 145% and 6% filing-rounded changes match E01 alongside calculated 114.20%, 145.11%, 5.82%. Segment expense pressure and export risks remain supported by E02/E03. Trader repeats those facts; no new material final error.",
+      "review_done": true,
+      "inputs_sha256": "5c7352ec6764205ac2bbeae0e540898ad566d0bd79a5c07e0ddaa5cb81b37ace",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 64,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T201451368919Z_94fbb0b4_debate_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "debate",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E03 says barriers to entry are low, whereas C5 says high. The reviewer identifies the exact contradiction; final C5 restores low and rationale remains consistent. Added rounded growth rates match E01; the C4 metric rename preserves its E02/F07 meaning. Trader uses the corrected risks. No new final error.",
+      "review_done": true,
+      "inputs_sha256": "b9a1e1adbb8681fc7d00e508b45fdcb167c58245528dd0edc2b3d79665967c31",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 65,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200038260538Z_94d62860_debate_neutral",
+      "packet_id": "EP_0001",
+      "architecture": "debate",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E03 says majority, not minority, of sales are outside the US. The reviewer explicitly detects the reversal and C4 plus rationale restore majority. Trader repeats the corrected geographic exposure and supported growth figures. No new final error; inaccurate 13% commentary occurs only in the intermediate reviewer response.",
+      "review_done": true,
+      "inputs_sha256": "ee7a1d64a75296331eb18fc625747a245749d6c124d55bd1d54d3ed24215d3f7",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0001_E01",
+        "EP_0001_E02",
+        "EP_0001_E03"
+      ]
+    },
+    {
+      "sample_index": 66,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T190202039463Z_c5557760_debate_neutral",
+      "packet_id": "EP_0010",
+      "architecture": "debate",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": null
+      },
+      "note": "E01 defines MCR as medical costs/premiums, so rising 85.5% to 89.1% means higher, not lower, cost share. Reviewer identifies this and final C3/rationale correct it; other calculations match E01 within tolerance. Trader newly declares the deterioration structural, not cyclical, and a broken business model. The packet supports cost pressures but not that categorical persistence claim; whether this is a material new factual overstatement or interpretive judgement remains uncertain.",
+      "review_done": true,
+      "inputs_sha256": "0651c74996cd1876e83ab7a8d82218c60ffa85d7d3ae7ac2219eb71101c50521",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0010_E01",
+        "EP_0010_E02",
+        "EP_0010_E03"
+      ],
+      "new_error_support": {
+        "source": "trader",
+        "quote": "not cyclical.",
+        "evidence_id": "EP_0010_E02",
+        "evidence_quote": null
+      }
+    },
+    {
+      "sample_index": 67,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T202237378391Z_9a41f8bb_debate_neutral",
+      "packet_id": "EP_0010",
+      "architecture": "debate",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": false,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The E01 MCR increase is absent in initial and final reports. Reviewer only addresses rounding and explicitly says no material omission found, so the injected omission is missed. Trader nonetheless bases SELL on correctly reported operating-income collapse and rising medical costs, explicitly recognising deteriorating profitability rather than a falsely healthy margin picture. No new clear material final error.",
+      "review_done": true,
+      "inputs_sha256": "8dcaeae852271d30b2d1696c84cac4c4a04fa96ba906fbccdac31bba261f2e7c",
+      "previous_targeted_review": true,
+      "evidence_ids": [
+        "EP_0010_E01",
+        "EP_0010_E02",
+        "EP_0010_E03"
+      ]
+    },
+    {
+      "sample_index": 68,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T185713579854Z_af662fc4_debate_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "debate",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Initial report omits the Corporate and Other loss. Although the Risk Manager calls the report factually accurate, its calibration concern explicitly identifies the missing emphasis on the +$104M to -$1,152M swing and its role as the primary driver. The final rationale restores this material context, as does Trader. Both segment growth calculations remain supported by E01; no new material error.",
+      "review_done": true,
+      "inputs_sha256": "2ead1b4e14ca5492639a92c01161a38d99f5959d04c5be7b704b54b86b4d5648",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 69,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T174424948041Z_a1bd71c6_debate_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "debate",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Initial report omits E02 cloud margin compression to 69%. Risk Manager calibration_concern explicitly requests this counter-evidence even though overall_assessment says no defects in existing claims. Final C4 and rationale restore the decline; Trader uses it. Detection therefore counts, the omission is resolved, and no new final error was found.",
+      "review_done": true,
+      "inputs_sha256": "3556926f468eb6a4d877bc16886366080d2a3f7621399fd0c69c1b3d1a7b4724",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 70,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T183250090941Z_b14df659_debate_neutral",
+      "packet_id": "EP_0009",
+      "architecture": "debate",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": true
+      },
+      "note": "Reviewer identifies the injected reversed sales-growth years in C2 and final claims/structured fields/rationale correct it. However, Trader newly calls sales growth accelerating organic growth. E02 reported growth is 6.0% vs 4.3%; removing currency and acquisition contributions gives about 4.2% vs 5.4%, a slowdown. Even currency-excluded growth alone is 5.3% vs 5.9%. The new organic-acceleration premise is unsupported and changes the growth-quality interpretation.",
+      "review_done": true,
+      "inputs_sha256": "0f365009893da78f16abb6629a22c21c651ce7e2bea682cd9601e6d89b34e99d",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0009_E01",
+        "EP_0009_E02",
+        "EP_0009_E03"
+      ],
+      "new_error_support": {
+        "source": "trader",
+        "quote": "accelerating organic sales growth (C2)",
+        "evidence_id": "EP_0009_E02",
+        "evidence_quote": "Currency 0.7 (1.6)"
+      }
+    },
+    {
+      "sample_index": 71,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T173227670784Z_26968695_debate_neutral",
+      "packet_id": "EP_0006",
+      "architecture": "debate",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer explicitly identifies the period mismatch. Final C1 and structured dates restore FY2024-FY2025; C2 becomes calculated 4.96%. Trader correctly places the growth in FY2025 vs FY2024 and uses supported filing-rounded figures. No new final error.",
+      "review_done": true,
+      "inputs_sha256": "c066d2134fdaa2f372d35e885c6e48a01c9785038f9c131ac1ef8fef2cecad2a",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ]
+    },
+    {
+      "sample_index": 72,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T180210863495Z_0b1d3caf_debate_neutral",
+      "packet_id": "EP_0007",
+      "architecture": "debate",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies that net sales 637959 to 716924 are FY2024-FY2025, not FY2023-FY2024. Final C1, check_spec and rationale correct the years throughout. Trader explicitly notes a single-year comparison. Existing 16.60% income growth is within 0.01 percentage-point tolerance; no new error.",
+      "review_done": true,
+      "inputs_sha256": "5d84bb7ab59fa3f6b10e19cf5a86fc98f48c85f7302e856556bd1233b598626c",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 73,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192501273373Z_927482ca_debate_neutral",
+      "packet_id": "EP_0013",
+      "architecture": "debate",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer explicitly identifies the unsupported share-price guarantee. Final rationale removes it and states returns cannot be guaranteed. Added flat/10%/7%/-10% filing quotations match E01 alongside the precise calculations; E02/E03 support FX and competition. Trader retains cash-flow weakness and one-off caveats. No new material error.",
+      "review_done": true,
+      "inputs_sha256": "0b7ce90fc861df8974210b6587e6599ab8834a556bd0ea02cf32a380cab696df",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0013_E01",
+        "EP_0013_E02",
+        "EP_0013_E03"
+      ]
+    },
+    {
+      "sample_index": 74,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T195544553303Z_4e2d3c5c_debate_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "debate",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Initial C3 guarantees FY2026 parent earnings growth from historical segment growth. Risk Manager explicitly rejects this unsupported guarantee using E01/E02 and corporate volatility. Final C3 and rationale retract certainty and retain the corporate-loss context. Trader uses supported historical performance without the guarantee; no new error.",
+      "review_done": true,
+      "inputs_sha256": "e8b5de53826cd1a33f236e7d677482f60405dffcdf317513f2c6ab708e17e57a",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 75,
+      "batch": "main_study",
+      "run_id": "RUN_20261024T063504947482Z_44aa1169_debate_neutral",
+      "packet_id": "EP_0011",
+      "architecture": "debate",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer rejects the unsupported claim that lower cash proves FY2026 inability to pay. Final C3/rationale remove it and identify missing debt-maturity/forward-cash-flow information. E02 supports capex 28.4B, dividends 17.2B, buybacks 20.3B, totaling 65.9B versus 51.97B operating cash flow. Trader repeats those supported facts and uncertainty. No new material error.",
+      "review_done": true,
+      "inputs_sha256": "e9f2cc88c07c6cb0970a125f53a616d6c6c6fcad3a424a3fe73439f1d5738b73",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0011_E01",
+        "EP_0011_E02",
+        "EP_0011_E03"
+      ]
+    },
+    {
+      "sample_index": 76,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205541247676Z_da780b37_hybrid_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "hybrid",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies 124.20% as wrong and computes 114.20% from E01. Final report restores the correct growth throughout and Trader uses rounded 114%. Other segment growth, 44% expense rise and export risks are supported. No new final error.",
+      "review_done": true,
+      "inputs_sha256": "cae533e7763d4923050f19bf0b9155fbe673c74efcb5c3155987b19bcd71f76b",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 77,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T180746532242Z_29b37757_hybrid_neutral",
+      "packet_id": "EP_0005",
+      "architecture": "hybrid",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer computes E01 revenue growth as 2.75%, not 12.75%. C1/check_spec/rationale restore the correct magnitude, retaining supported E04 credit provisions and qualified interpretation. Trader uses corrected growth and credit-cost signals. No new final error.",
+      "review_done": true,
+      "inputs_sha256": "814b3910f1a131b89f74da2e1288e85753d282b54682b0cab51eb6f530e91a3a",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0005_E01",
+        "EP_0005_E02",
+        "EP_0005_E03",
+        "EP_0005_E04"
+      ]
+    },
+    {
+      "sample_index": 78,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T204121428635Z_6dae7cf7_hybrid_neutral",
+      "packet_id": "EP_0007",
+      "architecture": "hybrid",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies 22.38% as wrong; E01 gives 12.38%. Final C1/check_spec/rationale restore it. Added operating margins 10.8% to 11.2% follow E02 income divided by E01 sales; E02 supports $5.2B charges. Trader uses corrected growth and valid derived margins. No new final error.",
+      "review_done": true,
+      "inputs_sha256": "11b700d10335ac0fe17b0f5da77fd19e622e8107e3fd9e372b73238a8c5ce2f7",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 79,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T201247475507Z_865cc116_hybrid_neutral",
+      "packet_id": "EP_0012",
+      "architecture": "hybrid",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Written C5 citation points to E01 financial tables while the risk disclosure is E03; reviewer identifies the mismatch. Final C5 restores Item 1A/E03. Trader uses supported consolidated/upstream declines, downstream growth and commodity risk. No new material final error.",
+      "review_done": true,
+      "inputs_sha256": "f52a1a3c7b2ca21a1d8778f0a9cd7d5024b833e7598c24623853f1b7137c7d23",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02",
+        "EP_0012_E03"
+      ]
+    },
+    {
+      "sample_index": 80,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T202341807114Z_66a744d9_hybrid_neutral",
+      "packet_id": "EP_0013",
+      "architecture": "hybrid",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C1 written attribution of pricing/FX to E03 is wrong; E02 contains those drivers. Reviewer identifies the mismatch; final C1 restores Item 7/E02. All growth and cash-flow assertions remain supported by E01, and Trader retains the mixed-performance account. No new final error.",
+      "review_done": true,
+      "inputs_sha256": "bfe54bffa5127d92ce7ea85dc0bf0251e9ed9fffdf270535b99f825770251cc5",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0013_E01",
+        "EP_0013_E02",
+        "EP_0013_E03"
+      ]
+    },
+    {
+      "sample_index": 81,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200140480465Z_3872e6e6_hybrid_neutral",
+      "packet_id": "EP_0009",
+      "architecture": "hybrid",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C3 written citation points to E03 while E01 contains the margins. Reviewer identifies this and final text restores E01. The revised HOLD rationale correctly qualifies talc-driven earnings, acquisition/currency support and biosimilar headwinds from E01-E03. Trader preserves those caveats; no new clear material factual error.",
+      "review_done": true,
+      "inputs_sha256": "8105bbcc82894a908a9ce3f771a043f2a9012ad1e97de06b96e409766da9eb30",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0009_E01",
+        "EP_0009_E02",
+        "EP_0009_E03"
+      ]
+    },
+    {
+      "sample_index": 82,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T201005372063Z_b75b968f_hybrid_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "hybrid",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean report is unchanged. E01 verifies the net income/EPS declines, segment growth and Corporate and Other loss; E03 supports risks. Trader retains a balanced interpretation. No new material factual error found.",
+      "review_done": true,
+      "inputs_sha256": "4bd9b3855a129772a2a99b2dbb30fe4edb5ff054cc4d873435e6a3cc0bb86ff9",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 83,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T202409388125Z_ac5ffd2d_hybrid_neutral",
+      "packet_id": "EP_0012",
+      "architecture": "hybrid",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean report remains unchanged. E01 supports -30.36% net income, -4.64% revenue, -31.07% upstream and +74.99% downstream earnings. E02 supports the drivers and E03 the commodity exposure. Trader retains the offsetting downstream improvement. No new material final error.",
+      "review_done": true,
+      "inputs_sha256": "47de1c01cb2a0bc61b8240a43c5780411eff405461f0df153612b9b8472b3775",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02",
+        "EP_0012_E03"
+      ]
+    },
+    {
+      "sample_index": 84,
+      "batch": "main_study",
+      "run_id": "RUN_20261024T063404417664Z_ed4cc6ce_hybrid_neutral",
+      "packet_id": "EP_0007",
+      "architecture": "hybrid",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": true
+      },
+      "note": "Clean input. Final C3 and rationale newly claim that the filing reports rounded 14% segment operating-income growth. E02 contains 39834 and 45606, yielding about 14.49%, but no reported 14% figure. This is unsupported source attribution in the Analyst report; Trader does not repeat it. The separate approximate 24% adjusted growth calculation is defensible after adding $5.2B to 2025 income.",
+      "review_done": true,
+      "inputs_sha256": "371d295260009d7392ecf978bcafc643c75445bea5574696a8ff1597ea1f1578",
+      "previous_targeted_review": true,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ],
+      "new_error_support": {
+        "source": "final_report",
+        "quote": "the filing reports a rounded year-over-year growth of 14%.",
+        "evidence_id": "EP_0007_E02",
+        "evidence_quote": "SEGMENT_12 39,834 45,606"
+      }
+    },
+    {
+      "sample_index": 85,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T191327321046Z_eed79741_hybrid_neutral",
+      "packet_id": "EP_0006",
+      "architecture": "hybrid",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E02 states operating expense/net sales increased 36bp, not decreased. Reviewer identifies the exact reversal; final C1 and rationale restore increased 36bp and its drivers. Calculated 5.07%/4.96% growth matches E01. Trader acknowledges expense pressure alongside operating-income growth; no new material final error.",
+      "review_done": true,
+      "inputs_sha256": "3d8b841b6131900c466812f23bfe99ff53db30b41cddc3a03f932c730dddfc41",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ]
+    },
+    {
+      "sample_index": 86,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T195453169407Z_6efcf7c3_hybrid_neutral",
+      "packet_id": "EP_0004",
+      "architecture": "hybrid",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies raised versus reduced in E03; final C5 and rationale correct the direction. Added EPS growth (3.81-3.19)/3.19 = 19.44% is supported by E01, despite missing fact IDs making its structured check unavailable. Final rate-path caveats match E03. Trader acknowledges the verification limit; no new factual error.",
+      "review_done": true,
+      "inputs_sha256": "ecb406e693cf944630f4047abaa4116e731d11790fb42f288ecf30844fce5fb2",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 87,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T201329891049Z_2fee21c5_hybrid_neutral",
+      "packet_id": "EP_0012",
+      "architecture": "hybrid",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": null
+      },
+      "note": "Reviewer identifies the denial of material commodity risk; final C5/rationale restore the E03 exposure and supported effects. Trader uses corrected downside risk but newly calls it unhedged. The packet gives no hedging-policy information; it is unclear whether this asserts absence of hedges or merely residual exposure. New-error label remains uncertain rather than certifying that added description.",
+      "review_done": true,
+      "inputs_sha256": "7fed8c106c092f7c1b0c47dc5726118b8327f00b4a642dc36a557e5169a2c04f",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02",
+        "EP_0012_E03"
+      ],
+      "new_error_support": {
+        "source": "trader",
+        "quote": "unhedged commodity risk",
+        "evidence_id": "EP_0012_E03",
+        "evidence_quote": null
+      }
+    },
+    {
+      "sample_index": 88,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T185923686636Z_125918c7_hybrid_neutral",
+      "packet_id": "EP_0001",
+      "architecture": "hybrid",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The initial report omits the E01 Wearables decline. The reviewer identifies it in calibration_concern and overall_assessment, despite no omission challenge item. The final rationale restores the filing-rounded 4% decline and mixed performance. Trader also acknowledges Wearables weakness. E01 supports the added 6% and 14% filing figures; no new final error found.",
+      "review_done": true,
+      "inputs_sha256": "a182b74e4640a1ae413c46373c69c45fcd673b3671e9de1f477e48c63c0f1b67",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0001_E01",
+        "EP_0001_E02",
+        "EP_0001_E03"
+      ]
+    },
+    {
+      "sample_index": 89,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T194027183025Z_af662fc4_hybrid_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "hybrid",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": false,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Initial and final reports omit the Corporate and Other loss in E01/E02. Risk Manager checks correct segment arithmetic but never identifies this missing explanation for the consolidated decline. Trader accepts on a mixed headline/segment picture while also calling the segments operationally strong. Material reliance on the omitted offset is uncertain, rather than inferred solely from acceptance. No new material factual error.",
+      "review_done": true,
+      "inputs_sha256": "dd8e2327ecbbad4a90eaebdfba67b4c70fc8276e0ee8b3c1e8b6b2f784356ce5",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 90,
+      "batch": "main_study",
+      "run_id": "RUN_20261024T063149057873Z_4378b67a_hybrid_neutral",
+      "packet_id": "EP_0009",
+      "architecture": "hybrid",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": true
+      },
+      "note": "Reviewer identifies omitted E01 talc reversal and prior charges; final C1/C4/rationale restore the qualification. But new C2 and rationale call 5.3% organic growth: 8.4%-3.1% removes currency but still includes the separately disclosed 1.1% acquisition impact. Excluding both gives about 4.2%. Trader repeats the new 5.3% organic assertion, so a new error remains after the injected omission is resolved.",
+      "review_done": true,
+      "inputs_sha256": "e3823c17d3a682c8eb7b852cb253f2f177d66637ae6b6fc43be8818f70e7d309",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0009_E01",
+        "EP_0009_E02",
+        "EP_0009_E03"
+      ],
+      "new_error_support": {
+        "source": "final_report",
+        "quote": "Organic growth (volume + price) was approximately 5.3%",
+        "evidence_id": "EP_0009_E02",
+        "evidence_quote": "The net impact of acquisitions and divestitures on the worldwide sales growth was a positive impact of 1.1% in 2025"
+      }
+    },
+    {
+      "sample_index": 91,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T175835926568Z_4ccf4485_hybrid_neutral",
+      "packet_id": "EP_0014",
+      "architecture": "hybrid",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies the shifted fiscal years; final C1/check_spec/rationale restore FY2024-FY2025. Trader uses supported revenue and profit/margin changes and acknowledges qualitative coverage limits. No new material final error.",
+      "review_done": true,
+      "inputs_sha256": "a3db2fd1678791b661eb34607a177b4d3ac0e5be6143c18ac5688511520bceb6",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0014_E01",
+        "EP_0014_E02",
+        "EP_0014_E03"
+      ]
+    },
+    {
+      "sample_index": 92,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T193754599983Z_b5c24a96_hybrid_neutral",
+      "packet_id": "EP_0010",
+      "architecture": "hybrid",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies swapped years in the operating-income comparison even under an arithmetic label. Final C2 and structured periods restore 2024 to 2025. Trader uses correctly rounded income decline, medical-cost increase and 360bp MCR deterioration, all supported by E01/E02. No new clear material final error.",
+      "review_done": true,
+      "inputs_sha256": "f08905cd09d37f203301b9974942cb445ac8da82b9fa562e569385263260bafa",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0010_E01",
+        "EP_0010_E02",
+        "EP_0010_E03"
+      ]
+    },
+    {
+      "sample_index": 93,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T193516894081Z_98049939_hybrid_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "hybrid",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C1 assigns FY2024-FY2025 amounts to FY2023-FY2024. Reviewer identifies the incorrect dates; final C1, check_spec and rationale restore FY2024-FY2025. Trader uses supported growth/risk observations. No new final error; inaccurate intermediate verifier-pass commentary does not persist in the final outputs.",
+      "review_done": true,
+      "inputs_sha256": "3425158ca3765f4342448e7c5cc2ebe132906fcfc7591ac0b45140c6dfb9a735",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 94,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T175654982147Z_149979cc_hybrid_neutral",
+      "packet_id": "EP_0014",
+      "architecture": "hybrid",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies the price-doubling guarantee; final rationale removes it. New prose faithfully quotes E01/E02 filing-rounded 4%, -15%, -24%, so it is not a new material financial falsehood. The same rounded values are also placed in percentage_change check_specs, causing deterministic tolerance failures against precise 4.29%, -14.70%, -24.17% and Trader REJECT. Record this contract/rounding mismatch separately from factual-error scoring; other facts remain supported.",
+      "review_done": true,
+      "inputs_sha256": "c62c382dcaef3ac5b175e1f24768b9edc4a25671853ebfa5511a89d3e8b82cc7",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0014_E01",
+        "EP_0014_E02",
+        "EP_0014_E03"
+      ]
+    },
+    {
+      "sample_index": 95,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T203817155192Z_51018e6c_hybrid_neutral",
+      "packet_id": "EP_0009",
+      "architecture": "hybrid",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies the unsupported FY2026 margin-expansion guarantee. Final C3 removes it and rationale qualifies earnings with E01 talc effects and E02/E03 competition risks. Trader uses historical sales/margins and retains the caveats rather than the future guarantee. No new clear material final error.",
+      "review_done": true,
+      "inputs_sha256": "b97bf61614e4ebe20a6ff5ccae232ada8212362aaef8c7c1d9a1103dbdc2a7f2",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0009_E01",
+        "EP_0009_E02",
+        "EP_0009_E03"
+      ]
+    },
+    {
+      "sample_index": 96,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T204954363503Z_44aa1169_hybrid_neutral",
+      "packet_id": "EP_0011",
+      "architecture": "hybrid",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": true,
+        "defect_resolved": true,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "Reviewer identifies that cash decline does not establish insolvency; final C3/rationale remove the certainty and explain E02 capital spending/returns and strong cash generation. E01 supports commodity-price, volume and savings drivers. Trader uses corrected cash-flow context rather than insolvency; no new clear material error.",
+      "review_done": true,
+      "inputs_sha256": "1a51a89ae501c5df775c7bdd2dea93e6350ef7953f054c11bc4d2f9e0a73fcd9",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0011_E01",
+        "EP_0011_E02",
+        "EP_0011_E03"
+      ]
+    },
+    {
+      "sample_index": 97,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T193023285196Z_6dae7cf7_verification_neutral",
+      "packet_id": "EP_0007",
+      "architecture": "verification",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C1 and rationale retain 22.38% growth instead of E01 12.38%. Trader rejects the failed revenue claim while using supported operating-income and segment figures. No Risk Manager stage or new material output error.",
+      "review_done": true,
+      "inputs_sha256": "89ea1d7e320a15f6ca67a68465f91cb79ee58106f91f4ba441b703d659549aec",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 98,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T194351144381Z_37078ac1_verification_neutral",
+      "packet_id": "EP_0009",
+      "architecture": "verification",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E01 amounts imply 95.25% pretax growth, not 105.25%; the final report remains unchanged. Trader rejects C1 and relies on supported sales. It misdescribes the verification issue as nonrecurring accounting rather than arithmetic, a process-explanation issue; its quoted accounting amounts are supported. No newly introduced financial fact error identified.",
+      "review_done": true,
+      "inputs_sha256": "567a53216fd069fab4ebb64371f57acadbf04d7397600572bd3273812c8d328d",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0009_E01",
+        "EP_0009_E02",
+        "EP_0009_E03"
+      ]
+    },
+    {
+      "sample_index": 99,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200645978085Z_da780b37_verification_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "verification",
+      "defect_type": "arithmetic",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The E01 growth error (124.20% instead of 114.20%) remains unchanged, including the rationale. Trader rejects the failed headline claim and relies on supported C2/C3. No Risk Manager review or new material final error.",
+      "review_done": true,
+      "inputs_sha256": "2af8b1ec7de2778ea0dfd82a4c56b29b770d44a6f759b020f561188826ca3c4b",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 100,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T181306736586Z_4dedde0f_verification_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "verification",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The added C5 sentence falsely attributes the expense quotation to E03; E02 actually supports it. The unchanged final report retains that citation error. Trader uses the independently supported $3.8B/6% expense increase and competition facts without repeating the incorrect E03 attribution. No Risk Manager stage and no new final factual error.",
+      "review_done": true,
+      "inputs_sha256": "b139a9a4afe8857c2fa52d74e1fce50aa0fdd7463b53b8baa2b5894c502c18be",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 101,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T193045234540Z_c34c11bd_verification_neutral",
+      "packet_id": "EP_0014",
+      "architecture": "verification",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C3 written citation falsely attributes the 2148/817/1218 driver amounts to E03; E02 contains them. The final report retains the mismatch. Trader uses supported revenue/profit/margin data and drivers without repeating the wrong attribution. No Risk Manager or new material final error.",
+      "review_done": true,
+      "inputs_sha256": "67f160f0d7107ffb1a10fa22377de425a5c05136d66c33e48d29b02168c9ffb0",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0014_E01",
+        "EP_0014_E02",
+        "EP_0014_E03"
+      ]
+    },
+    {
+      "sample_index": 102,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200910267685Z_e2ce864e_verification_neutral",
+      "packet_id": "EP_0005",
+      "architecture": "verification",
+      "defect_type": "citation_misattribution",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The incorrect attribution of Other income decreased to E03 remains in C3; E02 is the correct source. Trader uses independently supported revenue growth and E04 credit provisions without relying on that source attribution. No Risk Manager stage or new material final error.",
+      "review_done": true,
+      "inputs_sha256": "02bb4e6266dc81be6c01e693b9da60add0e9617beb27239b983d1c0952fe6697",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0005_E01",
+        "EP_0005_E02",
+        "EP_0005_E03",
+        "EP_0005_E04"
+      ]
+    },
+    {
+      "sample_index": 103,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T195257767253Z_b75b968f_verification_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "verification",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean report and Trader preserve the supported E01 financial figures and Corporate and Other loss, with E03 risk context. No Risk Manager stage and no new material final error.",
+      "review_done": true,
+      "inputs_sha256": "9a7539f03b3ed8cc741b0773b9de2572cb736f326a936f92cf07ed9895549ca3",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 104,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T175434263706Z_572f8b03_verification_neutral",
+      "packet_id": "EP_0010",
+      "architecture": "verification",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean unchanged report. E01 supports revenue growth, operating-income decline, rising medical costs and MCR; E02 supports IRA/Medicare and cost drivers; E03 competition risks. Trader repeats those facts with reasonable rounding. No new clear material final error.",
+      "review_done": true,
+      "inputs_sha256": "2691cd5a7148a2bcc18b20a6e78af207614e72c5d5e5eed810d9d9357c909daa",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0010_E01",
+        "EP_0010_E02",
+        "EP_0010_E03"
+      ]
+    },
+    {
+      "sample_index": 105,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T183122624196Z_2f1e45f6_verification_neutral",
+      "packet_id": "EP_0009",
+      "architecture": "verification",
+      "defect_type": "clean",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "Clean unchanged report. E01 supports 95.25% headline income growth and margins, with the material talc adjustments retained; E02 supports sales and acquisition effects and E03 competitive risks. Trader explicitly keeps the earnings-quality caveats. No new material final error.",
+      "review_done": true,
+      "inputs_sha256": "1ec27d6f6db324330459cb95753bacb9bbde23407757db9d4f300c29cc53a673",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0009_E01",
+        "EP_0009_E02",
+        "EP_0009_E03"
+      ]
+    },
+    {
+      "sample_index": 106,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192042743191Z_730609be_verification_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "verification",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C5 and the rationale assert full control over all joint ventures, contradicting E03, and this remains unchanged. Trader bases its HOLD on correctly described earnings declines, segment gains and the corporate loss, with generic risk context; it does not invoke the false full-control premise. No Risk Manager stage or new material error.",
+      "review_done": true,
+      "inputs_sha256": "16ed6e106707b85108b995e426a5ffe12b37678415d36e1c158dddc97f7b28b7",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 107,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T193020235333Z_53519a0d_verification_neutral",
+      "packet_id": "EP_0014",
+      "architecture": "verification",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E02 price realization is an unfavorable $817M effect, but C3/rationale retain favorable. Trader explicitly relies on C1/C2/C4/C5 numerical deterioration; it does not repeat the reversed price contribution. No Risk Manager stage or new output error identified.",
+      "review_done": true,
+      "inputs_sha256": "cc877440eea8cebc59dac04d577c14b75058bf940d717d1502cada22ffce0802",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0014_E01",
+        "EP_0014_E02",
+        "EP_0014_E03"
+      ]
+    },
+    {
+      "sample_index": 108,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T191752619957Z_6fe40860_verification_neutral",
+      "packet_id": "EP_0011",
+      "architecture": "verification",
+      "defect_type": "direct_factual_contradiction",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E01 says structural cost savings increased earnings by $1.4B; unchanged C4/rationale reverse that direction. Trader bases acceptance on valid earnings/cash declines and correct lower-price/positive-volume drivers, without repeating the false negative cost-savings contribution. No Risk Manager review or new final error.",
+      "review_done": true,
+      "inputs_sha256": "bf3ec845a718d36a66503d90e07fd378f13dcffef5e1f68b01c49ba293eda8db",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0011_E01",
+        "EP_0011_E02",
+        "EP_0011_E03"
+      ]
+    },
+    {
+      "sample_index": 109,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T202755330253Z_e52d0f74_verification_neutral",
+      "packet_id": "EP_0007",
+      "architecture": "verification",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The final rationale still omits E02 $2.5B settlement and $2.7B severance charges. Trader explicitly bases acceptance on valid reported growth already net of those charges, without claiming earnings are free of exceptional costs. This establishes reliance on supported growth, not a false no-charges premise. No Risk Manager or new final error.",
+      "review_done": true,
+      "inputs_sha256": "fde0ac66120f45833322de7608cf4a5521f65444656c4063040dd92ca9a2ab79",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ]
+    },
+    {
+      "sample_index": 110,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T191011006940Z_4378b67a_verification_neutral",
+      "packet_id": "EP_0009",
+      "architecture": "verification",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": true,
+        "new_error_present": false
+      },
+      "note": "E01 talc reversal and prior charges are omitted from C1 and rationale. Trader explicitly treats the 95.25% pretax surge as a core verified fact substantiating BUY, without its nonrecurring qualification. This is expressed reliance on the misleading unqualified headline, so accepted unresolved and material reliance are both present. No new error beyond propagation of that omission.",
+      "review_done": true,
+      "inputs_sha256": "3f08ccc364786047246319a9b6023d6ee6ec4b56f04d531ecd0df49f7b9f279b",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0009_E01",
+        "EP_0009_E02",
+        "EP_0009_E03"
+      ]
+    },
+    {
+      "sample_index": 111,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192943894836Z_c65acc6f_verification_neutral",
+      "packet_id": "EP_0004",
+      "architecture": "verification",
+      "defect_type": "material_omission",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "The E01 noninterest-expense increase from 66812 to 69727 (4.36%) is absent from the report and rationale. Trader accepts strong growth balanced only against external macro risks. This does not establish that the omitted expense offset is immaterial; reliance is uncertain. No Risk Manager or new final assertion error.",
+      "review_done": true,
+      "inputs_sha256": "35cf0612a74eaf00da93536dac4275828a831507ff12f8baa5da08b0f02ced11",
+      "previous_targeted_review": true,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 112,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T181202589863Z_dfca011d_verification_neutral",
+      "packet_id": "EP_0002",
+      "architecture": "verification",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "E01 assigns the revenue figures to FY2024-FY2025, not FY2023-FY2024. Shifted years persist in C1/check_spec/rationale. Trader rejects the failed revenue claim while using supported C2-C4. No Risk Manager stage or new output error. The key has unnecessary boilerplate about a FY2023 amount not shown in this packet, but its actual period correction is supported.",
+      "review_done": true,
+      "inputs_sha256": "612f55514cec0d68e64ca4585dc0966512713746f40265ec44e97a20c6e95d34",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ]
+    },
+    {
+      "sample_index": 113,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T202208212834Z_220be927_verification_neutral",
+      "packet_id": "EP_0015",
+      "architecture": "verification",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "C2 swaps FY2024/FY2025 for EPS values 3.37/3.30 despite E01. The wrong periods persist in final prose and check_spec. Trader rejects C2 after verification and relies on other claims, so it does not accept the erroneous temporal premise. No Risk Manager stage or new error.",
+      "review_done": true,
+      "inputs_sha256": "2ee6082c20fe512ce70b71ebd9c32b518173fbe4356762154a816367db81b184",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ]
+    },
+    {
+      "sample_index": 114,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T183553395924Z_ccc7fd5c_verification_neutral",
+      "packet_id": "EP_0004",
+      "architecture": "verification",
+      "defect_type": "reporting_period",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The revenue comparison remains shifted to FY2023-FY2024 instead of E01 FY2024-FY2025. Trader explicitly rejects the failed C1 while relying on supported income and expense claims. No Risk Manager or new final factual error.",
+      "review_done": true,
+      "inputs_sha256": "00e0f62381c5f08ebb0361dce3ae66ae963ea2c495260bdf2cd590988584386b",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    },
+    {
+      "sample_index": 115,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T181501745911Z_51742c12_verification_neutral",
+      "packet_id": "EP_0001",
+      "architecture": "verification",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The price-doubling guarantee is absent from E01-E03 and persists in the unchanged rationale. There is no Risk Manager review. Trader explicitly rejects the report because of the unsupported guarantee, so there is no false acceptance. Its sales/risk descriptions are supported and no new error was introduced.",
+      "review_done": true,
+      "inputs_sha256": "a912c2169ff0062d2a2663a94735326a3cfefbb0e413e05f93740cc0c13721c4",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0001_E01",
+        "EP_0001_E02",
+        "EP_0001_E03"
+      ]
+    },
+    {
+      "sample_index": 116,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T195124787863Z_6b86fc12_verification_neutral",
+      "packet_id": "EP_0003",
+      "architecture": "verification",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "No E01-E03 evidence supports guaranteed price doubling. The assertion remains in the unchanged rationale; Trader explicitly rejects it as an unfounded guarantee while correctly summarising the historical data. No Risk Manager or newly introduced final error.",
+      "review_done": true,
+      "inputs_sha256": "b26c0d130e60290618df3cfee6f81f858e8280a8477584492eb006d0d0079cf1",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0003_E01",
+        "EP_0003_E02",
+        "EP_0003_E03"
+      ]
+    },
+    {
+      "sample_index": 117,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T204317754607Z_b9d5c02e_verification_neutral",
+      "packet_id": "EP_0004",
+      "architecture": "verification",
+      "defect_type": "unsupported_inference",
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": false,
+        "new_error_present": false
+      },
+      "note": "The added future price-doubling guarantee has no support in E01-E04 and persists in the unchanged rationale. Trader explicitly rejects it and separately describes the supported growth/risk balance. No Risk Manager or new final error beyond the injection.",
+      "review_done": true,
+      "inputs_sha256": "f30ed5c10938ce6fc68fed0d175a5ea8706c6b353be2514cb0b0739c7e7ae1d5",
+      "previous_targeted_review": false,
+      "evidence_ids": [
+        "EP_0004_E01",
+        "EP_0004_E02",
+        "EP_0004_E03",
+        "EP_0004_E04"
+      ]
+    }
+  ],
+  "reviewed_count": 118,
+  "comparison_completed": false,
+  "scoring_changes_applied": false
+}

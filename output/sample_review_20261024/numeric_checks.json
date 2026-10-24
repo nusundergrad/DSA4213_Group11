@@ -1,0 +1,7310 @@
+[
+  {
+    "sample_index": 0,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 0,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 0,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 0,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 0,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 0,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 0,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 0,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 0,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 0,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 1,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 1,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 1,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 1,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 1,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 1,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 1,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 1,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 2,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 2,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 2,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 2,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 2,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 2,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 2,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 2,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 2,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 2,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 3,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 3,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 3,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 3,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 3,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 3,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 3,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 3,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 4,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 4,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 4,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 4,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 4,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 4,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 4,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 4,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 5,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 5,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 5,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 5,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 5,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 5,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 6,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 6,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 6,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 6,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 6,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 6,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 6,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 6,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 6,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 6,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 7,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 7,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 7,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 7,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 7,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 7,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 7,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 7,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 8,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 8,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 8,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 8,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 8,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 8,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 8,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 8,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 9,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 9,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 9,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 9,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 9,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 9,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 9,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 9,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 10,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 10,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 10,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 10,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 10,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 10,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 10,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 10,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 10,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 10,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 11,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 11,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 11,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 11,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 11,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 11,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 11,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 11,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 11,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 12,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 12,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 12,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 12,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 12,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 12,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 12,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 13,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 13,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 13,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 13,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 13,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 13,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 13,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 13,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 13,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 13,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 14,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 14,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 14,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 14,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 14,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 14,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 14,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 14,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 14,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 14,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 15,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 15,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 15,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 15,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 15,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 15,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 15,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 15,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 16,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 16,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 16,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 16,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 16,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 16,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 16,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 16,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 16,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 16,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 17,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 17,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 17,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 17,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 17,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 17,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 17,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 17,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 17,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 17,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 18,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 18,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 18,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 18,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 18,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 18,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 18,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 18,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 18,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 18,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 19,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 19,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 19,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 19,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 19,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 19,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 19,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 19,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 20,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 20,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 20,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 20,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 20,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 20,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 20,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 20,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 21,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 21,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 21,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 21,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 21,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 21,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 22,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 22,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 22,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 22,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 22,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 22,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 22,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 22,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 22,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 22,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 23,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 23,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 23,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 23,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 23,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 23,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 23,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 23,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 24,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 24,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 24,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 24,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 24,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 24,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 24,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 24,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 24,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 24,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 25,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 25,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 25,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 25,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 25,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 25,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 25,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 25,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 26,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 26,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 26,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 26,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 26,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 26,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 26,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 26,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 26,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 27,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 27,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 27,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 27,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 27,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 27,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 27,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 27,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 27,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 27,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 28,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 28,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 28,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 28,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 28,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 28,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 28,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 28,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 29,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 29,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 29,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 29,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 29,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 29,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 29,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 29,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 29,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 29,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 30,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 30,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 30,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 30,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 30,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 30,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 30,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 30,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 31,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 31,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 31,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 31,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 31,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 31,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 31,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 32,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 32,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 32,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 32,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 32,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 32,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 32,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 32,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 32,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 32,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 33,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 33,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 33,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 33,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 33,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 33,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 33,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 33,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 33,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 34,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 34,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 34,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 34,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 34,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 34,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 34,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 34,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 34,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 34,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 35,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 35,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 35,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 35,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 35,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 35,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 35,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 35,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 36,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 36,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 36,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 36,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 36,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 36,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 36,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 36,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 36,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 36,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 37,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 37,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 37,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 37,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 37,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 37,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 37,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 37,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 37,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 37,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 38,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 38,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 38,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 38,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 38,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 38,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 38,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 38,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 38,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 38,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 39,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 39,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 39,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 39,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 39,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 39,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 39,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 39,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 40,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 40,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 40,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 40,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 40,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 40,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 40,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 40,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 40,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 40,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 41,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 41,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 41,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 41,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 41,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 41,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 41,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 41,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 41,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 41,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 42,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 42,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 42,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 42,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 42,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 42,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 42,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 42,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 43,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 43,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 43,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 43,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 43,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 43,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 43,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 43,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 44,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 44,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 44,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 44,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 44,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 44,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 44,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 44,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 44,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 44,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 45,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 45,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 45,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 45,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 45,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 45,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 45,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 45,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 46,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 46,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 46,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 46,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 46,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 46,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 46,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 46,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 47,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 47,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 47,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 47,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 47,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 47,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 47,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 47,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 48,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 48,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 48,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 48,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 48,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 48,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 48,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 48,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 49,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 49,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 49,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 49,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 49,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 49,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 49,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 49,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 49,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 49,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 50,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 50,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 50,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 50,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 50,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 50,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 50,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 50,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 51,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 51,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 51,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 51,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 51,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 51,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 51,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 51,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 52,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 52,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 52,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 52,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 52,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 52,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 52,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 52,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 53,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 53,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 53,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 53,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 53,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 53,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 53,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 53,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 53,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 53,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 54,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 54,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 54,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 54,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 54,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 54,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 54,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 54,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 54,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 54,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 55,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 55,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 55,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 55,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 55,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 55,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 55,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 55,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 55,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 55,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 56,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 56,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 56,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 56,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 56,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 56,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 56,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 56,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 56,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 56,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 57,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 57,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 57,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 57,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 57,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 57,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 57,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 57,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 58,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 58,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 58,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 58,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 58,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 58,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 58,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 58,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 59,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 59,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 59,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 59,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 59,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 59,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 59,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 59,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 60,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 60,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 60,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 60,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 60,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 60,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 60,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 60,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 60,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 60,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 61,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 61,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 61,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 61,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 61,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 61,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 61,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 61,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 61,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 61,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 62,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 62,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 62,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 62,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 62,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 62,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 62,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 62,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 62,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 62,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 63,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 63,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 63,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 63,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 63,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 63,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 63,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 63,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 64,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 64,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 64,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 64,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 64,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 64,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 64,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 64,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 64,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 64,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 65,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 65,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 65,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 65,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 65,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 65,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 65,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 65,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 66,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 66,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 66,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 66,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 66,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 66,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 66,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 66,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 67,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 67,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 67,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 67,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 67,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 67,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 68,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 68,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 68,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 68,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 68,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 68,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 68,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 68,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 68,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 69,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 69,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 69,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 69,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 69,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 69,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 69,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 69,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 69,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 70,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 70,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 70,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 70,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 70,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 70,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 70,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 70,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 70,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 70,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 71,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 71,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 71,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 71,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 71,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 71,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 71,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 71,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 71,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 71,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 72,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 72,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 72,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 72,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 72,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 72,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 72,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 72,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 73,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 73,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 73,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 73,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 73,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 73,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 73,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 73,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 74,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 74,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 74,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 74,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 74,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 74,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 74,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 74,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 74,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 74,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 75,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 75,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 75,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 75,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 75,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 75,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 75,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 75,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 76,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 76,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 76,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 76,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 76,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 76,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 76,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 76,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 77,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 77,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 77,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 77,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 77,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 77,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 77,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 77,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 78,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 78,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 78,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 78,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 78,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 78,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 78,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 78,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 79,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 79,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 79,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 79,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 79,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 79,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 79,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 79,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 79,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 79,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 80,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 80,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 80,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 80,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 80,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 80,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 80,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 80,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 81,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 81,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 81,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 81,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 81,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 81,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 81,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 81,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 81,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 81,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 82,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 82,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 82,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 82,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 82,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 82,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 82,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 82,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 82,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 82,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 83,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 83,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 83,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 83,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 83,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 83,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 83,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 83,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 83,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 83,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 84,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 84,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 84,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 84,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 84,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 84,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 84,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 84,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 85,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 85,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 85,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 85,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 85,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 85,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 85,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 85,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 85,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 85,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 86,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 86,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 86,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 86,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 86,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 86,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 86,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 86,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 86,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 87,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 87,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 87,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 87,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 87,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 87,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 87,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 87,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 87,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 87,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 88,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 88,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 88,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 88,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 88,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 88,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 89,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 89,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 89,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 89,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 89,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 89,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 89,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 89,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 90,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 90,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 90,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 90,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 90,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 90,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 90,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 90,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 90,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 90,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 91,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 91,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 91,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 91,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 91,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 91,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 91,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 91,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 91,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 91,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 92,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 92,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 92,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 92,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 92,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 92,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 92,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 92,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 93,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 93,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 93,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 93,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 93,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 93,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 93,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 93,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 94,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 94,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 94,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 94,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 94,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 94,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 94,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 94,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 94,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 94,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 95,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 95,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 95,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 95,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 95,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 95,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 95,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 95,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 95,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 95,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 96,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 96,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 96,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 96,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 96,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 96,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 96,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 96,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 97,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 97,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 97,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 97,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 97,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 97,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 97,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 97,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 98,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 98,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 98,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 98,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 98,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 98,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 98,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 98,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 98,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 98,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 99,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 99,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 99,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 99,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 99,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 99,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 99,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 99,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 100,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 100,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 100,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 100,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 100,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 100,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 100,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 100,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 100,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 100,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 101,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 101,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 101,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 101,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 101,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 101,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 101,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 101,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 101,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 101,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 102,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 102,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 102,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 102,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 102,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 102,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 102,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 102,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 103,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 103,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 103,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 103,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 103,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 103,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 103,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 103,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 103,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 103,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 104,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 104,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 104,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 104,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 104,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 104,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 104,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 104,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 105,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 105,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 105,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 105,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 105,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 105,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 105,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 105,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 105,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 105,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 106,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 106,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 106,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 106,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 106,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 106,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 106,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 106,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 106,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 106,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 107,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 107,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 107,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 107,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 107,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 107,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 107,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 107,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 107,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 107,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 108,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 108,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 108,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 108,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 108,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 108,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 108,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 108,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 109,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 109,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 109,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 109,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 109,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 109,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 109,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 109,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 110,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 110,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 110,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 110,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 110,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 110,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 110,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 110,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 110,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 110,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 111,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 111,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 111,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 111,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 111,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 111,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 112,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 112,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 112,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 112,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 112,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 112,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 112,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 112,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 112,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 112,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 113,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 113,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 113,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 113,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 113,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 113,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 113,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 113,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 113,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 113,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 114,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 114,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 114,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 114,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 114,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": false,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 114,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 114,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 114,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 115,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 115,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 115,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 115,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 115,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 115,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 115,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 115,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 116,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 116,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 116,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 116,
+    "stage": "initial_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 116,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 116,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 116,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 116,
+    "stage": "final_report",
+    "claim_id": "C4",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 117,
+    "stage": "initial_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 117,
+    "stage": "initial_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 117,
+    "stage": "initial_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 117,
+    "stage": "initial_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 117,
+    "stage": "final_report",
+    "claim_id": "C1",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 117,
+    "stage": "final_report",
+    "claim_id": "C2",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 117,
+    "stage": "final_report",
+    "claim_id": "C3",
+    "structured_check": true,
+    "missing_evidence_ids": []
+  },
+  {
+    "sample_index": 117,
+    "stage": "final_report",
+    "claim_id": "C5",
+    "structured_check": null,
+    "missing_evidence_ids": []
+  }
+]

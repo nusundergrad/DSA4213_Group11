@@ -1,0 +1,77 @@
+[
+  {
+    "packet_id": "EP_0001",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "Checked all screened source-attribution statements against E01. Added case 17 alongside the already reviewed citation-case error. Other screened statements quote the correct 6%, 14% and -4% or give valid computed changes."
+  },
+  {
+    "packet_id": "EP_0002",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "Screened filing-rounding statements match E01: revenue 15%, operating income 17%, gross margin 13%; E02 supports 6% expense growth and cloud gross margin 69%. No additional error in these families. Metric-name mismatches remain a separate contract issue."
+  },
+  {
+    "packet_id": "EP_0003",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "Rounded segment/total growth 145%, 6%, 114% match E01; Data Center computing 162%, networking 51%, and 44% expense increase match E02. No additional screened error."
+  },
+  {
+    "packet_id": "EP_0004",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "No unsampled statements matched the predefined new-error family screen. Existing sample reviews and original judge labels remain in force."
+  },
+  {
+    "packet_id": "EP_0005",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "Checked all screened gain-period and credit-quality assertions against E01/E02/E04. Added the overconfident omission run with the wrong 2024 bargain-gain period; the sample already contains the underconfident version. Applied the same uncertainty rule to five additional broad consumer-and-wholesale deterioration assertions. General credit-risk interpretations and correctly dated $7.9B/$588M gains remain supported."
+  },
+  {
+    "packet_id": "EP_0006",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "E01 explicitly reports 5.1% total-revenue and 5.0% net-sales growth. Screened calculated/rounded statements preserve their correct periods and amounts."
+  },
+  {
+    "packet_id": "EP_0007",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "Checked sales and operating-income filing attributions against E01/E02. Added case 185, which attributes 20% to both sales and income. Sample already identified the clean hybrid unsupported 14% attribution. Other screened statements correctly distinguish calculated income growth from reported sales percentages."
+  },
+  {
+    "packet_id": "EP_0008",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "Screened final statements quote the correct E01 revenue-category percentages: automotive -10%, energy/storage +27%, services/other +19%. No additional error in the screened families. Follow-up while inspecting reliance found an unsupported higher-margin comparison. A matching screen across all 506 outputs found five EP_0008 cases (203,207,208,220,221), all recorded as new errors. Other matching packet statements were checked against their own evidence."
+  },
+  {
+    "packet_id": "EP_0009",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "Applied the same exclusion of both currency and acquisitions to every screened organic-growth assertion. Added cases 233,234,235,238; sample already identified three related cases. Generic modest growth or an explicit 4.2% organic calculation remains supported. New errors are separate from successful correction of the injected defect."
+  },
+  {
+    "packet_id": "EP_0010",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "The additional screened rounding statements match E01 revenue +12% and earnings -41%. The sample already records the uncertain structural/not-cyclical interpretation. No additional matching categorical assertion appeared in the screen."
+  },
+  {
+    "packet_id": "EP_0011",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "The screened GAAP/non-GAAP comparison matches E01 (21,354 vs25,390;22,247 vs25,175), including 2025 impairments versus a 2024 gain. Cash allocation amounts and dates match E02. No additional error in these families."
+  },
+  {
+    "packet_id": "EP_0012",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "No additional unsampled statements matched the family screen. The sample unhedged-risk assertion remains uncertain; it is not silently relabelled as factual."
+  },
+  {
+    "packet_id": "EP_0013",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "E01/E02 support organic sales +2%, core EPS +4%, impairment absence and reported whole-percent changes. Possible working-capital/earnings-quality interpretations are explicitly qualified. No additional screened factual error."
+  },
+  {
+    "packet_id": "EP_0014",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "Screened filing-rounded +4%, -15%, -24% match E01/E02. Applying those rounded quotations to precise structured percentage-change fields is recorded separately as a contract issue, rather than treating faithful prose as false."
+  },
+  {
+    "packet_id": "EP_0015",
+    "scope": "Consistency check for the new-error families identified in the sample; other labels retain the original judge or full sample review.",
+    "note": "E02 explicitly rounds net income to $6.84B/$6.95B; the screened -1.58% comparison using those rounded values is correctly distinguished from -1.60% based on E01 exact amounts."
+  }
+]

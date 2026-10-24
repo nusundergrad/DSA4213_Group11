@@ -1,0 +1,41 @@
+{
+  "status": "evaluation_complete_with_recorded_uncertainty",
+  "source_export": "output\\targeted_review_20261024",
+  "full_sample_reviews": 118,
+  "family_screened_outputs": 506,
+  "screened_candidate_outputs": 111,
+  "accepted_unresolved_reliance_reviews": 162,
+  "omission_detection_reviews": 31,
+  "changed_labels": 84,
+  "changed_outputs": 78,
+  "additional_api_cost_usd": 0,
+  "independent_human_review": false,
+  "review_complete": true,
+  "original_executions_preserved": true,
+  "batches": {
+    "main_study": {
+      "planned": 420,
+      "completed": 414,
+      "failed": 6,
+      "reviewed_uncertain_far": 43,
+      "new_errors": 16,
+      "uncertain_new_errors": 4
+    },
+    "confidence_study": {
+      "planned": 72,
+      "completed": 70,
+      "failed": 2,
+      "reviewed_uncertain_far": 4,
+      "new_errors": 2,
+      "uncertain_new_errors": 3
+    },
+    "confidence_repeat": {
+      "planned": 24,
+      "completed": 22,
+      "failed": 2,
+      "reviewed_uncertain_far": 2,
+      "new_errors": 0,
+      "uncertain_new_errors": 1
+    }
+  }
+}

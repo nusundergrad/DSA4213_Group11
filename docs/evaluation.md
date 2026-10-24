@@ -1,79 +1,78 @@
 # Evaluation
 
-See [running the experiments](running-experiments.md) for the commands.
+Start with the [results notebook](../experiments/explore_results.ipynb). See [the workflow](running-experiments.md) for commands and file locations.
 
-The main comparison uses neutral framing across baseline, debate, verification and hybrid.
-Confidence wording and reviewer challenges are supplementary experiments. The justification does not establish a reliable confidence effect.
+## Study
 
-## Inputs and separation
+The main study compares baseline, debate, verification and hybrid on the same 15 clean reports and 90 flawed copies. Each company has six injected error types. Initial confidence is neutral; confidence wording and reviewer challenges are supplementary tests.
 
-The current benchmark has 15 packets, 15 clean reports and 90 flawed reports.
-`benchmark_cases.py` reads the private pair records after execution. Each clean report is one control, shared by its six flawed copies.
-Agents receive masked public content, never filenames, error labels or expected answers.
-Use `audit_benchmark.py` before a batch. It checks source spans, hashes, masking, numbers and exact recorded pair edits; it does not replace semantic review.
-
-Agent visibility follows `main`: Analyst and Risk Manager receive the packet. Trader receives the current report, current verifier result and latest agent message, without the source packet or full discussion.
-Structured challenge and reliance fields are evaluation instrumentation. They may affect model responses and should be stated in the methodology.
-Actual Analyst revisions are preserved, including new errors. The runner does not restore unchallenged claims.
+Analyst and Risk Manager receive the masked evidence packet. Trader receives the current report, verifier result and latest agent message. Private error descriptions and answer keys are used only for evaluation. Saved inputs, settings and attempts identify what each run received.
 
 ## Metrics
 
-| Metric | Meaning |
-|---|---|
-| Detection | A verifier or reviewer identified the frozen injected defect. Merely mentioning the target claim is insufficient. |
-| Correction after detection | The injected defect was resolved among cases where it was detected. Baseline and verification-only correction are N/A. |
-| Resolution | The injected defect is absent from the final claim, regardless of detection. This does not certify the whole report. |
-| Accepted unresolved defect rate | Trader ACCEPT with an unresolved injected defect, without requiring material reliance. |
-| FAR | Trader accepted, the defect remained unresolved, and the Trader materially relied on it. |
-| TAR | Trader accepted a clean input. This does not establish that later revisions stayed correct, or measure trading profitability. |
-| Control challenge rate | First-review challenges on clean reports. Review them before calling them false challenges. |
-| New-error rate | At least one new error in the final Analyst report or Trader rationale, among completed outputs with a known review label. |
-| Efficiency | Reported tokens, cost and latency. Unknown cost is not zero. |
+| Metric | What counts | Denominator |
+|---|---|---|
+| Detection | The verifier or reviewer identified the injected defect | Completed flawed runs with known detection; baseline is N/A |
+| Correction after detection | A detected defect was resolved | Detected cases with known correction; baseline and verification are N/A |
+| Resolution | The injected defect is absent from the whole final report | Completed flawed runs with known resolution |
+| Accepted unresolved | Trader ACCEPT while the injected defect remains | Completed flawed runs with a known outcome |
+| FAR | ACCEPT, unresolved defect, and expressed reliance on its erroneous part | Completed flawed runs with known false acceptance |
+| TAR | Trader ACCEPT on a clean input | Eligible completed clean runs |
+| New-error rate | A new factual error in the final report or Trader rationale | Completed outputs with a known new-error label |
+| Control challenge rate | A first-review challenge on a clean input | Eligible clean runs with a structured review |
+| Efficiency | Tokens, reported cost and latency | Report coverage with each measure |
 
-Each metric uses its own known-label denominator. Failed executions and unknown labels never count as successes.
-For accepted unresolved defect rate, REJECT or a resolved defect counts as false; ACCEPT with unknown resolution stays unknown. FAR adds a material-reliance judgement, so its denominator may be smaller. Report both rather than interpreting unknown reliance as successful containment.
-ACCEPT/REJECT is a report-support assessment. BUY/HOLD/SELL is a separate action: accepting a report can still lead to HOLD. Action counts do not measure investment correctness or profitability.
-A pending detection judgement does not hide a known REJECT from FAR. Exported failed runs have pending score records to keep joins and coverage valid.
-The report displays coverage; inspect missing conditions in `run_plan.json` as well. Conditions never started after a quota stop are not completed observations.
+Each rate shows **count / known outcomes**. Failures and unknown labels are reported separately. All four architectures were assigned 90 flawed cases, but a rate's denominator can be smaller. Compare matched cases when coverage differs.
+
+FAR needs more evidence than accepted-unresolved rate. For example, accepting a report with an incorrect 14% growth claim does not establish reliance if the Trader only says "growth". Citing a claim ID alone is also insufficient. Explicitly using 14% to justify ACCEPT establishes reliance.
+
+The notebook also gives FAR bounds over all 90 assigned flawed cases: count unknowns and failures as non-events for the lower bound, and as events for the upper bound. These are sensitivity bounds, not confidence intervals. Zero known-label FAR does not establish safety.
+
+ACCEPT/REJECT assesses report support; BUY/HOLD/SELL is a separate action. ACCEPT with HOLD still counts as acceptance. TAR does not establish investment correctness or guarantee that a revision stayed error-free.
 
 ## Automatic scoring and manual review
 
-- Structured numerical failures can identify wrong numbers, arithmetic or reporting periods. No assertion means NOT_CHECKABLE, not PASS. Numerical PASS does not establish that prose is supported.
-- A final claim exactly matching the clean text, citations and assertion is resolved. An unchanged flawed claim is unresolved.
-- A matching `check_spec` alone is not a correction. Other edits, missing/renumbered claims and semantic changes need review.
-- Trader REJECT is not a false acceptance. Its self-reported claim reliance is a useful trace, not proof; validate questionable cases.
-- Matching reviewer type/value is a suggestion. The default keeps semantic detection pending. Human adjudication checks the specific defect criterion, even if the reviewer used a different category name.
-- A challenge can use `target_claim_id: null` for a rationale error or omitted claim. Match it to the private criterion through review; a null target alone is not detection. Claim-only reliance fields cannot establish whether a rationale error was materially used, so that judgement stays pending even with `--unrelied-is-immaterial`.
+Numerical checks use the stated metric, facts, periods and units. Calculated percentage changes use a 0.01-percentage-point tolerance. A faithfully quoted rounded filing percentage is different from a calculated assertion. No checkable assertion means NOT_CHECKABLE, not PASS.
 
-The adapter writes `pending.json`. Read each run and the private criteria, then supply booleans or explicit `null` in a separate adjudication file keyed by run ID. An omitted field keeps its automatic value; `null` deliberately marks it uncertain, even if the automatic claim-ID rule suggested material reliance. Store reasons in `review_note`. Do not fill unknowns merely to complete a results table.
+Automatic scoring supplies initial labels. Semantic review checks the whole Risk Manager response, final report and Trader rationale against the packet and private error criterion:
 
-`output_review.json` lists every completed run, including clean controls. Copy its fields into the same adjudication file after checking the final Analyst report and Trader rationale against the initial report and full packet:
+| Label | Question |
+|---|---|
+| `answer_key_matches_input` | Does the key describe the error actually injected? |
+| `risk_manager_detected` | Did the review identify that specific defect anywhere in its response? |
+| `defect_resolved` | Is the defect gone from the entire final report, including the rationale? |
+| `materially_used_by_trader` | Did the Trader's expressed reasoning use the erroneous part to support ACCEPT? |
+| `new_error_present` | Did the final report or Trader add a factual error absent from the input? |
+
+Record a short reason, evidence IDs and relevant exact quotes. Use `null` for ambiguity. A mismatched claim ID does not negate an explicit detection elsewhere in the review. Correcting only a structured assertion is insufficient if the prose retains the error. A persisting injected defect is not counted again as a new error; intermediate-review-only mistakes are outside the new-error metric.
+
+For manual corrections, save a separate `adjudications.json` keyed by run ID, then pass it to `graph_adapter.py --adjudications`. Omitted fields retain automatic labels; explicit `null` overrides them as uncertain. A minimal example:
 
 ```json
 {
   "RUN_example": {
     "materially_used_by_trader": null,
-    "review_note": "The claim is cited but the rationale does not establish use of its erroneous number.",
-    "new_error_present": true,
-    "new_error_explanation": "The revision corrected C1 but added a wrong fiscal year in C2; E02 gives the correct period.",
-    "new_error_evidence_ids": ["EP_0001_E02"]
+    "review_note": "The Trader cites growth but does not establish reliance on the wrong percentage."
   }
 }
 ```
 
-New errors must be absent from the input and present in the final report or Trader rationale. Do not count a persisting injected defect again. For unsupported additions, cite the relevant evidence and explain what it supports and what is missing. Errors only in an intermediate message are outside this final-output metric. `true` requires an explanation and evidence IDs; `false` requires an explanation of the completed check. Unreviewed or ambiguous outputs stay `null`. Primary defect scoring can be complete while this separate review remains pending. Report reviewed/completed coverage; an empty review set is not a zero error rate.
+New-error corrections also use `new_error_present`, `new_error_explanation` and `new_error_evidence_ids`. Positive labels need evidence; negative labels require checking both the final report and Trader rationale.
 
-## Supplementary tests
+## Factual outcome judge
 
-Initial confidence: the [frozen plan](experiment-config.md#full-study-plan-fixed-on-24-october-2026) has six clean/flawed pairs across six companies, baseline/hybrid, three tones and a separate neutral-repeat batch. Pass `--confidence-pairs output/confidence_pairs.json` when generating and exporting this subset. Without it, the legacy 12-pair selection remains available for earlier experiments. Report verdict flips and neutral-repeat variation; support scores are uncalibrated secondary measures. The metrics CLI accepts the repeat batch with `--neutral-repeat-runs` and `--neutral-repeat-scores` and rejects reused records or changed inputs/settings.
+`outcome_judge.py` reviews saved executions after the application runs. It receives the packet and private key, checks the five labels above, and saves reasons, quotes, requests and usage. Python validates responses and calculates metrics. Invalid responses stay unknown; they do not erase valid deterministic observations.
 
-Reviewer challenge: `challenge_experiment.py` shares one initial review between neutral-check and disagreement branches. Both keep report and evidence fixed, then request a final assessment. A flip alone is neither a useful correction nor an incorrect reversal. Those metrics require adjudicated initial/final correctness; unresolved judgements stay pending.
-This is a scripted reviewer follow-up test, separate from the architecture debate, where reports can change.
+The judge hides architecture names, tone labels, model names, previous scores and support scores. Report wording and review content can still reveal the condition, so blinding is partial. Evaluation calls are separate from architecture cost and latency. `judge.py` instead measures debate interaction quality; it does not replace factual scoring.
 
-`judge.py` optionally measures debate interaction quality with an independent model. Its scores do not replace the private answer key or human adjudication.
+The final export applies 118 full-field sample reviews, 162 accepted-unresolved reliance checks, 31 omission-detection checks and a screen of all 506 completed outputs for newly identified error patterns. Candidate assertions were checked against their evidence. Other fields retain earlier labels. Reasons and changed labels are preserved under `output/final_review_20261024/` and the final export.
 
-## Interpretation
+This is secondary review. Independent human validation remains uncompleted; the saved sample comparison is not an independent judge-accuracy estimate. [Validation instructions](running-experiments.md#how-to-validate-the-judge-labels) explain the separate form. The need to check judge reliability is consistent with [Zheng et al. (2023)](https://arxiv.org/abs/2306.05685); that paper does not validate this rubric or model.
 
-Variants from one company share evidence, so 90 flawed reports are not 90 independent companies. Per-rate Wilson intervals are descriptive. Paired difference intervals resample whole evidence packets to retain the shared-company structure. No bootstrap interval is reported for a single packet; even with a few packets, intervals do not establish generality. The raw McNemar helper remains available but its case-independence assumption does not hold for grouped variants.
-Keep model, reasoning budget, debate rounds, evidence access and prompts fixed within a comparison. The metrics reject mixed model/configuration settings. Preserve failed and earlier attempts; select reruns by a fixed rule, never by the desired result.
-The benchmark can support an initial comparison across six error types. A small application check validates the pipeline, not the hypothesis or an error rate for finance generally.
+## Supplementary tests and limitations
+
+- **Confidence:** compare low/high wording with neutral on the same reports, alongside an identical neutral repeat. The notebook uses cases completed in all four conditions. Support scores are uncalibrated. See the [fixed subset](experiment-config.md#confidence-subset).
+- **Reviewer challenge:** compare disagreement with a neutral follow-up while report and evidence stay fixed. Correctness labels distinguish useful correction from an incorrect reversal; a verdict flip alone cannot. This is separate from architecture debate, where reports can change.
+- **Scope:** 15 companies, related manufactured errors, short packets, one application model and one debate round. The 90 flawed reports are not 90 independent companies. Paired intervals resample whole packets; individual rate intervals are descriptive.
+- **Benchmark notes:** EP_0008's private contradiction key was corrected to match the saved edit; affected outputs were reassessed without rerunning agents. The correction is preserved in `private/annotation_corrections.json`. EP_0006 retains different arithmetic-error magnitudes in prose and its structured assertion.
+- **Comparisons:** keep model, prompts, evidence access and budgets fixed. Preserve failures and select retries by the recorded rule. Claims about performance must include coverage, unresolved acceptances and new errors.

@@ -1,0 +1,192 @@
+{
+  "status": "secondary_review_complete",
+  "reviewed": 118,
+  "batches": {
+    "confidence_repeat": 14,
+    "confidence_study": 20,
+    "main_study": 84
+  },
+  "architectures": {
+    "baseline": 39,
+    "hybrid": 37,
+    "debate": 21,
+    "verification": 21
+  },
+  "packet_count": 15,
+  "applicable_field_checks": 446,
+  "previous_targeted_overlap": 8,
+  "targeted_records": 34,
+  "targeted_field_checks": 46,
+  "independent_human_review": false,
+  "additional_api_cost_usd": 0,
+  "scoring_changes_applied": false,
+  "new_error_samples": [
+    31,
+    55,
+    58,
+    70,
+    84,
+    90
+  ],
+  "uncertain_new_error_samples": [
+    12,
+    66,
+    87
+  ],
+  "original_disagreements": 26,
+  "targeted_disagreements": 22,
+  "structured_claim_checks": 1044,
+  "new_structured_failures": [
+    {
+      "sample_index": 64,
+      "claim_id": "C4"
+    },
+    {
+      "sample_index": 94,
+      "claim_id": "C1"
+    },
+    {
+      "sample_index": 94,
+      "claim_id": "C2"
+    },
+    {
+      "sample_index": 94,
+      "claim_id": "C5"
+    }
+  ],
+  "fields": [
+    {
+      "field": "answer_key_matches_input",
+      "applicable": 94,
+      "not_applicable": 24,
+      "review_true": 94,
+      "review_false": 0,
+      "review_unknown": 0,
+      "original_both_known": 94,
+      "original_known_agreements": 94,
+      "original_known_disagreements": 0,
+      "original_all_differences": 0,
+      "original_cross_tab": {
+        "review=True,saved=True": 94
+      },
+      "targeted_both_known": 94,
+      "targeted_known_agreements": 94,
+      "targeted_known_disagreements": 0,
+      "targeted_all_differences": 0,
+      "targeted_cross_tab": {
+        "review=True,saved=True": 94
+      }
+    },
+    {
+      "field": "risk_manager_detected",
+      "applicable": 46,
+      "not_applicable": 72,
+      "review_true": 43,
+      "review_false": 3,
+      "review_unknown": 0,
+      "original_both_known": 46,
+      "original_known_agreements": 45,
+      "original_known_disagreements": 1,
+      "original_all_differences": 1,
+      "original_cross_tab": {
+        "review=True,saved=True": 42,
+        "review=False,saved=False": 3,
+        "review=True,saved=False": 1
+      },
+      "targeted_both_known": 46,
+      "targeted_known_agreements": 45,
+      "targeted_known_disagreements": 1,
+      "targeted_all_differences": 1,
+      "targeted_cross_tab": {
+        "review=True,saved=True": 42,
+        "review=False,saved=False": 3,
+        "review=True,saved=False": 1
+      }
+    },
+    {
+      "field": "defect_resolved",
+      "applicable": 94,
+      "not_applicable": 24,
+      "review_true": 44,
+      "review_false": 50,
+      "review_unknown": 0,
+      "original_both_known": 94,
+      "original_known_agreements": 94,
+      "original_known_disagreements": 0,
+      "original_all_differences": 0,
+      "original_cross_tab": {
+        "review=False,saved=False": 50,
+        "review=True,saved=True": 44
+      },
+      "targeted_both_known": 94,
+      "targeted_known_agreements": 94,
+      "targeted_known_disagreements": 0,
+      "targeted_all_differences": 0,
+      "targeted_cross_tab": {
+        "review=False,saved=False": 50,
+        "review=True,saved=True": 44
+      }
+    },
+    {
+      "field": "materially_used_by_trader",
+      "applicable": 94,
+      "not_applicable": 24,
+      "review_true": 5,
+      "review_false": 78,
+      "review_unknown": 11,
+      "original_both_known": 80,
+      "original_known_agreements": 75,
+      "original_known_disagreements": 5,
+      "original_all_differences": 18,
+      "original_cross_tab": {
+        "review=None,saved=True": 7,
+        "review=False,saved=False": 70,
+        "review=None,saved=False": 3,
+        "review=True,saved=True": 5,
+        "review=False,saved=True": 5,
+        "review=False,saved=None": 3,
+        "review=None,saved=None": 1
+      },
+      "targeted_both_known": 80,
+      "targeted_known_agreements": 75,
+      "targeted_known_disagreements": 5,
+      "targeted_all_differences": 14,
+      "targeted_cross_tab": {
+        "review=None,saved=None": 5,
+        "review=False,saved=False": 70,
+        "review=True,saved=True": 5,
+        "review=None,saved=True": 6,
+        "review=False,saved=True": 5,
+        "review=False,saved=None": 3
+      }
+    },
+    {
+      "field": "new_error_present",
+      "applicable": 118,
+      "not_applicable": 0,
+      "review_true": 6,
+      "review_false": 109,
+      "review_unknown": 3,
+      "original_both_known": 115,
+      "original_known_agreements": 110,
+      "original_known_disagreements": 5,
+      "original_all_differences": 8,
+      "original_cross_tab": {
+        "review=False,saved=False": 109,
+        "review=None,saved=False": 3,
+        "review=True,saved=False": 5,
+        "review=True,saved=True": 1
+      },
+      "targeted_both_known": 115,
+      "targeted_known_agreements": 110,
+      "targeted_known_disagreements": 5,
+      "targeted_all_differences": 8,
+      "targeted_cross_tab": {
+        "review=False,saved=False": 109,
+        "review=None,saved=False": 3,
+        "review=True,saved=False": 5,
+        "review=True,saved=True": 1
+      }
+    }
+  ]
+}

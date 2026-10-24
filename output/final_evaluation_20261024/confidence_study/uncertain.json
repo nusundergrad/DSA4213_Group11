@@ -1,0 +1,65 @@
+[
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211204221812Z_edafb358_baseline_neutral",
+    "packet_id": "EP_0002",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T205941872246Z_edafb358_baseline_overconfident",
+    "packet_id": "EP_0002",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210346570745Z_605505ea_baseline_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210351278332Z_605505ea_baseline_overconfident",
+    "packet_id": "EP_0005",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211226969629Z_6b321674_hybrid_overconfident",
+    "packet_id": "EP_0005",
+    "architecture": "hybrid",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211736000573Z_6b321674_hybrid_underconfident",
+    "packet_id": "EP_0005",
+    "architecture": "hybrid",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211811119519Z_605505ea_hybrid_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "hybrid",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain."
+  }
+]

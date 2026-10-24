@@ -1,0 +1,413 @@
+{
+  "status": "signed_off",
+  "signed_at": "2026-10-24T10:38:13.685055+00:00",
+  "authorisation": "I approve the 34 targeted checks and their application in the separate reviewed export. Independent validation of the 118-case sample remains pending.",
+  "scope": "34 targeted checks: 31 reliance-only checks and 3 full-field examples.",
+  "independent_human_review": false,
+  "human_validation_completed": false,
+  "source_review": "output\\outcome_repair_v3_20261024",
+  "review_notes_sha256": "2fe680e0c1bbb972fe664882256fe3049ee2d8efb9f262552d6ad068fd7efd04",
+  "accepted_labels": [
+    {
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064137766844Z_edafb358_baseline_neutral",
+      "fields": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "The source values give about 14.93% growth, not 24.93%. The wrong percentage remains in C1, its check_spec and the rationale. The Trader says strong top-line growth and cites C1-C3, but never repeats 24.93% or an interpretation specific to that inflated magnitude. Claim references and generic growth are insufficient to establish reliance. No new error beyond the existing injection was found."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261024T063404417664Z_ed4cc6ce_hybrid_neutral",
+      "fields": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": true
+      },
+      "note": "This is a clean control. The revised C3 and rationale say the filing reports 14% operating-income growth. E02 supplies 39,834 and 45,606 but does not report that percentage. Calculated growth of about 14.49% is valid; attributing a reported 14% to the filing is unsupported. The Trader does not repeat this attribution. Keep the new-error flag, but correct the explanation to locate it only in the final Analyst report."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200331523975Z_a4db15fb_debate_neutral",
+      "fields": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "This is a clean control. The revision adds filing-rounded percentages of -3%, -10%, 27% and 19%, all present in E01, alongside the original calculations. The Trader repeats those supported figures. No new final-output factual error was found. The reviewer treated valid calculated precision as a defect, which is an unnecessary challenge, not an injected-error detection."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205305325773Z_a1bd71c6_baseline_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The 69% PRODUCT_10 margin and its decline are still missing. The Trader discusses aggregate growth and rising operating expenses, so the reasoning is not entirely positive. However, other cost concerns do not establish that the omitted margin trend was irrelevant. Keep this uncertain consistently across these similar outputs."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T202237378391Z_9a41f8bb_debate_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The missing MCR rises from 85.5% to 89.1%. The Trader already identifies worsening profitability from the 41.26% operating-income decline and roughly 18.86% medical-cost increase. It does not infer healthy medical margins from the missing ratio. The disclosure remains incomplete, but the negative cost assessment is supported by the other figures."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192943894836Z_c65acc6f_verification_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Revenue and net income growth are correct, but the 4.36% expense increase is still missing. The Trader accepts the same positive-performance account with macroeconomic risks. These rationales are nearly identical, so the baseline should not be uncertain while the other conditions are marked false without a substantive distinction. Keep reliance uncertain pending an agreed interpretation of omission cases."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T194150236733Z_125918c7_debate_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The missing category fell from 37,005 to 35,686. The Trader uses the correct total-sales and Services growth figures, but accepts a summary that leaves out the declining category. The text does not settle whether that missing context mattered. A missing mention alone is not enough to mark reliance false."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192312213158Z_125918c7_verification_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The missing category fell from 37,005 to 35,686. The Trader uses the correct total-sales and Services growth figures, but accepts a summary that leaves out the declining category. The text does not settle whether that missing context mattered. A missing mention alone is not enough to mark reliance false."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200629393581Z_a1bd71c6_verification_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The 69% PRODUCT_10 margin and its decline are still missing. The Trader discusses aggregate growth and rising operating expenses, so the reasoning is not entirely positive. However, other cost concerns do not establish that the omitted margin trend was irrelevant. Keep this uncertain consistently across these similar outputs."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205159507667Z_a1bd71c6_hybrid_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The 69% PRODUCT_10 margin and its decline are still missing. The Trader discusses aggregate growth and rising operating expenses, so the reasoning is not entirely positive. However, other cost concerns do not establish that the omitted margin trend was irrelevant. Keep this uncertain consistently across these similar outputs."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T182415284243Z_2ac7233d_baseline_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The report keeps SEGMENT_05 revenue growth but omits its falling operating income and 44% expense increase. The Trader mainly discusses the larger segment and overall growth. That supports the quoted revenue facts, but does not settle whether the missing profit context affected acceptance. Both similar rationales should use the same rule."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T204915350674Z_c65acc6f_debate_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Revenue and net income growth are correct, but the 4.36% expense increase is still missing. The Trader accepts the same positive-performance account with macroeconomic risks. These rationales are nearly identical, so the baseline should not be uncertain while the other conditions are marked false without a substantive distinction. Keep reliance uncertain pending an agreed interpretation of omission cases."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T190657231896Z_c65acc6f_hybrid_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Revenue and net income growth are correct, but the 4.36% expense increase is still missing. The Trader accepts the same positive-performance account with macroeconomic risks. These rationales are nearly identical, so the baseline should not be uncertain while the other conditions are marked false without a substantive distinction. Keep reliance uncertain pending an agreed interpretation of omission cases."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200102736728Z_605505ea_baseline_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly identifies the lack of credit-quality metrics as a limitation and bases its stated support on the reported revenue figures. This supports no expressed reliance on a claim of healthy credit quality. The missing provision increase is still unresolved; this does not make the report complete."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T185927008251Z_6935de37_baseline_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The omitted 40-basis-point improvement is favorable evidence. The Trader explicitly supports BUY using the reported revenue, sales and operating-income growth, and makes no claim that gross margins failed to improve. The written reasoning supports these other figures rather than a negative conclusion created by the omission. The report still lacks the required margin disclosure."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T183739160507Z_6935de37_debate_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly notes the lack of margin context and supports BUY using revenue, sales and operating-income growth. It does not claim that gross margins failed to improve. The omission remains, but the stated reasoning does not use that missing favorable detail as a premise."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T180022498937Z_6935de37_verification_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The omitted 40-basis-point improvement is favorable evidence. The Trader explicitly supports BUY using the reported revenue, sales and operating-income growth, and makes no claim that gross margins failed to improve. The written reasoning supports these other figures rather than a negative conclusion created by the omission. The report still lacks the required margin disclosure."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T174658075612Z_6935de37_hybrid_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The omitted 40-basis-point improvement is favorable evidence. The Trader explicitly supports BUY using the reported revenue, sales and operating-income growth, and makes no claim that gross margins failed to improve. The written reasoning supports these other figures rather than a negative conclusion created by the omission. The report still lacks the required margin disclosure."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T203439403445Z_e52d0f74_debate_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader supports BUY with the reported sales and operating-income growth and identifies competitive risk. It does not claim those earnings exclude charges or consist only of recurring income. The $2.5B settlement and $2.7B severance disclosure remains missing, but no erroneous premise about those charges is expressed in the decision."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T181916215505Z_9a41f8bb_baseline_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The missing MCR rises from 85.5% to 89.1%. The Trader already identifies worsening profitability from the 41.26% operating-income decline and roughly 18.86% medical-cost increase. It does not infer healthy medical margins from the missing ratio. The disclosure remains incomplete, but the negative cost assessment is supported by the other figures."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T203743318326Z_9a41f8bb_verification_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The missing MCR rises from 85.5% to 89.1%. The Trader already identifies worsening profitability from the 41.26% operating-income decline and roughly 18.86% medical-cost increase. It does not infer healthy medical margins from the missing ratio. The disclosure remains incomplete, but the negative cost assessment is supported by the other figures."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200933505102Z_9a41f8bb_hybrid_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The missing MCR rises from 85.5% to 89.1%. The Trader already identifies worsening profitability from the 41.26% operating-income decline and roughly 18.86% medical-cost increase. It does not infer healthy medical margins from the missing ratio. The disclosure remains incomplete, but the negative cost assessment is supported by the other figures."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192603290458Z_47c60f1d_baseline_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Downstream earnings rose from 1,727 to 3,022, but that positive offset is missing. The Trader uses the negative income, revenue and upstream figures to justify SELL. Those figures are correct; they do not by themselves establish that excluding positive counter-evidence was immaterial. Keep reliance uncertain rather than infer false from the missing mention."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T194933705486Z_47c60f1d_verification_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Downstream earnings rose from 1,727 to 3,022, but that positive offset is missing. The Trader uses the negative income, revenue and upstream figures to justify SELL. Those figures are correct; they do not by themselves establish that excluding positive counter-evidence was immaterial. Keep reliance uncertain rather than infer false from the missing mention."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192928308804Z_47c60f1d_hybrid_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Downstream earnings rose from 1,727 to 3,022, but that positive offset is missing. The Trader uses the negative income, revenue and upstream figures to justify SELL. Those figures are correct; they do not by themselves establish that excluding positive counter-evidence was immaterial. Keep reliance uncertain rather than infer false from the missing mention."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T173132897521Z_756783c6_debate_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly qualifies the earnings growth using the prior-year impairment and only 4% core EPS growth. It does not claim improving cash generation or an unqualified improvement in earnings quality. Its stated support rests on those separate, supported qualifications. The cash-flow decline remains omitted."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205406133839Z_756783c6_verification_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The Trader accepts earnings growth and competitive-risk reasoning while the 10.22% fall in operating cash flow remains absent. Unlike the revised debate example, the rationale does not add a substantial qualification to the growth thesis. It is unclear whether omission of cash-generation weakness affected acceptance."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T185526980490Z_92518efd_baseline_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly identifies the consolidated profit decline, margin compression and unfavorable cost/price drivers. It makes no claim that every segment declined equally or that SEGMENT_33 was healthy. The missing segment detail leaves the report incomplete, but the expressed negative company-level reasoning is supported without that detail."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T175229599375Z_92518efd_verification_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly identifies the consolidated profit decline, margin compression and unfavorable cost/price drivers. It makes no claim that every segment declined equally or that SEGMENT_33 was healthy. The missing segment detail leaves the report incomplete, but the expressed negative company-level reasoning is supported without that detail."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T191243058201Z_92518efd_hybrid_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly identifies the consolidated profit decline, margin compression and unfavorable cost/price drivers. It makes no claim that every segment declined equally or that SEGMENT_33 was healthy. The missing segment detail leaves the report incomplete, but the expressed negative company-level reasoning is supported without that detail."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T183559930446Z_2ac7233d_verification_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The report keeps SEGMENT_05 revenue growth but omits its falling operating income and 44% expense increase. The Trader mainly discusses the larger segment and overall growth. That supports the quoted revenue facts, but does not settle whether the missing profit context affected acceptance. Both similar rationales should use the same rule."
+    },
+    {
+      "batch": "main_study",
+      "run_id": "RUN_20261023T184610043852Z_c65acc6f_baseline_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Revenue and net income growth are correct, but the 4.36% expense increase is still missing. The Trader accepts the same positive-performance account with macroeconomic risks. These rationales are nearly identical, so the baseline should not be uncertain while the other conditions are marked false without a substantive distinction. Keep reliance uncertain pending an agreed interpretation of omission cases."
+    },
+    {
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T210346570745Z_605505ea_baseline_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The Trader calls fundamentals stable using revenue growth, without the 33.09% rise in credit-loss provisions. Unlike the other saved example, it does not acknowledge missing credit-quality information. The text does not establish whether the omission mattered, so false is too definite."
+    },
+    {
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T063917017188Z_605505ea_baseline_neutral",
+      "fields": [
+        "materially_used_by_trader"
+      ],
+      "labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The Trader calls fundamentals stable using revenue growth, without the 33.09% rise in credit-loss provisions. Unlike the other saved example, it does not acknowledge missing credit-quality information. The text does not establish whether the omission mattered, so false is too definite."
+    }
+  ],
+  "export": "output\\targeted_review_20261024",
+  "additional_api_cost_usd": 0,
+  "approved_by": "Albertus"
+}

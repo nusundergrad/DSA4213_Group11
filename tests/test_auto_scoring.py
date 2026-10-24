@@ -166,7 +166,29 @@ def test_risk_manager_detection_modes():
     vague = _run(case, "debate", turns=_turn(explanation="This claim looks wrong."))
     assert _score(case, vague, rm_mode="accept").risk_manager_detected is None       # generic skepticism is not detection
     other = _run(case, "debate", turns=_turn(target_claim_id="C2", explanation="6.43"))
-    assert _score(case, other).risk_manager_detected is False                        # never challenged C1
+    assert _score(case, other).risk_manager_detected is None     # mismatched IDs need semantic review
+
+
+def test_detection_can_be_reviewed_in_a_mislabelled_challenge():
+    case = _case('unsupported_inference')
+    run = _run(case, 'debate', turns=_turn(target_claim_id='C5', defect_type='unsupported_inference',
+        explanation='The rationale cannot guarantee share-price doubling from historical results.'))
+    assert _score(case, run).detected is None
+    reviewed = _score(case, run, adjudication={'risk_manager_detected': True,
+        'review_note': 'The rationale error is explicitly identified despite the C5 pointer.'})
+    assert reviewed.detected is True
+
+
+def test_detection_can_be_reviewed_in_overall_assessment_without_challenges():
+    case = _case('material_omission')
+    run = _run(case, 'debate', turns=[dict(challenges=[],
+        overall_assessment='The report omits the declining Wearables category.')])
+    assert _score(case, run).detected is None
+    assert _score(case, run, adjudication={'risk_manager_detected': True}).detected is True
+    run.risk_manager_turns = [dict(challenges=[], overall_assessment='')]
+    assert _score(case, run).detected is False
+    with pytest.raises(ValueError, match='requires recorded Risk Manager'):
+        _score(case, run, adjudication={'risk_manager_detected': True})
 
 
 def test_baseline_completes_without_a_detector():

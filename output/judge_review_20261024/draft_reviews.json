@@ -1,0 +1,1303 @@
+{
+  "status": "targeted_review_signed_off",
+  "independent_human_review": false,
+  "source_review": "output/outcome_repair_v3_20261024",
+  "scope": "29 flagged cases, 3 uncertain cases and 2 worked examples. Reliance-only checks except the three fully inspected control/arithmetic examples. This does not complete the 118-record independent validation sample.",
+  "scoring_changes_applied": true,
+  "additional_api_cost_usd": 0,
+  "created_at": "2026-10-24T10:25:33.970340+00:00",
+  "items": [
+    {
+      "index": 130,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T064137766844Z_edafb358_baseline_neutral",
+      "packet_id": "EP_0002",
+      "groups": [
+        "sample"
+      ],
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "proposed_labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "The source values give about 14.93% growth, not 24.93%. The wrong percentage remains in C1, its check_spec and the rationale. The Trader says strong top-line growth and cites C1-C3, but never repeats 24.93% or an interpretation specific to that inflated magnitude. Claim references and generic growth are insufficient to establish reliance. No new error beyond the existing injection was found.",
+      "judge_labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": true,
+        "new_error_present": false
+      },
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "trader_quote": "The analysis presents a balanced view with strong top-line growth (C1, C2, C3) offset by margin pressure in a key growth segment (C4) and rising operating expenses amid competitive risks (C5). These factors collectively support a HOLD recommendation, as the growth trajectory is intact but near-term uncertainties around AI infrastructure costs and competitive dynamics warrant caution. The analyst's moderate confidence aligns with this assessment.",
+      "input_sha256": "d18f285c6c72eccb5734caa074295075cf244f3ecfd21db4ddd44ccefcd3cd18",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "answer_key_matches_input": true,
+        "risk_manager_detected": null,
+        "defect_resolved": false,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      }
+    },
+    {
+      "index": 50,
+      "batch": "main_study",
+      "run_id": "RUN_20261024T063404417664Z_ed4cc6ce_hybrid_neutral",
+      "packet_id": "EP_0007",
+      "groups": [
+        "sample",
+        "flag"
+      ],
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "proposed_labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": true
+      },
+      "note": "This is a clean control. The revised C3 and rationale say the filing reports 14% operating-income growth. E02 supplies 39,834 and 45,606 but does not report that percentage. Calculated growth of about 14.49% is valid; attributing a reported 14% to the filing is unsupported. The Trader does not repeat this attribution. Keep the new-error flag, but correct the explanation to locate it only in the final Analyst report.",
+      "judge_labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": false,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": true
+      },
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02",
+        "EP_0007_E03"
+      ],
+      "trader_quote": "The analysis is supported by verified financial claims showing strong year-over-year growth: consolidated net sales up 12.38% (C1), operating income up 16.60% (C2), and key segment SEGMENT_12 net sales up 19.68% (C3). All three numerical claims passed verification. The competitive risk noted in C4 is acknowledged but not quantified. The underlying operational strength, evidenced by growth despite one-time charges, supports the BUY recommendation.",
+      "input_sha256": "371d295260009d7392ecf978bcafc643c75445bea5574696a8ff1597ea1f1578",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "risk_manager_detected"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": true
+      }
+    },
+    {
+      "index": 28,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200331523975Z_a4db15fb_debate_neutral",
+      "packet_id": "EP_0008",
+      "groups": [
+        "sample"
+      ],
+      "scope": [
+        "answer_key_matches_input",
+        "risk_manager_detected",
+        "defect_resolved",
+        "materially_used_by_trader",
+        "new_error_present"
+      ],
+      "proposed_labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "note": "This is a clean control. The revision adds filing-rounded percentages of -3%, -10%, 27% and 19%, all present in E01, alongside the original calculations. The Trader repeats those supported figures. No new final-output factual error was found. The reviewer treated valid calculated precision as a defect, which is an unnecessary challenge, not an injected-error detection.",
+      "judge_labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      },
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02",
+        "EP_0008_E03"
+      ],
+      "trader_quote": "The analysis is well-supported by verified financial data showing a 3% total revenue decline driven by a ~10% drop in the core automotive segment, partially offset by strong growth in Energy Generation & Storage (+27%) and Services (+19%). The competitive risk flagged in C5 adds downside uncertainty. The mixed fundamentals — declining primary revenue driver but growing diversification — justify a HOLD stance. The evidence is specific, quantified, and internally consistent, warranting acceptance of the recommendation.",
+      "input_sha256": "98f73c0d26f5a8c8a45edb594d55550958bd9dbb607ffc973eaaa1a986ad04d1",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "answer_key_matches_input": null,
+        "risk_manager_detected": null,
+        "defect_resolved": null,
+        "materially_used_by_trader": null,
+        "new_error_present": false
+      }
+    },
+    {
+      "index": 14,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205305325773Z_a1bd71c6_baseline_neutral",
+      "packet_id": "EP_0002",
+      "groups": [
+        "sample",
+        "unknown"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The 69% PRODUCT_10 margin and its decline are still missing. The Trader discusses aggregate growth and rising operating expenses, so the reasoning is not entirely positive. However, other cost concerns do not establish that the omitted margin trend was irrelevant. Keep this uncertain consistently across these similar outputs.",
+      "judge_labels": {
+        "materially_used_by_trader": null
+      },
+      "evidence_ids": [
+        "EP_0002_E02"
+      ],
+      "trader_quote": "The analysis presents strong fundamental growth metrics with revenue up 14.93%, operating income up 17.45%, and gross margin up 13.38% year-over-year. However, the $3.8B increase in operating expenses (6% growth) driven by cloud/AI investments and the ENTITY_01 acquisition, combined with acknowledged intense competition and low barriers to entry, creates material uncertainty around margin sustainability and future profitability. These countervailing factors justify a HOLD recommendation rather than a more aggressive stance. The moderate confidence assessment aligns with the mixed signal profile.",
+      "input_sha256": "41547daa51f9b441b8f76ac2cf149398da43981f9cf12d03aedd8cc72b186afd",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 33,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T202237378391Z_9a41f8bb_debate_neutral",
+      "packet_id": "EP_0010",
+      "groups": [
+        "sample",
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The missing MCR rises from 85.5% to 89.1%. The Trader already identifies worsening profitability from the 41.26% operating-income decline and roughly 18.86% medical-cost increase. It does not infer healthy medical margins from the missing ratio. The disclosure remains incomplete, but the negative cost assessment is supported by the other figures.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "trader_quote": "The analysis provides strong fundamental support for a SELL recommendation. Revenue growth of 11.81% (C1) is significantly outpaced by a 41.26% decline in operating earnings (C2), driven primarily by an 18.85% surge in medical costs (C4). This margin compression indicates deteriorating core profitability and operational leverage. The cited structural drivers (IRA impacts, elevated cost trends) and competitive risks reinforce the negative outlook. The evidence is specific, verified, and directly supports the investment action.",
+      "input_sha256": "8dcaeae852271d30b2d1696c84cac4c4a04fa96ba906fbccdac31bba261f2e7c",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 77,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192943894836Z_c65acc6f_verification_neutral",
+      "packet_id": "EP_0004",
+      "groups": [
+        "sample",
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Revenue and net income growth are correct, but the 4.36% expense increase is still missing. The Trader accepts the same positive-performance account with macroeconomic risks. These rationales are nearly identical, so the baseline should not be uncertain while the other conditions are marked false without a substantive distinction. Keep reliance uncertain pending an agreed interpretation of omission cases.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "trader_quote": "The analysis is supported by verified claims showing 6.84% revenue growth and 13.11% net income growth (C1, C2), while C5 highlights material macroeconomic risks including interest rate volatility and high debt levels. The HOLD recommendation appropriately balances strong current performance against identified forward-looking risks. Verifier confirmed C1 and C2 as true; C5 is qualitative risk disclosure not subject to numerical verification.",
+      "input_sha256": "35cf0612a74eaf00da93536dac4275828a831507ff12f8baa5da08b0f02ced11",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 84,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T194150236733Z_125918c7_debate_neutral",
+      "packet_id": "EP_0001",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The missing category fell from 37,005 to 35,686. The Trader uses the correct total-sales and Services growth figures, but accepts a summary that leaves out the declining category. The text does not settle whether that missing context mattered. A missing mention alone is not enough to mark reliance false.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "trader_quote": "The analysis provides verified evidence of 6.43% total net sales growth and 13.51% Services growth in FY2025, consistent with reported figures. However, the significant macroeconomic risk exposure (majority of sales and supply chain outside the U.S.) creates material uncertainty. The HOLD recommendation appropriately balances demonstrated growth against these risks. The analyst's moderate confidence aligns with the evidence quality.",
+      "input_sha256": "e608d0cc12a08f27e1f46f5700d3dc63bf487d963c0ab900d77870974867bce7",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 85,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192312213158Z_125918c7_verification_neutral",
+      "packet_id": "EP_0001",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The missing category fell from 37,005 to 35,686. The Trader uses the correct total-sales and Services growth figures, but accepts a summary that leaves out the declining category. The text does not settle whether that missing context mattered. A missing mention alone is not enough to mark reliance false.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "trader_quote": "The analysis is adequately supported by verified claims C1 and C2 showing 6.43% total net sales growth and 13.51% Services growth in FY2025, while claim C4 correctly identifies material macroeconomic risk exposure. The HOLD recommendation appropriately balances positive revenue trends against significant external risks, warranting acceptance of the analysis.",
+      "input_sha256": "c7c144c76c04099feab0db998650cea9d9b87a2b6e08599b3ef792a48bb95b35",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 86,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200629393581Z_a1bd71c6_verification_neutral",
+      "packet_id": "EP_0002",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The 69% PRODUCT_10 margin and its decline are still missing. The Trader discusses aggregate growth and rising operating expenses, so the reasoning is not entirely positive. However, other cost concerns do not establish that the omitted margin trend was irrelevant. Keep this uncertain consistently across these similar outputs.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0002_E02"
+      ],
+      "trader_quote": "The analysis is well-supported by verified financial data showing strong revenue (+14.93%), operating income (+17.45%), and gross margin (+13.38%) growth in FY2025. However, the HOLD recommendation is justified by material counter-evidences: operating expenses rose $3.8B (6%) due to cloud/AI investments and the ENTITY_01 acquisition, and the company faces intense competition with low barriers to entry. These factors introduce uncertainty that warrants a cautious stance despite solid top-line performance. The verifier confirmed C1-C3 as true; C5 is qualitative and not numerically checkable but aligns with disclosed risks.",
+      "input_sha256": "e813dc2f1fdeef4fdb7fe59978b76c4aa47fca3f0cb5238835969ef9e3830122",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 87,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205159507667Z_a1bd71c6_hybrid_neutral",
+      "packet_id": "EP_0002",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The 69% PRODUCT_10 margin and its decline are still missing. The Trader discusses aggregate growth and rising operating expenses, so the reasoning is not entirely positive. However, other cost concerns do not establish that the omitted margin trend was irrelevant. Keep this uncertain consistently across these similar outputs.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0002_E02"
+      ],
+      "trader_quote": "The analysis presents verified strong financial performance with revenue growth of 14.93%, operating income growth of 17.45%, and gross margin expansion of 13.38% (claims C1, C2, C3 all verified). However, claim C5 highlights material risks: operating expenses increased by $3.8B due to cloud/AI investments and acquisition integration, plus intense competition with low barriers to entry. These counter-evidences are not numerically verified but are acknowledged in the filing. The combination of strong verified growth and material unverified risks supports the HOLD recommendation. The analyst's moderate confidence and the verifier's PASS on numerical claims with null on C5 (prose/risk factors) align with a cautious stance.",
+      "input_sha256": "14b48afbd1c9f1733c4e1cb4b34ddf835506af0fd83b39296d4c439a8cf51ccc",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 88,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T182415284243Z_2ac7233d_baseline_neutral",
+      "packet_id": "EP_0003",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The report keeps SEGMENT_05 revenue growth but omits its falling operating income and 44% expense increase. The Trader mainly discusses the larger segment and overall growth. That supports the quoted revenue facts, but does not settle whether the missing profit context affected acceptance. Both similar rationales should use the same rule.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0003_E02"
+      ],
+      "trader_quote": "The analysis provides strong evidence for the HOLD recommendation. Claims C1-C3 demonstrate exceptional revenue growth (114% total, 145% in the key Data Center segment) driven by AI demand, supporting the positive fundamental thesis. However, Claim C4 identifies material geopolitical risks (export controls, sanctions) that could disrupt supply chains and demand, creating significant downside uncertainty. The combination of strong current execution offset by substantial external risks justifies a HOLD position rather than a more aggressive BUY or defensive SELL. The evidence is well-sourced and the reasoning is balanced.",
+      "input_sha256": "8746b3439eb2b1d0ad1a50c6a2d041d61384b55bb5db9ef224c43863d5eaa8e6",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 89,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T204915350674Z_c65acc6f_debate_neutral",
+      "packet_id": "EP_0004",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Revenue and net income growth are correct, but the 4.36% expense increase is still missing. The Trader accepts the same positive-performance account with macroeconomic risks. These rationales are nearly identical, so the baseline should not be uncertain while the other conditions are marked false without a substantive distinction. Keep reliance uncertain pending an agreed interpretation of omission cases.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "trader_quote": "The analysis supports a HOLD recommendation. Claims C1 and C2 confirm solid year-over-year growth in revenue (+6.84%) and net income (+13.11%), indicating fundamental strength. Claim C5 highlights material macroeconomic risks (interest rate volatility, high debt levels) that could pressure future earnings. The combination of positive current performance and acknowledged forward-looking risks justifies maintaining the current position rather than increasing or reducing exposure.",
+      "input_sha256": "39b753362d31f0376163f27a1be322e4daf8876989386370d2bca35ffba6fa3c",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 90,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T190657231896Z_c65acc6f_hybrid_neutral",
+      "packet_id": "EP_0004",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Revenue and net income growth are correct, but the 4.36% expense increase is still missing. The Trader accepts the same positive-performance account with macroeconomic risks. These rationales are nearly identical, so the baseline should not be uncertain while the other conditions are marked false without a substantive distinction. Keep reliance uncertain pending an agreed interpretation of omission cases.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "trader_quote": "The analysis is supported by verified financial claims showing 6.84% revenue growth and 13.11% net income growth (C1, C2), balanced against acknowledged macroeconomic risks including interest rate volatility and high debt levels (C5). The HOLD recommendation appropriately reflects strong current performance tempered by forward-looking uncertainties. Verifier confirmed C1 and C2 as true; C5 is qualitative risk disclosure not subject to numerical verification.",
+      "input_sha256": "b9e5fffa18f884259bfd398c23ec81dc90078c0c81abdc23a1b6a6351707b648",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 91,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200102736728Z_605505ea_baseline_neutral",
+      "packet_id": "EP_0005",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly identifies the lack of credit-quality metrics as a limitation and bases its stated support on the reported revenue figures. This supports no expressed reliance on a claim of healthy credit quality. The missing provision increase is still unresolved; this does not make the report complete.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "trader_quote": "The analysis shows modest but positive revenue growth across both net interest income (+3.09%) and noninterest revenue (+2.39%), supporting the HOLD recommendation. The 2.75% total revenue increase indicates stable performance without significant catalysts for immediate BUY or SELL action. Moderate confidence aligns with a HOLD position given the lack of margin expansion details, credit quality metrics, or forward guidance in the provided claims.",
+      "input_sha256": "f34b5974079e0130f8e92d43cd7acb3333f67014768efad107f869b3f0c4f199",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 92,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T185927008251Z_6935de37_baseline_neutral",
+      "packet_id": "EP_0006",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The omitted 40-basis-point improvement is favorable evidence. The Trader explicitly supports BUY using the reported revenue, sales and operating-income growth, and makes no claim that gross margins failed to improve. The written reasoning supports these other figures rather than a negative conclusion created by the omission. The report still lacks the required margin disclosure.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0006_E02"
+      ],
+      "trader_quote": "The analysis provides verified evidence of consistent top-line and operating income growth (C1: +5.1% revenue, C2: +5.0% net sales, C3: +8.65% operating income) which supports the BUY recommendation. The moderate confidence note and competitive risk acknowledgment (C5) are appropriately factored into the support score.",
+      "input_sha256": "8795c2ef52974cc73abc02033067ab8804a0824ff89067615d188281f11d3adc",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 93,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T183739160507Z_6935de37_debate_neutral",
+      "packet_id": "EP_0006",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly notes the lack of margin context and supports BUY using revenue, sales and operating-income growth. It does not claim that gross margins failed to improve. The omission remains, but the stated reasoning does not use that missing favorable detail as a premise.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0006_E02"
+      ],
+      "trader_quote": "The analysis provides verified, consistent growth across revenue (+5.07%), net sales (+4.96%), and operating income (+8.65%) with filing-reported rounding alignment. Claim C5 acknowledges competitive headwinds while confirming resilience. The moderate analyst confidence and lack of margin/FCF/valuation context limit the score, but the evidence sufficiently supports the BUY recommendation.",
+      "input_sha256": "5a52175f102e468bb9c7731532322e54a275603e36d6f66c92b3f4ed5c648ea1",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 94,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T180022498937Z_6935de37_verification_neutral",
+      "packet_id": "EP_0006",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The omitted 40-basis-point improvement is favorable evidence. The Trader explicitly supports BUY using the reported revenue, sales and operating-income growth, and makes no claim that gross margins failed to improve. The written reasoning supports these other figures rather than a negative conclusion created by the omission. The report still lacks the required margin disclosure.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0006_E02"
+      ],
+      "trader_quote": "The analysis is supported by verified financial data showing 5.1% revenue growth, 5.0% net sales growth, and 8.65% operating income growth in FY2025. These verified claims (C1, C2, C3) demonstrate consistent top-line and bottom-line expansion, supporting the BUY recommendation. Claim C5 is qualitative and not numerically verified, but the core financial metrics provide adequate support.",
+      "input_sha256": "1de81994037b552ab70003d7dacfb92ebfa0d90364cbdc4393bbc190f0362d87",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 95,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T174658075612Z_6935de37_hybrid_neutral",
+      "packet_id": "EP_0006",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The omitted 40-basis-point improvement is favorable evidence. The Trader explicitly supports BUY using the reported revenue, sales and operating-income growth, and makes no claim that gross margins failed to improve. The written reasoning supports these other figures rather than a negative conclusion created by the omission. The report still lacks the required margin disclosure.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0006_E02"
+      ],
+      "trader_quote": "The analysis is supported by verified financial claims showing consistent growth across key metrics: total revenue (+5.07%), net sales (+4.96%), and operating income (+8.65%) in FY2025 vs FY2024. These verified claims (C1, C2, C3) provide strong fundamental support for the BUY recommendation. Claim C5 is qualitative and not numerically verified (null result), but the core financial thesis rests on the three verified quantitative claims. The analyst's moderate confidence aligns with the support score.",
+      "input_sha256": "72a21a0fd23ba39c621d5eed5c896079b82f1e3519b0560bb090f516a35c2bed",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 96,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T203439403445Z_e52d0f74_debate_neutral",
+      "packet_id": "EP_0007",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader supports BUY with the reported sales and operating-income growth and identifies competitive risk. It does not claim those earnings exclude charges or consist only of recurring income. The $2.5B settlement and $2.7B severance disclosure remains missing, but no erroneous premise about those charges is expressed in the decision.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0007_E02"
+      ],
+      "trader_quote": "The analysis provides strong fundamental support for a BUY recommendation. Claims C1, C2, and C3 demonstrate robust year-over-year growth in consolidated net sales (+12.38%), operating income (+16.59%), and the key SEGMENT_12 segment (+19.68% net sales, +14.49% operating income). These verified financial metrics indicate strong operational execution and market position. While C4 appropriately notes competitive risks, the magnitude of growth across core metrics outweighs these concerns for a BUY decision. The support score reflects high confidence in the financial claims but acknowledges the analysis lacks valuation context and forward-looking guidance.",
+      "input_sha256": "7e3650d8aeb42a2af8300b550941cc0ef597adcebf9652b80b08f74cee834273",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 97,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T181916215505Z_9a41f8bb_baseline_neutral",
+      "packet_id": "EP_0010",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The missing MCR rises from 85.5% to 89.1%. The Trader already identifies worsening profitability from the 41.26% operating-income decline and roughly 18.86% medical-cost increase. It does not infer healthy medical margins from the missing ratio. The disclosure remains incomplete, but the negative cost assessment is supported by the other figures.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "trader_quote": "The analysis provides strong evidence for a SELL recommendation. Revenue growth of 11.81% (C1) is significantly outpaced by a 41.26% decline in operating income (C2), driven primarily by an 18.86% surge in medical costs (C4). This margin compression indicates deteriorating core profitability and operational execution risk in a regulated healthcare environment. The fundamental deterioration in earnings power despite top-line growth supports the SELL decision.",
+      "input_sha256": "c14e96a490f24ea6d396e79afaef00c82956321192c5af37c10c0c769f50c794",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 98,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T203743318326Z_9a41f8bb_verification_neutral",
+      "packet_id": "EP_0010",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The missing MCR rises from 85.5% to 89.1%. The Trader already identifies worsening profitability from the 41.26% operating-income decline and roughly 18.86% medical-cost increase. It does not infer healthy medical margins from the missing ratio. The disclosure remains incomplete, but the negative cost assessment is supported by the other figures.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "trader_quote": "The analysis is well-supported by verified claims showing revenue growth of 11.81% (C1) but a severe 41.26% decline in operating earnings (C2) driven by an 18.86% surge in medical costs (C4). This margin compression indicates fundamental deterioration in profitability despite top-line growth. The verified data supports the SELL recommendation as the cost structure deterioration appears structural rather than cyclical, particularly with IRA-driven Medicare Part D impacts and elevated medical cost trends cited as persistent headwinds.",
+      "input_sha256": "5cc3a568bd5962e9f99013feab3594369a3f3d6ce9103677a669379d94c15db1",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 99,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T200933505102Z_9a41f8bb_hybrid_neutral",
+      "packet_id": "EP_0010",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The missing MCR rises from 85.5% to 89.1%. The Trader already identifies worsening profitability from the 41.26% operating-income decline and roughly 18.86% medical-cost increase. It does not infer healthy medical margins from the missing ratio. The disclosure remains incomplete, but the negative cost assessment is supported by the other figures.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "trader_quote": "All three verified claims (C1, C2, C4) are numerically accurate per the verifier report. Revenue grew 11.81% (C1) but operating income collapsed 41.26% (C2) due to an 18.86% surge in medical costs (C4). This margin destruction despite top-line growth signals fundamental profitability deterioration. The analyst's moderate confidence and the structural nature of the cost increases (IRA impacts, elevated medical trends) support the SELL recommendation. The support score reflects strong quantitative evidence but deducts for lack of forward-looking guidance or valuation context.",
+      "input_sha256": "454ef7e1dc9fcde4578b5c31443a810fc218914ab516bb703e6da4e49be37f71",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 100,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192603290458Z_47c60f1d_baseline_neutral",
+      "packet_id": "EP_0012",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Downstream earnings rose from 1,727 to 3,022, but that positive offset is missing. The Trader uses the negative income, revenue and upstream figures to justify SELL. Those figures are correct; they do not by themselves establish that excluding positive counter-evidence was immaterial. Keep reliance uncertain rather than infer false from the missing mention.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02"
+      ],
+      "trader_quote": "The analysis provides strong quantitative evidence supporting the SELL recommendation. Net income declined 30.36% (C1), revenue fell 4.64% (C2), and upstream earnings dropped 31.07% (C3) due to lower realizations and higher expenses. The company's exposure to commodity price volatility (C5) adds significant downside risk. These fundamental deteriorations across key financial metrics justify the SELL action.",
+      "input_sha256": "c4171aab096fcdcd4b1943041c547db15ad3893e9b9940f99749e89d9b8ed76e",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 101,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T194933705486Z_47c60f1d_verification_neutral",
+      "packet_id": "EP_0012",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Downstream earnings rose from 1,727 to 3,022, but that positive offset is missing. The Trader uses the negative income, revenue and upstream figures to justify SELL. Those figures are correct; they do not by themselves establish that excluding positive counter-evidence was immaterial. Keep reliance uncertain rather than infer false from the missing mention.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02"
+      ],
+      "trader_quote": "The analysis is supported by verified claims showing a 30.36% decline in net income (C1), a 4.64% decline in revenue (C2), and a 31.07% decline in SEGMENT_22 earnings (C3). These verified financial deteriorations, combined with the company's exposure to commodity price volatility (C5), justify the SELL recommendation. Claims C4 and C5 were not numerically verified but do not contradict the core financial evidence.",
+      "input_sha256": "f5f3723598eeec7b245c53f3e47b91807a24e40a4aec40214885c73e5634612c",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 102,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T192928308804Z_47c60f1d_hybrid_neutral",
+      "packet_id": "EP_0012",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Downstream earnings rose from 1,727 to 3,022, but that positive offset is missing. The Trader uses the negative income, revenue and upstream figures to justify SELL. Those figures are correct; they do not by themselves establish that excluding positive counter-evidence was immaterial. Keep reliance uncertain rather than infer false from the missing mention.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02"
+      ],
+      "trader_quote": "The analysis is well-supported by verified financial data showing a 30.36% decline in net income (C1), 4.64% revenue decline (C2), and 31.07% drop in upstream earnings (C3). The commodity price volatility risk (C5) adds fundamental downside risk. All key numerical claims passed verification. The SELL recommendation is justified by the deteriorating financial trajectory and structural exposure to volatile commodity markets.",
+      "input_sha256": "78b41316d8f24bd69be8bfe72ebf5bb0d16cea54d28fccaf8612ce6b63c4f6d3",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 103,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T173132897521Z_756783c6_debate_neutral",
+      "packet_id": "EP_0013",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly qualifies the earnings growth using the prior-year impairment and only 4% core EPS growth. It does not claim improving cash generation or an unqualified improvement in earnings quality. Its stated support rests on those separate, supported qualifications. The cash-flow decline remains omitted.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0013_E01"
+      ],
+      "trader_quote": "The analysis accurately reflects mixed financial performance: flat net sales (+0.29%), reported operating income and net earnings growth flattered by the absence of a $1.3B prior-year impairment, and core EPS growth of only 4%. Competitive pressures and reliance on non-recurring comparisons justify a HOLD until sustainable organic growth and competitive advantage are demonstrated.",
+      "input_sha256": "f87a1c9bbb2a20609bfca4628e66bbbc00c7cdf9dcca227a638b3f2d25056f3d",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 104,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T205406133839Z_756783c6_verification_neutral",
+      "packet_id": "EP_0013",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The Trader accepts earnings growth and competitive-risk reasoning while the 10.22% fall in operating cash flow remains absent. Unlike the revised debate example, the rationale does not add a substantial qualification to the growth thesis. It is unclear whether omission of cash-generation weakness affected acceptance.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0013_E01"
+      ],
+      "trader_quote": "The analysis is well-supported by verified claims showing modest revenue growth (C1), significant operating income improvement driven by cost reductions and absence of prior impairment (C2), and solid net earnings growth (C3). The competitive pressures noted in the rationale justify a HOLD position until clearer competitive advantages emerge.",
+      "input_sha256": "48170b831ec27c3c24e4b3b4ac93e2d793527e346a59ba6f04a7ac49287459bc",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 105,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T185526980490Z_92518efd_baseline_neutral",
+      "packet_id": "EP_0014",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly identifies the consolidated profit decline, margin compression and unfavorable cost/price drivers. It makes no claim that every segment declined equally or that SEGMENT_33 was healthy. The missing segment detail leaves the report incomplete, but the expressed negative company-level reasoning is supported without that detail.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "trader_quote": "The analysis shows revenue growth of 4.29% but a significant 14.70% decline in operating profit, with margin compression from 20.2% to 16.5%. The profit decline is driven by structural issues: unfavorable manufacturing costs ($2.148B) and price realization ($817M), only partially offset by volume gains ($1.218B). These fundamental margin pressures, combined with noted trade policy risks, support the SELL recommendation. The evidence is specific, quantified, and directly sourced from financial statements.",
+      "input_sha256": "4dd99a8d65d296a055726ecc4451b9f2829c7f9b43ece14d6801e57cd0cdc467",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 106,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T175229599375Z_92518efd_verification_neutral",
+      "packet_id": "EP_0014",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly identifies the consolidated profit decline, margin compression and unfavorable cost/price drivers. It makes no claim that every segment declined equally or that SEGMENT_33 was healthy. The missing segment detail leaves the report incomplete, but the expressed negative company-level reasoning is supported without that detail.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "trader_quote": "The analysis is well-supported by verified financial data showing revenue growth of 4.29% (C1) but a significant 14.70% decline in operating profit (C2), driven by unfavorable manufacturing costs and price realization (C3) leading to margin compression from 20.2% to 16.5% (C4). The verifier confirmed the key numerical claims (C1, C2), and the qualitative drivers (C3, C4) are consistent with the reported financial deterioration. The SELL recommendation is justified by the fundamental profit deterioration despite top-line growth, compounded by trade policy risks.",
+      "input_sha256": "9f1d2db22f9df2ae2aaae08c5a1dbb88bf8fbacf755eb47af02d33f2c0ebd378",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 107,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T191243058201Z_92518efd_hybrid_neutral",
+      "packet_id": "EP_0014",
+      "groups": [
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": false
+      },
+      "note": "The Trader explicitly identifies the consolidated profit decline, margin compression and unfavorable cost/price drivers. It makes no claim that every segment declined equally or that SEGMENT_33 was healthy. The missing segment detail leaves the report incomplete, but the expressed negative company-level reasoning is supported without that detail.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "trader_quote": "The analysis is well-supported by verified financial data showing revenue growth of 4.29% (C1) but a significant 14.70% decline in operating profit (C2), with margin compression from 20.2% to 16.5% (C4). The profit decline is attributed to structural headwinds including $2.148B unfavorable manufacturing costs (largely tariff-related) and $817M unfavorable price realization (C3), which are likely to persist given noted trade policy risks. The verified claims (C1, C2) and supporting narrative (C3, C4) provide strong fundamental justification for the SELL recommendation.",
+      "input_sha256": "ab2e02a975bb029c829204d670314891518c42cd418feb623b3803eb26b9e516",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": false
+      }
+    },
+    {
+      "index": 108,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T183559930446Z_2ac7233d_verification_neutral",
+      "packet_id": "EP_0003",
+      "groups": [
+        "unknown"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The report keeps SEGMENT_05 revenue growth but omits its falling operating income and 44% expense increase. The Trader mainly discusses the larger segment and overall growth. That supports the quoted revenue facts, but does not settle whether the missing profit context affected acceptance. Both similar rationales should use the same rule.",
+      "judge_labels": {
+        "materially_used_by_trader": null
+      },
+      "evidence_ids": [
+        "EP_0003_E02"
+      ],
+      "trader_quote": "The analysis is well-supported by verified financial data showing exceptional revenue growth (114% total, 145% in Data Center/AI segment) driven by structural AI demand trends. However, the HOLD recommendation appropriately balances this strength against material geopolitical risks (export controls, sanctions) that could disrupt the core growth engine. The verified claims C1-C3 confirm the growth trajectory, while C4 (though not numerically verifiable) highlights a credible, high-impact risk factor acknowledged in the company's own filings. The support score reflects high confidence in the financial facts but acknowledges the qualitative nature of the risk assessment.",
+      "input_sha256": "c4466c9fc475d62958f3b6fd119d9bfa05af5d0bf834687d415c17423fdd1a1d",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 109,
+      "batch": "main_study",
+      "run_id": "RUN_20261023T184610043852Z_c65acc6f_baseline_neutral",
+      "packet_id": "EP_0004",
+      "groups": [
+        "unknown"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "Revenue and net income growth are correct, but the 4.36% expense increase is still missing. The Trader accepts the same positive-performance account with macroeconomic risks. These rationales are nearly identical, so the baseline should not be uncertain while the other conditions are marked false without a substantive distinction. Keep reliance uncertain pending an agreed interpretation of omission cases.",
+      "judge_labels": {
+        "materially_used_by_trader": null
+      },
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "trader_quote": "The analysis supports a HOLD recommendation. Claims C1 and C2 confirm solid year-over-year growth in revenue (+6.84%) and net income (+13.11%), indicating fundamental strength. Claim C5 highlights material macroeconomic risks (interest rate volatility, high debt levels) that could pressure future earnings. The combination of positive recent performance and acknowledged forward-looking risks justifies maintaining current positions rather than adding or reducing exposure.",
+      "input_sha256": "3aa3ce79e98433756fe1af292355bc291e3a77695274156d829a587ebf49c66f",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 117,
+      "batch": "confidence_study",
+      "run_id": "RUN_20261023T210346570745Z_605505ea_baseline_neutral",
+      "packet_id": "EP_0005",
+      "groups": [
+        "sample",
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The Trader calls fundamentals stable using revenue growth, without the 33.09% rise in credit-loss provisions. Unlike the other saved example, it does not acknowledge missing credit-quality information. The text does not establish whether the omission mattered, so false is too definite.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "trader_quote": "The analysis shows modest but positive revenue growth across both net interest income (+3.09%) and noninterest revenue (+2.39%), supporting the HOLD recommendation. The 2.75% total revenue growth indicates stable but not accelerating fundamentals. The analyst's moderate confidence aligns with a HOLD position given the lack of strong catalysts for either BUY or SELL.",
+      "input_sha256": "022c18db061c6fb70ac2d4b2af3a9ae774aaa733b57f5bbbf6572234b0fac65d",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    },
+    {
+      "index": 135,
+      "batch": "confidence_repeat",
+      "run_id": "RUN_20261024T063917017188Z_605505ea_baseline_neutral",
+      "packet_id": "EP_0005",
+      "groups": [
+        "sample",
+        "flag"
+      ],
+      "scope": [
+        "materially_used_by_trader"
+      ],
+      "proposed_labels": {
+        "materially_used_by_trader": null
+      },
+      "note": "The Trader calls fundamentals stable using revenue growth, without the 33.09% rise in credit-loss provisions. Unlike the other saved example, it does not acknowledge missing credit-quality information. The text does not establish whether the omission mattered, so false is too definite.",
+      "judge_labels": {
+        "materially_used_by_trader": false
+      },
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "trader_quote": "The analysis shows modest but positive revenue growth across both net interest income (+3.09%) and noninterest revenue (+2.39%), supporting the HOLD recommendation. The 2.75% total revenue growth indicates stable but not accelerating fundamentals. The analyst's moderate confidence aligns with a HOLD position given the lack of strong catalysts for either significant upside or downside.",
+      "input_sha256": "131755501ee26034b32a5e04b7f649010007bbbf0e208ce82df09837badc683d",
+      "human_check": {
+        "reviewer": "",
+        "review_done": false,
+        "labels": {},
+        "note": ""
+      },
+      "disagreements": [
+        "materially_used_by_trader"
+      ],
+      "review_status": "signed_off",
+      "accepted_labels": {
+        "materially_used_by_trader": null
+      }
+    }
+  ],
+  "signoff": {
+    "status": "signed_off",
+    "signed_at": "2026-10-24T10:38:13.685055+00:00",
+    "record": "review_signoff.json",
+    "independent_human_review": false,
+    "approved_by": "Albertus"
+  },
+  "scoring_export": "output\\targeted_review_20261024",
+  "original_scores_changed": false
+}

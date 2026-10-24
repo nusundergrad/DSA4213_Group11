@@ -1,2 +1,5 @@
 # Source hashes and character offsets must survive checkout on every OS.
 data/benchmark/**/sources/*.txt text eol=lf
+
+# Preserve the saved evaluation bytes used by source hashes.
+output/*_20261024/** -text whitespace=cr-at-eol

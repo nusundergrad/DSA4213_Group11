@@ -1,7 +1,9 @@
 # DSA4213 Agent Benchmark
 
 A LangGraph multi-agent system that reviews financial reports, plus the benchmark and evaluation
-pipeline that measures whether it catches planted errors. Start with [the current experiment workflow](docs/running-experiments.md) for commands, benchmark coverage and the supplementary challenge test.
+pipeline that measures whether it catches planted errors. Read the [final findings](output/final_evaluation_20261024/findings.md),
+or open [explore_results.ipynb](experiments/explore_results.ipynb) and click **Run All**. Saved results are included. The
+[short evaluation guide](docs/running-experiments.md) covers saved results, sharing and rebuilding.
 
 - [1. What the pipeline does](#1-what-the-pipeline-does)
 - [2. Setup](#2-setup)

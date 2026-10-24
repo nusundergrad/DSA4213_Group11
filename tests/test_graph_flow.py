@@ -167,3 +167,77 @@ def test_batch_records_are_complete_resumable_and_adaptable(fake, tmp_path, monk
     score = auto_score_run(debate, cases[debate.case_id], load_clean_report(manifest[debate.case_id]))
     assert score.risk_manager_detected is None                           # matching type+value is only a suggestion
     assert score.scoring_provenance["rm_suggestion"] is True
+
+
+@pytest.mark.parametrize('status', [401, 402, 403, 429])
+def test_auth_quota_stops_calls_and_batch_without_a_numeric_message(status, fake, tmp_path, monkeypatch):
+    import httpx
+    from openrouter.errors import OpenRouterError, TooManyRequestsResponseError, TooManyRequestsResponseErrorData
+    body = {'error': {'code': status, 'message': 'Request limit reached'}}
+    response = httpx.Response(status, json=body)
+    if status == 429:
+        error = TooManyRequestsResponseError(TooManyRequestsResponseErrorData.model_validate(body), response)
+    else:
+        error = OpenRouterError('Request limit reached', response)
+    assert str(status) not in str(error)
+    calls = []
+
+    def unavailable(*args, **kwargs):
+        calls.append(1)
+        raise error
+
+    monkeypatch.setattr(fake, 'invoke', unavailable)
+    monkeypatch.setattr(agent, 'MAX_MODEL_RETRIES', 3)
+    monkeypatch.setattr(agent.time, 'sleep', lambda _: pytest.fail('quota errors must not be retried'))
+    cases_file = tmp_path / 'cases.json'
+    cases_file.write_text(json.dumps([
+        {'evidence_packet': 'EP_0001', 'report': 'clean', 'situation': 0},
+        {'evidence_packet': 'EP_0001', 'report': 'error_03_arithmetic', 'situation': 0}]))
+    records = graph.run_batch(cases_file, dataset_root=ROOT / 'public', output_root=tmp_path / 'runs')
+    assert len(calls) == len(records) == 1
+    saved = json.loads(next((tmp_path / 'runs/EP_0001').rglob('*.json')).read_text(encoding='utf-8'))
+    assert saved['status'] == 'failed' and saved['error_status_code'] == status
+    assert saved['model_calls'][0]['error_status_code'] == status
+    assert graph.record_error_status(saved) == status
+
+
+def test_error_object_inside_http_success_is_still_detected():
+    import httpx
+    from openrouter.errors import ResponseValidationError
+    response = httpx.Response(200, json={'error': {'code': 429, 'message': 'Limit reached'}})
+    error = ResponseValidationError('Invalid provider response', response, ValueError('missing choices'))
+    wrapped = RuntimeError('Model call failed')
+    wrapped.__cause__ = error
+    assert agent.error_status_code(wrapped) == 429
+    error.__context__ = wrapped     # exception cycles cannot hang the classifier
+    assert agent.error_status_code(wrapped) == 429
+
+
+def test_legacy_record_quota_detection_uses_raw_response():
+    record = {'status': 'failed', 'error': 'TooManyRequestsResponseError: Limit reached',
+              'model_calls': [{'raw_response': json.dumps({'error': {'code': 429, 'message': 'Limit reached'}})}]}
+    assert graph.record_error_status(record) == 429
+    record['status'] = 'completed'
+    assert graph.record_error_status(record) is None
+
+
+@pytest.mark.parametrize('message', ['Evidence ID E429 is unknown', 'Value 401.25 is invalid'])
+def test_numbers_in_validation_errors_do_not_stop_the_next_condition(message, fake, tmp_path, monkeypatch):
+    def invalid(*args, **kwargs):
+        raise ValueError(message)
+
+    monkeypatch.setattr(fake, 'invoke', invalid)
+    monkeypatch.setattr(agent, 'MAX_MODEL_RETRIES', 1)
+    cases_file = tmp_path / 'cases.json'
+    cases_file.write_text(json.dumps([
+        {'evidence_packet': 'EP_0001', 'report': 'clean', 'situation': s} for s in (0, 2)]))
+    records = graph.run_batch(cases_file, dataset_root=ROOT / 'public', output_root=tmp_path / 'runs')
+    assert len(records) == 2
+    assert all(r['status'] == 'failed' and graph.record_error_status(r) is None for r in records)
+
+
+def test_transient_provider_failure_is_not_classified_as_quota():
+    import httpx
+    from openrouter.errors import OpenRouterError
+    assert agent.error_status_code(OpenRouterError('Overloaded', httpx.Response(503))) == 503
+    assert 503 not in agent.AUTH_QUOTA_STATUSES

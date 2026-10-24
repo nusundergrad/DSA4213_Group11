@@ -98,6 +98,9 @@ def primary_metrics(runs, scores, tone="neutral", architectures=ARCHITECTURES, d
                       and r.risk_manager_turns[0].get('challenges') is not None]
         out[arch] = dict(
             coverage=dict(flawed_total=len(flawed), flawed_scored=len(eligible_f),
+                          flawed_completed=len(completed_f),
+                          detection_pending=(sum(s.detected is None for _, s in completed_f)
+                                             if arch != 'baseline' else None),
                           clean_total=len(clean), clean_scored=len(eligible_c),
                           output_reviewed=sum(s.new_error_present is not None for _, s in completed),
                           output_total=len(completed),
@@ -251,11 +254,21 @@ def format_report(runs, scores, cases, title="Evaluation report", *, repeat_runs
              "ACCEPT/REJECT assesses report support. BUY/HOLD/SELL is a separate investment action; HOLD does not mean REJECT.", "",
              "| architecture | detection | correction after detection | resolution | accepted unresolved | FAR | TAR | challenges on initial controls | fully scored flawed | failed |",
              "|---|---|---|---|---|---|---|---|---|---|"]
-    for arch, m in primary_metrics(runs, scores).items():
+    primary = primary_metrics(runs, scores)
+    for arch, m in primary.items():
         c = m["coverage"]
         lines.append(f"| {arch} | {_fmt_rate(m['detection'])} | {_fmt_rate(m['correction'])} | {_fmt_rate(m['resolution'])} | {_fmt_rate(m['accepted_unresolved'])} | {_fmt_rate(m['far'])} | "
                      f"{_fmt_rate(m['tar'])} | {_fmt_rate(m['false_challenge'])} | {c['flawed_scored']}/{c['flawed_total']} | {c['failed']} |")
-    lines += ['', 'Accepted unresolved counts ACCEPT with an unresolved injected defect, without requiring material reliance. REJECT or resolved means false; ACCEPT with unknown resolution stays unknown.',
+    lines += ['', 'Detection coverage (flawed inputs only):', '',
+              '| architecture | assigned | completed | detected | missed | pending detection | failed |',
+              '|---|---:|---:|---:|---:|---:|---:|---:|']
+    for arch, m in primary.items():
+        c, d = m['coverage'], m['detection']
+        detected, missed, pending = ((d['k'], d['n'] - d['k'], c['detection_pending'])
+                                     if arch != 'baseline' else ('n/a', 'n/a', 'n/a'))
+        lines.append(f"| {arch} | {c['flawed_total']} | {c['flawed_completed']} | {detected} | {missed} | {pending} | {c['flawed_total'] - c['flawed_completed']} |")
+    lines += ['', 'Detection uses detected / (detected + missed). Pending labels are unreviewed or uncertain, not misses. Do not rank architectures using incomplete, different subsets; inspect coverage and compare matched cases.',
+              'Accepted unresolved counts ACCEPT with an unresolved injected defect, without requiring material reliance. REJECT or resolved means false; ACCEPT with unknown resolution stays unknown.',
               'FAR additionally requires material reliance. Unknown reliance stays pending, even if a claim ID was cited. Review automatic reliance labels against the rationale.',
               'TAR means acceptance when the input is a clean control; it does not establish that later revisions stayed correct. Resolution concerns the injected defect, not certification that no new error appeared.',
               'Control challenges are an observed rate, not automatically false challenges; their validity needs review.',
