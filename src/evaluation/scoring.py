@@ -62,11 +62,12 @@ def score_run(run: RunRecord, case: Case, *, verifier_detected=None, risk_manage
         # A reviewer checks the challenge against the frozen detection criterion.
         if risk_manager_detected is not None and type(risk_manager_detected) is not bool:
             raise ValueError("risk_manager_detected must be bool or None")
+        # Reviewed detection can appear in an overall assessment or a mislabelled challenge.
         if risk_manager_detected is True and not any(
-            challenge.get("target_claim_id") is None or challenge.get("target_claim_id") == target
-            for turn in run.risk_manager_turns for challenge in (turn.get("challenges") or [])
+            turn.get('challenges') or turn.get('overall_assessment') or turn.get('text')
+            or turn.get('calibration_concern') for turn in run.risk_manager_turns
         ):
-            raise ValueError("risk_manager_detected=True requires a challenge on the target claim")
+            raise ValueError("risk_manager_detected=True requires recorded Risk Manager review content")
     else:
         risk_manager_detected = None
     detectors = []

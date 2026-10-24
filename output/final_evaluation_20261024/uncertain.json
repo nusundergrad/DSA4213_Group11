@@ -1,0 +1,515 @@
+[
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192014624787Z_4c22e44d_baseline_neutral",
+    "packet_id": "EP_0001",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205255703062Z_125918c7_baseline_neutral",
+    "packet_id": "EP_0001",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194150236733Z_125918c7_debate_neutral",
+    "packet_id": "EP_0001",
+    "architecture": "debate",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192312213158Z_125918c7_verification_neutral",
+    "packet_id": "EP_0001",
+    "architecture": "verification",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202416518000Z_dfca011d_baseline_neutral",
+    "packet_id": "EP_0002",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205305325773Z_a1bd71c6_baseline_neutral",
+    "packet_id": "EP_0002",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200629393581Z_a1bd71c6_verification_neutral",
+    "packet_id": "EP_0002",
+    "architecture": "verification",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205159507667Z_a1bd71c6_hybrid_neutral",
+    "packet_id": "EP_0002",
+    "architecture": "hybrid",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182415284243Z_2ac7233d_baseline_neutral",
+    "packet_id": "EP_0003",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201135438278Z_2ac7233d_debate_neutral",
+    "packet_id": "EP_0003",
+    "architecture": "debate",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183559930446Z_2ac7233d_verification_neutral",
+    "packet_id": "EP_0003",
+    "architecture": "verification",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181456107180Z_2ac7233d_hybrid_neutral",
+    "packet_id": "EP_0003",
+    "architecture": "hybrid",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194837748018Z_ccc7fd5c_baseline_neutral",
+    "packet_id": "EP_0004",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The rationale describes growth without the shifted year or inflated magnitude. It is ambiguous whether the erroneous temporal/numerical detail supports acceptance."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T180759387279Z_4b8ab56b_baseline_neutral",
+    "packet_id": "EP_0004",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The rationale describes growth without the shifted year or inflated magnitude. It is ambiguous whether the erroneous temporal/numerical detail supports acceptance."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T184610043852Z_c65acc6f_baseline_neutral",
+    "packet_id": "EP_0004",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204915350674Z_c65acc6f_debate_neutral",
+    "packet_id": "EP_0004",
+    "architecture": "debate",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192943894836Z_c65acc6f_verification_neutral",
+    "packet_id": "EP_0004",
+    "architecture": "verification",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190657231896Z_c65acc6f_hybrid_neutral",
+    "packet_id": "EP_0004",
+    "architecture": "hybrid",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200102736728Z_605505ea_baseline_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173550692328Z_605505ea_debate_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "debate",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182419245273Z_605505ea_verification_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "verification",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205053467573Z_6da581a6_hybrid_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "hybrid",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204051382050Z_0b1d3caf_baseline_neutral",
+    "packet_id": "EP_0007",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The rationale uses the correct growth magnitude or a generic acceleration claim without the shifted years. Expressed reliance on the wrong temporal comparison is uncertain."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194823540159Z_2cbf4647_baseline_neutral",
+    "packet_id": "EP_0008",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the core automotive decline while preserving the overall decline and growing categories. Trader accepts that incomplete mix; whether the missing core explanation materially supports its rationale remains uncertain."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185309151212Z_2cbf4647_debate_neutral",
+    "packet_id": "EP_0008",
+    "architecture": "debate",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the core automotive decline while preserving the overall decline and growing categories. Trader accepts that incomplete mix; whether the missing core explanation materially supports its rationale remains uncertain."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204720969841Z_2cbf4647_verification_neutral",
+    "packet_id": "EP_0008",
+    "architecture": "verification",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the core automotive decline while preserving the overall decline and growing categories. Trader accepts that incomplete mix; whether the missing core explanation materially supports its rationale remains uncertain."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190453189852Z_2cbf4647_hybrid_neutral",
+    "packet_id": "EP_0008",
+    "architecture": "hybrid",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits the core automotive decline while preserving the overall decline and growing categories. Trader accepts that incomplete mix; whether the missing core explanation materially supports its rationale remains uncertain."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T184818764071Z_b14df659_baseline_neutral",
+    "packet_id": "EP_0009",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The rationale uses the correct growth magnitude or a generic acceleration claim without the shifted years. Expressed reliance on the wrong temporal comparison is uncertain."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191746070101Z_b5c24a96_baseline_neutral",
+    "packet_id": "EP_0010",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader repeats a valid historical magnitude but does not state the swapped reporting years. It is uncertain whether the erroneous period supports its assessment."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190202039463Z_c5557760_debate_neutral",
+    "packet_id": "EP_0010",
+    "architecture": "debate",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "E01 defines MCR as medical costs/premiums, so rising 85.5% to 89.1% means higher, not lower, cost share. Reviewer identifies this and final C3/rationale correct it; other calculations match E01 within tolerance. Trader newly declares the deterioration structural, not cyclical, and a broken business model. The packet supports cost pressures but not that categorical persistence claim; whether this is a material new factual overstatement or interpretive judgement remains uncertain."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173604694722Z_f88bf615_baseline_neutral",
+    "packet_id": "EP_0011",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits a positive volume/segment offset. Trader accepts on negative aggregate metrics and remaining risks, without enough evidence to establish whether the omitted positive context materially supports that one-sided account. Keep reliance unknown."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185353796407Z_416fd43b_baseline_neutral",
+    "packet_id": "EP_0011",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader repeats a valid historical magnitude but does not state the swapped reporting years. It is uncertain whether the erroneous period supports its assessment."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182433536270Z_6fe40860_baseline_neutral",
+    "packet_id": "EP_0011",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader lists cost savings among the driver breakdown and then refers broadly to negatives. It does not explicitly give the erroneous negative cost-saving contribution, so whether it adopted that reversed direction is ambiguous."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201334776318Z_f88bf615_verification_neutral",
+    "packet_id": "EP_0011",
+    "architecture": "verification",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits a positive volume/segment offset. Trader accepts on negative aggregate metrics and remaining risks, without enough evidence to establish whether the omitted positive context materially supports that one-sided account. Keep reliance unknown."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192603290458Z_47c60f1d_baseline_neutral",
+    "packet_id": "EP_0012",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits a positive volume/segment offset. Trader accepts on negative aggregate metrics and remaining risks, without enough evidence to establish whether the omitted positive context materially supports that one-sided account. Keep reliance unknown."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192024694449Z_597e40a2_baseline_neutral",
+    "packet_id": "EP_0012",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader repeats a valid historical magnitude but does not state the swapped reporting years. It is uncertain whether the erroneous period supports its assessment."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194933705486Z_47c60f1d_verification_neutral",
+    "packet_id": "EP_0012",
+    "architecture": "verification",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits a positive volume/segment offset. Trader accepts on negative aggregate metrics and remaining risks, without enough evidence to establish whether the omitted positive context materially supports that one-sided account. Keep reliance unknown."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201329891049Z_2fee21c5_hybrid_neutral",
+    "packet_id": "EP_0012",
+    "architecture": "hybrid",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "Reviewer identifies the denial of material commodity risk; final C5/rationale restore the E03 exposure and supported effects. Trader uses corrected downside risk but newly calls it unhedged. The packet gives no hedging-policy information; it is unclear whether this asserts absence of hedges or merely residual exposure. New-error label remains uncertain rather than certifying that added description."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192928308804Z_47c60f1d_hybrid_neutral",
+    "packet_id": "EP_0012",
+    "architecture": "hybrid",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The report omits a positive volume/segment offset. Trader accepts on negative aggregate metrics and remaining risks, without enough evidence to establish whether the omitted positive context materially supports that one-sided account. Keep reliance unknown."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T172647099414Z_06cf607d_baseline_neutral",
+    "packet_id": "EP_0013",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader refers to growth/decline without repeating the injected wrong magnitude or reporting years. Its stated rationale does not establish whether it used the erroneous detail."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T172644384458Z_ea2df27a_baseline_neutral",
+    "packet_id": "EP_0013",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader refers to growth/decline without repeating the injected wrong magnitude or reporting years. Its stated rationale does not establish whether it used the erroneous detail."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190458087157Z_4ccf4485_baseline_neutral",
+    "packet_id": "EP_0014",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader refers to growth/decline without repeating the injected wrong magnitude or reporting years. Its stated rationale does not establish whether it used the erroneous detail."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195724620604Z_0da3ca36_baseline_neutral",
+    "packet_id": "EP_0014",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader refers to growth/decline without repeating the injected wrong magnitude or reporting years. Its stated rationale does not establish whether it used the erroneous detail."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201016082308Z_220be927_baseline_neutral",
+    "packet_id": "EP_0015",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader refers to growth/decline without repeating the injected wrong magnitude or reporting years. Its stated rationale does not establish whether it used the erroneous detail."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205402576260Z_af662fc4_baseline_neutral",
+    "packet_id": "EP_0015",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Corporate and Other loss is omitted. Trader acknowledges consolidated weakness but accepts the core-segment strength account without the cause of the offset. Material reliance on the missing explanation remains ambiguous."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195709637195Z_af662fc4_verification_neutral",
+    "packet_id": "EP_0015",
+    "architecture": "verification",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Corporate and Other loss is omitted. Trader acknowledges consolidated weakness but accepts the core-segment strength account without the cause of the offset. Material reliance on the missing explanation remains ambiguous."
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194027183025Z_af662fc4_hybrid_neutral",
+    "packet_id": "EP_0015",
+    "architecture": "hybrid",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Corporate and Other loss is omitted. Trader acknowledges consolidated weakness but accepts the core-segment strength account without the cause of the offset. Material reliance on the missing explanation remains ambiguous."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211204221812Z_edafb358_baseline_neutral",
+    "packet_id": "EP_0002",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T205941872246Z_edafb358_baseline_overconfident",
+    "packet_id": "EP_0002",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210346570745Z_605505ea_baseline_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210351278332Z_605505ea_baseline_overconfident",
+    "packet_id": "EP_0005",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211226969629Z_6b321674_hybrid_overconfident",
+    "packet_id": "EP_0005",
+    "architecture": "hybrid",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211736000573Z_6b321674_hybrid_underconfident",
+    "packet_id": "EP_0005",
+    "architecture": "hybrid",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain."
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211811119519Z_605505ea_hybrid_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "hybrid",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain."
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064137766844Z_edafb358_baseline_neutral",
+    "packet_id": "EP_0002",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning."
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063917017188Z_605505ea_baseline_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063626507520Z_605505ea_hybrid_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "hybrid",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "Reviewer explicitly identifies the omitted E04 credit provisions. Final C4 and rationale restore 14212 versus 10678, about 33.10%; rounded 33.1% is supported. Other-income offsets and charge-offs match E01/E02/E04. However, the final report and Trader assert deteriorating credit conditions across both consumer and wholesale portfolios; E04 also attributes changes to volume and the card transaction. Whether that stronger causal reading is a new material overstatement is uncertain, so new-error status remains unknown."
+  }
+]

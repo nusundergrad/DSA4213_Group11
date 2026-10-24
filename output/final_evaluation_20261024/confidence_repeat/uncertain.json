@@ -1,0 +1,29 @@
+[
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064137766844Z_edafb358_baseline_neutral",
+    "packet_id": "EP_0002",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning."
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063917017188Z_605505ea_baseline_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "baseline",
+    "field": "false_acceptance",
+    "review_status": "reviewed_uncertain",
+    "reason": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality."
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063626507520Z_605505ea_hybrid_neutral",
+    "packet_id": "EP_0005",
+    "architecture": "hybrid",
+    "field": "new_error_present",
+    "review_status": "reviewed_uncertain",
+    "reason": "Reviewer explicitly identifies the omitted E04 credit provisions. Final C4 and rationale restore 14212 versus 10678, about 33.10%; rounded 33.1% is supported. Other-income offsets and charge-offs match E01/E02/E04. However, the final report and Trader assert deteriorating credit conditions across both consumer and wholesale portfolios; E04 also attributes changes to volume and the card transaction. Whether that stronger causal reading is a new material overstatement is uncertain, so new-error status remains unknown."
+  }
+]

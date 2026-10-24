@@ -1,0 +1,3322 @@
+{
+  "RUN_20261024T063435767992Z_7dc4aa92_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence and do not introduce new factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261024T062947597419Z_b9d5c02e_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence and do not introduce new factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261024T063153750847Z_3c372363_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ]
+  },
+  "RUN_20261024T063040438280Z_9f709243_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain new material factual errors; the Trader's mention of a 'PASS' on numerical assertions refers to the verifier's role in the process, not a new claim about the evidence itself.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ]
+  },
+  "RUN_20261024T063404417664Z_ed4cc6ce_hybrid_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Clean input. Final C3 and rationale newly claim that the filing reports rounded 14% segment operating-income growth. E02 contains 39834 and 45606, yielding about 14.49%, but no reported 14% figure. This is unsupported source attribution in the Analyst report; Trader does not repeat it. The separate approximate 24% adjusted growth calculation is defensible after adding $5.2B to 2025 income.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261024T063109043346Z_1833c917_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence provided; the calculation of the automotive decline (9.79%) and the absolute gains/losses are supported by the figures in EP_0008_E01.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01"
+    ]
+  },
+  "RUN_20261024T063149057873Z_4378b67a_hybrid_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Reviewer identifies omitted E01 talc reversal and prior charges; final C1/C4/rationale restore the qualification. But new C2 and rationale call 5.3% organic growth: 8.4%-3.1% removes currency but still includes the separately disclosed 1.1% acquisition impact. Excluding both gives about 4.2%. Trader repeats the new 5.3% organic assertion, so a new error remains after the injected omission is resolved.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261024T063304008442Z_07b36f6e_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are factually consistent with the provided evidence. The update to the cash and cash equivalents percentage change from 53.93% to 53.94% is a correct rounding adjustment based on the evidence values (10,681 and 23,187).",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261024T063504947482Z_44aa1169_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer rejects the unsupported claim that lower cash proves FY2026 inability to pay. Final C3/rationale remove it and identify missing debt-maturity/forward-cash-flow information. E02 supports capex 28.4B, dividends 17.2B, buybacks 20.3B, totaling 65.9B versus 51.97B operating cash flow. Trader repeats those supported facts and uncertainty. No new material error.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ]
+  },
+  "RUN_20261024T062913443415Z_425d1b26_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale and found no new material factual errors or unsupported assertions.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T195120981971Z_fa4c7c8c_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are factually consistent with the provided evidence. The calculated percentage changes (6.43%, 13.51%, and -3.56%) are accurate based on the values in EP_0001_E01, and the qualitative statements regarding drivers and risks match EP_0002 and EP_0003.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T180753702996Z_94d62860_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the only error present is the pre-existing injected error in claim C4.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T192014624787Z_4c22e44d_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01 assigns 391035 and 416161 to FY2024 and FY2025; C1 and the rationale retain the shifted years. No Risk Manager or revision. Trader repeats the correct 6.43% growth but no year, so reliance on the wrong period is ambiguous. Other repeated facts and risk statements are supported; no new final error found.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T205652147610Z_fa358ca7_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T205255703062Z_125918c7_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting omission.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T194347077325Z_37fa21d6_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader reasoning; no new material factual errors were introduced beyond the persisting injected defect.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T200624886801Z_51742c12_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies the existing error as the reason for rejection.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T195631473659Z_fa4c7c8c_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Final C2 and rationale newly attribute 13% FY2025 Services growth to the filing. EP_0001_E01 gives 14%; 13% belongs to the preceding year. The initial clean report did not contain this false attribution.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01"
+    ]
+  },
+  "RUN_20261023T200038260538Z_94d62860_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E03 says majority, not minority, of sales are outside the US. The reviewer explicitly detects the reversal and C4 plus rationale restore majority. Trader repeats the corrected geographic exposure and supported growth figures. No new final error; inaccurate 13% commentary occurs only in the intermediate reviewer response.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T195021911137Z_4c22e44d_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale were checked against the evidence and no new material factual errors were found.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T205019437340Z_fa358ca7_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence and correctly calculate the growth percentages.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T194150236733Z_125918c7_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not introduce new material factual errors; the changes made were presentational clarifications regarding rounding.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01"
+    ]
+  },
+  "RUN_20261023T194343164912Z_37fa21d6_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "E02 contains the Services commentary misattributed to E03. Risk Manager explicitly identifies that citation and the final C4 removes it. However, final C2 newly says the filing reports 13% Services growth; E01 reports 14% for FY2025 (13% is the prior-year column). This new source-attribution/period error is in the final report, not repeated by the Trader. The injected citation defect is resolved, so its reliance label is false.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T190800215603Z_51742c12_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence; the added context regarding rounded filing percentages is accurate based on EP_0001_E01.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01"
+    ]
+  },
+  "RUN_20261023T172736589180Z_fa4c7c8c_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence without introducing new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T183259283309Z_94d62860_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the only error present is the pre-existing injected error in C4.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T182734182673Z_4c22e44d_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T194719718492Z_fa358ca7_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report is identical to the initial report, and the Trader's rationale correctly identifies the existing error without introducing new material inaccuracies.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T192312213158Z_125918c7_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced. The final report is identical to the initial report in its factual assertions.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T203820074930Z_37fa21d6_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T181501745911Z_51742c12_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The price-doubling guarantee is absent from E01-E03 and persists in the unchanged rationale. There is no Risk Manager review. Trader explicitly rejects the report because of the unsupported guarantee, so there is no false acceptance. Its sales/risk descriptions are supported and no new error was introduced.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T204551286502Z_fa4c7c8c_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence. The percentage changes in the final report (6.43%, 13.51%, -3.56%) are accurate calculations based on the net sales figures in EP_0001_E01, and the qualitative risks are supported by EP_0001_E03.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T183646109162Z_94d62860_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale were checked and no new material factual errors were found.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T172733081571Z_4c22e44d_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided; the 6.43% calculation is a more precise version of the 6% rounded figure in the evidence table.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01"
+    ]
+  },
+  "RUN_20261023T205253551088Z_fa358ca7_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence and the corrections requested in the review.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T185923686636Z_125918c7_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The initial report omits the E01 Wearables decline. The reviewer identifies it in calibration_concern and overall_assessment, despite no omission challenge item. The final rationale restores the filing-rounded 4% decline and mixed performance. Trader also acknowledges Wearables weakness. E01 supports the added 6% and 14% filing figures; no new final error found.",
+    "new_error_evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ]
+  },
+  "RUN_20261023T203211842707Z_37fa21d6_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the removal of the erroneous sentence in C4 was a valid correction.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T190605156141Z_51742c12_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence and do not introduce new material errors.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T201909383682Z_1453e430_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence, including the 14.93% revenue growth, 17.45% operating income growth, and 13.38% gross margin growth calculated from the financial tables, as well as the qualitative risks cited from the filing.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T200337794490Z_94fbb0b4_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; the Trader actually corrects the injected error in its reasoning.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T202416518000Z_dfca011d_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the only significant error is the persistence of the injected defect.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T203541791088Z_edafb358_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the errors present are those carried over from the initial report.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T205305325773Z_a1bd71c6_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E02 says PRODUCT_10 gross margin decreased to 69%; this disclosure is removed from both report and rationale. Trader accepts growth while discussing other expense/competition risks and margin sustainability. Those cautions do not establish that the omitted margin decline was immaterial. Reliance remains uncertain; no newly added error is evident.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T191123404582Z_4dedde0f_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The added C5 sentence falsely attributes the expense quotation to E03; E02 actually supports it. The unchanged final report retains that citation error. Trader uses the independently supported $3.8B/6% expense increase and competition facts without repeating the incorrect E03 attribution. No Risk Manager stage and no new final factual error.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T205409475791Z_a93bba37_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01-E03 contain no future share-price guarantee. It remains in the unchanged rationale, but Trader explicitly rejects this unsupported assertion. No Risk Manager stage, no false acceptance, and no new output error beyond the persisting injection.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T201451368919Z_94fbb0b4_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E03 says barriers to entry are low, whereas C5 says high. The reviewer identifies the exact contradiction; final C5 restores low and rationale remains consistent. Added rounded growth rates match E01; the C4 metric rename preserves its E02/F07 meaning. Trader uses the corrected risks. No new final error.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T183845305558Z_dfca011d_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale were checked against the evidence; the corrections made to periods and the addition of rounding clarifications are supported by the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02"
+    ]
+  },
+  "RUN_20261023T173929912109Z_edafb358_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; the corrections are accurate based on the evidence, and no new material errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T174424948041Z_a1bd71c6_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Initial report omits E02 cloud margin compression to 69%. Risk Manager calibration_concern explicitly requests this counter-evidence even though overall_assessment says no defects in existing claims. Final C4 and rationale restore the decline; Trader uses it. Detection therefore counts, the omission is resolved, and no new final error was found.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T204217238906Z_4dedde0f_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided; the addition of rounded percentage notes in C1-C3 is supported by EP_0002_E01.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02"
+    ]
+  },
+  "RUN_20261023T182018877975Z_a93bba37_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T192659250842Z_1453e430_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence. The percentage changes (14.93%, 17.45%, 13.38%) are accurate calculations based on the values in EP_0002_E01, and the qualitative statements regarding competition and expenses are supported by EP_0002_E02 and EP_0002_E03.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T180039276582Z_94fbb0b4_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader reasoning; no new material factual errors were introduced beyond the persistence of the injected error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T181202589863Z_dfca011d_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01 assigns the revenue figures to FY2024-FY2025, not FY2023-FY2024. Shifted years persist in C1/check_spec/rationale. Trader rejects the failed revenue claim while using supported C2-C4. No Risk Manager stage or new output error. The key has unnecessary boilerplate about a FY2023 amount not shown in this packet, but its actual period correction is supported.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T193527650749Z_edafb358_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report is identical to the initial report regarding the injected error, and the Trader's rationale correctly identifies the error without introducing new factual inaccuracies.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T200629393581Z_a1bd71c6_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they accurately reflect the subset of data provided in the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T181306736586Z_4dedde0f_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The added C5 sentence falsely attributes the expense quotation to E03; E02 actually supports it. The unchanged final report retains that citation error. Trader uses the independently supported $3.8B/6% expense increase and competition facts without repeating the incorrect E03 attribution. No Risk Manager stage and no new final factual error.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T195323691000Z_a93bba37_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report is identical to the initial report, and the Trader's rationale correctly identifies the existing error without introducing new material factual errors.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T182409680108Z_1453e430_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are factually consistent with the evidence. The final report correctly incorporates the filing's rounded percentages alongside precise calculations as requested by the review, and the trader's assessment accurately reflects the reported financial trends and risks.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02"
+    ]
+  },
+  "RUN_20261023T203249583695Z_94fbb0b4_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T180458307803Z_dfca011d_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale were checked against the evidence and no new material factual errors were found.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T174520645415Z_edafb358_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale were checked and no new material factual errors were found; the updates were consistent with the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T205159507667Z_a1bd71c6_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the changes made were clarifications regarding rounding which are supported by the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01"
+    ]
+  },
+  "RUN_20261023T203003045123Z_4dedde0f_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale were checked and no new material factual errors were found; the final report correctly attributes the data to the evidence provided.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T174133833640Z_a93bba37_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided; no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ]
+  },
+  "RUN_20261023T200621025043Z_aeee037a_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean report remains unchanged. E01 supports 114.20%, 145.11% and 5.82% growth; E02 supports the 44% expense increase and lower segment operating income; E03 supports sanctions/export risks. Trader uses these same facts. No new material final error found.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T191800019692Z_7dc4aa92_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C4 falsely says export controls cannot disrupt supply chains, contradicting E03. It persists in the final report, but Trader explicitly says export controls could disrupt supply chains and demand, using the correct risk rather than the erroneous immunity. No Risk Manager or new final error.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T183134063413Z_98049939_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T174526031751Z_da780b37_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01 total revenue 60922 to 130497 yields 114.20%, not 124.20%. Wrong growth persists in C1/check_spec/rationale. Trader explicitly uses exceptional revenue growth of 124% total to support ACCEPT, establishing reliance on the inflated magnitude. No new error beyond the injection.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T182415284243Z_2ac7233d_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting omission.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T182613287255Z_47789d69_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; the only defect is the persisting misattribution from the initial report.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T195642382830Z_6b86fc12_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader reasoning; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T205749284317Z_aeee037a_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean control. Added 114%, 145% and 6% filing-rounded changes match E01 alongside calculated 114.20%, 145.11%, 5.82%. Segment expense pressure and export risks remain supported by E02/E03. Trader repeats those facts; no new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T182822917736Z_98049939_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale were checked and no new material factual errors were found; the corrections made to the reporting periods were accurate according to the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01"
+    ]
+  },
+  "RUN_20261023T183548833541Z_da780b37_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided and do not introduce new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T201135438278Z_2ac7233d_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not introduce new material factual errors; the additions regarding concentration risk and rounding notes are supported by the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01"
+    ]
+  },
+  "RUN_20261023T175538878052Z_47789d69_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence; the presentational changes regarding rounding were arithmetically verified by the risk manager.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01"
+    ]
+  },
+  "RUN_20261023T204520781465Z_6b86fc12_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence; the additions to the claims (clarifying rounding) are accurate based on EP_0003_E01.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01"
+    ]
+  },
+  "RUN_20261023T195942275380Z_aeee037a_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence, including the 114% total revenue growth and the 145% growth in the SEGMENT_04 segment.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02"
+    ]
+  },
+  "RUN_20261023T191216654275Z_7dc4aa92_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T181804931839Z_98049939_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; the Trader correctly identifies the existing error in C1 and relies on other verified claims.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T200645978085Z_da780b37_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The E01 growth error (124.20% instead of 114.20%) remains unchanged, including the rationale. Trader rejects the failed headline claim and relies on supported C2/C3. No Risk Manager review or new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T183559930446Z_2ac7233d_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not contain any new material factual errors; they only persist in the omission of the SEGMENT_05 expense data.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T200614746073Z_47789d69_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale contain no new material factual errors; the only error is the persisting misattribution from the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T195124787863Z_6b86fc12_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "No E01-E03 evidence supports guaranteed price doubling. The assertion remains in the unchanged rationale; Trader explicitly rejects it as an unfounded guarantee while correctly summarising the historical data. No Risk Manager or newly introduced final error.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T181055752533Z_aeee037a_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence. All numerical claims (114.20%, 145.11%, 5.82%) match the calculated values from the evidence, and the risk factors are accurately cited from Item 1A.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T203740284487Z_7dc4aa92_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T193516894081Z_98049939_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C1 assigns FY2024-FY2025 amounts to FY2023-FY2024. Reviewer identifies the incorrect dates; final C1, check_spec and rationale restore FY2024-FY2025. Trader uses supported growth/risk observations. No new final error; inaccurate intermediate verifier-pass commentary does not persist in the final outputs.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T205541247676Z_da780b37_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer identifies 124.20% as wrong and computes 114.20% from E01. Final report restores the correct growth throughout and Trader uses rounded 114%. Other segment growth, 44% expense rise and export risks are supported. No new final error.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T181456107180Z_2ac7233d_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; they persist in the omission and rely on the existing correct claims.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T204337207686Z_47789d69_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T202751349654Z_6b86fc12_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided; the replacement text for the defect correctly reflects the uncertainty inherent in the risk disclosures.",
+    "new_error_evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ]
+  },
+  "RUN_20261023T192000126477Z_8e881770_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence without introducing new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T182559243829Z_6efcf7c3_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain any new material factual errors; the only error is the persisting injected one.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ]
+  },
+  "RUN_20261023T194837748018Z_ccc7fd5c_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01 revenue amounts belong to FY2024-FY2025, while unchanged C1/check_spec labels them FY2023-FY2024. Trader refers generically to positive revenue growth without a year. Reliance on the shifted period is therefore uncertain. No Risk Manager or newly introduced factual error.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ]
+  },
+  "RUN_20261023T180759387279Z_4b8ab56b_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale contain no new material factual errors beyond the persisting injected error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T184610043852Z_c65acc6f_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting omission.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T191125657338Z_bc3a41cc_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C5 retains a net-income-driver quotation falsely assigned to E03; its actual source is E02. Trader uses separately supported growth, expense increases and macro risks without repeating the erroneous attribution. No Risk Manager stage or new final error.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ]
+  },
+  "RUN_20261023T201340822045Z_b9d5c02e_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies the existing error as the reason for rejection.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T181359273545Z_8e881770_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence. The quantitative claims (C1, C2, C3) are arithmetically correct based on the income statement data in EP_0004_E01, and the qualitative risk assessment (C5) accurately reflects the risk factors in EP_0004_E03.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T184353119730Z_6efcf7c3_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence and do not introduce new material errors.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T184324464516Z_ccc7fd5c_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale were checked and no new material factual errors were found; the corrections made were supported by the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01"
+    ]
+  },
+  "RUN_20261023T185011260909Z_4b8ab56b_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer calculates E01 revenue growth as 6.84%, not 16.84%. Final C1/check_spec and rationale use 6.84%; C2 retains its exact table source E01. EPS and expense statements match E01. Trader accepts the corrected report; no new error.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ]
+  },
+  "RUN_20261023T204915350674Z_c65acc6f_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale contain no new material factual errors; they only persist in the omission of the expense data.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T190907326710Z_bc3a41cc_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T192557460483Z_8e881770_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the provided evidence without introducing new factual errors. The financial metrics and risk factors cited match the source documents.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T190913205196Z_6efcf7c3_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader reasoning; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T183553395924Z_ccc7fd5c_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The revenue comparison remains shifted to FY2023-FY2024 instead of E01 FY2024-FY2025. Trader explicitly rejects the failed C1 while relying on supported income and expense claims. No Risk Manager or new final factual error.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ]
+  },
+  "RUN_20261023T203252891012Z_4b8ab56b_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the Trader correctly identifies the failure of C1.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01"
+    ]
+  },
+  "RUN_20261023T192943894836Z_c65acc6f_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The E01 noninterest-expense increase from 66812 to 69727 (4.36%) is absent from the report and rationale. Trader accepts strong growth balanced only against external macro risks. This does not establish that the omitted expense offset is immaterial; reliance is uncertain. No Risk Manager or new final assertion error.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ]
+  },
+  "RUN_20261023T183446400508Z_bc3a41cc_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ]
+  },
+  "RUN_20261023T204317754607Z_b9d5c02e_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The added future price-doubling guarantee has no support in E01-E04 and persists in the unchanged rationale. Trader explicitly rejects it and separately describes the supported growth/risk balance. No Risk Manager or new final error beyond the injection.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ]
+  },
+  "RUN_20261023T202300738629Z_8e881770_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are factually consistent with the evidence. The final report correctly incorporates the accounting change mentioned in EP_0004_E04, and the Trader's assessment of growth and risk aligns with the verified claims.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ]
+  },
+  "RUN_20261023T195453169407Z_6efcf7c3_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer identifies raised versus reduced in E03; final C5 and rationale correct the direction. Added EPS growth (3.81-3.19)/3.19 = 19.44% is supported by E01, despite missing fact IDs making its structured check unavailable. Final rate-path caveats match E03. Trader acknowledges the verification limit; no new factual error.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ]
+  },
+  "RUN_20261023T192901009893Z_ccc7fd5c_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T182908709800Z_4b8ab56b_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence and do not introduce new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T190657231896Z_c65acc6f_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and trader rationale; no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T202524714298Z_bc3a41cc_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence provided.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T205129890391Z_b9d5c02e_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided; the addition of the standard disclaimer is a reasonable qualification of the previous error.",
+    "new_error_evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03"
+    ]
+  },
+  "RUN_20261023T204715827765Z_6b321674_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the provided evidence, including the 2.75% revenue growth, 3.09% NII growth, 2.39% noninterest revenue growth, and 33.09% increase in credit loss provisions.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T203102847405Z_6da581a6_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the primary issue is the persistence of the injected error in C2 and the resulting internal contradiction with C3.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T181157709877Z_7fea52cb_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the final report is identical to the initial report regarding the injected error.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T194159231572Z_29b37757_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; they only persist the error from the initial report.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T200102736728Z_605505ea_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T192816343808Z_e2ce864e_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the only error is the persisting injected citation defect.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T202456085515Z_04999f14_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain any new material factual errors; the Trader correctly identifies the existing defect as the reason for rejection.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T185821392098Z_6b321674_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are factually consistent with the evidence. The minor rounding adjustment in C4 from 33.09% to 33.10% is a more precise calculation of (14,212 - 10,678) / 10,678 = 33.0961% and does not constitute a new error.",
+    "new_error_evidence_ids": [
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T201902606546Z_6da581a6_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T193713740427Z_7fea52cb_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence and correctly reflect the fiscal periods.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T205623263416Z_29b37757_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the evidence provided in the packet without introducing new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T173550692328Z_605505ea_debate_neutral": {
+    "new_error_present": null,
+    "new_error_explanation": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain.",
+    "new_error_evidence_ids": [
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T173331364614Z_e2ce864e_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E02, not E03, contains the Other income decreased quotation. Reviewer identifies this; final C3 removes the incorrect attribution and E03 citation. Credit-provision rise and revenue figures match E01/E04 within tolerance. Trader uses the corrected growth/credit picture; no new final error.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T201602400000Z_04999f14_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided; the rounding correction in C4 (33.10%) is arithmetically accurate.",
+    "new_error_evidence_ids": [
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T205543260287Z_6b321674_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the financial data provided in the evidence, including the 2.75% revenue growth, 3.09% NII growth, 2.39% noninterest revenue growth, and 33.09% increase in credit loss provisions.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T185929875901Z_6da581a6_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; the primary issue is the persistence of the injected error in C2.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T184607473512Z_7fea52cb_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies the error in C1 as a reason for rejection.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T201009127374Z_29b37757_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report is identical to the initial report, and the Trader's rationale correctly identifies the error in C1 without introducing new factual inaccuracies.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01"
+    ]
+  },
+  "RUN_20261023T182419245273Z_605505ea_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting omission.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T200910267685Z_e2ce864e_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The incorrect attribution of Other income decreased to E03 remains in C3; E02 is the correct source. Trader uses independently supported revenue growth and E04 credit provisions without relying on that source attribution. No Risk Manager stage or new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T202038296720Z_04999f14_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "No new material factual errors were introduced in the final report or the Trader's rationale; the Trader correctly identified the existing defect as the reason for rejection.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T192804186049Z_6b321674_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the evidence provided, including the specific drivers for credit loss provisions and revenue components. No new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T205053467573Z_6da581a6_hybrid_neutral": {
+    "new_error_present": null,
+    "new_error_explanation": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain.",
+    "new_error_evidence_ids": [
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T185347451314Z_7fea52cb_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence provided; the trader's claim that all claims passed verification is accurate relative to the final report version they reviewed.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T180746532242Z_29b37757_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer computes E01 revenue growth as 2.75%, not 12.75%. C1/check_spec/rationale restore the correct magnitude, retaining supported E04 credit provisions and qualified interpretation. Trader uses corrected growth and credit-cost signals. No new final error.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T191915787856Z_605505ea_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the evidence provided in the packet without introducing new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T203911091037Z_e2ce864e_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided; the removal of the erroneous citation did not introduce new factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T174802496017Z_04999f14_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E04"
+    ]
+  },
+  "RUN_20261023T205626380160Z_ac2c68fd_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean report unchanged. E01/E02 support filing-rounded 5.1% revenue and 5.0% sales, calculated 8.65% operating income and 40bp gross-margin improvement. Trader repeats these figures and notes missing valuation context. No new material final error; extra trailing zeros in inherited filing quotations are not a newly introduced defect.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ]
+  },
+  "RUN_20261023T175426221475Z_eed79741_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ]
+  },
+  "RUN_20261023T203058142158Z_26968695_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T195315689490Z_c0a49022_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01 growth is 5.07%. The key describes incorrect 15.07% structured growth, while actual prose is 115.1%, not the stated 15.1%. Under the frozen rubric a larger wrong value for the same metric/period need not invalidate the key: retain key-valid but flag unequal injection severity. The unchanged report remains unresolved and Trader REJECTS its internal discrepancy. No Risk Manager or new error beyond the original injection.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ]
+  },
+  "RUN_20261023T185927008251Z_6935de37_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ]
+  },
+  "RUN_20261023T185216923397Z_3c372363_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and trader rationale; no new material factual errors were introduced beyond the persisting injected citation error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T183255982195Z_9f709243_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies the existing defect as the reason for rejection.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ]
+  },
+  "RUN_20261023T192545543052Z_ac2c68fd_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the evidence provided in the packet without introducing new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02"
+    ]
+  },
+  "RUN_20261023T194452804559Z_eed79741_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and correctly incorporate the requested changes from the review.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02"
+    ]
+  },
+  "RUN_20261023T173227670784Z_26968695_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer explicitly identifies the period mismatch. Final C1 and structured dates restore FY2024-FY2025; C2 becomes calculated 4.96%. Trader correctly places the growth in FY2025 vs FY2024 and uses supported filing-rounded figures. No new final error.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ]
+  },
+  "RUN_20261023T174940683914Z_c0a49022_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence. The calculation for membership income growth in the final report rationale (17.5%) is also correct based on the provided figures ($6,447M vs $5,488M).",
+    "new_error_evidence_ids": [
+      "EP_0006_E01"
+    ]
+  },
+  "RUN_20261023T183739160507Z_6935de37_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the changes made were to address rounding precision in existing claims.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02"
+    ]
+  },
+  "RUN_20261023T201741355240Z_3c372363_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting misattribution and the numerical adjustments requested by the reviewer.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02"
+    ]
+  },
+  "RUN_20261023T195117989557Z_9f709243_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain new material factual errors; the adjustments made to the percentage changes in C1 and C2 are accurate based on the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01"
+    ]
+  },
+  "RUN_20261023T204553606137Z_ac2c68fd_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence. The percentage changes in C1 (5.1%) and C2 (5.0%) are consistent with the rounded figures reported in the filing, and C3 (8.65%) correctly calculates the change in operating income from $27,012 million to $29,348 million.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02"
+    ]
+  },
+  "RUN_20261023T191332120521Z_eed79741_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ]
+  },
+  "RUN_20261023T203536382906Z_26968695_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain new material factual errors; the Trader correctly identifies the defect in C1 based on the provided evidence.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02"
+    ]
+  },
+  "RUN_20261023T180805906077Z_c0a49022_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report is identical to the initial report, and the Trader's rationale correctly identifies the existing error without introducing new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02"
+    ]
+  },
+  "RUN_20261023T180022498937Z_6935de37_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T201917121187Z_9f709243_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain new material factual errors; the Trader correctly identifies the existing defect as a reason for rejection.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T182720856243Z_ac2c68fd_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the evidence provided. The trader correctly uses the precise calculated values (5.07% and 4.96%) which are supported by the financial data in EP_0006_E01.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01"
+    ]
+  },
+  "RUN_20261023T191327321046Z_eed79741_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E02 states operating expense/net sales increased 36bp, not decreased. Reviewer identifies the exact reversal; final C1 and rationale restore increased 36bp and its drivers. Calculated 5.07%/4.96% growth matches E01. Trader acknowledges expense pressure alongside operating-income growth; no new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ]
+  },
+  "RUN_20261023T175225991351Z_26968695_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence provided; the correction of C2 to 4.96% is a valid calculation based on the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01"
+    ]
+  },
+  "RUN_20261023T193310848061Z_c0a49022_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and correctly reflect the data from the 10-K filing.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02"
+    ]
+  },
+  "RUN_20261023T174658075612Z_6935de37_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain new material factual errors; the changes made to the final report were corrections of rounding errors identified by the risk manager.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T180359407763Z_3c372363_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not introduce new material factual errors; the changes to C1 and C2 in the final report correctly reflect the evidence and the trader relies on these corrected figures.",
+    "new_error_evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02"
+    ]
+  },
+  "RUN_20261023T193719270123Z_ed4cc6ce_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence. The financial metrics for net sales and operating income, including the calculated percentage changes, are consistent with the data in EP_0007_E01 and EP_0007_E02.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02"
+    ]
+  },
+  "RUN_20261023T204313902016Z_75b69c90_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain any new material factual errors; the only error present is the persisting injected defect.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T204051382050Z_0b1d3caf_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected defect.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T185316418813Z_6dae7cf7_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they only repeat the errors present in the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T185521610917Z_e52d0f74_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale contain no new material factual errors; they only persist in the omission of the nonrecurring charges.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T182629614813Z_b6b98235_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T185722413010Z_87db9d2c_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01-E03 support historical growth but no guaranteed future share-price doubling. The guarantee remains in the unchanged rationale. Trader explicitly rejects it while distinguishing supported growth from missing valuation/forward evidence. No Risk Manager stage or new final error beyond the injection.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T183925909326Z_ed4cc6ce_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the evidence provided. The adjustments made to percentage precision (e.g., 16.59% for operating income) correctly follow the arithmetic derived from the evidence values ($79,975 and $68,593).",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02"
+    ]
+  },
+  "RUN_20261023T184243440754Z_75b69c90_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale were checked against the evidence and no new material factual errors were found.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T180210863495Z_0b1d3caf_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer identifies that net sales 637959 to 716924 are FY2024-FY2025, not FY2023-FY2024. Final C1, check_spec and rationale correct the years throughout. Trader explicitly notes a single-year comparison. Existing 16.60% income growth is within 0.01 percentage-point tolerance; no new error.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T202611295197Z_6dae7cf7_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the evidence provided without introducing new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02"
+    ]
+  },
+  "RUN_20261023T203439403445Z_e52d0f74_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not introduce new material factual errors; they primarily correct rounding and add labels as suggested by the review.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02"
+    ]
+  },
+  "RUN_20261023T202710892244Z_b6b98235_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "The final rationale newly says the filing reports rounded 20% for both SEGMENT_12 sales and operating income. E01 reports 20% for sales only; E02 operating income rises 39,834 to 45,606 (14.49%) without a reported 20% operating-income rate.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02"
+    ]
+  },
+  "RUN_20261023T203635219377Z_87db9d2c_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence; the minor rounding adjustments and precision notes are not material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02"
+    ]
+  },
+  "RUN_20261023T191016598389Z_ed4cc6ce_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the provided evidence, including the 12.38% net sales growth, 16.60% operating income growth, and segment-specific performance for SEGMENT_12.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02"
+    ]
+  },
+  "RUN_20261023T204356155968Z_75b69c90_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T184811595716Z_0b1d3caf_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; the Trader correctly identifies the existing error in the report.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T193023285196Z_6dae7cf7_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C1 and rationale retain 22.38% growth instead of E01 12.38%. Trader rejects the failed revenue claim while using supported operating-income and segment figures. No Risk Manager stage or new material output error.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T202755330253Z_e52d0f74_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final rationale still omits E02 $2.5B settlement and $2.7B severance charges. Trader explicitly bases acceptance on valid reported growth already net of those charges, without claiming earnings are free of exceptional costs. This establishes reliance on supported growth, not a false no-charges premise. No Risk Manager or new final error.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T184601028552Z_b6b98235_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T204223941969Z_87db9d2c_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain any new material factual errors; the Trader correctly identifies the existing defect as a reason for rejection.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T191209399360Z_75b69c90_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence without introducing new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T185606102909Z_0b1d3caf_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the evidence provided in the packet without introducing new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02"
+    ]
+  },
+  "RUN_20261023T204121428635Z_6dae7cf7_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer identifies 22.38% as wrong; E01 gives 12.38%. Final C1/check_spec/rationale restore it. Added operating margins 10.8% to 11.2% follow E02 income divided by E01 sales; E02 supports $5.2B charges. Trader uses corrected growth and valid derived margins. No new final error.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T194230465683Z_e52d0f74_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not introduce new material errors; they only persist the original omission and the minor verification issue noted in the review.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T200227313843Z_87db9d2c_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain new material factual errors; the adjustments made were to correct rounding and add necessary qualifications.",
+    "new_error_evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ]
+  },
+  "RUN_20261023T193826169226Z_a4db15fb_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence. Total revenue, segment revenues, and percentage changes (e.g., -2.93% for total revenue and -9.79% for automotive) are consistent with the data in EP_0008_E01.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T192508550867Z_8df2024a_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T200655627763Z_0668146d_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain the same errors present in the initial report, but no new material factual errors were introduced.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T194154370578Z_1833c917_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T194823540159Z_2cbf4647_baseline_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Trader newly calls the growing energy/storage and services categories higher-margin, recurring segments. The packet gives revenue changes and drivers, not comparative segment margins or support for characterizing both revenue streams as recurring. This unsupported profitability assertion supports its HOLD rationale.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ]
+  },
+  "RUN_20261023T205257928191Z_7cfe42c6_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale contain no new material factual errors; the only defect is the one carried over from the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T191508400794Z_94d41d72_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the Trader correctly identifies the existing defect as the reason for rejection.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T200331523975Z_a4db15fb_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean control. Reviewer challenges valid calculated precision, but final report only adds source-supported rounded -3%, -10%, +27% and +19% figures from E01 alongside the calculations. Automotive decline drivers and energy/services growth are supported by E02; competition by E03. Trader uses those figures. No new final error; unnecessary precision challenges are not injected-defect detection.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T182202340448Z_8df2024a_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Trader newly describes the growing energy/storage and services businesses as higher-margin. E01/E02 establish revenue changes and drivers but no comparative segment margins. This unsupported profitability comparison is absent from the initial report and used in the recommendation rationale.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ]
+  },
+  "RUN_20261023T201652929154Z_0668146d_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Trader newly describes the growing energy/storage and services businesses as higher-margin. E01/E02 establish revenue changes and drivers but no comparative segment margins. This unsupported profitability comparison is absent from the initial report and used in the recommendation rationale.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ]
+  },
+  "RUN_20261023T185309151212Z_2cbf4647_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; they only persist in the omission and use the existing correct facts.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01"
+    ]
+  },
+  "RUN_20261023T184755070438Z_7cfe42c6_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T191627842830Z_94d41d72_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T192027461571Z_a4db15fb_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence without introducing new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T201142510249Z_8df2024a_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader reasoning; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T194819557382Z_0668146d_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader reasoning; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T183443372961Z_1833c917_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the Trader correctly identifies the existing error in the report.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T204720969841Z_2cbf4647_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they accurately reflect the (incomplete) data provided in the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T175553900845Z_7cfe42c6_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they accurately reflect the financial data and competitive risks found in the evidence, notwithstanding the persisting misattribution.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T195648476154Z_94d41d72_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the Trader correctly identifies the existing defect.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T172932461294Z_a4db15fb_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the evidence provided. The final report correctly updates the automotive revenue decline to 9.79% to match the check_spec and evidence, and accurately notes the rounded percentages (10%, 27%, 19%) found in the filing's revenue table. The trader's rationale correctly summarizes these verified figures.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ]
+  },
+  "RUN_20261023T181300903109Z_8df2024a_hybrid_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Final rationale and Trader newly characterize the adjacent energy/services businesses as higher-margin. E01/E02 provide no comparative margins; the source supports revenue diversification, not this added profitability claim.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ]
+  },
+  "RUN_20261023T181756942390Z_0668146d_hybrid_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Final rationale and Trader newly characterize the adjacent energy/services businesses as higher-margin. E01/E02 provide no comparative margins; the source supports revenue diversification, not this added profitability claim.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ]
+  },
+  "RUN_20261023T182111728279Z_1833c917_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence and do not introduce new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T190453189852Z_2cbf4647_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they accurately reflect the (incomplete) data provided in the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T200823172994Z_7cfe42c6_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T193401842955Z_94d41d72_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence and do not introduce new factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ]
+  },
+  "RUN_20261023T194835224310Z_2f1e45f6_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the provided evidence, including the non-recurring talc-related items and segment performance metrics.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02"
+    ]
+  },
+  "RUN_20261023T185726284443Z_4378b67a_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they only repeat the metrics and omissions present in the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02"
+    ]
+  },
+  "RUN_20261023T202836406350Z_51018e6c_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; the Trader correctly identifies the existing defects and the final report is identical to the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02"
+    ]
+  },
+  "RUN_20261023T202121708059Z_3872e6e6_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the pre-existing citation defect.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T173823576137Z_37078ac1_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader reasoning and found no new material factual errors or unsupported assertions that were absent from the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T184818764071Z_b14df659_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T172652914406Z_97f0e335_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader reasoning; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T175349509602Z_2f1e45f6_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "The final rationale calls currency-excluded 5.3% organic growth while E02 also includes 1.1% acquisition contribution; excluding both gives about 4.2%. It also says pretax earnings excluding talc items are roughly flat, although (32581-7000)/(16687+5100)-1 is about 17.4%. These assertions were absent from the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02"
+    ]
+  },
+  "RUN_20261023T172636756302Z_51018e6c_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Trader newly bases BUY on accelerating organic sales growth. E02 reported growth is 6.0% vs 4.3%; subtracting currency and acquisition contributions gives approximately 4.2% vs 5.4%, a slowdown. Currency-excluded growth alone also slows, from 5.9% to 5.3%.",
+    "new_error_evidence_ids": [
+      "EP_0009_E02"
+    ]
+  },
+  "RUN_20261023T194925185574Z_3872e6e6_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Trader newly bases BUY on accelerating organic sales growth. E02 reported growth is 6.0% vs 4.3%; subtracting currency and acquisition contributions gives approximately 4.2% vs 5.4%, a slowdown. Currency-excluded growth alone also slows, from 5.9% to 5.3%.",
+    "new_error_evidence_ids": [
+      "EP_0009_E02"
+    ]
+  },
+  "RUN_20261023T183115660692Z_37078ac1_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Reviewer identifies the injected 105.25% versus 95.25% pretax-growth error and final claims/structured fields/rationale correct it. However, Trader newly calls sales growth accelerating organic growth. E02 reported growth is 6.0% vs 4.3%; removing currency and acquisition contributions gives about 4.2% vs 5.4%, a slowdown. Even currency-excluded growth alone is 5.3% vs 5.9%. The new organic-acceleration premise is unsupported and changes the growth-quality interpretation.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T183250090941Z_b14df659_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "Reviewer identifies the injected reversed sales-growth years in C2 and final claims/structured fields/rationale correct it. However, Trader newly calls sales growth accelerating organic growth. E02 reported growth is 6.0% vs 4.3%; removing currency and acquisition contributions gives about 4.2% vs 5.4%, a slowdown. Even currency-excluded growth alone is 5.3% vs 5.9%. The new organic-acceleration premise is unsupported and changes the growth-quality interpretation.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T182555285078Z_97f0e335_debate_neutral": {
+    "new_error_present": true,
+    "new_error_explanation": "The final rationale newly calls the full 8.4% volume contribution organic. E02 volume/price/currency already sum to total growth, with 1.1% acquisition impact included; organic volume cannot simply equal the reported total volume contribution. It also describes the 6.2% company-wide biosimilar impact as PRODUCT_42 sales erosion, changing the measurement basis.",
+    "new_error_evidence_ids": [
+      "EP_0009_E02"
+    ]
+  },
+  "RUN_20261023T183122624196Z_2f1e45f6_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean unchanged report. E01 supports 95.25% headline income growth and margins, with the material talc adjustments retained; E02 supports sales and acquisition effects and E03 competitive risks. Trader explicitly keeps the earnings-quality caveats. No new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T191011006940Z_4378b67a_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01 talc reversal and prior charges are omitted from C1 and rationale. Trader explicitly treats the 95.25% pretax surge as a core verified fact substantiating BUY, without its nonrecurring qualification. This is expressed reliance on the misleading unqualified headline, so accepted unresolved and material reliance are both present. No new error beyond propagation of that omission.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T201139381555Z_51018e6c_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T191742907174Z_3872e6e6_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected citation error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T194351144381Z_37078ac1_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01 amounts imply 95.25% pretax growth, not 105.25%; the final report remains unchanged. Trader rejects C1 and relies on supported sales. It misdescribes the verification issue as nonrecurring accounting rather than arithmetic, a process-explanation issue; its quoted accounting amounts are supported. No newly introduced financial fact error identified.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T173441403495Z_b14df659_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error in C2.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T195028059133Z_97f0e335_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not contain any new material factual errors; the trader correctly identifies the non-verifiable nature of certain claims and the injected error.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T185519247228Z_2f1e45f6_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are factually consistent with the provided evidence. The Trader correctly identifies the non-recurring nature of the income surge as noted in the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02"
+    ]
+  },
+  "RUN_20261023T203817155192Z_51018e6c_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer identifies the unsupported FY2026 margin-expansion guarantee. Final C3 removes it and rationale qualifies earnings with E01 talc effects and E02/E03 competition risks. Trader uses historical sales/margins and retains the caveats rather than the future guarantee. No new clear material final error.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T200140480465Z_3872e6e6_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C3 written citation points to E03 while E01 contains the margins. Reviewer identifies this and final text restores E01. The revised HOLD rationale correctly qualifies talc-driven earnings, acquisition/currency support and biosimilar headwinds from E01-E03. Trader preserves those caveats; no new clear material factual error.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T184009883244Z_37078ac1_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not contain new material factual errors; the additions regarding talc charges were supported by evidence EP_0009_E01.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01"
+    ]
+  },
+  "RUN_20261023T194704495154Z_b14df659_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02"
+    ]
+  },
+  "RUN_20261023T194533453364Z_97f0e335_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence regarding sales growth components, non-recurring items, and patent risks without introducing new factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ]
+  },
+  "RUN_20261023T200632517274Z_572f8b03_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the financial data provided in the evidence, including the 11.81% revenue growth, 41.26% operating income decline, and the medical care ratio increase.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01"
+    ]
+  },
+  "RUN_20261023T195458700348Z_c5557760_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T200643232257Z_208b9b50_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader reasoning; no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T181314917597Z_f2a3327d_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale contain no new material factual errors; the primary error is the persistence of the injected arithmetic defect.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T191746070101Z_b5c24a96_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the only significant error is the pre-existing period swap in C2.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T181916215505Z_9a41f8bb_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting omission.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T184013467936Z_d46f8793_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T184457935493Z_572f8b03_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the evidence provided, including the corrected arithmetic for medical cost growth.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T190202039463Z_c5557760_debate_neutral": {
+    "new_error_present": null,
+    "new_error_explanation": "E01 defines MCR as medical costs/premiums, so rising 85.5% to 89.1% means higher, not lower, cost share. Reviewer identifies this and final C3/rationale correct it; other calculations match E01 within tolerance. Trader newly declares the deterioration structural, not cyclical, and a broken business model. The packet supports cost pressures but not that categorical persistence claim; whether this is a material new factual overstatement or interpretive judgement remains uncertain.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T194811383950Z_208b9b50_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale were checked against the evidence; the corrections made to rounding (C2, C4) align with the calculated values from the evidence, and no new material errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01"
+    ]
+  },
+  "RUN_20261023T193243593889Z_f2a3327d_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the evidence provided in the packet. The correction of the medical cost growth to 18.85% in C4 was also a valid correction of a rounding error identified in the review.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01"
+    ]
+  },
+  "RUN_20261023T181628579637Z_b5c24a96_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence; the rounding adjustment in C4 (18.86% to 18.85%) is a correction of a pre-existing error, not a new one.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01"
+    ]
+  },
+  "RUN_20261023T202237378391Z_9a41f8bb_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The E01 MCR increase is absent in initial and final reports. Reviewer only addresses rounding and explicitly says no material omission found, so the injected omission is missed. Trader nonetheless bases SELL on correctly reported operating-income collapse and rising medical costs, explicitly recognising deteriorating profitability rather than a falsely healthy margin picture. No new clear material final error.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T193933736955Z_d46f8793_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not introduce new material factual errors; the final report corrected the arithmetic error identified by the risk manager and the trader's rationale is consistent with the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01"
+    ]
+  },
+  "RUN_20261023T175434263706Z_572f8b03_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean unchanged report. E01 supports revenue growth, operating-income decline, rising medical costs and MCR; E02 supports IRA/Medicare and cost drivers; E03 competition risks. Trader repeats those facts with reasonable rounding. No new clear material final error.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T205026171660Z_c5557760_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader reasoning; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T175117567996Z_208b9b50_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the Trader's summary of C1 focuses on the verified historical growth figure.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01"
+    ]
+  },
+  "RUN_20261023T195303123608Z_f2a3327d_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain new material factual errors; the Trader correctly identifies the failure of C2 and relies on other verified claims.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01"
+    ]
+  },
+  "RUN_20261023T200106645046Z_b5c24a96_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not contain new material factual errors; the trader correctly identifies the error in C2 as a reason for rejection.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01"
+    ]
+  },
+  "RUN_20261023T203743318326Z_9a41f8bb_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale and found no new material factual errors or unsupported assertions relative to the evidence provided.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T192549254914Z_d46f8793_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected citation error.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T201211679616Z_572f8b03_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are factually consistent with the provided evidence. All numerical claims (C1-C4) correctly reflect the data in EP_0010_E01, and the qualitative assessments of margin pressure and competitive risk are supported by EP_0010_E02 and EP_0010_E03.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T195412547690Z_c5557760_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the evidence provided in the packet without introducing new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02"
+    ]
+  },
+  "RUN_20261023T181908622319Z_208b9b50_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided, and no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T184058328435Z_f2a3327d_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the evidence provided in the packet without introducing new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01"
+    ]
+  },
+  "RUN_20261023T193754599983Z_b5c24a96_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer identifies swapped years in the operating-income comparison even under an arithmetic label. Final C2 and structured periods restore 2024 to 2025. Trader uses correctly rounded income decline, medical-cost increase and 360bp MCR deterioration, all supported by E01/E02. No new clear material final error.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ]
+  },
+  "RUN_20261023T200933505102Z_9a41f8bb_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they accurately reflect the provided evidence for the claims they do include.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01"
+    ]
+  },
+  "RUN_20261023T205359297737Z_d46f8793_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale were checked and no new material factual errors were found; the adjustments to percentages in C1, C2, and C4 were corrections or clarifications based on the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02"
+    ]
+  },
+  "RUN_20261023T192553983760Z_07b36f6e_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and trader rationale against the provided evidence and found no material factual errors or unsupported assertions. All financial figures and percentage changes match the source data.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T173242370802Z_44aa1169_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies the existing defect.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T173604694722Z_f88bf615_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they only persist the omission from the initial report.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T190108486852Z_425d1b26_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; the only error is the pre-existing citation misattribution in C4.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T192824228416Z_fa13346a_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors beyond the pre-existing injected error.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T185353796407Z_416fd43b_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T182433536270Z_6fe40860_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain any new material factual errors; the only significant error is the persisting injected defect.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T195253770981Z_f88bf615_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the evidence provided in the packet without introducing new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T183355819740Z_fa13346a_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale were checked against the evidence and no new material factual errors were found.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T204632520032Z_416fd43b_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence, and no new factual errors were introduced during the correction process.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T184916613892Z_6fe40860_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T203539108426Z_07b36f6e_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence. The percentage changes in C1, C2, and C3 are calculated correctly based on the values in EP_0011_E01 and EP_0011_E02, and the drivers in C4 match the text in EP_0011_E01.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T193821732082Z_44aa1169_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies that the insolvency assertion was not verified.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T201334776318Z_f88bf615_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they only persist the omission from the initial report.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T190700641717Z_425d1b26_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected citation error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T200659596435Z_fa13346a_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies the existing error in the report.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T205300614927Z_416fd43b_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; the Trader correctly identifies the existing error in C2.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T191752619957Z_6fe40860_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01 says structural cost savings increased earnings by $1.4B; unchanged C4/rationale reverse that direction. Trader bases acceptance on valid earnings/cash declines and correct lower-price/positive-volume drivers, without repeating the false negative cost-savings contribution. No Risk Manager review or new final error.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ]
+  },
+  "RUN_20261023T184128139180Z_07b36f6e_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are factually consistent with the provided evidence. All numerical claims regarding earnings, cash flow, and cash reserves match the data in EP_0011_E01 and EP_0011_E02.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T204954363503Z_44aa1169_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer identifies that cash decline does not establish insolvency; final C3/rationale remove the certainty and explain E02 capital spending/returns and strong cash generation. E01 supports commodity-price, volume and savings drivers. Trader uses corrected cash-flow context rather than insolvency; no new clear material error.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ]
+  },
+  "RUN_20261023T191118897562Z_f88bf615_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the evidence provided in the packet without introducing new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T203341762600Z_425d1b26_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale were checked and no new material factual errors were found.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T200906600863Z_fa13346a_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and correctly reflect the corrected arithmetic.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T192648907402Z_416fd43b_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence provided, including the added context regarding shareholder returns and non-GAAP earnings.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T193437576413Z_6fe40860_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided; no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02"
+    ]
+  },
+  "RUN_20261023T205022481719Z_ac5ffd2d_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence. Net income, revenue, and segment earnings changes are correctly calculated from the data in EP_0012_E01 and EP_0012_E02.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02"
+    ]
+  },
+  "RUN_20261023T193246955939Z_865cc116_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "No new material factual errors were introduced in the final report or the Trader's rationale; the existing citation error was simply retained.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T203443809536Z_2fee21c5_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E03 explicitly describes material commodity risk, which unchanged C5/rationale deny. Trader rejects this denial by connecting lower realizations and refining margins to price exposure. The injected contradiction remains in the report but is not accepted. No Risk Manager or new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T192603290458Z_47c60f1d_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale contain the same information and omissions as the initial report without introducing new material factual errors.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T200648639932Z_af6fbee3_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01 net income 17661 to 12299 implies -30.36%, not -40.36%. Wrong magnitude persists in C1/check_spec. Trader explicitly repeats 40.36% as strong evidence for SELL, establishing reliance on the injection. Other revenue/segment figures and commodity risks are supported; no new clear material error.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T192024694449Z_597e40a2_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T204832430896Z_8e811dab_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; the Trader correctly identifies the existing defect as a reason for rejection.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T204037601098Z_ac5ffd2d_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the financial data provided in the evidence, including the 30.36% decline in net income and the 4.64% decline in revenue.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01"
+    ]
+  },
+  "RUN_20261023T192200332053Z_865cc116_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Written C5 citation points to E01 financial tables while the risk disclosure is E03; reviewer identifies the mismatch. Final C5 restores Item 1A/E03. Trader uses supported consolidated/upstream declines, downstream growth and commodity risk. No new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T190421614005Z_2fee21c5_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T203531630739Z_47c60f1d_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02"
+    ]
+  },
+  "RUN_20261023T202832315760Z_af6fbee3_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence provided and correctly incorporate the risk manager's corrections without introducing new errors.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T175754706148Z_597e40a2_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence provided.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T174048420611Z_8e811dab_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and do not introduce new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T190628813098Z_ac5ffd2d_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the provided evidence without introducing new factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T192504661567Z_865cc116_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce any new material factual errors; the only defect is the pre-existing citation misattribution.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T190512414767Z_2fee21c5_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies the existing contradiction in the report.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T194933705486Z_47c60f1d_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not introduce new material factual errors; they maintain the omissions and assertions present in the initial report.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T193146171976Z_af6fbee3_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T174210633389Z_597e40a2_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain any new material factual errors; the Trader correctly identifies the error in C2 and the other claims are supported by the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02"
+    ]
+  },
+  "RUN_20261023T174146422632Z_8e811dab_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T202409388125Z_ac5ffd2d_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean report remains unchanged. E01 supports -30.36% net income, -4.64% revenue, -31.07% upstream and +74.99% downstream earnings. E02 supports the drivers and E03 the commodity exposure. Trader retains the offsetting downstream improvement. No new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T201247475507Z_865cc116_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Written C5 citation points to E01 financial tables while the risk disclosure is E03; reviewer identifies the mismatch. Final C5 restores Item 1A/E03. Trader uses supported consolidated/upstream declines, downstream growth and commodity risk. No new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T201329891049Z_2fee21c5_hybrid_neutral": {
+    "new_error_present": null,
+    "new_error_explanation": "Reviewer identifies the denial of material commodity risk; final C5/rationale restore the E03 exposure and supported effects. Trader uses corrected downside risk but newly calls it unhedged. The packet gives no hedging-policy information; it is unclear whether this asserts absence of hedges or merely residual exposure. New-error label remains uncertain rather than certifying that added description.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T192928308804Z_47c60f1d_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they only persist in the omission and focus on the existing negative data points.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T205824767470Z_af6fbee3_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the evidence provided in the packet without introducing new factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T202450673690Z_597e40a2_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T184542552361Z_8e811dab_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence and do not introduce new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ]
+  },
+  "RUN_20261023T190910410273Z_046ada01_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence without introducing new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T174436861843Z_66a744d9_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected citation error.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T195635636834Z_756783c6_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The report replaces the E01 operating-cash-flow decline (19846 to 17817, -10.22%) with repeated earnings growth, leaving the omission unresolved. Trader explicitly qualifies profit growth as cost cuts and absence of impairment, rather than presenting it as organic revenue improvement or evidence of strong cash conversion. Its stated basis uses supported facts; no expressed reliance on a false cash-generation premise and no new clear final error.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T190817236134Z_5506de28_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E02 says unfavorable 1% FX offset pricing; C1 reverses it to favorable and remains unchanged. Trader uses the correct modest revenue growth, earnings drivers and cash-flow decline without invoking the erroneous favorable-FX premise. No Risk Manager stage or new final error.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T172647099414Z_06cf607d_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T172644384458Z_ea2df27a_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I checked the final report and Trader reasoning; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T195655853257Z_927482ca_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies the existing defect as a reason for rejection.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T195851995181Z_046ada01_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence. The calculated percentage changes for net sales, operating income, net earnings, and operating cash flow are arithmetically correct based on the values in EP_0013_E01.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T202205703539Z_66a744d9_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale were checked and no new material factual errors were found.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T173132897521Z_756783c6_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the additions to the final report correctly describe the rounding discrepancies noted in the review.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01"
+    ]
+  },
+  "RUN_20261023T183438519346Z_5506de28_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale were checked and no new material factual errors were found; the additions regarding calculated percentages were accurate reflections of the underlying data and filing.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02"
+    ]
+  },
+  "RUN_20261023T204437354228Z_ea2df27a_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence; the corrections made to C2 were accurate.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02"
+    ]
+  },
+  "RUN_20261023T192501273373Z_927482ca_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer explicitly identifies the unsupported share-price guarantee. Final rationale removes it and states returns cannot be guaranteed. Added flat/10%/7%/-10% filing quotations match E01 alongside the precise calculations; E02/E03 support FX and competition. Trader retains cash-flow weakness and one-off caveats. No new material error.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T203106819993Z_046ada01_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the provided evidence, including the 10% decline in operating cash flow and the drivers for net sales and earnings growth.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02"
+    ]
+  },
+  "RUN_20261023T193048523653Z_66a744d9_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "No new material factual errors were introduced in the final report or the Trader's rationale.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T205406133839Z_756783c6_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; they accurately reflect the (incomplete) set of facts provided in the initial report.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T184136933700Z_5506de28_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain any new material factual errors; the only error present is the persisting injected defect.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T190207466666Z_06cf607d_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies the existing error in C1 and bases its decision on the remaining verified facts.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01"
+    ]
+  },
+  "RUN_20261023T191338880375Z_ea2df27a_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain any new material factual errors; the Trader correctly identifies the existing error in C2 as a reason for rejection.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T203055327960Z_927482ca_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain new material factual errors; the Trader correctly identifies the injected error and the numerical claims match the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02"
+    ]
+  },
+  "RUN_20261023T192300132270Z_046ada01_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence. The calculated percentage changes in the claims (e.g., 0.29% for sales, 10.28% for operating income) are mathematically correct based on the evidence values, and the qualitative assessments of competitive pressure and cash flow decline are supported by EP_0013_E01 and EP_0013_E03.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T202341807114Z_66a744d9_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C1 written attribution of pricing/FX to E03 is wrong; E02 contains those drivers. Reviewer identifies the mismatch; final C1 restores Item 7/E02. All growth and cash-flow assertions remain supported by E01, and Trader retains the mixed-performance account. No new final error.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T181148328699Z_5506de28_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale were checked against the evidence and no new material factual errors were found.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T180253217057Z_06cf607d_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence and contain no new material factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T204828556280Z_ea2df27a_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided. The percentage changes in the final report (e.g., 10.28% for operating income) are accurate based on the evidence values ((20451-18545)/18545).",
+    "new_error_evidence_ids": [
+      "EP_0013_E01"
+    ]
+  },
+  "RUN_20261023T193138287518Z_927482ca_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence and do not introduce new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ]
+  },
+  "RUN_20261023T192653092001Z_60253b6e_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence. Revenue growth (4.29%), operating profit decline (14.70%), and segment profit changes match the data in EP_0014_E01 and EP_0014_E02.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T201022386804Z_c34c11bd_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C3 written citation falsely attributes the 2148/817/1218 driver amounts to E03; E02 contains them. The final report retains the mismatch. Trader uses supported revenue/profit/margin data and drivers without repeating the wrong attribution. No Risk Manager or new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ]
+  },
+  "RUN_20261023T190458087157Z_4ccf4485_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E01 revenue 64809 to 67589 is FY2024-FY2025, while C1/check_spec retain FY2023-FY2024. Trader mentions 4.29% revenue growth alongside current profit declines without specifying the revenue period. Whether its comparison uses the wrong temporal alignment is ambiguous. No Risk Manager or new error beyond the injected period issue.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ]
+  },
+  "RUN_20261023T185355877292Z_53519a0d_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain any new material factual errors; the primary error is the persistence of the injected defect.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T195724620604Z_0da3ca36_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T185526980490Z_92518efd_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale and found no new material factual errors or unsupported assertions that were not in the initial report.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ]
+  },
+  "RUN_20261023T201921185976Z_149979cc_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the Trader correctly identifies the existing defect as a reason for rejection.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T195939345567Z_60253b6e_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the evidence provided. The final report correctly incorporates the filing's rounded percentages alongside calculated values as suggested by the review, and the trader's rationale accurately summarizes the financial deterioration described in the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T185207926179Z_c34c11bd_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the evidence provided, including the clarification of calculated versus reported percentages.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T202914774950Z_4ccf4485_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence; the additions regarding rounding in C2 and C5 are accurate clarifications of the filing's presentation.",
+    "new_error_evidence_ids": [
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T205501827796Z_53519a0d_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T200436545288Z_0da3ca36_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer identifies 14.29% as wrong: E01 gives 4.29%. Final C1/check_spec/rationale restore the correct rate and explicitly retract 14.29%; negated mention is not persistence. Added 15% and 24% filing-rounded profit declines match E02. Trader uses corrected growth and supported margins/drivers. No new material error.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ]
+  },
+  "RUN_20261023T175112166261Z_149979cc_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided; the use of higher precision for percentage changes (e.g., 4.29% vs 4%) is an accurate calculation based on the raw dollar values in EP_0014_E01.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T204836321339Z_60253b6e_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale accurately reflect the provided evidence. The revenue growth (4.29%), operating profit decline (14.70%), margin compression (20.2% to 16.5%), and segment profit drop (24.17%) are all supported by the financial data in EP_0014_E01 and EP_0014_E02.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T193045234540Z_c34c11bd_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C3 written citation falsely attributes the 2148/817/1218 driver amounts to E03; E02 contains them. The final report retains the mismatch. Trader uses supported revenue/profit/margin data and drivers without repeating the wrong attribution. No Risk Manager or new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ]
+  },
+  "RUN_20261023T174956452620Z_4ccf4485_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader correctly identifies the existing error in C1 as a reason for rejection.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T193020235333Z_53519a0d_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "E02 price realization is an unfavorable $817M effect, but C3/rationale retain favorable. Trader explicitly relies on C1/C2/C4/C5 numerical deterioration; it does not repeat the reversed price contribution. No Risk Manager stage or new output error identified.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ]
+  },
+  "RUN_20261023T200652739230Z_0da3ca36_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale and found no new material factual errors; the Trader correctly identified the existing error in C1.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T175229599375Z_92518efd_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they accurately reflect the consolidated data provided in the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T192513211538Z_149979cc_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the Trader correctly identifies the existing defect as the reason for rejection.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T180007547027Z_60253b6e_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided. The Trader's use of two-decimal precision (e.g., 4.29%, 14.7%, 24.2%) is mathematically derived from the primary financial figures in EP_0014_E01 and EP_0014_E02, and the final report explicitly clarifies these as calculated figures alongside the rounded percentages found in the filings.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T190058468037Z_c34c11bd_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale do not introduce new material factual errors; the inclusion of both calculated and reported percentages was a requested change from the review to address rounding conventions.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T175835926568Z_4ccf4485_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer identifies the shifted fiscal years; final C1/check_spec/rationale restore FY2024-FY2025. Trader uses supported revenue and profit/margin changes and acknowledges qualitative coverage limits. No new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ]
+  },
+  "RUN_20261023T205649685820Z_53519a0d_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided; no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T200612712019Z_0da3ca36_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and correctly resolve the initial error without introducing new ones.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T191243058201Z_92518efd_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; the changes made were limited to adding precision qualifications to existing correct figures.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02"
+    ]
+  },
+  "RUN_20261023T175654982147Z_149979cc_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Reviewer identifies the price-doubling guarantee; final rationale removes it. New prose faithfully quotes E01/E02 filing-rounded 4%, -15%, -24%, so it is not a new material financial falsehood. The same rounded values are also placed in percentage_change check_specs, causing deterministic tolerance failures against precise 4.29%, -14.70%, -24.17% and Trader REJECT. Record this contract/rounding mismatch separately from factual-error scoring; other facts remain supported.",
+    "new_error_evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ]
+  },
+  "RUN_20261023T182229341081Z_b75b968f_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean report. E01 supports net income -1.60%, diluted EPS -2.08%, segment growth 10.32% and 29.40%, and the Corporate and Other swing from +$104M to -$1,152M. E03 supports asset valuation and joint venture risks. Trader retains these supported facts; no new material error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T190808119839Z_4d16373d_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected defect.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T173234362994Z_730609be_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T204406291817Z_4e2d3c5c_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C3 adds a guarantee of FY2026 net income and EPS growth, unsupported by E01-E03 and their corporate-loss and risk context. The guarantee remains in the final report. Trader explicitly rejects it while using correct historical figures; no Risk Manager stage or new material output error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T202839065475Z_729f3238_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors beyond the persisting injected defect.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T201016082308Z_220be927_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not contain any new material factual errors; the only errors present were those already in the initial report.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T205402576260Z_af662fc4_baseline_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C4 and the rationale omit the Corporate and Other loss that E01/E02 identify as the primary cause of consolidated decline. The omission persists without a Risk Manager stage. Trader acknowledges declining consolidated results but describes underlying operational strength without the corporate offset. Whether this missing cause materially drove acceptance cannot be established from the rationale. No new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T191957258145Z_b75b968f_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean report remains unchanged. E01 supports the quoted growth/decline rates and corporate loss, and E03 supports disclosed risks. Risk Manager checks confirm the figures; Trader gives a balanced HOLD rationale without a new material factual error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T173431468205Z_4d16373d_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence and the corrections suggested in the review.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T204305684496Z_730609be_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the provided evidence; the clarification regarding rounding in C1 is a helpful detail, not an error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T195544553303Z_4e2d3c5c_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Initial C3 guarantees FY2026 parent earnings growth from historical segment growth. Risk Manager explicitly rejects this unsupported guarantee using E01/E02 and corporate volatility. Final C3 and rationale retract certainty and retain the corporate-loss context. Trader uses supported historical performance without the guarantee; no new error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T202114052627Z_729f3238_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale accurately reflect the evidence provided in the packet without introducing new material errors.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02"
+    ]
+  },
+  "RUN_20261023T190252913044Z_220be927_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence provided; the correction of the period swap was accurate.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01"
+    ]
+  },
+  "RUN_20261023T185713579854Z_af662fc4_debate_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Initial report omits the Corporate and Other loss. Although the Risk Manager calls the report factually accurate, its calibration concern explicitly identifies the missing emphasis on the +$104M to -$1,152M swing and its role as the primary driver. The final rationale restores this material context, as does Trader. Both segment growth calculations remain supported by E01; no new material error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T195257767253Z_b75b968f_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean report and Trader preserve the supported E01 financial figures and Corporate and Other loss, with E03 risk context. No Risk Manager stage and no new material final error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T184921507753Z_4d16373d_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected citation error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T192042743191Z_730609be_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C5 and the rationale assert full control over all joint ventures, contradicting E03, and this remains unchanged. Trader bases its HOLD on correctly described earnings declines, segment gains and the corporate loss, with generic risk context; it does not invoke the false full-control premise. No Risk Manager stage or new material error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T173601862903Z_4e2d3c5c_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale do not introduce new material factual errors; the Trader's assessment of the verifier's results is consistent with the provided (though empty) review context in this specific workflow.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T204308539808Z_729f3238_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T202208212834Z_220be927_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "C2 swaps FY2024/FY2025 for EPS values 3.37/3.30 despite E01. The wrong periods persist in final prose and check_spec. Trader rejects C2 after verification and relies on other claims, so it does not accept the erroneous temporal premise. No Risk Manager stage or new error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T195709637195Z_af662fc4_verification_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale contain no new material factual errors; they only persist in the omission of the Corporate and Other segment results.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T201005372063Z_b75b968f_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Clean report is unchanged. E01 verifies the net income/EPS declines, segment growth and Corporate and Other loss; E03 supports risks. Trader retains a balanced interpretation. No new material factual error found.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T203041636349Z_4d16373d_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are factually consistent with the provided evidence; the correction of the citation was accurate.",
+    "new_error_evidence_ids": []
+  },
+  "RUN_20261023T201819143685Z_730609be_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence provided.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T204759366550Z_4e2d3c5c_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the evidence provided; the corrections made to C3 accurately reflect the uncertainties mentioned in the evidence.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T191005069665Z_729f3238_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and trader rationale are consistent with the provided evidence and do not introduce new factual errors.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  },
+  "RUN_20261023T193603788385Z_220be927_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "The final report and Trader rationale are consistent with the evidence provided, and no new material factual errors were introduced.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02"
+    ]
+  },
+  "RUN_20261023T194027183025Z_af662fc4_hybrid_neutral": {
+    "new_error_present": false,
+    "new_error_explanation": "Initial and final reports omit the Corporate and Other loss in E01/E02. Risk Manager checks correct segment arithmetic but never identifies this missing explanation for the consolidated decline. Trader accepts on a mixed headline/segment picture while also calling the segments operationally strong. Material reliance on the omitted offset is uncertain, rather than inferred solely from acceptance. No new material factual error.",
+    "new_error_evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ]
+  }
+}

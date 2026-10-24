@@ -1,0 +1,1890 @@
+[
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064137766844Z_edafb358_baseline_neutral",
+    "case_id": "CASE_edafb358c9a644e98ea728bfec58488f",
+    "architecture": "baseline",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064100680132Z_47789d69_baseline_neutral",
+    "case_id": "CASE_47789d694a6d5edc87aebd5c3c68f946",
+    "architecture": "baseline",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064340970867Z_1453e430_baseline_neutral",
+    "case_id": "CASE_1453e4303c4b4412bffb36eb1a768020",
+    "architecture": "baseline",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064338435397Z_8e881770_baseline_neutral",
+    "case_id": "CASE_8e881770645743ca87b837fb88236dea",
+    "architecture": "baseline",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063748301731Z_6efcf7c3_baseline_neutral",
+    "case_id": "CASE_6efcf7c39ea25c6ebad992e85eae2426",
+    "architecture": "baseline",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063917017188Z_605505ea_baseline_neutral",
+    "case_id": "CASE_605505ea4278540ab6c4f56282b6f249",
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063704261626Z_26968695_baseline_neutral",
+    "case_id": "CASE_269686955deb4a2da659711a4cd3212a",
+    "architecture": "baseline",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064152731134Z_87db9d2c_baseline_neutral",
+    "case_id": "CASE_87db9d2c8e9359d19df15e3e1954c752",
+    "architecture": "baseline",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064321741253Z_47789d69_hybrid_neutral",
+    "case_id": "CASE_47789d694a6d5edc87aebd5c3c68f946",
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064048952899Z_ed4cc6ce_hybrid_neutral",
+    "case_id": "CASE_ed4cc6ceaf864417bfe0f7235aa8d9b3",
+    "architecture": "hybrid",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064005783787Z_1453e430_hybrid_neutral",
+    "case_id": "CASE_1453e4303c4b4412bffb36eb1a768020",
+    "architecture": "hybrid",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063909692148Z_6efcf7c3_hybrid_neutral",
+    "case_id": "CASE_6efcf7c39ea25c6ebad992e85eae2426",
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063626507520Z_605505ea_hybrid_neutral",
+    "case_id": "CASE_605505ea4278540ab6c4f56282b6f249",
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064230675624Z_26968695_hybrid_neutral",
+    "case_id": "CASE_269686955deb4a2da659711a4cd3212a",
+    "architecture": "hybrid",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T205941872246Z_edafb358_baseline_overconfident",
+    "case_id": "CASE_edafb358c9a644e98ea728bfec58488f",
+    "architecture": "baseline",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T205946020426Z_47789d69_baseline_underconfident",
+    "case_id": "CASE_47789d694a6d5edc87aebd5c3c68f946",
+    "architecture": "baseline",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T212143501011Z_1453e430_baseline_underconfident",
+    "case_id": "CASE_1453e4303c4b4412bffb36eb1a768020",
+    "architecture": "baseline",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210357202895Z_ac2c68fd_baseline_neutral",
+    "case_id": "CASE_ac2c68fd6aa94e9095c7152d48afdd20",
+    "architecture": "baseline",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T212129940410Z_1453e430_baseline_overconfident",
+    "case_id": "CASE_1453e4303c4b4412bffb36eb1a768020",
+    "architecture": "baseline",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210637973905Z_ed4cc6ce_baseline_underconfident",
+    "case_id": "CASE_ed4cc6ceaf864417bfe0f7235aa8d9b3",
+    "architecture": "baseline",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T212323097733Z_6efcf7c3_baseline_overconfident",
+    "case_id": "CASE_6efcf7c39ea25c6ebad992e85eae2426",
+    "architecture": "baseline",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210346570745Z_605505ea_baseline_neutral",
+    "case_id": "CASE_605505ea4278540ab6c4f56282b6f249",
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T212146265375Z_26968695_baseline_neutral",
+    "case_id": "CASE_269686955deb4a2da659711a4cd3212a",
+    "architecture": "baseline",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210634594343Z_87db9d2c_baseline_underconfident",
+    "case_id": "CASE_87db9d2c8e9359d19df15e3e1954c752",
+    "architecture": "baseline",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211345697889Z_edafb358_hybrid_neutral",
+    "case_id": "CASE_edafb358c9a644e98ea728bfec58488f",
+    "architecture": "hybrid",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211431477089Z_47789d69_hybrid_neutral",
+    "case_id": "CASE_47789d694a6d5edc87aebd5c3c68f946",
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T212016867131Z_ed4cc6ce_hybrid_underconfident",
+    "case_id": "CASE_ed4cc6ceaf864417bfe0f7235aa8d9b3",
+    "architecture": "hybrid",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210232128146Z_ac2c68fd_hybrid_overconfident",
+    "case_id": "CASE_ac2c68fd6aa94e9095c7152d48afdd20",
+    "architecture": "hybrid",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210624569822Z_8e881770_hybrid_underconfident",
+    "case_id": "CASE_8e881770645743ca87b837fb88236dea",
+    "architecture": "hybrid",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T212126353042Z_1453e430_hybrid_underconfident",
+    "case_id": "CASE_1453e4303c4b4412bffb36eb1a768020",
+    "architecture": "hybrid",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211709788000Z_6efcf7c3_hybrid_overconfident",
+    "case_id": "CASE_6efcf7c39ea25c6ebad992e85eae2426",
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210857790695Z_605505ea_hybrid_underconfident",
+    "case_id": "CASE_605505ea4278540ab6c4f56282b6f249",
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211317862339Z_26968695_hybrid_underconfident",
+    "case_id": "CASE_269686955deb4a2da659711a4cd3212a",
+    "architecture": "hybrid",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210803374846Z_87db9d2c_hybrid_overconfident",
+    "case_id": "CASE_87db9d2c8e9359d19df15e3e1954c752",
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200648639932Z_af6fbee3_baseline_neutral",
+    "case_id": "CASE_af6fbee3fff55b75aea5282d95b7210c",
+    "architecture": "baseline",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T174526031751Z_da780b37_baseline_neutral",
+    "case_id": "CASE_da780b37984a49eea1d3489a73b18fdb",
+    "architecture": "baseline",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195315689490Z_c0a49022_baseline_neutral",
+    "case_id": "CASE_c0a4902206fc408d9cb8db940c485ae0",
+    "architecture": "baseline",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191123404582Z_4dedde0f_baseline_neutral",
+    "case_id": "CASE_4dedde0f731b51e4af13271a8f97f093",
+    "architecture": "baseline",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201022386804Z_c34c11bd_baseline_neutral",
+    "case_id": "CASE_c34c11bd675540759cf19ae49ac3f23d",
+    "architecture": "baseline",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191125657338Z_bc3a41cc_baseline_neutral",
+    "case_id": "CASE_bc3a41ccfc4b5efa8c5e35699eb9f345",
+    "architecture": "baseline",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205626380160Z_ac2c68fd_baseline_neutral",
+    "case_id": "CASE_ac2c68fd6aa94e9095c7152d48afdd20",
+    "architecture": "baseline",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182229341081Z_b75b968f_baseline_neutral",
+    "case_id": "CASE_b75b968fbc124c5cbe26e1972454f66f",
+    "architecture": "baseline",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200621025043Z_aeee037a_baseline_neutral",
+    "case_id": "CASE_aeee037a0e3f4ed4a6f6755c53dce782",
+    "architecture": "baseline",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191800019692Z_7dc4aa92_baseline_neutral",
+    "case_id": "CASE_7dc4aa9278d15fe694fcc19f5811b15f",
+    "architecture": "baseline",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T203443809536Z_2fee21c5_baseline_neutral",
+    "case_id": "CASE_2fee21c561504f6eaa6eb7081179d602",
+    "architecture": "baseline",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190817236134Z_5506de28_baseline_neutral",
+    "case_id": "CASE_5506de286bd347e584f87534d354312b",
+    "architecture": "baseline",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205402576260Z_af662fc4_baseline_neutral",
+    "case_id": "CASE_af662fc4f06a5e6bb0557431bf917720",
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195635636834Z_756783c6_baseline_neutral",
+    "case_id": "CASE_756783c6fcef4d21ad33d11cdd5233ca",
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205305325773Z_a1bd71c6_baseline_neutral",
+    "case_id": "CASE_a1bd71c64cee5ab7b7a8c4dd9a0a9a86",
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190458087157Z_4ccf4485_baseline_neutral",
+    "case_id": "CASE_4ccf44850dee49b88dcb9bae182a7a4e",
+    "architecture": "baseline",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194837748018Z_ccc7fd5c_baseline_neutral",
+    "case_id": "CASE_ccc7fd5c431b4191a04100c32e999cd8",
+    "architecture": "baseline",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192014624787Z_4c22e44d_baseline_neutral",
+    "case_id": "CASE_4c22e44d6cbb4d34b5b4a46749603b7f",
+    "architecture": "baseline",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185722413010Z_87db9d2c_baseline_neutral",
+    "case_id": "CASE_87db9d2c8e9359d19df15e3e1954c752",
+    "architecture": "baseline",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205409475791Z_a93bba37_baseline_neutral",
+    "case_id": "CASE_a93bba3795b6583fa86163776e1786f8",
+    "architecture": "baseline",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204406291817Z_4e2d3c5c_baseline_neutral",
+    "case_id": "CASE_4e2d3c5cee4545b2ae75bd90933167ca",
+    "architecture": "baseline",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183115660692Z_37078ac1_debate_neutral",
+    "case_id": "CASE_37078ac194c959acb2a522fa28e65c11",
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200436545288Z_0da3ca36_debate_neutral",
+    "case_id": "CASE_0da3ca36881b5590849c0a6c1210a7f0",
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185011260909Z_4b8ab56b_debate_neutral",
+    "case_id": "CASE_4b8ab56b8810424095753c0876776b6c",
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194343164912Z_37fa21d6_debate_neutral",
+    "case_id": "CASE_37fa21d6fbfb5d748a1bdedaa5a05483",
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173331364614Z_e2ce864e_debate_neutral",
+    "case_id": "CASE_e2ce864eb8cd58e5b7eced31a8f556ce",
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192200332053Z_865cc116_debate_neutral",
+    "case_id": "CASE_865cc1164aee4623a6f336da7b99e3fd",
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191957258145Z_b75b968f_debate_neutral",
+    "case_id": "CASE_b75b968fbc124c5cbe26e1972454f66f",
+    "architecture": "debate",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200331523975Z_a4db15fb_debate_neutral",
+    "case_id": "CASE_a4db15fb4a7644428ea25704e0f5074f",
+    "architecture": "debate",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205749284317Z_aeee037a_debate_neutral",
+    "case_id": "CASE_aeee037a0e3f4ed4a6f6755c53dce782",
+    "architecture": "debate",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201451368919Z_94fbb0b4_debate_neutral",
+    "case_id": "CASE_94fbb0b4454a57bbb252f2d0206431a6",
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200038260538Z_94d62860_debate_neutral",
+    "case_id": "CASE_94d62860d69c576fb2974624d0ef5180",
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190202039463Z_c5557760_debate_neutral",
+    "case_id": "CASE_c5557760edbe4d98b609c07583552b60",
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202237378391Z_9a41f8bb_debate_neutral",
+    "case_id": "CASE_9a41f8bba3545ecdabf9f8acf02bc02a",
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185713579854Z_af662fc4_debate_neutral",
+    "case_id": "CASE_af662fc4f06a5e6bb0557431bf917720",
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T174424948041Z_a1bd71c6_debate_neutral",
+    "case_id": "CASE_a1bd71c64cee5ab7b7a8c4dd9a0a9a86",
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183250090941Z_b14df659_debate_neutral",
+    "case_id": "CASE_b14df659d08a5401bb310bcadff9e988",
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173227670784Z_26968695_debate_neutral",
+    "case_id": "CASE_269686955deb4a2da659711a4cd3212a",
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T180210863495Z_0b1d3caf_debate_neutral",
+    "case_id": "CASE_0b1d3caf137445b7bf34d22e3d313633",
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192501273373Z_927482ca_debate_neutral",
+    "case_id": "CASE_927482ca305253cb82b8aba94ce35b33",
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195544553303Z_4e2d3c5c_debate_neutral",
+    "case_id": "CASE_4e2d3c5cee4545b2ae75bd90933167ca",
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261024T063504947482Z_44aa1169_debate_neutral",
+    "case_id": "CASE_44aa1169d05f403fb1fe3c666229da99",
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205541247676Z_da780b37_hybrid_neutral",
+    "case_id": "CASE_da780b37984a49eea1d3489a73b18fdb",
+    "architecture": "hybrid",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T180746532242Z_29b37757_hybrid_neutral",
+    "case_id": "CASE_29b377578fb246e4af44d807090b40af",
+    "architecture": "hybrid",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204121428635Z_6dae7cf7_hybrid_neutral",
+    "case_id": "CASE_6dae7cf7a64f4b228a2da78b5e57befb",
+    "architecture": "hybrid",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201247475507Z_865cc116_hybrid_neutral",
+    "case_id": "CASE_865cc1164aee4623a6f336da7b99e3fd",
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202341807114Z_66a744d9_hybrid_neutral",
+    "case_id": "CASE_66a744d9adff44a7a058bc282cc3f32d",
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200140480465Z_3872e6e6_hybrid_neutral",
+    "case_id": "CASE_3872e6e69c7b4a769505108f08d12585",
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201005372063Z_b75b968f_hybrid_neutral",
+    "case_id": "CASE_b75b968fbc124c5cbe26e1972454f66f",
+    "architecture": "hybrid",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202409388125Z_ac5ffd2d_hybrid_neutral",
+    "case_id": "CASE_ac5ffd2d16144be5b7f6bff10d6e0b10",
+    "architecture": "hybrid",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261024T063404417664Z_ed4cc6ce_hybrid_neutral",
+    "case_id": "CASE_ed4cc6ceaf864417bfe0f7235aa8d9b3",
+    "architecture": "hybrid",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191327321046Z_eed79741_hybrid_neutral",
+    "case_id": "CASE_eed7974156a45c75b6d11c76a7b05d19",
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195453169407Z_6efcf7c3_hybrid_neutral",
+    "case_id": "CASE_6efcf7c39ea25c6ebad992e85eae2426",
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201329891049Z_2fee21c5_hybrid_neutral",
+    "case_id": "CASE_2fee21c561504f6eaa6eb7081179d602",
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185923686636Z_125918c7_hybrid_neutral",
+    "case_id": "CASE_125918c7b69b590d9108ee25b65eaffe",
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194027183025Z_af662fc4_hybrid_neutral",
+    "case_id": "CASE_af662fc4f06a5e6bb0557431bf917720",
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261024T063149057873Z_4378b67a_hybrid_neutral",
+    "case_id": "CASE_4378b67a308e4e4589fba6105b96d502",
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T175835926568Z_4ccf4485_hybrid_neutral",
+    "case_id": "CASE_4ccf44850dee49b88dcb9bae182a7a4e",
+    "architecture": "hybrid",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193754599983Z_b5c24a96_hybrid_neutral",
+    "case_id": "CASE_b5c24a96fc735a96a652142eb2ebc164",
+    "architecture": "hybrid",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193516894081Z_98049939_hybrid_neutral",
+    "case_id": "CASE_98049939f1e04251a14473a116e831d5",
+    "architecture": "hybrid",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T175654982147Z_149979cc_hybrid_neutral",
+    "case_id": "CASE_149979cce44551219b76eb50a2e8f679",
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T203817155192Z_51018e6c_hybrid_neutral",
+    "case_id": "CASE_51018e6c28754d4793bd39c6d0171f58",
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204954363503Z_44aa1169_hybrid_neutral",
+    "case_id": "CASE_44aa1169d05f403fb1fe3c666229da99",
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193023285196Z_6dae7cf7_verification_neutral",
+    "case_id": "CASE_6dae7cf7a64f4b228a2da78b5e57befb",
+    "architecture": "verification",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194351144381Z_37078ac1_verification_neutral",
+    "case_id": "CASE_37078ac194c959acb2a522fa28e65c11",
+    "architecture": "verification",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200645978085Z_da780b37_verification_neutral",
+    "case_id": "CASE_da780b37984a49eea1d3489a73b18fdb",
+    "architecture": "verification",
+    "defect_type": "arithmetic",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181306736586Z_4dedde0f_verification_neutral",
+    "case_id": "CASE_4dedde0f731b51e4af13271a8f97f093",
+    "architecture": "verification",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193045234540Z_c34c11bd_verification_neutral",
+    "case_id": "CASE_c34c11bd675540759cf19ae49ac3f23d",
+    "architecture": "verification",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200910267685Z_e2ce864e_verification_neutral",
+    "case_id": "CASE_e2ce864eb8cd58e5b7eced31a8f556ce",
+    "architecture": "verification",
+    "defect_type": "citation_misattribution",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195257767253Z_b75b968f_verification_neutral",
+    "case_id": "CASE_b75b968fbc124c5cbe26e1972454f66f",
+    "architecture": "verification",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T175434263706Z_572f8b03_verification_neutral",
+    "case_id": "CASE_572f8b0342454e0280ab55611a469af6",
+    "architecture": "verification",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183122624196Z_2f1e45f6_verification_neutral",
+    "case_id": "CASE_2f1e45f6e1db42729e9b0995e208ff83",
+    "architecture": "verification",
+    "defect_type": "clean",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192042743191Z_730609be_verification_neutral",
+    "case_id": "CASE_730609befa9e4192a206258095beb95d",
+    "architecture": "verification",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193020235333Z_53519a0d_verification_neutral",
+    "case_id": "CASE_53519a0d59234dfda54ce88facf1f427",
+    "architecture": "verification",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191752619957Z_6fe40860_verification_neutral",
+    "case_id": "CASE_6fe40860b26f52afa80affbd8d4fd572",
+    "architecture": "verification",
+    "defect_type": "direct_factual_contradiction",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202755330253Z_e52d0f74_verification_neutral",
+    "case_id": "CASE_e52d0f74204b56928e24c7617b90d671",
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191011006940Z_4378b67a_verification_neutral",
+    "case_id": "CASE_4378b67a308e4e4589fba6105b96d502",
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192943894836Z_c65acc6f_verification_neutral",
+    "case_id": "CASE_c65acc6fefa05b358f50808686d8d3cc",
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181202589863Z_dfca011d_verification_neutral",
+    "case_id": "CASE_dfca011d93374e4db9fc16f2982514ca",
+    "architecture": "verification",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202208212834Z_220be927_verification_neutral",
+    "case_id": "CASE_220be927251d52afab0782ecb5b5ba15",
+    "architecture": "verification",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183553395924Z_ccc7fd5c_verification_neutral",
+    "case_id": "CASE_ccc7fd5c431b4191a04100c32e999cd8",
+    "architecture": "verification",
+    "defect_type": "reporting_period",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181501745911Z_51742c12_verification_neutral",
+    "case_id": "CASE_51742c12377a5a39923dbb2cb5da143c",
+    "architecture": "verification",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195124787863Z_6b86fc12_verification_neutral",
+    "case_id": "CASE_6b86fc12662d551592cedd185b3d6078",
+    "architecture": "verification",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  },
+  {
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204317754607Z_b9d5c02e_verification_neutral",
+    "case_id": "CASE_b9d5c02eae1e5eca89d050023052b085",
+    "architecture": "verification",
+    "defect_type": "unsupported_inference",
+    "reviewer": "",
+    "labels": {
+      "answer_key_matches_input": null,
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null,
+      "new_error_present": null
+    },
+    "note": ""
+  }
+]

@@ -31,6 +31,7 @@ MAX_TOKENS = 6000
 REASONING_EFFORT = None
 MODEL_CALLS = ContextVar('model_calls', default=None)
 CURRENT_CALL = ContextVar('current_call', default=None)
+AUTH_QUOTA_STATUSES = (401, 402, 403, 429)
 
 
 CHALLENGE_TYPES = ("wrong_number", "arithmetic", "reporting_period", "citation_misattribution",
@@ -232,6 +233,32 @@ def log_model_response(agent_name: str, response):
     )
 
 
+def response_error_status(body):
+    """Read an API error code without treating numbers in generated text as HTTP errors."""
+    try:
+        payload = json.loads(body)
+        status = payload.get('error', {}).get('code')
+    except (TypeError, ValueError, AttributeError):
+        return None
+    return status if type(status) is int and 400 <= status <= 599 else None
+
+
+def error_status_code(error):
+    seen = set()
+    while error is not None and id(error) not in seen:
+        seen.add(id(error))
+        response = getattr(error, 'response', None)
+        status = getattr(error, 'status_code', None) or getattr(response, 'status_code', None)
+        if type(status) is int and 400 <= status <= 599:
+            return status
+        # Some providers send an error object inside an HTTP 200 response.
+        status = response_error_status(getattr(error, 'body', None))
+        if status is not None:
+            return status
+        error = error.__cause__ or error.__context__
+    return None
+
+
 def invoke_with_retry(agent_name: str, messages, validator=None, **kwargs):
     last_error = None
     for attempt in range(1, MAX_MODEL_RETRIES + 1):
@@ -270,8 +297,10 @@ def invoke_with_retry(agent_name: str, messages, validator=None, **kwargs):
             return response
         except Exception as error:
             last_error = error
-            call.update(status='failed', error=str(error))
+            call.update(status='failed', error=str(error), error_status_code=error_status_code(error))
             print(f"[{agent_name}] model attempt {attempt}/{MAX_MODEL_RETRIES} failed: {error}", flush=True)
+            if call['error_status_code'] in AUTH_QUOTA_STATUSES:
+                break
             if attempt < MAX_MODEL_RETRIES:
                 delay = RETRY_BASE_DELAY_SECONDS * (2 ** (attempt - 1))
                 print(f"[{agent_name}] retrying in {delay:.1f}s", flush=True)

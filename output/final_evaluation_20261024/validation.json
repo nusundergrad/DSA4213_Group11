@@ -1,0 +1,18 @@
+{
+  "completed_payloads_and_quotes_validated": 506,
+  "failed_records_preserved": 10,
+  "original_runs_and_cases_byte_identical": true,
+  "source_hashes_valid": true,
+  "no_graph_import_on_finalizer_import": true,
+  "resolution_accepted_unresolved_tar_unchanged": true,
+  "evaluation_tests_passed": 88,
+  "additional_api_cost_usd": 0,
+  "scored_exports_reproduced_byte_identical": true,
+  "repository_reproduction_passed": true,
+  "notebooks_run_from_git": [
+    "explore_results.ipynb",
+    "review_sample.ipynb",
+    "review_flagged_cases.ipynb",
+    "check_judge_labels.ipynb"
+  ]
+}

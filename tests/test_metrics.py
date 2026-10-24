@@ -82,6 +82,24 @@ def test_wilson_and_mcnemar():
     assert lo > -1e-12 and .25 < hi < .35
 
 
+def test_detection_coverage_separates_pending_and_failed_cases():
+    cases = make_cases(n_pairs=4, n_tone_pairs=0)
+    runs, scores = make_runs(cases)
+    rows = [(r, s) for r, s in zip(runs, scores)
+            if r.architecture == 'debate' and cases[r.case_id].is_flawed]
+    for (_, score), detected in zip(rows, [True, False, None, True]):
+        score.detected = detected
+        score.scoring_status = 'pending'
+    rows[-1][0].status = 'failed'
+    m = M.primary_metrics(runs, scores)['debate']
+    assert m['detection']['k'] == 1 and m['detection']['n'] == 2
+    assert m['coverage']['flawed_completed'] == 3
+    assert m['coverage']['detection_pending'] == 1
+    report = M.format_report(runs, scores, cases)
+    assert '| debate | 4 | 3 | 1 | 1 | 1 | 1 |' in report
+    assert 'Detection uses detected / (detected + missed)' in report
+
+
 def test_paired_bootstrap_keeps_variants_from_one_packet_together():
     cases = make_cases(n_pairs=3, n_tone_pairs=0, seed=3)
     runs, scores = make_runs(cases, seed=3)

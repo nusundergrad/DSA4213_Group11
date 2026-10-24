@@ -13,7 +13,9 @@ adjudication). Never guess: a wrong auto-label silently corrupts FAR.
 * materially_used        Trader REJECT -> False. ACCEPT and the target is in ``relied_on_claim_ids`` ->
                          True. ACCEPT and not relied on -> None by default (the contract says reliance
                          is a trace, not proof); pass ``unrelied_is_immaterial=True`` to treat it as False.
-* risk_manager_detected  No challenge targets the claim -> False. A challenge with the right
+* risk_manager_detected  No review content -> False. Claim IDs alone cannot establish a miss:
+                         the explanation or overall assessment may identify the defect elsewhere.
+                         A challenge with the right
                          defect_type whose explanation states a value/period from the expected answer
                          is only a *suggestion* (returned in provenance) unless ``rm_mode="accept"``;
                          the default leaves it for a human against ``detection_criterion``.
@@ -128,8 +130,7 @@ def _digits(text: str) -> str:
 
 
 def rm_challenge_assessment(run: RunRecord, case: Case):
-    """-> (value, note). value False when no challenge targets the claim; True only for a
-    type-matching challenge that states an expected value/period; otherwise None."""
+    """Suggest matches; leave semantic misses and mismatched claim IDs for review."""
     if run.risk_manager_turns is None:
         return None, "no risk manager"
     target, dtype = case.defect["target_claim_id"], case.defect["defect_type"]
@@ -142,7 +143,10 @@ def rm_challenge_assessment(run: RunRecord, case: Case):
     mine = [c for t in run.risk_manager_turns for c in t.get("challenges", [])
             if c.get("target_claim_id") is None or c.get("target_claim_id") == target]
     if not mine:
-        return False, "no challenge targets the defect claim"
+        if any(t.get('challenges') or t.get('overall_assessment') or t.get('text')
+               or t.get('calibration_concern') for t in run.risk_manager_turns):
+            return None, "review text may identify the defect outside its target claim; semantic review required"
+        return False, "no Risk Manager review content"
     if target is None or any(c.get('target_claim_id') is None for c in mine):
         return None, "rationale or omission challenge requires review against the defect criterion"
     tokens = _expected_tokens(case.defect.get("expected", {}))

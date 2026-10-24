@@ -1,0 +1,326 @@
+{
+  "baseline": {
+    "coverage": {
+      "flawed_total": 90,
+      "flawed_scored": 66,
+      "flawed_completed": 90,
+      "detection_pending": null,
+      "clean_total": 15,
+      "clean_scored": 15,
+      "output_reviewed": 105,
+      "output_total": 105,
+      "failed": 0
+    },
+    "detection": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "correction": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "resolution": {
+      "k": 0,
+      "n": 90,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.04093706842168078
+    },
+    "flawed_acceptance": {
+      "k": 74,
+      "n": 90,
+      "rate": 0.8222222222222222,
+      "lo": 0.7305591926397843,
+      "hi": 0.8875035854884658
+    },
+    "accepted_unresolved": {
+      "k": 74,
+      "n": 90,
+      "rate": 0.8222222222222222,
+      "lo": 0.7305591926397843,
+      "hi": 0.8875035854884658
+    },
+    "far": {
+      "k": 14,
+      "n": 66,
+      "rate": 0.21212121212121213,
+      "lo": 0.13077866875683972,
+      "hi": 0.3251329942062081
+    },
+    "tar": {
+      "k": 15,
+      "n": 15,
+      "rate": 1.0,
+      "lo": 0.7961107336956521,
+      "hi": 1.0
+    },
+    "false_challenge": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "new_error": {
+      "k": 1,
+      "n": 105,
+      "rate": 0.009523809523809525,
+      "lo": 0.001683125905052792,
+      "hi": 0.051987529432612214
+    },
+    "investment_actions": {
+      "BUY": 17,
+      "HOLD": 69,
+      "SELL": 19
+    }
+  },
+  "debate": {
+    "coverage": {
+      "flawed_total": 90,
+      "flawed_scored": 83,
+      "flawed_completed": 87,
+      "detection_pending": 0,
+      "clean_total": 15,
+      "clean_scored": 14,
+      "output_reviewed": 99,
+      "output_total": 101,
+      "failed": 4
+    },
+    "detection": {
+      "k": 79,
+      "n": 87,
+      "rate": 0.9080459770114943,
+      "lo": 0.8289125711515433,
+      "hi": 0.952667674022474
+    },
+    "correction": {
+      "k": 75,
+      "n": 79,
+      "rate": 0.9493670886075949,
+      "lo": 0.8769210451713461,
+      "hi": 0.9801362786852669
+    },
+    "resolution": {
+      "k": 75,
+      "n": 87,
+      "rate": 0.8620689655172413,
+      "lo": 0.7742118537134604,
+      "hi": 0.9193030117226393
+    },
+    "flawed_acceptance": {
+      "k": 87,
+      "n": 87,
+      "rate": 1.0,
+      "lo": 0.9577110046498521,
+      "hi": 1.0
+    },
+    "accepted_unresolved": {
+      "k": 12,
+      "n": 87,
+      "rate": 0.13793103448275862,
+      "lo": 0.0806969882773607,
+      "hi": 0.22578814628653956
+    },
+    "far": {
+      "k": 0,
+      "n": 83,
+      "rate": 0.0,
+      "lo": 3.315969500932157e-18,
+      "hi": 0.04423686343872062
+    },
+    "tar": {
+      "k": 14,
+      "n": 14,
+      "rate": 1.0,
+      "lo": 0.7846829880728186,
+      "hi": 1.0
+    },
+    "false_challenge": {
+      "k": 14,
+      "n": 14,
+      "rate": 1.0,
+      "lo": 0.7846829880728186,
+      "hi": 1.0
+    },
+    "new_error": {
+      "k": 11,
+      "n": 99,
+      "rate": 0.1111111111111111,
+      "lo": 0.06318498396887011,
+      "hi": 0.18809076436643388
+    },
+    "investment_actions": {
+      "BUY": 18,
+      "HOLD": 62,
+      "SELL": 21
+    }
+  },
+  "verification": {
+    "coverage": {
+      "flawed_total": 90,
+      "flawed_scored": 81,
+      "flawed_completed": 90,
+      "detection_pending": 0,
+      "clean_total": 15,
+      "clean_scored": 15,
+      "output_reviewed": 105,
+      "output_total": 105,
+      "failed": 0
+    },
+    "detection": {
+      "k": 30,
+      "n": 90,
+      "rate": 0.3333333333333333,
+      "lo": 0.24453359953239737,
+      "hi": 0.4357787566081628
+    },
+    "correction": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "resolution": {
+      "k": 0,
+      "n": 90,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.04093706842168078
+    },
+    "flawed_acceptance": {
+      "k": 47,
+      "n": 90,
+      "rate": 0.5222222222222223,
+      "lo": 0.4202438257848398,
+      "hi": 0.6223811933964188
+    },
+    "accepted_unresolved": {
+      "k": 47,
+      "n": 90,
+      "rate": 0.5222222222222223,
+      "lo": 0.4202438257848398,
+      "hi": 0.6223811933964188
+    },
+    "far": {
+      "k": 1,
+      "n": 81,
+      "rate": 0.012345679012345678,
+      "lo": 0.0021825938606520106,
+      "hi": 0.06667042164117727
+    },
+    "tar": {
+      "k": 15,
+      "n": 15,
+      "rate": 1.0,
+      "lo": 0.7961107336956521,
+      "hi": 1.0
+    },
+    "false_challenge": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "new_error": {
+      "k": 0,
+      "n": 105,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.035295328256842964
+    },
+    "investment_actions": {
+      "BUY": 12,
+      "HOLD": 74,
+      "SELL": 19
+    }
+  },
+  "hybrid": {
+    "coverage": {
+      "flawed_total": 90,
+      "flawed_scored": 82,
+      "flawed_completed": 88,
+      "detection_pending": 0,
+      "clean_total": 15,
+      "clean_scored": 15,
+      "output_reviewed": 101,
+      "output_total": 103,
+      "failed": 2
+    },
+    "detection": {
+      "k": 78,
+      "n": 88,
+      "rate": 0.8863636363636364,
+      "lo": 0.8033125457954654,
+      "hi": 0.9370926736257991
+    },
+    "correction": {
+      "k": 77,
+      "n": 78,
+      "rate": 0.9871794871794872,
+      "lo": 0.9308897697115065,
+      "hi": 0.9977333266111463
+    },
+    "resolution": {
+      "k": 77,
+      "n": 88,
+      "rate": 0.875,
+      "lo": 0.7898806043001849,
+      "hi": 0.9287479910204542
+    },
+    "flawed_acceptance": {
+      "k": 87,
+      "n": 88,
+      "rate": 0.9886363636363636,
+      "lo": 0.9384035699273239,
+      "hi": 0.9979912663995695
+    },
+    "accepted_unresolved": {
+      "k": 11,
+      "n": 88,
+      "rate": 0.125,
+      "lo": 0.07125200897954588,
+      "hi": 0.21011939569981514
+    },
+    "far": {
+      "k": 0,
+      "n": 82,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.044752194740079396
+    },
+    "tar": {
+      "k": 15,
+      "n": 15,
+      "rate": 1.0,
+      "lo": 0.7961107336956521,
+      "hi": 1.0
+    },
+    "false_challenge": {
+      "k": 8,
+      "n": 15,
+      "rate": 0.5333333333333333,
+      "lo": 0.3011663015105079,
+      "hi": 0.7519077474025356
+    },
+    "new_error": {
+      "k": 4,
+      "n": 101,
+      "rate": 0.039603960396039604,
+      "lo": 0.015506895291526043,
+      "hi": 0.09744063698573793
+    },
+    "investment_actions": {
+      "BUY": 14,
+      "HOLD": 69,
+      "SELL": 20
+    }
+  }
+}

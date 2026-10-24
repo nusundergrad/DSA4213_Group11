@@ -1,0 +1,326 @@
+{
+  "baseline": {
+    "coverage": {
+      "flawed_total": 6,
+      "flawed_scored": 4,
+      "flawed_completed": 6,
+      "detection_pending": null,
+      "clean_total": 6,
+      "clean_scored": 6,
+      "output_reviewed": 12,
+      "output_total": 12,
+      "failed": 0
+    },
+    "detection": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "correction": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "resolution": {
+      "k": 0,
+      "n": 6,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.3903430336530645
+    },
+    "flawed_acceptance": {
+      "k": 5,
+      "n": 6,
+      "rate": 0.8333333333333334,
+      "lo": 0.4364905634363539,
+      "hi": 0.9699474141282696
+    },
+    "accepted_unresolved": {
+      "k": 5,
+      "n": 6,
+      "rate": 0.8333333333333334,
+      "lo": 0.4364905634363539,
+      "hi": 0.9699474141282696
+    },
+    "far": {
+      "k": 1,
+      "n": 4,
+      "rate": 0.25,
+      "lo": 0.045586062644636216,
+      "hi": 0.6993639475573634
+    },
+    "tar": {
+      "k": 6,
+      "n": 6,
+      "rate": 1.0,
+      "lo": 0.6096569663469354,
+      "hi": 1.0
+    },
+    "false_challenge": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "new_error": {
+      "k": 0,
+      "n": 12,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.2425007574992425
+    },
+    "investment_actions": {
+      "BUY": 3,
+      "HOLD": 9,
+      "SELL": 0
+    }
+  },
+  "debate": {
+    "coverage": {
+      "flawed_total": 0,
+      "flawed_scored": 0,
+      "flawed_completed": 0,
+      "detection_pending": 0,
+      "clean_total": 0,
+      "clean_scored": 0,
+      "output_reviewed": 0,
+      "output_total": 0,
+      "failed": 0
+    },
+    "detection": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "correction": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "resolution": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "flawed_acceptance": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "accepted_unresolved": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "far": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "tar": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "false_challenge": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "new_error": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "investment_actions": {
+      "BUY": 0,
+      "HOLD": 0,
+      "SELL": 0
+    }
+  },
+  "verification": {
+    "coverage": {
+      "flawed_total": 0,
+      "flawed_scored": 0,
+      "flawed_completed": 0,
+      "detection_pending": 0,
+      "clean_total": 0,
+      "clean_scored": 0,
+      "output_reviewed": 0,
+      "output_total": 0,
+      "failed": 0
+    },
+    "detection": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "correction": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "resolution": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "flawed_acceptance": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "accepted_unresolved": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "far": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "tar": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "false_challenge": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "new_error": {
+      "k": 0,
+      "n": 0,
+      "rate": null,
+      "lo": null,
+      "hi": null
+    },
+    "investment_actions": {
+      "BUY": 0,
+      "HOLD": 0,
+      "SELL": 0
+    }
+  },
+  "hybrid": {
+    "coverage": {
+      "flawed_total": 6,
+      "flawed_scored": 4,
+      "flawed_completed": 4,
+      "detection_pending": 0,
+      "clean_total": 6,
+      "clean_scored": 6,
+      "output_reviewed": 9,
+      "output_total": 10,
+      "failed": 2
+    },
+    "detection": {
+      "k": 4,
+      "n": 4,
+      "rate": 1.0,
+      "lo": 0.5100999795960008,
+      "hi": 1.0
+    },
+    "correction": {
+      "k": 4,
+      "n": 4,
+      "rate": 1.0,
+      "lo": 0.5100999795960008,
+      "hi": 1.0
+    },
+    "resolution": {
+      "k": 4,
+      "n": 4,
+      "rate": 1.0,
+      "lo": 0.5100999795960008,
+      "hi": 1.0
+    },
+    "flawed_acceptance": {
+      "k": 4,
+      "n": 4,
+      "rate": 1.0,
+      "lo": 0.5100999795960008,
+      "hi": 1.0
+    },
+    "accepted_unresolved": {
+      "k": 0,
+      "n": 4,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.48990002040399916
+    },
+    "far": {
+      "k": 0,
+      "n": 4,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.48990002040399916
+    },
+    "tar": {
+      "k": 6,
+      "n": 6,
+      "rate": 1.0,
+      "lo": 0.6096569663469354,
+      "hi": 1.0
+    },
+    "false_challenge": {
+      "k": 5,
+      "n": 6,
+      "rate": 0.8333333333333334,
+      "lo": 0.4364905634363539,
+      "hi": 0.9699474141282696
+    },
+    "new_error": {
+      "k": 0,
+      "n": 9,
+      "rate": 0.0,
+      "lo": 0.0,
+      "hi": 0.2991527535509594
+    },
+    "investment_actions": {
+      "BUY": 3,
+      "HOLD": 7,
+      "SELL": 0
+    }
+  }
+}

@@ -215,6 +215,19 @@ def describe_error(error: BaseException) -> str:
     return " <- ".join(parts)
 
 
+def record_error_status(record):
+    """Support both new structured failures and older saved provider responses."""
+    if record.get('status') != 'failed':
+        return None
+    if record.get('error_status_code') is not None:
+        return record['error_status_code']
+    for call in reversed(record.get('model_calls', [])):
+        status = call.get('error_status_code') or agent_module.response_error_status(call.get('raw_response'))
+        if status is not None:
+            return status
+    return None
+
+
 def _message_record(message):
     return {
         "id": getattr(message, "id", None),
@@ -392,7 +405,8 @@ def run_batch(
                 flush=True,
             )
             traceback.print_exc()
-            record = {"status": "failed", **identity, "error": describe_error(error)}
+            record = {"status": "failed", **identity, "error": describe_error(error),
+                      "error_status_code": agent_module.error_status_code(error)}
         finally:
             agent_module.MODEL_CALLS.reset(token)
 
@@ -408,7 +422,7 @@ def run_batch(
             encoding="utf-8",
         )
         results.append(record)
-        if record['status'] == 'failed' and any(code in record.get('error', '') for code in ('401', '402', '403', '429')):
+        if record_error_status(record) in agent_module.AUTH_QUOTA_STATUSES:
             print('Authentication/quota error: saved the failed attempt; stopping this batch.', flush=True)
             break
 

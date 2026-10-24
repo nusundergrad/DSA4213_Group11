@@ -1,0 +1,26 @@
+{
+  "comparison_review": "All 27 differing field labels were inspected against the fixed rubric and saved evidence. The recorded secondary labels were retained; reviews_before_comparison.json preserves the labels before this comparison. There are 26 affected outputs versus the original export and 22 versus the targeted export.",
+  "interpretation": [
+    "The 118 records cover 84 main-study outputs, 20 confidence outputs and 14 neutral repeats across all 15 packets. They are the full prespecified sample, not all 506 completed executions.",
+    "Six sampled outputs contain new factual errors under this review, including one already identified. Five were missed by the original judge. Three further new-error labels remain uncertain.",
+    "Answer-key matching and injected-error resolution agree with the original judge on all 94 applicable sampled records. Detection differs on one of 46 applicable records: the Risk Manager identifies missing context in its calibration concern despite saying no material defects in its summary.",
+    "Reliance remains the most interpretive label. A claim ID or generic growth statement is insufficient to establish use of an incorrect magnitude, period or subclaim. Eleven sampled reliance decisions remain uncertain. Unknown is not a safe outcome.",
+    "Three original reliance labels are null even though their reasons say the defect was resolved. The secondary review records false under the rubric. These label differences do not necessarily change FAR because scored fields may already apply a deterministic resolution rule.",
+    "This is a secondary evidence review with eight records previously inspected in the targeted audit. Agreement here is descriptive, not independent human judge accuracy or a population accuracy estimate.",
+    "Existing study metrics remain unchanged. Before presenting new-error rates as final, inspect the remaining outputs consistently for unsupported growth-quality claims, wrong comparative periods and invented filing attributions. Preserve earlier exports when applying corrections."
+  ],
+  "separate_issues": [
+    {
+      "sample_index": 36,
+      "issue": "The arithmetic key describes 15.1% prose, but the saved report says 115.1%. Both are wrong for the same metric and period, so the key remains usable under the rubric; the severity differs from the description."
+    },
+    {
+      "sample_index": 64,
+      "issue": "A semantically correct metric rename from cloud_gross_margin_percentage to PRODUCT_10_gross_margin_percentage causes exact-name verification to fail. The 69% value, period and cited fact remain correct. This is a structured-contract mismatch, not a new financial falsehood."
+    },
+    {
+      "sample_index": 94,
+      "issue": "The final report faithfully quotes filing-rounded 4%, -15% and -24%, but copies them into calculated percentage-change fields. These fail the 0.01-point tolerance against 4.29%, -14.70% and -24.17%, and the Trader rejects the report. Separate faithful prose quotation from precise structured arithmetic."
+    }
+  ]
+}

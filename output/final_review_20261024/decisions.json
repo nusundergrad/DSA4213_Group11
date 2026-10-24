@@ -1,0 +1,3375 @@
+[
+  {
+    "index": 17,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195631473659Z_fa4c7c8c_debate_neutral",
+    "packet_id": "EP_0001",
+    "field": "new_error_present",
+    "value": true,
+    "note": "Final C2 and rationale newly attribute 13% FY2025 Services growth to the filing. EP_0001_E01 gives 14%; 13% belongs to the preceding year. The initial clean report did not contain this false attribution.",
+    "evidence_ids": [
+      "EP_0001_E01"
+    ],
+    "quotes": [
+      {
+        "source": "final_report",
+        "text": "The filing reports this change as a rounded 13%."
+      }
+    ]
+  },
+  {
+    "index": 460,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T205938647145Z_605505ea_hybrid_overconfident",
+    "packet_id": "EP_0005",
+    "field": "new_error_present",
+    "value": true,
+    "note": "Final C3 newly assigns the $2.8B ENTITY_05 bargain purchase gain to 2024. E01 footnote (d) assigns it to 2023; it cannot explain the absence of a 2024 gain in the FY2025 comparison.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02"
+    ],
+    "quotes": [
+      {
+        "source": "final_report",
+        "text": "the $2.8 billion bargain purchase gain from the ENTITY_05 acquisition recorded in 2024"
+      }
+    ]
+  },
+  {
+    "index": 130,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173550692328Z_605505ea_debate_neutral",
+    "packet_id": "EP_0005",
+    "field": "new_error_present",
+    "value": null,
+    "note": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain.",
+    "evidence_ids": [
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 141,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205053467573Z_6da581a6_hybrid_neutral",
+    "packet_id": "EP_0005",
+    "field": "new_error_present",
+    "value": null,
+    "note": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain.",
+    "evidence_ids": [
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 457,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211226969629Z_6b321674_hybrid_overconfident",
+    "packet_id": "EP_0005",
+    "field": "new_error_present",
+    "value": null,
+    "note": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain.",
+    "evidence_ids": [
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 458,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211736000573Z_6b321674_hybrid_underconfident",
+    "packet_id": "EP_0005",
+    "field": "new_error_present",
+    "value": null,
+    "note": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain.",
+    "evidence_ids": [
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 459,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211811119519Z_605505ea_hybrid_neutral",
+    "packet_id": "EP_0005",
+    "field": "new_error_present",
+    "value": null,
+    "note": "The output newly attributes the provision increase to deteriorating credit quality in both consumer and wholesale portfolios. E04 identifies consumer loan growth and the PRODUCT_27 transaction, alongside wholesale credit changes and fraud; deterioration across both is not established. Whether this is a material factual overstatement or a risk inference remains uncertain.",
+    "evidence_ids": [
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 185,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202710892244Z_b6b98235_debate_neutral",
+    "packet_id": "EP_0007",
+    "field": "new_error_present",
+    "value": true,
+    "note": "The final rationale newly says the filing reports rounded 20% for both SEGMENT_12 sales and operating income. E01 reports 20% for sales only; E02 operating income rises 39,834 to 45,606 (14.49%) without a reported 20% operating-income rate.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02"
+    ],
+    "quotes": [
+      {
+        "source": "final_report",
+        "text": "operating income up 14.49% (filing reports 20% rounded for both)"
+      }
+    ]
+  },
+  {
+    "index": 233,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T175349509602Z_2f1e45f6_debate_neutral",
+    "packet_id": "EP_0009",
+    "field": "new_error_present",
+    "value": true,
+    "note": "The final rationale calls currency-excluded 5.3% organic growth while E02 also includes 1.1% acquisition contribution; excluding both gives about 4.2%. It also says pretax earnings excluding talc items are roughly flat, although (32581-7000)/(16687+5100)-1 is about 17.4%. These assertions were absent from the initial report.",
+    "evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02"
+    ],
+    "quotes": [
+      {
+        "source": "final_report",
+        "text": "Organic sales growth (volume + price) is approximately 5.3%"
+      }
+    ]
+  },
+  {
+    "index": 234,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T172636756302Z_51018e6c_debate_neutral",
+    "packet_id": "EP_0009",
+    "field": "new_error_present",
+    "value": true,
+    "note": "Trader newly bases BUY on accelerating organic sales growth. E02 reported growth is 6.0% vs 4.3%; subtracting currency and acquisition contributions gives approximately 4.2% vs 5.4%, a slowdown. Currency-excluded growth alone also slows, from 5.9% to 5.3%.",
+    "evidence_ids": [
+      "EP_0009_E02"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "accelerating organic sales growth (C2)"
+      }
+    ]
+  },
+  {
+    "index": 235,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194925185574Z_3872e6e6_debate_neutral",
+    "packet_id": "EP_0009",
+    "field": "new_error_present",
+    "value": true,
+    "note": "Trader newly bases BUY on accelerating organic sales growth. E02 reported growth is 6.0% vs 4.3%; subtracting currency and acquisition contributions gives approximately 4.2% vs 5.4%, a slowdown. Currency-excluded growth alone also slows, from 5.9% to 5.3%.",
+    "evidence_ids": [
+      "EP_0009_E02"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "accelerating organic sales growth (C2)"
+      }
+    ]
+  },
+  {
+    "index": 238,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182555285078Z_97f0e335_debate_neutral",
+    "packet_id": "EP_0009",
+    "field": "new_error_present",
+    "value": true,
+    "note": "The final rationale newly calls the full 8.4% volume contribution organic. E02 volume/price/currency already sum to total growth, with 1.1% acquisition impact included; organic volume cannot simply equal the reported total volume contribution. It also describes the 6.2% company-wide biosimilar impact as PRODUCT_42 sales erosion, changing the measurement basis.",
+    "evidence_ids": [
+      "EP_0009_E02"
+    ],
+    "quotes": [
+      {
+        "source": "final_report",
+        "text": "organic volume growth was 8.4%"
+      }
+    ]
+  },
+  {
+    "index": 11,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T180753702996Z_94d62860_baseline_neutral",
+    "packet_id": "EP_0001",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 15,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194347077325Z_37fa21d6_baseline_neutral",
+    "packet_id": "EP_0001",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 25,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183259283309Z_94d62860_verification_neutral",
+    "packet_id": "EP_0001",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 29,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T203820074930Z_37fa21d6_verification_neutral",
+    "packet_id": "EP_0001",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 39,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200337794490Z_94fbb0b4_baseline_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 43,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191123404582Z_4dedde0f_baseline_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 52,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T180039276582Z_94fbb0b4_verification_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 56,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181306736586Z_4dedde0f_verification_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 66,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191800019692Z_7dc4aa92_baseline_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 70,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182613287255Z_47789d69_baseline_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 79,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191216654275Z_7dc4aa92_verification_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 83,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200614746073Z_47789d69_verification_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 429,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T205853710253Z_47789d69_baseline_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 430,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210937240355Z_47789d69_baseline_overconfident",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 431,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T205946020426Z_47789d69_baseline_underconfident",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 488,
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064100680132Z_47789d69_baseline_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader bases its decision on supported financial facts and/or states the correct risk. It does not repeat the false subclaim or attribute the fact to the wrong excerpt. Listing the affected claim or calling the analysis supported does not establish reliance on the erroneous part.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 13,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205652147610Z_fa358ca7_baseline_neutral",
+    "packet_id": "EP_0001",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected wrong percentage or shifted fiscal period as a supporting premise for ACCEPT. The quoted rationale establishes expressed reliance even though the investment action is HOLD.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis supports a HOLD recommendation. Total net sales grew 16.43% (C1) driven by Services growth of 13.51% (C2), but Wearables/Home/Accessories declined 3.56% (C3), showing mixed segment performance. The company's significant exposure to global economic conditions (C4) adds material risk. These factors together justify maintaining current positions rather than increasing or reducing exposure."
+      }
+    ]
+  },
+  {
+    "index": 41,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T203541791088Z_edafb358_baseline_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected wrong percentage or shifted fiscal period as a supporting premise for ACCEPT. The quoted rationale establishes expressed reliance even though the investment action is HOLD.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis presents a balanced view with strong top-line growth (revenue +24.93%, operating income +17.45%, gross margin +13.38%) offset by material headwinds: declining PRODUCT_10 gross margin percentage (69%) due to AI infrastructure scaling costs, rising operating expenses (+$3.8B/6%) from cloud/AI investments and acquisitions, and acknowledged intense competition with low barriers to entry. These counter-evidences justify a HOLD recommendation as growth is real but margin pressures and competitive risks create uncertainty. The assessment is well-supported by the cited claims."
+      }
+    ]
+  },
+  {
+    "index": 67,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183134063413Z_98049939_baseline_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected wrong percentage or shifted fiscal period as a supporting premise for ACCEPT. The quoted rationale establishes expressed reliance even though the investment action is HOLD.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis presents a balanced view with strong revenue growth in the Data Center/AI segment (C2: +145% YoY) offset by margin pressure in the Gaming segment (C3: +5.8% revenue but operating income decline due to +44% opex) and material geopolitical risks (C4: export controls/sanctions). The 114% total revenue growth (C1) is impressive but largely historical (FY2023-FY2024). Given the concentration risk in one segment, emerging margin headwinds in another, and significant regulatory uncertainty, HOLD is appropriate. The support score reflects high confidence in the factual claims but moderate conviction in the forward-looking risk/reward balance."
+      }
+    ]
+  },
+  {
+    "index": 68,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T174526031751Z_da780b37_baseline_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected wrong percentage or shifted fiscal period as a supporting premise for ACCEPT. The quoted rationale establishes expressed reliance even though the investment action is HOLD.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis presents a balanced view: exceptional revenue growth (124% total, 145% in Data Center/AI segment) is offset by margin pressure in the Gaming segment (5.8% revenue growth but operating income decline due to 44% expense increase) and material geopolitical risks from export controls/sanctions. The HOLD recommendation appropriately reflects this mixed risk/reward profile. The evidence chain is verifiable and the rationale is internally consistent."
+      }
+    ]
+  },
+  {
+    "index": 421,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210933958529Z_edafb358_baseline_underconfident",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected wrong percentage or shifted fiscal period as a supporting premise for ACCEPT. The quoted rationale establishes expressed reliance even though the investment action is HOLD.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis presents a balanced view with strong top-line growth (revenue +24.93%, operating income +17.45%, gross margin +13.38%) offset by material headwinds: declining PRODUCT_10 gross margin percentage (69%) due to AI infrastructure scaling costs, rising operating expenses (+$3.8B, ~6%) from cloud/AI investments and acquisitions, and acknowledged intense competition with low barriers to entry. These counter-evidences justify the HOLD recommendation as they introduce uncertainty around margin sustainability and competitive positioning despite robust growth. The analyst's low confidence note further supports a cautious stance."
+      }
+    ]
+  },
+  {
+    "index": 12,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192014624787Z_4c22e44d_baseline_neutral",
+    "packet_id": "EP_0001",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 40,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202416518000Z_dfca011d_baseline_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 419,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211204221812Z_edafb358_baseline_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 420,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T205941872246Z_edafb358_baseline_overconfident",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 485,
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T064137766844Z_edafb358_baseline_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader uses generic growth or the correct magnitude without specifying the erroneous magnitude/year. Whether it relies on the injected detail cannot be established from its expressed reasoning.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 14,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205255703062Z_125918c7_baseline_neutral",
+    "packet_id": "EP_0001",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 21,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194150236733Z_125918c7_debate_neutral",
+    "packet_id": "EP_0001",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 28,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192312213158Z_125918c7_verification_neutral",
+    "packet_id": "EP_0001",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 42,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205305325773Z_a1bd71c6_baseline_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 55,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200629393581Z_a1bd71c6_verification_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 62,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205159507667Z_a1bd71c6_hybrid_neutral",
+    "packet_id": "EP_0002",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 69,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182415284243Z_2ac7233d_baseline_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 75,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201135438278Z_2ac7233d_debate_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 82,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183559930446Z_2ac7233d_verification_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 89,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181456107180Z_2ac7233d_hybrid_neutral",
+    "packet_id": "EP_0003",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the specified adverse segment or margin context. Trader accepts the remaining growth/risk account, but its rationale neither establishes material reliance on the missing information nor clearly rejects the affected premise. Keep reliance uncertain rather than infer it from acceptance alone.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 93,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182559243829Z_6efcf7c3_baseline_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 97,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191125657338Z_bc3a41cc_baseline_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 104,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190907326710Z_bc3a41cc_debate_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 106,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190913205196Z_6efcf7c3_verification_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 110,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183446400508Z_bc3a41cc_verification_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 441,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T205858818729Z_6efcf7c3_baseline_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 442,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T212323097733Z_6efcf7c3_baseline_overconfident",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 443,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211835186952Z_6efcf7c3_baseline_underconfident",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 492,
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063748301731Z_6efcf7c3_baseline_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 120,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T203102847405Z_6da581a6_baseline_neutral",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 124,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192816343808Z_e2ce864e_baseline_neutral",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 134,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185929875901Z_6da581a6_verification_neutral",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 138,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200910267685Z_e2ce864e_verification_neutral",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 2,
+    "batch": "main_study",
+    "run_id": "RUN_20261024T063153750847Z_3c372363_verification_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 148,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T175426221475Z_eed79741_baseline_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 152,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185216923397Z_3c372363_baseline_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 159,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201741355240Z_3c372363_debate_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 162,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191332120521Z_eed79741_verification_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 172,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T180359407763Z_3c372363_hybrid_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on supported numerical performance and risk context, not the reversed direction or wrong excerpt attribution. The correct component of an affected claim and a claim ID alone do not establish reliance on its erroneous part.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 94,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194837748018Z_ccc7fd5c_baseline_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The rationale describes growth without the shifted year or inflated magnitude. It is ambiguous whether the erroneous temporal/numerical detail supports acceptance.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 95,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T180759387279Z_4b8ab56b_baseline_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The rationale describes growth without the shifted year or inflated magnitude. It is ambiguous whether the erroneous temporal/numerical detail supports acceptance.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 96,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T184610043852Z_c65acc6f_baseline_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 103,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204915350674Z_c65acc6f_debate_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 109,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192943894836Z_c65acc6f_verification_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 116,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190657231896Z_c65acc6f_hybrid_neutral",
+    "packet_id": "EP_0004",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 123,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200102736728Z_605505ea_baseline_neutral",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 137,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182419245273Z_605505ea_verification_neutral",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 453,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210346570745Z_605505ea_baseline_neutral",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 454,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210351278332Z_605505ea_baseline_overconfident",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 496,
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063917017188Z_605505ea_baseline_neutral",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The expense/credit-cost omission persists. The Trader accepts a revenue-based account but does not establish whether the missing financial offset is material to its stated reasoning. Keep uncertainty rather than equate acceptance with reliance or absence of mention with immateriality.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 122,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194159231572Z_29b37757_baseline_neutral",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the incorrect revenue percentage or the shifted year/multi-year growth history as a premise for ACCEPT. The rationale directly expresses the injected error.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis presents a balanced view with verified revenue growth (C1: +12.75% total net revenue, C2: +3.09% NII, C3: +2.39% noninterest revenue) offset by a significant 33.09% increase in credit loss provisions (C4). This mixed fundamental picture supports the HOLD recommendation as the company navigates credit quality deterioration while maintaining revenue momentum. All claims are backed by specific evidence IDs and check specifications, providing adequate analytical support for the current recommendation."
+      }
+    ]
+  },
+  {
+    "index": 149,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T203058142158Z_26968695_baseline_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the incorrect revenue percentage or the shifted year/multi-year growth history as a premise for ACCEPT. The rationale directly expresses the injected error.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis provides verified evidence of consistent top-line and operating income growth across FY2023-FY2025 (C1, C2, C3) and a modest gross margin improvement (C4). These fundamentals support the BUY recommendation, though the support score is moderated by the lack of quantified valuation context, cash flow analysis, and the acknowledged competitive risks (C5). The analyst's moderate confidence is appropriate given the data scope."
+      }
+    ]
+  },
+  {
+    "index": 465,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T212146265375Z_26968695_baseline_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the incorrect revenue percentage or the shifted year/multi-year growth history as a premise for ACCEPT. The rationale directly expresses the injected error.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis provides verified evidence of consistent top-line and operating income growth across FY2023-FY2025 (C1, C2, C3) and a modest gross margin improvement (C4). These fundamentals support the BUY recommendation, though the lack of valuation context, cash flow analysis, and competitive positioning detail limits conviction. The qualitative risk note (C5) is acknowledged but does not offset the demonstrated financial momentum."
+      }
+    ]
+  },
+  {
+    "index": 466,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210926729014Z_26968695_baseline_overconfident",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the incorrect revenue percentage or the shifted year/multi-year growth history as a premise for ACCEPT. The rationale directly expresses the injected error.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis provides verified, multi-year growth in revenue (+5.1% FY24, +5.0% FY25), operating income (+8.7% FY25), and gross margin expansion (+40 bps FY25). These fundamental improvements support the BUY recommendation despite competitive headwinds noted in C5. The evidence chain is solid with specific fact IDs and percentage-change checks."
+      }
+    ]
+  },
+  {
+    "index": 500,
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063704261626Z_26968695_baseline_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the incorrect revenue percentage or the shifted year/multi-year growth history as a premise for ACCEPT. The rationale directly expresses the injected error.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis provides verified evidence of consistent top-line and operating-income growth across FY2023-2025 (C1, C2, C3) and a modest gross-margin improvement (C4). These fundamentals support the BUY recommendation, though the lack of valuation context, cash-flow data, and quantified competitive risks (C5 is qualitative only) limits conviction."
+      }
+    ]
+  },
+  {
+    "index": 121,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181157709877Z_7fea52cb_baseline_neutral",
+    "packet_id": "EP_0005",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader explicitly bases its rationale on the correctly dated NII/noninterest-revenue growth and credit-provision increase. It does not use the total-revenue comparison whose years were shifted in C1.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 151,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185927008251Z_6935de37_baseline_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "The omitted item is favorable gross-margin improvement. Trader explicitly bases BUY on the separately correct revenue, sales and operating-income growth; it does not claim that margins failed to improve or use the absence as a negative premise.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 158,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183739160507Z_6935de37_debate_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "The omitted item is favorable gross-margin improvement. Trader explicitly bases BUY on the separately correct revenue, sales and operating-income growth; it does not claim that margins failed to improve or use the absence as a negative premise.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 165,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T180022498937Z_6935de37_verification_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "The omitted item is favorable gross-margin improvement. Trader explicitly bases BUY on the separately correct revenue, sales and operating-income growth; it does not claim that margins failed to improve or use the absence as a negative premise.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 171,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T174658075612Z_6935de37_hybrid_neutral",
+    "packet_id": "EP_0006",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "The omitted item is favorable gross-margin improvement. Trader explicitly bases BUY on the separately correct revenue, sales and operating-income growth; it does not claim that margins failed to improve or use the absence as a negative premise.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 174,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204313902016Z_75b69c90_baseline_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 178,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182629614813Z_b6b98235_baseline_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 185,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202710892244Z_b6b98235_debate_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 188,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204356155968Z_75b69c90_verification_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 192,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T184601028552Z_b6b98235_verification_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 200,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192508550867Z_8df2024a_baseline_neutral",
+    "packet_id": "EP_0008",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 204,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205257928191Z_7cfe42c6_baseline_neutral",
+    "packet_id": "EP_0008",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 213,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201142510249Z_8df2024a_verification_neutral",
+    "packet_id": "EP_0008",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 217,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T175553900845Z_7cfe42c6_verification_neutral",
+    "packet_id": "EP_0008",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 229,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202121708059Z_3872e6e6_baseline_neutral",
+    "packet_id": "EP_0009",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 232,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T172652914406Z_97f0e335_baseline_neutral",
+    "packet_id": "EP_0009",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 242,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191742907174Z_3872e6e6_verification_neutral",
+    "packet_id": "EP_0009",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 245,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195028059133Z_97f0e335_verification_neutral",
+    "packet_id": "EP_0009",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader relies on separately supported financial performance and risk context, not the injected false direction or wrong evidence attribution. In the patent-risk case it explicitly acknowledges the risk or identifies the unsupported assertion rather than adopting it.",
+    "evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 176,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185316418813Z_6dae7cf7_baseline_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected erroneous growth/year or the unqualified 95.25% pretax-income surge as a substantive reason for ACCEPT. In the omission cases it treats the accounting-driven surge as strong fundamental support without its material talc qualification.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis provides verified, strong year-over-year growth in consolidated net sales (+22.38%), consolidated operating income (+16.60%), and the key SEGMENT_12 segment (net sales +19.68%, operating income +14.49%). These claims are supported by evidence and check specifications. While competitive risks are noted (C4), the financial momentum and segment strength justify the BUY recommendation. The analyst's moderate confidence and the absence of a verifier report limit the support score to 75."
+      }
+    ]
+  },
+  {
+    "index": 201,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200655627763Z_0668146d_baseline_neutral",
+    "packet_id": "EP_0008",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected erroneous growth/year or the unqualified 95.25% pretax-income surge as a substantive reason for ACCEPT. In the omission cases it treats the accounting-driven surge as strong fundamental support without its material talc qualification.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis is well-supported by verified financial data showing a 2.93% total revenue decline in 2024, driven by a 9.8% drop in the core automotive segment (C1, C2). This is partially offset by strong growth in Energy Generation & Storage (+26.6%) and Services (+18.9%) (C3, C4), but these segments remain too small to compensate for the automotive decline. Competitive pressures (C5) add risk. The mixed fundamentals with a deteriorating core business but growing adjacent segments justify a HOLD recommendation while monitoring for automotive stabilization or further diversification success."
+      }
+    ]
+  },
+  {
+    "index": 202,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194154370578Z_1833c917_baseline_neutral",
+    "packet_id": "EP_0008",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected erroneous growth/year or the unqualified 95.25% pretax-income surge as a substantive reason for ACCEPT. In the omission cases it treats the accounting-driven surge as strong fundamental support without its material talc qualification.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis accurately reflects mixed fundamentals: total revenue grew 7% (C1) but the core automotive segment declined ~10% (C2), while Energy (+27%, C3) and Services (+19%, C4) offset the drop. Competitive pressures (C5) add risk. The HOLD recommendation is appropriate given the transition in revenue mix and uncertainty around automotive demand recovery."
+      }
+    ]
+  },
+  {
+    "index": 227,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185726284443Z_4378b67a_baseline_neutral",
+    "packet_id": "EP_0009",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected erroneous growth/year or the unqualified 95.25% pretax-income surge as a substantive reason for ACCEPT. In the omission cases it treats the accounting-driven surge as strong fundamental support without its material talc qualification.",
+    "evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis provides strong fundamental support for a BUY recommendation. Worldwide income before tax nearly doubled (+95.25%) from FY2024 to FY2025 (C1), sales growth accelerated to 6.0% reaching $94.2B (C2), SEGMENT_15 profitability improved from 33.2% to 36.9% (C3), and overall pre-tax margin expanded dramatically from 18.8% to 34.6% (C4). Acquisitions/divestitures added 1.1% to sales growth (C5). While biosimilar competition on PRODUCT_42 is noted as a headwind, the magnitude of earnings improvement and margin expansion across segments outweighs this risk. The analyst's moderate confidence is appropriate given the verified financial metrics."
+      }
+    ]
+  },
+  {
+    "index": 240,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191011006940Z_4378b67a_verification_neutral",
+    "packet_id": "EP_0009",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected erroneous growth/year or the unqualified 95.25% pretax-income surge as a substantive reason for ACCEPT. In the omission cases it treats the accounting-driven surge as strong fundamental support without its material talc qualification.",
+    "evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The verifier confirmed the two core quantitative claims: a 95.25% surge in worldwide income before tax (C1) and 6.0% sales growth to $94.2B (C2). These verified facts substantiate the BUY recommendation. Claims C3–C5 were not numerically verified, so they are excluded from the support score. The 75/100 score reflects strong but incomplete verification coverage."
+      }
+    ]
+  },
+  {
+    "index": 175,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204051382050Z_0b1d3caf_baseline_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The rationale uses the correct growth magnitude or a generic acceleration claim without the shifted years. Expressed reliance on the wrong temporal comparison is uncertain.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 231,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T184818764071Z_b14df659_baseline_neutral",
+    "packet_id": "EP_0009",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The rationale uses the correct growth magnitude or a generic acceleration claim without the shifted years. Expressed reliance on the wrong temporal comparison is uncertain.",
+    "evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 177,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185521610917Z_e52d0f74_baseline_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader explicitly bases BUY on correct reported growth already net of the omitted charges. It neither asserts that earnings are free of one-off charges nor relies on a falsely favorable adjustment. The absence of the charges remains an omission but expressed reliance on it is not established by the independent growth figures.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 184,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T203439403445Z_e52d0f74_debate_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader explicitly bases BUY on correct reported growth already net of the omitted charges. It neither asserts that earnings are free of one-off charges nor relies on a falsely favorable adjustment. The absence of the charges remains an omission but expressed reliance on it is not established by the independent growth figures.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 191,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202755330253Z_e52d0f74_verification_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader explicitly bases BUY on correct reported growth already net of the omitted charges. It neither asserts that earnings are free of one-off charges nor relies on a falsely favorable adjustment. The absence of the charges remains an omission but expressed reliance on it is not established by the independent growth figures.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 197,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194230465683Z_e52d0f74_hybrid_neutral",
+    "packet_id": "EP_0007",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader explicitly bases BUY on correct reported growth already net of the omitted charges. It neither asserts that earnings are free of one-off charges nor relies on a falsely favorable adjustment. The absence of the charges remains an omission but expressed reliance on it is not established by the independent growth figures.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 203,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194823540159Z_2cbf4647_baseline_neutral",
+    "packet_id": "EP_0008",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the core automotive decline while preserving the overall decline and growing categories. Trader accepts that incomplete mix; whether the missing core explanation materially supports its rationale remains uncertain.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 209,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185309151212Z_2cbf4647_debate_neutral",
+    "packet_id": "EP_0008",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the core automotive decline while preserving the overall decline and growing categories. Trader accepts that incomplete mix; whether the missing core explanation materially supports its rationale remains uncertain.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 216,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204720969841Z_2cbf4647_verification_neutral",
+    "packet_id": "EP_0008",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the core automotive decline while preserving the overall decline and growing categories. Trader accepts that incomplete mix; whether the missing core explanation materially supports its rationale remains uncertain.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 223,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190453189852Z_2cbf4647_hybrid_neutral",
+    "packet_id": "EP_0008",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits the core automotive decline while preserving the overall decline and growing categories. Trader accepts that incomplete mix; whether the missing core explanation materially supports its rationale remains uncertain.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 230,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173823576137Z_37078ac1_baseline_neutral",
+    "packet_id": "EP_0009",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader explicitly discounts the affected headline pretax-income claim as evidence of recurring earnings and bases its recommendation on other supported sales/margin facts. It does not repeat or use the inflated percentage.",
+    "evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 203,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194823540159Z_2cbf4647_baseline_neutral",
+    "packet_id": "EP_0008",
+    "field": "new_error_present",
+    "value": true,
+    "note": "Trader newly calls the growing energy/storage and services categories higher-margin, recurring segments. The packet gives revenue changes and drivers, not comparative segment margins or support for characterizing both revenue streams as recurring. This unsupported profitability assertion supports its HOLD rationale.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "strength in higher-margin, recurring segments"
+      }
+    ]
+  },
+  {
+    "index": 253,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195458700348Z_c5557760_baseline_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 254,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200643232257Z_208b9b50_baseline_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 258,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T184013467936Z_d46f8793_baseline_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 265,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193933736955Z_d46f8793_debate_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 267,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205026171660Z_c5557760_verification_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 268,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T175117567996Z_208b9b50_verification_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 272,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192549254914Z_d46f8793_verification_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 283,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190108486852Z_425d1b26_baseline_neutral",
+    "packet_id": "EP_0011",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 292,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193821732082Z_44aa1169_verification_neutral",
+    "packet_id": "EP_0011",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 294,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190700641717Z_425d1b26_verification_neutral",
+    "packet_id": "EP_0011",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 297,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191752619957Z_6fe40860_verification_neutral",
+    "packet_id": "EP_0011",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 306,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193246955939Z_865cc116_baseline_neutral",
+    "packet_id": "EP_0012",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 320,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192504661567Z_865cc116_verification_neutral",
+    "packet_id": "EP_0012",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses the correct historical deterioration/risk or explicitly excludes the unsupported future assertion. It does not adopt the reversed definition, wrong citation attribution or erroneous cost-saving direction. A citation ID and supported part of a claim are insufficient evidence of reliance on its defect.",
+    "evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 255,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181314917597Z_f2a3327d_baseline_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly repeats the exaggerated earnings/net-income decline and uses it to justify accepting the recommendation. This is expressed reliance on the injected magnitude.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis provides strong evidence supporting a SELL recommendation. Revenue growth of 11.81% (C1) is significantly offset by a 51.26% decline in operating earnings (C2), driven by an 18.86% surge in medical costs (C4) and a deteriorating medical care ratio rising from 85.5% to 89.1% (C3). These structural margin pressures from IRA impacts, elevated cost trends, and higher acuity membership indicate fundamental profitability deterioration that warrants the SELL recommendation."
+      }
+    ]
+  },
+  {
+    "index": 284,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192824228416Z_fa13346a_baseline_neutral",
+    "packet_id": "EP_0011",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly repeats the exaggerated earnings/net-income decline and uses it to justify accepting the recommendation. This is expressed reliance on the injected magnitude.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis presents a coherent picture of deteriorating fundamentals: GAAP earnings for the key segment fell ~26%, operating cash flow declined ~5.5%, and cash reserves were cut by more than half. The driver attribution in C4 confirms the earnings drop was largely commodity-price driven, partially offset by volume growth and cost savings, but not enough to reverse the downtrend. These verified claims collectively support a HOLD stance—neither a compelling buy nor an urgent sell—while the company works through the cycle."
+      }
+    ]
+  },
+  {
+    "index": 309,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200648639932Z_af6fbee3_baseline_neutral",
+    "packet_id": "EP_0012",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly repeats the exaggerated earnings/net-income decline and uses it to justify accepting the recommendation. This is expressed reliance on the injected magnitude.",
+    "evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis provides strong evidence for a SELL recommendation. Net income declined 40.36% (C1) and revenue fell 4.64% (C2) year-over-year. The core SEGMENT_22 segment saw earnings drop 31.07% (C3) due to lower realizations and higher expenses, which outweighs the 74.99% growth in SEGMENT_26 (C4). Additionally, the company faces significant commodity price volatility risk (C5) that could further pressure results. The financial deterioration is broad-based and structural, supporting the SELL decision."
+      }
+    ]
+  },
+  {
+    "index": 256,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191746070101Z_b5c24a96_baseline_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader repeats a valid historical magnitude but does not state the swapped reporting years. It is uncertain whether the erroneous period supports its assessment.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 285,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185353796407Z_416fd43b_baseline_neutral",
+    "packet_id": "EP_0011",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader repeats a valid historical magnitude but does not state the swapped reporting years. It is uncertain whether the erroneous period supports its assessment.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 310,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192024694449Z_597e40a2_baseline_neutral",
+    "packet_id": "EP_0012",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader repeats a valid historical magnitude but does not state the swapped reporting years. It is uncertain whether the erroneous period supports its assessment.",
+    "evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 257,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181916215505Z_9a41f8bb_baseline_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Although MCR is omitted, Trader explicitly identifies deteriorating profitability from correct operating-income and medical-cost changes. Its rationale does not rely on a falsely healthy margin picture; the independent facts establish its stated negative view.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 264,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202237378391Z_9a41f8bb_debate_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Although MCR is omitted, Trader explicitly identifies deteriorating profitability from correct operating-income and medical-cost changes. Its rationale does not rely on a falsely healthy margin picture; the independent facts establish its stated negative view.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 271,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T203743318326Z_9a41f8bb_verification_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Although MCR is omitted, Trader explicitly identifies deteriorating profitability from correct operating-income and medical-cost changes. Its rationale does not rely on a falsely healthy margin picture; the independent facts establish its stated negative view.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 278,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200933505102Z_9a41f8bb_hybrid_neutral",
+    "packet_id": "EP_0010",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Although MCR is omitted, Trader explicitly identifies deteriorating profitability from correct operating-income and medical-cost changes. Its rationale does not rely on a falsely healthy margin picture; the independent facts establish its stated negative view.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 282,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173604694722Z_f88bf615_baseline_neutral",
+    "packet_id": "EP_0011",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits a positive volume/segment offset. Trader accepts on negative aggregate metrics and remaining risks, without enough evidence to establish whether the omitted positive context materially supports that one-sided account. Keep reliance unknown.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 293,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201334776318Z_f88bf615_verification_neutral",
+    "packet_id": "EP_0011",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits a positive volume/segment offset. Trader accepts on negative aggregate metrics and remaining risks, without enough evidence to establish whether the omitted positive context materially supports that one-sided account. Keep reliance unknown.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 308,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192603290458Z_47c60f1d_baseline_neutral",
+    "packet_id": "EP_0012",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits a positive volume/segment offset. Trader accepts on negative aggregate metrics and remaining risks, without enough evidence to establish whether the omitted positive context materially supports that one-sided account. Keep reliance unknown.",
+    "evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 322,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194933705486Z_47c60f1d_verification_neutral",
+    "packet_id": "EP_0012",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits a positive volume/segment offset. Trader accepts on negative aggregate metrics and remaining risks, without enough evidence to establish whether the omitted positive context materially supports that one-sided account. Keep reliance unknown.",
+    "evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 329,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192928308804Z_47c60f1d_hybrid_neutral",
+    "packet_id": "EP_0012",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "The report omits a positive volume/segment offset. Trader accepts on negative aggregate metrics and remaining risks, without enough evidence to establish whether the omitted positive context materially supports that one-sided account. Keep reliance unknown.",
+    "evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 286,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182433536270Z_6fe40860_baseline_neutral",
+    "packet_id": "EP_0011",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader lists cost savings among the driver breakdown and then refers broadly to negatives. It does not explicitly give the erroneous negative cost-saving contribution, so whether it adopted that reversed direction is ambiguous.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 334,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T174436861843Z_66a744d9_baseline_neutral",
+    "packet_id": "EP_0013",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 336,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190817236134Z_5506de28_baseline_neutral",
+    "packet_id": "EP_0013",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 347,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193048523653Z_66a744d9_verification_neutral",
+    "packet_id": "EP_0013",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 349,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T184136933700Z_5506de28_verification_neutral",
+    "packet_id": "EP_0013",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 360,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201022386804Z_c34c11bd_baseline_neutral",
+    "packet_id": "EP_0014",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 362,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185355877292Z_53519a0d_baseline_neutral",
+    "packet_id": "EP_0014",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 373,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193045234540Z_c34c11bd_verification_neutral",
+    "packet_id": "EP_0014",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 375,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T193020235333Z_53519a0d_verification_neutral",
+    "packet_id": "EP_0014",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 387,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190808119839Z_4d16373d_baseline_neutral",
+    "packet_id": "EP_0015",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 388,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173234362994Z_730609be_baseline_neutral",
+    "packet_id": "EP_0015",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 401,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T184921507753Z_4d16373d_verification_neutral",
+    "packet_id": "EP_0015",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 402,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192042743191Z_730609be_verification_neutral",
+    "packet_id": "EP_0015",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 403,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173601862903Z_4e2d3c5c_verification_neutral",
+    "packet_id": "EP_0015",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader uses supported financial facts and risk context, rather than the false contribution direction, wrong source attribution or future guarantee. Where mentioned, the unsupported guarantee is explicitly excluded from the decision basis.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 335,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195635636834Z_756783c6_baseline_neutral",
+    "packet_id": "EP_0013",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader explicitly qualifies the accounting-profit growth as cost reductions/absence of impairment and uses those supported facts plus competitive risks. It does not infer strong cash conversion or a falsely unqualified earnings-quality improvement from the omitted cash-flow detail.",
+    "evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 342,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173132897521Z_756783c6_debate_neutral",
+    "packet_id": "EP_0013",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader explicitly qualifies the accounting-profit growth as cost reductions/absence of impairment and uses those supported facts plus competitive risks. It does not infer strong cash conversion or a falsely unqualified earnings-quality improvement from the omitted cash-flow detail.",
+    "evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 348,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205406133839Z_756783c6_verification_neutral",
+    "packet_id": "EP_0013",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "Trader explicitly qualifies the accounting-profit growth as cost reductions/absence of impairment and uses those supported facts plus competitive risks. It does not infer strong cash conversion or a falsely unqualified earnings-quality improvement from the omitted cash-flow detail.",
+    "evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 337,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T172647099414Z_06cf607d_baseline_neutral",
+    "packet_id": "EP_0013",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader refers to growth/decline without repeating the injected wrong magnitude or reporting years. Its stated rationale does not establish whether it used the erroneous detail.",
+    "evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 338,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T172644384458Z_ea2df27a_baseline_neutral",
+    "packet_id": "EP_0013",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader refers to growth/decline without repeating the injected wrong magnitude or reporting years. Its stated rationale does not establish whether it used the erroneous detail.",
+    "evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 361,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190458087157Z_4ccf4485_baseline_neutral",
+    "packet_id": "EP_0014",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader refers to growth/decline without repeating the injected wrong magnitude or reporting years. Its stated rationale does not establish whether it used the erroneous detail.",
+    "evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 363,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195724620604Z_0da3ca36_baseline_neutral",
+    "packet_id": "EP_0014",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader refers to growth/decline without repeating the injected wrong magnitude or reporting years. Its stated rationale does not establish whether it used the erroneous detail.",
+    "evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 391,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201016082308Z_220be927_baseline_neutral",
+    "packet_id": "EP_0015",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Trader refers to growth/decline without repeating the injected wrong magnitude or reporting years. Its stated rationale does not establish whether it used the erroneous detail.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 364,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185526980490Z_92518efd_baseline_neutral",
+    "packet_id": "EP_0014",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "The segment-profit decline is omitted, but Trader explicitly bases SELL on correct consolidated profit/margin deterioration and unfavorable cost/pricing drivers. It does not adopt a false healthy-profitability or broad-based improvement premise.",
+    "evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 377,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T175229599375Z_92518efd_verification_neutral",
+    "packet_id": "EP_0014",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "The segment-profit decline is omitted, but Trader explicitly bases SELL on correct consolidated profit/margin deterioration and unfavorable cost/pricing drivers. It does not adopt a false healthy-profitability or broad-based improvement premise.",
+    "evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 384,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191243058201Z_92518efd_hybrid_neutral",
+    "packet_id": "EP_0014",
+    "field": "materially_used_by_trader",
+    "value": false,
+    "note": "The segment-profit decline is omitted, but Trader explicitly bases SELL on correct consolidated profit/margin deterioration and unfavorable cost/pricing drivers. It does not adopt a false healthy-profitability or broad-based improvement premise.",
+    "evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 390,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202839065475Z_729f3238_baseline_neutral",
+    "packet_id": "EP_0015",
+    "field": "materially_used_by_trader",
+    "value": true,
+    "note": "Trader explicitly uses the injected -11.6% net-income decline rather than the supported -1.6% as part of the reasoning for ACCEPT.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "The analysis presents a balanced view with verified financial metrics showing modest declines in consolidated net income (-11.6%) and EPS (-2.08%), offset by strong growth in core operating segments (SEGMENT_38 +10.32%, SEGMENT_39 +29.40%). The primary drag comes from Corporate and Other segment swinging from +$104M to -$1,152M, which appears to be a non-recurring or non-core item. Combined with disclosed risks around asset valuation and JV control, the mixed fundamentals support a HOLD position rather than a directional bet. The evidence chain is traceable and the recommendation aligns with the data."
+      }
+    ]
+  },
+  {
+    "index": 392,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205402576260Z_af662fc4_baseline_neutral",
+    "packet_id": "EP_0015",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Corporate and Other loss is omitted. Trader acknowledges consolidated weakness but accepts the core-segment strength account without the cause of the offset. Material reliance on the missing explanation remains ambiguous.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 406,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195709637195Z_af662fc4_verification_neutral",
+    "packet_id": "EP_0015",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Corporate and Other loss is omitted. Trader acknowledges consolidated weakness but accepts the core-segment strength account without the cause of the offset. Material reliance on the missing explanation remains ambiguous.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 413,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194027183025Z_af662fc4_hybrid_neutral",
+    "packet_id": "EP_0015",
+    "field": "materially_used_by_trader",
+    "value": null,
+    "note": "Corporate and Other loss is omitted. Trader acknowledges consolidated weakness but accepts the core-segment strength account without the cause of the offset. Material reliance on the missing explanation remains ambiguous.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 207,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T182202340448Z_8df2024a_debate_neutral",
+    "packet_id": "EP_0008",
+    "field": "new_error_present",
+    "value": true,
+    "note": "Trader newly describes the growing energy/storage and services businesses as higher-margin. E01/E02 establish revenue changes and drivers but no comparative segment margins. This unsupported profitability comparison is absent from the initial report and used in the recommendation rationale.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "higher-margin/diversified segments"
+      }
+    ]
+  },
+  {
+    "index": 208,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201652929154Z_0668146d_debate_neutral",
+    "packet_id": "EP_0008",
+    "field": "new_error_present",
+    "value": true,
+    "note": "Trader newly describes the growing energy/storage and services businesses as higher-margin. E01/E02 establish revenue changes and drivers but no comparative segment margins. This unsupported profitability comparison is absent from the initial report and used in the recommendation rationale.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ],
+    "quotes": [
+      {
+        "source": "trader",
+        "text": "higher-margin/diversified segments"
+      }
+    ]
+  },
+  {
+    "index": 220,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181300903109Z_8df2024a_hybrid_neutral",
+    "packet_id": "EP_0008",
+    "field": "new_error_present",
+    "value": true,
+    "note": "Final rationale and Trader newly characterize the adjacent energy/services businesses as higher-margin. E01/E02 provide no comparative margins; the source supports revenue diversification, not this added profitability claim.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ],
+    "quotes": [
+      {
+        "source": "final_report",
+        "text": "higher-margin adjacent segments"
+      }
+    ]
+  },
+  {
+    "index": 221,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181756942390Z_0668146d_hybrid_neutral",
+    "packet_id": "EP_0008",
+    "field": "new_error_present",
+    "value": true,
+    "note": "Final rationale and Trader newly characterize the adjacent energy/services businesses as higher-margin. E01/E02 provide no comparative margins; the source supports revenue diversification, not this added profitability claim.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02"
+    ],
+    "quotes": [
+      {
+        "source": "final_report",
+        "text": "higher-margin adjacent segments"
+      }
+    ]
+  },
+  {
+    "index": 21,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194150236733Z_125918c7_debate_neutral",
+    "packet_id": "EP_0001",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the missing financial offset in its calibration concern or assessment. This counts as detection even when the challenge list concerns rounding or another claim.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The analyst's confidence is described as 'moderate.' Given the straightforward nature of the arithmetic checks and the clear risk disclosure in Item 1A, confidence could be higher. However, the report omits analysis of the Wearables, Home and Accessories segment decline (-4% per filing, -3.56% calculated) and the PRODUCT_01 segment growth (4% per filing, 4.18% calculated), which are material line items. This omission slightly reduces the comprehensiveness of the assessment."
+      }
+    ]
+  },
+  {
+    "index": 35,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185923686636Z_125918c7_hybrid_neutral",
+    "packet_id": "EP_0001",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the missing financial offset in its calibration concern or assessment. This counts as detection even when the challenge list concerns rounding or another claim.",
+    "evidence_ids": [
+      "EP_0001_E01",
+      "EP_0001_E02",
+      "EP_0001_E03"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The analyst's rationale cites 'strong performance in its Services sales category' as a key driver for the HOLD recommendation. While Services grew at ~13.5% (filing: 14%), Wearables, Home and Accessories declined 4% (per filing). The rationale does not address this offsetting decline or the concentration risk implied by Services driving total growth. The 'moderate confidence' note is appropriate given these mixed segment dynamics and the macroeconomic risks highlighted in C4."
+      }
+    ]
+  },
+  {
+    "index": 48,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T174424948041Z_a1bd71c6_debate_neutral",
+    "packet_id": "EP_0002",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the missing financial offset in its calibration concern or assessment. This counts as detection even when the challenge list concerns rounding or another claim.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The analyst's rationale cites 'material counter-evidences' but the claims (C1-C3) only reflect positive growth metrics. The only counter-evidence cited is in C5 (operating expense growth and competition risk). The rationale would be stronger if it explicitly linked the HOLD recommendation to specific margin pressures (e.g., gross margin percentage decline noted in EP_0002_E02, PRODUCT_10 margin compression to 69%) rather than generic 'counter-evidences'."
+      }
+    ]
+  },
+  {
+    "index": 130,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173550692328Z_605505ea_debate_neutral",
+    "packet_id": "EP_0005",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the missing financial offset in its calibration concern or assessment. This counts as detection even when the challenge list concerns rounding or another claim.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The analyst's moderate confidence is appropriate given the straightforward revenue growth metrics. However, the rationale omits discussion of the significant increase in provision for credit losses (from $10.7B to $14.2B, a 33% increase), which could signal deteriorating credit quality and impact future earnings. This material omission should be addressed in a more comprehensive risk assessment."
+      }
+    ]
+  },
+  {
+    "index": 144,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191915787856Z_605505ea_hybrid_neutral",
+    "packet_id": "EP_0005",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the missing financial offset in its calibration concern or assessment. This counts as detection even when the challenge list concerns rounding or another claim.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The analyst's moderate confidence is appropriate given the revenue growth is modest and driven by offsetting factors. However, the provision for credit losses increased 33% YoY ($10.7B to $14.2B), driven by credit card loan growth and a $2.2B addition related to the PRODUCT_27 transaction. This rising credit cost trend is a material risk not reflected in the HOLD recommendation rationale."
+      }
+    ]
+  },
+  {
+    "index": 460,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T205938647145Z_605505ea_hybrid_overconfident",
+    "packet_id": "EP_0005",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the missing financial offset in its calibration concern or assessment. This counts as detection even when the challenge list concerns rounding or another claim.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The analyst's rationale focuses only on revenue growth without addressing the significant 33% increase in provision for credit losses (from $10.7B to $14.2B) and rising net charge-offs, which are material risk factors for a financial institution."
+      }
+    ]
+  },
+  {
+    "index": 498,
+    "batch": "confidence_repeat",
+    "run_id": "RUN_20261024T063626507520Z_605505ea_hybrid_neutral",
+    "packet_id": "EP_0005",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the missing financial offset in its calibration concern or assessment. This counts as detection even when the challenge list concerns rounding or another claim.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The analyst's moderate confidence is appropriate given the straightforward revenue growth metrics. However, the rationale omits discussion of the significant increase in provision for credit losses (from $10.7B to $14.2B, +33%), which is a material risk factor for a HOLD recommendation."
+      }
+    ]
+  },
+  {
+    "index": 62,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T205159507667Z_a1bd71c6_hybrid_neutral",
+    "packet_id": "EP_0002",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specific omitted financial item as missing. Correct calculations, another qualitative issue, or mentioning a source fact without identifying its omission do not establish detection.",
+    "evidence_ids": [
+      "EP_0002_E01",
+      "EP_0002_E02",
+      "EP_0002_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 75,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T201135438278Z_2ac7233d_debate_neutral",
+    "packet_id": "EP_0003",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specific omitted financial item as missing. Correct calculations, another qualitative issue, or mentioning a source fact without identifying its omission do not establish detection.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 89,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T181456107180Z_2ac7233d_hybrid_neutral",
+    "packet_id": "EP_0003",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specific omitted financial item as missing. Correct calculations, another qualitative issue, or mentioning a source fact without identifying its omission do not establish detection.",
+    "evidence_ids": [
+      "EP_0003_E01",
+      "EP_0003_E02",
+      "EP_0003_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 103,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T204915350674Z_c65acc6f_debate_neutral",
+    "packet_id": "EP_0004",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specific omitted financial item as missing. Correct calculations, another qualitative issue, or mentioning a source fact without identifying its omission do not establish detection.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 116,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190657231896Z_c65acc6f_hybrid_neutral",
+    "packet_id": "EP_0004",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specific omitted financial item as missing. Correct calculations, another qualitative issue, or mentioning a source fact without identifying its omission do not establish detection.",
+    "evidence_ids": [
+      "EP_0004_E01",
+      "EP_0004_E02",
+      "EP_0004_E03",
+      "EP_0004_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 459,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T211811119519Z_605505ea_hybrid_neutral",
+    "packet_id": "EP_0005",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specific omitted financial item as missing. Correct calculations, another qualitative issue, or mentioning a source fact without identifying its omission do not establish detection.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 461,
+    "batch": "confidence_study",
+    "run_id": "RUN_20261023T210857790695Z_605505ea_hybrid_underconfident",
+    "packet_id": "EP_0005",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specific omitted financial item as missing. Correct calculations, another qualitative issue, or mentioning a source fact without identifying its omission do not establish detection.",
+    "evidence_ids": [
+      "EP_0005_E01",
+      "EP_0005_E02",
+      "EP_0005_E03",
+      "EP_0005_E04"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 6,
+    "batch": "main_study",
+    "run_id": "RUN_20261024T063149057873Z_4378b67a_hybrid_neutral",
+    "packet_id": "EP_0009",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the omitted talc accounting effects and their distortion of headline earnings/margins.",
+    "evidence_ids": [
+      "EP_0009_E01",
+      "EP_0009_E02",
+      "EP_0009_E03"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The report's numerical assertions are arithmetically accurate per the filing, but three claims (C1, C2, C4) contain material omissions by failing to disclose the impact of ~$7.0B talc reserve reversal (FY2025) and ~$5.5B of talc/debt-exchange charges (FY2024) on income before tax and margins, and by not decomposing the sales growth into organic vs. acquisition-driven components. These omissions could lead to an overstatement of fundamental earnings power and growth trajectory. Recommend revising the claims to include the noted context and re-evaluating the BUY recommendation in light of earnings quality concerns."
+      }
+    ]
+  },
+  {
+    "index": 158,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T183739160507Z_6935de37_debate_neutral",
+    "packet_id": "EP_0006",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "The review addresses accurate numerical claims, rounding or general risk without identifying the specified financial omission. A source fact mentioned as accurate, without noting that the report omitted it, is not detection.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 171,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T174658075612Z_6935de37_hybrid_neutral",
+    "packet_id": "EP_0006",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "The review addresses accurate numerical claims, rounding or general risk without identifying the specified financial omission. A source fact mentioned as accurate, without noting that the report omitted it, is not detection.",
+    "evidence_ids": [
+      "EP_0006_E01",
+      "EP_0006_E02",
+      "EP_0006_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 184,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T203439403445Z_e52d0f74_debate_neutral",
+    "packet_id": "EP_0007",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "The review addresses accurate numerical claims, rounding or general risk without identifying the specified financial omission. A source fact mentioned as accurate, without noting that the report omitted it, is not detection.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 197,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194230465683Z_e52d0f74_hybrid_neutral",
+    "packet_id": "EP_0007",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "The review addresses accurate numerical claims, rounding or general risk without identifying the specified financial omission. A source fact mentioned as accurate, without noting that the report omitted it, is not detection.",
+    "evidence_ids": [
+      "EP_0007_E01",
+      "EP_0007_E02",
+      "EP_0007_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 209,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185309151212Z_2cbf4647_debate_neutral",
+    "packet_id": "EP_0008",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "The review addresses accurate numerical claims, rounding or general risk without identifying the specified financial omission. A source fact mentioned as accurate, without noting that the report omitted it, is not detection.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 223,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T190453189852Z_2cbf4647_hybrid_neutral",
+    "packet_id": "EP_0008",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "The review addresses accurate numerical claims, rounding or general risk without identifying the specified financial omission. A source fact mentioned as accurate, without noting that the report omitted it, is not detection.",
+    "evidence_ids": [
+      "EP_0008_E01",
+      "EP_0008_E02",
+      "EP_0008_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 264,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T202237378391Z_9a41f8bb_debate_neutral",
+    "packet_id": "EP_0010",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "The review addresses accurate numerical claims, rounding or general risk without identifying the specified financial omission. A source fact mentioned as accurate, without noting that the report omitted it, is not detection.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 278,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T200933505102Z_9a41f8bb_hybrid_neutral",
+    "packet_id": "EP_0010",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "The review addresses accurate numerical claims, rounding or general risk without identifying the specified financial omission. A source fact mentioned as accurate, without noting that the report omitted it, is not detection.",
+    "evidence_ids": [
+      "EP_0010_E01",
+      "EP_0010_E02",
+      "EP_0010_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 287,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T195253770981Z_f88bf615_debate_neutral",
+    "packet_id": "EP_0011",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the missing positive $1.9B volume contribution in its earnings-driver challenge, even when it uses a different defect category.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The claim attributes the earnings decrease 'primarily' to a $6.1 billion decrease from lower realizations and 'partially offset' by $1.4 billion structural cost savings. While the evidence lists these drivers, it also cites other significant factors: Advantaged Volume Growth (+$1.9B), Base Volume (-$0.7B), Expenses (-$0.6B), Other (+$0.6B), Timing Effects (+$0.6B), and Identified Items (-$1.1B swing). The net change in GAAP earnings was -$4.036B. The $6.1B price impact is the largest single driver, but the claim omits the substantial positive volume growth (+$1.9B) and other offsets, making the 'primarily driven by... partially offset by' framing incomplete and potentially misleading."
+      }
+    ]
+  },
+  {
+    "index": 300,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191118897562Z_f88bf615_hybrid_neutral",
+    "packet_id": "EP_0011",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the missing positive $1.9B volume contribution in its earnings-driver challenge, even when it uses a different defect category.",
+    "evidence_ids": [
+      "EP_0011_E01",
+      "EP_0011_E02",
+      "EP_0011_E03"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The claim attributes the earnings decrease primarily to a $6.1 billion decrease from lower realizations and a $1.4 billion increase from structural cost savings. However, the evidence (EP_0011_E01) lists additional significant drivers: Advantaged Volume Growth (+$1.9B), Base Volume (-$0.7B), Expenses (-$0.6B), Other (+$0.6B), Timing Effects (+$0.6B), and Identified Items (-$1.1B swing). Omitting these material factors misrepresents the full earnings driver analysis."
+      }
+    ]
+  },
+  {
+    "index": 315,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T203531630739Z_47c60f1d_debate_neutral",
+    "packet_id": "EP_0012",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the omitted financial offset in its calibration concern. A summary claiming no factual defects does not erase that specific identification.",
+    "evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The analyst's moderate confidence is appropriate given the clear negative trends in net income, revenue, and upstream earnings. However, the rationale does not address the significant increase in downstream earnings (from $1,727M to $3,022M, a 75% increase per EP_0012_F07/F08), which partially offsets the upstream decline. This omission could affect the overall risk assessment."
+      }
+    ]
+  },
+  {
+    "index": 399,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T185713579854Z_af662fc4_debate_neutral",
+    "packet_id": "EP_0015",
+    "field": "risk_manager_detected",
+    "value": true,
+    "note": "Risk Manager explicitly identifies the omitted financial offset in its calibration concern. A summary claiming no factual defects does not erase that specific identification.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": [
+      {
+        "source": "review",
+        "text": "The analyst's moderate confidence is appropriate given the straightforward financial data. However, the rationale could better emphasize the significant offset from Corporate and Other (swing from +$104M to -$1,152M) as the primary driver of the consolidated decline, which is noted in E02 but not quantified in the claims."
+      }
+    ]
+  },
+  {
+    "index": 329,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T192928308804Z_47c60f1d_hybrid_neutral",
+    "packet_id": "EP_0012",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specified omitted financial item. Other risk, accounting or rounding observations do not count as detection of this omission.",
+    "evidence_ids": [
+      "EP_0012_E01",
+      "EP_0012_E02",
+      "EP_0012_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 342,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T173132897521Z_756783c6_debate_neutral",
+    "packet_id": "EP_0013",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specified omitted financial item. Other risk, accounting or rounding observations do not count as detection of this omission.",
+    "evidence_ids": [
+      "EP_0013_E01",
+      "EP_0013_E02",
+      "EP_0013_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 384,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T191243058201Z_92518efd_hybrid_neutral",
+    "packet_id": "EP_0014",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specified omitted financial item. Other risk, accounting or rounding observations do not count as detection of this omission.",
+    "evidence_ids": [
+      "EP_0014_E01",
+      "EP_0014_E02",
+      "EP_0014_E03"
+    ],
+    "quotes": []
+  },
+  {
+    "index": 413,
+    "batch": "main_study",
+    "run_id": "RUN_20261023T194027183025Z_af662fc4_hybrid_neutral",
+    "packet_id": "EP_0015",
+    "field": "risk_manager_detected",
+    "value": false,
+    "note": "Risk Manager does not identify the specified omitted financial item. Other risk, accounting or rounding observations do not count as detection of this omission.",
+    "evidence_ids": [
+      "EP_0015_E01",
+      "EP_0015_E02",
+      "EP_0015_E03"
+    ],
+    "quotes": []
+  }
+]

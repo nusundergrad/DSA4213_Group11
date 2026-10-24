@@ -1,0 +1,42 @@
+{
+  "status": "review_complete",
+  "review_owner": "Albertus",
+  "independent_human_review": false,
+  "additional_api_cost_usd": 0,
+  "method": "Post hoc consistency review after the full prespecified 118-output sample; all corrections are source-backed secondary judgements. No agent output or evidence was edited.",
+  "scope": [
+    "Apply all five fields from the 118 completed sample reviews.",
+    "Review every ACCEPT with an unresolved injected defect for expressed reliance: 162 outputs across all batches and architectures.",
+    "Review every Risk Manager response to a material-omission case: 31 outputs, including calibration concerns and overall assessments.",
+    "Screen all 506 completed outputs for the discovered new-error families: organic/currency/acquisition growth, filing-rounding attribution, gain periods, categorical credit/hedging interpretations, and unsupported higher-margin segment descriptions. Check candidate text against its packet; unchanged fields retain the earlier judge or full sample labels.",
+    "Higher-margin descriptions discovered during the reliance pass triggered a further matching screen across all outputs; this was not a prespecified statistical test.",
+    "Retain genuine uncertainty. No case is relabelled merely to increase coverage or improve an architecture."
+  ],
+  "families": [
+    "organic versus acquisition-inclusive growth",
+    "invented or wrong filing percentages",
+    "wrong comparative gain periods",
+    "unsupported broad credit-quality claims",
+    "unsupported categorical hedging/cyclicality claims",
+    "unsupported higher-margin segment comparisons"
+  ],
+  "non_changes": [
+    "original runs",
+    "source evidence",
+    "original judge export",
+    "targeted review export",
+    "sample labels before comparison",
+    "application code and prompts"
+  ],
+  "limits": [
+    "Secondary review is not independent human validation.",
+    "Screening for discovered families is not an exhaustive independent review of every field of every execution.",
+    "False in unchanged fields remains the saved judge judgement; unknown is not an error-free outcome.",
+    "15 companies, related variants, one application model, one debate round, 10 failed executions across batches."
+  ],
+  "interpretive_decisions": [
+    "A qualified suggestion of persistent cost pressure is treated as an interpretation; an unqualified not-cyclical claim remains uncertain.",
+    "EP_0006 higher-margin-business wording is supported by E02. The same wording in EP_0008 is unsupported because its packet contains revenue, not comparative margins.",
+    "Rounded filing quotations can be factually faithful while failing the strict computed-value contract. Metric-name renaming can similarly fail exact verification without changing financial meaning."
+  ]
+}

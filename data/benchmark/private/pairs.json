@@ -3389,25 +3389,25 @@
         "EP_0008_E02"
       ],
       "expected": {
-        "statement": "The average selling price of PRODUCT_30 decreased in 2025.",
+        "statement": "Automotive sales had a lower average selling price per unit in 2025 compared with 2024.",
         "evidence_ids": [
           "EP_0008_E02"
         ],
         "source_quotes": [
           {
             "evidence_id": "EP_0008_E02",
-            "quote": "partially offset by a decrease in average selling price of PRODUCT_30"
+            "quote": "due a decrease of approximately 8% in cash deliveries and a lower average selling price per unit"
           }
         ],
         "details": "The cited evidence explicitly states the opposite of the injected assertion.",
         "claim_id": "C2"
       },
       "injected": {
-        "statement": "The average selling price of PRODUCT_30 increased in 2025."
+        "statement": "Automotive sales had a higher average selling price per unit in 2025 compared with 2024."
       },
       "explanation": "The cited evidence explicitly states the opposite of the injected assertion.",
-      "detection_criterion": "Identify that the evidence says: The average selling price of PRODUCT_30 decreased in 2025. The flawed report asserts the opposite.",
-      "correction_criterion": "Restore the disclosed fact: The average selling price of PRODUCT_30 decreased in 2025.",
+      "detection_criterion": "Identify that the evidence says: Automotive sales had a lower average selling price per unit in 2025 compared with 2024. The flawed report asserts the opposite.",
+      "correction_criterion": "Restore the disclosed fact: Automotive sales had a lower average selling price per unit in 2025 compared with 2024.",
       "changes": [
         {
           "path": [
