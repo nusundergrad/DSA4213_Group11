@@ -1,0 +1,68 @@
+[
+  {
+    "evidence_packet": "EP_0011",
+    "report": "error_03_citation_misattribution",
+    "situation": 1,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0004",
+    "report": "error_06_unsupported_inference",
+    "situation": 1,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "error_06_unsupported_inference",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0008",
+    "report": "error_03_arithmetic",
+    "situation": 1,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0009",
+    "report": "error_01_material_omission",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0006",
+    "report": "error_05_citation_misattribution",
+    "situation": 2,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0011",
+    "report": "clean",
+    "situation": 1,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0013",
+    "report": "error_04_arithmetic",
+    "situation": 1,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0007",
+    "report": "clean",
+    "situation": 3,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0003",
+    "report": "error_01_direct_factual_contradiction",
+    "situation": 1,
+    "tone": "neutral"
+  },
+  {
+    "evidence_packet": "EP_0011",
+    "report": "error_01_unsupported_inference",
+    "situation": 1,
+    "tone": "neutral"
+  }
+]

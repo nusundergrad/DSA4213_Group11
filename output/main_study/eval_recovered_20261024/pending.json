@@ -1,0 +1,2253 @@
+{
+  "RUN_20261024T063435767992Z_7dc4aa92_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the injected assertion: Export controls cannot disrupt supply chains. The evidence instead states: Export controls could disrupt supply chains.",
+    "correction_criterion": "Restore the disclosed fact or explicitly retract the false assertion: Export controls could disrupt supply chains.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261024T062947597419Z_b9d5c02e_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261024T063153750847Z_3c372363_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0006_E03 reports: \u201cMembership and other income increased $1.0 billion and $0.1 billion for fiscal 2025 and fiscal 2024, primarily driven by growth in membership fee income globally.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0006_E02 supports: Membership and other income increased $1.0 billion and $0.1 billion for fiscal 2025 and fiscal 2024, primarily driven by growth in membership fee income globally.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261024T063040438280Z_9f709243_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261024T063109043346Z_1833c917_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that (94827-97690)/97690*100 rounds to -2.93%, not +7.07%.",
+    "correction_criterion": "Restore C1 and repeated overall revenue assertions in the rationale to the clean report: FY2024-FY2025, 97690 to 94827 USD_million, a 2.93% decline (structured value -2.93); or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261024T063149057873Z_4378b67a_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies the omitted FY2025 talc-reserve reversal and FY2024 talc charges and explains why the headline increase alone does not establish recurring operating improvement.",
+    "correction_criterion": "Restore the missing accounting qualification in C1 and the rationale, or explicitly qualify or retract reliance on headline pretax-income growth as recurring improvement.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261024T063504947482Z_44aa1169_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that lower cash balances alone do not prove inability to meet FY2026 obligations; liquidity assessment requires information beyond this comparison.",
+    "correction_criterion": "Remove or qualify the future inability-to-pay assertion while preserving the historical cash figures.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261024T062913443415Z_425d1b26_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identifies that the written EP_0011_E03 citation does not support the $6.1 billion, $1.9 billion and $1.4 billion FY2025 earnings drivers; EP_0011_E01 does.",
+    "correction_criterion": "Restore the inline citation to EP_0011_E01 so it matches the actual evidence and evidence_ids array.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T205255703062Z_125918c7_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Wearables, Home and Accessories net sales fell from 37,005 to 35,686 USD_million (-3.56%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T200038260538Z_94d62860_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify that the evidence says: Sales outside the U.S. represent a majority of total net sales. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: Sales outside the U.S. represent a majority of total net sales.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T195021911137Z_4c22e44d_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that the quoted amounts and growth belong to FY2024-FY2025, not FY2023-FY2024. The excerpt includes a different FY2023 amount.",
+    "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including any repeated assertion in the rationale, or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T205019437340Z_fa358ca7_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that growth from 391035 to 416161 is 6.43%, not 16.43%.",
+    "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including any repeated assertion in the rationale, or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T194150236733Z_125918c7_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Wearables, Home and Accessories net sales fell from 37,005 to 35,686 USD_million (-3.56%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T194343164912Z_37fa21d6_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0001_E03 reports: \u201cServices net sales increased during 2025 compared to 2024 primarily due to higher net sales from advertising, the PRODUCT_07 and cloud services.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0001_E02 supports: Services net sales increased during 2025 compared to 2024 primarily due to higher net sales from advertising, the PRODUCT_07 and cloud services.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T190800215603Z_51742c12_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T192312213158Z_125918c7_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Wearables, Home and Accessories net sales fell from 37,005 to 35,686 USD_million (-3.56%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T183646109162Z_94d62860_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify that the evidence says: Sales outside the U.S. represent a majority of total net sales. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: Sales outside the U.S. represent a majority of total net sales.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T185923686636Z_125918c7_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Wearables, Home and Accessories net sales fell from 37,005 to 35,686 USD_million (-3.56%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T203211842707Z_37fa21d6_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0001_E03 reports: \u201cServices net sales increased during 2025 compared to 2024 primarily due to higher net sales from advertising, the PRODUCT_07 and cloud services.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0001_E02 supports: Services net sales increased during 2025 compared to 2024 primarily due to higher net sales from advertising, the PRODUCT_07 and cloud services.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T190605156141Z_51742c12_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T205305325773Z_a1bd71c6_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: PRODUCT_10 gross margin percentage decreased to 69% as AI infrastructure scaled.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T201451368919Z_94fbb0b4_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the injected assertion: Barriers to entry in many businesses are high. The evidence instead states: Barriers to entry in many businesses are low.",
+    "correction_criterion": "Restore the disclosed fact or explicitly retract the false assertion: Barriers to entry in many businesses are low.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T183845305558Z_dfca011d_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that the quoted amounts and growth belong to FY2024-FY2025, not FY2023-FY2024. The excerpt includes a different FY2023 amount.",
+    "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including any repeated assertion in the rationale, or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T173929912109Z_edafb358_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that growth from 245122 to 281724 is 14.93%, not 24.93%.",
+    "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including any repeated assertion in the rationale, or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T174424948041Z_a1bd71c6_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: PRODUCT_10 gross margin percentage decreased to 69% as AI infrastructure scaled.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T204217238906Z_4dedde0f_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0002_E03 reports: \u201cOperating expenses increased $3.8 billion or 6% driven by investments in cloud and AI engineering and Gaming, including the impact of the ENTITY_01 acquisition.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0002_E02 supports: Operating expenses increased $3.8 billion or 6% driven by investments in cloud and AI engineering and Gaming, including the impact of the ENTITY_01 acquisition.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T200629393581Z_a1bd71c6_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: PRODUCT_10 gross margin percentage decreased to 69% as AI infrastructure scaled.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T203249583695Z_94fbb0b4_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the injected assertion: Barriers to entry in many businesses are high. The evidence instead states: Barriers to entry in many businesses are low.",
+    "correction_criterion": "Restore the disclosed fact or explicitly retract the false assertion: Barriers to entry in many businesses are low.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T205159507667Z_a1bd71c6_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: PRODUCT_10 gross margin percentage decreased to 69% as AI infrastructure scaled.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T203003045123Z_4dedde0f_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0002_E03 reports: \u201cOperating expenses increased $3.8 billion or 6% driven by investments in cloud and AI engineering and Gaming, including the impact of the ENTITY_01 acquisition.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0002_E02 supports: Operating expenses increased $3.8 billion or 6% driven by investments in cloud and AI engineering and Gaming, including the impact of the ENTITY_01 acquisition.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T174133833640Z_a93bba37_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T182822917736Z_98049939_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify that 60922 and 130497 USD_million and the associated growth belong to FY2024-FY2025, not FY2023-FY2024, using the evidence headings and fact periods.",
+    "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including repeated assertions in the rationale, or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T183548833541Z_da780b37_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify growth from 60922 to 130497 as 114.20%, not 124.20%.",
+    "correction_criterion": "Restore the expected values and periods in C1 and its check_spec, including repeated assertions in the rationale, or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T201135438278Z_2ac7233d_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: SEGMENT_05 operating income decreased because segment operating expenses rose 44%.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T175538878052Z_47789d69_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0003_E03 reports: \u201cRevenue from Data Center computing grew 162%\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0003_E02 supports: Revenue from Data Center computing grew 162%",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T204520781465Z_6b86fc12_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T203740284487Z_7dc4aa92_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the injected assertion: Export controls cannot disrupt supply chains. The evidence instead states: Export controls could disrupt supply chains.",
+    "correction_criterion": "Restore the disclosed fact or explicitly retract the false assertion: Export controls could disrupt supply chains.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T204337207686Z_47789d69_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0003_E03 reports: \u201cRevenue from Data Center computing grew 162%\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0003_E02 supports: Revenue from Data Center computing grew 162%",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T202751349654Z_6b86fc12_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T184610043852Z_c65acc6f_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Noninterest expense increased from 66,812 to 69,727 USD_million (+4.36%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T184353119730Z_6efcf7c3_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify that the evidence says: The Federal Reserve reduced policy rates in 2025. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: The Federal Reserve reduced policy rates in 2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T184324464516Z_ccc7fd5c_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that the amounts 105856 and 113097 USD_million and 6.84% growth belong to FY2024-FY2025, not FY2023-FY2024.",
+    "correction_criterion": "Restore the correct FY2024-FY2025 revenue comparison (105856 to 113097 USD_million, approximately 6.84%) in C1 and its check_spec, or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T185011260909Z_4b8ab56b_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that growth from 105856 to 113097 is approximately 6.84%, not 16.84%.",
+    "correction_criterion": "Restore the correct FY2024-FY2025 revenue comparison (105856 to 113097 USD_million, approximately 6.84%) in C1 and its check_spec, or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T204915350674Z_c65acc6f_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Noninterest expense increased from 66,812 to 69,727 USD_million (+4.36%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T190907326710Z_bc3a41cc_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0004_E03 reports: \u201cThe increase in net income was due to higher net interest income and noninterest income, and lower provision for credit losses, partially offset by higher noninterest expense.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0004_E02 supports: The increase in net income was due to higher net interest income and noninterest income, and lower provision for credit losses, partially offset by higher noninterest expense.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T192943894836Z_c65acc6f_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Noninterest expense increased from 66,812 to 69,727 USD_million (+4.36%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T195453169407Z_6efcf7c3_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify that the evidence says: The Federal Reserve reduced policy rates in 2025. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: The Federal Reserve reduced policy rates in 2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T190657231896Z_c65acc6f_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Noninterest expense increased from 66,812 to 69,727 USD_million (+4.36%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T202524714298Z_bc3a41cc_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0004_E03 reports: \u201cThe increase in net income was due to higher net interest income and noninterest income, and lower provision for credit losses, partially offset by higher noninterest expense.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0004_E02 supports: The increase in net income was due to higher net interest income and noninterest income, and lower provision for credit losses, partially offset by higher noninterest expense.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T205129890391Z_b9d5c02e_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T200102736728Z_605505ea_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Credit-loss provision increased from 10,678 to 14,212 USD_million (+33.09%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T201902606546Z_6da581a6_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify that the evidence says: Other income decreased in 2025 compared with 2024. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: Other income decreased in 2025 compared with 2024.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T193713740427Z_7fea52cb_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that the amounts and growth belong to FY2024-FY2025, not FY2023-FY2024; cited fact IDs resolve to the correct periods.",
+    "correction_criterion": "Restore C1 text and check_spec to the clean report, including its original amounts, periods and 2.75% growth, or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T205623263416Z_29b37757_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that (182447-177556)/177556*100 rounds to 2.75%, not 12.75%.",
+    "correction_criterion": "Restore C1 text and check_spec to the clean report, including its original amounts, periods and 2.75% growth, or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T173550692328Z_605505ea_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Credit-loss provision increased from 10,678 to 14,212 USD_million (+33.09%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T173331364614Z_e2ce864e_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0005_E03 reports: \u201cOther income decreased, reflecting:\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0005_E02 supports: Other income decreased, reflecting:",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T201602400000Z_04999f14_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T182419245273Z_605505ea_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Credit-loss provision increased from 10,678 to 14,212 USD_million (+33.09%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T205053467573Z_6da581a6_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify that the evidence says: Other income decreased in 2025 compared with 2024. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: Other income decreased in 2025 compared with 2024.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T191915787856Z_605505ea_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Credit-loss provision increased from 10,678 to 14,212 USD_million (+33.09%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T203911091037Z_e2ce864e_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0005_E03 reports: \u201cOther income decreased, reflecting:\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0005_E02 supports: Other income decreased, reflecting:",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T174802496017Z_04999f14_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T185927008251Z_6935de37_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Gross profit rate increased 40 basis points in FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T194452804559Z_eed79741_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify that the evidence says: Operating expenses as a percentage of net sales increased 36 basis points in fiscal 2025. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: Operating expenses as a percentage of net sales increased 36 basis points in fiscal 2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T173227670784Z_26968695_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that 648125 to 680985 USD_million and 5.07% growth belong to FY2024-FY2025, not FY2023-FY2024.",
+    "correction_criterion": "Restore C1 to the clean report: FY2024-FY2025, 648125 to 680985 USD_million, calculated growth 5.07% (reported as 5.1% in prose), or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T174940683914Z_c0a49022_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that (680985-648125)/648125*100 rounds to 5.07%, not 15.07%.",
+    "correction_criterion": "Restore C1 to the clean report: FY2024-FY2025, 648125 to 680985 USD_million, calculated growth 5.07% (reported as 5.1% in prose), or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T183739160507Z_6935de37_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Gross profit rate increased 40 basis points in FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T201741355240Z_3c372363_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0006_E03 reports: \u201cMembership and other income increased $1.0 billion and $0.1 billion for fiscal 2025 and fiscal 2024, primarily driven by growth in membership fee income globally.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0006_E02 supports: Membership and other income increased $1.0 billion and $0.1 billion for fiscal 2025 and fiscal 2024, primarily driven by growth in membership fee income globally.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T195117989557Z_9f709243_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T180022498937Z_6935de37_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Gross profit rate increased 40 basis points in FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T191327321046Z_eed79741_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify that the evidence says: Operating expenses as a percentage of net sales increased 36 basis points in fiscal 2025. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: Operating expenses as a percentage of net sales increased 36 basis points in fiscal 2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T175225991351Z_26968695_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that 648125 to 680985 USD_million and 5.07% growth belong to FY2024-FY2025, not FY2023-FY2024.",
+    "correction_criterion": "Restore C1 to the clean report: FY2024-FY2025, 648125 to 680985 USD_million, calculated growth 5.07% (reported as 5.1% in prose), or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T193310848061Z_c0a49022_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that (680985-648125)/648125*100 rounds to 5.07%, not 15.07%.",
+    "correction_criterion": "Restore C1 to the clean report: FY2024-FY2025, 648125 to 680985 USD_million, calculated growth 5.07% (reported as 5.1% in prose), or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T174658075612Z_6935de37_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Gross profit rate increased 40 basis points in FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T180359407763Z_3c372363_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0006_E03 reports: \u201cMembership and other income increased $1.0 billion and $0.1 billion for fiscal 2025 and fiscal 2024, primarily driven by growth in membership fee income globally.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0006_E02 supports: Membership and other income increased $1.0 billion and $0.1 billion for fiscal 2025 and fiscal 2024, primarily driven by growth in membership fee income globally.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T185521610917Z_e52d0f74_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the omitted disclosure in the rationale: FY2025 operating income includes $2.5 billion of FTC lawsuit settlement charges and $2.7 billion of estimated severance costs.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T182629614813Z_b6b98235_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0007_E03 reports: \u201cSEGMENT_12 sales increased 20% in 2025, compared to the prior year.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0007_E01 supports: SEGMENT_12 sales increased 20% in 2025, compared to the prior year.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T184243440754Z_75b69c90_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify that the evidence says: Foreign exchange changes increased consolidated net sales by $4.4 billion in 2025. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: Foreign exchange changes increased consolidated net sales by $4.4 billion in 2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T180210863495Z_0b1d3caf_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that net sales of 637959 and 716924 USD_million belong to FY2024 and FY2025, not FY2023 and FY2024.",
+    "correction_criterion": "Restore C1 and its repeated assertion in the rationale to the clean report: 637959 to 716924 USD_million, FY2024-FY2025, 12.38% growth; or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T202611295197Z_6dae7cf7_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that (716924-637959)/637959*100 rounds to 12.38%, not 22.38%.",
+    "correction_criterion": "Restore C1 and its repeated assertion in the rationale to the clean report: 637959 to 716924 USD_million, FY2024-FY2025, 12.38% growth; or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T203439403445Z_e52d0f74_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the omitted disclosure in the rationale: FY2025 operating income includes $2.5 billion of FTC lawsuit settlement charges and $2.7 billion of estimated severance costs.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T202710892244Z_b6b98235_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0007_E03 reports: \u201cSEGMENT_12 sales increased 20% in 2025, compared to the prior year.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0007_E01 supports: SEGMENT_12 sales increased 20% in 2025, compared to the prior year.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T203635219377Z_87db9d2c_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T202755330253Z_e52d0f74_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the omitted disclosure in the rationale: FY2025 operating income includes $2.5 billion of FTC lawsuit settlement charges and $2.7 billion of estimated severance costs.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T184601028552Z_b6b98235_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0007_E03 reports: \u201cSEGMENT_12 sales increased 20% in 2025, compared to the prior year.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0007_E01 supports: SEGMENT_12 sales increased 20% in 2025, compared to the prior year.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T191209399360Z_75b69c90_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify that the evidence says: Foreign exchange changes increased consolidated net sales by $4.4 billion in 2025. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: Foreign exchange changes increased consolidated net sales by $4.4 billion in 2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T185606102909Z_0b1d3caf_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that net sales of 637959 and 716924 USD_million belong to FY2024 and FY2025, not FY2023 and FY2024.",
+    "correction_criterion": "Restore C1 and its repeated assertion in the rationale to the clean report: 637959 to 716924 USD_million, FY2024-FY2025, 12.38% growth; or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T194230465683Z_e52d0f74_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the omitted disclosure in the rationale: FY2025 operating income includes $2.5 billion of FTC lawsuit settlement charges and $2.7 billion of estimated severance costs.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T200227313843Z_87db9d2c_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T194823540159Z_2cbf4647_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Total automotive revenues fell from 77,070 to 69,526 USD_million; cash deliveries fell approximately 8% and average selling price declined.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T182202340448Z_8df2024a_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify that the evidence says: The average selling price of PRODUCT_30 decreased in 2025. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: The average selling price of PRODUCT_30 decreased in 2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T201652929154Z_0668146d_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that revenues of 97690 and 94827 USD_million and the -2.93% change belong to FY2024-FY2025, not FY2023-FY2024.",
+    "correction_criterion": "Restore C1 and repeated overall revenue assertions in the rationale to the clean report: FY2024-FY2025, 97690 to 94827 USD_million, a 2.93% decline (structured value -2.93); or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T185309151212Z_2cbf4647_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Total automotive revenues fell from 77,070 to 69,526 USD_million; cash deliveries fell approximately 8% and average selling price declined.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T184755070438Z_7cfe42c6_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0008_E03 reports: \u201cServices and other revenue increased $2.00 billion, or 19%\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0008_E02 supports: Services and other revenue increased $2.00 billion, or 19%",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T191627842830Z_94d41d72_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T204720969841Z_2cbf4647_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Total automotive revenues fell from 77,070 to 69,526 USD_million; cash deliveries fell approximately 8% and average selling price declined.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T181300903109Z_8df2024a_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify that the evidence says: The average selling price of PRODUCT_30 decreased in 2025. The flawed report asserts the opposite.",
+    "correction_criterion": "Restore the disclosed fact: The average selling price of PRODUCT_30 decreased in 2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T181756942390Z_0668146d_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that revenues of 97690 and 94827 USD_million and the -2.93% change belong to FY2024-FY2025, not FY2023-FY2024.",
+    "correction_criterion": "Restore C1 and repeated overall revenue assertions in the rationale to the clean report: FY2024-FY2025, 97690 to 94827 USD_million, a 2.93% decline (structured value -2.93); or explicitly retract the erroneous assertion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_01 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T190453189852Z_2cbf4647_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Total automotive revenues fell from 77,070 to 69,526 USD_million; cash deliveries fell approximately 8% and average selling price declined.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T200823172994Z_7cfe42c6_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0008_E03 reports: \u201cServices and other revenue increased $2.00 billion, or 19%\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0008_E02 supports: Services and other revenue increased $2.00 billion, or 19%",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T193401842955Z_94d41d72_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T172636756302Z_51018e6c_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that a historical margin increase cannot establish guaranteed FY2026 margin expansion, particularly given competitive and patent-exclusivity risks.",
+    "correction_criterion": "Remove or qualify the FY2026 guarantee while retaining the supported historical margin comparison.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T194925185574Z_3872e6e6_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that the written citation EP_0009_E03 does not support the 33.2% and 36.9% segment margins; EP_0009_E01 contains those figures.",
+    "correction_criterion": "Restore the written citation to EP_0009_E01 and reconcile it with the unchanged evidence_ids array.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T183115660692Z_37078ac1_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify the single arithmetic defect: Signed change asserted as 105.25% instead of 95.25%.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: income_before_tax: (32581 - 16687) / 16687 \u00d7 100 = 95.25%.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T183250090941Z_b14df659_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single reporting_period defect: C2 attributes unchanged amounts to the swapped reporting years.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: C2 uses the original periods FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T182555285078Z_97f0e335_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single direct_factual_contradiction defect: Loss of patent exclusivity is never followed by a reduction in product sales.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Loss of patent exclusivity is often followed by a substantial reduction in sales.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T191742907174Z_3872e6e6_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that the written citation EP_0009_E03 does not support the 33.2% and 36.9% segment margins; EP_0009_E01 contains those figures.",
+    "correction_criterion": "Restore the written citation to EP_0009_E01 and reconcile it with the unchanged evidence_ids array.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T195028059133Z_97f0e335_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single direct_factual_contradiction defect: Loss of patent exclusivity is never followed by a reduction in product sales.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Loss of patent exclusivity is often followed by a substantial reduction in sales.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T203817155192Z_51018e6c_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that a historical margin increase cannot establish guaranteed FY2026 margin expansion, particularly given competitive and patent-exclusivity risks.",
+    "correction_criterion": "Remove or qualify the FY2026 guarantee while retaining the supported historical margin comparison.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T200140480465Z_3872e6e6_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that the written citation EP_0009_E03 does not support the 33.2% and 36.9% segment margins; EP_0009_E01 contains those figures.",
+    "correction_criterion": "Restore the written citation to EP_0009_E01 and reconcile it with the unchanged evidence_ids array.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T194704495154Z_b14df659_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single reporting_period defect: C2 attributes unchanged amounts to the swapped reporting years.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: C2 uses the original periods FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T194533453364Z_97f0e335_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single direct_factual_contradiction defect: Loss of patent exclusivity is never followed by a reduction in product sales.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Loss of patent exclusivity is often followed by a substantial reduction in sales.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T200643232257Z_208b9b50_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that FY2025 historical revenue growth does not guarantee a minimum FY2026 growth rate.",
+    "correction_criterion": "Remove or qualify the FY2026 guarantee while preserving the supported FY2024-FY2025 comparison.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T181916215505Z_9a41f8bb_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Medical care ratio rose from 85.5% to 89.1%.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T190202039463Z_c5557760_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that rising MCR from 85.5% to 89.1% indicates a higher, not lower, proportion of premium revenue spent on medical costs.",
+    "correction_criterion": "Restore higher in the interpretation of MCR, or explicitly retract the reversed interpretation.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T194811383950Z_208b9b50_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that FY2025 historical revenue growth does not guarantee a minimum FY2026 growth rate.",
+    "correction_criterion": "Remove or qualify the FY2026 guarantee while preserving the supported FY2024-FY2025 comparison.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T193243593889Z_f2a3327d_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identifies that (18964-32287)/32287*100 rounds to -41.26%, not -51.26%.",
+    "correction_criterion": "Restore the decline to 41.26% in C2 prose and -41.26 in check_spec, or explicitly retract the incorrect calculation.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge RM_R1_02 has matching type and states an expected value/period",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T181628579637Z_b5c24a96_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single reporting_period defect: C2 attributes unchanged amounts to the swapped reporting years.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: C2 uses the original periods FY2024, FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T202237378391Z_9a41f8bb_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Medical care ratio rose from 85.5% to 89.1%.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T193933736955Z_d46f8793_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0010_E03 reports: \u201cMedical costs increased primarily due to the IRA-driven impacts on Medicare Part D plans, elevated medical cost trend and growth in people served through Medicare Advantage and those with higher acuity needs.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0010_E02 supports: Medical costs increased primarily due to the IRA-driven impacts on Medicare Part D plans, elevated medical cost trend and growth in people served through Medicare Advantage and those with higher acuity needs.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T203743318326Z_9a41f8bb_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Medical care ratio rose from 85.5% to 89.1%.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T195412547690Z_c5557760_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that rising MCR from 85.5% to 89.1% indicates a higher, not lower, proportion of premium revenue spent on medical costs.",
+    "correction_criterion": "Restore higher in the interpretation of MCR, or explicitly retract the reversed interpretation.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T181908622319Z_208b9b50_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that FY2025 historical revenue growth does not guarantee a minimum FY2026 growth rate.",
+    "correction_criterion": "Remove or qualify the FY2026 guarantee while preserving the supported FY2024-FY2025 comparison.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T200933505102Z_9a41f8bb_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Medical care ratio rose from 85.5% to 89.1%.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T205359297737Z_d46f8793_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single citation_misattribution defect: EP_0010_E03 reports: \u201cMedical costs increased primarily due to the IRA-driven impacts on Medicare Part D plans, elevated medical cost trend and growth in people served through Medicare Advantage and those with higher acuity needs.\u201d",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: EP_0010_E02 supports: Medical costs increased primarily due to the IRA-driven impacts on Medicare Part D plans, elevated medical cost trend and growth in people served through Medicare Advantage and those with higher acuity needs.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T195253770981Z_f88bf615_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identifies the missing $1.9 billion contribution from advantaged volume growth.",
+    "correction_criterion": "Restore the advantaged-volume-growth contribution in C4 and the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T183355819740Z_fa13346a_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify the single arithmetic defect: Signed change asserted as -25.90% instead of -15.90%.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: upstream_earnings_gaap: (21354 - 25390) / 25390 \u00d7 100 = -15.90%.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T204632520032Z_416fd43b_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single reporting_period defect: C2 attributes unchanged amounts to the swapped reporting years.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: C2 uses the original periods FY2024, FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T184916613892Z_6fe40860_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the injected assertion: Structural cost savings decreased SEGMENT_22 earnings by $1.4 billion. The evidence instead states: Structural cost savings increased SEGMENT_22 earnings by $1.4 billion.",
+    "correction_criterion": "Restore the disclosed fact or explicitly retract the false assertion: Structural cost savings increased SEGMENT_22 earnings by $1.4 billion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T204954363503Z_44aa1169_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that lower cash balances alone do not prove inability to meet FY2026 obligations; liquidity assessment requires information beyond this comparison.",
+    "correction_criterion": "Remove or qualify the future inability-to-pay assertion while preserving the historical cash figures.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T191118897562Z_f88bf615_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identifies the missing $1.9 billion contribution from advantaged volume growth.",
+    "correction_criterion": "Restore the advantaged-volume-growth contribution in C4 and the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T203341762600Z_425d1b26_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identifies that the written EP_0011_E03 citation does not support the $6.1 billion, $1.9 billion and $1.4 billion FY2025 earnings drivers; EP_0011_E01 does.",
+    "correction_criterion": "Restore the inline citation to EP_0011_E01 so it matches the actual evidence and evidence_ids array.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T193437576413Z_6fe40860_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the injected assertion: Structural cost savings decreased SEGMENT_22 earnings by $1.4 billion. The evidence instead states: Structural cost savings increased SEGMENT_22 earnings by $1.4 billion.",
+    "correction_criterion": "Restore the disclosed fact or explicitly retract the false assertion: Structural cost savings increased SEGMENT_22 earnings by $1.4 billion.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T192603290458Z_47c60f1d_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identifies that the negative-only assessment omits downstream earnings growth from 1727 to 3022 USD_million and its role as positive counter-evidence.",
+    "correction_criterion": "Restore the clean downstream-growth claim, its structured assertion and its qualification in the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T192200332053Z_865cc116_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identifies that the written EP_0012_E01 citation does not support the risk disclosure; EP_0012_E03 is the relevant excerpt.",
+    "correction_criterion": "Restore the written citation to EP_0012_E03 / Item 1A and reconcile it with the unchanged evidence_ids.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T190421614005Z_2fee21c5_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identifies that EP_0012_E03 explicitly describes material adverse effects from commodity-price fluctuations, contrary to the claim that they cannot materially affect results.",
+    "correction_criterion": "Restore C5\u2019s material commodity-price exposure and the matching risk qualification in the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T203531630739Z_47c60f1d_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identifies that the negative-only assessment omits downstream earnings growth from 1727 to 3022 USD_million and its role as positive counter-evidence.",
+    "correction_criterion": "Restore the clean downstream-growth claim, its structured assertion and its qualification in the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T202832315760Z_af6fbee3_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify the single arithmetic defect: Signed change asserted as -40.36% instead of -30.36%.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: net_income: (12299 - 17661) / 17661 \u00d7 100 = -30.36%.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T175754706148Z_597e40a2_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single reporting_period defect: C2 attributes unchanged amounts to the swapped reporting years.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: C2 uses the original periods FY2024, FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T174048420611Z_8e811dab_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T194933705486Z_47c60f1d_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identifies that the negative-only assessment omits downstream earnings growth from 1727 to 3022 USD_million and its role as positive counter-evidence.",
+    "correction_criterion": "Restore the clean downstream-growth claim, its structured assertion and its qualification in the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T201247475507Z_865cc116_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identifies that the written EP_0012_E01 citation does not support the risk disclosure; EP_0012_E03 is the relevant excerpt.",
+    "correction_criterion": "Restore the written citation to EP_0012_E03 / Item 1A and reconcile it with the unchanged evidence_ids.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T201329891049Z_2fee21c5_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identifies that EP_0012_E03 explicitly describes material adverse effects from commodity-price fluctuations, contrary to the claim that they cannot materially affect results.",
+    "correction_criterion": "Restore C5\u2019s material commodity-price exposure and the matching risk qualification in the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T192928308804Z_47c60f1d_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identifies that the negative-only assessment omits downstream earnings growth from 1727 to 3022 USD_million and its role as positive counter-evidence.",
+    "correction_criterion": "Restore the clean downstream-growth claim, its structured assertion and its qualification in the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T184542552361Z_8e811dab_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T202205703539Z_66a744d9_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that EP_0013_E03 does not substantiate the 1% pricing and foreign-exchange effects; EP_0013_E02 does.",
+    "correction_criterion": "Restore the sales-driver written citation to EP_0013_E02.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T183438519346Z_5506de28_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that EP_0013_E02 states unfavorable, not favorable, foreign exchange of 1%, which offsets pricing rather than reinforcing it.",
+    "correction_criterion": "Restore the unfavorable foreign-exchange effect and its offsetting relationship to pricing in C1.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T204437354228Z_ea2df27a_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single reporting_period defect: C2 attributes unchanged amounts to the swapped reporting years.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: C2 uses the original periods FY2024, FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T192501273373Z_927482ca_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T205406133839Z_756783c6_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identifies the missing decline in operating cash flow from 19846 to 17817 USD_million and its relevance as counter-evidence to income growth.",
+    "correction_criterion": "Restore the clean C4 text and structured cash-flow calculation and all cash-generation qualifications in the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T202341807114Z_66a744d9_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that EP_0013_E03 does not substantiate the 1% pricing and foreign-exchange effects; EP_0013_E02 does.",
+    "correction_criterion": "Restore the sales-driver written citation to EP_0013_E02.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T181148328699Z_5506de28_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that EP_0013_E02 states unfavorable, not favorable, foreign exchange of 1%, which offsets pricing rather than reinforcing it.",
+    "correction_criterion": "Restore the unfavorable foreign-exchange effect and its offsetting relationship to pricing in C1.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T193138287518Z_927482ca_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T185526980490Z_92518efd_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: SEGMENT_33 profit fell from 6,165 to 4,675 USD_million (-24.17%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T185207926179Z_c34c11bd_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that EP_0014_E03 does not contain the $2148 million, $817 million and $1218 million driver amounts; EP_0014_E02 does.",
+    "correction_criterion": "Restore the written citation to EP_0014_E02.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T202914774950Z_4ccf4485_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identifies that 64809 and 67589 USD_million and 4.29% growth belong to FY2024-FY2025, not FY2023-FY2024.",
+    "correction_criterion": "Restore the FY2024-FY2025 periods in C1 text and check_spec.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T205501827796Z_53519a0d_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that price realization was an unfavorable $817 million effect, not a favorable offset.",
+    "correction_criterion": "Restore unfavorable price realization as a contributor to the earnings decline in C3 and the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T200436545288Z_0da3ca36_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify the single arithmetic defect: Signed change asserted as 14.29% instead of 4.29%.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: revenue: (67589 - 64809) / 64809 \u00d7 100 = 4.29%.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T175112166261Z_149979cc_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T193045234540Z_c34c11bd_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that EP_0014_E03 does not contain the $2148 million, $817 million and $1218 million driver amounts; EP_0014_E02 does.",
+    "correction_criterion": "Restore the written citation to EP_0014_E02.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T193020235333Z_53519a0d_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that price realization was an unfavorable $817 million effect, not a favorable offset.",
+    "correction_criterion": "Restore unfavorable price realization as a contributor to the earnings decline in C3 and the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T175229599375Z_92518efd_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: SEGMENT_33 profit fell from 6,165 to 4,675 USD_million (-24.17%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T190058468037Z_c34c11bd_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that EP_0014_E03 does not contain the $2148 million, $817 million and $1218 million driver amounts; EP_0014_E02 does.",
+    "correction_criterion": "Restore the written citation to EP_0014_E02.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T205649685820Z_53519a0d_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that price realization was an unfavorable $817 million effect, not a favorable offset.",
+    "correction_criterion": "Restore unfavorable price realization as a contributor to the earnings decline in C3 and the rationale.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T191243058201Z_92518efd_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: SEGMENT_33 profit fell from 6,165 to 4,675 USD_million (-24.17%).",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null,
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T175654982147Z_149979cc_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": null,
+    "detection_criterion": "Identify the single unsupported_inference defect: The disclosed historical results guarantee that the company\u2019s share price will double over the next twelve months.",
+    "correction_criterion": "Remove or qualify the unsupported assertion in the rationale: Historical financial results alone do not establish future share-price returns.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "rationale or omission challenge requires review against the defect criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T205402576260Z_af662fc4_baseline_neutral": {
+    "architecture": "baseline",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Corporate and Other moved from 104 USD_million income to a 1,152 USD_million loss.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T173431468205Z_4d16373d_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identifies that EP_0015_E01 does not support the investment and joint venture risk statement; EP_0015_E03 does.",
+    "correction_criterion": "Restore the written attribution to Item 1A / EP_0015_E03.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T204305684496Z_730609be_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the injected assertion: The company has full control over all joint ventures. The evidence instead states: The company lacks full control over certain joint ventures.",
+    "correction_criterion": "Restore the disclosed fact or explicitly retract the false assertion: The company lacks full control over certain joint ventures.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T195544553303Z_4e2d3c5c_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that FY2025 segment growth does not guarantee FY2026 parent-company net income or diluted EPS growth, especially given Corporate and Other losses and investment risks.",
+    "correction_criterion": "Remove or qualify the FY2026 guarantee while retaining the supported historical segment figures.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T202114052627Z_729f3238_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "arithmetic",
+    "target_claim_id": "C1",
+    "detection_criterion": "Identify the single arithmetic defect: Signed change asserted as -11.60% instead of -1.60%.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: net_income: (6835 - 6946) / 6946 \u00d7 100 = -1.60%.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T190252913044Z_220be927_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "reporting_period",
+    "target_claim_id": "C2",
+    "detection_criterion": "Identify the single reporting_period defect: C2 attributes unchanged amounts to the swapped reporting years.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: C2 uses the original periods FY2024, FY2025.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null
+    }
+  },
+  "RUN_20261023T185713579854Z_af662fc4_debate_neutral": {
+    "architecture": "debate",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Corporate and Other moved from 104 USD_million income to a 1,152 USD_million loss.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T173601862903Z_4e2d3c5c_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that FY2025 segment growth does not guarantee FY2026 parent-company net income or diluted EPS growth, especially given Corporate and Other losses and investment risks.",
+    "correction_criterion": "Remove or qualify the FY2026 guarantee while retaining the supported historical segment figures.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T195709637195Z_af662fc4_verification_neutral": {
+    "architecture": "verification",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Corporate and Other moved from 104 USD_million income to a 1,152 USD_million loss.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": null,
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  },
+  "RUN_20261023T203041636349Z_4d16373d_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "citation_misattribution",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identifies that EP_0015_E01 does not support the investment and joint venture risk statement; EP_0015_E03 does.",
+    "correction_criterion": "Restore the written attribution to Item 1A / EP_0015_E03.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T201819143685Z_730609be_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "direct_factual_contradiction",
+    "target_claim_id": "C5",
+    "detection_criterion": "Identify the injected assertion: The company has full control over all joint ventures. The evidence instead states: The company lacks full control over certain joint ventures.",
+    "correction_criterion": "Restore the disclosed fact or explicitly retract the false assertion: The company lacks full control over certain joint ventures.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T204759366550Z_4e2d3c5c_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "unsupported_inference",
+    "target_claim_id": "C3",
+    "detection_criterion": "Identifies that FY2025 segment growth does not guarantee FY2026 parent-company net income or diluted EPS growth, especially given Corporate and Other losses and investment risks.",
+    "correction_criterion": "Remove or qualify the FY2026 guarantee while retaining the supported historical segment figures.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "challenge on target claim but type or stated values do not clearly match the criterion",
+    "fill_in": {
+      "risk_manager_detected": null,
+      "defect_resolved": null
+    }
+  },
+  "RUN_20261023T194027183025Z_af662fc4_hybrid_neutral": {
+    "architecture": "hybrid",
+    "defect_type": "material_omission",
+    "target_claim_id": "C4",
+    "detection_criterion": "Identify the single material_omission defect: Selected disclosure removed from the report and rationale.",
+    "correction_criterion": "Restore the expected statement or retract the injected assertion: Corporate and Other moved from 104 USD_million income to a 1,152 USD_million loss.",
+    "materiality_criterion": "The unresolved defect is relied on to support an accepted recommendation.",
+    "rm_note": "no challenge targets the defect claim",
+    "fill_in": {
+      "materially_used_by_trader": null
+    }
+  }
+}

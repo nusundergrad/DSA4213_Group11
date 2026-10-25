@@ -1,0 +1,21 @@
+{
+  "reviewer": "assistant",
+  "scope": "detection_only",
+  "source": "output/main_study/eval_recovered_20261024",
+  "source_sha256": {
+    "cases.jsonl": "b009e47b9a87bc0b2bc5746216e3226ce0cf4c71a9a74ab597d3f7ddc21b0b2b",
+    "runs.jsonl": "03ddf833aa6cc046705445f67fbada935091f457eb2774e7cb4a1a9e3d61e910",
+    "scored.jsonl": "88a0eaa34e2d2b03b7bd2e9ee86e78fc03aa65a4a8da67cafccb53246a996d22"
+  },
+  "scoring_code_sha256": {
+    "scoring.py": "d6241156b4e79c6e26d95fc5ba357230c99d09cf267b77cfb1d4050ee81bf71b",
+    "auto_scoring.py": "5866650bb393af965260e5270b008e27e25d5c468c188893cde0a1396806cda9",
+    "metrics.py": "194357ab577f4045aa06d35689109e80352256e903dc60670e35feae4657bb48"
+  },
+  "rules": [
+    "Identify the specific injected defect, not generic skepticism.",
+    "Read explanation, requested change and overall assessment, not only category/claim IDs.",
+    "A source fact mentioned without identifying a report defect is not detection.",
+    "Keep mismatched answer keys uncertain; do not change frozen inputs to fit outcomes."
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "planned": 11,
+  "planned_calls": 31,
+  "selected": [
+    {
+      "case": {
+        "evidence_packet": "EP_0011",
+        "report": "error_03_citation_misattribution",
+        "situation": 1,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T172813213668Z",
+      "http_status": 503,
+      "reason": "transient retry"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0004",
+        "report": "error_06_unsupported_inference",
+        "situation": 1,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T173805235338Z",
+      "http_status": 504,
+      "reason": "transient retry"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0006",
+        "report": "error_06_unsupported_inference",
+        "situation": 3,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T175423747515Z",
+      "http_status": 503,
+      "reason": "transient retry"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0008",
+        "report": "error_03_arithmetic",
+        "situation": 1,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T180023059131Z",
+      "http_status": 503,
+      "reason": "transient retry"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0009",
+        "report": "error_01_material_omission",
+        "situation": 3,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T180023785271Z",
+      "http_status": 503,
+      "reason": "transient retry"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0006",
+        "report": "error_05_citation_misattribution",
+        "situation": 2,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T180024357819Z",
+      "http_status": 503,
+      "reason": "transient retry"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0011",
+        "report": "clean",
+        "situation": 1,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T182229815946Z",
+      "http_status": 503,
+      "reason": "transient retry"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0013",
+        "report": "error_04_arithmetic",
+        "situation": 1,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T185522389024Z",
+      "http_status": 503,
+      "reason": "transient retry"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0007",
+        "report": "clean",
+        "situation": 3,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T192934706392Z",
+      "http_status": 503,
+      "reason": "transient retry"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0003",
+        "report": "error_01_direct_factual_contradiction",
+        "situation": 1,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T194720266519Z",
+      "http_status": 503,
+      "reason": "transient retry"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0011",
+        "report": "error_01_unsupported_inference",
+        "situation": 1,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T202028714868Z",
+      "http_status": null,
+      "reason": "transient retry"
+    }
+  ],
+  "excluded": [
+    {
+      "case": {
+        "evidence_packet": "EP_0002",
+        "report": "clean",
+        "situation": 1,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T180645935182Z",
+      "http_status": null,
+      "reason": "invalid model output; keep failure"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0013",
+        "report": "error_02_material_omission",
+        "situation": 3,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T193039280159Z",
+      "http_status": null,
+      "reason": "invalid model output; keep failure"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0007",
+        "report": "error_05_citation_misattribution",
+        "situation": 3,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T195203190957Z",
+      "http_status": null,
+      "reason": "invalid model output; keep failure"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0014",
+        "report": "error_05_material_omission",
+        "situation": 1,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T204351974890Z",
+      "http_status": null,
+      "reason": "invalid model output; keep failure"
+    },
+    {
+      "case": {
+        "evidence_packet": "EP_0009",
+        "report": "error_01_material_omission",
+        "situation": 1,
+        "tone": "neutral"
+      },
+      "original_run_timestamp": "20261023T204703664465Z",
+      "http_status": null,
+      "reason": "invalid model output; keep failure"
+    }
+  ]
+}
