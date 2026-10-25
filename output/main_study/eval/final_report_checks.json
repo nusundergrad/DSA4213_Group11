@@ -1,0 +1,3038 @@
+{
+  "RUN_20261023T195120981971Z_fa4c7c8c_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180753702996Z_94d62860_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192014624787Z_4c22e44d_baseline_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205652147610Z_fa358ca7_baseline_neutral": {
+    "errors": [
+      "C1: asserted 16.43; expected 6.425511782832738757400232716 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205255703062Z_125918c7_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194347077325Z_37fa21d6_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200624886801Z_51742c12_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195631473659Z_fa4c7c8c_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200038260538Z_94d62860_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195021911137Z_4c22e44d_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205019437340Z_fa358ca7_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194150236733Z_125918c7_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194343164912Z_37fa21d6_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190800215603Z_51742c12_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T172736589180Z_fa4c7c8c_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183259283309Z_94d62860_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182734182673Z_4c22e44d_verification_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194719718492Z_fa358ca7_verification_neutral": {
+    "errors": [
+      "C1: asserted 16.43; expected 6.425511782832738757400232716 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192312213158Z_125918c7_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203820074930Z_37fa21d6_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181501745911Z_51742c12_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204551286502Z_fa4c7c8c_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183646109162Z_94d62860_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T172733081571Z_4c22e44d_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205253551088Z_fa358ca7_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185923686636Z_125918c7_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203211842707Z_37fa21d6_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190605156141Z_51742c12_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201909383682Z_1453e430_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200337794490Z_94fbb0b4_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202416518000Z_dfca011d_baseline_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203541791088Z_edafb358_baseline_neutral": {
+    "errors": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205305325773Z_a1bd71c6_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191123404582Z_4dedde0f_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205409475791Z_a93bba37_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201451368919Z_94fbb0b4_debate_neutral": {
+    "errors": [
+      "C4: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183845305558Z_dfca011d_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173929912109Z_edafb358_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174424948041Z_a1bd71c6_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204217238906Z_4dedde0f_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182018877975Z_a93bba37_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192659250842Z_1453e430_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180039276582Z_94fbb0b4_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181202589863Z_dfca011d_verification_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193527650749Z_edafb358_verification_neutral": {
+    "errors": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200629393581Z_a1bd71c6_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181306736586Z_4dedde0f_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195323691000Z_a93bba37_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182409680108Z_1453e430_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203249583695Z_94fbb0b4_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180458307803Z_dfca011d_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174520645415Z_edafb358_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205159507667Z_a1bd71c6_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203003045123Z_4dedde0f_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174133833640Z_a93bba37_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200621025043Z_aeee037a_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191800019692Z_7dc4aa92_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183134063413Z_98049939_baseline_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174526031751Z_da780b37_baseline_neutral": {
+    "errors": [
+      "C1: asserted 124.20; expected 114.2034076359935655428252520 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182415284243Z_2ac7233d_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182613287255Z_47789d69_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195642382830Z_6b86fc12_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205749284317Z_aeee037a_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182822917736Z_98049939_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183548833541Z_da780b37_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201135438278Z_2ac7233d_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175538878052Z_47789d69_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204520781465Z_6b86fc12_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195942275380Z_aeee037a_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191216654275Z_7dc4aa92_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181804931839Z_98049939_verification_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200645978085Z_da780b37_verification_neutral": {
+    "errors": [
+      "C1: asserted 124.20; expected 114.2034076359935655428252520 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183559930446Z_2ac7233d_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200614746073Z_47789d69_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195124787863Z_6b86fc12_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181055752533Z_aeee037a_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203740284487Z_7dc4aa92_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193516894081Z_98049939_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205541247676Z_da780b37_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181456107180Z_2ac7233d_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204337207686Z_47789d69_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202751349654Z_6b86fc12_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192000126477Z_8e881770_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182559243829Z_6efcf7c3_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194837748018Z_ccc7fd5c_baseline_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180759387279Z_4b8ab56b_baseline_neutral": {
+    "errors": [
+      "C1: asserted 16.84; expected 6.840424727932285368802902056 percent"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184610043852Z_c65acc6f_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191125657338Z_bc3a41cc_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201340822045Z_b9d5c02e_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181359273545Z_8e881770_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184353119730Z_6efcf7c3_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184324464516Z_ccc7fd5c_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185011260909Z_4b8ab56b_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204915350674Z_c65acc6f_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190907326710Z_bc3a41cc_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192557460483Z_8e881770_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190913205196Z_6efcf7c3_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183553395924Z_ccc7fd5c_verification_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203252891012Z_4b8ab56b_verification_neutral": {
+    "errors": [
+      "C1: asserted 16.84; expected 6.840424727932285368802902056 percent"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192943894836Z_c65acc6f_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183446400508Z_bc3a41cc_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204317754607Z_b9d5c02e_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202300738629Z_8e881770_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195453169407Z_6efcf7c3_hybrid_neutral": {
+    "errors": [
+      "C4: numerical assertion requires fact IDs"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192901009893Z_ccc7fd5c_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182908709800Z_4b8ab56b_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190657231896Z_c65acc6f_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202524714298Z_bc3a41cc_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205129890391Z_b9d5c02e_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204715827765Z_6b321674_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203102847405Z_6da581a6_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181157709877Z_7fea52cb_baseline_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194159231572Z_29b37757_baseline_neutral": {
+    "errors": [
+      "C1: asserted 12.75; expected 2.754623893306900358196850571 percent"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200102736728Z_605505ea_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192816343808Z_e2ce864e_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202456085515Z_04999f14_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185821392098Z_6b321674_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201902606546Z_6da581a6_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193713740427Z_7fea52cb_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205623263416Z_29b37757_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173550692328Z_605505ea_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173331364614Z_e2ce864e_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201602400000Z_04999f14_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205543260287Z_6b321674_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185929875901Z_6da581a6_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184607473512Z_7fea52cb_verification_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201009127374Z_29b37757_verification_neutral": {
+    "errors": [
+      "C1: asserted 12.75; expected 2.754623893306900358196850571 percent"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182419245273Z_605505ea_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200910267685Z_e2ce864e_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202038296720Z_04999f14_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192804186049Z_6b321674_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205053467573Z_6da581a6_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185347451314Z_7fea52cb_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180746532242Z_29b37757_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191915787856Z_605505ea_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203911091037Z_e2ce864e_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174802496017Z_04999f14_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205626380160Z_ac2c68fd_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175426221475Z_eed79741_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203058142158Z_26968695_baseline_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195315689490Z_c0a49022_baseline_neutral": {
+    "errors": [
+      "C1: asserted 15.07; expected 5.070009643201542912246865959 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185927008251Z_6935de37_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185216923397Z_3c372363_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183255982195Z_9f709243_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192545543052Z_ac2c68fd_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194452804559Z_eed79741_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173227670784Z_26968695_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174940683914Z_c0a49022_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183739160507Z_6935de37_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201741355240Z_3c372363_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195117989557Z_9f709243_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204553606137Z_ac2c68fd_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191332120521Z_eed79741_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203536382906Z_26968695_verification_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180805906077Z_c0a49022_verification_neutral": {
+    "errors": [
+      "C1: asserted 15.07; expected 5.070009643201542912246865959 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180022498937Z_6935de37_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201917121187Z_9f709243_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182720856243Z_ac2c68fd_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191327321046Z_eed79741_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175225991351Z_26968695_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193310848061Z_c0a49022_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174658075612Z_6935de37_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180359407763Z_3c372363_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193719270123Z_ed4cc6ce_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204313902016Z_75b69c90_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204051382050Z_0b1d3caf_baseline_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185316418813Z_6dae7cf7_baseline_neutral": {
+    "errors": [
+      "C1: asserted 22.38; expected 12.37775468329469448663628854 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185521610917Z_e52d0f74_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182629614813Z_b6b98235_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185722413010Z_87db9d2c_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183925909326Z_ed4cc6ce_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184243440754Z_75b69c90_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180210863495Z_0b1d3caf_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202611295197Z_6dae7cf7_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203439403445Z_e52d0f74_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202710892244Z_b6b98235_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203635219377Z_87db9d2c_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191016598389Z_ed4cc6ce_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204356155968Z_75b69c90_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184811595716Z_0b1d3caf_verification_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193023285196Z_6dae7cf7_verification_neutral": {
+    "errors": [
+      "C1: asserted 22.38; expected 12.37775468329469448663628854 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202755330253Z_e52d0f74_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184601028552Z_b6b98235_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204223941969Z_87db9d2c_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191209399360Z_75b69c90_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185606102909Z_0b1d3caf_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204121428635Z_6dae7cf7_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194230465683Z_e52d0f74_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200227313843Z_87db9d2c_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193826169226Z_a4db15fb_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192508550867Z_8df2024a_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200655627763Z_0668146d_baseline_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194154370578Z_1833c917_baseline_neutral": {
+    "errors": [
+      "C1: asserted 7.07; expected -2.930699150373630873170232368 percent"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194823540159Z_2cbf4647_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205257928191Z_7cfe42c6_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191508400794Z_94d41d72_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200331523975Z_a4db15fb_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182202340448Z_8df2024a_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201652929154Z_0668146d_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185309151212Z_2cbf4647_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184755070438Z_7cfe42c6_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191627842830Z_94d41d72_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192027461571Z_a4db15fb_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201142510249Z_8df2024a_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194819557382Z_0668146d_verification_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183443372961Z_1833c917_verification_neutral": {
+    "errors": [
+      "C1: asserted 7.07; expected -2.930699150373630873170232368 percent"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204720969841Z_2cbf4647_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175553900845Z_7cfe42c6_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195648476154Z_94d41d72_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T172932461294Z_a4db15fb_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181300903109Z_8df2024a_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181756942390Z_0668146d_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182111728279Z_1833c917_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190453189852Z_2cbf4647_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200823172994Z_7cfe42c6_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193401842955Z_94d41d72_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194835224310Z_2f1e45f6_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185726284443Z_4378b67a_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202836406350Z_51018e6c_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202121708059Z_3872e6e6_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173823576137Z_37078ac1_baseline_neutral": {
+    "errors": [
+      "C1: asserted 105.25; expected 95.24779768682207706597950500 percent"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184818764071Z_b14df659_baseline_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T172652914406Z_97f0e335_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175349509602Z_2f1e45f6_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T172636756302Z_51018e6c_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194925185574Z_3872e6e6_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183115660692Z_37078ac1_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183250090941Z_b14df659_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182555285078Z_97f0e335_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183122624196Z_2f1e45f6_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191011006940Z_4378b67a_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201139381555Z_51018e6c_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191742907174Z_3872e6e6_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194351144381Z_37078ac1_verification_neutral": {
+    "errors": [
+      "C1: asserted 105.25; expected 95.24779768682207706597950500 percent"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173441403495Z_b14df659_verification_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195028059133Z_97f0e335_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185519247228Z_2f1e45f6_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203817155192Z_51018e6c_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200140480465Z_3872e6e6_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184009883244Z_37078ac1_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194704495154Z_b14df659_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194533453364Z_97f0e335_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200632517274Z_572f8b03_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195458700348Z_c5557760_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200643232257Z_208b9b50_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181314917597Z_f2a3327d_baseline_neutral": {
+    "errors": [
+      "C2: asserted -51.26; expected -41.26428593551584228946634869 percent"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191746070101Z_b5c24a96_baseline_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181916215505Z_9a41f8bb_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184013467936Z_d46f8793_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184457935493Z_572f8b03_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190202039463Z_c5557760_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194811383950Z_208b9b50_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193243593889Z_f2a3327d_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181628579637Z_b5c24a96_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202237378391Z_9a41f8bb_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193933736955Z_d46f8793_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175434263706Z_572f8b03_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205026171660Z_c5557760_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175117567996Z_208b9b50_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195303123608Z_f2a3327d_verification_neutral": {
+    "errors": [
+      "C2: asserted -51.26; expected -41.26428593551584228946634869 percent"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200106645046Z_b5c24a96_verification_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203743318326Z_9a41f8bb_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192549254914Z_d46f8793_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201211679616Z_572f8b03_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195412547690Z_c5557760_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181908622319Z_208b9b50_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184058328435Z_f2a3327d_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193754599983Z_b5c24a96_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200933505102Z_9a41f8bb_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205359297737Z_d46f8793_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192553983760Z_07b36f6e_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173242370802Z_44aa1169_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173604694722Z_f88bf615_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190108486852Z_425d1b26_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192824228416Z_fa13346a_baseline_neutral": {
+    "errors": [
+      "C1: asserted -25.90; expected -15.89602205592753052382827885 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185353796407Z_416fd43b_baseline_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182433536270Z_6fe40860_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195253770981Z_f88bf615_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183355819740Z_fa13346a_debate_neutral": {
+    "errors": [
+      "C1: asserted -15.91; expected -15.89602205592753052382827885 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204632520032Z_416fd43b_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184916613892Z_6fe40860_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203539108426Z_07b36f6e_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193821732082Z_44aa1169_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201334776318Z_f88bf615_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190700641717Z_425d1b26_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200659596435Z_fa13346a_verification_neutral": {
+    "errors": [
+      "C1: asserted -25.90; expected -15.89602205592753052382827885 percent"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205300614927Z_416fd43b_verification_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191752619957Z_6fe40860_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184128139180Z_07b36f6e_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204954363503Z_44aa1169_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191118897562Z_f88bf615_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203341762600Z_425d1b26_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200906600863Z_fa13346a_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192648907402Z_416fd43b_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193437576413Z_6fe40860_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205022481719Z_ac5ffd2d_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193246955939Z_865cc116_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203443809536Z_2fee21c5_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192603290458Z_47c60f1d_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200648639932Z_af6fbee3_baseline_neutral": {
+    "errors": [
+      "C1: asserted -40.36; expected -30.36068172810146650812524772 percent"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192024694449Z_597e40a2_baseline_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204832430896Z_8e811dab_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204037601098Z_ac5ffd2d_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192200332053Z_865cc116_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190421614005Z_2fee21c5_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203531630739Z_47c60f1d_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202832315760Z_af6fbee3_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175754706148Z_597e40a2_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174048420611Z_8e811dab_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190628813098Z_ac5ffd2d_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192504661567Z_865cc116_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190512414767Z_2fee21c5_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194933705486Z_47c60f1d_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193146171976Z_af6fbee3_verification_neutral": {
+    "errors": [
+      "C1: asserted -40.36; expected -30.36068172810146650812524772 percent"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174210633389Z_597e40a2_verification_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174146422632Z_8e811dab_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202409388125Z_ac5ffd2d_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201247475507Z_865cc116_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201329891049Z_2fee21c5_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192928308804Z_47c60f1d_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205824767470Z_af6fbee3_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202450673690Z_597e40a2_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184542552361Z_8e811dab_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190910410273Z_046ada01_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174436861843Z_66a744d9_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195635636834Z_756783c6_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190817236134Z_5506de28_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T172647099414Z_06cf607d_baseline_neutral": {
+    "errors": [
+      "C1: asserted 10.29; expected 0.2915313128428467735218172515 percent"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T172644384458Z_ea2df27a_baseline_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195655853257Z_927482ca_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195851995181Z_046ada01_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202205703539Z_66a744d9_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173132897521Z_756783c6_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T183438519346Z_5506de28_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204437354228Z_ea2df27a_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192501273373Z_927482ca_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203106819993Z_046ada01_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193048523653Z_66a744d9_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205406133839Z_756783c6_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184136933700Z_5506de28_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190207466666Z_06cf607d_verification_neutral": {
+    "errors": [
+      "C1: asserted 10.29; expected 0.2915313128428467735218172515 percent"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191338880375Z_ea2df27a_verification_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203055327960Z_927482ca_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192300132270Z_046ada01_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202341807114Z_66a744d9_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T181148328699Z_5506de28_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180253217057Z_06cf607d_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204828556280Z_ea2df27a_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193138287518Z_927482ca_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192653092001Z_60253b6e_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201022386804Z_c34c11bd_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190458087157Z_4ccf4485_baseline_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185355877292Z_53519a0d_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195724620604Z_0da3ca36_baseline_neutral": {
+    "errors": [
+      "C1: asserted 14.29; expected 4.289527689055532410621981515 percent"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185526980490Z_92518efd_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201921185976Z_149979cc_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195939345567Z_60253b6e_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185207926179Z_c34c11bd_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202914774950Z_4ccf4485_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205501827796Z_53519a0d_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200436545288Z_0da3ca36_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175112166261Z_149979cc_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204836321339Z_60253b6e_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193045234540Z_c34c11bd_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T174956452620Z_4ccf4485_verification_neutral": {
+    "errors": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193020235333Z_53519a0d_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200652739230Z_0da3ca36_verification_neutral": {
+    "errors": [
+      "C1: asserted 14.29; expected 4.289527689055532410621981515 percent"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175229599375Z_92518efd_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192513211538Z_149979cc_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T180007547027Z_60253b6e_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190058468037Z_c34c11bd_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175835926568Z_4ccf4485_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205649685820Z_53519a0d_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T200612712019Z_0da3ca36_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191243058201Z_92518efd_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T175654982147Z_149979cc_hybrid_neutral": {
+    "errors": [
+      "C1: asserted 4.00; expected 4.289527689055532410621981515 percent",
+      "C2: asserted -15.00; expected -14.69553243574051407588739290 percent",
+      "C5: asserted -24.00; expected -24.16869424168694241686942417 percent"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T182229341081Z_b75b968f_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190808119839Z_4d16373d_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173234362994Z_730609be_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204406291817Z_4e2d3c5c_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202839065475Z_729f3238_baseline_neutral": {
+    "errors": [
+      "C1: asserted -11.60; expected -1.598042038583357327958537288 percent"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201016082308Z_220be927_baseline_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T205402576260Z_af662fc4_baseline_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191957258145Z_b75b968f_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173431468205Z_4d16373d_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204305684496Z_730609be_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195544553303Z_4e2d3c5c_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202114052627Z_729f3238_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T190252913044Z_220be927_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T185713579854Z_af662fc4_debate_neutral": {
+    "errors": [],
+    "human_review": [
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195257767253Z_b75b968f_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T184921507753Z_4d16373d_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T192042743191Z_730609be_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T173601862903Z_4e2d3c5c_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204308539808Z_729f3238_verification_neutral": {
+    "errors": [
+      "C1: asserted -11.60; expected -1.598042038583357327958537288 percent"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T202208212834Z_220be927_verification_neutral": {
+    "errors": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T195709637195Z_af662fc4_verification_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201005372063Z_b75b968f_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T203041636349Z_4d16373d_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T201819143685Z_730609be_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T204759366550Z_4e2d3c5c_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T191005069665Z_729f3238_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T193603788385Z_220be927_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C4: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  },
+  "RUN_20261023T194027183025Z_af662fc4_hybrid_neutral": {
+    "errors": [],
+    "human_review": [
+      "C3: check factual support and reasoning manually",
+      "C5: check factual support and reasoning manually",
+      "Check prose against structured assertions, neutral tone, and material counter-evidence"
+    ]
+  }
+}

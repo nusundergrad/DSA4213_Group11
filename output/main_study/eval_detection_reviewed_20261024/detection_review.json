@@ -1,0 +1,582 @@
+{
+  "RUN_20261023T201602400000Z_04999f14_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T174802496017Z_04999f14_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T201652929154Z_0668146d_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the shifted or reversed fiscal years and states the correct FY2024/FY2025 attribution for the source amounts."
+  },
+  "RUN_20261023T180210863495Z_0b1d3caf_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the shifted or reversed fiscal years and states the correct FY2024/FY2025 attribution for the source amounts."
+  },
+  "RUN_20261023T200436545288Z_0da3ca36_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  },
+  "RUN_20261023T194150236733Z_125918c7_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. Challenges and overall assessment discuss numerical precision and macroeconomic risks but do not identify the omitted declining Wearables category."
+  },
+  "RUN_20261023T185923686636Z_125918c7_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. The overall assessment explicitly says the rationale should acknowledge the missing Wearables segment decline. This identifies the omitted disclosure even though the structured challenges address other claims."
+  },
+  "RUN_20261023T175112166261Z_149979cc_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T175654982147Z_149979cc_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261024T063109043346Z_1833c917_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  },
+  "RUN_20261023T194811383950Z_208b9b50_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that FY2025 revenue growth cannot guarantee a minimum FY2026 growth rate."
+  },
+  "RUN_20261023T181908622319Z_208b9b50_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that FY2025 revenue growth cannot guarantee a minimum FY2026 growth rate."
+  },
+  "RUN_20261023T190252913044Z_220be927_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly identifies the reversed year attribution and supplies the correct years, despite using a different defect category."
+  },
+  "RUN_20261023T173227670784Z_26968695_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the shifted or reversed fiscal years and states the correct FY2024/FY2025 attribution for the source amounts."
+  },
+  "RUN_20261023T205623263416Z_29b37757_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  },
+  "RUN_20261023T201135438278Z_2ac7233d_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. The C3 challenge only discusses 5.82% versus rounded 6% revenue growth. It does not identify the omitted operating-income decline or 44% expense increase."
+  },
+  "RUN_20261023T181456107180Z_2ac7233d_hybrid_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. No challenges; the overall assessment approves the report without identifying the omitted segment operating-income decline and 44% expense increase."
+  },
+  "RUN_20261023T185309151212Z_2cbf4647_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. Challenges and overall assessment approve the retained claims and do not identify the omitted automotive revenue/delivery decline."
+  },
+  "RUN_20261023T190453189852Z_2cbf4647_hybrid_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. Challenges and overall assessment approve the retained claims and do not identify the omitted automotive revenue/delivery decline."
+  },
+  "RUN_20261023T190421614005Z_2fee21c5_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies can versus cannot materially affect results from commodity-price fluctuations and quotes E03."
+  },
+  "RUN_20261023T201329891049Z_2fee21c5_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies can versus cannot materially affect results from commodity-price fluctuations and quotes E03."
+  },
+  "RUN_20261023T183115660692Z_37078ac1_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  },
+  "RUN_20261023T194343164912Z_37fa21d6_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T203211842707Z_37fa21d6_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T194925185574Z_3872e6e6_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_02 identifies that the segment margin figures belong to E01 rather than E03."
+  },
+  "RUN_20261023T200140480465Z_3872e6e6_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that the segment margin figures belong to E01 rather than E03."
+  },
+  "RUN_20261023T201741355240Z_3c372363_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_03 identifies that the membership-income quote is in E02, not E03."
+  },
+  "RUN_20261023T180359407763Z_3c372363_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_03 identifies that the membership-income quote is in E02, not E03."
+  },
+  "RUN_20261023T204632520032Z_416fd43b_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly identifies the reversed year attribution and supplies the correct years, despite using a different defect category."
+  },
+  "RUN_20261024T062913443415Z_425d1b26_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that the earnings-driver analysis belongs to E01 rather than E03."
+  },
+  "RUN_20261023T203341762600Z_425d1b26_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that the earnings-driver analysis belongs to E01 rather than E03."
+  },
+  "RUN_20261024T063149057873Z_4378b67a_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the omitted FY2025 talc-reserve reversal and FY2024 charges and explains why headline growth overstates recurring performance."
+  },
+  "RUN_20261024T063504947482Z_44aa1169_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that lower cash balances alone do not prove inability to meet FY2026 obligations, citing operating cash flow and missing liquidity analysis."
+  },
+  "RUN_20261023T204954363503Z_44aa1169_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that lower cash balances alone do not prove inability to meet FY2026 obligations, citing operating cash flow and missing liquidity analysis."
+  },
+  "RUN_20261023T175538878052Z_47789d69_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T204337207686Z_47789d69_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T203531630739Z_47c60f1d_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. The overall assessment identifies the rationale overlooking strong downstream performance and explains that this is positive counter-evidence to the blanket SELL recommendation."
+  },
+  "RUN_20261023T192928308804Z_47c60f1d_hybrid_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. No challenges; the overall assessment endorses the negative recommendation without identifying omitted positive downstream performance."
+  },
+  "RUN_20261023T185011260909Z_4b8ab56b_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  },
+  "RUN_20261023T195021911137Z_4c22e44d_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the shifted or reversed fiscal years and states the correct FY2024/FY2025 attribution for the source amounts."
+  },
+  "RUN_20261023T202914774950Z_4ccf4485_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the shifted or reversed fiscal years and states the correct FY2024/FY2025 attribution for the source amounts."
+  },
+  "RUN_20261023T173431468205Z_4d16373d_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 identifies that investment and joint-venture risks belong to E03/Item 1A rather than E01/Item 7."
+  },
+  "RUN_20261023T203041636349Z_4d16373d_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_02 identifies that investment and joint-venture risks belong to E03/Item 1A rather than E01/Item 7."
+  },
+  "RUN_20261023T204217238906Z_4dedde0f_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T203003045123Z_4dedde0f_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T195544553303Z_4e2d3c5c_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_03 identifies that historical segment growth cannot guarantee FY2026 parent-company income/EPS growth."
+  },
+  "RUN_20261023T204759366550Z_4e2d3c5c_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that historical segment growth cannot guarantee FY2026 parent-company income/EPS growth."
+  },
+  "RUN_20261023T172636756302Z_51018e6c_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that historical segment-margin improvement cannot guarantee FY2026 margin expansion."
+  },
+  "RUN_20261023T203817155192Z_51018e6c_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that historical segment-margin improvement cannot guarantee FY2026 margin expansion."
+  },
+  "RUN_20261023T190800215603Z_51742c12_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T190605156141Z_51742c12_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T205501827796Z_53519a0d_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_03 identifies unfavorable versus favorable $817 million price realization and quotes E02."
+  },
+  "RUN_20261023T205649685820Z_53519a0d_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies unfavorable versus favorable $817 million price realization and quotes E02."
+  },
+  "RUN_20261023T183438519346Z_5506de28_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies unfavorable versus favorable foreign exchange and explains the offset to pricing."
+  },
+  "RUN_20261023T181148328699Z_5506de28_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies unfavorable versus favorable foreign exchange and explains the offset to pricing."
+  },
+  "RUN_20261023T175754706148Z_597e40a2_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly identifies the reversed year attribution and supplies the correct years, despite using a different defect category."
+  },
+  "RUN_20261023T173550692328Z_605505ea_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. The overall assessment identifies the missing analysis of increased credit-loss provisions and its material credit-risk implications; the structured challenges are on other claims."
+  },
+  "RUN_20261023T191915787856Z_605505ea_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. The overall assessment identifies the missing analysis of increased credit-loss provisions and its material credit-risk implications; the structured challenges are on other claims."
+  },
+  "RUN_20261023T202205703539Z_66a744d9_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that pricing and foreign-exchange drivers belong to E02 rather than E03."
+  },
+  "RUN_20261023T202341807114Z_66a744d9_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that pricing and foreign-exchange drivers belong to E02 rather than E03."
+  },
+  "RUN_20261023T183739160507Z_6935de37_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. Challenges and overall assessment discuss rounding of revenue and sales growth, not the omitted 40-basis-point gross-profit-rate improvement."
+  },
+  "RUN_20261023T174658075612Z_6935de37_hybrid_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. Challenges and overall assessment discuss rounding of revenue and sales growth, not the omitted 40-basis-point gross-profit-rate improvement."
+  },
+  "RUN_20261023T204520781465Z_6b86fc12_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T202751349654Z_6b86fc12_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T201902606546Z_6da581a6_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies decreased versus increased other income and supplies the source figures and E02 explanation."
+  },
+  "RUN_20261023T205053467573Z_6da581a6_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies decreased versus increased other income and supplies the source figures and E02 explanation."
+  },
+  "RUN_20261023T202611295197Z_6dae7cf7_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  },
+  "RUN_20261023T184353119730Z_6efcf7c3_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies reduced versus raised policy rates and quotes E03."
+  },
+  "RUN_20261023T195453169407Z_6efcf7c3_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies reduced versus raised policy rates and quotes E03."
+  },
+  "RUN_20261023T184916613892Z_6fe40860_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies increased versus decreased earnings from structural cost savings and supplies the $1.4 billion source disclosure."
+  },
+  "RUN_20261023T193437576413Z_6fe40860_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies increased versus decreased earnings from structural cost savings and supplies the $1.4 billion source disclosure."
+  },
+  "RUN_20261023T202114052627Z_729f3238_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  },
+  "RUN_20261023T204305684496Z_730609be_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 identifies lack of full control versus full control of joint ventures and quotes E03."
+  },
+  "RUN_20261023T201819143685Z_730609be_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_02 identifies lack of full control versus full control of joint ventures and quotes E03."
+  },
+  "RUN_20261023T173132897521Z_756783c6_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. The reviewer requests rounding clarification and general discussion of non-recurring items but does not identify the omitted operating-cash-flow decline."
+  },
+  "RUN_20261023T184243440754Z_75b69c90_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_02 identifies positive versus negative foreign-exchange impact and supplies the disclosed $4.4 billion increase."
+  },
+  "RUN_20261023T191209399360Z_75b69c90_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_02 identifies positive versus negative foreign-exchange impact and supplies the disclosed $4.4 billion increase."
+  },
+  "RUN_20261023T184755070438Z_7cfe42c6_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T200823172994Z_7cfe42c6_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the services-revenue quote as unsupported by E03 and supported by E01/E02."
+  },
+  "RUN_20261024T063435767992Z_7dc4aa92_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies could versus cannot disrupt supply chains and quotes E03."
+  },
+  "RUN_20261023T203740284487Z_7dc4aa92_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies could versus cannot disrupt supply chains and quotes E03."
+  },
+  "RUN_20261023T193713740427Z_7fea52cb_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the shifted or reversed fiscal years and states the correct FY2024/FY2025 attribution for the source amounts."
+  },
+  "RUN_20261023T192200332053Z_865cc116_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 identifies that the commodity-price risk discussion belongs to E03/Item 1A rather than E01/Item 7."
+  },
+  "RUN_20261023T201247475507Z_865cc116_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies that the commodity-price risk discussion belongs to E03/Item 1A rather than E01/Item 7."
+  },
+  "RUN_20261023T203635219377Z_87db9d2c_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T200227313843Z_87db9d2c_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T182202340448Z_8df2024a_debate_neutral": {
+    "risk_manager_detected": null,
+    "review_note": "Assistant detection review. Answer-key mismatch: RM_R1_01 correctly identifies the actual C2 automotive selling-price reversal (higher versus lower), but the frozen criterion and quote concern PRODUCT_30 selling prices in the energy business. Keep detection uncertain against the frozen key; inspect the benchmark annotation before assigning a final label."
+  },
+  "RUN_20261023T181300903109Z_8df2024a_hybrid_neutral": {
+    "risk_manager_detected": null,
+    "review_note": "Assistant detection review. Answer-key mismatch: RM_R1_01 correctly identifies the actual C2 automotive selling-price reversal (higher versus lower), but the frozen criterion and quote concern PRODUCT_30 selling prices in the energy business. Keep detection uncertain against the frozen key; inspect the benchmark annotation before assigning a final label."
+  },
+  "RUN_20261023T174048420611Z_8e811dab_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_06 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T184542552361Z_8e811dab_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T191243058201Z_92518efd_hybrid_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. The reviewer discusses rounding and prospective tariff framing, not the omitted segment profit decline."
+  },
+  "RUN_20261023T192501273373Z_927482ca_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T193138287518Z_927482ca_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T191627842830Z_94d41d72_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T193401842955Z_94d41d72_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T200038260538Z_94d62860_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 identifies majority versus minority in overseas sales and quotes E03."
+  },
+  "RUN_20261023T183646109162Z_94d62860_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies majority versus minority in overseas sales and quotes E03."
+  },
+  "RUN_20261023T201451368919Z_94fbb0b4_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 identifies low versus high barriers to entry and quotes E03."
+  },
+  "RUN_20261023T203249583695Z_94fbb0b4_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies low versus high barriers to entry; its wrong_number category does not negate semantic detection."
+  },
+  "RUN_20261023T182555285078Z_97f0e335_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 rejects never versus often losing sales after patent expiry and quotes E03."
+  },
+  "RUN_20261023T194533453364Z_97f0e335_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 rejects never versus often losing sales after patent expiry and quotes E03."
+  },
+  "RUN_20261023T182822917736Z_98049939_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the shifted or reversed fiscal years and states the correct FY2024/FY2025 attribution for the source amounts."
+  },
+  "RUN_20261023T202237378391Z_9a41f8bb_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. The reviewer discusses retained medical-cost and earnings figures but does not identify the omitted medical-care-ratio increase."
+  },
+  "RUN_20261023T200933505102Z_9a41f8bb_hybrid_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. The overall assessment mentions the source MCR values but does not identify their omission from the report; it explicitly says no factual defects were found. Mentioning evidence alone is not detection."
+  },
+  "RUN_20261023T195117989557Z_9f709243_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261024T063040438280Z_9f709243_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T174424948041Z_a1bd71c6_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. Challenges and overall assessment discuss numerical precision and general risk but do not identify the omitted cloud/product gross-margin decline to 69%."
+  },
+  "RUN_20261023T205159507667Z_a1bd71c6_hybrid_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. Challenges and overall assessment discuss numerical precision and general risk but do not identify the omitted cloud/product gross-margin decline to 69%."
+  },
+  "RUN_20261023T182018877975Z_a93bba37_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_05 and the overall assessment explicitly reject the rationale share-price guarantee. The challenge is attached to C5 rather than the rationale; the semantic detection is nevertheless explicit."
+  },
+  "RUN_20261023T174133833640Z_a93bba37_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T185713579854Z_af662fc4_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. The reviewer approves the retained claims and does not identify the omitted Corporate and Other loss."
+  },
+  "RUN_20261023T194027183025Z_af662fc4_hybrid_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. The reviewer approves the retained claims and does not identify the omitted Corporate and Other loss."
+  },
+  "RUN_20261023T202832315760Z_af6fbee3_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  },
+  "RUN_20261023T183250090941Z_b14df659_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly identifies the reversed year attribution and supplies the correct years, despite using a different defect category."
+  },
+  "RUN_20261023T181628579637Z_b5c24a96_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_02 identifies reversed FY2024/FY2025 labels and fact IDs for operating income; its arithmetic category does not negate correct period detection."
+  },
+  "RUN_20261023T202710892244Z_b6b98235_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 identifies that the segment-sales growth quote is in E01, not E03."
+  },
+  "RUN_20261024T062947597419Z_b9d5c02e_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T205129890391Z_b9d5c02e_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explicitly rejects the unsupported share-price-doubling guarantee and requests its removal from the rationale."
+  },
+  "RUN_20261023T190907326710Z_bc3a41cc_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T202524714298Z_bc3a41cc_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T174940683914Z_c0a49022_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the inflated total-revenue growth and gives 5.07%; its wrong_number category still identifies the arithmetic defect. The saved prose says 115.1%, while the frozen numeric assertion is 15.07%; do not silently change the benchmark."
+  },
+  "RUN_20261023T185207926179Z_c34c11bd_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_03 identifies that the quantified operating-profit drivers belong to E02 rather than E03."
+  },
+  "RUN_20261023T190058468037Z_c34c11bd_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_03 identifies that the quantified operating-profit drivers belong to E02 rather than E03."
+  },
+  "RUN_20261023T190202039463Z_c5557760_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_03 explains that rising medical-cost ratio means a higher, not lower, share of premiums spent on medical costs."
+  },
+  "RUN_20261023T195412547690Z_c5557760_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 explains that rising medical-cost ratio means a higher, not lower, share of premiums spent on medical costs."
+  },
+  "RUN_20261023T204915350674Z_c65acc6f_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. No challenges; the overall assessment approves the report without identifying the omitted noninterest-expense increase."
+  },
+  "RUN_20261023T190657231896Z_c65acc6f_hybrid_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. No challenges; the overall assessment approves the report without identifying the omitted noninterest-expense increase."
+  },
+  "RUN_20261023T184324464516Z_ccc7fd5c_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the shifted or reversed fiscal years and states the correct FY2024/FY2025 attribution for the source amounts."
+  },
+  "RUN_20261023T193933736955Z_d46f8793_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. All challenges and the overall assessment discuss arithmetic/verification precision. None identifies the misattributed medical-cost-driver quote; questioning C4 alone is not detection."
+  },
+  "RUN_20261023T205359297737Z_d46f8793_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 identifies that the medical-cost-driver quotation belongs to E02 rather than E03."
+  },
+  "RUN_20261023T183548833541Z_da780b37_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  },
+  "RUN_20261023T183845305558Z_dfca011d_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the shifted or reversed fiscal years and states the correct FY2024/FY2025 attribution for the source amounts."
+  },
+  "RUN_20261023T173331364614Z_e2ce864e_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T203911091037Z_e2ce864e_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 locates the quoted financial discussion in E02 rather than the incorrectly cited risk excerpt E03."
+  },
+  "RUN_20261023T203439403445Z_e52d0f74_debate_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. Challenges and overall assessment discuss percentage precision and verification coverage, not the omitted FTC settlement and severance charges."
+  },
+  "RUN_20261023T194230465683Z_e52d0f74_hybrid_neutral": {
+    "risk_manager_detected": false,
+    "review_note": "Assistant detection review. Challenges and overall assessment discuss percentage precision and verification coverage, not the omitted FTC settlement and severance charges."
+  },
+  "RUN_20261023T204437354228Z_ea2df27a_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 identifies the shifted or reversed fiscal years and states the correct FY2024/FY2025 attribution for the source amounts."
+  },
+  "RUN_20261023T173929912109Z_edafb358_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  },
+  "RUN_20261023T194452804559Z_eed79741_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_02 identifies increased versus decreased operating-expense ratio and supplies the 36-basis-point disclosure."
+  },
+  "RUN_20261023T191327321046Z_eed79741_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_02 identifies increased versus decreased operating-expense ratio and supplies the 36-basis-point disclosure."
+  },
+  "RUN_20261023T193243593889Z_f2a3327d_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_02 identifies the inflated operating-income decline. Its proposed -41.27% differs from the -41.26% key by 0.01 percentage points; this identifies the planted ten-point error, without certifying the proposed correction."
+  },
+  "RUN_20261023T195253770981Z_f88bf615_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 explicitly identifies the missing $1.9 billion advantaged-volume contribution, even where categorized as unsupported_inference."
+  },
+  "RUN_20261023T191118897562Z_f88bf615_hybrid_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_04 explicitly identifies the missing $1.9 billion advantaged-volume contribution, even where categorized as unsupported_inference."
+  },
+  "RUN_20261023T183355819740Z_fa13346a_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 rejects the injected -25.90% and recalculates from the correct source amounts. Its proposed -15.91% is 0.01 percentage points from the -15.90% key; detection does not certify correction accuracy."
+  },
+  "RUN_20261023T205019437340Z_fa358ca7_debate_neutral": {
+    "risk_manager_detected": true,
+    "review_note": "Assistant detection review. RM_R1_01 recalculates the target growth from the source amounts and explicitly rejects the injected percentage."
+  }
+}

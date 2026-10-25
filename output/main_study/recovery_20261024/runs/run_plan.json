@@ -1,0 +1,85 @@
+{
+  "cases": [
+    {
+      "evidence_packet": "EP_0011",
+      "report": "error_03_citation_misattribution",
+      "situation": 1,
+      "tone": "neutral"
+    },
+    {
+      "evidence_packet": "EP_0004",
+      "report": "error_06_unsupported_inference",
+      "situation": 1,
+      "tone": "neutral"
+    },
+    {
+      "evidence_packet": "EP_0006",
+      "report": "error_06_unsupported_inference",
+      "situation": 3,
+      "tone": "neutral"
+    },
+    {
+      "evidence_packet": "EP_0008",
+      "report": "error_03_arithmetic",
+      "situation": 1,
+      "tone": "neutral"
+    },
+    {
+      "evidence_packet": "EP_0009",
+      "report": "error_01_material_omission",
+      "situation": 3,
+      "tone": "neutral"
+    },
+    {
+      "evidence_packet": "EP_0006",
+      "report": "error_05_citation_misattribution",
+      "situation": 2,
+      "tone": "neutral"
+    },
+    {
+      "evidence_packet": "EP_0011",
+      "report": "clean",
+      "situation": 1,
+      "tone": "neutral"
+    },
+    {
+      "evidence_packet": "EP_0013",
+      "report": "error_04_arithmetic",
+      "situation": 1,
+      "tone": "neutral"
+    },
+    {
+      "evidence_packet": "EP_0007",
+      "report": "clean",
+      "situation": 3,
+      "tone": "neutral"
+    },
+    {
+      "evidence_packet": "EP_0003",
+      "report": "error_01_direct_factual_contradiction",
+      "situation": 1,
+      "tone": "neutral"
+    },
+    {
+      "evidence_packet": "EP_0011",
+      "report": "error_01_unsupported_inference",
+      "situation": 1,
+      "tone": "neutral"
+    }
+  ],
+  "config": {
+    "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "temperature": 0,
+    "max_debate_rounds": 1,
+    "max_tokens": 6000,
+    "max_model_attempts": 1,
+    "reasoning_effort": "none",
+    "trader_evidence_access": false,
+    "code_sha256": {
+      "agent.py": "2ed6cfd25b3ca73e21d4b74cde55c4862cd998ea94682453e477c4d8639c6c48",
+      "graph.py": "4479b68a51f25b9071126974ba1d3516efc8b5f29d5b20232d6db430e229b2c0",
+      "prompts.py": "826b0f62dc78ee9ab27ed111d80eddd1c3691ee49a5768a00295ff775670b2ad",
+      "verifier.py": "935fadca726841882ce2c1d4fe88098852f3626fc4a4a0565fbf38a4ab82cb47"
+    }
+  }
+}

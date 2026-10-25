@@ -1,0 +1,134 @@
+{
+  "retrieved_at": "2026-10-23T17:25:47.884536+00:00",
+  "model": {
+    "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+    "canonical_slug": "nvidia/nemotron-3-ultra-550b-a55b-20260604",
+    "hugging_face_id": "nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B-BF16",
+    "name": "NVIDIA: Nemotron 3 Ultra (free)",
+    "created": 1780551208,
+    "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
+    "context_length": 1000000,
+    "architecture": {
+      "modality": "text->text",
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "tokenizer": "Other",
+      "instruct_type": null
+    },
+    "pricing": {
+      "prompt": "0",
+      "completion": "0"
+    },
+    "top_provider": {
+      "context_length": 1000000,
+      "max_completion_tokens": 65536,
+      "is_moderated": false
+    },
+    "per_request_limits": null,
+    "supported_parameters": [
+      "include_reasoning",
+      "max_tokens",
+      "reasoning",
+      "reasoning_effort",
+      "seed",
+      "temperature",
+      "tool_choice",
+      "tools",
+      "top_p"
+    ],
+    "default_parameters": {
+      "temperature": 1,
+      "top_p": 0.95,
+      "top_k": null,
+      "frequency_penalty": null,
+      "presence_penalty": null,
+      "repetition_penalty": null
+    },
+    "supported_voices": null,
+    "knowledge_cutoff": null,
+    "expiration_date": null,
+    "links": {
+      "details": "/api/v1/models/nvidia/nemotron-3-ultra-550b-a55b-20260604/endpoints"
+    },
+    "benchmarks": {
+      "design_arena": [
+        {
+          "arena": "models",
+          "category": "3d",
+          "elo": 1132,
+          "win_rate": 38.8,
+          "rank": 76
+        },
+        {
+          "arena": "models",
+          "category": "asciiart",
+          "elo": 1100,
+          "win_rate": 37.6,
+          "rank": 60
+        },
+        {
+          "arena": "models",
+          "category": "codecategories",
+          "elo": 1146,
+          "win_rate": 36.1,
+          "rank": 87
+        },
+        {
+          "arena": "models",
+          "category": "dataviz",
+          "elo": 1142,
+          "win_rate": 37.4,
+          "rank": 85
+        },
+        {
+          "arena": "models",
+          "category": "gamedev",
+          "elo": 1139,
+          "win_rate": 36.2,
+          "rank": 80
+        },
+        {
+          "arena": "models",
+          "category": "svg",
+          "elo": 1069,
+          "win_rate": 32.4,
+          "rank": 70
+        },
+        {
+          "arena": "models",
+          "category": "uicomponent",
+          "elo": 1136,
+          "win_rate": 35.7,
+          "rank": 83
+        },
+        {
+          "arena": "models",
+          "category": "website",
+          "elo": 1145,
+          "win_rate": 35.2,
+          "rank": 96
+        }
+      ],
+      "artificial_analysis": {
+        "intelligence_index": 22.9,
+        "coding_index": 49.3,
+        "agentic_index": 20.1
+      }
+    },
+    "reasoning": {
+      "mandatory": false,
+      "default_enabled": true,
+      "supports_max_tokens": true,
+      "supported_efforts": [
+        "high",
+        "medium",
+        "none"
+      ],
+      "default_effort": "high"
+    }
+  }
+}
