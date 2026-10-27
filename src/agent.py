@@ -100,7 +100,7 @@ def log_model_call(agent_name: str, messages, model_client=None):
     client = model_client or get_llm()
     configured_model = getattr(client, "model", None) or getattr(client, "model_name", None)
     print(
-        f"[{agent_name}] calling model={configured_model or MODEL_NAME} "
+        f"[{agent_name}]"
         f"messages={len(messages)}",
         flush=True,
     )
@@ -109,11 +109,7 @@ def log_model_call(agent_name: str, messages, model_client=None):
 def log_model_response(agent_name: str, response):
     metadata = getattr(response, "response_metadata", {}) or {}
     returned_model = metadata.get("model_name") or metadata.get("model")
-    print(
-        f"[{agent_name}] returned model={returned_model or 'unknown'} "
-        f"response_type={type(response.content).__name__}",
-        flush=True,
-    )
+
 
 
 def invoke_with_retry(agent_name: str, messages, validator=None, **kwargs):

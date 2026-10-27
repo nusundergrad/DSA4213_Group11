@@ -6,7 +6,7 @@ import json
 import sys
 import traceback
 from datetime import datetime, timezone
-from typing import Literal
+from typing import Any, Callable, Literal
 
 try:
     from .agent import analyst_agent, risk_manager_agent, trader_agent
@@ -159,8 +159,10 @@ def situation_2(input_content: dict):
     return response
 
 
-def situation_3(input_content: dict):
-    print("Starting situation_3", flush=True)
+def situation_3(
+    input_content: dict,
+    on_event: Callable[[dict[str, Any]], None] | None = None,
+):
     graph = StateGraph(AgentState)
     graph.add_node(analyst_agent)
     graph.add_node(verifier_node)
@@ -183,7 +185,7 @@ def situation_3(input_content: dict):
     graph.add_edge("trader_agent", END)
     graph = graph.compile()
 
-    response = graph.invoke({
+    initial_state = {
         "messages": [HumanMessage(
             content=input_content["content"],
             id=input_content.get("message_id", "human:initial"),
@@ -197,8 +199,32 @@ def situation_3(input_content: dict):
         "max_debate_rounds": input_content["max_debate_rounds"],
         "verifier_reports": [],
         "trader_verdict": None,
-    })
-    print("Situation_3 completed", flush=True)
+    }
+
+    response = None
+    for stream_item in graph.stream(
+        initial_state,
+        stream_mode=["updates", "values"],
+    ):
+        if isinstance(stream_item, tuple) and len(stream_item) == 2:
+            stream_events = [stream_item]
+        elif isinstance(stream_item, dict):
+            stream_events = [
+                (mode, stream_item[mode])
+                for mode in ("updates", "values")
+                if mode in stream_item
+            ]
+        else:
+            stream_events = []
+
+        for mode, chunk in stream_events:
+            if on_event is not None:
+                on_event({"type": mode, "data": chunk})
+            if mode == "values":
+                response = chunk
+
+    if response is None:
+        raise RuntimeError("Situation_3 produced no final state")
     return response
 
 def test_verifier(input_content: dict):
