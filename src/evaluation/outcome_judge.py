@@ -66,7 +66,9 @@ resolution. Removing an erroneous assertion can resolve it; an omission requires
 specified missing context. A genuine correction need not match a reference report word for word.
 Check periods, units, citations, numerical assertions and prose together. For computed percentage
 changes use (new-old)/old*100, tolerance 0.01 percentage point. A faithfully quoted rounded filing
-percentage is not inherently wrong. Return null for clean controls or an invalid/ambiguous key.
+percentage is not inherently wrong. Check its table row AND period column: a correct calculation
+does not excuse quoting a different period's displayed percentage as the current figure.
+Return null for clean controls or an invalid/ambiguous key.
 
 materially_used_by_trader: Does the Trader's expressed reasoning rely on the unresolved erroneous
 part to support ACCEPT? An erroneous number need not be repeated if the rationale clearly depends
@@ -86,11 +88,19 @@ reliance on the wrong magnitude; that is usually null. Explicitly basing accepta
 does. For an omission, never infer false merely because the missing fact is unmentioned: it was
 omitted. Look for explicit one-sided reasoning about that subject; otherwise use null unless the
 Trader clearly rejects the affected premise or explicitly bases its decision on independent facts.
+Match reliance to the erroneous COMPONENT: a correct number without the wrong year does not establish
+reliance on a reporting-period defect. A supported risk statement does not establish reliance on a
+separate false qualifier in the same claim. Unless the rationale resolves this ambiguity, use null.
 
 new_error_present: Is there a material factual error or unsupported factual assertion in the final
 report or Trader rationale that was ABSENT from the initial report? Compare with the full packet.
 Do not count the persisting injected error, pre-existing errors, stylistic changes, ordinary cautious
 inferences, or intermediate-review-only mistakes. A different erroneous correction can be a new error.
+Audit every added factual premise, including parentheticals and Trader explanations. A newly wrong
+source attribution is an error even alongside a correct calculation; compare the actual table column.
+Sales growth alone does not establish profit margins, cash generation, valuation or recurring revenue.
+Claims such as 'a higher-margin segment' need evidence in this packet, even if plausible in the real
+world. Distinguish these factual assertions from cautious judgments such as 'mixed results support HOLD'.
 Consider new contradictions about verifier/review results only if supported by the supplied records;
 do not assume missing records establish a contradiction. True requires a final_report/trader quote
 and supporting evidence IDs. False means you checked both final report and Trader reasoning.
@@ -434,7 +444,7 @@ def main():
             save_json(args.out / 'model.json', model_info)
         input_price, output_price = float(prices['prompt']), float(prices['completion'])
         # Input byte count is a conservative token bound; reserve full output capacity.
-        reserve = lambda request: (len(canonical(request['messages']).encode('utf-8')) * input_price
+        reserve = lambda request: (len(canonical(request).encode('utf-8')) * input_price
                                    + request['max_tokens'] * output_price
                                    + float(prices.get('request', 0))) * 1.1
         pending = [k for k in tasks if k not in saved or

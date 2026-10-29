@@ -1,0 +1,5 @@
+architecture,false acceptance,known not false acceptance,unknown outcome,execution failed,FAR,all-assigned lower %,all-assigned upper %
+baseline,77,13,0,0,77/90 (85.6%),85.55555555555556,85.55555555555556
+debate,16,71,0,3,16/87 (18.4%),17.77777777777778,21.11111111111111
+verification,54,36,0,0,54/90 (60.0%),60.0,60.0
+hybrid,15,70,0,5,15/85 (17.6%),16.666666666666668,22.22222222222222

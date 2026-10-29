@@ -1,0 +1,36 @@
+{
+  "selected_conditions": 516,
+  "completed": 499,
+  "completed_by_situation": {
+    "situation_2": 105,
+    "situation_3": 139,
+    "situation_1": 102,
+    "situation_0": 153
+  },
+  "rounds_verified": true,
+  "numeric_outputs_screened": 499,
+  "new_numeric_failure_indices": [
+    16,
+    23,
+    96,
+    174,
+    284,
+    356,
+    422
+  ],
+  "application_attempts": 529,
+  "application_attempt_statuses": {
+    "completed": 499,
+    "failed": 30
+  },
+  "model_calls_all_attempts": 2032,
+  "code_hashes_current": {
+    "agent.py": "234f177ebcd91bea6004093b7c7386b2f8a8e6c99c96ce657919f6581b6085d6",
+    "graph.py": "b1fda4ce2955e13f2d1e004ca3ca06b04bee3909a0eb4bd3beef1cf2c99fe765",
+    "prompts.py": "826b0f62dc78ee9ab27ed111d80eddd1c3691ee49a5768a00295ff775670b2ad",
+    "verifier.py": "935fadca726841882ce2c1d4fe88098852f3626fc4a4a0565fbf38a4ab82cb47"
+  },
+  "offline_tests_passed": 591,
+  "notebook_run_all": "passed",
+  "deterministic_rebuild_files_verified": 27
+}

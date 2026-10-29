@@ -1,0 +1,4 @@
+batch,assigned,first_completed,recoveries,selected_completed,selected_failed
+main_study_3rounds,420,403,9,411,9
+confidence_study_3rounds,72,62,4,65,7
+confidence_repeat_3rounds,24,23,0,23,1

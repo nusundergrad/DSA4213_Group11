@@ -1,5 +1,44 @@
 # Experiment configuration
 
+## Three-round runs (25 October 2026)
+
+New debate and hybrid runs use **three rounds**. Each round is one Risk Manager review followed by one Analyst revision. They continue for all three rounds, including when the review finds no defect. The Trader decides once at the end. Hybrid also verifies the initial report and each revision: four verifier passes.
+
+Use `nvidia/nemotron-3-ultra-550b-a55b:free` for all roles, temperature 0, reasoning `none`, 6,000 output tokens and one attempt per call. This restores the model used in the previous study; the Lightning free model produced repeated format errors during debugging. Each agent receives the other agents' messages as labelled feedback and an explicit instruction for its own turn. Only its own earlier replies use the assistant role. The Analyst uses the current report as its format template; responses still undergo strict schema validation. The completed October study below used one round and older prompts; preserve those results separately.
+
+First check three cases: clean hybrid, arithmetic-error debate and reporting-period hybrid. This makes 21 model calls if all complete.
+
+```powershell
+py -X utf8 -m src.graph --cases experiments/three_round_cases.json --output-root output/three_round_demo/runs --model nvidia/nemotron-3-ultra-550b-a55b:free --rounds 3 --reasoning-effort none --max-tokens 6000 --max-attempts 1
+```
+
+Open the saved JSON files under that output folder. A completed case should have `debate_round: 3`, three `risk_manager_turns`, three `analyst_revision_turns`, four `final_reports` (including the initial report), and one `trader_verdict`. Hybrid has four `verifier_reports`; debate has none. `--max-attempts` controls retries for a single call, not debate rounds.
+
+For a new full comparison, reuse the frozen case lists and run all four architectures with these same settings in fresh folders. The main batch requires 1,680 planned calls; confidence requires 288 and its neutral repeat 96. These commands start new experiments, not a rebuild of the saved results:
+
+```powershell
+$model = "nvidia/nemotron-3-ultra-550b-a55b:free"
+py -X utf8 -m src.graph --cases output/full_cases.json --output-root output/main_study_3rounds/runs --model $model --rounds 3 --reasoning-effort none --max-tokens 6000 --max-attempts 1
+py -X utf8 -m src.graph --cases output/confidence_cases.json --output-root output/confidence_study_3rounds/runs --model $model --rounds 3 --reasoning-effort none --max-tokens 6000 --max-attempts 1
+py -X utf8 -m src.graph --cases output/confidence_neutral_repeat.json --output-root output/confidence_repeat_3rounds/runs --model $model --rounds 3 --reasoning-effort none --max-tokens 6000 --max-attempts 1
+```
+
+Keep the existing evidence access, confidence wording and scoring rules. Record failures, retain every attempt and apply the retry rule below consistently. Export and judge the new outputs separately; old factual labels and `finalize_evaluation.py` apply only to the previous study. Three rounds fix the interaction budget for this comparison; they are not an established optimum. This change alone cannot show an effect of round count because the turn instructions and message handling also changed.
+
+### Scoring calibration (26 October 2026)
+
+The 28-condition check exposed missed new errors and incorrect reliance labels. Calibration used 35 fixed checks on those outputs and 10 previously source-reviewed outputs from other companies. These are development checks, not independent human validation. Prompt revisions, alternative models and separate field audits did not pass every check; the best tested complete configurations agreed on 38/45. Do not describe the automated judge as validated.
+
+Keep `google/gemini-3-flash-preview` as the draft judge. Before reporting final metrics, compare every completed output with its packet and initial report, including the Trader rationale. Check the injected defect, whether it was identified and resolved, error-specific Trader reliance, and newly introduced assertions. Preserve genuine uncertainty. A correct calculated percentage does not excuse quoting the wrong filing column; sales data do not establish profit margins. A claim ID alone does not establish reliance on its erroneous part.
+
+Save source-backed decisions separately from the original judge labels. The reviewed field decisions for the 28-condition batch are in `output/judge_calibration_20261026/source_review.json`, with an additional consistency decision in the `reviewed_calibration/three_round_28check_20261025` subfolder. The reviewed batch and attempted calibrations remain in that folder. Keep automated and source-reviewed results distinguishable. The experimental field-audit workflow was not adopted.
+
+The completed full run used the frozen order and sequential chunks within the free-model quota. First-pass completion was 488/516. A recorded recovery plan allowed one identical attempt for each of 13 transport/quota failures; 11 succeeded, leaving **499/516 completed** and 17 retained failures. Malformed and truncated responses were not retried. Final selection uses the explicit recovery even if it failed. Inputs and configuration hashes were checked before selection. See `attempt_selection.json` and `execution_coverage.csv` in the [three-round results](../output/final_evaluation_3rounds_20261027/).
+
+The primary judge remained Gemini. A free Nemotron source cross-check and saved adjudications addressed disagreements and missing labels without paid fallback. This is secondary model review, not independent human validation. Rebuild the reviewed metrics offline with `py -X utf8 experiments/finalize_three_rounds.py`; see the [short workflow](running-experiments.md).
+
+## Previous one-round study
+
 This configuration is fixed before the 28-condition check on 23 October 2026. The check uses EP_0001's clean report and six single-error copies across baseline, debate, verification and hybrid. Its purpose is to check execution and scoring. One company cannot establish a general effect.
 
 | Setting | Value | Reason |

@@ -8,6 +8,23 @@ output/*
 
 # Completed evaluation
 !output/final_evaluation_20261024/
+!output/final_evaluation_3rounds_20261027/
+
+# Three-round results: saved inputs and decisions for the offline rebuild
+!output/final_review_3rounds_20261027/
+output/final_review_3rounds_20261027/*
+!output/final_review_3rounds_20261027/inputs/
+!output/final_review_3rounds_20261027/outcomes.json
+!output/final_review_3rounds_20261027/decisions.json
+!output/final_review_3rounds_20261027/label_changes.json
+!output/final_review_3rounds_20261027/review_summary.json
+!output/final_review_3rounds_20261027/execution_coverage.json
+!output/final_review_3rounds_20261027/execution_audit.json
+!output/final_review_3rounds_20261027/attempt_selection.json
+!output/final_review_3rounds_20261027/numerical_screen.json
+!output/final_review_3rounds_20261027/secondary_labels.json
+!output/final_review_3rounds_20261027/metadata_repairs.json
+!output/final_review_3rounds_20261027/crosscheck_requests.json
 
 # Saved inputs used by the evaluation notebooks and rebuild command
 !output/final_review_20261024/

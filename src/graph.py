@@ -459,7 +459,7 @@ if __name__ == "__main__":
     parser.add_argument('--tone', choices=list(CONFIDENCE_FRAMING), default='neutral')
     parser.add_argument('--max-attempts', type=int, default=1)
     parser.add_argument('--max-tokens', type=int, default=6000)
-    parser.add_argument('--reasoning-effort', choices=['none', 'low', 'medium', 'high'])
+    parser.add_argument('--reasoning-effort', choices=['none', 'low', 'medium', 'high'], default=agent_module.REASONING_EFFORT)
     args = parser.parse_args()
     if args.model in ('openrouter/free', 'openrouter/auto') or args.max_attempts < 1:
         parser.error('Use an explicit model ID and a positive attempt count')

@@ -1,0 +1,23 @@
+{
+  "main_study_3rounds": {
+    "assigned": 420,
+    "first_completed": 403,
+    "recoveries": 9,
+    "selected_completed": 411,
+    "selected_failed": 9
+  },
+  "confidence_study_3rounds": {
+    "assigned": 72,
+    "first_completed": 62,
+    "recoveries": 4,
+    "selected_completed": 65,
+    "selected_failed": 7
+  },
+  "confidence_repeat_3rounds": {
+    "assigned": 24,
+    "first_completed": 23,
+    "recoveries": 0,
+    "selected_completed": 23,
+    "selected_failed": 1
+  }
+}

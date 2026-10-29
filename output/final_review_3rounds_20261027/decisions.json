@@ -1,0 +1,4143 @@
+[
+  {
+    "index": 147,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000933595134Z_51742c12_debate_neutral",
+    "input_sha256": "0005ac567aed3201fa0b62081b34d90b09e5ab2a1cd2b272fa3c1cf7ce682b83",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The revised report says the FY2025 filing displays 13% Services growth; its FY2025 column displays 14%. The 13% is the FY2024 column. A correct 13.51% calculation does not support this newly added source attribution.",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The Services sales category experienced a 13.51% increase in net sales (calculated from $96,169 million in FY2024 to $109,158 million in FY2025 per Item 7, EP_0001_E01). The filing displays a rounded year-over-year change of 13%. This growth was primarily driven by higher net sales from advertising, PRODUCT_07, and cloud services (Item 7, EP_0001_E02)."
+        },
+        {
+          "source": "evidence",
+          "text": "Services 109,158 14 % 96,169 13 % 85,200 "
+        }
+      ]
+    }
+  },
+  {
+    "index": 221,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004634190469Z_125918c7_debate_neutral",
+    "input_sha256": "9b3038f8812c9b4f5f1832dbf5494e764038495a6f0e6bd81a26d76b29649f2e",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The revised report says the FY2025 filing displays 13% Services growth; its FY2025 column displays 14%. The 13% is the FY2024 column. A correct 13.51% calculation does not support this newly added source attribution.",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The Services sales category experienced a 13% (filing reported) increase in net sales, rising from $96,169 million in fiscal year 2024 to $109,158 million in fiscal year 2025 (Item 7, EP_0001_E01). Calculated from the underlying figures, the increase is approximately 13.51%. This growth was primarily driven by higher net sales from advertising, PRODUCT_07, and cloud services (Item 7, EP_0001_E02)."
+        },
+        {
+          "source": "evidence",
+          "text": "Services 109,158 14 % 96,169 13 % 85,200 "
+        }
+      ]
+    }
+  },
+  {
+    "index": 222,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T005025999088Z_37fa21d6_debate_neutral",
+    "input_sha256": "85655089ac7c578ea9554288510a687077c68e98895f95771c02a34f7b53c11d",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The revised report says the FY2025 filing displays 13% Services growth; its FY2025 column displays 14%. The 13% is the FY2024 column. A correct 13.51% calculation does not support this newly added source attribution.",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The Services sales category experienced a 13.51% (calculated) increase in net sales, rising from $96,169 million in fiscal year 2024 to $109,158 million in fiscal year 2025; the filing reports a rounded 13% increase (Item 7, EP_0001_E01). This growth was primarily driven by higher net sales from advertising, PRODUCT_07, and cloud services (Item 7, EP_0001_E02)."
+        },
+        {
+          "source": "evidence",
+          "text": "Services 109,158 14 % 96,169 13 % 85,200 "
+        }
+      ]
+    }
+  },
+  {
+    "index": 162,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000939328578Z_4d16373d_baseline_neutral",
+    "input_sha256": "2a3c971be40460af4b86fb79bbc37b193f614950a132c29ee7b14eebd46876eb",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The 2.1% EPS decline is acceptable rounding of 2.08%; the new error is attributing it to C5, which concerns asset-valuation and joint-venture risks. EPS is C2.",
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E03"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "EPS down 2.1% (C5)"
+        },
+        {
+          "source": "initial_report",
+          "text": "COMPANY_15 faces risks related to changes in market value of assets and investments, especially those without observable market values, and potential adverse effects from joint ventures where it lacks full control or partners may not share business priorities, as stated in Item 7, EP_0015_E01."
+        }
+      ]
+    }
+  },
+  {
+    "index": 422,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T015058902301Z_ac2c68fd_hybrid_underconfident",
+    "input_sha256": "f3fbee1390812e2b625b4a8094c221ec4aadf25d67940a1169e540cb6267782b",
+    "field": "new_error_present",
+    "label": {
+      "value": null,
+      "reason": "The Trader accurately reports the actual final verifier FAILs for C1/C2 (checked in the raw run). The prose repeats filed 5.1%/5.0% figures, but its new percentage_change check_specs fail the calculated-value tolerance. Financial-error classification is ambiguous between faithful source rounding and a structured calculation defect; retain null and record the interface failure separately.",
+      "evidence_ids": [
+        "EP_0006_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The verifier report shows that the two primary revenue growth claims (C1 and C2) failed verification"
+        }
+      ]
+    }
+  },
+  {
+    "index": 23,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T173229238722Z_c0a49022_debate_neutral",
+    "input_sha256": "e88612bfa50cd0ab7c0db6fdfdf1e8025de862de57baa2dc26106a372a60fa83",
+    "field": "new_error_present",
+    "label": {
+      "value": null,
+      "reason": "The final C2 prose uses the filed 5.0% growth, but its changed percentage_change check_spec is 5.0 instead of the calculated 4.9641%. Preserve the deterministic FAIL separately; semantic new-error classification is ambiguous under the distinction between filed rounding and computed assertions.",
+      "evidence_ids": [
+        "EP_0006_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "Net sales also saw a 5.0% increase in fiscal year 2025, rising to $674,538 million from $642,637 million in fiscal year 2024."
+        }
+      ]
+    }
+  },
+  {
+    "index": 174,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001418043928Z_75b69c90_hybrid_neutral",
+    "input_sha256": "d137b65407377d1e1a87713a9adced6575facb90d047c26a4210ce93892420e2",
+    "field": "new_error_present",
+    "label": {
+      "value": null,
+      "reason": "The report explicitly labels 12% revenue growth and 20% segment growth as company-reported, but changes the percentage_change check_specs to those rounded values. Preserve the resulting calculation-check failures separately instead of treating faithfully attributed filed percentages as unambiguous new financial errors.",
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "COMPANY_07's consolidated net sales increased by 12% from $637,959 million in 2024 to $716,924 million in 2025, per the company's reported year-over-year growth. Foreign exchange changes reduced consolidated net sales in 2025 (EP_0007_E01)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 55,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T180746955793Z_c0a49022_verification_neutral",
+    "input_sha256": "60bcab0b9ac689c63bdbb82cc255d495a9f51d0ddce8a8818a55b119073e1790",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The key describes the same overstated revenue-growth metric and period. Input prose says 115.1% and check_spec 15.07%; the source values calculate to 5.0700%. This pre-existing mismatch is retained in the benchmark annotation.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "Total revenues 680,985 648,125 611,289"
+        },
+        {
+          "source": "initial_report",
+          "text": "Total revenues for COMPANY_06 increased by 115.1%"
+        }
+      ]
+    }
+  },
+  {
+    "index": 55,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T180746955793Z_c0a49022_verification_neutral",
+    "input_sha256": "60bcab0b9ac689c63bdbb82cc255d495a9f51d0ddce8a8818a55b119073e1790",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": null,
+      "reason": "No review was supplied.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 55,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T180746955793Z_c0a49022_verification_neutral",
+    "input_sha256": "60bcab0b9ac689c63bdbb82cc255d495a9f51d0ddce8a8818a55b119073e1790",
+    "field": "defect_resolved",
+    "label": {
+      "value": false,
+      "reason": "The final report is identical to the initial report and retains the erroneous 115.1% revenue growth claim in C1.",
+      "evidence_ids": [
+        "EP_0006_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "Total revenues for COMPANY_06 increased by 115.1% in fiscal year 2025, reaching $680,985 million, compared to $648,125 million in fiscal year 2024."
+        }
+      ]
+    }
+  },
+  {
+    "index": 55,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T180746955793Z_c0a49022_verification_neutral",
+    "input_sha256": "60bcab0b9ac689c63bdbb82cc255d495a9f51d0ddce8a8818a55b119073e1790",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The Trader rejected the report specifically because they identified the error in C1, noting that the actual growth was ~5% and that the BUY recommendation relied on the erroneous claim.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The verifier report shows C1 (115.1% revenue growth) is false; actual growth is ~5% per C2."
+        }
+      ]
+    }
+  },
+  {
+    "index": 55,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T180746955793Z_c0a49022_verification_neutral",
+    "input_sha256": "60bcab0b9ac689c63bdbb82cc255d495a9f51d0ddce8a8818a55b119073e1790",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected error.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 218,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003142289622Z_c34c11bd_verification_neutral",
+    "input_sha256": "e3716e46abcadb0d79a3b95cd89b989b8ff7c70ee896d6f3f11a602a2966909d",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the citation misattribution in C3, where the text attributes the operating profit drivers to EP_0014_E03 (trade policy risks) instead of EP_0014_E02 (operating results).",
+      "evidence_ids": [
+        "EP_0014_E02",
+        "EP_0014_E03"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The decrease in operating profit was primarily due to unfavorable manufacturing costs of $2,148 million and unfavorable price realization of $817 million, partially offset by the profit impact of higher sales volume of $1,218 million (Item 1A, EP_0014_E03)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 218,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003142289622Z_c34c11bd_verification_neutral",
+    "input_sha256": "e3716e46abcadb0d79a3b95cd89b989b8ff7c70ee896d6f3f11a602a2966909d",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": null,
+      "reason": "No review was supplied for this experiment.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 218,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003142289622Z_c34c11bd_verification_neutral",
+    "input_sha256": "e3716e46abcadb0d79a3b95cd89b989b8ff7c70ee896d6f3f11a602a2966909d",
+    "field": "defect_resolved",
+    "label": {
+      "value": false,
+      "reason": "The defect persists in the final report; C3 still incorrectly cites Item 1A and EP_0014_E03 for the operating profit drivers found in EP_0014_E02.",
+      "evidence_ids": [
+        "EP_0014_E02",
+        "EP_0014_E03"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The decrease in operating profit was primarily due to unfavorable manufacturing costs of $2,148 million and unfavorable price realization of $817 million, partially offset by the profit impact of higher sales volume of $1,218 million (Item 1A, EP_0014_E03)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 218,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003142289622Z_c34c11bd_verification_neutral",
+    "input_sha256": "e3716e46abcadb0d79a3b95cd89b989b8ff7c70ee896d6f3f11a602a2966909d",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepted the report but did not explicitly list C3 in its relied_on_claim_ids or mention the specific misattributed source in its rationale, making reliance on the citation error ambiguous.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 218,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003142289622Z_c34c11bd_verification_neutral",
+    "input_sha256": "e3716e46abcadb0d79a3b95cd89b989b8ff7c70ee896d6f3f11a602a2966909d",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "I have audited the final report and Trader rationale; no new material factual errors were introduced beyond the persisting injected citation error.",
+      "evidence_ids": [
+        "EP_0014_E01",
+        "EP_0014_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 233,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004135094996Z_220be927_hybrid_neutral",
+    "input_sha256": "ac796eaae7b6bd34289ab4364b2808bf544209279af950e71cee275fbd1f9ec9",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The answer key correctly identifies the reporting period swap in claim C2 of the initial report, where $3.37 is attributed to 2025 and $3.30 to 2024, whereas the evidence shows $3.37 was for 2024 and $3.30 for 2025.",
+      "evidence_ids": [
+        "EP_0015_E01"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "COMPANY_15 $ 6,835 $ 6,946 $ 7,310 $ 3.30 $ 3.37 $ 3.60"
+        },
+        {
+          "source": "initial_report",
+          "text": "Diluted earnings per share for COMPANY_15 decreased from $3.37 in 2025 to $3.30 in 2024, representing a 2.08% decline."
+        }
+      ]
+    }
+  },
+  {
+    "index": 233,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004135094996Z_220be927_hybrid_neutral",
+    "input_sha256": "ac796eaae7b6bd34289ab4364b2808bf544209279af950e71cee275fbd1f9ec9",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The Risk Manager identified that the years were reversed in claim C2 and requested a correction to the period labels.",
+      "evidence_ids": [
+        "EP_0015_E01"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The evidence shows FY2025 EPS is $3.30 and FY2024 EPS is $3.37. The correct period order is a decrease from $3.37 in 2024 to $3.30 in 2025. The percentage change is (3.30 - 3.37) / 3.37 * 100 = -2.077% ≈ -2.08%, so the magnitude is correct but the years are reversed in the claim text."
+        }
+      ]
+    }
+  },
+  {
+    "index": 233,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004135094996Z_220be927_hybrid_neutral",
+    "input_sha256": "ac796eaae7b6bd34289ab4364b2808bf544209279af950e71cee275fbd1f9ec9",
+    "field": "defect_resolved",
+    "label": {
+      "value": true,
+      "reason": "The final report corrected the period labels in claim C2 to match the evidence, showing the decrease from 2024 to 2025.",
+      "evidence_ids": [
+        "EP_0015_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "Diluted earnings per share for COMPANY_15 decreased from $3.37 in 2024 to $3.30 in 2025, representing a 2.08% decline."
+        }
+      ]
+    }
+  },
+  {
+    "index": 233,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004135094996Z_220be927_hybrid_neutral",
+    "input_sha256": "ac796eaae7b6bd34289ab4364b2808bf544209279af950e71cee275fbd1f9ec9",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The defect was resolved in the final report before the Trader reviewed it; therefore, the Trader relied on the corrected information.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 233,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004135094996Z_220be927_hybrid_neutral",
+    "input_sha256": "ac796eaae7b6bd34289ab4364b2808bf544209279af950e71cee275fbd1f9ec9",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "I have audited the final report and Trader rationale; all factual assertions regarding net income, EPS, segment performance, and risks are supported by the evidence provided.",
+      "evidence_ids": [
+        "EP_0015_E01",
+        "EP_0015_E02",
+        "EP_0015_E03"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 284,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012117585910Z_fa13346a_hybrid_neutral",
+    "input_sha256": "f03053901daebf514135f4cd59ec4cae72e6bbb63acf94351353807d4d5d5bec",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The initial C1 overstates the GAAP decline as 25.90%; the source calculates to 15.8960%. The key correctly targets that arithmetic assertion.",
+      "evidence_ids": [
+        "EP_0011_E01"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "COMPANY_11's GAAP earnings for SEGMENT_22 decreased by 25.90% from $25,390 million in 2024 to $21,354 million in 2025."
+        }
+      ]
+    }
+  },
+  {
+    "index": 284,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012117585910Z_fa13346a_hybrid_neutral",
+    "input_sha256": "f03053901daebf514135f4cd59ec4cae72e6bbb63acf94351353807d4d5d5bec",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The reviewer explicitly identifies the original 25.90% error; detection counts even though its proposed 15.91% replacement remains outside tolerance.",
+      "evidence_ids": [
+        "EP_0011_E01"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The reported -25.90% is arithmetically incorrect."
+        },
+        {
+          "source": "review",
+          "text": "C1 contains a material arithmetic error overstating the SEGMENT_22 GAAP earnings decline by ~10 percentage points."
+        }
+      ]
+    }
+  },
+  {
+    "index": 284,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012117585910Z_fa13346a_hybrid_neutral",
+    "input_sha256": "f03053901daebf514135f4cd59ec4cae72e6bbb63acf94351353807d4d5d5bec",
+    "field": "defect_resolved",
+    "label": {
+      "value": false,
+      "reason": "The replacement 15.91% differs from the actual 15.8960% decline by 0.01398 percentage point, beyond the frozen 0.01 tolerance. The erroneous target assertion remains in prose and check_spec.",
+      "evidence_ids": [
+        "EP_0011_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "COMPANY_11's GAAP earnings for SEGMENT_22 decreased by 15.91% from $25,390 million in 2024 to $21,354 million in 2025."
+        }
+      ]
+    }
+  },
+  {
+    "index": 284,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012117585910Z_fa13346a_hybrid_neutral",
+    "input_sha256": "f03053901daebf514135f4cd59ec4cae72e6bbb63acf94351353807d4d5d5bec",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The Trader rejects the report and correctly reports a verifier FAIL for C1. REJECT excludes false acceptance.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "REJECT"
+        },
+        {
+          "source": "trader",
+          "text": "The analysis contains a critical numerical error in claim C1 (15.91% earnings decline), which the verifier flagged as false."
+        }
+      ]
+    }
+  },
+  {
+    "index": 284,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012117585910Z_fa13346a_hybrid_neutral",
+    "input_sha256": "f03053901daebf514135f4cd59ec4cae72e6bbb63acf94351353807d4d5d5bec",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The new rationale says the drivers total a $3.5 billion decrease before identified items and reconcile to the $4.0 billion GAAP decline. It omits the separate $0.6 billion Other contribution: all disclosed non-identified drivers sum to about -$2.9 billion, and identified items add about -$1.1 billion. This bridge error is new; the residual C1 arithmetic error is the persisting injected defect.",
+      "evidence_ids": [
+        "EP_0011_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "net negative impact of approximately $3.5 billion before identified items"
+        },
+        {
+          "source": "evidence",
+          "text": "Other – Increased earnings by $0.6 billion, mainly driven by favorable tax and foreign exchange impacts."
+        }
+      ]
+    }
+  },
+  {
+    "index": 356,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T003306092442Z_4dedde0f_debate_neutral",
+    "input_sha256": "f172777e791cde03d87183d4c74ddc05fd8b8bfaf2c10364258c52b1c97fd58b",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies that the initial report misattributed a quote about operating expenses to EP_0002_E03 when it actually appears in EP_0002_E02.",
+      "evidence_ids": [
+        "EP_0002_E02"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "EP_0002_E03 reports: “Operating expenses increased $3.8 billion or 6% driven by investments in cloud and AI engineering and Gaming, including the impact of the ENTITY_01 acquisition.”"
+        }
+      ]
+    }
+  },
+  {
+    "index": 356,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T003306092442Z_4dedde0f_debate_neutral",
+    "input_sha256": "f172777e791cde03d87183d4c74ddc05fd8b8bfaf2c10364258c52b1c97fd58b",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The Risk Manager explicitly identified that the quote in Claim C5 was misattributed to EP_0002_E03 instead of EP_0002_E02.",
+      "evidence_ids": [
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The claim misattributes the source of the operating expense quote."
+        }
+      ]
+    }
+  },
+  {
+    "index": 356,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T003306092442Z_4dedde0f_debate_neutral",
+    "input_sha256": "f172777e791cde03d87183d4c74ddc05fd8b8bfaf2c10364258c52b1c97fd58b",
+    "field": "defect_resolved",
+    "label": {
+      "value": true,
+      "reason": "The final report correctly attributes the quote to EP_0002_E02, resolving the misattribution.",
+      "evidence_ids": [
+        "EP_0002_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "EP_0002_E02 reports: “Operating expenses increased $3.8 billion or 6% driven by investments in cloud and AI engineering and Gaming, including the impact of the ENTITY_01 acquisition.”"
+        }
+      ]
+    }
+  },
+  {
+    "index": 356,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T003306092442Z_4dedde0f_debate_neutral",
+    "input_sha256": "f172777e791cde03d87183d4c74ddc05fd8b8bfaf2c10364258c52b1c97fd58b",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The defect was resolved in the final report before the Trader accepted it.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 356,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T003306092442Z_4dedde0f_debate_neutral",
+    "input_sha256": "f172777e791cde03d87183d4c74ddc05fd8b8bfaf2c10364258c52b1c97fd58b",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "The final report and Trader rationale were checked and no new material factual errors were introduced; the additions regarding rounded percentages and metric labels were supported by the evidence.",
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 32,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T174352412402Z_47789d69_debate_neutral",
+    "input_sha256": "802181c3e540a8617ec73f9d8ff42b8af97192275753cfe34cafd12fef255c92",
+    "field": "defect_resolved",
+    "label": {
+      "value": true,
+      "reason": "The final C4 retracts the injected misattributed quote; the remaining risk statement is correctly cited. No erroneous source attribution remains in the rationale.",
+      "evidence_ids": [
+        "EP_0003_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The company faces risks from increasing economic sanctions and export controls, which could disrupt supply chains, negatively impact demand for products, and lead to excess inventory or supply charges, potentially benefiting competitors (Item 1A)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 32,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T174352412402Z_47789d69_debate_neutral",
+    "input_sha256": "802181c3e540a8617ec73f9d8ff42b8af97192275753cfe34cafd12fef255c92",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The injected citation error is resolved in the final report, so acceptance cannot rely on an unresolved instance of it.",
+      "evidence_ids": [
+        "EP_0003_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 149,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001058077508Z_bc3a41cc_debate_neutral",
+    "input_sha256": "9e1c3dd1417049fe561fca2037781c8220dece6b6ea2b6617522f3b2a6ff597f",
+    "field": "defect_resolved",
+    "label": {
+      "value": true,
+      "reason": "The final C5 explicitly attributes the income-driver quote to EP_0004_E02 and separately retains EP_0004_E03 for risks. The private correction criterion is satisfied; the primary judge wrongly described the correct E02 attribution as erroneous.",
+      "evidence_ids": [
+        "EP_0004_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The company faces risks from global uncertainties regarding fiscal and monetary policies, including potential interest rate volatility and adverse economic outcomes due to high and rising debt levels, as detailed in Item 1A. EP_0004_E02 reports: “The increase in net income was due to higher net interest income and noninterest income, and lower provision for credit losses, partially offset by higher noninterest expense.”"
+        }
+      ]
+    }
+  },
+  {
+    "index": 149,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001058077508Z_bc3a41cc_debate_neutral",
+    "input_sha256": "9e1c3dd1417049fe561fca2037781c8220dece6b6ea2b6617522f3b2a6ff597f",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The injected citation error is resolved in the final report, so acceptance cannot rely on an unresolved instance of it.",
+      "evidence_ids": [
+        "EP_0004_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 321,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T014627112748Z_bc3a41cc_hybrid_neutral",
+    "input_sha256": "fa192dc88038206b78729393239097513570fdf572ad06149b49d2af0dfdc9c1",
+    "field": "defect_resolved",
+    "label": {
+      "value": true,
+      "reason": "The final C5 explicitly attributes the income-driver quote to EP_0004_E02 and separately retains EP_0004_E03 for risks. The private correction criterion is satisfied; the primary judge wrongly described the correct E02 attribution as erroneous.",
+      "evidence_ids": [
+        "EP_0004_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The company faces risks from global uncertainties regarding fiscal and monetary policies, including potential interest rate volatility and adverse economic outcomes due to high and rising debt levels, as detailed in Item 1A. EP_0004_E02 reports: “The increase in net income was due to higher net interest income and noninterest income, and lower provision for credit losses, partially offset by higher noninterest expense.”"
+        }
+      ]
+    }
+  },
+  {
+    "index": 321,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T014627112748Z_bc3a41cc_hybrid_neutral",
+    "input_sha256": "fa192dc88038206b78729393239097513570fdf572ad06149b49d2af0dfdc9c1",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The injected citation error is resolved in the final report, so acceptance cannot rely on an unresolved instance of it.",
+      "evidence_ids": [
+        "EP_0004_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 50,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T175636247220Z_94fbb0b4_verification_neutral",
+    "input_sha256": "7ce4149aeb8fba953dd36b687bdb2622487880acc3f9adcaa118972622004b0a",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The Trader expressly uses the evidence-consistent opposite of the injected assertion. This establishes non-reliance on the erroneous direction even though the unrevised report still contains it.",
+      "evidence_ids": [
+        "EP_0002_E03"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "intense competition with low barriers to entry"
+        }
+      ]
+    }
+  },
+  {
+    "index": 168,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001420945236Z_7dc4aa92_verification_neutral",
+    "input_sha256": "bf6052baa63e23925c8e44b3e3adb8f6e2940084cef77b7b52394a6e2c4e1500",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The Trader expressly uses the evidence-consistent opposite of the injected assertion. This establishes non-reliance on the erroneous direction even though the unrevised report still contains it.",
+      "evidence_ids": [
+        "EP_0003_E03"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "export controls/sanctions pose significant demand and supply chain risks"
+        }
+      ]
+    }
+  },
+  {
+    "index": 48,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T180740510827Z_94d62860_baseline_neutral",
+    "input_sha256": "645a90e6f8d8b69ae0435f04a9e66161ba41cc5b9d662906b128e1e9f106405c",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader refers to macroeconomic exposure, which is supported independently of whether overseas sales are a majority or minority. It does not use the erroneous minority assertion; the rationale does not establish error-specific reliance either way.",
+      "evidence_ids": [
+        "EP_0001_E03"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis supports a HOLD recommendation. Total net sales grew 6.43% (C1), driven by strong 13.51% Services growth (C2), but Wearables/Home/Accessories declined 3.56% (C3), indicating mixed segment performance. Significant macroeconomic exposure (C4) adds risk. The evidence adequately supports maintaining current positions rather than adding or reducing exposure."
+        }
+      ]
+    }
+  },
+  {
+    "index": 67,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T181116081930Z_7fea52cb_baseline_neutral",
+    "input_sha256": "d35f1f4a736c4649e5740c5cbedfaf99c2e854d8629a29ce7dfd3f60ae2e5a6b",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader uses growth and claim references but states no erroneous year. Those references can concern the separately correct growth magnitude, so reliance on the injected period is not established.",
+      "evidence_ids": [
+        "EP_0005_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis presents a balanced view with modest revenue growth (C1, C2, C3) offset by a significant 33% increase in credit loss provisions (C4), signaling potential credit quality deterioration. This mixed fundamental picture supports a HOLD recommendation as the company navigates these headwinds. The evidence is internally consistent and adequately supports the current recommendation."
+        }
+      ]
+    }
+  },
+  {
+    "index": 239,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010026609953Z_ccc7fd5c_baseline_neutral",
+    "input_sha256": "2e24858acc4f3d056721c62b90ce6d8fb76937b5ca391bef296b4e948a75e63e",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader uses growth and claim references but states no erroneous year. Those references can concern the separately correct growth magnitude, so reliance on the injected period is not established.",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis supports a HOLD recommendation. Revenue and net income growth (C1, C2) demonstrate fundamental strength, but rising noninterest expenses (C3) and acknowledged macroeconomic risks including interest rate volatility and high debt levels (C5) create sufficient uncertainty to warrant maintaining current positions rather than increasing exposure."
+        }
+      ]
+    }
+  },
+  {
+    "index": 100,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184739433284Z_bc3a41cc_verification_neutral",
+    "input_sha256": "e963f77ec98bb1817edb2baadb3d1868186389592e6e1255dc9e0ddbcd8a3683",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The rationale discusses the correctly supported macro-risk portion of C5, not the misplaced attribution of the income-driver quote. A claim reference alone cannot establish or exclude reliance on that erroneous source attribution.",
+      "evidence_ids": [
+        "EP_0004_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The verified claims (C1, C2, C3) confirm solid year-over-year financial performance with revenue growth of 6.84%, net income growth of 13.11%, and controlled expense growth of 4.36%, indicating positive operating leverage. Claim C5, while not numerically verifiable, appropriately highlights material macroeconomic risks including interest rate volatility and high debt levels that could pressure future earnings. The combination of verified fundamental strength and acknowledged forward-looking risks supports the HOLD recommendation. The analyst's moderate confidence assessment aligns with this balanced view."
+        }
+      ]
+    }
+  },
+  {
+    "index": 170,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001327710444Z_bc3a41cc_baseline_neutral",
+    "input_sha256": "5a7dcbbd71bd7e86865a210ae0096181596e21b70f9b7eff2d273171cb0e413b",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The rationale discusses the correctly supported macro-risk portion of C5, not the misplaced attribution of the income-driver quote. A claim reference alone cannot establish or exclude reliance on that erroneous source attribution.",
+      "evidence_ids": [
+        "EP_0004_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis supports a HOLD recommendation. Revenue and net income grew solidly (C1, C2), but noninterest expense rose (C3) and management flagged material macro risks including interest-rate volatility and high debt levels (C5). These offsetting positives and negatives justify maintaining the current position rather than adding or reducing exposure."
+        }
+      ]
+    }
+  },
+  {
+    "index": 238,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010429852778Z_6b86fc12_verification_neutral",
+    "input_sha256": "61d3bfaf34eeb50d360a506e18c8499134554a630cb700025175b6e010ef0f39",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The Trader explicitly dismisses the share-price guarantee as unsupported hyperbole and bases acceptance on other claims. This is an accepted unresolved error without expressed reliance on that guarantee.",
+      "evidence_ids": [
+        "EP_0003_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The final sentence in the rationale about share price doubling is unsupported hyperbole but does not invalidate the core analytical framework."
+        }
+      ]
+    }
+  },
+  {
+    "index": 79,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T183242409208Z_2ac7233d_baseline_neutral",
+    "input_sha256": "f68410f82822ed3c7ac7f39d4bd3b79e56a0654acb63feb75fc0fa079bd9e60e",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader explicitly describes Gaming growth as modest and performance as uneven, without asserting profitability or healthy margins. The omitted income deterioration remains an error in the report, but error-specific reliance is ambiguous.",
+      "evidence_ids": [
+        "EP_0003_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis provides strong evidence for the HOLD recommendation. Revenue growth of 114.20% (C1) is exceptional and primarily driven by the SEGMENT_04 segment's 145.11% growth (C2) from AI/accelerated computing demand, indicating a strong competitive position in a high-growth market. However, the SEGMENT_05 segment shows only modest 5.82% growth (C3), suggesting uneven performance across business lines. Critically, the identified risks from export controls and economic sanctions (C4) create material uncertainty that could disrupt the primary growth driver. The combination of strong but concentrated growth with significant geopolitical risk supports maintaining current positions rather than increasing or reducing exposure."
+        }
+      ]
+    }
+  },
+  {
+    "index": 98,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184900841924Z_2ac7233d_verification_neutral",
+    "input_sha256": "b08be4a3c254fee3abfe6458d81a402a0073da52d675cc4244fa5f80b8e6ec53",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader uses the correct Gaming revenue growth as a limiting factor and discusses concentration/geopolitical risk. It does not assert Gaming profitability or dismiss expenses; mentioning Gaming alone does not establish reliance on the omitted profit deterioration.",
+      "evidence_ids": [
+        "EP_0003_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is well-supported by verified financial data showing exceptional revenue growth (114% total, 145% in Data Center/AI segment) driven by structural AI demand. However, the HOLD recommendation is appropriate given the concentration risk in a single segment, modest growth in Gaming (5.8%), and material geopolitical risks from export controls that could disrupt the core growth engine. The verified claims substantiate both the bullish growth thesis and the bearish risk factors, warranting a neutral stance pending clarity on China/export policy impacts and diversification of revenue streams."
+        }
+      ]
+    }
+  },
+  {
+    "index": 110,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T190843360067Z_c65acc6f_baseline_neutral",
+    "input_sha256": "ffb127a68edf45b2229d754ddc8cca8fa73cbe4ff4d6705acd4dbcc3c80f15cd",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "Revenue and net income growth are correct even after the disclosed expenses. The phrase solid fundamental performance is not enough to establish that the accepted reasoning assumes expenses did not rise; reliance on the omitted expense context remains ambiguous.",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis supports a HOLD recommendation. Revenue grew 6.84% and net income grew 13.11% year-over-year, indicating solid fundamental performance. However, the company explicitly flags material macroeconomic risks including interest rate volatility and high debt levels that could pressure future net interest income and noninterest income. Given the positive current results but elevated forward-looking uncertainty, maintaining the current position is appropriate."
+        }
+      ]
+    }
+  },
+  {
+    "index": 151,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000812349645Z_c65acc6f_hybrid_neutral",
+    "input_sha256": "498276d7c9b7a27aea00292eee6ebc912f30088f4aedca1e11e4e234f0bb684a",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The rationale relies on correctly reported revenue and net income growth and macroeconomic risks. It does not state that costs are stable or that the missing expense increase is absent; general balanced-performance language does not establish omission-specific reliance.",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is supported by verified financial data showing 6.84% revenue growth and 13.11% net income growth (C1, C2 both PASS). The HOLD recommendation appropriately balances this strong performance against acknowledged macroeconomic risks including interest rate volatility and high debt levels (C5, NOT_CHECKABLE but reasonable). The moderate analyst confidence and balanced risk/reward profile justify maintaining current positions rather than aggressive buying or selling."
+        }
+      ]
+    }
+  },
+  {
+    "index": 208,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003014030394Z_c65acc6f_verification_neutral",
+    "input_sha256": "d85e0ec8673bcf87628cce731b5474c6a47eef61538ae87dafec82b5b14e08cd",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "Correct revenue and after-expense net income growth support the stated performance observations. The rationale does not establish whether its positive narrative depends on the omitted expense context; preserve uncertainty instead of inferring reliance from acceptance.",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is supported by verified financial data showing 6.84% revenue growth and 13.11% net income growth (C1, C2), which validates the positive performance narrative. The risk disclosure (C5) regarding macroeconomic uncertainties, interest rate volatility, and high debt levels is acknowledged but not numerically verified, which is appropriate for qualitative risk factors. The HOLD recommendation appropriately balances strong current fundamentals with forward-looking macro risks. The moderate confidence level noted by the analyst aligns with this assessment."
+        }
+      ]
+    }
+  },
+  {
+    "index": 187,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002310863479Z_125918c7_verification_neutral",
+    "input_sha256": "60c34f2de9bc45dfdb93e4a7943b46f99a50f1f60aae54c239bcb36079328fc6",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The rationale uses correct total-sales and Services growth plus macro risks. It does not characterize the missing Wearables category or claim all categories grew, so dependence on the missing decline cannot be established.",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is adequately supported by verified claims showing 6.43% total net sales growth (C1) and 13.51% Services growth (C2), while the unchecked but plausible macroeconomic risk claim (C4) provides reasonable justification for a HOLD recommendation given global exposure. The moderate confidence analyst note aligns with this assessment."
+        }
+      ]
+    }
+  },
+  {
+    "index": 221,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004634190469Z_125918c7_debate_neutral",
+    "input_sha256": "9b3038f8812c9b4f5f1832dbf5494e764038495a6f0e6bd81a26d76b29649f2e",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The rationale uses correct total-sales and Services growth plus macro risks, without an assertion that Wearables or every category grew. The newly added high-margin assertion is a separate error, not evidence of reliance on the omitted Wearables decline.",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis supports a HOLD recommendation. Total net sales grew 6.43% YoY (C1), with Services revenue accelerating 13.51% driven by advertising, PRODUCT_07, and cloud (C2), indicating a resilient high-margin segment. However, the company's majority international revenue base and supply chain create material exposure to global macroeconomic headwinds including inflation, interest rates, and consumer demand deterioration (C4). The balanced risk/reward profile warrants maintaining current positions rather than adding or reducing exposure."
+        }
+      ]
+    }
+  },
+  {
+    "index": 385,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T005810684129Z_a1bd71c6_hybrid_neutral",
+    "input_sha256": "931355499242aa70457559b37cbc71d4a10fe97ea433c9665a5de6b18e7500ef",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader already states margin-sustainability uncertainty and rising operating costs. It does not assume that the omitted PRODUCT_10 margin was stable; whether the omission materially supports acceptance remains ambiguous.",
+      "evidence_ids": [
+        "EP_0002_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is well-supported by verified financial data showing strong revenue (14.93%), operating income (17.45%), and gross margin (13.38%) growth in FY2025. However, the HOLD recommendation is justified by material counter-evidences: a $3.8B (6%) increase in operating expenses driven by cloud/AI investments and the ENTITY_01 acquisition, plus acknowledged intense competition with low barriers to entry. These factors create uncertainty around margin sustainability and future profitability, warranting a cautious stance despite solid top-line performance. All key claims (C1, C2, C3) are verified; C5 is qualitative but evidence-backed."
+        }
+      ]
+    }
+  },
+  {
+    "index": 446,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T034546449233Z_605505ea_baseline_underconfident",
+    "input_sha256": "1f971da9bb7cc5830a1c03ad03e7814f3a11162d7ca6659541c94a79a9b6804f",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader explicitly recognizes missing credit-quality and expense information as a limitation. It does not infer healthy credit conditions; the extent to which the omission supports acceptance remains ambiguous.",
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis supports a HOLD recommendation with modest revenue growth of 2.75% YoY, driven by both net interest income (+3.09%) and noninterest revenue (+2.39%). However, the analyst's noted low confidence and the absence of profitability, expense, credit quality, or capital adequacy metrics limit conviction. The growth is positive but unexceptional for a large financial institution, warranting a HOLD pending more comprehensive data."
+        }
+      ]
+    }
+  },
+  {
+    "index": 84,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T183245901924Z_605505ea_verification_neutral",
+    "input_sha256": "bd0a0cdf415398973a61df2378e7f9b8a2a33b475dbafe50a19ed26188b93989",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The rationale describes correctly reported revenue growth as modest and stable. It does not infer stable credit losses or bank profitability; acceptance alone cannot establish dependence on the omitted credit-provision increase.",
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "All three claims are verified and support the HOLD recommendation. Revenue growth is modest at 2.75% YoY, with both net interest income (+3.09%) and noninterest revenue (+2.39%) contributing positively. The analyst's moderate confidence aligns with the data showing stable but not accelerating growth, justifying a HOLD position."
+        }
+      ]
+    }
+  },
+  {
+    "index": 171,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001856426353Z_605505ea_hybrid_neutral",
+    "input_sha256": "d9c420a6545e5372df7447eb625b3a4c0ce656790ad3f4c18cf5b6a5babf43b0",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The rationale characterizes the sources of revenue growth, not credit quality or provisions. The omission persists, but a positive interpretation of correct revenue facts does not establish reliance on missing credit-loss context.",
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is verified and shows modest but broad-based revenue growth across both net interest income (+3.09%) and noninterest revenue (+2.39%), supporting the HOLD recommendation. The growth is sustainable in nature (driven by balance growth and markets activity) rather than one-time gains, though the pace is moderate. All claims pass verification, providing adequate support for maintaining current positions."
+        }
+      ]
+    }
+  },
+  {
+    "index": 465,
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T040609576944Z_605505ea_hybrid_neutral",
+    "input_sha256": "533bda1e6db0ec9f18f1cb7c7514fc8b1a903f920c7391d512d082932c7be2c2",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The rationale uses correct revenue growth to describe performance without making a credit-quality assertion. It does not establish whether acceptance depends on the omitted provision increase, so preserve null.",
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The verified claims show modest but positive revenue growth across both net interest income (+3.09%) and noninterest revenue (+2.39%), supporting the HOLD recommendation. The 2.75% total revenue growth indicates stable performance without compelling catalysts for BUY or SELL. All claims passed verification, providing adequate support for maintaining current positions."
+        }
+      ]
+    }
+  },
+  {
+    "index": 36,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T174127024587Z_9f709243_hybrid_neutral",
+    "input_sha256": "3b2691a38e81f9d198473684d253a8e800b409c482c5167adba1c56f307d8987",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the unsupported share-price guarantee in the initial report's rationale, which is not supported by the historical revenue data in the evidence.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The disclosed historical results guarantee that the company’s share price will double over the next twelve months."
+        }
+      ]
+    }
+  },
+  {
+    "index": 56,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T175626830949Z_3c372363_verification_neutral",
+    "input_sha256": "5c6890121382c295894f0666b7bfcabc630ac5c6ba7975c07811af006c766e65",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies that the quote regarding membership income in C5 is attributed to EP_0006_E03 in the report, whereas the evidence shows it actually appears in EP_0006_E02.",
+      "evidence_ids": [
+        "EP_0006_E02",
+        "EP_0006_E03"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "Membership and other income increased $1.0 billion and $0.1 billion for fiscal 2025 and fiscal 2024, primarily driven by growth in membership fee income globally."
+        },
+        {
+          "source": "initial_report",
+          "text": "EP_0006_E03 reports: “Membership and other income increased $1.0 billion and $0.1 billion for fiscal 2025 and fiscal 2024, primarily driven by growth in membership fee income globally.”"
+        }
+      ]
+    }
+  },
+  {
+    "index": 131,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191819681445Z_2cbf4647_debate_neutral",
+    "input_sha256": "ef4f467ab1d7d2533be9211ab90b0a80e2cf8e45bfba8e72fd1f5481cc48e147",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies a material omission of the automotive revenue decline, which is the largest segment and the primary driver of the consolidated revenue decrease.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "Total automotive revenues 69,526 77,070 82,419"
+        },
+        {
+          "source": "evidence",
+          "text": "due a decrease of approximately 8% in cash deliveries and a lower average selling price per unit"
+        }
+      ]
+    }
+  },
+  {
+    "index": 142,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192702214476Z_6935de37_baseline_neutral",
+    "input_sha256": "46373ca7675663a3c3bc64b35f05330424bb816bffd950c852f89698486d69b1",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies a material omission of the gross profit rate improvement in FY2025, which is present in the evidence but absent from the initial report.",
+      "evidence_ids": [
+        "EP_0006_E02"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "Our gross profit rate increased 40 and 27 basis points for fiscal 2025 and 2024, respectively, when compared to the previous fiscal year."
+        }
+      ]
+    }
+  },
+  {
+    "index": 176,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001759164602Z_94d41d72_debate_neutral",
+    "input_sha256": "b76321395912009eabad1abcea97790958e6c04c91ef66f7fadb4f601359f6b6",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the unsupported forward-looking guarantee in the initial report's rationale, which is not supported by the evidence provided.",
+      "evidence_ids": [
+        "EP_0008_E01"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The disclosed historical results guarantee that the company’s share price will double over the next twelve months."
+        }
+      ]
+    }
+  },
+  {
+    "index": 239,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010026609953Z_ccc7fd5c_baseline_neutral",
+    "input_sha256": "2e24858acc4f3d056721c62b90ce6d8fb76937b5ca391bef296b4e948a75e63e",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies that the revenue figures and growth rate in C1 belong to the FY2024-FY2025 period, whereas the report incorrectly attributes them to FY2023-FY2024.",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "Total revenue, net of interest expense 113,097 105,856"
+        },
+        {
+          "source": "evidence",
+          "text": "2025 2024"
+        },
+        {
+          "source": "initial_report",
+          "text": "Total revenue, net of interest expense, increased by 6.84% from $105,856 million in 2023 to $113,097 million in 2024."
+        }
+      ]
+    }
+  },
+  {
+    "index": 291,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012816700631Z_b9d5c02e_baseline_neutral",
+    "input_sha256": "5aaa184e0877903c8627adc4d87bd9da850d36bfa7f03b71e8b784ad57a79986",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the unsupported guarantee of share price doubling as the defect present in the initial report's rationale.",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The disclosed historical results guarantee that the company’s share price will double over the next twelve months."
+        }
+      ]
+    }
+  },
+  {
+    "index": 384,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T005657704586Z_b9d5c02e_hybrid_neutral",
+    "input_sha256": "5f187736d650d0593e98cae7d4121da3071dba80f49e6be42913804c9982cf6a",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the unsupported inference injected into the initial report's rationale regarding a share price guarantee.",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The disclosed historical results guarantee that the company’s share price will double over the next twelve months."
+        }
+      ]
+    }
+  },
+  {
+    "index": 409,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T014009063408Z_6efcf7c3_hybrid_neutral",
+    "input_sha256": "9f746d1d8267b216497bc647c3cdbf3fd869a7d73ee716dbff5ed2e5843700df",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the injected contradiction in claim C5 where the report claimed rates were raised while evidence stated they were reduced.",
+      "evidence_ids": [
+        "EP_0004_E03"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "While the Federal Reserve reduced policy rates in 2025"
+        },
+        {
+          "source": "initial_report",
+          "text": "The Federal Reserve raised policy rates in 2025 (EP_0004_E03)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 456,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T035534921586Z_26968695_baseline_neutral",
+    "input_sha256": "5775c5ccc4c77c12afc3610a189aed2d82e2d63f55cf441996d3503eaf1d6aca",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies that the revenue figures ($680,985M and $648,125M) and the 5.1% growth rate belong to the FY2024-FY2025 period, whereas the initial report incorrectly attributes them to FY2023-FY2024.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "Total revenues 680,985 648,125 611,289"
+        },
+        {
+          "source": "evidence",
+          "text": "Percentage change from comparable period 5.1 % 6.0 % 6.7 %"
+        },
+        {
+          "source": "initial_report",
+          "text": "Total revenues for COMPANY_06 increased by 5.10% in fiscal year 2024, reaching $680,985 million, compared to $648,125 million in fiscal year 2023."
+        }
+      ]
+    }
+  },
+  {
+    "index": 462,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T040242135733Z_6efcf7c3_hybrid_underconfident",
+    "input_sha256": "478d455d169ca8de6321c68b6adb82102b7af2ddc43f10275d4b2624f9113a1e",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the injected contradiction in claim C5 where the report claimed rates were raised while evidence stated they were reduced.",
+      "evidence_ids": [
+        "EP_0004_E03"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "While the Federal Reserve reduced policy rates in 2025"
+        },
+        {
+          "source": "initial_report",
+          "text": "The Federal Reserve raised policy rates in 2025 (EP_0004_E03)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 469,
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T041023393965Z_6efcf7c3_baseline_neutral",
+    "input_sha256": "183a36abdabaacc0f1ea897b09d9ecd4f88a5976ddde92859f7facf6b9e814a1",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the defect in claim C5 where the report states the Federal Reserve raised rates, while the evidence states they were reduced.",
+      "evidence_ids": [
+        "EP_0004_E03"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The Federal Reserve raised policy rates in 2025 (EP_0004_E03)."
+        },
+        {
+          "source": "evidence",
+          "text": "While the Federal Reserve reduced policy rates in 2025"
+        }
+      ]
+    }
+  },
+  {
+    "index": 209,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003740085887Z_c0a49022_hybrid_neutral",
+    "input_sha256": "f2fe7988f9ac062d19541fa589c50f5cb0cf4c70e9fd0b3ad6fb65bf6b9e468a",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The arithmetic injection is present. Source amounts imply 5.07%; the structured assertion says 15.07% and the prose has an additional digit (115.1%). The answer key still identifies the correction, but this benchmark prose/spec inconsistency is a limitation.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "Total revenues 680,985 648,125 611,289"
+        },
+        {
+          "source": "evidence",
+          "text": "Percentage change from comparable period 5.1 % 6.0 % 6.7 %"
+        }
+      ]
+    }
+  },
+  {
+    "index": 70,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T182545701275Z_1833c917_hybrid_neutral",
+    "input_sha256": "121452b37c306221fe4aef88d739869723a97fa3aaa88fe0bc134b2b05a4def7",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The final report and Trader rationale introduce a new unsupported factual claim that the adjacent segments (Energy and Services) are 'higher-margin' than the automotive segment. The provided evidence contains revenue and volume data but no information regarding profit margins for any segment.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "growth in higher-margin adjacent segments"
+        },
+        {
+          "source": "trader",
+          "text": "balanced by high-growth, higher-margin adjacent segments"
+        }
+      ]
+    }
+  },
+  {
+    "index": 193,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002418062097Z_8df2024a_baseline_neutral",
+    "input_sha256": "3322f43cb4bf0397773a26e9fdd18023896ac24f7e936c2bbeb3649331558497",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader's rationale introduces a new unsupported factual claim that the Energy and Services segments are 'higher-margin segments', which is not supported by the provided evidence (which only lists revenue, not margins).",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "emerging strength in higher-margin segments"
+        }
+      ]
+    }
+  },
+  {
+    "index": 229,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T005029633614Z_37078ac1_verification_neutral",
+    "input_sha256": "d77b74db0f7b4fb4c0cfef1b48052adaf938843dd313b293cb47e32f20cc2512",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader rationale contains a material factual error by claiming that claims C3, C4, and C5 were not checkable due to missing data, when the segment and margin data required to verify those claims is explicitly present in the provided evidence.",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Claims C3, C4, and C5 were not checkable due to missing segment-level or margin data."
+        },
+        {
+          "source": "evidence",
+          "text": "SEGMENT_15 $ 22,266 18,919 60,401 56,964 36.9 % 33.2"
+        }
+      ]
+    }
+  },
+  {
+    "index": 241,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010019190084Z_2cbf4647_baseline_neutral",
+    "input_sha256": "56aa3adc48cb16a41124abe1a445b82630ef81ddf2f82f718772ce6883822f9e",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader rationale asserts that the growing segments are 'higher-margin' and 'recurring revenue streams', but the provided evidence contains no data on profit margins or the recurring nature of these revenues.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "showing strength in higher-margin, recurring revenue streams"
+        }
+      ]
+    }
+  },
+  {
+    "index": 292,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T013058611411Z_04999f14_debate_neutral",
+    "input_sha256": "4f3b04dde571088c5487ff38d4f1d7ccac52008364c91011eb07ac266c171ecc",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "33.10% is valid rounding of (14212-10678)/10678*100 = 33.0961%. The secondary flag incorrectly treats the initial 33.09% as ground truth. Both fall within the numerical tolerance; no new financial error is established.",
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 369,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T004232520631Z_ac2c68fd_verification_neutral",
+    "input_sha256": "256e5b3ec6cc67f3ff3273ff0188bc036f002e1cab8a75976b343aafc4ae6d4a",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "The source itself reports revenue growth as 5.1% and net sales growth as 5.0%. These prose figures were already in the initial report; the structured assertions retain calculated values 5.07% and 4.96%. No new error is established.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 473,
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T041308990424Z_ac2c68fd_baseline_neutral",
+    "input_sha256": "ed5ed407340ae94d9a53b5d23b2819c865f70c521ba4ff8f3dd975de37d0a3d9",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "The source itself reports revenue growth as 5.1% and net sales growth as 5.0%. These prose figures were already in the initial report; the structured assertions retain calculated values 5.07% and 4.96%. No new error is established.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 324,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T000311667460Z_b6b98235_debate_neutral",
+    "input_sha256": "4488a4d110023372a4d75e7b6df116c63b695f9d1beeec9a8bafa8e706a731b6",
+    "field": "defect_resolved",
+    "label": {
+      "value": true,
+      "reason": "Final C4 explicitly attributes the sales-growth quote to E01 and the competitive-risk statement to E03. Both citations are now appropriate.",
+      "evidence_ids": [
+        "EP_0007_E01",
+        "EP_0007_E03"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "Despite the positive growth, COMPANY_07 faces intense competition across various industries and geographies, with some competitors having greater resources, longer histories, more customers, or greater brand recognition, as stated in Item 1A (EP_0007_E03). EP_0007_E01 reports: “SEGMENT_12 sales increased 20% in 2025, compared to the prior year.”"
+        }
+      ]
+    }
+  },
+  {
+    "index": 324,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T000311667460Z_b6b98235_debate_neutral",
+    "input_sha256": "4488a4d110023372a4d75e7b6df116c63b695f9d1beeec9a8bafa8e706a731b6",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The citation defect was corrected before the Trader decision.",
+      "evidence_ids": [
+        "EP_0007_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 324,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T000311667460Z_b6b98235_debate_neutral",
+    "input_sha256": "4488a4d110023372a4d75e7b6df116c63b695f9d1beeec9a8bafa8e706a731b6",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "E02 documents both operating-income growth and the lawsuit/severance charges. The rationale interprets this as business strength; it does not invent those charges or assert a guaranteed return. This interpretation alone does not establish a new factual error.",
+      "evidence_ids": [
+        "EP_0007_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 83,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T183939371000Z_4b8ab56b_hybrid_neutral",
+    "input_sha256": "f3a831467b41265797c417031197e11f5b949fc92a544f76360a7d75e401a41b",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The Risk Manager correctly identified that the growth from $105,856 million to $113,097 million is 6.84%, not 16.84%.",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The claim states total revenue increased by 16.84%, but the calculated percentage change from $105,856 million to $113,097 million is 6.84%"
+        }
+      ]
+    }
+  },
+  {
+    "index": 295,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T013212851540Z_0668146d_debate_neutral",
+    "input_sha256": "cbae7485d05a61f2849eb5681044fd806177ad9aed1f26408b26ea0dc51027a5",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The Risk Manager identified that Claim C1 mislabeled the fiscal years for the total revenue decline, noting that the figures belong to FY2024 and FY2025.",
+      "evidence_ids": [
+        "EP_0008_E01"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "Claim C1 states total revenues decreased from $97,690 million in 2023 to $94,827 million in 2024. However, the evidence shows $97,690 million is FY2024 revenue and $94,827 million is FY2025 revenue."
+        }
+      ]
+    }
+  },
+  {
+    "index": 341,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T001904648140Z_e52d0f74_debate_neutral",
+    "input_sha256": "a973bc3a6ca88fa6593e9c7f970ce461be7fa9c21dd8dc28740eb9c8b434491b",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The Risk Manager identified the omission of the $5.2 billion in one-time charges in the first review and requested their inclusion to provide a complete picture of operational performance.",
+      "evidence_ids": [
+        "EP_0007_E02"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The report's rationale highlights strong operating income growth (16.60% consolidated, 14.49% SEGMENT_12) but omits that FY2025 operating income includes significant one-time charges: $2.5 billion for an FTC lawsuit settlement and $2.7 billion for severance costs (total $5.2 billion)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 380,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T005344618336Z_fa358ca7_debate_neutral",
+    "input_sha256": "3312d468e0e302aa352788bacfaea4c2ca5a56eb5227046e2f7763213e38afac",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The risk manager identified that the 16.43% growth figure was arithmetically incorrect based on the provided dollar amounts and calculated the correct value as 6.43%.",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The claim states total net sales increased by 16.43% from FY2024 to FY2025. Using the cited facts (FY2024: $391,035M, FY2025: $416,161M), the calculated percentage change is ((416161 - 391035) / 391035) * 100 = 6.425%, which rounds to 6.43%."
+        }
+      ]
+    }
+  },
+  {
+    "index": 116,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191052556425Z_7cfe42c6_debate_neutral",
+    "input_sha256": "f9bc991a43f380805acbce63bba9dbd9945e62be7bfbc1a691030412960d572d",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader uses supported financial/risk facts without relying explicitly on the incorrect source attribution. Acceptance and a claim reference alone do not establish whether the citation defect affected its reasoning.",
+      "evidence_ids": [
+        "EP_0008_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 127,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191658540834Z_3c372363_baseline_neutral",
+    "input_sha256": "905590fe7171cc5138a175205a7838d1a9e6e5744fc1f068d4a607060f067038",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader uses supported financial/risk facts without relying explicitly on the incorrect source attribution. Acceptance and a claim reference alone do not establish whether the citation defect affected its reasoning.",
+      "evidence_ids": [
+        "EP_0006_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 387,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010112596923Z_7cfe42c6_baseline_neutral",
+    "input_sha256": "5d0a3800a0807b56761bde7f1207e9d599095bfd9982c14c9a64f75fc3f81bd3",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader uses supported financial/risk facts without relying explicitly on the incorrect source attribution. Acceptance and a claim reference alone do not establish whether the citation defect affected its reasoning.",
+      "evidence_ids": [
+        "EP_0008_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 407,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T013809066765Z_47789d69_baseline_underconfident",
+    "input_sha256": "5534e546a567f3f3a9353f249dc168ca4e44d24f1e93bef0b52045859b968f66",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader uses supported financial/risk facts without relying explicitly on the incorrect source attribution. Acceptance and a claim reference alone do not establish whether the citation defect affected its reasoning.",
+      "evidence_ids": [
+        "EP_0003_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 131,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191819681445Z_2cbf4647_debate_neutral",
+    "input_sha256": "ef4f467ab1d7d2533be9211ab90b0a80e2cf8e45bfba8e72fd1f5481cc48e147",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader acknowledges the consolidated decline while citing correct growth in the other segments. The omitted automotive details matter to completeness, but this rationale does not establish reliance on an assumption that automotive performance was healthy.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 153,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000454370643Z_2cbf4647_hybrid_neutral",
+    "input_sha256": "eefbd3e7fa0fff6f8734ffb18e3b50534fbdafc52f7a13f8db4c4ad0a66be019",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader acknowledges the consolidated decline while citing correct growth in the other segments. The omitted automotive details matter to completeness, but this rationale does not establish reliance on an assumption that automotive performance was healthy.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 373,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T004623939247Z_2cbf4647_verification_neutral",
+    "input_sha256": "223c28f8a89057eae653bdd494147fb3efd9a91572dd7eb8d497cb123a9697af",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader acknowledges the consolidated decline while citing correct growth in the other segments. The omitted automotive details matter to completeness, but this rationale does not establish reliance on an assumption that automotive performance was healthy.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 132,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192426897496Z_4378b67a_baseline_neutral",
+    "input_sha256": "a44beb0079ef164a28b7cf22f41fb037dac387ebf3f8df98c4fdefa313e44064",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly treats the near-doubling of pretax income and expanded margins as strong fundamental profit improvement supporting BUY, without the omitted talc-accounting qualification. This is reliance on the one-sided account.",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Worldwide income before tax nearly doubled (+95.25%) year-over-year (C1)"
+        },
+        {
+          "source": "trader",
+          "text": "the magnitude of profit improvement and sales acceleration outweighs this risk in the near term."
+        }
+      ]
+    }
+  },
+  {
+    "index": 490,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T061005581324Z_e52d0f74_hybrid_neutral",
+    "input_sha256": "274a17c608feec301f7545dcd17eadea587c443c25a6e5fc075fe3f0d354a44f",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader uses correct after-charge operating-income growth. Missing litigation/severance context makes the account incomplete, but expressed reliance on an assumption of no such costs cannot be established.",
+      "evidence_ids": [
+        "EP_0007_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 12,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T165129313036Z_ea2df27a_baseline_neutral",
+    "input_sha256": "1092d36bd41a9dbb444321c8ce41cd74786e9f3cb99fdb3a6f4582e4e1c84a15",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0013_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 117,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191110303423Z_b14df659_baseline_neutral",
+    "input_sha256": "6ebf2ad18fa5200c9437b54475c2ecbf0b4c49c0db5949e42b4ba4f0da6f3e6a",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0009_E01",
+        "EP_0009_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 134,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191945698930Z_416fd43b_baseline_neutral",
+    "input_sha256": "a816e92cb221a3adf01a9d317c1cddf69222e11836a8a4dc238eee9b5f5c6bf1",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0011_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 161,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000459558458Z_4ccf4485_baseline_neutral",
+    "input_sha256": "da6bd0957008448fd326752cfacf5985ce530229da03378817e435f3df007ff3",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0014_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 165,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002006692439Z_4c22e44d_baseline_neutral",
+    "input_sha256": "a968ab3340074a6f3e8d8d15e28a3c5e7a8d296ee2902f00a6b7bf1b8e195729",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 179,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001803641909Z_b5c24a96_baseline_neutral",
+    "input_sha256": "6ce9131b6ba2589f0fa339da4b4a2203087bc524e025c86ec696e3dfa3f15f7c",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 303,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012322121113Z_220be927_baseline_neutral",
+    "input_sha256": "cdc75bfb88bd1836e95acc88966f32be95afeeaf50d59ff557beea4ad0f9b5fc",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0015_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 306,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T014426555539Z_dfca011d_baseline_neutral",
+    "input_sha256": "8e9e5473ce39157c5c4a3fc571c221d78b23c04cdfb0b663f86bbb7058b96620",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 354,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002959774021Z_0b1d3caf_baseline_neutral",
+    "input_sha256": "62c783f5b82a8cb3f071ee1423e678a186d90d46c110d9334b26ec1ab703d7e2",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0007_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 425,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T015641848386Z_26968695_baseline_overconfident",
+    "input_sha256": "6451f20af804521d7f71c9143203d8befa8699cb46d5fb8e0d505f1b15160a7d",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 467,
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T040749218410Z_26968695_baseline_neutral",
+    "input_sha256": "bf7db7bb60e389fb3753b97e63a2a32fb4aa8b153bd733090b19f30e22f8fc24",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites growth or decline and other financial facts without explicitly using the injected wrong fiscal year. Correct magnitudes and a generic multi-year description alone do not establish reliance on the period mismatch.",
+      "evidence_ids": [
+        "EP_0006_E01",
+        "EP_0006_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 94,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184328963348Z_94d62860_verification_neutral",
+    "input_sha256": "85604b49c3fcfab821a896044b3a98380c0fa1c6a4c59793a2d10617591b7bc3",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader mentions macroeconomic risk but does not use the false minority-of-sales assertion in C4. The supported risk statement does not establish reliance on that false qualifier.",
+      "evidence_ids": [
+        "EP_0001_E03"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 214,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003646504717Z_865cc116_baseline_neutral",
+    "input_sha256": "2da9374547e95465178678e5288d7dcb9039c02e2e526a61a1a37f7d9376cdf4",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "Commodity-price risk is supported by E03 and the structured evidence IDs are correct. The Trader uses that risk but does not establish reliance on the erroneous written attribution to E01.",
+      "evidence_ids": [
+        "EP_0012_E03"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 78,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184128643322Z_98049939_baseline_neutral",
+    "input_sha256": "13e63b52a6ac67956db7942f525d00095a847040dc2322f51be7835022833c36",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly relies on the erroneous period and growth magnitude for the total revenue metric to support the HOLD recommendation.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Revenue growth is exceptional (114% YoY to FY2024, 145% in Data Center/AI segment to FY2025)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 91,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T183248276141Z_6fe40860_baseline_neutral",
+    "input_sha256": "44d6a659fb389938b16ba31eca190909fe793d2974de67f311a0e6a9ecec8d9e",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly relies on the erroneous claim that cost savings were a negative factor (insufficient to offset gains) to support the ACCEPT decision and HOLD recommendation.",
+      "evidence_ids": [
+        "EP_0011_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The earnings decline is attributed to lower crude realizations and cost savings that were insufficient to offset volume gains."
+        }
+      ]
+    }
+  },
+  {
+    "index": 135,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191948125514Z_53519a0d_baseline_neutral",
+    "input_sha256": "01e11a43087edb4bca51406463a8b8a86cd22c78b3b0d2fcbf1ea53dbcaf340b",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly relies on the erroneous claim that price realization was a benefit ('price and volume benefits') that was offset by manufacturing costs, using this to support the SELL recommendation.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "driven by $2.148B unfavorable manufacturing costs that more than offset price and volume benefits."
+        }
+      ]
+    }
+  },
+  {
+    "index": 186,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002018027750Z_730609be_verification_neutral",
+    "input_sha256": "ae40a38435da3b49a5308f2d1b6147574565abdd8e813d69483ba8e2af6927e9",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly relies on the erroneous claim of 'full control' as a mitigating factor for the identified risks in their rationale for accepting the report.",
+      "evidence_ids": [
+        "EP_0015_E03"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Identified risks around asset valuation and JV partner alignment are noted but mitigated by full control."
+        }
+      ]
+    }
+  },
+  {
+    "index": 277,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011920680807Z_0668146d_baseline_neutral",
+    "input_sha256": "c7eead7e5f1e529b709b31077ddd0107ba08e65130076f121bec2447e21a4626",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly relies on the erroneous 2024 revenue decline as a primary premise for accepting the report and recommending a HOLD position.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is well-supported by verified financial data showing a 2.93% total revenue decline in 2024 (C1)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 334,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T001216131032Z_26968695_baseline_neutral",
+    "input_sha256": "84c73d5be76ca4cb2d25ae272f3f7a359b13d4ed86ae8c62077039fbd9d3033c",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly relies on the erroneous claim C1, citing it as part of the 'verified evidence of consistent top-line and operating income growth' that 'substantiates the BUY recommendation.'",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis provides verified evidence of consistent top-line and operating income growth across FY2023-FY2025 (C1, C2, C3) and margin expansion (C4), which substantiates the BUY recommendation."
+        }
+      ]
+    }
+  },
+  {
+    "index": 456,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T035534921586Z_26968695_baseline_neutral",
+    "input_sha256": "5775c5ccc4c77c12afc3610a189aed2d82e2d63f55cf441996d3503eaf1d6aca",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly relies on the erroneous claim C1, citing it as evidence of 'consistent top-line and operating income growth across FY2023-FY2025' to support the BUY recommendation.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis provides verified evidence of consistent top-line and operating income growth across FY2023-FY2025 (C1, C2, C3) alongside gross margin expansion (C4), which collectively support the BUY recommendation."
+        }
+      ]
+    }
+  },
+  {
+    "index": 131,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191819681445Z_2cbf4647_debate_neutral",
+    "input_sha256": "ef4f467ab1d7d2533be9211ab90b0a80e2cf8e45bfba8e72fd1f5481cc48e147",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader adds a claim that the growing energy/services segments have high margins. The packet supplies sales growth, not comparative segment margins; this factual premise was absent from the initial report.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is well-supported by verified financial data showing a 2.93% overall revenue decline (C1), offset by strong growth in Energy Generation & Storage (+26.62%, C3) and Services (+18.95%, C4). The competitive risk factor (C5) is also documented. These mixed fundamentals—declining top-line but growing high-margin segments amid intense competition—justify a HOLD recommendation. The evidence is sufficient and internally consistent, warranting acceptance of the analyst's conclusion."
+        }
+      ]
+    }
+  },
+  {
+    "index": 277,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011920680807Z_0668146d_baseline_neutral",
+    "input_sha256": "c7eead7e5f1e529b709b31077ddd0107ba08e65130076f121bec2447e21a4626",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader adds a claim that the growing energy/services segments have high margins. The packet supplies sales growth, not comparative segment margins; this factual premise was absent from the initial report.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is well-supported by verified financial data showing a 2.93% total revenue decline in 2024 (C1), driven by a 9.8% drop in the core automotive segment (C2). This is partially offset by strong growth in Energy Generation & Storage (+26.6%, C3) and Services (+18.9%, C4), but these segments are not yet large enough to compensate for the automotive decline. Competitive pressures (C5) add risk. The mixed fundamentals with a deteriorating core business but growing diversification justify a HOLD position while monitoring for automotive stabilization or acceleration in high-margin segments."
+        }
+      ]
+    }
+  },
+  {
+    "index": 20,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T172636801319Z_da780b37_baseline_neutral",
+    "input_sha256": "d041bfc86c2dbda962dedd54f667c2fa04b167f7f14a3da80ffa95150142eb09",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0003_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Revenue growth of 124% (C1) is impressive and driven by the Data Center/AI segment's 145% growth (C2), indicating strong secular tailwinds."
+        }
+      ]
+    }
+  },
+  {
+    "index": 71,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T181316419812Z_f2a3327d_baseline_neutral",
+    "input_sha256": "1e6f10e220a3ba18b995fe3637b4bfb94cd8891b14da28e6ddb9ddf06393f2b5",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Revenue growth of 11.81% (C1) is significantly outpaced by a 51.26% decline in operating earnings (C2)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 108,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184503800297Z_fa13346a_debate_neutral",
+    "input_sha256": "36da350fd41c9b94b731cd975686d89153cbdfac04fe261219687deec8cebfd0",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0011_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis presents a clear picture of deteriorating fundamentals: a 25.9% drop in segment GAAP earnings"
+        }
+      ]
+    }
+  },
+  {
+    "index": 128,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191822328995Z_6dae7cf7_baseline_neutral",
+    "input_sha256": "e3661107189c3e8a4f924257e0471da94cf3494d3ea8929d957d91bc2b3a35cf",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0007_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis provides verified, strong year-over-year growth in consolidated net sales (+22.38%), operating income (+16.60%), and the key SEGMENT_12 segment (+19.68% sales, +14.49% operating income). These fundamentals support the BUY recommendation."
+        }
+      ]
+    }
+  },
+  {
+    "index": 196,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002731977190Z_fa13346a_baseline_neutral",
+    "input_sha256": "171eff65620ee3341d623d03e0f5bdd860a0004454ecd6ff1c104b989733d736",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "SEGMENT_22 GAAP earnings fell ~26% YoY driven by lower crude realizations (C1, C4)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 223,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004645147966Z_29b37757_baseline_neutral",
+    "input_sha256": "01d9dff9bb9b1cb4a54a9e5cc63cf6831488c8cac2107604870586bc8d34bd5e",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0005_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis presents a balanced view with verified claims showing modest revenue growth (C1: +12.75% total revenue, C2: +3.09% NII, C3: +2.39% noninterest revenue) offset by a significant 33.09% increase in credit loss provisions (C4)."
+        },
+        {
+          "source": "trader",
+          "text": "This mixed fundamental picture supports a HOLD recommendation as the company navigates credit quality deterioration while maintaining revenue momentum."
+        }
+      ]
+    }
+  },
+  {
+    "index": 228,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004643025682Z_1833c917_baseline_neutral",
+    "input_sha256": "a56b7fcf1a073ed26141c3584e09240921f26e85a9e96ca2c63559704c4baa8b",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis accurately reflects mixed fundamentals: total revenue grew 7% (C1)"
+        },
+        {
+          "source": "final_report",
+          "text": "While the Energy Generation and Storage and Services and Other segments showed strong growth, they more than offset the automotive decline in total revenues."
+        }
+      ]
+    }
+  },
+  {
+    "index": 265,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011026107173Z_0da3ca36_baseline_neutral",
+    "input_sha256": "a1b32c5003c3f5f1259b1bed7a1b252b08c80b10cddd08c83b28a8a9156e5109",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0014_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Revenue growth of 14.29% (C1) is significantly offset by a 14.70% decline in operating profit (C2)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 327,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T000635956085Z_af6fbee3_debate_neutral",
+    "input_sha256": "80768274d828071cfe022894768e0451cf408c6b9f4c0d41bb2963c39fe1e05d",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Net income declined 40.36% (C1) and revenue fell 4.64% (C2) year-over-year."
+        }
+      ]
+    }
+  },
+  {
+    "index": 329,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T000718761212Z_729f3238_baseline_neutral",
+    "input_sha256": "155084bdf8c4711c28a3b625e4d7346efd840a23c3277cf9c6c54a7f5519373d",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0015_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "driving an 11.6% decline in consolidated net income"
+        }
+      ]
+    }
+  },
+  {
+    "index": 346,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002127282491Z_edafb358_baseline_neutral",
+    "input_sha256": "8aa6a7469d4e06a7ef9f73195c21e1b1463c1b821f4620795f9b99fc6e13c104",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis presents a balanced view with strong top-line growth (revenue +24.93%, operating income +17.45%)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 400,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T011335762838Z_fa358ca7_baseline_neutral",
+    "input_sha256": "4320885259d6963c6a9c7855d784f4385916ec3310b968114af5b652f43e2169",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0001_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Total net sales grew 16.43% (C1) driven by Services growth of 13.51% (C2), but Wearables/Home/Accessories declined 3.56% (C3), indicating mixed segment performance."
+        }
+      ]
+    }
+  },
+  {
+    "index": 433,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T020209061123Z_edafb358_baseline_neutral",
+    "input_sha256": "35c230dd6fbbaac2ae00764668750449489ccc526da6bcd572711951ceda200e",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis presents a balanced view with strong top-line growth (revenue +24.93%, operating income +17.45%)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 479,
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T041730390858Z_edafb358_baseline_neutral",
+    "input_sha256": "22ce01a621118230b4e2bb022ec27e5779d10faa80e23fe2a80a1eb195649ab5",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly uses the injected wrong numerical magnitude or direction in its rationale for ACCEPT; HOLD versus BUY/SELL does not change this classification.",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis presents a balanced view with strong top-line growth (revenue +24.93%, operating income +17.45%)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 53,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T180743232029Z_4b8ab56b_baseline_neutral",
+    "input_sha256": "6f5bf6c23bb80cab57aaffd10cfa964182204801507315aaf93736fc55fdd211",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites strong growth but does not state the wrong percentage or otherwise establish dependence on its overstated magnitude. A claim reference alone is insufficient.",
+      "evidence_ids": [
+        "EP_0004_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 406,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T013753332082Z_edafb358_baseline_overconfident",
+    "input_sha256": "ffaf6f53327e1fd140cf672c03cfbef22b5a18cd0032070cfc8e425631be2881",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites strong growth but does not state the wrong percentage or otherwise establish dependence on its overstated magnitude. A claim reference alone is insufficient.",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 427,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T015725925213Z_edafb358_baseline_underconfident",
+    "input_sha256": "dbe14b17b8dc56b9cf48abd48d518808acb0a75418a02f4e3ee842c225d27561",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites strong growth but does not state the wrong percentage or otherwise establish dependence on its overstated magnitude. A claim reference alone is insufficient.",
+      "evidence_ids": [
+        "EP_0002_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 13,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T170029129623Z_756783c6_debate_neutral",
+    "input_sha256": "3098b04e7b5ca9088506a924d472316427c242a61a772b724da5232aab86dd2c",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0013_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 129,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192156550900Z_e52d0f74_baseline_neutral",
+    "input_sha256": "745bc99b35979f164e8b3291653c637b889d807419d8fbec87b7b9cb174d2b18",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0007_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 138,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192420830651Z_af662fc4_debate_neutral",
+    "input_sha256": "6465733ba5962108dd9edcbf9bec112fba0c9d6a41cc19d9109a048e15e09ae5",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0015_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 181,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001321418481Z_f88bf615_hybrid_neutral",
+    "input_sha256": "c8da5ca57e08947fe15e2885c4a47a5657f4bafdd87669f4d9f358aaf028d222",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0011_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 234,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004538001344Z_af662fc4_hybrid_neutral",
+    "input_sha256": "34346fd7704de256fa8742e88ccb439c8415cf3aea1d652beef0078e7cb76009",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0015_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 241,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010019190084Z_2cbf4647_baseline_neutral",
+    "input_sha256": "56aa3adc48cb16a41124abe1a445b82630ef81ddf2f82f718772ce6883822f9e",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 247,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010219392174Z_47c60f1d_verification_neutral",
+    "input_sha256": "e562fcdf0d3d540f3df9c3baca0026995d52d4f6e2751eafc37cf22531c86bbf",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 254,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011404529940Z_605505ea_baseline_neutral",
+    "input_sha256": "572c2d921d737ad93b8ea37ff118f35bde7def5fb6d0a720cc8e4a3a8e2bf9d6",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 269,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011022316962Z_af662fc4_verification_neutral",
+    "input_sha256": "190ef2ce6700362ae2856a3a46ffd4020b92a64c074c867a014405ae06a75539",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0015_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 326,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T000503038746Z_e52d0f74_verification_neutral",
+    "input_sha256": "231ac99ea66c8e177772f5f7e26d6ac6999db5861e3f20d6ce4afc9c920d3ce1",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0007_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 391,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010417009182Z_af662fc4_baseline_neutral",
+    "input_sha256": "22cca494d7dfec4d510ddbb268b7cd382e888e44871c4efbf34f26a95506a16d",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0015_E01"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 413,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T014430384984Z_605505ea_baseline_neutral",
+    "input_sha256": "2a49bf26e45fcabbdde8bbaa29680ee933b325f727046fb7844a90ea22bfbe8a",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 472,
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T041258859226Z_605505ea_baseline_neutral",
+    "input_sha256": "87d1800e5d9481945cc840af58a121fd1a2db3ba0df5e500d7a815889853994b",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader cites correct retained financial results and risks. The omitted disclosure makes the report incomplete, but this rationale does not clearly depend on a false assumption about the omitted item. Acceptance of the unresolved omission is recorded separately.",
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 154,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001157795584Z_4378b67a_verification_neutral",
+    "input_sha256": "f5219f0297644d096c46c37d291cc357ea4023c395a7bd4ba15ce68a2df9cc28",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly treats the 95.25% pretax-income surge and dramatic margin expansion as fundamental support for BUY without the material talc-accounting qualification. This relies on the one-sided profit-growth account.",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The verifier confirmed the two core quantitative claims: a 95.25% surge in worldwide income before tax (C1) and 6.0% revenue growth to $94.2B (C2). These verified facts substantiate the BUY recommendation by demonstrating both accelerating top-line growth and dramatic margin expansion."
+        }
+      ]
+    }
+  },
+  {
+    "index": 448,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T034805285154Z_605505ea_hybrid_neutral",
+    "input_sha256": "9d7316d8f20b6e88ee50f372d6424a2f65ffe15c7a596db817938b64408f97bc",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly says there are no deterioration signals warranting SELL. The omitted 33.09% rise in credit-loss provisions is such a signal, establishing reliance on the one-sided account even though the final action is HOLD.",
+      "evidence_ids": [
+        "EP_0005_E04"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The growth is steady but not compelling enough for a BUY, and there are no deterioration signals warranting a SELL."
+        }
+      ]
+    }
+  },
+  {
+    "index": 279,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011525324917Z_3872e6e6_hybrid_neutral",
+    "input_sha256": "3c8e00a07a2ed4517c6c17562ccb0332f35d72d6c9042a0ab3408aa8beaa61ce",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the citation misattribution in C3 where EP_0009_E03 is cited for margin data found in EP_0009_E01, while the structured evidence_ids array remains correct.",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The SEGMENT_15 segment's income before tax as a percentage of segment sales increased from 33.2% in 2024 to 36.9% in 2025, demonstrating improved profitability within this segment (Item 7, EP_0009_E03)."
+        },
+        {
+          "source": "evidence",
+          "text": "SEGMENT_15 $ 22,266 18,919 60,401 56,964 36.9 % 33.2"
+        }
+      ]
+    }
+  },
+  {
+    "index": 279,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011525324917Z_3872e6e6_hybrid_neutral",
+    "input_sha256": "3c8e00a07a2ed4517c6c17562ccb0332f35d72d6c9042a0ab3408aa8beaa61ce",
+    "field": "defect_resolved",
+    "label": {
+      "value": true,
+      "reason": "The final report correctly updates the inline citation in C3 to EP_0009_E01.",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The SEGMENT_15 segment's income before tax as a percentage of segment sales increased from 33.2% in 2024 to 36.9% in 2025, demonstrating improved profitability within this segment (Item 7, EP_0009_E01)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 279,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011525324917Z_3872e6e6_hybrid_neutral",
+    "input_sha256": "3c8e00a07a2ed4517c6c17562ccb0332f35d72d6c9042a0ab3408aa8beaa61ce",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The defect was resolved in the final report before the Trader's assessment; therefore, the Trader did not rely on the erroneous citation.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 279,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011525324917Z_3872e6e6_hybrid_neutral",
+    "input_sha256": "3c8e00a07a2ed4517c6c17562ccb0332f35d72d6c9042a0ab3408aa8beaa61ce",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "The final report and Trader rationale were audited and no new factual errors were introduced.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 279,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011525324917Z_3872e6e6_hybrid_neutral",
+    "input_sha256": "3c8e00a07a2ed4517c6c17562ccb0332f35d72d6c9042a0ab3408aa8beaa61ce",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The risk manager identified that C3 cited EP_0009_E03 (risk factors) instead of EP_0009_E01 (financial data).",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "Claim C3 cites 'Item 7, EP_0009_E03' as the source for SEGMENT_15 margin data. However, EP_0009_E03 is the Item 1A risk factors section and contains no segment financial data. The correct source is EP_0009_E01 (Item 7)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 350,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002634529835Z_51018e6c_hybrid_neutral",
+    "input_sha256": "d78a095084fbd082e1433340a0802fa0b41e12075483bbd02d131b85edfff7e7",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the unsupported guarantee of FY2026 margin expansion in claim C3 of the initial report, which is not supported by the historical data in the evidence.",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "This improvement guarantees that the segment margin will continue to expand in FY2026."
+        }
+      ]
+    }
+  },
+  {
+    "index": 350,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002634529835Z_51018e6c_hybrid_neutral",
+    "input_sha256": "d78a095084fbd082e1433340a0802fa0b41e12075483bbd02d131b85edfff7e7",
+    "field": "defect_resolved",
+    "label": {
+      "value": true,
+      "reason": "The final report removed the guarantee and replaced it with a qualification regarding competitive pressures and patent risks as requested.",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "However, future margin expansion is not guaranteed given competitive pressures and patent expiration risks noted in Item 1A."
+        }
+      ]
+    }
+  },
+  {
+    "index": 350,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002634529835Z_51018e6c_hybrid_neutral",
+    "input_sha256": "d78a095084fbd082e1433340a0802fa0b41e12075483bbd02d131b85edfff7e7",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The defect was resolved in the final report before the Trader's assessment; therefore, the Trader could not have relied on the erroneous guarantee.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 350,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002634529835Z_51018e6c_hybrid_neutral",
+    "input_sha256": "d78a095084fbd082e1433340a0802fa0b41e12075483bbd02d131b85edfff7e7",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "The final report and Trader rationale were audited against the evidence, and no new material factual errors were introduced.",
+      "evidence_ids": [
+        "EP_0009_E01",
+        "EP_0009_E02",
+        "EP_0009_E03"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 350,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002634529835Z_51018e6c_hybrid_neutral",
+    "input_sha256": "d78a095084fbd082e1433340a0802fa0b41e12075483bbd02d131b85edfff7e7",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The risk manager identified that the guarantee of future margin expansion was unsupported by the historical data and contradicted by risk disclosures.",
+      "evidence_ids": [
+        "EP_0009_E01"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The claim states that the SEGMENT_15 margin improvement 'guarantees that the segment margin will continue to expand in FY2026.' The evidence (EP_0009_E01) only provides historical margin data for FY2024 and FY2025."
+        }
+      ]
+    }
+  },
+  {
+    "index": 38,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T173928548921Z_2f1e45f6_debate_neutral",
+    "input_sha256": "d6acba95e24664a82b3c5fe62fc8ed2536a7b96494438b36f9a9b1e7be6312f5",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": null,
+      "reason": "The experiment is a clean control with no injected defect in the initial report; the answer key is correctly null.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 38,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T173928548921Z_2f1e45f6_debate_neutral",
+    "input_sha256": "d6acba95e24664a82b3c5fe62fc8ed2536a7b96494438b36f9a9b1e7be6312f5",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": null,
+      "reason": "Not applicable to a clean control.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 38,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T173928548921Z_2f1e45f6_debate_neutral",
+    "input_sha256": "d6acba95e24664a82b3c5fe62fc8ed2536a7b96494438b36f9a9b1e7be6312f5",
+    "field": "defect_resolved",
+    "label": {
+      "value": null,
+      "reason": "Not applicable to a clean control.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 38,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T173928548921Z_2f1e45f6_debate_neutral",
+    "input_sha256": "d6acba95e24664a82b3c5fe62fc8ed2536a7b96494438b36f9a9b1e7be6312f5",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "Not applicable to a clean control.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 38,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T173928548921Z_2f1e45f6_debate_neutral",
+    "input_sha256": "d6acba95e24664a82b3c5fe62fc8ed2536a7b96494438b36f9a9b1e7be6312f5",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The added organic-growth parenthetical equates 8.4% volume minus 3.1% price to 4.2%. That subtraction gives 5.3%; reaching 4.2% also requires subtracting the 1.1% acquisition effect. The final rationale gives an incorrect new arithmetic explanation despite a defensible 4.2% headline.",
+      "evidence_ids": [
+        "EP_0009_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "Organic sales growth excluding acquisitions (1.1%) and currency (0.7%) was 4.2% (8.4% volume - 3.1% price)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 271,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011631886557Z_94fbb0b4_baseline_neutral",
+    "input_sha256": "1faa8152cdbcad03e7dffd9c0b8c53f92a0cabbf038819d111b8e1cfc56273a5",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "I have audited the final report and Trader rationale; all other factual assertions regarding revenue, operating income, gross margins, and expense drivers are supported by the evidence.",
+      "evidence_ids": [
+        "EP_0002_E01",
+        "EP_0002_E02",
+        "EP_0002_E03"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 25,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T171223056882Z_37078ac1_baseline_neutral",
+    "input_sha256": "90c342658b38f4ee2af2bc1bd620c089bb07d196d5a4be1a17b408a66df4b728",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader acknowledges the claim but explicitly discounts its value as a measure of recurring earnings power due to the talc reserve distortions, making it unclear if the specific magnitude of the error (105% vs 95%) was a material premise for the ACCEPT decision.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "the headline pretax income surge (C1) is heavily distorted by a ~$7B talc reserve reversal in FY2025 and ~$5.1B talc charges in FY2024, limiting its value as evidence of recurring earnings power."
+        }
+      ]
+    }
+  },
+  {
+    "index": 72,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T182124780162Z_9a41f8bb_baseline_neutral",
+    "input_sha256": "47f3d6c21b8b44c8c7bf8097e6e265b8b08e3b4b08ef76a1b958d0a94902f279",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and relies on the related surge in medical costs (C4) and earnings decline (C2), but because the MCR fact is entirely omitted, it is ambiguous whether the Trader's reasoning specifically relies on the absence of that ratio or simply on the other provided metrics.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 281,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011909381307Z_208b9b50_baseline_neutral",
+    "input_sha256": "5a8195cb9a34a3b89c983eea374e5530b0f1ee729639b669df8765583f4057b4",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and mentions the 11.81% revenue growth from C1, but the rationale focuses on the 'structural margin pressures' and 'profitability deterioration' that 'outweighs top-line growth'. It is ambiguous whether the Trader relied on the 'guarantee' component of C1 or just the historical figure.",
+      "evidence_ids": [
+        "EP_0010_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Revenue growth of 11.81% (C1) is significantly offset by a 41.26% decline in operating earnings (C2)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 299,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012807390114Z_f88bf615_verification_neutral",
+    "input_sha256": "ea9372c112e55602670af45d991c75121e8b2521c5afcc2f997fb31dd680161e",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepted the report and its rationale, which presents a one-sided account of earnings drivers (mentioning the $1.4 billion offset but omitting the larger $1.9 billion offset). However, the Trader's rationale does not explicitly quantify the offsets or rely on the specific magnitude of the partial offset to justify the HOLD, making reliance ambiguous.",
+      "evidence_ids": [
+        "EP_0011_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The earnings decline was primarily driven by lower crude prices, partially offset by structural cost savings."
+        }
+      ]
+    }
+  },
+  {
+    "index": 257,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010802859241Z_c5557760_baseline_neutral",
+    "input_sha256": "dbefb0a3cedfd40cd2513dcdf5a7b20fb592bb2e7c17c24be373061ac4646a03",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The Trader explicitly calls the higher medical care ratio a deterioration or worsening. It uses the correct adverse interpretation, not the injected claim that a lower proportion is spent on medical costs.",
+      "evidence_ids": [
+        "EP_0010_E01",
+        "EP_0010_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 382,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T005415256440Z_c5557760_verification_neutral",
+    "input_sha256": "2be3de1f13cf0f4b2f8076b284853655e7f0e036b77ea8a3625dcd36447a971b",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The Trader explicitly calls the higher medical care ratio a deterioration or worsening. It uses the correct adverse interpretation, not the injected claim that a lower proportion is spent on medical costs.",
+      "evidence_ids": [
+        "EP_0010_E01",
+        "EP_0010_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 230,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004445736540Z_d46f8793_debate_neutral",
+    "input_sha256": "c6edcb9095bb96f7a9f97fe61a9f1ef0f1fa3dcf614109bba0fb1589ee532aea",
+    "field": "defect_resolved",
+    "label": {
+      "value": true,
+      "reason": "Final C4 attributes the medical-cost-driver quote to E02, which contains it, and lists E01/E02 as evidence. The incorrect E03 attribution is gone from the report.",
+      "evidence_ids": [
+        "EP_0010_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "Medical costs for COMPANY_10 increased by 18.85% from $264,185 million in 2024 to $313,995 million in 2025, as shown in Item 7. This significant increase contributed to the decline in earnings from operations. EP_0010_E02 reports: “Medical costs increased primarily due to the IRA-driven impacts on Medicare Part D plans, elevated medical cost trend and growth in people served through Medicare Advantage and those with higher acuity needs.”"
+        }
+      ]
+    }
+  },
+  {
+    "index": 230,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004445736540Z_d46f8793_debate_neutral",
+    "input_sha256": "c6edcb9095bb96f7a9f97fe61a9f1ef0f1fa3dcf614109bba0fb1589ee532aea",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": false,
+      "reason": "The citation defect was corrected before the Trader decision.",
+      "evidence_ids": [
+        "EP_0010_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 87,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T182814120677Z_8df2024a_debate_neutral",
+    "input_sha256": "0c12213c25429b0156f8183f7b70d29fb7214e0e124dbf6430b33e0b2d5345a7",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader adds high or higher segment margins as a supporting premise. E01/E02 disclose segment revenue and growth, not comparative margins. This factual assertion was absent from the initial report.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is well-supported by verified financial data showing a 2.93% total revenue decline driven by a 9.8% drop in the core automotive segment, partially offset by strong growth in Energy Generation & Storage (+26.6%) and Services (+19.0%). The competitive risk factor (C5) is also noted. The mixed fundamentals—declining core business but growing high-margin/diversified segments—justify a HOLD stance while monitoring whether the growth segments can eventually offset automotive weakness. The evidence is sufficient to accept the recommendation."
+        }
+      ]
+    }
+  },
+  {
+    "index": 278,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012025359127Z_7cfe42c6_hybrid_neutral",
+    "input_sha256": "88ab3acc7b3e25b6b2375228aef58b8677f8c3029c311e835914895414d5c8e5",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader adds high or higher segment margins as a supporting premise. E01/E02 disclose segment revenue and growth, not comparative margins. This factual assertion was absent from the initial report.",
+      "evidence_ids": [
+        "EP_0008_E01",
+        "EP_0008_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis is well-supported by verified financial data showing a 2.93% total revenue decline driven by a 9.8% drop in the core automotive segment, partially offset by strong growth in Energy Generation & Storage (+26.6%) and Services (+19.0%). The competitive risk factor (C5) is acknowledged but not numerically verified. The mixed fundamental picture with a declining primary revenue driver but growing higher-margin segments justifies a HOLD position while monitoring for automotive stabilization or continued energy/services momentum."
+        }
+      ]
+    }
+  },
+  {
+    "index": 88,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184119319618Z_37078ac1_debate_neutral",
+    "input_sha256": "7f1efa6342a7b189040788365120c42b51ebe4737de2e77e3345013b24652abd",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader newly calls sales growth organic and accelerating. E02 reports total growth of 6.0% vs 4.3%, including currency and acquisitions. Excluding those effects gives about 4.2% vs 5.4%, not acceleration. The initial report did not make the organic-growth assertion.",
+      "evidence_ids": [
+        "EP_0009_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis supports a BUY recommendation based on accelerating organic sales growth (C2), improving segment profitability in a key franchise (C3), and positive contribution from strategic M&A (C5). However, the headline pretax income surge (C1) and margin expansion (C4) are heavily distorted by ~$12B net talc-related accounting items, limiting their value as evidence of recurring earnings power. Competitive pressures and patent cliffs (noted in rationale) remain material risks. Support score reflects conviction in the top-line and operational trends while discounting the non-recurring earnings boost."
+        }
+      ]
+    }
+  },
+  {
+    "index": 89,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T183431385229Z_97f0e335_debate_neutral",
+    "input_sha256": "e186c995c3f6a53c8e41b801f636e5489e5bf92705165733c216014d1a75e3be",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader newly calls sales growth organic and accelerating. E02 reports total growth of 6.0% vs 4.3%, including currency and acquisitions. Excluding those effects gives about 4.2% vs 5.4%, not acceleration. The initial report did not make the organic-growth assertion.",
+      "evidence_ids": [
+        "EP_0009_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis supports a BUY recommendation based on accelerating organic sales growth (C2), improving segment profitability in a key franchise (C3), and positive M&A contribution (C5). However, the headline pretax income surge (C1) and margin expansion (C4) are heavily distorted by ~$12B net talc-related accounting items, limiting their value as recurring earnings evidence. Patent cliff and biosimilar risks for SEGMENT_15 products (C5) remain material. Support score reflects solid top-line momentum offset by earnings quality concerns and competitive threats."
+        }
+      ]
+    }
+  },
+  {
+    "index": 105,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184320296606Z_b14df659_debate_neutral",
+    "input_sha256": "deb62704ca382951d4b0b04a1c23192212cee12fb6ff283ad0d9bb71c4e3e71f",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader newly calls sales growth organic and accelerating. E02 reports total growth of 6.0% vs 4.3%, including currency and acquisitions. Excluding those effects gives about 4.2% vs 5.4%, not acceleration. The initial report did not make the organic-growth assertion.",
+      "evidence_ids": [
+        "EP_0009_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis supports a BUY decision based on accelerating organic sales growth (C2), improving segment profitability in a key franchise (C3), and positive contribution from strategic M&A (C5). The headline pretax income surge (C1) and margin expansion (C4) are heavily distorted by ~$12B net talc-related accounting items and are therefore excluded as evidence of recurring earnings power. Competitive pressures and patent cliffs (noted in rationale) remain risks, but the core operational trends are constructive. Support score reflects confidence in the quality of the underlying operational claims versus the noise in the headline figures."
+        }
+      ]
+    }
+  },
+  {
+    "index": 244,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010217217458Z_3872e6e6_debate_neutral",
+    "input_sha256": "d6356ee1504e73be85bd6eef7a1f08a1d930f42b76c95633086f84932631d265",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The Trader newly calls sales growth organic and accelerating. E02 reports total growth of 6.0% vs 4.3%, including currency and acquisitions. Excluding those effects gives about 4.2% vs 5.4%, not acceleration. The initial report did not make the organic-growth assertion.",
+      "evidence_ids": [
+        "EP_0009_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis supports a BUY recommendation based on recurring operational strengths rather than one-time accounting items. Claim C2 confirms accelerating organic sales growth (6.0% vs 4.3% prior year), C3 shows genuine margin expansion in a key segment (33.2% to 36.9%), and C5 validates strategic M&A contributing to growth. However, the headline pretax income surge (C1) and margin improvement (C4) are heavily distorted by ~$12B net talc reserve swings, limiting their reliability as recurring earnings indicators. Competitive pressures from biosimilars (PRODUCT_42) and patent cliffs remain unquantified risks. The support score reflects confidence in the top-line and segment fundamentals but discounts the bottom-line optical improvement."
+        }
+      ]
+    }
+  },
+  {
+    "index": 371,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T004548053826Z_4378b67a_debate_neutral",
+    "input_sha256": "ca951e50cf4c9517f496450ff115e52bdcc6f0d14e6e45cf3b27dcae18f6b598",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The final report and Trader incorrectly infer negative organic sales growth. The reported 6.0% already includes the biosimilar headwind; removing currency (0.7%) and acquisitions (1.1%) gives positive 4.2%. Subtracting the 6.2% headwind again double-counts it.",
+      "evidence_ids": [
+        "EP_0009_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The company demonstrates strong headline financial performance with a substantial increase in worldwide income before tax and reported sales growth. However, the improvements are materially influenced by non-recurring items: a ~$7.0B talc reserve reversal in FY2025 versus ~$5.1B in talc charges and a $0.4B debt-exchange loss in FY2024, which distort income-before-tax and margin comparisons. Reported sales growth of 6.0% includes a 1.1% acquisition boost and was offset by a ~6.2% drag from PRODUCT_42 biosimilar competition, implying negative underlying organic growth. While the SEGMENT_15 segment shows improved operational profitability (33.2% to 36.9% margin) and strategic acquisitions contribute positively, competitive pressures and biosimilar headwinds remain significant. The overall assessment balances reported financial strength against the sustainability of earnings and the quality of sales growth."
+        },
+        {
+          "source": "trader",
+          "text": "The analysis is thorough and accurately identifies that headline financial improvements are driven by non-recurring items (talc reserve reversal) and that underlying organic sales growth is negative due to biosimilar competition. While SEGMENT_15 shows operational improvement and acquisitions contribute positively, the sustainability of earnings and quality of growth are questionable. The evidence supports a HOLD rather than BUY, as the current recommendation overstates the recurring earnings power and growth trajectory."
+        }
+      ]
+    }
+  },
+  {
+    "index": 425,
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T015641848386Z_26968695_baseline_overconfident",
+    "input_sha256": "6451f20af804521d7f71c9143203d8befa8699cb46d5fb8e0d505f1b15160a7d",
+    "field": "new_error_present",
+    "label": {
+      "value": null,
+      "reason": "The Trader interprets gross-margin improvement as pricing power. E02 instead describes price-gap management and mix effects. It is unclear whether this is an ordinary evaluative inference or a material unsupported causal assertion; retain uncertainty.",
+      "evidence_ids": [
+        "EP_0006_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 26,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T171041150165Z_f88bf615_baseline_neutral",
+    "input_sha256": "3978f310ade133c47dd888f7c665f85a4f76360643a69ceb926be80b316410bf",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and mentions 'mixed offsetting factors', but it is ambiguous whether this refers only to the included cost savings or relies on the omission of the volume growth. The rationale does not explicitly mention the missing $1.9 billion or provide a one-sided account that clearly depends on its absence.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 180,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001805626133Z_6fe40860_verification_neutral",
+    "input_sha256": "c54083210062fec41ea0def1332aa5a7d548363ba74db16844fe963d60537c3a",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader explicitly relies on the verified claims C1, C2, and C3 for the HOLD recommendation. While C4 is mentioned as providing context, the Trader notes it is not numerically verified and primarily focuses on the 'documented financial declines' from the other claims. It is ambiguous whether the specific error in C4 was material to the decision.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 285,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011914106984Z_af6fbee3_baseline_neutral",
+    "input_sha256": "eba47fdb2df8b9888093de5513e20133e68f9de4a584b34515add95fc3afacb6",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly cites the injected 40.36% decline as fundamental support for ACCEPT/SELL. Whether correcting it would change the investment action is not required by the reliance metric.",
+      "evidence_ids": [
+        "EP_0012_E01"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Net income declined 40.36% (C1) and revenue fell 4.64% (C2) year-over-year"
+        }
+      ]
+    }
+  },
+  {
+    "index": 301,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012805377100Z_2fee21c5_hybrid_neutral",
+    "input_sha256": "7d5a0d6ae4b5cdca2b4398f815917fcbaf16bfce854d7a9f3bf7def765859c50",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The risk manager identified that Claim C5 inverts the meaning of the risk factor disclosure and that the rationale erroneously cites an absence of material exposure.",
+      "evidence_ids": [
+        "EP_0012_E03"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The claim states that commodity price volatility 'cannot materially impact' COMPANY_12's results, but the cited evidence (Item 1A, p.21) explicitly states the opposite"
+        }
+      ]
+    }
+  },
+  {
+    "index": 198,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002538259779Z_47c60f1d_baseline_neutral",
+    "input_sha256": "6d08f11ec7e1c0a33e2ba2df3cec4f32a893be0ca363ff5fa505db2416bc2d1f",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies that the initial report (C4 and rationale) omits the significant positive growth in downstream earnings (SEGMENT_26) which rose from $1,727 million to $3,022 million, a fact supported by the evidence.",
+      "evidence_ids": [
+        "EP_0012_E01"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "Total SEGMENT_26 3,022 1,727 6,137"
+        }
+      ]
+    }
+  },
+  {
+    "index": 198,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002538259779Z_47c60f1d_baseline_neutral",
+    "input_sha256": "6d08f11ec7e1c0a33e2ba2df3cec4f32a893be0ca363ff5fa505db2416bc2d1f",
+    "field": "defect_resolved",
+    "label": {
+      "value": false,
+      "reason": "The defect is not resolved; the final report retains the same claims and rationale as the initial report, continuing to omit the positive downstream earnings growth and its role as a partial offset to upstream declines.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 198,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002538259779Z_47c60f1d_baseline_neutral",
+    "input_sha256": "6d08f11ec7e1c0a33e2ba2df3cec4f32a893be0ca363ff5fa505db2416bc2d1f",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and its SELL recommendation, but the rationale focuses exclusively on the verified negative metrics (C1, C2, C3, C5). It is ambiguous whether the Trader's decision would be affected by the missing positive counter-evidence, as the Trader does not explicitly rely on the one-sidedness of the report to justify the action.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 198,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002538259779Z_47c60f1d_baseline_neutral",
+    "input_sha256": "6d08f11ec7e1c0a33e2ba2df3cec4f32a893be0ca363ff5fa505db2416bc2d1f",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "I have audited the final report and the Trader's rationale; all factual assertions regarding net income, revenue, and upstream earnings declines are supported by the evidence, and no new factual errors were introduced.",
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 198,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002538259779Z_47c60f1d_baseline_neutral",
+    "input_sha256": "6d08f11ec7e1c0a33e2ba2df3cec4f32a893be0ca363ff5fa505db2416bc2d1f",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": null,
+      "reason": "null",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 201,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002941776427Z_47c60f1d_hybrid_neutral",
+    "input_sha256": "99b50984966dd4b646091c1e85f69eed6930d2fbd8a1e28f10c064fb779b8d0e",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies that the initial report's claim C4 and rationale omit the significant growth in downstream earnings (SEGMENT_26) from 1727 to 3022 USD_million, which is supported by the evidence.",
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "Total SEGMENT_26 3,022 1,727 6,137"
+        },
+        {
+          "source": "initial_report",
+          "text": "The company’s net income and SEGMENT_22 earnings both declined in 2025 compared with 2024 (Item 7, EP_0012_E01)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 201,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002941776427Z_47c60f1d_hybrid_neutral",
+    "input_sha256": "99b50984966dd4b646091c1e85f69eed6930d2fbd8a1e28f10c064fb779b8d0e",
+    "field": "defect_resolved",
+    "label": {
+      "value": false,
+      "reason": "The final report retains the same omission in claim C4 and the rationale, failing to restore the positive downstream growth data.",
+      "evidence_ids": [
+        "EP_0012_E01"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The company's net income and SEGMENT_22 earnings both declined in 2025 compared with 2024 (Item 7, EP_0012_E01)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 201,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002941776427Z_47c60f1d_hybrid_neutral",
+    "input_sha256": "99b50984966dd4b646091c1e85f69eed6930d2fbd8a1e28f10c064fb779b8d0e",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report based on the verified negative metrics (C1, C2, C3) and risk factors (C5). While the omission of positive counter-evidence (downstream growth) makes the report one-sided, the Trader's rationale focuses on the 'deteriorating financial trajectory' without explicitly rejecting or relying on the absence of the downstream segment's performance to justify the SELL action.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 201,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002941776427Z_47c60f1d_hybrid_neutral",
+    "input_sha256": "99b50984966dd4b646091c1e85f69eed6930d2fbd8a1e28f10c064fb779b8d0e",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "I have checked the final report and Trader rationale; no new material factual errors were introduced beyond the persisting omission.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 201,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002941776427Z_47c60f1d_hybrid_neutral",
+    "input_sha256": "99b50984966dd4b646091c1e85f69eed6930d2fbd8a1e28f10c064fb779b8d0e",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": false,
+      "reason": "The review failed to identify the omission, instead stating that the qualitative claims were directly supported and that no defects remained.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The qualitative claims (C4, C5) are directly supported by the cited evidence."
+        },
+        {
+          "source": "review",
+          "text": "No defects remain in the current report."
+        }
+      ]
+    }
+  },
+  {
+    "index": 353,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002939292804Z_ac5ffd2d_debate_neutral",
+    "input_sha256": "d5f221a7b298d980cec37d7c87ffae1f1ccf22c417b9956e53e4010bf93fa281",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": null,
+      "reason": "The answer key is null, indicating a clean control experiment where no defect was intentionally injected.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 353,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002939292804Z_ac5ffd2d_debate_neutral",
+    "input_sha256": "d5f221a7b298d980cec37d7c87ffae1f1ccf22c417b9956e53e4010bf93fa281",
+    "field": "defect_resolved",
+    "label": {
+      "value": null,
+      "reason": "Not applicable for clean controls.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 353,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002939292804Z_ac5ffd2d_debate_neutral",
+    "input_sha256": "d5f221a7b298d980cec37d7c87ffae1f1ccf22c417b9956e53e4010bf93fa281",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "Not applicable for clean controls.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 353,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002939292804Z_ac5ffd2d_debate_neutral",
+    "input_sha256": "d5f221a7b298d980cec37d7c87ffae1f1ccf22c417b9956e53e4010bf93fa281",
+    "field": "new_error_present",
+    "label": {
+      "value": false,
+      "reason": "I have audited the final report and Trader rationale against the evidence. All quantitative claims (C1-C4) and the qualitative risk claim (C5) are supported by the financial tables and text in EP_0012_E01, E02, and E03. The Trader's summary accurately reflects these verified facts.",
+      "evidence_ids": [
+        "EP_0012_E01",
+        "EP_0012_E02",
+        "EP_0012_E03"
+      ],
+      "quotes": []
+    }
+  },
+  {
+    "index": 353,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002939292804Z_ac5ffd2d_debate_neutral",
+    "input_sha256": "d5f221a7b298d980cec37d7c87ffae1f1ccf22c417b9956e53e4010bf93fa281",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": null,
+      "reason": "Not applicable for clean controls.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 122,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T190827284794Z_8e811dab_hybrid_neutral",
+    "input_sha256": "5beaf064953f295509caa2fb724b1be6f9c68f7132fb27c45e1a1831951f6bed",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The risk manager explicitly identified the unsupported forward-looking guarantee in the rationale and requested its removal.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The rationale contains a forward-looking guarantee that the company's share price will double over the next twelve months. This assertion is not supported by any evidence in the packet"
+        }
+      ]
+    }
+  },
+  {
+    "index": 160,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000942243667Z_5506de28_baseline_neutral",
+    "input_sha256": "13b4328861044d0ca12ea5f99bd757b65ed3de183f1aa11feb279964d683d0a0",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies that the initial report reversed the direction of the foreign exchange impact from unfavorable to favorable, contradicting the evidence.",
+      "evidence_ids": [
+        "EP_0013_E02"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "Net sales increased $245 million to $84.3 billion in fiscal 2025 as an increase in net sales driven by pricing of 1% was mostly offset by unfavorable foreign exchange of 1%."
+        }
+      ]
+    }
+  },
+  {
+    "index": 263,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011018220557Z_927482ca_baseline_neutral",
+    "input_sha256": "68e589e49526fc5dbc3e5a94be4cc1986c4126e2c905be84514a3053a286cec0",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the unsupported guarantee of future share-price returns injected into the rationale, which is not supported by the historical financial evidence.",
+      "evidence_ids": [
+        "EP_0013_E01",
+        "EP_0013_E02"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The disclosed historical results guarantee that the company’s share price will double over the next twelve months."
+        }
+      ]
+    }
+  },
+  {
+    "index": 182,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002010990704Z_597e40a2_baseline_neutral",
+    "input_sha256": "a2c861719144a61dd4b384bb16a81ecbc10b93fe9436b48b5441c766f4c30080",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and mentions the revenue decline (C2), but the rationale does not explicitly repeat the swapped years or rely on the specific temporal direction of that metric to justify the SELL action, making reliance ambiguous.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 343,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002043079126Z_47c60f1d_debate_neutral",
+    "input_sha256": "27ea6ed70f1ed0a2267e951d7638237c841d16dc72f034b7ef1608d320e9f173",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepted the report and its SELL recommendation based on the negative metrics provided (C1, C2, C3, C5). While the omission of positive counter-evidence (downstream growth) makes the report one-sided, the Trader's rationale focuses on the reported declines and commodity risks without explicitly rejecting or relying on the absence of other segment data. Reliance on a one-sided account is ambiguous here.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 11,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T165137233714Z_06cf607d_baseline_neutral",
+    "input_sha256": "026b9923b9e7247c74b773975bce0cc369cd19a9707021b7c4b3c92df6b138a2",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the arithmetic error in Claim 1 where the net sales change is asserted as 10.29% instead of approximately 0.29%.",
+      "evidence_ids": [
+        "EP_0013_E01"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "Net sales increased by $245 million, or 10.29%, from $84,039 million in fiscal year 2024 to $84,284 million in fiscal year 2025"
+        }
+      ]
+    }
+  },
+  {
+    "index": 47,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T174603816998Z_149979cc_hybrid_neutral",
+    "input_sha256": "31847f63802f5b06148224574ba854798e480d78e2440cbcfbe54078ac28fb49",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the unsupported inference in the initial report's rationale regarding a share price guarantee, which is not supported by the evidence.",
+      "evidence_ids": [
+        "EP_0014_E01"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The disclosed historical results guarantee that the company’s share price will double over the next twelve months."
+        }
+      ]
+    }
+  },
+  {
+    "index": 184,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001508559967Z_92518efd_hybrid_neutral",
+    "input_sha256": "825c44c21fbc57224ffa6c03d3cc8a075ef13b5b1e41d312ab55cab988891fd5",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key identifies a material omission of SEGMENT_33's profit decline, which is present in the evidence but absent from the initial report.",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "SEGMENT_33 $ 4,675 $ 6,165 $ (1,490) (24%)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 333,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T001156471838Z_927482ca_verification_neutral",
+    "input_sha256": "a055f27a84abd9536f72b317a7bd9728a699ea20d938c7748862629719a3d75f",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the injected unsupported inference regarding a share-price guarantee that is not present in the evidence.",
+      "evidence_ids": [
+        "EP_0013_E01",
+        "EP_0013_E02"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The disclosed historical results guarantee that the company’s share price will double over the next twelve months."
+        }
+      ]
+    }
+  },
+  {
+    "index": 11,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T165137233714Z_06cf607d_baseline_neutral",
+    "input_sha256": "026b9923b9e7247c74b773975bce0cc369cd19a9707021b7c4b3c92df6b138a2",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and mentions 'modest revenue growth (C1)', but does not explicitly quote or rely on the erroneous 10.29% magnitude. Since the Trader characterizes the growth as 'modest' (which aligns with the correct 0.29% but contradicts the erroneous 10.29%), reliance on the specific error is ambiguous.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The analysis presents a balanced view with mixed signals: modest revenue growth (C1)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 30,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T172406992867Z_66a744d9_baseline_neutral",
+    "input_sha256": "7789a7d4ae08fcd1fa9ae541052ce3aa6d89edbd495ac0e05193afc40602d973",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and refers to C1, but the rationale focuses on the 'negligible' 0.29% revenue growth magnitude rather than the misattributed drivers (pricing/FX) or the incorrect source citation. Reliance on the specific misattribution cannot be established.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "Revenue growth is negligible at 0.29% (C1)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 217,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003139127932Z_756783c6_hybrid_neutral",
+    "input_sha256": "0596946024b2cffd8046af5c790ec6931b12f00ea773409e20c7af6d81245838",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and notes the 'mixed quality of earnings', but bases the HOLD decision on the 'marginal revenue growth' and 'solid operating income' growth. It is ambiguous whether the Trader's acceptance of 'mixed' results relies on the omission of the cash flow decline or simply the modest sales growth already present.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 262,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011008497674Z_756783c6_baseline_neutral",
+    "input_sha256": "90a1641d27124752d24dd3574d4f1e0ec11666d7a65c40f0e7343f4f96763d08",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and notes that earnings growth was driven by cost reductions rather than revenue, but the rationale does not explicitly mention cash flow or the lack thereof. It is ambiguous whether the Trader's acceptance of the 'mixed' performance relies on the omission of the cash flow decline.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 302,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012324256557Z_c34c11bd_baseline_neutral",
+    "input_sha256": "b7b8c0167040d62600930ff7cf7cd0f903d7bf45bd8287c33b9c6d1b06ced396",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader relies on the correct numerical facts within C3 to support the SELL recommendation, but there is no evidence that the misattribution to the trade-policy risk document (EP_0014_E03) specifically influenced the decision to ACCEPT.",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The profit decline is driven by structural issues: unfavorable manufacturing costs ($2.148B) and price realization ($817M) that volume growth ($1.218B) could not offset (C3)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 392,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010438537635Z_756783c6_verification_neutral",
+    "input_sha256": "5f1619fa86858fe091b0194661efa6d92ed078657d3d2793a606f33b8bf5057e",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and relies on the reported growth metrics (C1, C2, C3), but it is ambiguous whether the omission of the cash flow decline was material to the decision, as the Trader's rationale focuses on the competitive landscape and cost-driven earnings growth without addressing cash generation.",
+      "evidence_ids": [],
+      "quotes": []
+    }
+  },
+  {
+    "index": 109,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184723985299Z_5506de28_debate_neutral",
+    "input_sha256": "787061f750aa67f6632bb0e6ee1d756f72e72b564334c10f3ba564ae35999f51",
+    "field": "defect_resolved",
+    "label": {
+      "value": true,
+      "reason": "The final report correctly states that the pricing increase was mostly offset by unfavorable foreign exchange.",
+      "evidence_ids": [
+        "EP_0013_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "This modest growth was primarily driven by a 1% increase in pricing, mostly offset by unfavorable foreign exchange of 1% (Item 7, EP_0013_E02)."
+        }
+      ]
+    }
+  },
+  {
+    "index": 375,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T004936256268Z_ea2df27a_hybrid_neutral",
+    "input_sha256": "89fba824daa3fa9939419a97f279d305cd7b7a8bb59c2ea0fc3c394268cd4952",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The risk manager explicitly identified that the claim text and check_spec reversed the chronological order for the fiscal years in C2.",
+      "evidence_ids": [
+        "EP_0013_E01"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The claim text states operating income increased 'from $18,545 million in fiscal year 2025 to $20,451 million in fiscal year 2024', which reverses the correct chronological order."
+        }
+      ]
+    }
+  },
+  {
+    "index": 109,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184723985299Z_5506de28_debate_neutral",
+    "input_sha256": "787061f750aa67f6632bb0e6ee1d756f72e72b564334c10f3ba564ae35999f51",
+    "field": "new_error_present",
+    "label": {
+      "value": true,
+      "reason": "The final rationale adds higher cash tax payments and liquidation-related cash-flow drivers not established by the packet. E02 gives an effective tax rate and a non-cash currency-translation charge; neither establishes higher cash taxes or explains the operating cash-flow decline. Later conditional wording does not remove the earlier causal assertion.",
+      "evidence_ids": [
+        "EP_0013_E01",
+        "EP_0013_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "COMPANY_13 demonstrated mixed financial performance in fiscal year 2025. While net sales saw a marginal increase, operating income and net earnings showed healthy growth, primarily driven by cost reductions and the absence of prior-year impairment charges. However, a significant decline in cash flow from operating activities raises concerns. The operating cash flow decline of $2.0 billion occurred despite higher earnings, reflecting the impact of non-cash charges such as the $801 million after-tax charge for accumulated foreign currency translation losses due to the substantial liquidation of operations in Argentina, as well as potential working capital movements and higher tax payments (effective tax rate rose to 20.3% from 20.2%). The $801 million Argentina liquidation charge is a non-cash item that reduces earnings but does not directly reduce operating cash flow; the cash flow impact would stem from associated tax payments or working capital changes related to the liquidation. The company operates in a highly competitive consumer products industry, facing ongoing pressures from global and local competitors, evolving sales channels, and changing consumer preferences (Item 1A, EP_0013_E03). The positive earnings growth is tempered by the decrease in cash generation and the competitive landscape, suggesting a HOLD recommendation until there is clearer evidence of sustained cash flow improvement or a stronger competitive advantage."
+        }
+      ]
+    }
+  },
+  {
+    "index": 42,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T173434525235Z_149979cc_debate_neutral",
+    "input_sha256": "cb8df812223e339e315a08f89a9ab46aec00d0505146f2502b7a3f2e2acdfb7a",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The Risk Manager identified the unsupported guarantee in the rationale and requested its removal.",
+      "evidence_ids": [
+        "EP_0014_E03"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The rationale contains an unsupported and extreme forward-looking guarantee: 'The disclosed historical results guarantee that the company's share price will double over the next twelve months.'"
+        }
+      ]
+    }
+  },
+  {
+    "index": 136,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192216974477Z_92518efd_baseline_neutral",
+    "input_sha256": "229aa29f7881f9ac2a14756fb49d0b85078be9c1d289076c4da106900661f08e",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies a material omission of SEGMENT_33's profit decline, which is present in the evidence but absent from the initial report.",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "quotes": [
+        {
+          "source": "evidence",
+          "text": "SEGMENT_33 $ 4,675 $ 6,165 $ (1,490) (24%)"
+        }
+      ]
+    }
+  },
+  {
+    "index": 137,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191656328233Z_c34c11bd_debate_neutral",
+    "input_sha256": "b22fce11bb32f1ad3df911fb41a9b90000341eb9ee8549a54fc824484f08da53",
+    "field": "risk_manager_detected",
+    "label": {
+      "value": true,
+      "reason": "The Risk Manager explicitly identified the citation error in C3, noting that the quantitative drivers are in Item 7 (EP_0014_E02) rather than Item 1A (EP_0014_E03).",
+      "evidence_ids": [
+        "EP_0014_E02",
+        "EP_0014_E03"
+      ],
+      "quotes": [
+        {
+          "source": "review",
+          "text": "The claim cites 'Item 1A, EP_0014_E03' for the specific drivers of the operating profit decrease (unfavorable manufacturing costs of $2,148 million, unfavorable price realization of $817 million, higher sales volume impact of $1,218 million). However, these specific quantitative drivers are explicitly stated in Item 7 (EP_0014_E02), not Item 1A."
+        }
+      ]
+    }
+  },
+  {
+    "index": 317,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T013521746505Z_149979cc_baseline_neutral",
+    "input_sha256": "889227c7bc4a706046cb1e61c995c2f5a60569511504b7e885259ea458d43260",
+    "field": "answer_key_matches_input",
+    "label": {
+      "value": true,
+      "reason": "The private key correctly identifies the unsupported inference regarding a share price guarantee that was present in the initial report's rationale.",
+      "evidence_ids": [
+        "EP_0014_E01"
+      ],
+      "quotes": [
+        {
+          "source": "initial_report",
+          "text": "The disclosed historical results guarantee that the company’s share price will double over the next twelve months."
+        }
+      ]
+    }
+  },
+  {
+    "index": 394,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010706715971Z_53519a0d_debate_neutral",
+    "input_sha256": "f677750fbc975a2d501703869d987ae91355125757d1f780bf793310dfe21bb9",
+    "field": "defect_resolved",
+    "label": {
+      "value": false,
+      "reason": "While the rationale was updated to 'unfavorable', the final report's Claim C3 still contains the error, stating the decrease was 'partially offset by unfavorable price realization', which is a logical contradiction as an unfavorable factor cannot offset a decrease.",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "quotes": [
+        {
+          "source": "final_report",
+          "text": "The decrease in operating profit was primarily due to unfavorable manufacturing costs of $2,148 million, partially offset by unfavorable price realization of $817 million"
+        }
+      ]
+    }
+  },
+  {
+    "index": 394,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010706715971Z_53519a0d_debate_neutral",
+    "input_sha256": "f677750fbc975a2d501703869d987ae91355125757d1f780bf793310dfe21bb9",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and cites C3, but the Trader's rationale focuses on the 'unfavorable manufacturing costs' and 'structural cost issues' without explicitly repeating the contradictory 'offset' logic or the specific price realization figure in a way that confirms reliance on the erroneous 'offset' framing versus the corrected 'unfavorable' label.",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The profit decline is driven by structural cost issues - $2.148B in unfavorable manufacturing costs (C3) - rather than cyclical factors."
+        }
+      ]
+    }
+  },
+  {
+    "index": 219,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003022906853Z_53519a0d_verification_neutral",
+    "input_sha256": "6a20ec683994aa16f869c4987a5cb6da69ab2cb6659bad04ac50df0fafb1b830",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": true,
+      "reason": "The Trader explicitly treats price realization as a benefit offsetting cost pressure. This is the injected wrong direction. A contradictory relied_on_claim_ids list does not erase expressed reliance in the rationale.",
+      "evidence_ids": [
+        "EP_0014_E02"
+      ],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "driven by unfavorable manufacturing costs that outweigh price realization benefits"
+        }
+      ]
+    }
+  },
+  {
+    "index": 162,
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000939328578Z_4d16373d_baseline_neutral",
+    "input_sha256": "2a3c971be40460af4b86fb79bbc37b193f614950a132c29ee7b14eebd46876eb",
+    "field": "materially_used_by_trader",
+    "label": {
+      "value": null,
+      "reason": "The Trader accepts the report and mentions the risks in C5, but the defect is a citation misattribution (wrong section/ID) rather than a factual error in the risk description itself. It cannot be established if the Trader relied on the specific wrong citation versus the correct risk content.",
+      "evidence_ids": [],
+      "quotes": [
+        {
+          "source": "trader",
+          "text": "The identified risks around asset valuation and JV control (C5) add uncertainty."
+        }
+      ]
+    }
+  }
+]

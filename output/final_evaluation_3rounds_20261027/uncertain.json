@@ -1,0 +1,1004 @@
+[
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T171014395480Z_605505ea_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T165145621239Z_97f0e335_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T165137233714Z_06cf607d_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T165129313036Z_ea2df27a_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T170029129623Z_756783c6_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T170321023352Z_730609be_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T173229238722Z_c0a49022_debate_neutral",
+    "fields": [
+      "new_error_present"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T172825314880Z_6935de37_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T171223056882Z_37078ac1_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T171041150165Z_f88bf615_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T172406992867Z_66a744d9_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T174131253463Z_eed79741_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T175129514434Z_6935de37_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T174354861991Z_7cfe42c6_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T173436939315Z_208b9b50_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T173558311145Z_92518efd_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T180740510827Z_94d62860_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T180743232029Z_4b8ab56b_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T175626830949Z_3c372363_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T180018192649Z_3c372363_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T181313539936Z_4dedde0f_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T181605036263Z_2ac7233d_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T181116081930Z_7fea52cb_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T182124780162Z_9a41f8bb_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T183242409208Z_2ac7233d_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T183439163260Z_47789d69_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T183435871651Z_6efcf7c3_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T183245901924Z_605505ea_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184328963348Z_94d62860_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184900841924Z_2ac7233d_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T184739433284Z_bc3a41cc_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T185147103282Z_6935de37_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T185736324683Z_d46f8793_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T190843360067Z_c65acc6f_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191052556425Z_7cfe42c6_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191110303423Z_b14df659_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T190039420384Z_5506de28_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191253727296Z_4d16373d_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191658540834Z_3c372363_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192156550900Z_e52d0f74_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191819681445Z_2cbf4647_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T191945698930Z_416fd43b_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192216974477Z_92518efd_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192420830651Z_af662fc4_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192658965243Z_125918c7_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192705354731Z_6da581a6_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192702214476Z_6935de37_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261025T192844016825Z_425d1b26_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001102956663Z_6efcf7c3_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000812349645Z_c65acc6f_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000454370643Z_2cbf4647_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000816444459Z_425d1b26_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000942243667Z_5506de28_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000459558458Z_4ccf4485_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T000939328578Z_4d16373d_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002006692439Z_4c22e44d_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001324533199Z_4dedde0f_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001808328476Z_7dc4aa92_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001327710444Z_bc3a41cc_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001856426353Z_605505ea_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001621778131Z_eed79741_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001418043928Z_75b69c90_hybrid_neutral",
+    "fields": [
+      "new_error_present"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001801641710Z_3872e6e6_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001803641909Z_b5c24a96_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001805626133Z_6fe40860_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001321418481Z_f88bf615_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002010990704Z_597e40a2_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T001508559967Z_92518efd_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002310863479Z_125918c7_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002730068028Z_e2ce864e_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002418062097Z_8df2024a_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002526881235Z_d46f8793_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002538259779Z_47c60f1d_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002415193302Z_865cc116_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T002941776427Z_47c60f1d_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003014030394Z_c65acc6f_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003646504717Z_865cc116_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003144835592Z_66a744d9_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003139127932Z_756783c6_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T003142289622Z_c34c11bd_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T005027797757Z_37fa21d6_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004634190469Z_125918c7_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T061005581324Z_e52d0f74_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T004538001344Z_af662fc4_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010026609953Z_ccc7fd5c_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010019190084Z_2cbf4647_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010332215486Z_97f0e335_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010219392174Z_47c60f1d_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011404529940Z_605505ea_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T010610370084Z_f88bf615_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011008497674Z_756783c6_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011022316962Z_af662fc4_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011902825238Z_a1bd71c6_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011854121663Z_47789d69_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012124305055Z_e2ce864e_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T011909381307Z_208b9b50_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012207362986Z_9a41f8bb_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012503483965Z_2ac7233d_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012509627874Z_8df2024a_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012807390114Z_f88bf615_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012324256557Z_c34c11bd_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T012322121113Z_220be927_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T014426555539Z_dfca011d_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T013745245062Z_3872e6e6_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261026T014124372929Z_9a41f8bb_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T000503038746Z_e52d0f74_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T001238237619Z_6da581a6_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002043079126Z_47c60f1d_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002517964841Z_9a41f8bb_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002656128296Z_37fa21d6_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T002959774021Z_0b1d3caf_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T003516655511Z_75b69c90_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T003754319461Z_92518efd_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T003814282936Z_75b69c90_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T003825326576Z_4e2d3c5c_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T004623939247Z_2cbf4647_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T005130755860Z_c65acc6f_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T005810684129Z_a1bd71c6_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010053209257Z_125918c7_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010112596923Z_7cfe42c6_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010154363058Z_a1bd71c6_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010417009182Z_af662fc4_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010438537635Z_756783c6_verification_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "main_study_3rounds",
+    "run_id": "RUN_20261027T010706715971Z_53519a0d_debate_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T013637136908Z_47789d69_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T013653089068Z_6efcf7c3_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T062059756812Z_605505ea_hybrid_overconfident",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T013753332082Z_edafb358_baseline_overconfident",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T013809066765Z_47789d69_baseline_underconfident",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T014430384984Z_605505ea_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T014444015819Z_605505ea_baseline_overconfident",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T015058902301Z_ac2c68fd_hybrid_underconfident",
+    "fields": [
+      "new_error_present"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T015641848386Z_26968695_baseline_overconfident",
+    "fields": [
+      "false_acceptance",
+      "new_error_present"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T015725925213Z_edafb358_baseline_underconfident",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T015746562690Z_47789d69_baseline_overconfident",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T034546449233Z_605505ea_baseline_underconfident",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T035128911672Z_6efcf7c3_baseline_underconfident",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_study_3rounds",
+    "run_id": "RUN_20261027T040102643788Z_6efcf7c3_baseline_overconfident",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T040609576944Z_605505ea_hybrid_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T040749218410Z_26968695_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T041023393965Z_6efcf7c3_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T041258859226Z_605505ea_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  },
+  {
+    "batch": "confidence_repeat_3rounds",
+    "run_id": "RUN_20261027T041611947603Z_47789d69_baseline_neutral",
+    "fields": [
+      "false_acceptance"
+    ]
+  }
+]

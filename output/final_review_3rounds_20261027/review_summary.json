@@ -1,0 +1,50 @@
+{
+  "review_complete": true,
+  "meaning": "All source-check issues have recorded decisions; ambiguous outcomes remain null. This does not certify label accuracy.",
+  "completed_outputs": 499,
+  "source_crosscheck_attempted": 499,
+  "crosscheck_request_statuses": {
+    "partially_valid": 71,
+    "completed": 91,
+    "failed": 15
+  },
+  "outputs_with_secondary_labels": 493,
+  "recorded_field_decisions": 225,
+  "changed_field_values": 87,
+  "field_provenance": {
+    "primary_secondary_agreement_or_deterministic_rule": 2270,
+    "recorded_source_adjudication": 225
+  },
+  "numeric_outputs_screened": 499,
+  "numerical_failure_indices": [
+    16,
+    23,
+    96,
+    174,
+    284,
+    356,
+    422
+  ],
+  "primary_model": "google/gemini-3-flash-preview",
+  "secondary_model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "independent_human_review": false,
+  "account_usage_usd": 8.893127293,
+  "additional_primary_judge_budget_cost_usd": 0.06868449999999998,
+  "procedure": [
+    "Keep all original responses and select only the prespecified recovery attempts, including failed recoveries.",
+    "Cross-check every completed output against the evidence, initial report, reviews and Trader rationale.",
+    "Validate each field and exact quotes; remove invalid metadata without altering model values or reasons.",
+    "Adjudicate missing fields and disagreements; audit every primary positive reliance label and numerical failure.",
+    "Screen added factual premises, including margin, organic-growth and source-column assertions.",
+    "Preserve semantic uncertainty and keep interface failures separate from established financial errors."
+  ],
+  "limitations": [
+    "The secondary model shares the application family; correlated errors and missed errors remain possible.",
+    "Calibration did not establish reliable unattended judging. Model agreement is not ground truth.",
+    "No independent human accuracy estimate or sign-off is claimed.",
+    "Most source adjudications target disagreements or error patterns, so adjudication counts do not estimate judge error rates.",
+    "The EP_0006 arithmetic input says 115.1% in prose and 15.07% in its structured assertion; both are wrong versus 5.07%.",
+    "Some newly invalid calculated assertions reproduce rounded filing percentages; financial-error labels remain uncertain."
+  ],
+  "account_usage_checked_at": "2026-10-27T06:56:41.372613+00:00"
+}

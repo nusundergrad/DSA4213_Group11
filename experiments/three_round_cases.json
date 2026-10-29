@@ -1,0 +1,5 @@
+[
+  {"evidence_packet": "EP_0001", "report": "clean", "situation": 3},
+  {"evidence_packet": "EP_0001", "report": "error_03_arithmetic", "situation": 1},
+  {"evidence_packet": "EP_0005", "report": "error_02_reporting_period", "situation": 3}
+]

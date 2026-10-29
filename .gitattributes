@@ -3,3 +3,4 @@ data/benchmark/**/sources/*.txt text eol=lf
 
 # Preserve the saved evaluation bytes used by source hashes.
 output/*_20261024/** -text whitespace=cr-at-eol
+output/*_3rounds_20261027/** -text whitespace=cr-at-eol

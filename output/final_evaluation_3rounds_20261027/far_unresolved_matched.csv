@@ -1,0 +1,5 @@
+architecture,false acceptances,matched cases,FAR %
+baseline,72,84,85.71428571428571
+debate,16,84,19.047619047619047
+verification,52,84,61.904761904761905
+hybrid,15,84,17.857142857142858

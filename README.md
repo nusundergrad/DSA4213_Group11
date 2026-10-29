@@ -1,9 +1,12 @@
 # DSA4213 Agent Benchmark
 
 A LangGraph multi-agent system that reviews financial reports, plus the benchmark and evaluation
-pipeline that measures whether it catches planted errors. Read the [final findings](output/final_evaluation_20261024/findings.md),
+pipeline that measures whether it catches planted errors. Read the [three-round findings](output/final_evaluation_3rounds_20261027/findings.md),
 or open [explore_results.ipynb](experiments/explore_results.ipynb) and click **Run All**. Saved results are included. The
 [short evaluation guide](docs/running-experiments.md) covers saved results, sharing and rebuilding.
+Browse [individual three-round runs](output/final_evaluation_3rounds_20261027/main_study_3rounds/runs/) by company, situation and case. These are the final selected attempts; the original chunk folders preserve execution history.
+
+The notebook uses accepted unresolved errors as the main FAR, a definition revised after reviewing results. Saved Markdown reports and `false_acceptance` labels retain the original reliance-based definition; the notebook compares both.
 
 - [1. What the pipeline does](#1-what-the-pipeline-does)
 - [2. Setup](#2-setup)
@@ -48,7 +51,7 @@ Each report is run through one of four architectures ("situations"):
 | `situation` | Architecture | What happens |
 |---|---|---|
 | 0 | **baseline** | The Trader judges the initial report alone: no debate, no verifier |
-| 1 | **debate** | Risk Manager and Analyst argue for up to 3 rounds, then the Trader decides |
+| 1 | **debate** | Risk Manager and Analyst complete 3 rounds, then the Trader decides |
 | 2 | **verification** | A rule-based verifier checks the numeric claims, then the Trader decides |
 | 3 | **hybrid** | Verifier, then the debate with re-verification after each revision, then the Trader |
 
@@ -187,19 +190,19 @@ prints `True`, see [Troubleshooting](#11-troubleshooting).
 This is the only step that spends API calls and time. A debate or hybrid run makes about 7 model
 calls (3 Risk Manager + 3 Analyst + 1 Trader); a baseline or verification run makes 1. Each call gets one attempt by default. `--max-attempts` explicitly enables retries; failed attempts remain saved.
 
-### 5a. One case, to see the flow
+### 5a. Check three-round debate and hybrid
 
-```bash
-python src/graph.py \
-  --packet data/benchmark/public/evidence_packets/EP_0001.json \
-  --report data/benchmark/public/reports/EP_0001/error_03_arithmetic.json \
-  --situation situation_1
+```powershell
+py -X utf8 -m src.graph --cases experiments/three_round_cases.json --output-root output/three_round_demo/runs --model nvidia/nemotron-3-ultra-550b-a55b:free --rounds 3 --reasoning-effort none --max-tokens 6000 --max-attempts 1
 ```
 
-This prints the routing and each agent's response but **does not save a record**. Use it for
-debugging only; results come from section 5b/5c.
+This saves three example runs: clean hybrid, arithmetic-error debate and reporting-period hybrid.
+Each completed run has three Risk Manager reviews, three Analyst revisions and one Trader decision.
+Hybrid has four verifier passes. The initial report comes from the benchmark.
 
-### 5b. A small application check
+Use the [three-round configuration](docs/experiment-config.md#three-round-runs-25-october-2026) for new experiments. Sections 5b and 5c below record the earlier one-round study; its saved results remain separate.
+
+### 5b. Earlier one-round application check
 
 Build a case list for two packets and three architectures, then run it:
 
@@ -212,7 +215,7 @@ python -m src.graph --cases output/cases_check.json --output-root output/check_r
 
 That is 14 reports x 3 situations = 42 runs.
 
-### 5c. The full run
+### 5c. Earlier full one-round run
 
 ```bash
 python -m src.graph --cases output/full_cases.json --output-root output/main_study/runs \

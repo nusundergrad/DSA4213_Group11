@@ -24,11 +24,11 @@ from uuid import uuid4
 
 llm = None
 # MODEL_NAME = "openrouter/free"
-MODEL_NAME = "nvidia/nemotron-3.5-lightning:free"
+MODEL_NAME = "nvidia/nemotron-3-ultra-550b-a55b:free"
 MAX_MODEL_RETRIES = 1
 RETRY_BASE_DELAY_SECONDS = 5.0   # waits 5, 10, 20, 40 s: short waits do not outlast a free-tier rate limit
 MAX_TOKENS = 6000
-REASONING_EFFORT = None
+REASONING_EFFORT = "none"
 MODEL_CALLS = ContextVar('model_calls', default=None)
 CURRENT_CALL = ContextVar('current_call', default=None)
 AUTH_QUOTA_STATUSES = (401, 402, 403, 429)
@@ -317,7 +317,7 @@ def invoke_analyst(messages, model_client=None, **kwargs):
     return model_client.invoke(messages, **kwargs)
 
 
-def clean_messages(messages):
+def clean_messages(messages, agent_name):
     cleaned = []
 
     for message in messages:
@@ -330,7 +330,11 @@ def clean_messages(messages):
         if message.type == "human":
             cleaned.append(HumanMessage(content=content, **metadata))
         elif message.type == "ai":
-            cleaned.append(AIMessage(content=content, **metadata))
+            if message.name == agent_name:
+                cleaned.append(AIMessage(content=content, **metadata))
+            else:
+                # The client drops message names, so identify other agents in the content.
+                cleaned.append(HumanMessage(content=f"Feedback from {message.name or 'another agent'}:\n{content}", **metadata))
         elif message.type == "system":
             cleaned.append(SystemMessage(content=content, **metadata))
 
@@ -344,8 +348,10 @@ def analyst_agent(state: AgentState):
         content=(
             ANALYST_SYSTEM_PROMPT
             + NUMERICAL_PRECISION_INSTRUCTIONS
-            + "\nReturn only one JSON object matching this schema:\n"
-            + json.dumps(Report.model_json_schema())
+            + "\nReturn only the complete revised report as a JSON object, using current_report as the format template."
+            + "\nUse exactly these top-level fields: schema_version, report_id, recommendation (BUY, SELL or HOLD), claims (3-5), and rationale."
+            + "\nEach claim has claim_id, text, evidence_ids and check_spec. Keep financial values as decimal strings."
+            + " Use only evidence and fact IDs from the supplied packet. Preserve the check_spec structure when revising a numerical assertion."
             + "\nPreserve the current report_id exactly. Do not create or modify it."
             + "\nPreserve claim_ids for retained claims so revisions can be traced.\n"
         )
@@ -355,13 +361,17 @@ def analyst_agent(state: AgentState):
         content=json.dumps({
             "evidence_packet": state["evidence_packet"],
             "current_report": latest_report(state),
-            "required_report_id": latest_report(state)["report_id"],
         }, ensure_ascii=False),
         name="benchmark_input",
         id="benchmark:evidence_packet",
     )
 
-    messages_to_send = [system_prompt, packet_message] + clean_messages(state["messages"])
+    messages_to_send = [system_prompt, packet_message] + clean_messages(state["messages"], agent_name)
+    messages_to_send.append(HumanMessage(content=(
+        "Respond as the Analyst to the Risk Manager feedback above. Return the complete Report JSON "
+        "object required by your system instructions. If no revision is needed, return the current "
+        "report unchanged."
+    )))
 
     response = invoke_with_retry(
         agent_name,
@@ -406,6 +416,8 @@ def risk_manager_agent(state: AgentState):
             + "\nReturn only one JSON object matching this schema:\n"
             + json.dumps(RiskManagerTurn.model_json_schema())
             + "\nUse an empty challenges list if no specific defect is found."
+            + " List only defects still present in the current report. Summarize passed checks and resolved issues in overall_assessment, not challenges."
+            + " Every challenge must request a concrete change as a string in requested_change, never null."
             + "\ntarget_claim_id must be a claim_id from the current report, or null for a rationale error or an omitted claim."
             + " For null targets, identify the disputed assertion or missing evidence in explanation. defect_type must be exactly one of: "
             + ", ".join(CHALLENGE_TYPES)
@@ -420,7 +432,11 @@ def risk_manager_agent(state: AgentState):
             "latest_verifier_report": latest_verifier_report(state),
         }, ensure_ascii=False)
     )
-    messages_to_send = [system_prompt, context_message] + clean_messages(state["messages"])
+    messages_to_send = [system_prompt, context_message] + clean_messages(state["messages"], agent_name)
+    messages_to_send.append(HumanMessage(content=(
+        "Review the current report as the Risk Manager. Return the RiskManagerTurn JSON object "
+        "required by your system instructions, not its schema or the Analyst's report."
+    )))
 
     def validate(candidate):
         check_risk_manager_turn(parse_risk_manager_response(candidate.content), state)
@@ -484,8 +500,11 @@ def trader_agent(state: AgentState):
     messages_to_send = [system_prompt, context_message]
     last_ai_message = next((m for m in reversed(state['messages']) if m.type == 'ai'), None)
     if last_ai_message is not None:
-        messages_to_send.append(AIMessage(content=last_ai_message.content,
-                                         id=last_ai_message.id, name=last_ai_message.name))
+        messages_to_send.extend(clean_messages([last_ai_message], agent_name))
+    messages_to_send.append(HumanMessage(content=(
+        "Make the final decision as the Trader. Return the TraderDecision JSON object "
+        "required by your system instructions, not its schema or the Analyst's report."
+    )))
 
     def validate(candidate):
         check_trader_decision(parse_trader_response(candidate.content), state)

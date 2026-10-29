@@ -20,8 +20,11 @@ class FakeLLM:
         self.seen = {"risk": [], "analyst": [], "trader": []}
 
     def invoke(self, messages, **kwargs):
+        assert messages[-1].type == "human"    # start this role's turn instead of continuing another agent's reply
         system = messages[0].content
         if "Head of Risk Management" in system:
+            assert all(m.name == 'risk_manager_agent' for m in messages if m.type == 'ai')
+            assert "RiskManagerTurn JSON" in messages[-1].content
             assert prompts.NUMERICAL_PRECISION_INSTRUCTIONS in system
             context = json.loads(messages[1].content)
             self.seen["risk"].append(context)
@@ -29,6 +32,9 @@ class FakeLLM:
                                     "explanation": "Growth is 6.43%, not 16.43%.", "requested_change": "Fix C1."}],
                     "calibration_concern": None, "overall_assessment": "Not proportionate."}
         elif "Senior Financial Analyst" in system:
+            assert all(m.name == 'analyst_agent' for m in messages if m.type == 'ai')
+            assert any(m.type == 'human' and m.content.startswith('Feedback from risk_manager_agent:') for m in messages)
+            assert "complete Report JSON" in messages[-1].content
             assert prompts.NUMERICAL_PRECISION_INSTRUCTIONS in system
             report = json.loads(messages[1].content)["current_report"]
             self.seen["analyst"].append(report)
@@ -36,6 +42,8 @@ class FakeLLM:
             report["claims"][1]["text"] = "Unrequested change to C2."     # must be reverted
             body = report
         else:
+            assert not any(m.type == 'ai' or m.name == 'risk_manager_agent' for m in messages)
+            assert "TraderDecision JSON" in messages[-1].content
             context = json.loads(messages[1].content.split("decision:\n", 1)[1].rsplit("\nReturn", 1)[0])
             self.seen["trader"].append(context)
             body = {"assessment": "ACCEPT", "support_score": 70, "investment_action": "HOLD",
@@ -87,6 +95,32 @@ def test_hybrid_verifies_initial_report_and_every_revision(fake):
     assert len(out["verifier_reports"]) == 3                             # initial + after each of 2 revisions
     assert out["verifier_reports"][0]["claim_results"]["C1"] is False    # the planted arithmetic defect
     assert fake.seen["risk"][0]["latest_verifier_report"]["claim_results"]["C1"] is False
+
+
+@pytest.mark.parametrize('situation', ['situation_1', 'situation_3'])
+@pytest.mark.parametrize('report_name', ['clean', 'error_03_arithmetic'])
+def test_default_three_rounds_finish_even_without_challenges(fake, monkeypatch, situation, report_name):
+    invoke = fake.invoke
+
+    def reply(messages, **kwargs):
+        response = invoke(messages, **kwargs)
+        if report_name == 'clean' and "Head of Risk Management" in messages[0].content:
+            response.content = json.dumps({'challenges': [], 'overall_assessment': 'No defects found.'})
+        return response
+
+    monkeypatch.setattr(fake, 'invoke', reply)
+    report = ROOT / f'public/reports/EP_0001/{report_name}.json'
+    out = graph.run_from_files(PACKET, report, situation=situation)
+    assert out['debate_round'] == 3
+    assert [turn['round'] for turn in out['risk_manager_turns']] == [1, 2, 3]
+    assert [turn['round'] for turn in out['analyst_revision_turns']] == [1, 2, 3]
+    assert len(out['final_reports']) == 4    # initial report + three revisions
+    assert len(out['verifier_reports']) == (4 if situation == 'situation_3' else 0)
+    assert [call['agent'] for call in out['usage_log']] == ['risk_manager_agent', 'analyst_agent'] * 3 + ['trader_agent']
+    assert len(fake.seen['risk']) == len(fake.seen['analyst']) == 3
+    assert len(fake.seen['trader']) == 1 and 'evidence_packet' not in fake.seen['trader'][0]
+    if report_name == 'clean':
+        assert all(not turn['challenges'] for turn in out['risk_manager_turns'])
 
 
 def test_verification_only_makes_one_model_call(fake):

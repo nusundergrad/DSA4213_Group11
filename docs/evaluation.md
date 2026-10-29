@@ -15,8 +15,8 @@ Analyst and Risk Manager receive the masked evidence packet. Trader receives the
 | Detection | The verifier or reviewer identified the injected defect | Completed flawed runs with known detection; baseline is N/A |
 | Correction after detection | A detected defect was resolved | Detected cases with known correction; baseline and verification are N/A |
 | Resolution | The injected defect is absent from the whole final report | Completed flawed runs with known resolution |
-| Accepted unresolved | Trader ACCEPT while the injected defect remains | Completed flawed runs with a known outcome |
-| FAR | ACCEPT, unresolved defect, and expressed reliance on its erroneous part | Completed flawed runs with known false acceptance |
+| FAR in the results notebook (`accepted_unresolved`) | Trader ACCEPT while the injected defect remains | Completed flawed runs with a known outcome |
+| Original reliance-based FAR (`false_acceptance`) | ACCEPT, unresolved defect, and expressed reliance on its erroneous part | Completed flawed runs with known false acceptance |
 | TAR | Trader ACCEPT on a clean input | Eligible completed clean runs |
 | New-error rate | A new factual error in the final report or Trader rationale | Completed outputs with a known new-error label |
 | Control challenge rate | A first-review challenge on a clean input | Eligible clean runs with a structured review |
@@ -24,7 +24,9 @@ Analyst and Risk Manager receive the masked evidence packet. Trader receives the
 
 Each rate shows **count / known outcomes**. Failures and unknown labels are reported separately. All four architectures were assigned 90 flawed cases, but a rate's denominator can be smaller. Compare matched cases when coverage differs.
 
-FAR needs more evidence than accepted-unresolved rate. For example, accepting a report with an incorrect 14% growth claim does not establish reliance if the Trader only says "growth". Citing a claim ID alone is also insufficient. Explicitly using 14% to justify ACCEPT establishes reliance.
+The notebook's main FAR definition was revised after inspecting results. It uses the existing `accepted_unresolved` calculation and retains the proposal's reliance-based measure for comparison. Saved Markdown reports, `metrics.csv` and `false_acceptance` labels retain the original definition; notebook exports use `far_unresolved` filenames.
+
+The original reliance-based measure needs more evidence. For example, accepting a report with an incorrect 14% growth claim does not establish reliance if the Trader only says "growth". Citing a claim ID alone is also insufficient. Explicitly using 14% to justify ACCEPT establishes expressed reliance, but does not establish causal influence on the decision.
 
 The notebook also gives FAR bounds over all 90 assigned flawed cases: count unknowns and failures as non-events for the lower bound, and as events for the upper bound. These are sensitivity bounds, not confidence intervals. Zero known-label FAR does not establish safety.
 
@@ -65,14 +67,14 @@ New-error corrections also use `new_error_present`, `new_error_explanation` and 
 
 The judge hides architecture names, tone labels, model names, previous scores and support scores. Report wording and review content can still reveal the condition, so blinding is partial. Evaluation calls are separate from architecture cost and latency. `judge.py` instead measures debate interaction quality; it does not replace factual scoring.
 
-The final export applies 118 full-field sample reviews, 162 accepted-unresolved reliance checks, 31 omission-detection checks and a screen of all 506 completed outputs for newly identified error patterns. Candidate assertions were checked against their evidence. Other fields retain earlier labels. Reasons and changed labels are preserved under `output/final_review_20261024/` and the final export.
+The three-round export covers 499 completed outputs. Saved Gemini primary labels receive a source cross-check using the application model, numerical checks and recorded adjudications of disagreements, missing responses and selected error patterns. Every primary positive reliance label is also examined against the erroneous component. Source-valid metadata repairs remove invalid IDs or unsupported quotes without changing model judgements. Required support for positive labels still has to pass validation. Failed requests and original judgements remain preserved locally; reviewed labels and reasons are in the final export.
 
-This is secondary review. Independent human validation remains uncompleted; the saved sample comparison is not an independent judge-accuracy estimate. [Validation instructions](running-experiments.md#how-to-validate-the-judge-labels) explain the separate form. The need to check judge reliability is consistent with [Zheng et al. (2023)](https://arxiv.org/abs/2306.05685); that paper does not validate this rubric or model.
+This is secondary review. The second model shares the application model family, so correlated mistakes remain possible. Independent human validation remains uncompleted, and agreement is not a judge-accuracy estimate. The calibration did not establish sufficient reliability for unattended judging; source review is therefore required. See the [validation instructions](running-experiments.md#how-to-validate-the-judge-labels).
 
 ## Supplementary tests and limitations
 
 - **Confidence:** compare low/high wording with neutral on the same reports, alongside an identical neutral repeat. The notebook uses cases completed in all four conditions. Support scores are uncalibrated. See the [fixed subset](experiment-config.md#confidence-subset).
 - **Reviewer challenge:** compare disagreement with a neutral follow-up while report and evidence stay fixed. Correctness labels distinguish useful correction from an incorrect reversal; a verdict flip alone cannot. This is separate from architecture debate, where reports can change.
-- **Scope:** 15 companies, related manufactured errors, short packets, one application model and one debate round. The 90 flawed reports are not 90 independent companies. Paired intervals resample whole packets; individual rate intervals are descriptive.
+- **Scope:** 15 companies, related manufactured errors, short packets, one application model and three debate rounds. The 90 flawed reports are not 90 independent companies. Paired intervals resample whole packets; individual rate intervals are descriptive. Comparing these results to the earlier one-round study does not isolate round count: turn instructions and message handling also changed.
 - **Benchmark notes:** EP_0008's private contradiction key was corrected to match the saved edit; affected outputs were reassessed without rerunning agents. The correction is preserved in `private/annotation_corrections.json`. EP_0006 retains different arithmetic-error magnitudes in prose and its structured assertion.
 - **Comparisons:** keep model, prompts, evidence access and budgets fixed. Preserve failures and select retries by the recorded rule. Claims about performance must include coverage, unresolved acceptances and new errors.

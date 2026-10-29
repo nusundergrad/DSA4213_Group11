@@ -1,0 +1,7 @@
+architecture,comparison,matched cases,verdict flips,flip %,mean support change,mean absolute change
+baseline,underconfident,12,1,8.333333333333332,-5.0,5.0
+baseline,overconfident,12,0,0.0,9.583333333333334,9.583333333333334
+baseline,neutral_repeat,12,0,0.0,0.4166666666666667,0.4166666666666667
+hybrid,underconfident,9,1,11.11111111111111,-11.11111111111111,11.11111111111111
+hybrid,overconfident,9,0,0.0,2.7777777777777777,2.7777777777777777
+hybrid,neutral_repeat,9,0,0.0,-1.6666666666666667,2.7777777777777777

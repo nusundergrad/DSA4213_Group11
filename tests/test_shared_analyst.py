@@ -5,7 +5,7 @@ import subprocess
 import sys
 from types import SimpleNamespace
 
-from langchain_core.messages import HumanMessage, AIMessage
+from langchain_core.messages import HumanMessage, AIMessage, SystemMessage
 
 from src import agent, prompts
 from src.benchmark.schemas import Report
@@ -32,7 +32,7 @@ def test_analyst_keeps_state_and_appends_validated_revision(monkeypatch):
     report = {"report_id": "R_test", "recommendation": "HOLD", "rationale": "Limited evidence.",
               "claims": [{"claim_id": f"C{i}", "text": "Demand risk exists.", "evidence_ids": ["E1"], "check_spec": None}
                          for i in (1, 2, 3)]}
-    state = {"messages": [HumanMessage(content="Analyze the filing"), AIMessage(content="Previous report")],
+    state = {"messages": [HumanMessage(content="Analyze the filing"), AIMessage(content="Previous report", name="analyst_agent")],
              "evidence_packet": {"packet_id": "EP_X"}, "initial_report": report, "final_reports": [report],
              "debate_round": 1, "max_debate_rounds": 3}
     before = copy.deepcopy(state)
@@ -44,8 +44,9 @@ def test_analyst_keeps_state_and_appends_validated_revision(monkeypatch):
         assert messages[0].content.startswith(prompts.ANALYST_SYSTEM_PROMPT)
         assert prompts.NUMERICAL_PRECISION_INSTRUCTIONS in messages[0].content
         assert prompts.NUMERICAL_PRECISION_INSTRUCTIONS in prompts.ANALYST_BENCHMARK_MESSAGE_TEMPLATE
-        assert json.loads(messages[1].content)["required_report_id"] == "R_test"
-        assert messages[2:] == state["messages"]
+        assert json.loads(messages[1].content)["current_report"]["report_id"] == "R_test"
+        assert messages[2:-1] == state["messages"]
+        assert messages[-1].type == "human" and "complete Report JSON" in messages[-1].content
         return response
 
     monkeypatch.setattr(agent, "llm", SimpleNamespace(invoke=invoke))
@@ -53,6 +54,21 @@ def test_analyst_keeps_state_and_appends_validated_revision(monkeypatch):
     assert len(calls) == 1 and state == before
     assert result["messages"] == [response] and response.name == "analyst_agent"
     assert result["final_reports"] == [report, Report.model_validate(report).model_dump(mode="json")]
+
+
+def test_other_agents_are_labelled_feedback_not_own_assistant_history():
+    messages = [SystemMessage(content='Instructions'), HumanMessage(content='Initial question'),
+                AIMessage(content='Report', name='analyst_agent', id='analyst:1'),
+                AIMessage(content='Challenge', name='risk_manager_agent', id='risk:1')]
+    before = copy.deepcopy(messages)
+    analyst = agent.clean_messages(messages, 'analyst_agent')
+    risk = agent.clean_messages(messages, 'risk_manager_agent')
+    assert [m.type for m in analyst] == ['system', 'human', 'ai', 'human']
+    assert [m.type for m in risk] == ['system', 'human', 'human', 'ai']
+    assert analyst[-1].content == 'Feedback from risk_manager_agent:\nChallenge'
+    assert risk[-2].content == 'Feedback from analyst_agent:\nReport'
+    assert [m.id for m in analyst] == [m.id for m in messages]
+    assert messages == before
 
 
 def test_default_client_is_created_only_once(monkeypatch):

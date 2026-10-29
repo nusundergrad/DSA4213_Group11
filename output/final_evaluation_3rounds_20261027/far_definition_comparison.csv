@@ -1,0 +1,5 @@
+architecture,FAR (accepted unresolved),Previous reliance-based rate,Previous unknown labels
+baseline,77/90 (85.6%),17/35 (48.6%),55
+debate,16/87 (18.4%),2/73 (2.7%),14
+verification,54/90 (60.0%),3/52 (5.8%),38
+hybrid,15/85 (17.6%),0/70 (0.0%),15

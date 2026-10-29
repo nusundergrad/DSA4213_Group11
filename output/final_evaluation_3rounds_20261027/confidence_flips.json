@@ -1,0 +1,16 @@
+[
+  {
+    "architecture": "baseline",
+    "comparison": "underconfident",
+    "case_id": "CASE_269686955deb4a2da659711a4cd3212a",
+    "neutral": "RUN_20261027T035534921586Z_26968695_baseline_neutral",
+    "changed": "RUN_20261027T014903596623Z_26968695_baseline_underconfident"
+  },
+  {
+    "architecture": "hybrid",
+    "comparison": "underconfident",
+    "case_id": "CASE_ac2c68fd6aa94e9095c7152d48afdd20",
+    "neutral": "RUN_20261027T015923843126Z_ac2c68fd_hybrid_neutral",
+    "changed": "RUN_20261027T015058902301Z_ac2c68fd_hybrid_underconfident"
+  }
+]

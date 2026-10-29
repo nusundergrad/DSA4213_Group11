@@ -1,0 +1,3929 @@
+[
+  {
+    "index": 0,
+    "run_id": "RUN_20261025T165446079201Z_fa4c7c8c_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 1,
+    "run_id": "RUN_20261025T165432897063Z_4c22e44d_hybrid_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 2,
+    "run_id": "RUN_20261025T171014395480Z_605505ea_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 3,
+    "run_id": "RUN_20261025T170621617025Z_e2ce864e_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 4,
+    "run_id": "RUN_20261025T170312418795Z_26968695_debate_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 5,
+    "run_id": "RUN_20261025T165820408251Z_a4db15fb_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 6,
+    "run_id": "RUN_20261025T165145621239Z_97f0e335_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 7,
+    "run_id": "RUN_20261025T165121081166Z_51018e6c_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 8,
+    "run_id": "RUN_20261025T170830945580Z_b14df659_verification_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 9,
+    "run_id": "RUN_20261025T170325029871Z_44aa1169_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 10,
+    "run_id": "RUN_20261025T165618241596Z_425d1b26_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 11,
+    "run_id": "RUN_20261025T165137233714Z_06cf607d_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 10.29; expected 0.2915313128428467735218172515 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 10.29; expected 0.2915313128428467735218172515 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 12,
+    "run_id": "RUN_20261025T165129313036Z_ea2df27a_baseline_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 13,
+    "run_id": "RUN_20261025T170029129623Z_756783c6_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 14,
+    "run_id": "RUN_20261025T170321023352Z_730609be_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 15,
+    "run_id": "RUN_20261025T170814277225Z_4d16373d_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 16,
+    "run_id": "RUN_20261025T171508681836Z_edafb358_debate_neutral",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [
+      "C4: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": [
+      "C4: referenced fact metric, period or unit mismatch"
+    ]
+  },
+  {
+    "index": 17,
+    "run_id": "RUN_20261025T172247081798Z_a1bd71c6_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 18,
+    "run_id": "RUN_20261025T172633184410Z_edafb358_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 19,
+    "run_id": "RUN_20261025T172002017754Z_a93bba37_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 20,
+    "run_id": "RUN_20261025T172636801319Z_da780b37_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 124.20; expected 114.2034076359935655428252520 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 124.20; expected 114.2034076359935655428252520 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 21,
+    "run_id": "RUN_20261025T171219733992Z_b9d5c02e_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 22,
+    "run_id": "RUN_20261025T172955883175Z_04999f14_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 23,
+    "run_id": "RUN_20261025T173229238722Z_c0a49022_debate_neutral",
+    "initial_checks": [
+      "C1: asserted 15.07; expected 5.070009643201542912246865959 percent"
+    ],
+    "final_checks": [
+      "C2: asserted 5.0; expected 4.964077698607456464535966650 percent"
+    ],
+    "new_check_failures": [
+      "C2: asserted 5.0; expected 4.964077698607456464535966650 percent"
+    ]
+  },
+  {
+    "index": 24,
+    "run_id": "RUN_20261025T172825314880Z_6935de37_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 25,
+    "run_id": "RUN_20261025T171223056882Z_37078ac1_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 105.25; expected 95.24779768682207706597950500 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 105.25; expected 95.24779768682207706597950500 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 26,
+    "run_id": "RUN_20261025T171041150165Z_f88bf615_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 27,
+    "run_id": "RUN_20261025T171754037375Z_8e811dab_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 28,
+    "run_id": "RUN_20261025T172017644501Z_597e40a2_verification_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 29,
+    "run_id": "RUN_20261025T172013384656Z_8e811dab_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 30,
+    "run_id": "RUN_20261025T172406992867Z_66a744d9_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 31,
+    "run_id": "RUN_20261025T171037340232Z_4e2d3c5c_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 32,
+    "run_id": "RUN_20261025T174352412402Z_47789d69_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 33,
+    "run_id": "RUN_20261025T174131253463Z_eed79741_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 34,
+    "run_id": "RUN_20261025T175129514434Z_6935de37_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 35,
+    "run_id": "RUN_20261025T173555071810Z_26968695_hybrid_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 36,
+    "run_id": "RUN_20261025T174127024587Z_9f709243_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 37,
+    "run_id": "RUN_20261025T174354861991Z_7cfe42c6_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 38,
+    "run_id": "RUN_20261025T173928548921Z_2f1e45f6_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 39,
+    "run_id": "RUN_20261025T174133155817Z_572f8b03_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 40,
+    "run_id": "RUN_20261025T173436939315Z_208b9b50_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 41,
+    "run_id": "RUN_20261025T174744390246Z_597e40a2_debate_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 42,
+    "run_id": "RUN_20261025T173434525235Z_149979cc_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 43,
+    "run_id": "RUN_20261025T173240748008Z_4ccf4485_verification_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 44,
+    "run_id": "RUN_20261025T173558311145Z_92518efd_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 45,
+    "run_id": "RUN_20261025T175126239940Z_60253b6e_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 46,
+    "run_id": "RUN_20261025T174934131333Z_4ccf4485_hybrid_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 47,
+    "run_id": "RUN_20261025T174603816998Z_149979cc_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 48,
+    "run_id": "RUN_20261025T180740510827Z_94d62860_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 49,
+    "run_id": "RUN_20261025T180515688594Z_1453e430_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 50,
+    "run_id": "RUN_20261025T175636247220Z_94fbb0b4_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 51,
+    "run_id": "RUN_20261025T180231794051Z_dfca011d_hybrid_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 52,
+    "run_id": "RUN_20261025T180909186661Z_aeee037a_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 53,
+    "run_id": "RUN_20261025T180743232029Z_4b8ab56b_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 16.84; expected 6.840424727932285368802902056 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 16.84; expected 6.840424727932285368802902056 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 54,
+    "run_id": "RUN_20261025T180734665495Z_29b37757_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 12.75; expected 2.754623893306900358196850571 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 55,
+    "run_id": "RUN_20261025T180746955793Z_c0a49022_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 15.07; expected 5.070009643201542912246865959 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 15.07; expected 5.070009643201542912246865959 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 56,
+    "run_id": "RUN_20261025T175626830949Z_3c372363_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 57,
+    "run_id": "RUN_20261025T180018192649Z_3c372363_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 58,
+    "run_id": "RUN_20261025T175437157906Z_1833c917_debate_neutral",
+    "initial_checks": [
+      "C1: asserted 7.07; expected -2.930699150373630873170232368 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 59,
+    "run_id": "RUN_20261025T175623043424Z_4378b67a_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 60,
+    "run_id": "RUN_20261025T181612727444Z_51742c12_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 61,
+    "run_id": "RUN_20261025T182338056358Z_a93bba37_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 62,
+    "run_id": "RUN_20261025T181120808838Z_dfca011d_verification_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 63,
+    "run_id": "RUN_20261025T181313539936Z_4dedde0f_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 64,
+    "run_id": "RUN_20261025T181941391397Z_98049939_verification_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 65,
+    "run_id": "RUN_20261025T181605036263Z_2ac7233d_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 66,
+    "run_id": "RUN_20261025T181447167788Z_8e881770_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 67,
+    "run_id": "RUN_20261025T181116081930Z_7fea52cb_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 68,
+    "run_id": "RUN_20261025T181257409389Z_8df2024a_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 69,
+    "run_id": "RUN_20261025T181937258571Z_0668146d_hybrid_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 70,
+    "run_id": "RUN_20261025T182545701275Z_1833c917_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 7.07; expected -2.930699150373630873170232368 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 71,
+    "run_id": "RUN_20261025T181316419812Z_f2a3327d_baseline_neutral",
+    "initial_checks": [
+      "C2: asserted -51.26; expected -41.26428593551584228946634869 percent"
+    ],
+    "final_checks": [
+      "C2: asserted -51.26; expected -41.26428593551584228946634869 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 72,
+    "run_id": "RUN_20261025T182124780162Z_9a41f8bb_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 73,
+    "run_id": "RUN_20261025T181802182290Z_b5c24a96_debate_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 74,
+    "run_id": "RUN_20261025T182119230907Z_208b9b50_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 75,
+    "run_id": "RUN_20261025T181114023538Z_5506de28_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 76,
+    "run_id": "RUN_20261025T183641647560Z_4c22e44d_verification_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 77,
+    "run_id": "RUN_20261025T183236590604Z_1453e430_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 78,
+    "run_id": "RUN_20261025T184128643322Z_98049939_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 79,
+    "run_id": "RUN_20261025T183242409208Z_2ac7233d_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 80,
+    "run_id": "RUN_20261025T183439163260Z_47789d69_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 81,
+    "run_id": "RUN_20261025T183812536224Z_98049939_debate_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 82,
+    "run_id": "RUN_20261025T183435871651Z_6efcf7c3_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 83,
+    "run_id": "RUN_20261025T183939371000Z_4b8ab56b_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 16.84; expected 6.840424727932285368802902056 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 84,
+    "run_id": "RUN_20261025T183245901924Z_605505ea_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 85,
+    "run_id": "RUN_20261025T183637962890Z_ac2c68fd_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 86,
+    "run_id": "RUN_20261025T183457527163Z_b6b98235_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 87,
+    "run_id": "RUN_20261025T182814120677Z_8df2024a_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 88,
+    "run_id": "RUN_20261025T184119319618Z_37078ac1_debate_neutral",
+    "initial_checks": [
+      "C1: asserted 105.25; expected 95.24779768682207706597950500 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 89,
+    "run_id": "RUN_20261025T183431385229Z_97f0e335_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 90,
+    "run_id": "RUN_20261025T184124229619Z_2f1e45f6_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 91,
+    "run_id": "RUN_20261025T183248276141Z_6fe40860_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 92,
+    "run_id": "RUN_20261025T182938917498Z_07b36f6e_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 93,
+    "run_id": "RUN_20261025T182824978487Z_b75b968f_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 94,
+    "run_id": "RUN_20261025T184328963348Z_94d62860_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 95,
+    "run_id": "RUN_20261025T185035869928Z_94d62860_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 96,
+    "run_id": "RUN_20261025T185352117414Z_dfca011d_debate_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C4: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": [
+      "C4: referenced fact metric, period or unit mismatch"
+    ]
+  },
+  {
+    "index": 97,
+    "run_id": "RUN_20261025T184852751825Z_da780b37_debate_neutral",
+    "initial_checks": [
+      "C1: asserted 124.20; expected 114.2034076359935655428252520 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 98,
+    "run_id": "RUN_20261025T184900841924Z_2ac7233d_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 99,
+    "run_id": "RUN_20261025T184857054377Z_ccc7fd5c_verification_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 100,
+    "run_id": "RUN_20261025T184739433284Z_bc3a41cc_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 101,
+    "run_id": "RUN_20261025T184325889899Z_9f709243_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 102,
+    "run_id": "RUN_20261025T185147103282Z_6935de37_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 103,
+    "run_id": "RUN_20261025T185617426342Z_ed4cc6ce_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 104,
+    "run_id": "RUN_20261025T184731777399Z_1833c917_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 7.07; expected -2.930699150373630873170232368 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 7.07; expected -2.930699150373630873170232368 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 105,
+    "run_id": "RUN_20261025T184320296606Z_b14df659_debate_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 106,
+    "run_id": "RUN_20261025T185733172636Z_37078ac1_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 105.25; expected 95.24779768682207706597950500 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 107,
+    "run_id": "RUN_20261025T185736324683Z_d46f8793_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 108,
+    "run_id": "RUN_20261025T184503800297Z_fa13346a_debate_neutral",
+    "initial_checks": [
+      "C1: asserted -25.90; expected -15.89602205592753052382827885 percent"
+    ],
+    "final_checks": [
+      "C1: asserted -25.90; expected -15.89602205592753052382827885 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 109,
+    "run_id": "RUN_20261025T184723985299Z_5506de28_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 110,
+    "run_id": "RUN_20261025T190843360067Z_c65acc6f_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 111,
+    "run_id": "RUN_20261025T190527080123Z_6efcf7c3_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 112,
+    "run_id": "RUN_20261025T190350175925Z_ccc7fd5c_debate_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 113,
+    "run_id": "RUN_20261025T190836616964Z_7fea52cb_verification_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 114,
+    "run_id": "RUN_20261025T191056258314Z_0b1d3caf_verification_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 115,
+    "run_id": "RUN_20261025T190831789854Z_b6b98235_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 116,
+    "run_id": "RUN_20261025T191052556425Z_7cfe42c6_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 117,
+    "run_id": "RUN_20261025T191110303423Z_b14df659_baseline_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 118,
+    "run_id": "RUN_20261025T190706704025Z_572f8b03_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 119,
+    "run_id": "RUN_20261025T185926303514Z_f2a3327d_hybrid_neutral",
+    "initial_checks": [
+      "C2: asserted -51.26; expected -41.26428593551584228946634869 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 120,
+    "run_id": "RUN_20261025T191250152917Z_6fe40860_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 121,
+    "run_id": "RUN_20261025T190029900104Z_07b36f6e_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 122,
+    "run_id": "RUN_20261025T190827284794Z_8e811dab_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 123,
+    "run_id": "RUN_20261025T190039420384Z_5506de28_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 124,
+    "run_id": "RUN_20261025T191253727296Z_4d16373d_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 125,
+    "run_id": "RUN_20261025T191531245730Z_4b8ab56b_debate_neutral",
+    "initial_checks": [
+      "C1: asserted 16.84; expected 6.840424727932285368802902056 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 126,
+    "run_id": "RUN_20261025T191943328176Z_7fea52cb_hybrid_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 127,
+    "run_id": "RUN_20261025T191658540834Z_3c372363_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 128,
+    "run_id": "RUN_20261025T191822328995Z_6dae7cf7_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 22.38; expected 12.37775468329469448663628854 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 22.38; expected 12.37775468329469448663628854 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 129,
+    "run_id": "RUN_20261025T192156550900Z_e52d0f74_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 130,
+    "run_id": "RUN_20261025T192424415660Z_87db9d2c_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 131,
+    "run_id": "RUN_20261025T191819681445Z_2cbf4647_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 132,
+    "run_id": "RUN_20261025T192426897496Z_4378b67a_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 133,
+    "run_id": "RUN_20261025T192154299284Z_2f1e45f6_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 134,
+    "run_id": "RUN_20261025T191945698930Z_416fd43b_baseline_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 135,
+    "run_id": "RUN_20261025T191948125514Z_53519a0d_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 136,
+    "run_id": "RUN_20261025T192216974477Z_92518efd_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 137,
+    "run_id": "RUN_20261025T191656328233Z_c34c11bd_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 138,
+    "run_id": "RUN_20261025T192420830651Z_af662fc4_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 139,
+    "run_id": "RUN_20261025T192658965243Z_125918c7_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 140,
+    "run_id": "RUN_20261025T192547477380Z_6b321674_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 141,
+    "run_id": "RUN_20261025T192705354731Z_6da581a6_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 142,
+    "run_id": "RUN_20261025T192702214476Z_6935de37_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 143,
+    "run_id": "RUN_20261025T193113197043Z_c5557760_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 144,
+    "run_id": "RUN_20261025T192844016825Z_425d1b26_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 145,
+    "run_id": "RUN_20261025T193126460445Z_06cf607d_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 10.29; expected 0.2915313128428467735218172515 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 10.29; expected 0.2915313128428467735218172515 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 146,
+    "run_id": "RUN_20261025T192840464281Z_c34c11bd_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 147,
+    "run_id": "RUN_20261026T000933595134Z_51742c12_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 148,
+    "run_id": "RUN_20261026T000654985073Z_51742c12_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 149,
+    "run_id": "RUN_20261026T001058077508Z_bc3a41cc_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 150,
+    "run_id": "RUN_20261026T001102956663Z_6efcf7c3_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 151,
+    "run_id": "RUN_20261026T000812349645Z_c65acc6f_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 152,
+    "run_id": "RUN_20261026T001200370595Z_ed4cc6ce_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 153,
+    "run_id": "RUN_20261026T000454370643Z_2cbf4647_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 154,
+    "run_id": "RUN_20261026T001157795584Z_4378b67a_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 155,
+    "run_id": "RUN_20261026T000816444459Z_425d1b26_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 156,
+    "run_id": "RUN_20261026T000413884748Z_2fee21c5_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 157,
+    "run_id": "RUN_20261026T000701532961Z_ac5ffd2d_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 158,
+    "run_id": "RUN_20261026T000504787038Z_2fee21c5_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 159,
+    "run_id": "RUN_20261026T001101254063Z_046ada01_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 160,
+    "run_id": "RUN_20261026T000942243667Z_5506de28_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 161,
+    "run_id": "RUN_20261026T000459558458Z_4ccf4485_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 162,
+    "run_id": "RUN_20261026T000939328578Z_4d16373d_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 163,
+    "run_id": "RUN_20261026T000315509700Z_220be927_debate_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 164,
+    "run_id": "RUN_20261026T001153835423Z_729f3238_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted -11.60; expected -1.598042038583357327958537288 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 165,
+    "run_id": "RUN_20261026T002006692439Z_4c22e44d_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 166,
+    "run_id": "RUN_20261026T001324533199Z_4dedde0f_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 167,
+    "run_id": "RUN_20261026T001808328476Z_7dc4aa92_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 168,
+    "run_id": "RUN_20261026T001420945236Z_7dc4aa92_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 169,
+    "run_id": "RUN_20261026T002004203772Z_8e881770_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 170,
+    "run_id": "RUN_20261026T001327710444Z_bc3a41cc_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 171,
+    "run_id": "RUN_20261026T001856426353Z_605505ea_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 172,
+    "run_id": "RUN_20261026T001621778131Z_eed79741_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 173,
+    "run_id": "RUN_20261026T001619833054Z_eed79741_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 174,
+    "run_id": "RUN_20261026T001418043928Z_75b69c90_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [
+      "C1: asserted 12.00; expected 12.37775468329469448663628854 percent",
+      "C3: asserted 20.00; expected 19.68184015768529882107925174 percent"
+    ],
+    "new_check_failures": [
+      "C1: asserted 12.00; expected 12.37775468329469448663628854 percent",
+      "C3: asserted 20.00; expected 19.68184015768529882107925174 percent"
+    ]
+  },
+  {
+    "index": 175,
+    "run_id": "RUN_20261026T001625939950Z_94d41d72_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 176,
+    "run_id": "RUN_20261026T001759164602Z_94d41d72_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 177,
+    "run_id": "RUN_20261026T002014047481Z_a4db15fb_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 178,
+    "run_id": "RUN_20261026T001801641710Z_3872e6e6_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 179,
+    "run_id": "RUN_20261026T001803641909Z_b5c24a96_baseline_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 180,
+    "run_id": "RUN_20261026T001805626133Z_6fe40860_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 181,
+    "run_id": "RUN_20261026T001321418481Z_f88bf615_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 182,
+    "run_id": "RUN_20261026T002010990704Z_597e40a2_baseline_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 183,
+    "run_id": "RUN_20261026T001623778119Z_ea2df27a_verification_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 184,
+    "run_id": "RUN_20261026T001508559967Z_92518efd_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 185,
+    "run_id": "RUN_20261026T002001231106Z_b75b968f_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 186,
+    "run_id": "RUN_20261026T002018027750Z_730609be_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 187,
+    "run_id": "RUN_20261026T002310863479Z_125918c7_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 188,
+    "run_id": "RUN_20261026T002624791623Z_1453e430_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 189,
+    "run_id": "RUN_20261026T002535407601Z_8e881770_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 190,
+    "run_id": "RUN_20261026T002730068028Z_e2ce864e_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 191,
+    "run_id": "RUN_20261026T002728225792Z_6b321674_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 192,
+    "run_id": "RUN_20261026T002524829814Z_ac2c68fd_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 193,
+    "run_id": "RUN_20261026T002418062097Z_8df2024a_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 194,
+    "run_id": "RUN_20261026T002526881235Z_d46f8793_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 195,
+    "run_id": "RUN_20261026T002533651613Z_07b36f6e_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 196,
+    "run_id": "RUN_20261026T002731977190Z_fa13346a_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted -25.90; expected -15.89602205592753052382827885 percent"
+    ],
+    "final_checks": [
+      "C1: asserted -25.90; expected -15.89602205592753052382827885 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 197,
+    "run_id": "RUN_20261026T002617996442Z_416fd43b_hybrid_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 198,
+    "run_id": "RUN_20261026T002538259779Z_47c60f1d_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 199,
+    "run_id": "RUN_20261026T002210553956Z_865cc116_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 200,
+    "run_id": "RUN_20261026T002415193302Z_865cc116_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 201,
+    "run_id": "RUN_20261026T002941776427Z_47c60f1d_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 202,
+    "run_id": "RUN_20261026T002412559914Z_927482ca_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 203,
+    "run_id": "RUN_20261026T002307243761Z_046ada01_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 204,
+    "run_id": "RUN_20261026T002622436298Z_60253b6e_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 205,
+    "run_id": "RUN_20261026T002420111408Z_149979cc_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 206,
+    "run_id": "RUN_20261026T004039702908Z_edafb358_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 207,
+    "run_id": "RUN_20261026T004036846163Z_98049939_hybrid_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 208,
+    "run_id": "RUN_20261026T003014030394Z_c65acc6f_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 209,
+    "run_id": "RUN_20261026T003740085887Z_c0a49022_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 15.07; expected 5.070009643201542912246865959 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 210,
+    "run_id": "RUN_20261026T003027740771Z_6dae7cf7_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 22.38; expected 12.37775468329469448663628854 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 22.38; expected 12.37775468329469448663628854 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 211,
+    "run_id": "RUN_20261026T003825312732Z_94d41d72_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 212,
+    "run_id": "RUN_20261026T003644069749Z_f2a3327d_debate_neutral",
+    "initial_checks": [
+      "C2: asserted -51.26; expected -41.26428593551584228946634869 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 213,
+    "run_id": "RUN_20261026T003930169029Z_6fe40860_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 214,
+    "run_id": "RUN_20261026T003646504717Z_865cc116_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 215,
+    "run_id": "RUN_20261026T003512694482Z_af6fbee3_verification_neutral",
+    "initial_checks": [
+      "C1: asserted -40.36; expected -30.36068172810146650812524772 percent"
+    ],
+    "final_checks": [
+      "C1: asserted -40.36; expected -30.36068172810146650812524772 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 216,
+    "run_id": "RUN_20261026T003144835592Z_66a744d9_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 217,
+    "run_id": "RUN_20261026T003139127932Z_756783c6_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 218,
+    "run_id": "RUN_20261026T003142289622Z_c34c11bd_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 219,
+    "run_id": "RUN_20261026T003022906853Z_53519a0d_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 220,
+    "run_id": "RUN_20261026T005027797757Z_37fa21d6_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 221,
+    "run_id": "RUN_20261026T004634190469Z_125918c7_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 222,
+    "run_id": "RUN_20261026T005025999088Z_37fa21d6_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 223,
+    "run_id": "RUN_20261026T004645147966Z_29b37757_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 12.75; expected 2.754623893306900358196850571 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 12.75; expected 2.754623893306900358196850571 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 224,
+    "run_id": "RUN_20261026T004232019760Z_7fea52cb_debate_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 225,
+    "run_id": "RUN_20261026T005135365567Z_eed79741_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 226,
+    "run_id": "RUN_20261026T004235746585Z_ed4cc6ce_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 227,
+    "run_id": "RUN_20261026T004330406996Z_a4db15fb_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 228,
+    "run_id": "RUN_20261026T004643025682Z_1833c917_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 7.07; expected -2.930699150373630873170232368 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 7.07; expected -2.930699150373630873170232368 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 229,
+    "run_id": "RUN_20261026T005029633614Z_37078ac1_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 105.25; expected 95.24779768682207706597950500 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 105.25; expected 95.24779768682207706597950500 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 230,
+    "run_id": "RUN_20261026T004445736540Z_d46f8793_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 231,
+    "run_id": "RUN_20261026T004324774367Z_b5c24a96_hybrid_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 232,
+    "run_id": "RUN_20261026T004328577974Z_44aa1169_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 233,
+    "run_id": "RUN_20261026T004135094996Z_220be927_hybrid_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 234,
+    "run_id": "RUN_20261026T004538001344Z_af662fc4_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 235,
+    "run_id": "RUN_20261026T010427494934Z_fa4c7c8c_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 236,
+    "run_id": "RUN_20261026T010329561418Z_4c22e44d_debate_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 237,
+    "run_id": "RUN_20261026T005513910803Z_fa358ca7_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 16.43; expected 6.425511782832738757400232716 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 16.43; expected 6.425511782832738757400232716 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 238,
+    "run_id": "RUN_20261026T010429852778Z_6b86fc12_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 239,
+    "run_id": "RUN_20261026T010026609953Z_ccc7fd5c_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 240,
+    "run_id": "RUN_20261026T010424732111Z_9f709243_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 241,
+    "run_id": "RUN_20261026T010019190084Z_2cbf4647_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 242,
+    "run_id": "RUN_20261026T010015691206Z_0668146d_verification_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 243,
+    "run_id": "RUN_20261026T010022520012Z_2f1e45f6_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 244,
+    "run_id": "RUN_20261026T010217217458Z_3872e6e6_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 245,
+    "run_id": "RUN_20261026T010332215486Z_97f0e335_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 246,
+    "run_id": "RUN_20261026T005509058392Z_b14df659_hybrid_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 247,
+    "run_id": "RUN_20261026T010219392174Z_47c60f1d_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 248,
+    "run_id": "RUN_20261026T011004824777Z_fa4c7c8c_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 249,
+    "run_id": "RUN_20261026T011401303601Z_94d62860_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 250,
+    "run_id": "RUN_20261026T010625580591Z_a93bba37_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 251,
+    "run_id": "RUN_20261026T011011564881Z_6b86fc12_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 252,
+    "run_id": "RUN_20261026T011251432063Z_aeee037a_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 253,
+    "run_id": "RUN_20261026T010754351137Z_6efcf7c3_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 254,
+    "run_id": "RUN_20261026T011404529940Z_605505ea_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 255,
+    "run_id": "RUN_20261026T010622249088Z_c0a49022_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 15.07; expected 5.070009643201542912246865959 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 15.07; expected 5.070009643201542912246865959 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 256,
+    "run_id": "RUN_20261026T011015287740Z_94d41d72_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 257,
+    "run_id": "RUN_20261026T010802859241Z_c5557760_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 258,
+    "run_id": "RUN_20261026T010615545673Z_f2a3327d_verification_neutral",
+    "initial_checks": [
+      "C2: asserted -51.26; expected -41.26428593551584228946634869 percent"
+    ],
+    "final_checks": [
+      "C2: asserted -51.26; expected -41.26428593551584228946634869 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 259,
+    "run_id": "RUN_20261026T011413838890Z_b5c24a96_verification_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 260,
+    "run_id": "RUN_20261026T010716721246Z_c5557760_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 261,
+    "run_id": "RUN_20261026T010610370084Z_f88bf615_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 262,
+    "run_id": "RUN_20261026T011008497674Z_756783c6_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 263,
+    "run_id": "RUN_20261026T011018220557Z_927482ca_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 264,
+    "run_id": "RUN_20261026T011131184101Z_046ada01_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 265,
+    "run_id": "RUN_20261026T011026107173Z_0da3ca36_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 14.29; expected 4.289527689055532410621981515 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 14.29; expected 4.289527689055532410621981515 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 266,
+    "run_id": "RUN_20261026T011249471842Z_60253b6e_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 267,
+    "run_id": "RUN_20261026T010901844723Z_4e2d3c5c_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 268,
+    "run_id": "RUN_20261026T010613174069Z_b75b968f_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 269,
+    "run_id": "RUN_20261026T011022316962Z_af662fc4_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 270,
+    "run_id": "RUN_20261026T011859419029Z_51742c12_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 271,
+    "run_id": "RUN_20261026T011631886557Z_94fbb0b4_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 272,
+    "run_id": "RUN_20261026T011902825238Z_a1bd71c6_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 273,
+    "run_id": "RUN_20261026T011856875202Z_aeee037a_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 274,
+    "run_id": "RUN_20261026T011911232670Z_da780b37_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 124.20; expected 114.2034076359935655428252520 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 124.20; expected 114.2034076359935655428252520 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 275,
+    "run_id": "RUN_20261026T011854121663Z_47789d69_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 276,
+    "run_id": "RUN_20261026T012124305055Z_e2ce864e_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 277,
+    "run_id": "RUN_20261026T011920680807Z_0668146d_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 278,
+    "run_id": "RUN_20261026T012025359127Z_7cfe42c6_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 279,
+    "run_id": "RUN_20261026T011525324917Z_3872e6e6_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 280,
+    "run_id": "RUN_20261026T011904877406Z_572f8b03_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 281,
+    "run_id": "RUN_20261026T011909381307Z_208b9b50_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 282,
+    "run_id": "RUN_20261026T012207362986Z_9a41f8bb_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 283,
+    "run_id": "RUN_20261026T011923921742Z_fa13346a_verification_neutral",
+    "initial_checks": [
+      "C1: asserted -25.90; expected -15.89602205592753052382827885 percent"
+    ],
+    "final_checks": [
+      "C1: asserted -25.90; expected -15.89602205592753052382827885 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 284,
+    "run_id": "RUN_20261026T012117585910Z_fa13346a_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted -25.90; expected -15.89602205592753052382827885 percent"
+    ],
+    "final_checks": [
+      "C1: asserted -15.91; expected -15.89602205592753052382827885 percent"
+    ],
+    "new_check_failures": [
+      "C1: asserted -15.91; expected -15.89602205592753052382827885 percent"
+    ]
+  },
+  {
+    "index": 285,
+    "run_id": "RUN_20261026T011914106984Z_af6fbee3_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted -40.36; expected -30.36068172810146650812524772 percent"
+    ],
+    "final_checks": [
+      "C1: asserted -40.36; expected -30.36068172810146650812524772 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 286,
+    "run_id": "RUN_20261026T011739483833Z_0da3ca36_debate_neutral",
+    "initial_checks": [
+      "C1: asserted 14.29; expected 4.289527689055532410621981515 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 287,
+    "run_id": "RUN_20261026T011918167907Z_0da3ca36_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 14.29; expected 4.289527689055532410621981515 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 14.29; expected 4.289527689055532410621981515 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 288,
+    "run_id": "RUN_20261026T011850415470Z_0da3ca36_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 14.29; expected 4.289527689055532410621981515 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 289,
+    "run_id": "RUN_20261026T012930239023Z_94fbb0b4_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 290,
+    "run_id": "RUN_20261026T012503483965Z_2ac7233d_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 291,
+    "run_id": "RUN_20261026T012816700631Z_b9d5c02e_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 292,
+    "run_id": "RUN_20261026T013058611411Z_04999f14_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 293,
+    "run_id": "RUN_20261026T012315774593Z_29b37757_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 12.75; expected 2.754623893306900358196850571 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 12.75; expected 2.754623893306900358196850571 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 294,
+    "run_id": "RUN_20261026T013312346013Z_3c372363_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 295,
+    "run_id": "RUN_20261026T013212851540Z_0668146d_debate_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 296,
+    "run_id": "RUN_20261026T012509627874Z_8df2024a_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 297,
+    "run_id": "RUN_20261026T012507388656Z_51018e6c_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 298,
+    "run_id": "RUN_20261026T012551918401Z_572f8b03_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 299,
+    "run_id": "RUN_20261026T012807390114Z_f88bf615_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 300,
+    "run_id": "RUN_20261026T012649640174Z_865cc116_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 301,
+    "run_id": "RUN_20261026T012805377100Z_2fee21c5_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 302,
+    "run_id": "RUN_20261026T012324256557Z_c34c11bd_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 303,
+    "run_id": "RUN_20261026T012322121113Z_220be927_baseline_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 304,
+    "run_id": "RUN_20261026T012310432465Z_b75b968f_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 305,
+    "run_id": "RUN_20261026T013516094961Z_1453e430_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 306,
+    "run_id": "RUN_20261026T014426555539Z_dfca011d_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 307,
+    "run_id": "RUN_20261026T014214472869Z_8e881770_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 308,
+    "run_id": "RUN_20261026T013512825904Z_6da581a6_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 309,
+    "run_id": "RUN_20261026T013633033097Z_04999f14_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 310,
+    "run_id": "RUN_20261026T013519633338Z_9f709243_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 311,
+    "run_id": "RUN_20261026T013745245062Z_3872e6e6_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 312,
+    "run_id": "RUN_20261026T014124372929Z_9a41f8bb_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 313,
+    "run_id": "RUN_20261026T013630862891Z_44aa1169_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 314,
+    "run_id": "RUN_20261026T014424727790Z_ac5ffd2d_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 315,
+    "run_id": "RUN_20261026T013923856329Z_66a744d9_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 316,
+    "run_id": "RUN_20261026T014335567590Z_66a744d9_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 317,
+    "run_id": "RUN_20261026T013521746505Z_149979cc_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 318,
+    "run_id": "RUN_20261026T013740635671Z_729f3238_debate_neutral",
+    "initial_checks": [
+      "C1: asserted -11.60; expected -1.598042038583357327958537288 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 319,
+    "run_id": "RUN_20261026T013928055320Z_220be927_verification_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 320,
+    "run_id": "RUN_20261026T013415222026Z_730609be_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 321,
+    "run_id": "RUN_20261026T014627112748Z_bc3a41cc_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 322,
+    "run_id": "RUN_20261026T014530721394Z_04999f14_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 323,
+    "run_id": "RUN_20261026T014524356794Z_597e40a2_hybrid_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 324,
+    "run_id": "RUN_20261027T000311667460Z_b6b98235_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 325,
+    "run_id": "RUN_20261027T000440310574Z_6b86fc12_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 326,
+    "run_id": "RUN_20261027T000503038746Z_e52d0f74_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 327,
+    "run_id": "RUN_20261027T000635956085Z_af6fbee3_debate_neutral",
+    "initial_checks": [
+      "C1: asserted -40.36; expected -30.36068172810146650812524772 percent"
+    ],
+    "final_checks": [
+      "C1: asserted -40.36; expected -30.36068172810146650812524772 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 328,
+    "run_id": "RUN_20261027T000700393068Z_51018e6c_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 329,
+    "run_id": "RUN_20261027T000718761212Z_729f3238_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted -11.60; expected -1.598042038583357327958537288 percent"
+    ],
+    "final_checks": [
+      "C1: asserted -11.60; expected -1.598042038583357327958537288 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 330,
+    "run_id": "RUN_20261027T000840464461Z_4ccf4485_debate_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 331,
+    "run_id": "RUN_20261027T001017753715Z_4dedde0f_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 332,
+    "run_id": "RUN_20261027T001136396861Z_4d16373d_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 333,
+    "run_id": "RUN_20261027T001156471838Z_927482ca_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 334,
+    "run_id": "RUN_20261027T001216131032Z_26968695_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 335,
+    "run_id": "RUN_20261027T001238237619Z_6da581a6_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 336,
+    "run_id": "RUN_20261027T001252255090Z_046ada01_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 337,
+    "run_id": "RUN_20261027T001406466651Z_37fa21d6_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 338,
+    "run_id": "RUN_20261027T001520845227Z_94fbb0b4_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 339,
+    "run_id": "RUN_20261027T001538479020Z_4b8ab56b_verification_neutral",
+    "initial_checks": [
+      "C1: asserted 16.84; expected 6.840424727932285368802902056 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 16.84; expected 6.840424727932285368802902056 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 340,
+    "run_id": "RUN_20261027T001706124985Z_425d1b26_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 341,
+    "run_id": "RUN_20261027T001904648140Z_e52d0f74_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 342,
+    "run_id": "RUN_20261027T001928681162Z_2fee21c5_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 343,
+    "run_id": "RUN_20261027T002043079126Z_47c60f1d_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 344,
+    "run_id": "RUN_20261027T002051446858Z_26968695_verification_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 345,
+    "run_id": "RUN_20261027T002108860885Z_07b36f6e_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 346,
+    "run_id": "RUN_20261027T002127282491Z_edafb358_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 347,
+    "run_id": "RUN_20261027T002343457036Z_87db9d2c_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 348,
+    "run_id": "RUN_20261027T002454372009Z_7dc4aa92_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 349,
+    "run_id": "RUN_20261027T002517964841Z_9a41f8bb_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 350,
+    "run_id": "RUN_20261027T002634529835Z_51018e6c_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 351,
+    "run_id": "RUN_20261027T002656128296Z_37fa21d6_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 352,
+    "run_id": "RUN_20261027T002814141759Z_e2ce864e_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 353,
+    "run_id": "RUN_20261027T002939292804Z_ac5ffd2d_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 354,
+    "run_id": "RUN_20261027T002959774021Z_0b1d3caf_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 355,
+    "run_id": "RUN_20261027T003134442812Z_6dae7cf7_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 22.38; expected 12.37775468329469448663628854 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 356,
+    "run_id": "RUN_20261027T003306092442Z_4dedde0f_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [
+      "C4: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": [
+      "C4: referenced fact metric, period or unit mismatch"
+    ]
+  },
+  {
+    "index": 357,
+    "run_id": "RUN_20261027T003319456307Z_87db9d2c_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 358,
+    "run_id": "RUN_20261027T003445991684Z_730609be_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 359,
+    "run_id": "RUN_20261027T003503201865Z_729f3238_verification_neutral",
+    "initial_checks": [
+      "C1: asserted -11.60; expected -1.598042038583357327958537288 percent"
+    ],
+    "final_checks": [
+      "C1: asserted -11.60; expected -1.598042038583357327958537288 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 360,
+    "run_id": "RUN_20261027T003516655511Z_75b69c90_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 361,
+    "run_id": "RUN_20261027T003535321408Z_b9d5c02e_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 362,
+    "run_id": "RUN_20261027T003642449025Z_47789d69_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 363,
+    "run_id": "RUN_20261027T003754319461Z_92518efd_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 364,
+    "run_id": "RUN_20261027T003814282936Z_75b69c90_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 365,
+    "run_id": "RUN_20261027T003825326576Z_4e2d3c5c_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 366,
+    "run_id": "RUN_20261027T003952697786Z_ea2df27a_debate_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 367,
+    "run_id": "RUN_20261027T004108682504Z_6b86fc12_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 368,
+    "run_id": "RUN_20261027T004220233411Z_fa4c7c8c_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 369,
+    "run_id": "RUN_20261027T004232520631Z_ac2c68fd_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 370,
+    "run_id": "RUN_20261027T004409187438Z_416fd43b_debate_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 371,
+    "run_id": "RUN_20261027T004548053826Z_4378b67a_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 372,
+    "run_id": "RUN_20261027T004606642526Z_6b321674_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 373,
+    "run_id": "RUN_20261027T004623939247Z_2cbf4647_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 374,
+    "run_id": "RUN_20261027T004748839038Z_4e2d3c5c_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 375,
+    "run_id": "RUN_20261027T004936256268Z_ea2df27a_hybrid_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 376,
+    "run_id": "RUN_20261027T004959400437Z_8e811dab_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 377,
+    "run_id": "RUN_20261027T005023046559Z_60253b6e_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 378,
+    "run_id": "RUN_20261027T005130755860Z_c65acc6f_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 379,
+    "run_id": "RUN_20261027T005231209589Z_44aa1169_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 380,
+    "run_id": "RUN_20261027T005344618336Z_fa358ca7_debate_neutral",
+    "initial_checks": [
+      "C1: asserted 16.43; expected 6.425511782832738757400232716 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 381,
+    "run_id": "RUN_20261027T005357380326Z_ac5ffd2d_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 382,
+    "run_id": "RUN_20261027T005415256440Z_c5557760_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 383,
+    "run_id": "RUN_20261027T005554785865Z_6da581a6_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 384,
+    "run_id": "RUN_20261027T005657704586Z_b9d5c02e_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 385,
+    "run_id": "RUN_20261027T005810684129Z_a1bd71c6_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 386,
+    "run_id": "RUN_20261027T010053209257Z_125918c7_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 387,
+    "run_id": "RUN_20261027T010112596923Z_7cfe42c6_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 388,
+    "run_id": "RUN_20261027T010132101652Z_416fd43b_verification_neutral",
+    "initial_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C2: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 389,
+    "run_id": "RUN_20261027T010154363058Z_a1bd71c6_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 390,
+    "run_id": "RUN_20261027T010355714133Z_d46f8793_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 391,
+    "run_id": "RUN_20261027T010417009182Z_af662fc4_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 392,
+    "run_id": "RUN_20261027T010438537635Z_756783c6_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 393,
+    "run_id": "RUN_20261027T010500062948Z_a93bba37_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 394,
+    "run_id": "RUN_20261027T010706715971Z_53519a0d_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 395,
+    "run_id": "RUN_20261027T010922962053Z_da780b37_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 124.20; expected 114.2034076359935655428252520 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 396,
+    "run_id": "RUN_20261027T010942539213Z_6b321674_verification_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 397,
+    "run_id": "RUN_20261027T011122262661Z_29b37757_debate_neutral",
+    "initial_checks": [
+      "C1: asserted 12.75; expected 2.754623893306900358196850571 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 398,
+    "run_id": "RUN_20261027T011138560527Z_ac2c68fd_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 399,
+    "run_id": "RUN_20261027T011319906709Z_53519a0d_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 400,
+    "run_id": "RUN_20261027T011335762838Z_fa358ca7_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 16.43; expected 6.425511782832738757400232716 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 16.43; expected 6.425511782832738757400232716 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 401,
+    "run_id": "RUN_20261027T011445972210Z_aeee037a_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 402,
+    "run_id": "RUN_20261027T011625361885Z_af6fbee3_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted -40.36; expected -30.36068172810146650812524772 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 403,
+    "run_id": "RUN_20261027T013619797397Z_ac2c68fd_baseline_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 404,
+    "run_id": "RUN_20261027T013637136908Z_47789d69_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 405,
+    "run_id": "RUN_20261027T013653089068Z_6efcf7c3_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 406,
+    "run_id": "RUN_20261027T013753332082Z_edafb358_baseline_overconfident",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 407,
+    "run_id": "RUN_20261027T013809066765Z_47789d69_baseline_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 408,
+    "run_id": "RUN_20261027T013904132230Z_aeee037a_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 409,
+    "run_id": "RUN_20261027T014009063408Z_6efcf7c3_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 410,
+    "run_id": "RUN_20261027T014137925442Z_ac2c68fd_hybrid_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 411,
+    "run_id": "RUN_20261027T014354465553Z_1453e430_hybrid_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 412,
+    "run_id": "RUN_20261027T014412536463Z_6b321674_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 413,
+    "run_id": "RUN_20261027T014430384984Z_605505ea_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 414,
+    "run_id": "RUN_20261027T014444015819Z_605505ea_baseline_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 415,
+    "run_id": "RUN_20261027T014500399504Z_ac2c68fd_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 416,
+    "run_id": "RUN_20261027T014625536311Z_aeee037a_hybrid_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 417,
+    "run_id": "RUN_20261027T014754990222Z_26968695_hybrid_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 418,
+    "run_id": "RUN_20261027T014844654144Z_8e881770_hybrid_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 419,
+    "run_id": "RUN_20261027T014903596623Z_26968695_baseline_underconfident",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 420,
+    "run_id": "RUN_20261027T014919393890Z_87db9d2c_baseline_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 421,
+    "run_id": "RUN_20261027T014938925909Z_ed4cc6ce_baseline_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 422,
+    "run_id": "RUN_20261027T015058902301Z_ac2c68fd_hybrid_underconfident",
+    "initial_checks": [],
+    "final_checks": [
+      "C1: asserted 5.1; expected 5.070009643201542912246865959 percent",
+      "C2: asserted 5.0; expected 4.964077698607456464535966650 percent"
+    ],
+    "new_check_failures": [
+      "C1: asserted 5.1; expected 5.070009643201542912246865959 percent",
+      "C2: asserted 5.0; expected 4.964077698607456464535966650 percent"
+    ]
+  },
+  {
+    "index": 423,
+    "run_id": "RUN_20261027T015350629496Z_6b321674_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 424,
+    "run_id": "RUN_20261027T015625083154Z_47789d69_hybrid_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 425,
+    "run_id": "RUN_20261027T015641848386Z_26968695_baseline_overconfident",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 426,
+    "run_id": "RUN_20261027T015657407931Z_8e881770_baseline_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 427,
+    "run_id": "RUN_20261027T015725925213Z_edafb358_baseline_underconfident",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 428,
+    "run_id": "RUN_20261027T015746562690Z_47789d69_baseline_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 429,
+    "run_id": "RUN_20261027T015923843126Z_ac2c68fd_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 430,
+    "run_id": "RUN_20261027T020058885546Z_47789d69_hybrid_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 431,
+    "run_id": "RUN_20261027T020137419319Z_8e881770_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 432,
+    "run_id": "RUN_20261027T020150057201Z_ed4cc6ce_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 433,
+    "run_id": "RUN_20261027T020209061123Z_edafb358_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 434,
+    "run_id": "RUN_20261027T033452024965Z_6b321674_hybrid_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 435,
+    "run_id": "RUN_20261027T033609034315Z_26968695_hybrid_underconfident",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 436,
+    "run_id": "RUN_20261027T033733820862Z_ac2c68fd_baseline_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 437,
+    "run_id": "RUN_20261027T033906902340Z_47789d69_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 438,
+    "run_id": "RUN_20261027T034122674385Z_edafb358_hybrid_overconfident",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 439,
+    "run_id": "RUN_20261027T034138226067Z_1453e430_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 440,
+    "run_id": "RUN_20261027T034154181611Z_87db9d2c_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 441,
+    "run_id": "RUN_20261027T034209881626Z_6b321674_baseline_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 442,
+    "run_id": "RUN_20261027T034227390341Z_87db9d2c_baseline_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 443,
+    "run_id": "RUN_20261027T034343240075Z_26968695_hybrid_overconfident",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 444,
+    "run_id": "RUN_20261027T034358444686Z_8e881770_baseline_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 445,
+    "run_id": "RUN_20261027T034538266650Z_6efcf7c3_hybrid_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 446,
+    "run_id": "RUN_20261027T034546449233Z_605505ea_baseline_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 447,
+    "run_id": "RUN_20261027T034657734666Z_6b321674_hybrid_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 448,
+    "run_id": "RUN_20261027T034805285154Z_605505ea_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 449,
+    "run_id": "RUN_20261027T034823503127Z_aeee037a_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 450,
+    "run_id": "RUN_20261027T035026871287Z_ed4cc6ce_baseline_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 451,
+    "run_id": "RUN_20261027T035116498308Z_6b321674_baseline_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 452,
+    "run_id": "RUN_20261027T035128911672Z_6efcf7c3_baseline_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 453,
+    "run_id": "RUN_20261027T035446864389Z_1453e430_hybrid_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 454,
+    "run_id": "RUN_20261027T035502909335Z_1453e430_baseline_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 455,
+    "run_id": "RUN_20261027T035526874756Z_1453e430_baseline_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 456,
+    "run_id": "RUN_20261027T035534921586Z_26968695_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 457,
+    "run_id": "RUN_20261027T035655549948Z_edafb358_hybrid_underconfident",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 458,
+    "run_id": "RUN_20261027T035708079296Z_aeee037a_baseline_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 459,
+    "run_id": "RUN_20261027T035834879936Z_aeee037a_hybrid_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 460,
+    "run_id": "RUN_20261027T040032218614Z_8e881770_hybrid_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 461,
+    "run_id": "RUN_20261027T040102643788Z_6efcf7c3_baseline_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 462,
+    "run_id": "RUN_20261027T040242135733Z_6efcf7c3_hybrid_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 463,
+    "run_id": "RUN_20261027T040409836081Z_1453e430_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 464,
+    "run_id": "RUN_20261027T040420611207Z_aeee037a_baseline_underconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 465,
+    "run_id": "RUN_20261027T040609576944Z_605505ea_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 466,
+    "run_id": "RUN_20261027T040730132124Z_aeee037a_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 467,
+    "run_id": "RUN_20261027T040749218410Z_26968695_baseline_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 468,
+    "run_id": "RUN_20261027T041002332642Z_6b321674_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 469,
+    "run_id": "RUN_20261027T041023393965Z_6efcf7c3_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 470,
+    "run_id": "RUN_20261027T041123463028Z_ac2c68fd_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 471,
+    "run_id": "RUN_20261027T041236309521Z_6efcf7c3_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 472,
+    "run_id": "RUN_20261027T041258859226Z_605505ea_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 473,
+    "run_id": "RUN_20261027T041308990424Z_ac2c68fd_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 474,
+    "run_id": "RUN_20261027T041415639061Z_1453e430_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 475,
+    "run_id": "RUN_20261027T041435003236Z_6b321674_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 476,
+    "run_id": "RUN_20261027T041550973399Z_ed4cc6ce_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 477,
+    "run_id": "RUN_20261027T041611947603Z_47789d69_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 478,
+    "run_id": "RUN_20261027T041715780554Z_8e881770_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 479,
+    "run_id": "RUN_20261027T041730390858Z_edafb358_baseline_neutral",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "new_check_failures": []
+  },
+  {
+    "index": 480,
+    "run_id": "RUN_20261027T041746079318Z_87db9d2c_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 481,
+    "run_id": "RUN_20261027T041800737219Z_aeee037a_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 482,
+    "run_id": "RUN_20261027T041907075090Z_26968695_hybrid_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 483,
+    "run_id": "RUN_20261027T042014863175Z_47789d69_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 484,
+    "run_id": "RUN_20261027T042035038133Z_8e881770_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 485,
+    "run_id": "RUN_20261027T042051368699Z_1453e430_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 486,
+    "run_id": "RUN_20261027T042210283504Z_edafb358_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 487,
+    "run_id": "RUN_20261027T042223597440Z_ed4cc6ce_baseline_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 488,
+    "run_id": "RUN_20261027T060720553436Z_ccc7fd5c_hybrid_neutral",
+    "initial_checks": [
+      "C1: referenced fact metric, period or unit mismatch"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 489,
+    "run_id": "RUN_20261027T060842058515Z_927482ca_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 490,
+    "run_id": "RUN_20261027T061005581324Z_e52d0f74_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 491,
+    "run_id": "RUN_20261027T061112674425Z_7dc4aa92_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 492,
+    "run_id": "RUN_20261027T061227135244Z_97f0e335_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 493,
+    "run_id": "RUN_20261027T061344647892Z_208b9b50_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 494,
+    "run_id": "RUN_20261027T061532675244Z_a4db15fb_debate_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 495,
+    "run_id": "RUN_20261027T061656842447Z_6dae7cf7_debate_neutral",
+    "initial_checks": [
+      "C1: asserted 22.38; expected 12.37775468329469448663628854 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 496,
+    "run_id": "RUN_20261027T062059756812Z_605505ea_hybrid_overconfident",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 497,
+    "run_id": "RUN_20261027T062256577795Z_edafb358_hybrid_neutral",
+    "initial_checks": [
+      "C1: asserted 24.93; expected 14.93215623240671991906071262 percent"
+    ],
+    "final_checks": [],
+    "new_check_failures": []
+  },
+  {
+    "index": 498,
+    "run_id": "RUN_20261027T062348589325Z_8e881770_hybrid_neutral",
+    "initial_checks": [],
+    "final_checks": [],
+    "new_check_failures": []
+  }
+]
